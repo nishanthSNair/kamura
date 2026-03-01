@@ -47,6 +47,9 @@ export const metadata: Metadata = {
     description:
       "Discover the practices, places, and people transforming wellness in Dubai and beyond.",
   },
+  verification: {
+    google: "TULPYmvCJGmxRx1mLa17Qka0n_Y5jbdg-H-tAe2r65Y",
+  },
 };
 
 export default function RootLayout({
