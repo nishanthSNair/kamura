@@ -15,6 +15,9 @@ export default function Footer() {
             <Link href="/explore" className="hover:text-terracotta transition-colors">
               Explore
             </Link>
+            <Link href="/events" className="hover:text-terracotta transition-colors">
+              Events
+            </Link>
             <Link href="/about" className="hover:text-terracotta transition-colors">
               About
             </Link>

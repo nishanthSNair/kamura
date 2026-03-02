@@ -17,6 +17,9 @@ export default function Navigation() {
           <Link href="/explore" className="text-gray-800 hover:text-terracotta transition-colors">
             Explore
           </Link>
+          <Link href="/events" className="text-gray-800 hover:text-terracotta transition-colors">
+            Events
+          </Link>
           <Link href="/about" className="text-gray-800 hover:text-terracotta transition-colors">
             About
           </Link>
@@ -81,6 +84,13 @@ export default function Navigation() {
             onClick={() => setMobileOpen(false)}
           >
             Explore
+          </Link>
+          <Link
+            href="/events"
+            className="text-gray-800 hover:text-terracotta transition-colors"
+            onClick={() => setMobileOpen(false)}
+          >
+            Events
           </Link>
           <Link
             href="/about"
