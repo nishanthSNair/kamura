@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -63,6 +65,8 @@ export default function RootLayout({
         <Navigation />
         <main>{children}</main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
