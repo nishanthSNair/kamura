@@ -4,7 +4,7 @@ import ExploreContent from "./ExploreContent";
 export const metadata: Metadata = {
   title: "Explore",
   description:
-    "Discover the best longevity clinics, wellness practitioners, and healing spaces in the UAE. Experts, centers, events, and retreats — all in one place.",
+    "Explore curated longevity clinics, biohacking studios, holistic healers, yoga studios, and wellness retreats across Dubai and the UAE.",
 };
 
 export default function ExplorePage() {
