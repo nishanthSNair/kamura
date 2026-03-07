@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPostBySlug, getAllSlugs, getAllPosts, formatDate } from "@/lib/blog";
+import { getPostBySlug, getAllSlugs, getAllPosts, formatDate, blogCategoryColors } from "@/lib/blog";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -37,11 +37,12 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  // Get related posts (same month or adjacent, excluding current)
+  // Get related posts — prioritize same category
   const allPosts = getAllPosts();
-  const relatedPosts = allPosts
-    .filter((p) => p.slug !== post.slug)
-    .slice(0, 3);
+  const otherPosts = allPosts.filter((p) => p.slug !== post.slug);
+  const sameCategory = otherPosts.filter((p) => p.category === post.category);
+  const differentCategory = otherPosts.filter((p) => p.category !== post.category);
+  const relatedPosts = [...sameCategory, ...differentCategory].slice(0, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -71,6 +72,11 @@ export default async function BlogPostPage({ params }: Props) {
       <article className="pt-24">
         <header className="max-w-2xl mx-auto px-6 py-12 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
+            <span
+              className={`text-xs px-2.5 py-1 rounded-full font-sans ${blogCategoryColors[post.category].bg} ${blogCategoryColors[post.category].text}`}
+            >
+              {post.category}
+            </span>
             <p className="text-xs text-gray-400 tracking-wide uppercase">
               {formatDate(post.date)}
             </p>

@@ -4,6 +4,10 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
+// Re-export shared types/utils so server components can import from @/lib/blog
+export { type BlogCategory, blogCategoryColors, formatDate } from "./blog-shared";
+import type { BlogCategory } from "./blog-shared";
+
 const blogDirectory = path.join(process.cwd(), "content/blog");
 
 export interface BlogPost {
@@ -11,6 +15,7 @@ export interface BlogPost {
   title: string;
   date: string;
   excerpt: string;
+  category: BlogCategory;
   content: string;
   readingTime: number;
   wordCount: number;
@@ -36,6 +41,7 @@ export function getAllPosts(): Omit<BlogPost, "content" | "headings">[] {
         title: data.title,
         date: data.date,
         excerpt: data.excerpt,
+        category: (data.category || "News & Trends") as BlogCategory,
         readingTime,
         wordCount,
       };
@@ -99,6 +105,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     title: data.title,
     date: data.date,
     excerpt: data.excerpt,
+    category: (data.category || "News & Trends") as BlogCategory,
     content: contentHtml,
     readingTime,
     wordCount,
@@ -111,9 +118,4 @@ export function getAllSlugs(): string[] {
   return files
     .filter((file) => file.endsWith(".md"))
     .map((file) => file.replace(/\.md$/, ""));
-}
-
-export function formatDate(dateString: string): string {
-  const date = new Date(dateString);
-  return date.toLocaleDateString("en-US", { month: "long", year: "numeric" });
 }

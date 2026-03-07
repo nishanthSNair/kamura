@@ -1,6 +1,7 @@
 ---
 title: "What is Breathwork and Why Is Everyone Talking About It?"
 date: "2026-02-25"
+category: "Holistic & Healing"
 excerpt: "Breathwork has exploded in popularity — and for good reason. We explore the science behind conscious breathing and how it's transforming mental and physical health."
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "What is Sound Healing? Everything You Need to Know"
 date: "2026-03-15"
+category: "Holistic & Healing"
 excerpt: "From Tibetan singing bowls to gong baths, sound healing is becoming one of the most sought-after wellness modalities in Dubai. Here's what you need to know before your first session."
 ---
 

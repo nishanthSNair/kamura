@@ -1,6 +1,7 @@
 ---
 title: "What is Peptide Therapy? A Beginner's Guide"
 date: "2026-02-10"
+category: "Longevity & Science"
 excerpt: "Peptide therapy is gaining traction in the longevity space. Learn what peptides are, how they work, and why biohackers and health enthusiasts are paying attention."
 ---
 

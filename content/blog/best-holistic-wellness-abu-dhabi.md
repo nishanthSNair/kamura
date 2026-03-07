@@ -1,6 +1,7 @@
 ---
 title: "Best Holistic Wellness Centers in Abu Dhabi"
 date: "2026-02-18"
+category: "Guides & Reviews"
 excerpt: "Abu Dhabi is home to some of the UAE's most beautiful wellness spaces. From Ayurvedic retreats to integrative health centers, here are our top picks."
 ---
 

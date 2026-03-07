@@ -1,6 +1,7 @@
 ---
 title: "Top 10 Longevity Clinics in Dubai 2026"
 date: "2026-03-10"
+category: "Guides & Reviews"
 excerpt: "Dubai is fast becoming a global hub for longevity medicine. We've curated the best clinics offering cutting-edge treatments from NAD+ therapy to full-body diagnostics."
 ---
 
