@@ -210,4 +210,239 @@ export const listings: Listing[] = [
     website: "https://zoyawellbeing.com/",
     featured: true,
   },
+
+  // ─── New Listings ───────────────────────────────────
+
+  // ─── Longevity Clinics (4 more) ───
+  {
+    id: "dna-health",
+    name: "DNA Health & Wellness",
+    tagline: "Genetics-driven longevity programs",
+    description:
+      "Personalized health programs based on genetic testing, epigenetic analysis, and biomarker optimization. Offers IV therapy, hormone balancing, and anti-aging protocols.",
+    location: "DIFC Gate Village",
+    city: "Dubai",
+    category: "Longevity Clinics",
+    website: "https://dnahealthcorp.com/",
+  },
+  {
+    id: "skin111",
+    name: "Skin111 Clinic",
+    tagline: "Award-winning regenerative aesthetics",
+    description:
+      "Regenerative medicine, PRP therapy, exosome treatments, and advanced anti-aging protocols. Winner of multiple Middle East beauty and wellness awards.",
+    location: "Jumeirah Beach Road",
+    city: "Dubai",
+    category: "Longevity Clinics",
+    website: "https://skin111.com/",
+  },
+  {
+    id: "advanced-health-dubai",
+    name: "Advanced Health Dubai",
+    tagline: "Functional medicine meets longevity science",
+    description:
+      "Comprehensive functional medicine assessments, gut health diagnostics, heavy metal detox, telomere testing, and personalized longevity roadmaps.",
+    location: "City Walk",
+    city: "Dubai",
+    category: "Longevity Clinics",
+    website: "https://advancedhealth.ae/",
+  },
+  {
+    id: "eden-aesthetics",
+    name: "EDEN AESTHETICS Clinic",
+    tagline: "German-standard regenerative wellness",
+    description:
+      "German-certified medical team offering stem cell therapy, exosome treatments, NAD+ infusions, and bio-identical hormone optimization.",
+    location: "Business Bay",
+    city: "Dubai",
+    category: "Longevity Clinics",
+    website: "https://edenaesthetics.ae/",
+  },
+
+  // ─── Biohacking & Performance (4 more) ───
+  {
+    id: "wellth-medcare",
+    name: "Wellth by Medcare",
+    tagline: "Medical-grade biohacking & recovery",
+    description:
+      "IV therapy, cryotherapy, hyperbaric oxygen, compression therapy, and infrared sauna — all under medical supervision at a premium healthcare facility.",
+    location: "Al Safa",
+    city: "Dubai",
+    category: "Biohacking & Performance",
+    website: "https://www.medcare.ae/en/wellth",
+  },
+  {
+    id: "resync",
+    name: "RESYNC",
+    tagline: "Performance recovery & optimization studio",
+    description:
+      "Combining sports science with recovery tech — NormaTec compression, Game Ready cold therapy, EMS training, and metabolic testing for peak performance.",
+    location: "Al Quoz",
+    city: "Dubai",
+    category: "Biohacking & Performance",
+    website: "https://resync.ae/",
+  },
+  {
+    id: "brain-performance-centre",
+    name: "The Brain & Performance Centre",
+    tagline: "Neurofeedback & cognitive optimization",
+    description:
+      "Neurofeedback, brain mapping (qEEG), transcranial stimulation, and cognitive performance programs for focus, stress, sleep, and mental clarity.",
+    location: "Dubai Healthcare City",
+    city: "Dubai",
+    category: "Biohacking & Performance",
+    website: "https://thebrainandperformancecentre.com/",
+  },
+  {
+    id: "cryo-dubai",
+    name: "CRYO",
+    tagline: "The original whole-body cryotherapy brand",
+    description:
+      "Full-body and localized cryotherapy, CryoFacials, infrared sauna, and compression therapy. One of the first dedicated cryo studios in the UAE.",
+    location: "Jumeirah 1",
+    city: "Dubai",
+    category: "Biohacking & Performance",
+    website: "https://cryo.ae/",
+  },
+
+  // ─── Holistic & Healing (4 more) ───
+  {
+    id: "santhigiri",
+    name: "Santhigiri Holistic Health Center",
+    tagline: "Traditional Ayurveda & Siddha medicine",
+    description:
+      "Authentic Panchakarma, Siddha treatments, yoga therapy, and Ayurvedic consultations led by practitioners from the renowned Santhigiri Ashram in Kerala.",
+    location: "Al Karama",
+    city: "Dubai",
+    category: "Holistic & Healing",
+    website: "https://santhigiriholistic.com/",
+  },
+  {
+    id: "dubai-herbal-treatment",
+    name: "Dubai Herbal & Treatment Centre",
+    tagline: "Government-licensed alternative medicine since 2002",
+    description:
+      "One of Dubai's first licensed herbal medicine centers. Offering naturopathy, homeopathy, herbal medicine, hijama (cupping), and acupuncture.",
+    location: "Jumeirah, Beach Road",
+    city: "Dubai",
+    category: "Holistic & Healing",
+    website: "https://dubaihtc.com/",
+    featured: true,
+  },
+  {
+    id: "keyani-wellness",
+    name: "Keyani Wellness",
+    tagline: "Energy healing & holistic coaching",
+    description:
+      "Reiki master sessions, crystal healing, chakra balancing, emotional freedom technique (EFT), and one-on-one holistic life coaching.",
+    location: "Jumeirah Lake Towers (JLT)",
+    city: "Dubai",
+    category: "Holistic & Healing",
+    website: "https://keyaniwellness.com/",
+  },
+  {
+    id: "sohum-wellness",
+    name: "Sohum Wellness Sanctuary",
+    tagline: "Mind-body healing in a serene sanctuary",
+    description:
+      "Sound baths, guided meditation, breathwork circles, Reiki, and therapeutic yoga in a purpose-built healing space designed for deep restoration.",
+    location: "Al Wasl Road",
+    city: "Dubai",
+    category: "Holistic & Healing",
+    website: "https://sohumwellness.com/",
+  },
+
+  // ─── Yoga & Movement (4 more) ───
+  {
+    id: "bodytree-studio",
+    name: "Bodytree Studio",
+    tagline: "Abu Dhabi's premier yoga & Pilates studio",
+    description:
+      "Yoga, Pilates, barre, and movement classes in a beautiful, community-focused studio. Also offers teacher training, workshops, and wellness events.",
+    location: "Al Manhal",
+    city: "Abu Dhabi",
+    category: "Yoga & Movement",
+    website: "https://bodytreestudio.com/",
+    featured: true,
+  },
+  {
+    id: "aura-wellness",
+    name: "Aura Wellness",
+    tagline: "Yoga, meditation & holistic movement",
+    description:
+      "Vinyasa, Hatha, Yin yoga, and meditation with a focus on mindfulness and self-care. Offers private sessions, corporate programs, and outdoor events.",
+    location: "Business Bay",
+    city: "Dubai",
+    category: "Yoga & Movement",
+    website: "https://aurawellness.ae/",
+  },
+  {
+    id: "dhyana-dubai",
+    name: "Dhyana Dubai",
+    tagline: "Premium hot yoga & infrared studio",
+    description:
+      "Hot yoga, infrared-heated classes, cold plunge recovery, and sound healing in a state-of-the-art studio with heated and non-heated rooms.",
+    location: "Al Quoz",
+    city: "Dubai",
+    category: "Yoga & Movement",
+    website: "https://dhyanadubai.com/",
+  },
+  {
+    id: "seven-wellness",
+    name: "Seven Wellness",
+    tagline: "Yoga, fitness & mindful movement hub",
+    description:
+      "A multi-discipline studio offering yoga, functional fitness, Pilates, and breathwork in an intimate, community-driven setting.",
+    location: "Palm Jumeirah",
+    city: "Dubai",
+    category: "Yoga & Movement",
+    website: "https://sevenwellness.ae/",
+  },
+
+  // ─── Wellness Retreats & Spas (4 more) ───
+  {
+    id: "talise-ottoman-spa",
+    name: "Talise Ottoman Spa",
+    tagline: "World-class spa inside Jumeirah Zabeel Saray",
+    description:
+      "One of the largest spas in the Middle East with Turkish hammam, snow room, salt room, thalassotherapy pool, and over 40 signature treatments.",
+    location: "West Crescent, Palm Jumeirah",
+    city: "Dubai",
+    category: "Wellness Retreats & Spas",
+    website: "https://www.jumeirah.com/en/stay/dubai/jumeirah-zabeel-saray",
+    featured: true,
+  },
+  {
+    id: "anantara-qasr-al-sarab",
+    name: "Anantara Spa at Qasr Al Sarab",
+    tagline: "Desert wellness in the Empty Quarter",
+    description:
+      "A luxury desert resort spa offering Arabian-inspired treatments, desert meditation, sunrise yoga, and wellness retreats surrounded by the dunes of Liwa.",
+    location: "Liwa Desert, Empty Quarter",
+    city: "Abu Dhabi",
+    category: "Wellness Retreats & Spas",
+    website: "https://www.anantara.com/en/qasr-al-sarab-abu-dhabi",
+  },
+  {
+    id: "heart-soul-spa",
+    name: "Heart & Soul Spa",
+    tagline: "Boutique wellness spa with healing focus",
+    description:
+      "A boutique spa combining massage therapy, aromatherapy, reflexology, and energy healing with personalized wellness consultations.",
+    location: "Dubai Marina",
+    city: "Dubai",
+    category: "Wellness Retreats & Spas",
+    website: "https://heartandsoul.ae/",
+  },
+  {
+    id: "plume-studio",
+    name: "Plume Studio",
+    tagline: "Wellness lounge for mind-body restoration",
+    description:
+      "Float therapy, infrared sauna, cold plunge, compression therapy, and guided relaxation in a modern wellness lounge designed for urban recovery.",
+    location: "City Walk",
+    city: "Dubai",
+    category: "Wellness Retreats & Spas",
+    website: "https://plumestudio.ae/",
+  },
 ];
