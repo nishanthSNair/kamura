@@ -9,6 +9,7 @@ import {
   type ListingCategory,
   type Listing,
 } from "@/data/listings";
+import { areas } from "@/data/areas";
 
 const ALL_CATEGORIES: ListingCategory[] = [
   "Longevity Clinics",
@@ -84,8 +85,31 @@ export default function ExploreContent() {
         </div>
       </section>
 
+      {/* Browse by Area + Compare */}
+      <section className="max-w-6xl mx-auto px-6 pt-10 pb-4">
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="text-sm text-gray-500 dark:text-gray-400 font-sans">Browse by area:</span>
+          {areas.map((area) => (
+            <Link
+              key={area.slug}
+              href={`/explore/area/${area.slug}`}
+              className="px-3 py-1.5 text-xs font-sans rounded-full border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-terracotta hover:text-terracotta transition-colors"
+            >
+              {area.name}
+            </Link>
+          ))}
+          <span className="text-gray-200 dark:text-gray-700 mx-1">|</span>
+          <Link
+            href="/explore/compare"
+            className="px-3 py-1.5 text-xs font-sans rounded-full border border-terracotta/30 text-terracotta hover:bg-terracotta/5 transition-colors"
+          >
+            Compare Centers
+          </Link>
+        </div>
+      </section>
+
       {/* Category Filter */}
-      <section className="sticky top-[65px] z-40 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+      <section className="sticky top-[65px] z-40 bg-white/95 dark:bg-[#0f0f0f]/95 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex gap-2 overflow-x-auto no-scrollbar">
             {["All", ...ALL_CATEGORIES].map((cat) => (
@@ -94,8 +118,8 @@ export default function ExploreContent() {
                 onClick={() => scrollToCategory(cat)}
                 className={`px-4 py-2 text-sm font-sans rounded-full border whitespace-nowrap transition-all duration-200 ${
                   activeCategory === cat
-                    ? "bg-gray-900 text-white border-gray-900"
-                    : "bg-white text-gray-600 border-gray-200 hover:border-gray-400"
+                    ? "bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100"
+                    : "bg-white dark:bg-[#1a1a1a] text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500"
                 }`}
               >
                 {cat}
@@ -125,10 +149,10 @@ export default function ExploreContent() {
                     {catListings.length} {catListings.length === 1 ? "place" : "places"}
                   </span>
                 </div>
-                <h2 className="font-serif text-2xl md:text-3xl text-gray-900 mb-2">
+                <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-gray-100 mb-2">
                   {category}
                 </h2>
-                <p className="text-gray-500 font-sans leading-relaxed max-w-2xl">
+                <p className="text-gray-500 dark:text-gray-400 font-sans leading-relaxed max-w-2xl">
                   {categoryDescriptions[category]}
                 </p>
                 <div className="w-12 h-px bg-terracotta/40 mt-4" />
@@ -138,7 +162,7 @@ export default function ExploreContent() {
                 {catListings.map((listing, i) => (
                   <article
                     key={listing.id}
-                    className="fade-in-on-scroll opacity-0 translate-y-4 transition-all duration-500 border border-gray-200 rounded-xl p-6 bg-white hover:shadow-md flex flex-col"
+                    className="fade-in-on-scroll opacity-0 translate-y-4 transition-all duration-500 border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-[#1a1a1a] hover:shadow-md flex flex-col"
                     style={{ transitionDelay: `${i * 80}ms` }}
                   >
                     <div className="flex items-center gap-2 mb-4">
@@ -154,7 +178,7 @@ export default function ExploreContent() {
                       )}
                     </div>
 
-                    <h3 className="font-serif text-xl text-gray-900 leading-snug mb-1">
+                    <h3 className="font-serif text-xl text-gray-900 dark:text-gray-100 leading-snug mb-1">
                       <Link
                         href={`/explore/${listing.id}`}
                         className="hover:text-terracotta transition-colors"
@@ -165,11 +189,11 @@ export default function ExploreContent() {
                     <p className="text-sm text-terracotta font-sans mb-3">
                       {listing.tagline}
                     </p>
-                    <p className="text-sm text-gray-500 leading-relaxed font-sans mb-4 flex-1">
+                    <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-sans mb-4 flex-1">
                       {listing.description}
                     </p>
 
-                    <div className="flex items-center gap-1.5 text-sm text-gray-600 font-sans mb-4">
+                    <div className="flex items-center gap-1.5 text-sm text-gray-600 dark:text-gray-400 font-sans mb-4">
                       <svg
                         width="14"
                         height="14"
@@ -216,19 +240,19 @@ export default function ExploreContent() {
       </div>
 
       {/* Bottom CTA */}
-      <section className="border-t border-gray-100 bg-gray-50/50">
+      <section className="border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50">
         <div className="max-w-xl mx-auto px-6 py-20 text-center">
-          <h2 className="font-serif text-2xl text-gray-900 mb-4">
+          <h2 className="font-serif text-2xl text-gray-900 dark:text-gray-100 mb-4">
             Know a place we should feature?
           </h2>
-          <p className="text-sm text-gray-500 mb-8 font-sans leading-relaxed">
+          <p className="text-sm text-gray-500 dark:text-gray-400 mb-8 font-sans leading-relaxed">
             We&apos;re always looking for outstanding wellness spaces across the
             UAE. If you know a clinic, studio, or practitioner we should
             include, let us know.
           </p>
           <a
             href="mailto:hello@kamuralife.com"
-            className="inline-block bg-gray-900 text-white px-8 py-3 text-sm tracking-[0.1em] uppercase hover:bg-terracotta transition-colors font-sans"
+            className="inline-block bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-8 py-3 text-sm tracking-[0.1em] uppercase hover:bg-terracotta dark:hover:bg-terracotta dark:hover:text-white transition-colors font-sans"
           >
             Suggest a Place
           </a>

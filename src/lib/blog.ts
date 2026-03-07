@@ -16,6 +16,7 @@ export interface BlogPost {
   date: string;
   excerpt: string;
   category: BlogCategory;
+  coverImage?: string;
   content: string;
   readingTime: number;
   wordCount: number;
@@ -42,6 +43,7 @@ export function getAllPosts(): Omit<BlogPost, "content" | "headings">[] {
         date: data.date,
         excerpt: data.excerpt,
         category: (data.category || "News & Trends") as BlogCategory,
+        coverImage: data.coverImage || undefined,
         readingTime,
         wordCount,
       };
@@ -106,6 +108,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     date: data.date,
     excerpt: data.excerpt,
     category: (data.category || "News & Trends") as BlogCategory,
+    coverImage: data.coverImage || undefined,
     content: contentHtml,
     readingTime,
     wordCount,

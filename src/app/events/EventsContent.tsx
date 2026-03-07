@@ -190,24 +190,24 @@ export default function EventsContent() {
       </section>
 
       {/* Quick Stats Bar */}
-      <section className="border-b border-gray-100">
+      <section className="border-b border-gray-100 dark:border-gray-800">
         <div className="max-w-6xl mx-auto px-6 py-6">
           <div className="flex flex-wrap justify-center gap-8 md:gap-16">
             <div className="text-center">
-              <p className="font-serif text-2xl text-gray-900">{events.length}</p>
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-sans">Events Tracked</p>
+              <p className="font-serif text-2xl text-gray-900 dark:text-gray-100">{events.length}</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans">Events Tracked</p>
             </div>
             <div className="text-center">
               <p className="font-serif text-2xl text-emerald-700">{upcomingCount}</p>
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-sans">Upcoming</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans">Upcoming</p>
             </div>
             <div className="text-center">
-              <p className="font-serif text-2xl text-gray-900">{totalAttendees.toLocaleString()}+</p>
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-sans">Total Attendees</p>
+              <p className="font-serif text-2xl text-gray-900 dark:text-gray-100">{totalAttendees.toLocaleString()}+</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans">Total Attendees</p>
             </div>
             <div className="text-center">
-              <p className="font-serif text-2xl text-gray-900">{ALL_CATEGORIES.length}</p>
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-sans">Categories</p>
+              <p className="font-serif text-2xl text-gray-900 dark:text-gray-100">{ALL_CATEGORIES.length}</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans">Categories</p>
             </div>
           </div>
         </div>
@@ -217,7 +217,7 @@ export default function EventsContent() {
       <section className="max-w-6xl mx-auto px-6 pt-10 pb-6">
         {/* Search */}
         <div className="relative mb-6">
-          <svg className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
           <input
@@ -225,12 +225,12 @@ export default function EventsContent() {
             placeholder="Search events by name, location, or category..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 border border-gray-200 rounded-xl text-sm font-sans text-gray-800 placeholder-gray-400 focus:outline-none focus:border-terracotta/50 focus:ring-1 focus:ring-terracotta/20 transition-colors"
+            className="w-full pl-12 pr-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl text-sm font-sans text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-[#1a1a1a] focus:outline-none focus:border-terracotta/50 focus:ring-1 focus:ring-terracotta/20 transition-colors"
           />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery("")}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
@@ -250,8 +250,8 @@ export default function EventsContent() {
               }}
               className={`px-4 py-2 text-sm font-sans rounded-full border transition-all duration-200 ${
                 activeCategory === cat
-                  ? "bg-gray-900 text-white border-gray-900"
-                  : "bg-white text-gray-600 border-gray-200 hover:border-gray-400"
+                  ? "bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100"
+                  : "bg-white dark:bg-[#1a1a1a] text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500"
               }`}
             >
               {cat}
@@ -260,7 +260,7 @@ export default function EventsContent() {
         </div>
 
         {/* View Tabs */}
-        <div className="flex gap-1 bg-gray-100 rounded-lg p-1 w-fit">
+        <div className="flex gap-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1 w-fit">
           {(["upcoming", "past", "calendar"] as ViewTab[]).map((tab) => (
             <button
               key={tab}
@@ -270,8 +270,8 @@ export default function EventsContent() {
               }}
               className={`px-5 py-2 text-sm font-sans rounded-md transition-all duration-200 capitalize ${
                 activeTab === tab
-                  ? "bg-white text-gray-900 shadow-sm"
-                  : "text-gray-500 hover:text-gray-700"
+                  ? "bg-white dark:bg-[#1a1a1a] text-gray-900 dark:text-gray-100 shadow-sm"
+                  : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
               }`}
             >
               {tab === "calendar" ? "Calendar View" : tab}
@@ -283,8 +283,8 @@ export default function EventsContent() {
       {/* Calendar View */}
       {activeTab === "calendar" && (
         <section className="max-w-6xl mx-auto px-6 pb-8">
-          <div className="border border-gray-200 rounded-xl overflow-hidden">
-            <div className="flex items-center justify-between px-6 py-4 bg-gray-50 border-b border-gray-200">
+          <div className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+            <div className="flex items-center justify-between px-6 py-4 bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
               <button
                 onClick={() => {
                   setSelectedDay(null);
@@ -295,14 +295,14 @@ export default function EventsContent() {
                     setCalendarMonth(calendarMonth - 1);
                   }
                 }}
-                className="p-2 hover:bg-gray-200 rounded-lg transition-colors"
+                className="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors"
                 aria-label="Previous month"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="15 18 9 12 15 6" />
                 </svg>
               </button>
-              <h3 className="font-serif text-xl text-gray-900">
+              <h3 className="font-serif text-xl text-gray-900 dark:text-gray-100">
                 {MONTH_NAMES[calendarMonth]} {calendarYear}
               </h3>
               <button
@@ -315,7 +315,7 @@ export default function EventsContent() {
                     setCalendarMonth(calendarMonth + 1);
                   }
                 }}
-                className="p-2 hover:bg-gray-200 rounded-lg transition-colors"
+                className="p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors"
                 aria-label="Next month"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -324,9 +324,9 @@ export default function EventsContent() {
               </button>
             </div>
 
-            <div className="grid grid-cols-7 border-b border-gray-200">
+            <div className="grid grid-cols-7 border-b border-gray-200 dark:border-gray-700">
               {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((d) => (
-                <div key={d} className="px-2 py-3 text-center text-xs font-sans uppercase tracking-wider text-gray-400">
+                <div key={d} className="px-2 py-3 text-center text-xs font-sans uppercase tracking-wider text-gray-400 dark:text-gray-500">
                   {d}
                 </div>
               ))}
@@ -334,7 +334,7 @@ export default function EventsContent() {
 
             <div className="grid grid-cols-7">
               {Array.from({ length: getFirstDayOfMonth(calendarYear, calendarMonth) }).map((_, i) => (
-                <div key={`empty-${i}`} className="h-20 md:h-24 border-b border-r border-gray-100" />
+                <div key={`empty-${i}`} className="h-20 md:h-24 border-b border-r border-gray-100 dark:border-gray-800" />
               ))}
               {Array.from({ length: getDaysInMonth(calendarYear, calendarMonth) }).map((_, i) => {
                 const day = i + 1;
@@ -353,11 +353,11 @@ export default function EventsContent() {
                         setSelectedDay(isSelected ? null : day);
                       }
                     }}
-                    className={`h-20 md:h-24 border-b border-r border-gray-100 p-2 text-left transition-colors relative ${
-                      dayEvents.length > 0 ? "cursor-pointer hover:bg-gray-50" : "cursor-default"
-                    } ${isSelected ? "bg-gray-50 ring-1 ring-inset ring-terracotta/30" : ""}`}
+                    className={`h-20 md:h-24 border-b border-r border-gray-100 dark:border-gray-800 p-2 text-left transition-colors relative ${
+                      dayEvents.length > 0 ? "cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900" : "cursor-default"
+                    } ${isSelected ? "bg-gray-50 dark:bg-gray-900 ring-1 ring-inset ring-terracotta/30" : ""}`}
                   >
-                    <span className={`text-sm font-sans inline-flex items-center justify-center w-7 h-7 rounded-full ${isToday ? "bg-terracotta text-white" : "text-gray-700"}`}>
+                    <span className={`text-sm font-sans inline-flex items-center justify-center w-7 h-7 rounded-full ${isToday ? "bg-terracotta text-white" : "text-gray-700 dark:text-gray-300"}`}>
                       {day}
                     </span>
                     {dayEvents.length > 0 && (
@@ -375,7 +375,7 @@ export default function EventsContent() {
 
           {selectedDay !== null && eventsForSelectedDay.length > 0 && (
             <div className="mt-6 space-y-4">
-              <h4 className="font-serif text-lg text-gray-900">
+              <h4 className="font-serif text-lg text-gray-900 dark:text-gray-100">
                 {MONTH_NAMES[calendarMonth]} {selectedDay}, {calendarYear}
               </h4>
               {eventsForSelectedDay.map((event) => (
@@ -395,7 +395,7 @@ export default function EventsContent() {
       {activeTab !== "calendar" && (
         <section className="max-w-6xl mx-auto px-6 pb-20">
           {filteredEvents.length === 0 ? (
-            <p className="text-gray-400 text-center py-16 font-sans">
+            <p className="text-gray-400 dark:text-gray-500 text-center py-16 font-sans">
               No events found{searchQuery ? ` for "${searchQuery}"` : " for this filter"}.
             </p>
           ) : (
@@ -419,17 +419,17 @@ export default function EventsContent() {
       )}
 
       {/* Submit Your Event CTA */}
-      <section className="border-t border-gray-100">
+      <section className="border-t border-gray-100 dark:border-gray-800">
         <div className="max-w-4xl mx-auto px-6 py-16 text-center">
-          <h3 className="font-serif text-2xl text-gray-900 mb-3">
+          <h3 className="font-serif text-2xl text-gray-900 dark:text-gray-100 mb-3">
             Know an event we should feature?
           </h3>
-          <p className="text-gray-500 font-sans mb-6 leading-relaxed">
+          <p className="text-gray-500 dark:text-gray-400 font-sans mb-6 leading-relaxed">
             We&apos;re always looking for wellness, longevity, and biohacking events across the UAE and beyond.
           </p>
           <a
             href="mailto:hello@kamuralife.com?subject=Event%20Submission&body=Event%20Name%3A%0ADate%3A%0ALocation%3A%0AWebsite%3A%0ABrief%20Description%3A"
-            className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-sm tracking-[0.1em] uppercase hover:bg-terracotta transition-colors font-sans"
+            className="inline-flex items-center gap-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-8 py-3 text-sm tracking-[0.1em] uppercase hover:bg-terracotta dark:hover:bg-terracotta dark:hover:text-white transition-colors font-sans"
           >
             Submit an Event
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -440,13 +440,13 @@ export default function EventsContent() {
       </section>
 
       {/* News & Coverage Feed */}
-      <section className="border-t border-gray-100 bg-gray-50/50">
+      <section className="border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
           <div className="mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl text-gray-900 mb-3">
+            <h2 className="font-serif text-3xl md:text-4xl text-gray-900 dark:text-gray-100 mb-3">
               What Happened — News &amp; Coverage
             </h2>
-            <p className="text-gray-500 font-sans">
+            <p className="text-gray-500 dark:text-gray-400 font-sans">
               Recaps, announcements, and coverage from reputed sources
             </p>
             <div className="w-12 h-px bg-terracotta/40 mt-6" />
@@ -456,26 +456,26 @@ export default function EventsContent() {
             {news.map((item, i) => (
               <article
                 key={item.id}
-                className="fade-in-on-scroll opacity-0 translate-y-4 transition-all duration-500 bg-white border border-gray-200 rounded-xl p-6 flex flex-col"
+                className="fade-in-on-scroll opacity-0 translate-y-4 transition-all duration-500 bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 rounded-xl p-6 flex flex-col"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <span
                     className={`text-xs px-2.5 py-1 rounded-full font-sans ${
-                      categoryColors[item.category as EventCategory]?.bg || "bg-gray-100"
+                      categoryColors[item.category as EventCategory]?.bg || "bg-gray-100 dark:bg-gray-800"
                     } ${
-                      categoryColors[item.category as EventCategory]?.text || "text-gray-700"
+                      categoryColors[item.category as EventCategory]?.text || "text-gray-700 dark:text-gray-300"
                     }`}
                   >
                     {item.category}
                   </span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-400 font-sans mb-3">
-                  <span className="font-medium text-gray-600">{item.source}</span>
+                <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500 font-sans mb-3">
+                  <span className="font-medium text-gray-600 dark:text-gray-400">{item.source}</span>
                   <span>&middot;</span>
                   <span>{item.date}</span>
                 </div>
-                <h3 className="font-serif text-lg text-gray-900 leading-snug mb-3">
+                <h3 className="font-serif text-lg text-gray-900 dark:text-gray-100 leading-snug mb-3">
                   <a
                     href={item.url}
                     target="_blank"
@@ -485,7 +485,7 @@ export default function EventsContent() {
                     {item.title}
                   </a>
                 </h3>
-                <p className="text-sm text-gray-500 leading-relaxed font-sans mb-4 flex-1">
+                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-sans mb-4 flex-1">
                   {item.summary}
                 </p>
                 <button
@@ -578,7 +578,7 @@ function LiveNewsFeed() {
   if (error || (!loading && articles.length === 0)) return null;
 
   return (
-    <section className="border-t border-gray-100">
+    <section className="border-t border-gray-100 dark:border-gray-800">
       <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-3">
@@ -586,11 +586,11 @@ function LiveNewsFeed() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl text-gray-900">
+            <h2 className="font-serif text-3xl md:text-4xl text-gray-900 dark:text-gray-100">
               Live Wellness News
             </h2>
           </div>
-          <p className="text-gray-500 font-sans">
+          <p className="text-gray-500 dark:text-gray-400 font-sans">
             Latest headlines from around the web — updated automatically
           </p>
           <div className="w-12 h-px bg-terracotta/40 mt-6" />
@@ -599,11 +599,11 @@ function LiveNewsFeed() {
         {loading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="border border-gray-200 rounded-xl p-6 animate-pulse">
-                <div className="h-3 bg-gray-200 rounded w-1/3 mb-4" />
-                <div className="h-4 bg-gray-200 rounded w-full mb-2" />
-                <div className="h-4 bg-gray-200 rounded w-2/3 mb-4" />
-                <div className="h-3 bg-gray-200 rounded w-full" />
+              <div key={i} className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 animate-pulse">
+                <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-1/3 mb-4" />
+                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full mb-2" />
+                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-2/3 mb-4" />
+                <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-full" />
               </div>
             ))}
           </div>
@@ -615,18 +615,18 @@ function LiveNewsFeed() {
                 href={article.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-md transition-shadow flex flex-col"
+                className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-[#1a1a1a] hover:shadow-md transition-shadow flex flex-col"
               >
-                <div className="flex items-center gap-2 text-xs text-gray-400 font-sans mb-3">
-                  <span className="font-medium text-gray-600">{article.source}</span>
+                <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500 font-sans mb-3">
+                  <span className="font-medium text-gray-600 dark:text-gray-400">{article.source}</span>
                   <span>&middot;</span>
                   <span>{formatPubDate(article.pubDate)}</span>
                 </div>
-                <h3 className="font-serif text-base text-gray-900 leading-snug mb-3 flex-1 hover:text-terracotta transition-colors">
+                <h3 className="font-serif text-base text-gray-900 dark:text-gray-100 leading-snug mb-3 flex-1 hover:text-terracotta transition-colors">
                   {article.title}
                 </h3>
                 {article.description && (
-                  <p className="text-xs text-gray-500 font-sans leading-relaxed line-clamp-2">
+                  <p className="text-xs text-gray-500 dark:text-gray-400 font-sans leading-relaxed line-clamp-2">
                     {article.description}
                   </p>
                 )}
@@ -673,7 +673,7 @@ function EventCard({
   return (
     <div
       id={`event-${event.id}`}
-      className="border border-gray-200 rounded-xl overflow-hidden bg-white transition-shadow duration-300 hover:shadow-md"
+      className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-[#1a1a1a] transition-shadow duration-300 hover:shadow-md"
     >
       <button
         onClick={onToggle}
@@ -683,7 +683,7 @@ function EventCard({
           <span className={`text-xs px-2.5 py-1 rounded-full font-sans ${colors.bg} ${colors.text}`}>
             {event.category}
           </span>
-          <span className={`text-xs px-2.5 py-1 rounded-full font-sans ${upcoming ? "bg-emerald-50 text-emerald-700" : "bg-gray-100 text-gray-500"}`}>
+          <span className={`text-xs px-2.5 py-1 rounded-full font-sans ${upcoming ? "bg-emerald-50 text-emerald-700" : "bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400"}`}>
             {upcoming ? "UPCOMING" : "PAST"}
           </span>
           {countdown && (
@@ -692,15 +692,15 @@ function EventCard({
             </span>
           )}
         </div>
-        <h3 className="font-serif text-xl text-gray-900 leading-snug mb-2">
+        <h3 className="font-serif text-xl text-gray-900 dark:text-gray-100 leading-snug mb-2">
           <Link href={`/events/${event.id}`} className="hover:text-terracotta transition-colors" onClick={(e) => e.stopPropagation()}>
             {event.title}
           </Link>
         </h3>
-        <p className="text-sm text-gray-500 font-sans leading-relaxed mb-4">
+        <p className="text-sm text-gray-500 dark:text-gray-400 font-sans leading-relaxed mb-4">
           {event.subtitle}
         </p>
-        <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600 font-sans">
+        <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600 dark:text-gray-400 font-sans">
           <span className="flex items-center gap-1.5">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -727,26 +727,26 @@ function EventCard({
       </button>
 
       <div className={`overflow-hidden transition-all duration-300 ${expanded ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}>
-        <div className="px-6 pb-6 border-t border-gray-100 pt-4">
+        <div className="px-6 pb-6 border-t border-gray-100 dark:border-gray-800 pt-4">
           <div className="grid grid-cols-3 gap-4 mb-5">
             <div>
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-sans mb-1">Attendees</p>
-              <p className="text-sm font-sans text-gray-800">{event.attendees}</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-1">Attendees</p>
+              <p className="text-sm font-sans text-gray-800 dark:text-gray-200">{event.attendees}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-sans mb-1">Speakers</p>
-              <p className="text-sm font-sans text-gray-800">{event.speakers}</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-1">Speakers</p>
+              <p className="text-sm font-sans text-gray-800 dark:text-gray-200">{event.speakers}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-sans mb-1">Price</p>
-              <p className="text-sm font-sans text-gray-800">{event.price}</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-1">Price</p>
+              <p className="text-sm font-sans text-gray-800 dark:text-gray-200">{event.price}</p>
             </div>
           </div>
           <div className="mb-5">
-            <p className="text-xs text-gray-400 uppercase tracking-wider font-sans mb-2">Key Highlights</p>
+            <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-2">Key Highlights</p>
             <ul className="space-y-2">
               {event.highlights.map((h, i) => (
-                <li key={i} className="text-sm text-gray-600 font-sans flex gap-2">
+                <li key={i} className="text-sm text-gray-600 dark:text-gray-400 font-sans flex gap-2">
                   <span className={`mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 ${colors.dot}`} />
                   {h}
                 </li>
@@ -770,7 +770,7 @@ function EventCard({
                 href={buildGoogleCalendarUrl(event)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-900 transition-colors font-sans"
+                className="inline-flex items-center gap-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors font-sans"
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />

@@ -82,7 +82,7 @@ export default async function EventPage({ params }: Props) {
         <header className="max-w-3xl mx-auto px-6 py-12">
           <Link
             href="/events"
-            className="text-sm text-gray-400 hover:text-terracotta transition-colors font-sans mb-6 inline-block"
+            className="text-sm text-gray-400 dark:text-gray-500 hover:text-terracotta transition-colors font-sans mb-6 inline-block"
           >
             &larr; All Events
           </Link>
@@ -96,14 +96,14 @@ export default async function EventPage({ params }: Props) {
             </span>
           </div>
 
-          <h1 className="font-serif text-3xl md:text-5xl text-gray-900 leading-tight mb-4">
+          <h1 className="font-serif text-3xl md:text-5xl text-gray-900 dark:text-gray-100 leading-tight mb-4">
             {event.title}
           </h1>
-          <p className="text-lg text-gray-500 font-sans leading-relaxed mb-8">
+          <p className="text-lg text-gray-500 dark:text-gray-400 font-sans leading-relaxed mb-8">
             {event.subtitle}
           </p>
 
-          <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-gray-600 font-sans mb-8">
+          <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-gray-600 dark:text-gray-400 font-sans mb-8">
             <span className="flex items-center gap-2">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -125,26 +125,26 @@ export default async function EventPage({ params }: Props) {
         {/* Details Grid */}
         <section className="max-w-3xl mx-auto px-6 pb-12">
           <div className="grid grid-cols-3 gap-6 mb-10">
-            <div className="border border-gray-200 rounded-xl p-5 text-center">
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-sans mb-1">Attendees</p>
-              <p className="font-serif text-xl text-gray-900">{event.attendees}</p>
+            <div className="border border-gray-200 dark:border-gray-700 rounded-xl p-5 text-center">
+              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-1">Attendees</p>
+              <p className="font-serif text-xl text-gray-900 dark:text-gray-100">{event.attendees}</p>
             </div>
-            <div className="border border-gray-200 rounded-xl p-5 text-center">
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-sans mb-1">Speakers</p>
-              <p className="font-serif text-xl text-gray-900">{event.speakers}</p>
+            <div className="border border-gray-200 dark:border-gray-700 rounded-xl p-5 text-center">
+              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-1">Speakers</p>
+              <p className="font-serif text-xl text-gray-900 dark:text-gray-100">{event.speakers}</p>
             </div>
-            <div className="border border-gray-200 rounded-xl p-5 text-center">
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-sans mb-1">Price</p>
-              <p className="font-serif text-xl text-gray-900">{event.price}</p>
+            <div className="border border-gray-200 dark:border-gray-700 rounded-xl p-5 text-center">
+              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-1">Price</p>
+              <p className="font-serif text-xl text-gray-900 dark:text-gray-100">{event.price}</p>
             </div>
           </div>
 
           {/* Highlights */}
           <div className="mb-10">
-            <h2 className="font-serif text-xl text-gray-900 mb-4">Key Highlights</h2>
+            <h2 className="font-serif text-xl text-gray-900 dark:text-gray-100 mb-4">Key Highlights</h2>
             <ul className="space-y-3">
               {event.highlights.map((h, i) => (
-                <li key={i} className="flex gap-3 text-sm text-gray-600 font-sans leading-relaxed">
+                <li key={i} className="flex gap-3 text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
                   <span className={`mt-1.5 w-2 h-2 rounded-full shrink-0 ${colors.dot}`} />
                   {h}
                 </li>
@@ -157,7 +157,7 @@ export default async function EventPage({ params }: Props) {
             href={event.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-3 text-sm tracking-[0.1em] uppercase hover:bg-terracotta transition-colors font-sans"
+            className="inline-flex items-center gap-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-8 py-3 text-sm tracking-[0.1em] uppercase hover:bg-terracotta dark:hover:bg-terracotta dark:hover:text-white transition-colors font-sans"
           >
             Visit Official Website
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -168,9 +168,9 @@ export default async function EventPage({ params }: Props) {
 
         {/* Related News */}
         {relatedNews.length > 0 && (
-          <section className="border-t border-gray-100 bg-gray-50/50">
+          <section className="border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50">
             <div className="max-w-3xl mx-auto px-6 py-16">
-              <h2 className="font-serif text-xl text-gray-900 mb-6">
+              <h2 className="font-serif text-xl text-gray-900 dark:text-gray-100 mb-6">
                 News &amp; Coverage
               </h2>
               <div className="space-y-4">
@@ -180,17 +180,17 @@ export default async function EventPage({ params }: Props) {
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block p-5 border border-gray-200 rounded-xl bg-white hover:shadow-sm transition-shadow"
+                    className="block p-5 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-[#1a1a1a] hover:shadow-sm transition-shadow"
                   >
-                    <div className="flex items-center gap-2 text-xs text-gray-400 font-sans mb-2">
-                      <span className="font-medium text-gray-600">{item.source}</span>
+                    <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500 font-sans mb-2">
+                      <span className="font-medium text-gray-600 dark:text-gray-400">{item.source}</span>
                       <span>&middot;</span>
                       <span>{item.date}</span>
                     </div>
-                    <h3 className="font-serif text-lg text-gray-900 mb-2 hover:text-terracotta transition-colors">
+                    <h3 className="font-serif text-lg text-gray-900 dark:text-gray-100 mb-2 hover:text-terracotta transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-gray-500 font-sans leading-relaxed">
+                    <p className="text-sm text-gray-500 dark:text-gray-400 font-sans leading-relaxed">
                       {item.summary}
                     </p>
                   </a>
@@ -204,7 +204,7 @@ export default async function EventPage({ params }: Props) {
         <div className="max-w-3xl mx-auto px-6 py-12 text-center">
           <Link
             href="/events"
-            className="text-sm text-gray-800 underline underline-offset-4 hover:text-terracotta transition-colors font-sans"
+            className="text-sm text-gray-800 dark:text-gray-200 underline underline-offset-4 hover:text-terracotta transition-colors font-sans"
           >
             &larr; Back to all events
           </Link>

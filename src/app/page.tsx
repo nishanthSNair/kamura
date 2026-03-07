@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
+import { testimonials } from "@/data/testimonials";
 import BlogGrid from "./BlogGrid";
 
 export const metadata: Metadata = {
@@ -45,24 +46,24 @@ export default function Home() {
       </section>
 
       {/* Wellness Quiz CTA */}
-      <section className="border-t border-gray-100 bg-gray-50/50">
+      <section className="border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50">
         <div className="max-w-4xl mx-auto px-6 py-20 md:py-24">
           <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
             <div className="flex-1 text-center md:text-left">
               <p className="text-xs tracking-[0.3em] uppercase mb-4 text-terracotta font-sans">
                 Interactive Quiz
               </p>
-              <h2 className="font-serif text-3xl md:text-4xl text-gray-900 mb-4 leading-snug">
+              <h2 className="font-serif text-3xl md:text-4xl text-gray-900 dark:text-gray-100 mb-4 leading-snug">
                 Discover Your Wellness Path
               </h2>
-              <p className="text-gray-500 font-sans leading-relaxed mb-6">
+              <p className="text-gray-500 dark:text-gray-400 font-sans leading-relaxed mb-6">
                 Are you The Biohacker, The Yogi, or The Healer? Take our 2-minute
                 quiz to find your wellness score, your archetype, and personalized
                 recommendations for your longevity journey.
               </p>
               <Link
                 href="/quiz"
-                className="inline-block bg-gray-900 text-white px-8 py-3 text-sm tracking-[0.15em] uppercase hover:bg-terracotta transition-colors font-sans"
+                className="inline-block bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-8 py-3 text-sm tracking-[0.15em] uppercase hover:bg-terracotta dark:hover:bg-terracotta dark:hover:text-white transition-colors font-sans"
               >
                 Take the Quiz
               </Link>
@@ -81,6 +82,41 @@ export default function Home() {
                 <span className="text-xs text-rose-600 font-sans">Minutes</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="border-t border-gray-100 dark:border-gray-800">
+        <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
+          <div className="mb-12">
+            <p className="text-xs tracking-[0.3em] uppercase mb-4 text-terracotta font-sans">
+              Community
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl text-gray-900 dark:text-gray-100 mb-3">
+              What People Are Saying
+            </h2>
+            <div className="w-12 h-px bg-terracotta/40 mt-6" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((t) => (
+              <div
+                key={t.id}
+                className="border border-gray-200 dark:border-gray-700 rounded-xl p-8 bg-white dark:bg-[#1a1a1a]"
+              >
+                <p className="font-serif text-lg text-gray-800 dark:text-gray-200 leading-relaxed mb-6 italic">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <div>
+                  <p className="font-sans text-sm font-medium text-gray-900 dark:text-gray-100">
+                    {t.name}
+                  </p>
+                  <p className="font-sans text-xs text-gray-400 dark:text-gray-500">
+                    {t.role}, {t.location}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

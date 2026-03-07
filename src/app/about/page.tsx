@@ -33,18 +33,18 @@ export default function AboutPage() {
             <h2 className="font-serif text-2xl text-terracotta mb-6">
               Our Story
             </h2>
-            <p className="text-gray-600 leading-relaxed font-sans">
-              <span className="font-serif text-lg text-gray-800">Kame (亀)</span>{" "}
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
+              <span className="font-serif text-lg text-gray-800 dark:text-gray-200">Kame (亀)</span>{" "}
               in Japanese is the tortoise — a universal symbol of longevity,
               wisdom, and long life.{" "}
-              <span className="font-serif text-lg text-gray-800">Ura</span> means
+              <span className="font-serif text-lg text-gray-800 dark:text-gray-200">Ura</span> means
               heart.{" "}
-              <span className="font-serif text-lg text-gray-800">Kamura</span> is
+              <span className="font-serif text-lg text-gray-800 dark:text-gray-200">Kamura</span> is
               the heart of longevity.
             </p>
           </div>
 
-          <p className="text-gray-600 leading-relaxed font-sans">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
             The tortoise lives slowly, intentionally, and for a very long time.
             That is how we believe life should be lived.
           </p>
@@ -55,14 +55,14 @@ export default function AboutPage() {
             <h2 className="font-serif text-2xl text-terracotta mb-6">
               Our Mission
             </h2>
-            <p className="text-gray-600 leading-relaxed font-sans">
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
               We are building the go-to destination for discovering longevity
               practices, wellness experts, healing centers, and transformative
               events — starting in Dubai.
             </p>
           </div>
 
-          <p className="text-gray-600 leading-relaxed font-sans">
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
             Whether you&apos;re exploring breathwork for the first time or
             searching for the best longevity clinic in the UAE, Kamura is your
             guide to living a longer, healthier, more intentional life.

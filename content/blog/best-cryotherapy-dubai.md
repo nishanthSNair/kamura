@@ -2,6 +2,7 @@
 title: "Cryotherapy in Dubai: Where to Go & What to Expect"
 date: "2026-03-01"
 category: "Guides & Reviews"
+coverImage: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80&fit=crop"
 excerpt: "Cold therapy is one of the fastest-growing wellness trends in the UAE. We break down what cryotherapy actually does, where to try it in Dubai, and what your first session looks like."
 ---
 

@@ -14,6 +14,7 @@ interface Post {
   date: string;
   excerpt: string;
   category: BlogCategory;
+  coverImage?: string;
   readingTime: number;
 }
 
@@ -35,10 +36,10 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
     <section id="blog" className="max-w-6xl mx-auto px-6 py-20 md:py-28">
       {/* Section Header */}
       <div className="mb-12">
-        <h2 className="font-serif text-3xl md:text-4xl text-gray-900 mb-3">
+        <h2 className="font-serif text-3xl md:text-4xl text-gray-900 dark:text-gray-100 mb-3">
           Latest Articles
         </h2>
-        <p className="text-gray-500 font-sans">
+        <p className="text-gray-500 dark:text-gray-400 font-sans">
           Guides, deep-dives, and trends in longevity &amp; wellness
         </p>
         <div className="w-12 h-px bg-terracotta/40 mt-6" />
@@ -52,8 +53,8 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
             onClick={() => setActive(cat)}
             className={`px-4 py-2 text-sm font-sans rounded-full border transition-all duration-200 ${
               active === cat
-                ? "bg-gray-900 text-white border-gray-900"
-                : "bg-white text-gray-600 border-gray-200 hover:border-gray-400"
+                ? "bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100"
+                : "bg-white dark:bg-[#1a1a1a] text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500"
             }`}
           >
             {cat}
@@ -67,13 +68,23 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
           const colors = blogCategoryColors[post.category];
           return (
             <article key={post.slug}>
+              {post.coverImage && (
+                <Link href={`/blog/${post.slug}`} className="block mb-4 overflow-hidden rounded-lg">
+                  <img
+                    src={post.coverImage}
+                    alt={post.title}
+                    className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </Link>
+              )}
               <div className="flex items-center gap-3 mb-3">
                 <span
                   className={`text-xs px-2.5 py-1 rounded-full font-sans ${colors.bg} ${colors.text}`}
                 >
                   {post.category}
                 </span>
-                <span className="text-xs text-gray-400 tracking-wide uppercase">
+                <span className="text-xs text-gray-400 dark:text-gray-500 tracking-wide uppercase">
                   {formatDate(post.date)}
                 </span>
               </div>
@@ -85,17 +96,17 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
                   {post.title}
                 </Link>
               </h3>
-              <p className="text-sm text-gray-500 leading-relaxed mb-4 font-sans">
+              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4 font-sans">
                 {post.excerpt}
               </p>
               <div className="flex items-center gap-3">
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="text-sm text-gray-800 underline underline-offset-4 hover:text-terracotta transition-colors font-sans"
+                  className="text-sm text-gray-800 dark:text-gray-200 underline underline-offset-4 hover:text-terracotta transition-colors font-sans"
                 >
                   Read More
                 </Link>
-                <span className="text-xs text-gray-400 font-sans">
+                <span className="text-xs text-gray-400 dark:text-gray-500 font-sans">
                   {post.readingTime} min read
                 </span>
               </div>
@@ -105,7 +116,7 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
       </div>
 
       {filtered.length === 0 && (
-        <p className="text-gray-400 text-center py-16 font-sans">
+        <p className="text-gray-400 dark:text-gray-500 text-center py-16 font-sans">
           No articles in this category yet.
         </p>
       )}

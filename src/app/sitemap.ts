@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { events } from "@/data/events";
 import { listings } from "@/data/listings";
+import { areas } from "@/data/areas";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://kamuralife.com";
@@ -57,6 +58,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    {
+      url: `${baseUrl}/explore/compare`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    ...areas.map((area) => ({
+      url: `${baseUrl}/explore/area/${area.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     })),
   ];
 }
