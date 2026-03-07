@@ -9,6 +9,7 @@ import {
   type WellnessArchetype,
   type WellnessDimension,
 } from "@/data/quiz";
+import { listings } from "@/data/listings";
 
 type QuizState = "intro" | "playing" | "results";
 
@@ -374,30 +375,133 @@ export default function QuizContent() {
           </div>
         </section>
 
-        {/* Recommended Categories */}
-        <section className="border-t border-gray-100 bg-gray-50/50">
-          <div className="max-w-2xl mx-auto px-6 py-16">
-            <h3 className="font-serif text-xl text-gray-900 mb-2">
-              Recommended for You
-            </h3>
-            <p className="text-sm text-gray-500 font-sans mb-6">
-              Based on your archetype, explore these wellness categories in the UAE.
-            </p>
-            <div className="space-y-3 mb-10">
-              {primary.recommendedCategories.map((cat) => (
-                <Link
-                  key={cat}
-                  href="/explore"
-                  className="flex items-center justify-between p-4 rounded-xl border border-gray-200 bg-white hover:border-terracotta/30 hover:shadow-sm transition-all font-sans text-sm"
+        {/* 30-Day Wellness Plan */}
+        <section className="max-w-2xl mx-auto px-6 pb-16">
+          <h3 className="font-serif text-2xl text-gray-900 mb-2">
+            Your Personalized 30-Day Plan
+          </h3>
+          <p className="text-sm text-gray-500 font-sans mb-8">
+            Based on your archetype, here&apos;s how to kickstart your wellness journey.
+          </p>
+          <div className="space-y-6">
+            {primary.plan.map((week, wi) => (
+              <div
+                key={week.week}
+                className={`rounded-xl border p-6 ${wi === 0 ? `${primary.color.border} ${primary.color.bg}` : "border-gray-200 bg-white"}`}
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <span className={`text-xs font-sans font-medium px-2.5 py-1 rounded-full ${wi === 0 ? `${primary.color.text} bg-white/60` : "text-gray-500 bg-gray-100"}`}>
+                    {week.week}
+                  </span>
+                  <span className="text-sm font-sans font-medium text-gray-700">
+                    {week.theme}
+                  </span>
+                </div>
+                <ul className="space-y-2">
+                  {week.steps.map((step, si) => (
+                    <li key={si} className="flex gap-3 text-sm text-gray-600 font-sans">
+                      <span className={`mt-1 w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 ${wi === 0 ? primary.color.border : "border-gray-200"}`}>
+                        <span className="text-xs text-gray-400">{si + 1}</span>
+                      </span>
+                      {step}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Recommended Practitioners */}
+        <section className="max-w-2xl mx-auto px-6 pb-16">
+          <h3 className="font-serif text-xl text-gray-900 mb-2">
+            Recommended Places for You
+          </h3>
+          <p className="text-sm text-gray-500 font-sans mb-6">
+            Real wellness spaces in the UAE matched to your archetype.
+          </p>
+          <div className="space-y-3">
+            {primary.recommendedListingIds
+              .map((id) => listings.find((l) => l.id === id))
+              .filter(Boolean)
+              .map((listing) => (
+                <a
+                  key={listing!.id}
+                  href={listing!.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-4 rounded-xl border border-gray-200 bg-white hover:border-terracotta/30 hover:shadow-sm transition-all group"
                 >
-                  <span className="text-gray-800">{cat}</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
+                  <div>
+                    <p className="text-sm font-sans font-medium text-gray-800 group-hover:text-terracotta transition-colors">
+                      {listing!.name}
+                    </p>
+                    <p className="text-xs text-gray-400 font-sans mt-0.5">
+                      {listing!.tagline} &middot; {listing!.location}, {listing!.city}
+                    </p>
+                  </div>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 ml-4">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
                   </svg>
-                </Link>
+                </a>
               ))}
+          </div>
+          <Link
+            href="/explore"
+            className="inline-block text-sm text-terracotta hover:text-terracotta-dark transition-colors font-sans mt-4"
+          >
+            See all places in the Explore directory &rarr;
+          </Link>
+        </section>
+
+        {/* Share & Actions */}
+        <section className="border-t border-gray-100 bg-gray-50/50">
+          <div className="max-w-2xl mx-auto px-6 py-16 text-center">
+            <h3 className="font-serif text-xl text-gray-900 mb-6">
+              Share Your Results
+            </h3>
+            <div className="flex flex-wrap gap-3 justify-center mb-10">
+              <button
+                onClick={() => {
+                  const text = `I'm ${primary.name} with a wellness score of ${results.scorePercent}/100! Discover your wellness path at kamuralife.com/quiz`;
+                  if (navigator.share) {
+                    navigator.share({ title: "My KAMURA Wellness Results", text, url: "https://kamuralife.com/quiz" });
+                  } else {
+                    navigator.clipboard.writeText(text);
+                    alert("Results copied to clipboard!");
+                  }
+                }}
+                className="px-6 py-3 border border-gray-200 text-sm font-sans text-gray-700 hover:border-gray-400 transition-colors rounded-lg flex items-center gap-2"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                </svg>
+                Share
+              </button>
+              <button
+                onClick={() => {
+                  const text = `I'm ${primary.name} with a wellness score of ${results.scorePercent}/100! Discover your wellness path at kamuralife.com/quiz`;
+                  const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+                  window.open(url, "_blank");
+                }}
+                className="px-6 py-3 border border-gray-200 text-sm font-sans text-gray-700 hover:border-gray-400 transition-colors rounded-lg"
+              >
+                Post on X
+              </button>
+              <button
+                onClick={() => {
+                  const url = `https://wa.me/?text=${encodeURIComponent(`I'm ${primary.name} with a wellness score of ${results.scorePercent}/100! Take the quiz: https://kamuralife.com/quiz`)}`;
+                  window.open(url, "_blank");
+                }}
+                className="px-6 py-3 border border-gray-200 text-sm font-sans text-gray-700 hover:border-gray-400 transition-colors rounded-lg"
+              >
+                WhatsApp
+              </button>
             </div>
+
+            <div className="w-12 h-px bg-terracotta/40 mx-auto mb-10" />
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button

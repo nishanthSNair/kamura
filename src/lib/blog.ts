@@ -12,9 +12,12 @@ export interface BlogPost {
   date: string;
   excerpt: string;
   content: string;
+  readingTime: number;
+  wordCount: number;
+  headings: { id: string; text: string; level: number }[];
 }
 
-export function getAllPosts(): Omit<BlogPost, "content">[] {
+export function getAllPosts(): Omit<BlogPost, "content" | "headings">[] {
   const files = fs.readdirSync(blogDirectory);
 
   const posts = files
@@ -23,13 +26,18 @@ export function getAllPosts(): Omit<BlogPost, "content">[] {
       const slug = file.replace(/\.md$/, "");
       const filePath = path.join(blogDirectory, file);
       const fileContents = fs.readFileSync(filePath, "utf8");
-      const { data } = matter(fileContents);
+      const { data, content } = matter(fileContents);
+
+      const wordCount = content.split(/\s+/).filter(Boolean).length;
+      const readingTime = Math.max(1, Math.ceil(wordCount / 200));
 
       return {
         slug,
         title: data.title,
         date: data.date,
         excerpt: data.excerpt,
+        readingTime,
+        wordCount,
       };
     })
     .sort((a, b) => (a.date > b.date ? -1 : 1));
@@ -47,8 +55,44 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContents);
 
+  const wordCount = content.split(/\s+/).filter(Boolean).length;
+  const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+
+  // Extract headings from markdown
+  const headingRegex = /^(#{1,3})\s+(.+)$/gm;
+  const headings: { id: string; text: string; level: number }[] = [];
+  let match;
+  while ((match = headingRegex.exec(content)) !== null) {
+    const text = match[2].trim();
+    const id = text
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
+    headings.push({ id, text, level: match[1].length });
+  }
+
   const processedContent = await remark().use(html).process(content);
-  const contentHtml = processedContent.toString();
+  // Add IDs to headings in HTML for anchor navigation
+  let contentHtml = processedContent.toString();
+  headings.forEach(({ id, text }) => {
+    const escapedText = text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    contentHtml = contentHtml.replace(
+      new RegExp(`(<h[1-3])>\\s*${escapedText}\\s*</h[1-3]>`),
+      `$1 id="${id}">${text}</h${text}>`
+    );
+  });
+  // Simpler approach: add IDs via regex on h tags
+  contentHtml = contentHtml.replace(
+    /<h([1-3])>(.*?)<\/h[1-3]>/g,
+    (_, level, text) => {
+      const id = text
+        .replace(/<[^>]+>/g, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+      return `<h${level} id="${id}">${text}</h${level}>`;
+    }
+  );
 
   return {
     slug,
@@ -56,6 +100,9 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     date: data.date,
     excerpt: data.excerpt,
     content: contentHtml,
+    readingTime,
+    wordCount,
+    headings,
   };
 }
 

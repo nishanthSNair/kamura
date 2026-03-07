@@ -91,6 +91,8 @@ export default function Home() {
             <article key={post.slug}>
               <p className="text-xs text-gray-400 tracking-wide uppercase mb-3">
                 {formatDate(post.date)}
+                <span className="text-gray-300 mx-2">&middot;</span>
+                {post.readingTime} min read
               </p>
               <h2 className="font-serif text-xl text-terracotta leading-snug mb-3">
                 <Link

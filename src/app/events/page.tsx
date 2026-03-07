@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { events } from "@/data/events";
 import EventsContent from "./EventsContent";
 
 export const metadata: Metadata = {
@@ -13,6 +14,49 @@ export const metadata: Metadata = {
   },
 };
 
+function generateEventsJsonLd() {
+  return events.map((event) => ({
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: event.title,
+    description: event.subtitle,
+    startDate: event.dateStart,
+    endDate: event.dateEnd,
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: {
+      "@type": "Place",
+      name: event.location,
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "AE",
+      },
+    },
+    organizer: {
+      "@type": "Organization",
+      name: "KAMURA",
+      url: "https://kamuralife.com",
+    },
+    offers: {
+      "@type": "Offer",
+      url: event.website,
+      price: event.price === "Free" || event.price === "Free (visitor registration)" ? "0" : undefined,
+      priceCurrency: "AED",
+      availability: "https://schema.org/InStock",
+    },
+  }));
+}
+
 export default function EventsPage() {
-  return <EventsContent />;
+  const jsonLd = generateEventsJsonLd();
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <EventsContent />
+    </>
+  );
 }

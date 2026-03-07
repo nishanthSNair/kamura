@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect } from "react";
+import Link from "next/link";
 import { events, categoryColors, type Event, type EventCategory } from "@/data/events";
 import { news } from "@/data/news";
 
@@ -453,7 +454,9 @@ function EventCard({
           </span>
         </div>
         <h3 className="font-serif text-xl text-gray-900 leading-snug mb-2">
-          {event.title}
+          <Link href={`/events/${event.id}`} className="hover:text-terracotta transition-colors" onClick={(e) => e.stopPropagation()}>
+            {event.title}
+          </Link>
         </h3>
         <p className="text-sm text-gray-500 font-sans leading-relaxed mb-4">
           {event.subtitle}

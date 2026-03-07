@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPostBySlug, getAllSlugs, formatDate } from "@/lib/blog";
+import { getPostBySlug, getAllSlugs, getAllPosts, formatDate } from "@/lib/blog";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -37,34 +37,163 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  return (
-    <article className="pt-24">
-      <header className="max-w-2xl mx-auto px-6 py-12 text-center">
-        <p className="text-xs text-gray-400 tracking-wide uppercase mb-4">
-          {formatDate(post.date)}
-        </p>
-        <h1 className="font-serif text-3xl md:text-5xl text-terracotta leading-tight mb-6">
-          {post.title}
-        </h1>
-        <p className="text-gray-500 leading-relaxed font-sans">
-          {post.excerpt}
-        </p>
-        <div className="w-12 h-px bg-terracotta/40 mx-auto mt-8" />
-      </header>
+  // Get related posts (same month or adjacent, excluding current)
+  const allPosts = getAllPosts();
+  const relatedPosts = allPosts
+    .filter((p) => p.slug !== post.slug)
+    .slice(0, 3);
 
-      <div
-        className="max-w-2xl mx-auto px-6 pb-20 prose prose-gray prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-terracotta prose-a:no-underline hover:prose-a:underline font-sans"
-        dangerouslySetInnerHTML={{ __html: post.content }}
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: {
+      "@type": "Organization",
+      name: "KAMURA",
+      url: "https://kamuralife.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "KAMURA",
+      url: "https://kamuralife.com",
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-2xl mx-auto px-6 pb-20 text-center">
-        <Link
-          href="/"
-          className="text-sm text-gray-800 underline underline-offset-4 hover:text-terracotta transition-colors font-sans"
-        >
-          &larr; Back to all posts
-        </Link>
-      </div>
-    </article>
+      <article className="pt-24">
+        <header className="max-w-2xl mx-auto px-6 py-12 text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <p className="text-xs text-gray-400 tracking-wide uppercase">
+              {formatDate(post.date)}
+            </p>
+            <span className="text-gray-300">&middot;</span>
+            <p className="text-xs text-gray-400 font-sans">
+              {post.readingTime} min read
+            </p>
+          </div>
+          <h1 className="font-serif text-3xl md:text-5xl text-terracotta leading-tight mb-6">
+            {post.title}
+          </h1>
+          <p className="text-gray-500 leading-relaxed font-sans">
+            {post.excerpt}
+          </p>
+          <div className="w-12 h-px bg-terracotta/40 mx-auto mt-8" />
+        </header>
+
+        {/* Table of Contents */}
+        {post.headings.length > 2 && (
+          <nav className="max-w-2xl mx-auto px-6 mb-10">
+            <div className="border border-gray-200 rounded-xl p-6 bg-gray-50/50">
+              <p className="text-xs text-gray-400 uppercase tracking-wider font-sans mb-3">
+                In this article
+              </p>
+              <ul className="space-y-2">
+                {post.headings.map((heading) => (
+                  <li
+                    key={heading.id}
+                    style={{ paddingLeft: `${(heading.level - 1) * 16}px` }}
+                  >
+                    <a
+                      href={`#${heading.id}`}
+                      className="text-sm text-gray-600 hover:text-terracotta transition-colors font-sans"
+                    >
+                      {heading.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </nav>
+        )}
+
+        <div
+          className="max-w-2xl mx-auto px-6 pb-12 prose prose-gray prose-headings:font-serif prose-headings:text-gray-900 prose-a:text-terracotta prose-a:no-underline hover:prose-a:underline font-sans"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+
+        {/* Next Steps CTA */}
+        <section className="max-w-2xl mx-auto px-6 pb-12">
+          <div className="border border-terracotta/20 rounded-xl p-8 bg-terracotta/5">
+            <h3 className="font-serif text-xl text-gray-900 mb-3">
+              Ready to take the next step?
+            </h3>
+            <p className="text-sm text-gray-600 font-sans leading-relaxed mb-5">
+              Discover your wellness archetype and get personalized recommendations
+              for clinics, studios, and retreats in the UAE.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/quiz"
+                className="inline-block bg-gray-900 text-white px-6 py-2.5 text-sm tracking-[0.1em] uppercase hover:bg-terracotta transition-colors font-sans"
+              >
+                Take the Quiz
+              </Link>
+              <Link
+                href="/explore"
+                className="inline-block border border-gray-300 text-gray-700 px-6 py-2.5 text-sm tracking-[0.1em] uppercase hover:border-terracotta hover:text-terracotta transition-colors font-sans"
+              >
+                Explore Directory
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Posts */}
+        {relatedPosts.length > 0 && (
+          <section className="border-t border-gray-100 bg-gray-50/50">
+            <div className="max-w-6xl mx-auto px-6 py-16">
+              <h3 className="font-serif text-2xl text-gray-900 mb-8 text-center">
+                Continue Reading
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10">
+                {relatedPosts.map((related) => (
+                  <article key={related.slug}>
+                    <p className="text-xs text-gray-400 tracking-wide uppercase mb-3">
+                      {formatDate(related.date)}
+                      <span className="text-gray-300 mx-2">&middot;</span>
+                      {related.readingTime} min read
+                    </p>
+                    <h4 className="font-serif text-lg text-terracotta leading-snug mb-3">
+                      <Link
+                        href={`/blog/${related.slug}`}
+                        className="hover:text-terracotta-dark transition-colors"
+                      >
+                        {related.title}
+                      </Link>
+                    </h4>
+                    <p className="text-sm text-gray-500 leading-relaxed font-sans mb-3">
+                      {related.excerpt}
+                    </p>
+                    <Link
+                      href={`/blog/${related.slug}`}
+                      className="text-sm text-gray-800 underline underline-offset-4 hover:text-terracotta transition-colors font-sans"
+                    >
+                      Read More
+                    </Link>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        <div className="max-w-2xl mx-auto px-6 py-12 text-center">
+          <Link
+            href="/"
+            className="text-sm text-gray-800 underline underline-offset-4 hover:text-terracotta transition-colors font-sans"
+          >
+            &larr; Back to all posts
+          </Link>
+        </div>
+      </article>
+    </>
   );
 }
