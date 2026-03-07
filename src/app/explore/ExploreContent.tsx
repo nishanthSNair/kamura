@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import {
   listings,
   listingCategoryColors,
@@ -154,7 +155,12 @@ export default function ExploreContent() {
                     </div>
 
                     <h3 className="font-serif text-xl text-gray-900 leading-snug mb-1">
-                      {listing.name}
+                      <Link
+                        href={`/explore/${listing.id}`}
+                        className="hover:text-terracotta transition-colors"
+                      >
+                        {listing.name}
+                      </Link>
                     </h3>
                     <p className="text-sm text-terracotta font-sans mb-3">
                       {listing.tagline}

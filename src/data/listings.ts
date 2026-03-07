@@ -8,6 +8,13 @@ export interface Listing {
   category: ListingCategory;
   website: string;
   featured?: boolean;
+  services: string[];
+  mapQuery?: string;
+  phone?: string;
+  whatsapp?: string;
+  email?: string;
+  priceRange?: string;
+  hours?: string;
 }
 
 export type ListingCategory =
@@ -51,6 +58,7 @@ export const listings: Listing[] = [
     category: "Longevity Clinics",
     website: "https://theaeonclinic.com/",
     featured: true,
+    services: ["Stem Cell Therapy", "HBOT", "NAD+ Infusions", "Anti-Aging", "Regenerative Medicine"],
   },
   {
     id: "clinique-la-prairie",
@@ -63,6 +71,7 @@ export const listings: Listing[] = [
     category: "Longevity Clinics",
     website: "https://longevity-hub.cliniquelaprairie.com/dubai/",
     featured: true,
+    services: ["Longevity Diagnostics", "Preventive Medicine", "Regenerative Care", "Longevity Programs"],
   },
   {
     id: "bioscience-institute",
@@ -74,6 +83,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Longevity Clinics",
     website: "https://bioinst.com/",
+    services: ["Stem Cell Therapy", "IV Treatments", "Biological Age Testing", "Precision Medicine", "Longevity Strategy"],
   },
 
   // ─── Biohacking & Performance ───
@@ -88,6 +98,7 @@ export const listings: Listing[] = [
     category: "Biohacking & Performance",
     website: "https://www.byformation.com/",
     featured: true,
+    services: ["Cryotherapy", "PEMF Therapy", "Infrared Sauna", "Red Light Therapy", "VO2 Testing"],
   },
   {
     id: "aviv-clinics",
@@ -100,6 +111,7 @@ export const listings: Listing[] = [
     category: "Biohacking & Performance",
     website: "https://aviv-clinics.ae/",
     featured: true,
+    services: ["HBOT", "Cognitive Assessment", "Physical Conditioning", "Lifestyle Guidance"],
   },
   {
     id: "ucryo",
@@ -111,6 +123,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Biohacking & Performance",
     website: "https://ucryowellness.com/",
+    services: ["Whole-Body Cryo", "Localized Cryo", "Infrared Sauna", "Compression Therapy", "IV Drips"],
   },
 
   // ─── Holistic & Healing ───
@@ -125,6 +138,7 @@ export const listings: Listing[] = [
     category: "Holistic & Healing",
     website: "https://illuminations.ae/",
     featured: true,
+    services: ["Reiki", "Sound Healing", "Breathwork", "Meditation", "Hypnotherapy", "Life Coaching"],
   },
   {
     id: "home-of-wellness",
@@ -136,6 +150,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Holistic & Healing",
     website: "https://yourhomeofwellness.com/",
+    services: ["Sound Healing", "Breathwork", "Reiki", "Hypnotherapy", "Meditation", "Energy Healing"],
   },
   {
     id: "healers-clinic",
@@ -147,6 +162,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Holistic & Healing",
     website: "https://www.thehealersclinic.com/",
+    services: ["Ayurveda", "Homeopathy", "Naturopathy", "Yoga Therapy", "Integrative Medicine"],
   },
   {
     id: "house-of-nature",
@@ -158,6 +174,7 @@ export const listings: Listing[] = [
     city: "Abu Dhabi",
     category: "Holistic & Healing",
     website: "https://honuae.com/",
+    services: ["Ayurveda", "Chiropractic Care", "Naturopathy", "Functional Medicine", "Acupuncture"],
   },
 
   // ─── Yoga & Movement ───
@@ -172,6 +189,7 @@ export const listings: Listing[] = [
     category: "Yoga & Movement",
     website: "https://www.karmayogadubai.com/",
     featured: true,
+    services: ["Hatha Yoga", "Vinyasa", "Ashtanga", "Kundalini", "Yin Yoga", "Meditation"],
   },
   {
     id: "chi-room",
@@ -183,6 +201,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Yoga & Movement",
     website: "https://thechiroom.ae/",
+    services: ["Yoga", "Breathwork", "Sound Healing", "Meditation", "Mindfulness"],
   },
 
   // ─── Wellness Retreats & Spas ───
@@ -197,6 +216,7 @@ export const listings: Listing[] = [
     category: "Wellness Retreats & Spas",
     website: "https://theretreatpalmdubai.com/",
     featured: true,
+    services: ["Holistic Wellness", "Clean-Food Dining", "Feng Shui", "Wellness Retreats", "Rejuvenation"],
   },
   {
     id: "zoya",
@@ -209,6 +229,7 @@ export const listings: Listing[] = [
     category: "Wellness Retreats & Spas",
     website: "https://zoyawellbeing.com/",
     featured: true,
+    services: ["Detox Programs", "Hydrotherapy", "Infrared Sauna", "Therapeutic Fasting", "Anti-Aging"],
   },
 
   // ─── New Listings ───────────────────────────────────
@@ -224,6 +245,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Longevity Clinics",
     website: "https://dnahealthcorp.com/",
+    services: ["Genetic Testing", "Epigenetic Analysis", "IV Therapy", "Hormone Balancing", "Anti-Aging"],
   },
   {
     id: "skin111",
@@ -235,6 +257,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Longevity Clinics",
     website: "https://skin111.com/",
+    services: ["Regenerative Medicine", "PRP Therapy", "Exosome Treatments", "Anti-Aging"],
   },
   {
     id: "advanced-health-dubai",
@@ -246,6 +269,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Longevity Clinics",
     website: "https://advancedhealth.ae/",
+    services: ["Functional Medicine", "Gut Health", "Heavy Metal Detox", "Telomere Testing", "Longevity Planning"],
   },
   {
     id: "eden-aesthetics",
@@ -257,6 +281,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Longevity Clinics",
     website: "https://edenaesthetics.ae/",
+    services: ["Stem Cell Therapy", "Exosome Treatments", "NAD+ Infusions", "Hormone Optimization"],
   },
 
   // ─── Biohacking & Performance (4 more) ───
@@ -270,6 +295,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Biohacking & Performance",
     website: "https://www.medcare.ae/en/wellth",
+    services: ["IV Therapy", "Cryotherapy", "Hyperbaric Oxygen", "Compression Therapy", "Infrared Sauna"],
   },
   {
     id: "resync",
@@ -281,6 +307,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Biohacking & Performance",
     website: "https://resync.ae/",
+    services: ["NormaTec Compression", "Cold Therapy", "EMS Training", "Metabolic Testing"],
   },
   {
     id: "brain-performance-centre",
@@ -292,6 +319,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Biohacking & Performance",
     website: "https://thebrainandperformancecentre.com/",
+    services: ["Neurofeedback", "Brain Mapping", "Transcranial Stimulation", "Cognitive Training", "Sleep Optimization"],
   },
   {
     id: "cryo-dubai",
@@ -303,6 +331,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Biohacking & Performance",
     website: "https://cryo.ae/",
+    services: ["Full-Body Cryo", "Localized Cryo", "CryoFacials", "Infrared Sauna", "Compression Therapy"],
   },
 
   // ─── Holistic & Healing (4 more) ───
@@ -316,6 +345,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Holistic & Healing",
     website: "https://santhigiriholistic.com/",
+    services: ["Panchakarma", "Siddha Medicine", "Yoga Therapy", "Ayurvedic Consults"],
   },
   {
     id: "dubai-herbal-treatment",
@@ -328,6 +358,7 @@ export const listings: Listing[] = [
     category: "Holistic & Healing",
     website: "https://dubaihtc.com/",
     featured: true,
+    services: ["Naturopathy", "Homeopathy", "Herbal Medicine", "Hijama (Cupping)", "Acupuncture"],
   },
   {
     id: "keyani-wellness",
@@ -339,6 +370,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Holistic & Healing",
     website: "https://keyaniwellness.com/",
+    services: ["Reiki", "Crystal Healing", "Chakra Balancing", "EFT", "Life Coaching"],
   },
   {
     id: "sohum-wellness",
@@ -350,6 +382,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Holistic & Healing",
     website: "https://sohumwellness.com/",
+    services: ["Sound Baths", "Meditation", "Breathwork", "Reiki", "Therapeutic Yoga"],
   },
 
   // ─── Yoga & Movement (4 more) ───
@@ -364,6 +397,7 @@ export const listings: Listing[] = [
     category: "Yoga & Movement",
     website: "https://bodytreestudio.com/",
     featured: true,
+    services: ["Yoga", "Pilates", "Barre", "Teacher Training", "Wellness Workshops"],
   },
   {
     id: "aura-wellness",
@@ -375,6 +409,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Yoga & Movement",
     website: "https://aurawellness.ae/",
+    services: ["Vinyasa", "Hatha Yoga", "Yin Yoga", "Meditation", "Private Sessions"],
   },
   {
     id: "dhyana-dubai",
@@ -386,6 +421,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Yoga & Movement",
     website: "https://dhyanadubai.com/",
+    services: ["Hot Yoga", "Infrared Classes", "Cold Plunge", "Sound Healing"],
   },
   {
     id: "seven-wellness",
@@ -397,6 +433,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Yoga & Movement",
     website: "https://sevenwellness.ae/",
+    services: ["Yoga", "Functional Fitness", "Pilates", "Breathwork"],
   },
 
   // ─── Wellness Retreats & Spas (4 more) ───
@@ -411,6 +448,7 @@ export const listings: Listing[] = [
     category: "Wellness Retreats & Spas",
     website: "https://www.jumeirah.com/en/stay/dubai/jumeirah-zabeel-saray",
     featured: true,
+    services: ["Turkish Hammam", "Snow Room", "Salt Room", "Thalassotherapy", "Signature Treatments"],
   },
   {
     id: "anantara-qasr-al-sarab",
@@ -422,6 +460,7 @@ export const listings: Listing[] = [
     city: "Abu Dhabi",
     category: "Wellness Retreats & Spas",
     website: "https://www.anantara.com/en/qasr-al-sarab-abu-dhabi",
+    services: ["Arabian Treatments", "Desert Meditation", "Sunrise Yoga", "Wellness Retreats"],
   },
   {
     id: "heart-soul-spa",
@@ -433,6 +472,7 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Wellness Retreats & Spas",
     website: "https://heartandsoul.ae/",
+    services: ["Massage Therapy", "Aromatherapy", "Reflexology", "Energy Healing", "Wellness Consults"],
   },
   {
     id: "plume-studio",
@@ -444,5 +484,6 @@ export const listings: Listing[] = [
     city: "Dubai",
     category: "Wellness Retreats & Spas",
     website: "https://plumestudio.ae/",
+    services: ["Float Therapy", "Infrared Sauna", "Cold Plunge", "Compression Therapy", "Guided Relaxation"],
   },
 ];

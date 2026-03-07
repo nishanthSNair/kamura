@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { events } from "@/data/events";
+import { listings } from "@/data/listings";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://kamuralife.com";
@@ -47,6 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogUrls,
     ...events.map((event) => ({
       url: `${baseUrl}/events/${event.id}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    ...listings.map((listing) => ({
+      url: `${baseUrl}/explore/${listing.id}`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
