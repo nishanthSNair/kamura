@@ -20,6 +20,159 @@
       <span>KAMURA</span>
       Loading content manager...
     </div>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
     <script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js"></script>
+    <script>
+      initCMS({
+        config: {
+          backend: {
+            name: "github",
+            repo: "nishanthSNair/kamura",
+            branch: "main"
+          },
+          media_folder: "public/images/uploads",
+          public_folder: "/images/uploads",
+          collections: [
+            {
+              name: "blog",
+              label: "Blog Posts",
+              label_singular: "Blog Post",
+              folder: "content/blog",
+              create: true,
+              slug: "{{slug}}",
+              extension: "md",
+              summary: "{{title}} — {{category}}",
+              fields: [
+                { label: "Title", name: "title", widget: "string" },
+                { label: "Publish Date", name: "date", widget: "string", hint: "Format: YYYY-MM-DD" },
+                { label: "Category", name: "category", widget: "select", options: ["Guides & Reviews", "Longevity & Science", "Holistic & Healing", "Biohacking", "News & Trends"] },
+                { label: "Cover Image URL", name: "coverImage", widget: "string", required: false },
+                { label: "Excerpt", name: "excerpt", widget: "text" },
+                { label: "Body", name: "body", widget: "markdown" }
+              ]
+            },
+            {
+              name: "data",
+              label: "Site Data",
+              files: [
+                {
+                  name: "listings",
+                  label: "Wellness Centers",
+                  file: "content/data/listings.json",
+                  format: "json",
+                  fields: [{
+                    label: "Centers", name: "listings", widget: "list",
+                    summary: "{{fields.name}} — {{fields.category}} ({{fields.city}})",
+                    fields: [
+                      { label: "ID (URL slug)", name: "id", widget: "string" },
+                      { label: "Name", name: "name", widget: "string" },
+                      { label: "Tagline", name: "tagline", widget: "string" },
+                      { label: "Description", name: "description", widget: "text" },
+                      { label: "Location", name: "location", widget: "string" },
+                      { label: "City", name: "city", widget: "select", options: ["Dubai", "Abu Dhabi", "Ajman", "Sharjah", "Ras Al Khaimah"] },
+                      { label: "Category", name: "category", widget: "select", options: ["Longevity Clinics", "Biohacking & Performance", "Holistic & Healing", "Yoga & Movement", "Wellness Retreats & Spas"] },
+                      { label: "Website", name: "website", widget: "string" },
+                      { label: "Featured", name: "featured", widget: "boolean", default: false, required: false },
+                      { label: "Services", name: "services", widget: "list", field: { label: "Service", name: "service", widget: "string" } },
+                      { label: "Google Maps Search", name: "mapQuery", widget: "string", required: false },
+                      { label: "Phone", name: "phone", widget: "string", required: false },
+                      { label: "WhatsApp", name: "whatsapp", widget: "string", required: false },
+                      { label: "Email", name: "email", widget: "string", required: false },
+                      { label: "Price Range", name: "priceRange", widget: "string", required: false },
+                      { label: "Opening Hours", name: "hours", widget: "string", required: false }
+                    ]
+                  }]
+                },
+                {
+                  name: "events",
+                  label: "Events",
+                  file: "content/data/events.json",
+                  format: "json",
+                  fields: [{
+                    label: "Events", name: "events", widget: "list",
+                    summary: "{{fields.title}} — {{fields.dates}}",
+                    fields: [
+                      { label: "ID (URL slug)", name: "id", widget: "string" },
+                      { label: "Title", name: "title", widget: "string" },
+                      { label: "Subtitle", name: "subtitle", widget: "text" },
+                      { label: "Display Dates", name: "dates", widget: "string" },
+                      { label: "Start Date", name: "dateStart", widget: "string", hint: "YYYY-MM-DD" },
+                      { label: "End Date", name: "dateEnd", widget: "string", hint: "YYYY-MM-DD" },
+                      { label: "Location", name: "location", widget: "string" },
+                      { label: "Category", name: "category", widget: "select", options: ["Biohacking", "Wellness Festival", "Health & MedTech", "Longevity", "Fitness", "Global Summit"] },
+                      { label: "Expected Attendees", name: "attendees", widget: "string" },
+                      { label: "Speakers", name: "speakers", widget: "string" },
+                      { label: "Price", name: "price", widget: "string" },
+                      { label: "Website", name: "website", widget: "string" },
+                      { label: "Highlights", name: "highlights", widget: "list", field: { label: "Highlight", name: "highlight", widget: "string" } }
+                    ]
+                  }]
+                },
+                {
+                  name: "news",
+                  label: "News",
+                  file: "content/data/news.json",
+                  format: "json",
+                  fields: [{
+                    label: "Articles", name: "news", widget: "list",
+                    summary: "{{fields.title}} — {{fields.source}}",
+                    fields: [
+                      { label: "ID", name: "id", widget: "string" },
+                      { label: "Title", name: "title", widget: "string" },
+                      { label: "Source", name: "source", widget: "string" },
+                      { label: "Date", name: "date", widget: "string" },
+                      { label: "Summary", name: "summary", widget: "text" },
+                      { label: "URL", name: "url", widget: "string" },
+                      { label: "Related Event ID", name: "relatedEventId", widget: "string" },
+                      { label: "Related Event Title", name: "relatedEventTitle", widget: "string" },
+                      { label: "Category", name: "category", widget: "string" }
+                    ]
+                  }]
+                },
+                {
+                  name: "testimonials",
+                  label: "Testimonials",
+                  file: "content/data/testimonials.json",
+                  format: "json",
+                  fields: [{
+                    label: "Testimonials", name: "testimonials", widget: "list",
+                    summary: "{{fields.name}} — {{fields.role}}, {{fields.location}}",
+                    fields: [
+                      { label: "ID", name: "id", widget: "string" },
+                      { label: "Quote", name: "quote", widget: "text" },
+                      { label: "Name", name: "name", widget: "string" },
+                      { label: "Role", name: "role", widget: "string" },
+                      { label: "Location", name: "location", widget: "string" }
+                    ]
+                  }]
+                },
+                {
+                  name: "areas",
+                  label: "Areas",
+                  file: "content/data/areas.json",
+                  format: "json",
+                  fields: [{
+                    label: "Areas", name: "areas", widget: "list",
+                    summary: "{{fields.name}} ({{fields.city}})",
+                    fields: [
+                      { label: "Slug (URL)", name: "slug", widget: "string" },
+                      { label: "Name", name: "name", widget: "string" },
+                      { label: "City", name: "city", widget: "select", options: ["Dubai", "Abu Dhabi", "Ajman", "Sharjah"] },
+                      { label: "Description", name: "description", widget: "text" },
+                      { label: "SEO Title", name: "seoTitle", widget: "string" },
+                      { label: "SEO Description", name: "seoDescription", widget: "text" },
+                      { label: "Match City", name: "matchCity", widget: "string", required: false },
+                      { label: "Match Keywords", name: "matchKeywords", widget: "list", field: { label: "Keyword", name: "keyword", widget: "string" } }
+                    ]
+                  }]
+                }
+              ]
+            }
+          ]
+        }
+      });
+    </script>
   </body>
 </html>
