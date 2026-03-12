@@ -5,7 +5,7 @@ import ExploreContent from "./ExploreContent";
 export const metadata: Metadata = {
   title: "Explore Wellness Centers in Dubai & UAE",
   description:
-    "Browse 34+ curated longevity clinics, biohacking studios, holistic healers, yoga studios, and wellness retreats across Dubai and the UAE.",
+    "Browse 50 curated longevity clinics, biohacking studios, holistic healers, yoga studios, and wellness retreats across Dubai, Abu Dhabi, and Sharjah.",
 };
 
 export default function ExplorePage() {

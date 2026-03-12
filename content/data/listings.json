@@ -582,6 +582,280 @@
         "Compression Therapy",
         "Guided Relaxation"
       ]
+    },
+    {
+      "id": "kintsugi-space",
+      "name": "Kintsugi Space",
+      "tagline": "Women-only holistic wellness members' club",
+      "description": "Abu Dhabi's first women-only holistic wellness members' club offering infrared saunas, obsidian crystal sauna, hammam, onsen bath, sound healing, meditation, and biohacking therapies in a luxurious private setting.",
+      "location": "Al Reem Island",
+      "city": "Abu Dhabi",
+      "category": "Holistic & Healing",
+      "website": "https://kintsugispace.com/",
+      "featured": true,
+      "services": [
+        "Sound Healing",
+        "Infrared Sauna",
+        "Hammam Rituals",
+        "Meditation",
+        "Energy Work",
+        "Breathwork"
+      ]
+    },
+    {
+      "id": "ayura-ayurveda",
+      "name": "Ayura Ayurveda",
+      "tagline": "Authentic Ayurvedic healing since 2011",
+      "description": "One of Abu Dhabi's leading Ayurvedic healthcare centers with 13+ years of experience, offering 100% natural Ayurvedic treatments, rejuvenation programs, herbal medicines, and ancient wellness therapies guided by experienced Ayurvedic doctors.",
+      "location": "Hamdan Street, Dhabi Tower",
+      "city": "Abu Dhabi",
+      "category": "Holistic & Healing",
+      "website": "https://ayuraayurveda.com/",
+      "services": [
+        "Ayurvedic Consultation",
+        "Panchakarma Detox",
+        "Therapeutic Massage",
+        "Herbal Medicine",
+        "Rejuvenation Therapy",
+        "Stress Management"
+      ]
+    },
+    {
+      "id": "antara-yoga-pilates",
+      "name": "Antara Yoga & Pilates",
+      "tagline": "Abu Dhabi's home for heated yoga",
+      "description": "A dedicated heated and non-heated yoga and Pilates studio specializing in hot vinyasa, Bikram-style hot yoga, hot Pilates, and sculpt classes taught by certified instructors in a studio heated to 40 degrees Celsius.",
+      "location": "Al Muneera, Al Raha Beach",
+      "city": "Abu Dhabi",
+      "category": "Yoga & Movement",
+      "website": "https://antarayogapilates.com/",
+      "services": [
+        "Hot Vinyasa Yoga",
+        "Bikram Yoga",
+        "Hot Pilates",
+        "Yin Yoga",
+        "Mat Pilates",
+        "Yoga Sculpt"
+      ]
+    },
+    {
+      "id": "yogaone-abu-dhabi",
+      "name": "YogaOne",
+      "tagline": "Two studios, one mindful community",
+      "description": "A yoga and wellness studio with two locations in Abu Dhabi offering an extensive class schedule including aerial yoga, swing yoga, sound healing, reformer Pilates, and corporate wellness programs.",
+      "location": "Mangrove One & Masdar City",
+      "city": "Abu Dhabi",
+      "category": "Yoga & Movement",
+      "website": "https://yogaone.ae/",
+      "services": [
+        "Vinyasa Yoga",
+        "Aerial Yoga",
+        "Sound Healing",
+        "Reformer Pilates",
+        "Meditation",
+        "Corporate Wellness"
+      ]
+    },
+    {
+      "id": "soul-skin-wellness",
+      "name": "Soul & Skin Wellness",
+      "tagline": "Beachside wellness on Saadiyat Island",
+      "description": "A collective wellness hub at the Park Hyatt Hotel on Saadiyat Beach offering yoga, Pilates, reformer Pilates, group fitness, personal training, sound healing, and meditation in a stunning beachside setting.",
+      "location": "Park Hyatt, Saadiyat Island",
+      "city": "Abu Dhabi",
+      "category": "Yoga & Movement",
+      "website": "https://soulandskinwellness.com/",
+      "services": [
+        "Yoga",
+        "Reformer Pilates",
+        "Sound Healing",
+        "Personal Training",
+        "Meditation",
+        "Wellness Retreats"
+      ]
+    },
+    {
+      "id": "mandarin-oriental-spa-emirates-palace",
+      "name": "The Spa at Mandarin Oriental, Emirates Palace",
+      "tagline": "Regal wellness at Emirates Palace",
+      "description": "An award-winning luxury spa within Emirates Palace featuring nine private treatment suites, a Royal Hammam, Moroccan-inspired rituals, contrast therapy, breathwork, and treatments using premium brands like OTO CBD and Tata Harper.",
+      "location": "Corniche Road West, Emirates Palace",
+      "city": "Abu Dhabi",
+      "category": "Wellness Retreats & Spas",
+      "featured": true,
+      "website": "https://www.mandarinoriental.com/en/abu-dhabi/emirates-palace/wellness",
+      "services": [
+        "Royal Hammam",
+        "Signature Massages",
+        "Luxury Facials",
+        "Contrast Therapy",
+        "Breathwork",
+        "Couples Treatments"
+      ]
+    },
+    {
+      "id": "anantara-spa-eastern-mangroves",
+      "name": "Anantara Spa at Eastern Mangroves",
+      "tagline": "Urban retreat among the mangroves",
+      "description": "An award-winning urban waterfront spa featuring 15 treatment suites, a traditional Turkish hammam, VIP hammam scrub rooms with Vichy showers, couples suites, and signature eastern healing treatments with Arabic influences.",
+      "location": "Eastern Mangroves, Sheikh Zayed Street",
+      "city": "Abu Dhabi",
+      "category": "Wellness Retreats & Spas",
+      "website": "https://www.anantara.com/en/eastern-mangroves-abu-dhabi/spa",
+      "services": [
+        "Turkish Hammam",
+        "Couples Treatments",
+        "Vichy Shower Rituals",
+        "Therapeutic Massage",
+        "Body Scrubs",
+        "Yoga & Pilates"
+      ]
+    },
+    {
+      "id": "revive-abu-dhabi",
+      "name": "REVIVE Abu Dhabi",
+      "tagline": "Recovery and performance therapy hub",
+      "description": "A wellness and recovery center combining professional body massage, cryotherapy, ice baths, infrared sauna, cupping therapy, and sports recovery in one facility focused on pain relief, athletic recovery, and long-lasting wellness.",
+      "location": "Central Abu Dhabi",
+      "city": "Abu Dhabi",
+      "category": "Biohacking & Performance",
+      "website": "https://www.reviveabudhabi.com/",
+      "services": [
+        "Cryotherapy",
+        "Ice Baths",
+        "Infrared Sauna",
+        "Cupping Therapy",
+        "Sports Recovery Massage",
+        "Deep Tissue Massage"
+      ]
+    },
+    {
+      "id": "barakah-studio",
+      "name": "Barakah Studio",
+      "tagline": "Sharjah's women-only yoga & Pilates studio",
+      "description": "Sharjah's leading ladies-only yoga and Pilates studio founded by two local sisters, offering reformer Pilates, multiple yoga styles, sound healing, and meditation in a safe, supportive space designed for women's wellbeing.",
+      "location": "Muwailih Commercial, Al Arish Building",
+      "city": "Sharjah",
+      "category": "Yoga & Movement",
+      "website": "https://barakahstudio.com/",
+      "services": [
+        "Reformer Pilates",
+        "Vinyasa Yoga",
+        "Yin Yoga",
+        "Sound Healing",
+        "Meditation",
+        "Hatha Yoga"
+      ]
+    },
+    {
+      "id": "sujana-power-yoga",
+      "name": "Sujana Power Yoga",
+      "tagline": "Therapeutic yoga with nine years of practice",
+      "description": "A yoga center in Sharjah with 9+ years of experience offering therapeutic yoga classes, pranayama, meditation, and specialized programs for health conditions like back pain, blood pressure, and stress management.",
+      "location": "Lily Tower, Al Nahda",
+      "city": "Sharjah",
+      "category": "Yoga & Movement",
+      "website": "https://sujanapoweryoga.org/",
+      "services": [
+        "Power Yoga",
+        "Pranayama",
+        "Meditation",
+        "Therapeutic Yoga",
+        "Kids Yoga",
+        "Corporate Yoga"
+      ]
+    },
+    {
+      "id": "dar-pilates",
+      "name": "Dar Pilates",
+      "tagline": "Women's Pilates & yoga born in Sharjah",
+      "description": "A women-only reformer Pilates and yoga studio in Sharjah, founded by local sisters, offering small-group classes with certified instructors, private sessions, and cycle-based yoga designed to help women move, breathe, and glow.",
+      "location": "Muwailih, Sharjah",
+      "city": "Sharjah",
+      "category": "Yoga & Movement",
+      "website": "https://darpilates.com/",
+      "services": [
+        "Reformer Pilates",
+        "Yoga Classes",
+        "Private Sessions",
+        "Small Group Training",
+        "Cycle-Based Yoga",
+        "Beginner Programs"
+      ]
+    },
+    {
+      "id": "chedi-al-bait-spa",
+      "name": "The Chedi Al Bait Spa",
+      "tagline": "Luxury heritage spa in Sharjah's heart",
+      "description": "A luxury 500 sqm spa within the five-star Chedi Al Bait hotel in Sharjah's Heart of Sharjah heritage district, offering signature massages, Turkish-style foot reflexology, prickly pear oil facials, rose body envelopments, and therapeutic whirl baths.",
+      "location": "Heart of Sharjah, Al Mareija",
+      "city": "Sharjah",
+      "category": "Wellness Retreats & Spas",
+      "website": "https://www.ghmhotels.com/en/the-chedi-al-bait-sharjah/spa-wellness/",
+      "services": [
+        "Signature Massage",
+        "Foot Reflexology",
+        "Prickly Pear Facials",
+        "Body Envelopments",
+        "Whirl Baths",
+        "Couples Treatments"
+      ]
+    },
+    {
+      "id": "awaken-wellness-atlantis",
+      "name": "AWAKEN Wellness at Atlantis The Royal",
+      "tagline": "Holistic luxury wellness at Atlantis The Royal",
+      "description": "An all-suites luxury spa and wellness destination within Atlantis The Royal featuring 15 therapy suites, a hammam sensorium, outdoor meditation pavilion, aesthetic wellness clinic, and treatments using clean, vegan, locally-sourced ingredients.",
+      "location": "Atlantis The Royal, Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Wellness Retreats & Spas",
+      "featured": true,
+      "website": "https://www.atlantis.com/atlantis-the-royal/awaken-wellness",
+      "services": [
+        "Signature Massages",
+        "Hammam Sensorium",
+        "Energy Therapies",
+        "Hypnotherapy",
+        "Luxury Facials",
+        "Fitness Recovery"
+      ]
+    },
+    {
+      "id": "guerlain-spa-one-and-only",
+      "name": "Guerlain Spa at One&Only The Palm",
+      "tagline": "The Middle East's only Guerlain Spa",
+      "description": "The only Guerlain Spa in the Middle East, spanning 2,400 sqm within a Moorish palace-inspired setting at One&Only The Palm, featuring 9 treatment suites, an adults-only pool, hammam, and premium Guerlain skincare treatments.",
+      "location": "One&Only The Palm, West Crescent, Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Wellness Retreats & Spas",
+      "featured": true,
+      "website": "https://www.oneandonlyresorts.com/the-palm/experiences/guerlain-spa",
+      "services": [
+        "Guerlain Facials",
+        "Signature Body Rituals",
+        "Hammam",
+        "Couples Treatments",
+        "Nail & Hair Salon",
+        "Meditation Pool"
+      ]
+    },
+    {
+      "id": "mouv-pilates-studio",
+      "name": "MOUV Pilates Studio",
+      "tagline": "UAE's first hybrid reformer Pilates studio",
+      "description": "The UAE's first hybrid reformer Pilates studio offering both instructor-led and on-demand reformer classes, giving clients the flexibility of self-paced workouts alongside expert-guided sessions in a modern studio.",
+      "location": "Al Zeina, Al Raha Beach",
+      "city": "Abu Dhabi",
+      "category": "Yoga & Movement",
+      "website": "https://www.mouvpilatestudio.com/",
+      "services": [
+        "Instructor-Led Reformer Pilates",
+        "On-Demand Reformer Classes",
+        "Private Sessions",
+        "Small Group Classes",
+        "Beginner Reformer",
+        "Core Sculpt"
+      ]
     }
   ]
 }
