@@ -1,10 +1,12 @@
+import eventsData from "../../content/data/events.json";
+
 export interface Event {
   id: string;
   title: string;
   subtitle: string;
   dates: string;
-  dateStart: string; // ISO date for sorting/comparison
-  dateEnd: string;   // ISO date for sorting/comparison
+  dateStart: string;
+  dateEnd: string;
   location: string;
   category: EventCategory;
   attendees: string;
@@ -31,157 +33,4 @@ export const categoryColors: Record<EventCategory, { bg: string; text: string; d
   "Global Summit": { bg: "bg-rose-100", text: "text-rose-800", dot: "bg-rose-400" },
 };
 
-export const events: Event[] = [
-  {
-    id: "world-biohack-summit-2025",
-    title: "World Biohack Summit 2025 (3rd Edition)",
-    subtitle: "Genomics, AI-driven health optimisation, and peak performance — where Western science meets Eastern wellness wisdom.",
-    dates: "December 12–13, 2025",
-    dateStart: "2025-12-12",
-    dateEnd: "2025-12-13",
-    location: "JW Marriott Marina Convention Centre, Dubai",
-    category: "Biohacking",
-    attendees: "2,000+",
-    speakers: "25+",
-    price: "From AED 385",
-    website: "https://worldbiohacksummit.ae",
-    highlights: [
-      "Genomics, AI-driven health optimisation, longevity & peak performance",
-      "30+ exhibitors with experience zones and interactive workshops",
-      "Founded by Dr. Sajeev Nair — converging Western science with Eastern wellness wisdom",
-    ],
-  },
-  {
-    id: "peak-longevity-fest-2026",
-    title: "Peak Longevity Fest 2026",
-    subtitle: "A two-day exploration of the four pillars of health — mental, physical, emotional & spiritual well-being.",
-    dates: "January 16–17, 2026",
-    dateStart: "2026-01-16",
-    dateEnd: "2026-01-17",
-    location: "Dubai, UAE",
-    category: "Longevity",
-    attendees: "500+",
-    speakers: "15+",
-    price: "From AED 500",
-    website: "https://peaklongevityfest.com",
-    highlights: [
-      "Four Pillars of Health: mental, physical, emotional & spiritual well-being",
-      "Speakers include Dr. Adeel Khan, Dr. David Roze, Rohini Walia Gehani",
-      "Workshops on skincare-hormones, blood cleansing & brain rewiring for longevity",
-    ],
-  },
-  {
-    id: "kayan-wellness-festival-2026",
-    title: "Kayan Wellness Festival 2026 (2nd Edition)",
-    subtitle: "The Middle East's award-winning wellness festival — breathwork, sound healing, yoga, cacao ceremonies, and more.",
-    dates: "February 6–8, 2026",
-    dateStart: "2026-02-06",
-    dateEnd: "2026-02-08",
-    location: "Fahid Island, Abu Dhabi",
-    category: "Wellness Festival",
-    attendees: "15,000+",
-    speakers: "40+",
-    price: "From AED 95",
-    website: "https://kayanwellnessfestival.com",
-    highlights: [
-      "60+ sessions: breathwork, sound healing, yoga, cacao ceremonies, ice baths",
-      "Longevity Hub with interactive exhibitor stands & expert talks",
-      "25+ live music performances, 20+ mindful F&B vendors, Feel Good Market — Won Best Festival in the Middle East 2025",
-    ],
-  },
-  {
-    id: "whx-dubai-2026",
-    title: "WHX Dubai 2026 — World Health Expo (formerly Arab Health)",
-    subtitle: "The largest healthcare event in the Middle East — 4,800+ exhibitors from 180+ countries.",
-    dates: "February 9–12, 2026",
-    dateStart: "2026-02-09",
-    dateEnd: "2026-02-12",
-    location: "Dubai Exhibition Centre, Expo City Dubai",
-    category: "Health & MedTech",
-    attendees: "270,000+",
-    speakers: "Hundreds",
-    price: "Free (visitor registration)",
-    website: "https://www.worldhealthexpo.com",
-    highlights: [
-      "4,800+ exhibitors from 180+ countries — largest healthcare event in Middle East",
-      "Co-timed with WHX Labs Dubai (Feb 10-13) at DWTC",
-      "AI in health, surgical innovation, women's health, biotech & digital health",
-    ],
-  },
-  {
-    id: "future-health-summit-2026",
-    title: "Future Health Summit 2026",
-    subtitle: "A year-round platform evolved from Abu Dhabi Global Healthcare Week — shaping the future of anticipatory health.",
-    dates: "April 7–9, 2026",
-    dateStart: "2026-04-07",
-    dateEnd: "2026-04-09",
-    location: "ADNEC Centre Abu Dhabi, Halls 2-5",
-    category: "Global Summit",
-    attendees: "25,000+",
-    speakers: "500+",
-    price: "Registration open",
-    website: "https://futurehealthinitiative.ae",
-    highlights: [
-      "Evolved from Abu Dhabi Global Healthcare Week into year-round platform",
-      "MIT Solve $300K Challenge for anticipatory health innovation",
-      "Founding partners: M42, Mubadala Bio, PureHealth, Mediclinic, Burjeel Holdings — World's first Declaration on Longevity and Precision Medicine",
-    ],
-  },
-  {
-    id: "global-wellness-summit-2026",
-    title: "Global Wellness Summit 2026",
-    subtitle: "The premier gathering for wellness industry leaders — longevity, biohacking, wellness tech & fitness innovation.",
-    dates: "October 2026 (exact TBC)",
-    dateStart: "2026-10-01",
-    dateEnd: "2026-10-31",
-    location: "Dubai, UAE (venue TBC)",
-    category: "Global Summit",
-    attendees: "600+",
-    speakers: "50+",
-    price: "TBC",
-    website: "https://www.globalwellnesssummit.com",
-    highlights: [
-      "Longevity, biohacking, wellness technology & fitness innovation",
-      "Wellness tourism & hospitality — Dubai as global wellness destination",
-      "Gene editing, precision medicine, wellness real estate & AI in health",
-    ],
-  },
-  {
-    id: "dubai-fitness-challenge-2026",
-    title: "Dubai Fitness Challenge 2026 (10th Edition)",
-    subtitle: "The landmark 10th edition — over 16 million total participants since 2017.",
-    dates: "October–November 2026",
-    dateStart: "2026-10-15",
-    dateEnd: "2026-11-15",
-    location: "Citywide — Dubai, UAE",
-    category: "Fitness",
-    attendees: "3,000,000+",
-    speakers: "N/A",
-    price: "Free",
-    website: "https://www.dubaifitnesschallenge.com",
-    highlights: [
-      "Landmark 10th edition — over 16M total participants since 2017",
-      "Dubai Run, Dubai Ride, Dubai Yoga, Dubai Stand-Up Paddle",
-      "25+ free community fitness hubs across the city",
-    ],
-  },
-  {
-    id: "world-biohack-summit-2026",
-    title: "World Biohack Summit 2026 (4th Edition)",
-    subtitle: "Expanding on 2025's sold-out 3rd edition — genomics, AI health, longevity & peak performance.",
-    dates: "December 2026 (exact TBC)",
-    dateStart: "2026-12-01",
-    dateEnd: "2026-12-31",
-    location: "Dubai, UAE (venue TBC)",
-    category: "Biohacking",
-    attendees: "3,000+ (expected)",
-    speakers: "30+",
-    price: "TBC — Waitlist open",
-    website: "https://worldbiohacksummit.ae",
-    highlights: [
-      "Expanding on 2025's sold-out 3rd edition",
-      "Genomics, AI health, longevity, peak performance & mental wellness",
-      "Waitlist now open at worldbiohacksummit.ae",
-    ],
-  },
-];
+export const events: Event[] = eventsData.events as Event[];

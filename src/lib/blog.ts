@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import html from "remark-html";
 
 // Re-export shared types/utils so server components can import from @/lib/blog
@@ -79,17 +80,9 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     headings.push({ id, text, level: match[1].length });
   }
 
-  const processedContent = await remark().use(html, { sanitize: true }).process(content);
+  const processedContent = await remark().use(remarkGfm).use(html).process(content);
   // Add IDs to headings in HTML for anchor navigation
   let contentHtml = processedContent.toString();
-  headings.forEach(({ id, text }) => {
-    const escapedText = text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    contentHtml = contentHtml.replace(
-      new RegExp(`(<h[1-3])>\\s*${escapedText}\\s*</h[1-3]>`),
-      `$1 id="${id}">${text}</h${text}>`
-    );
-  });
-  // Simpler approach: add IDs via regex on h tags
   contentHtml = contentHtml.replace(
     /<h([1-3])>(.*?)<\/h[1-3]>/g,
     (_, level, text) => {
