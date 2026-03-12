@@ -66,18 +66,43 @@ export default async function ListingPage({ params }: Props) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: listing.name,
-    description: listing.description,
-    url: listing.website,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: listing.location,
-      addressLocality: listing.city,
-      addressCountry: "AE",
-    },
-    ...(listing.phone && { telephone: listing.phone }),
-    ...(listing.email && { email: listing.email }),
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        name: listing.name,
+        description: listing.description,
+        url: listing.website,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: listing.location,
+          addressLocality: listing.city,
+          addressCountry: "AE",
+        },
+        ...(listing.phone && { telephone: listing.phone }),
+        ...(listing.email && { email: listing.email }),
+        ...(listing.priceRange && { priceRange: listing.priceRange }),
+        ...(listing.hours && { openingHours: listing.hours }),
+        areaServed: { "@type": "City", name: listing.city },
+        ...(listing.services.length > 0 && {
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Services",
+            itemListElement: listing.services.map((service) => ({
+              "@type": "Offer",
+              itemOffered: { "@type": "Service", name: service },
+            })),
+          },
+        }),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+          { "@type": "ListItem", position: 2, name: "Explore", item: "https://kamuralife.com/explore" },
+          { "@type": "ListItem", position: 3, name: listing.name },
+        ],
+      },
+    ],
   };
 
   return (

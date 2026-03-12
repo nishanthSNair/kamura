@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPostBySlug, getAllSlugs, getAllPosts, formatDate, blogCategoryColors } from "@/lib/blog";
 
@@ -49,20 +50,37 @@ export default async function BlogPostPage({ params }: Props) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.excerpt,
-    datePublished: post.date,
-    author: {
-      "@type": "Organization",
-      name: "KAMURA",
-      url: "https://kamuralife.com",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "KAMURA",
-      url: "https://kamuralife.com",
-    },
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: post.date,
+        ...(post.coverImage && { image: post.coverImage }),
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `https://kamuralife.com/blog/${slug}`,
+        },
+        author: {
+          "@type": "Organization",
+          name: "KAMURA",
+          url: "https://kamuralife.com",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "KAMURA",
+          url: "https://kamuralife.com",
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: "https://kamuralife.com/blog" },
+          { "@type": "ListItem", position: 3, name: post.title },
+        ],
+      },
+    ],
   };
 
   return (
@@ -98,13 +116,13 @@ export default async function BlogPostPage({ params }: Props) {
         </header>
 
         {post.coverImage && (
-          <div className="max-w-3xl mx-auto px-6 mb-10">
-            <img
+          <div className="max-w-3xl mx-auto px-6 mb-10 relative h-[300px] md:h-[450px]">
+            <Image
               src={post.coverImage}
               alt={post.title}
-              width={768}
-              height={400}
-              className="w-full rounded-xl object-cover max-h-[450px]"
+              fill
+              priority
+              className="rounded-xl object-cover"
               sizes="(max-width: 768px) 100vw, 768px"
             />
           </div>
@@ -209,7 +227,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         <div className="max-w-3xl mx-auto px-6 py-12 text-center">
           <Link
-            href="/"
+            href="/blog"
             className="text-sm text-gray-800 dark:text-gray-200 underline underline-offset-4 hover:text-terracotta transition-colors font-sans"
           >
             &larr; Back to all posts

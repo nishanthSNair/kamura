@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   type BlogCategory,
   blogCategoryColors,
@@ -69,14 +70,12 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
           return (
             <article key={post.slug}>
               {post.coverImage && (
-                <Link href={`/blog/${post.slug}`} className="block mb-4 overflow-hidden rounded-lg">
-                  <img
+                <Link href={`/blog/${post.slug}`} className="block mb-4 overflow-hidden rounded-lg relative h-48">
+                  <Image
                     src={post.coverImage}
                     alt={post.title}
-                    width={600}
-                    height={192}
-                    className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </Link>

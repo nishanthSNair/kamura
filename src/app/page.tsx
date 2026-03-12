@@ -13,8 +13,37 @@ export const metadata: Metadata = {
 export default function Home() {
   const posts = getAllPosts();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: "KAMURA",
+        url: "https://kamuralife.com",
+        description:
+          "Longevity & wellness discovery platform in Dubai and the UAE",
+        sameAs: ["https://www.instagram.com/kamaborea/"],
+      },
+      {
+        "@type": "WebSite",
+        name: "KAMURA",
+        url: "https://kamuralife.com",
+        potentialAction: {
+          "@type": "SearchAction",
+          target: "https://kamuralife.com/explore?q={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="relative h-screen h-dvh flex items-center justify-center">
         <div

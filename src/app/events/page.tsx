@@ -3,9 +3,9 @@ import { events } from "@/data/events";
 import EventsContent from "./EventsContent";
 
 export const metadata: Metadata = {
-  title: "Events",
+  title: "Wellness & Longevity Events in Dubai 2025–2026",
   description:
-    "Discover the wellness and longevity events shaping the UAE and beyond — from biohacking summits to sound healing retreats. Calendar, listings & news coverage.",
+    "Upcoming wellness and longevity events in the UAE — biohacking summits, sound healing retreats, fitness expos. Calendar, listings & news coverage.",
   openGraph: {
     title: "Events | KAMURA",
     description:
@@ -48,13 +48,30 @@ function generateEventsJsonLd() {
 }
 
 export default function EventsPage() {
-  const jsonLd = generateEventsJsonLd();
+  const eventsJsonLd = generateEventsJsonLd();
+
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Wellness & Longevity Events",
+    numberOfItems: events.length,
+    itemListElement: events.map((event, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://kamuralife.com/events/${event.id}`,
+      name: event.title,
+    })),
+  };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
       <EventsContent />
     </>

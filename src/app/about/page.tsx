@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About KAMURA — Longevity & Wellness Platform in Dubai",
   description:
-    "Kamura — the heart of longevity. Inspired by the Japanese word for tortoise (Kame, 亀), we believe life should be lived slowly, intentionally, and fully.",
+    "KAMURA is Dubai's longevity & wellness discovery platform. Inspired by the Japanese tortoise (Kame, 亀), we curate clinics, studios, and retreats across the UAE.",
 };
 
 export default function AboutPage() {

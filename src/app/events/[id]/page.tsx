@@ -45,29 +45,41 @@ export default async function EventPage({ params }: Props) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Event",
-    name: event.title,
-    description: event.subtitle,
-    startDate: event.dateStart,
-    endDate: event.dateEnd,
-    eventStatus: "https://schema.org/EventScheduled",
-    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-    location: {
-      "@type": "Place",
-      name: event.location,
-      address: { "@type": "PostalAddress", addressCountry: "AE" },
-    },
-    organizer: {
-      "@type": "Organization",
-      name: "KAMURA",
-      url: "https://kamuralife.com",
-    },
-    offers: {
-      "@type": "Offer",
-      url: event.website,
-      priceCurrency: "AED",
-      availability: "https://schema.org/InStock",
-    },
+    "@graph": [
+      {
+        "@type": "Event",
+        name: event.title,
+        description: event.subtitle,
+        startDate: event.dateStart,
+        endDate: event.dateEnd,
+        eventStatus: "https://schema.org/EventScheduled",
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        location: {
+          "@type": "Place",
+          name: event.location,
+          address: { "@type": "PostalAddress", addressCountry: "AE" },
+        },
+        organizer: {
+          "@type": "Organization",
+          name: "KAMURA",
+          url: "https://kamuralife.com",
+        },
+        offers: {
+          "@type": "Offer",
+          url: event.website,
+          priceCurrency: "AED",
+          availability: "https://schema.org/InStock",
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+          { "@type": "ListItem", position: 2, name: "Events", item: "https://kamuralife.com/events" },
+          { "@type": "ListItem", position: 3, name: event.title },
+        ],
+      },
+    ],
   };
 
   return (

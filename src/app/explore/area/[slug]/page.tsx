@@ -50,8 +50,23 @@ export default async function AreaPage({ params }: Props) {
     areaListings.some((l) => l.category === cat)
   );
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+      { "@type": "ListItem", position: 2, name: "Explore", item: "https://kamuralife.com/explore" },
+      { "@type": "ListItem", position: 3, name: area.name },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero */}
       <section className="relative h-[40vh] flex items-center justify-center">
         <div
