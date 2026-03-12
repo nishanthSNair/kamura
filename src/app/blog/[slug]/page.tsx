@@ -102,7 +102,10 @@ export default async function BlogPostPage({ params }: Props) {
             <img
               src={post.coverImage}
               alt={post.title}
+              width={672}
+              height={400}
               className="w-full rounded-xl object-cover max-h-[400px]"
+              sizes="(max-width: 672px) 100vw, 672px"
             />
           </div>
         )}

@@ -163,81 +163,124 @@ export default function CompareContent() {
           </div>
         )}
 
-        {/* Comparison Table */}
+        {/* Comparison Table — Desktop */}
         {hasSelections && (
-          <div className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
-            {/* Header Row */}
-            <div
-              className={`grid border-b border-gray-200 dark:border-gray-700 ${selected.length === 3 ? "grid-cols-[160px_1fr_1fr_1fr]" : "grid-cols-[160px_1fr_1fr]"}`}
-            >
-              <div className="p-4 bg-gray-50 dark:bg-gray-800" />
-              {selectedListings.map((l, i) => (
+          <>
+            <div className="hidden md:block border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+              {/* Header Row */}
+              <div
+                className={`grid border-b border-gray-200 dark:border-gray-700 ${selected.length === 3 ? "grid-cols-[160px_1fr_1fr_1fr]" : "grid-cols-[160px_1fr_1fr]"}`}
+              >
+                <div className="p-4 bg-gray-50 dark:bg-gray-800" />
+                {selectedListings.map((l, i) => (
+                  <div
+                    key={i}
+                    className="p-4 bg-gray-50 dark:bg-gray-800 border-l border-gray-200 dark:border-gray-700"
+                  >
+                    {l ? (
+                      <Link
+                        href={`/explore/${l.id}`}
+                        className="font-serif text-base text-gray-900 dark:text-gray-100 hover:text-terracotta transition-colors"
+                      >
+                        {l.name}
+                      </Link>
+                    ) : (
+                      <span className="text-sm text-gray-300 dark:text-gray-600 font-sans">
+                        Not selected
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* Data Rows */}
+              {comparisonFields.map((field) => (
                 <div
-                  key={i}
-                  className="p-4 bg-gray-50 dark:bg-gray-800 border-l border-gray-200 dark:border-gray-700"
+                  key={field.label}
+                  className={`grid border-b border-gray-100 dark:border-gray-800 last:border-b-0 ${selected.length === 3 ? "grid-cols-[160px_1fr_1fr_1fr]" : "grid-cols-[160px_1fr_1fr]"}`}
                 >
-                  {l ? (
-                    <Link
-                      href={`/explore/${l.id}`}
-                      className="font-serif text-base text-gray-900 dark:text-gray-100 hover:text-terracotta transition-colors"
+                  <div className="p-4 bg-gray-50/50 dark:bg-gray-900/50 font-sans text-sm text-gray-500 dark:text-gray-400 font-medium">
+                    {field.label}
+                  </div>
+                  {selectedListings.map((l, i) => (
+                    <div
+                      key={i}
+                      className="p-4 text-sm font-sans text-gray-800 dark:text-gray-200 border-l border-gray-100 dark:border-gray-800"
                     >
-                      {l.name}
-                    </Link>
-                  ) : (
-                    <span className="text-sm text-gray-300 dark:text-gray-600 font-sans">
-                      Not selected
-                    </span>
-                  )}
+                      {l ? field.getValue(l) : "—"}
+                    </div>
+                  ))}
                 </div>
               ))}
-            </div>
 
-            {/* Data Rows */}
-            {comparisonFields.map((field) => (
+              {/* Action Row */}
               <div
-                key={field.label}
-                className={`grid border-b border-gray-100 dark:border-gray-800 last:border-b-0 ${selected.length === 3 ? "grid-cols-[160px_1fr_1fr_1fr]" : "grid-cols-[160px_1fr_1fr]"}`}
+                className={`grid border-t border-gray-200 dark:border-gray-700 ${selected.length === 3 ? "grid-cols-[160px_1fr_1fr_1fr]" : "grid-cols-[160px_1fr_1fr]"}`}
               >
                 <div className="p-4 bg-gray-50/50 dark:bg-gray-900/50 font-sans text-sm text-gray-500 dark:text-gray-400 font-medium">
-                  {field.label}
+                  Details
                 </div>
                 {selectedListings.map((l, i) => (
                   <div
                     key={i}
-                    className="p-4 text-sm font-sans text-gray-800 dark:text-gray-200 border-l border-gray-100 dark:border-gray-800"
+                    className="p-4 border-l border-gray-100 dark:border-gray-800"
                   >
-                    {l ? field.getValue(l) : "—"}
+                    {l ? (
+                      <Link
+                        href={`/explore/${l.id}`}
+                        className="inline-block text-sm text-white dark:text-gray-900 bg-gray-900 dark:bg-gray-100 px-4 py-2 rounded-lg hover:bg-terracotta dark:hover:bg-terracotta dark:hover:text-white transition-colors font-sans"
+                      >
+                        View Full Profile
+                      </Link>
+                    ) : (
+                      <span className="text-sm text-gray-300 dark:text-gray-600">—</span>
+                    )}
                   </div>
                 ))}
               </div>
-            ))}
-
-            {/* Action Row */}
-            <div
-              className={`grid border-t border-gray-200 dark:border-gray-700 ${selected.length === 3 ? "grid-cols-[160px_1fr_1fr_1fr]" : "grid-cols-[160px_1fr_1fr]"}`}
-            >
-              <div className="p-4 bg-gray-50/50 dark:bg-gray-900/50 font-sans text-sm text-gray-500 dark:text-gray-400 font-medium">
-                Details
-              </div>
-              {selectedListings.map((l, i) => (
-                <div
-                  key={i}
-                  className="p-4 border-l border-gray-100 dark:border-gray-800"
-                >
-                  {l ? (
-                    <Link
-                      href={`/explore/${l.id}`}
-                      className="inline-block text-sm text-white dark:text-gray-900 bg-gray-900 dark:bg-gray-100 px-4 py-2 rounded-lg hover:bg-terracotta dark:hover:bg-terracotta dark:hover:text-white transition-colors font-sans"
-                    >
-                      View Full Profile
-                    </Link>
-                  ) : (
-                    <span className="text-sm text-gray-300 dark:text-gray-600">—</span>
-                  )}
-                </div>
-              ))}
             </div>
-          </div>
+
+            {/* Comparison Cards — Mobile */}
+            <div className="md:hidden space-y-6">
+              {selectedListings.map((l, i) =>
+                l ? (
+                  <div
+                    key={i}
+                    className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-[#1a1a1a]"
+                  >
+                    <div className="p-4 bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+                      <Link
+                        href={`/explore/${l.id}`}
+                        className="font-serif text-lg text-gray-900 dark:text-gray-100 hover:text-terracotta transition-colors"
+                      >
+                        {l.name}
+                      </Link>
+                    </div>
+                    <div className="divide-y divide-gray-100 dark:divide-gray-800">
+                      {comparisonFields.map((field) => (
+                        <div key={field.label} className="flex justify-between px-4 py-3">
+                          <span className="text-sm text-gray-500 dark:text-gray-400 font-sans font-medium">
+                            {field.label}
+                          </span>
+                          <span className="text-sm text-gray-800 dark:text-gray-200 font-sans text-right max-w-[55%]">
+                            {field.getValue(l)}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+                      <Link
+                        href={`/explore/${l.id}`}
+                        className="inline-block text-sm text-white dark:text-gray-900 bg-gray-900 dark:bg-gray-100 px-4 py-2 rounded-lg hover:bg-terracotta dark:hover:bg-terracotta dark:hover:text-white transition-colors font-sans"
+                      >
+                        View Full Profile
+                      </Link>
+                    </div>
+                  </div>
+                ) : null
+              )}
+            </div>
+          </>
         )}
 
         {!hasSelections && (

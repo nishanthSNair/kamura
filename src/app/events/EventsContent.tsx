@@ -325,16 +325,17 @@ export default function EventsContent() {
             </div>
 
             <div className="grid grid-cols-7 border-b border-gray-200 dark:border-gray-700">
-              {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((d) => (
-                <div key={d} className="px-2 py-3 text-center text-xs font-sans uppercase tracking-wider text-gray-400 dark:text-gray-500">
-                  {d}
+              {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
+                <div key={i} className="px-1 md:px-2 py-2 md:py-3 text-center text-[10px] md:text-xs font-sans uppercase tracking-wider text-gray-400 dark:text-gray-500">
+                  <span className="md:hidden">{d}</span>
+                  <span className="hidden md:inline">{["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][i]}</span>
                 </div>
               ))}
             </div>
 
             <div className="grid grid-cols-7">
               {Array.from({ length: getFirstDayOfMonth(calendarYear, calendarMonth) }).map((_, i) => (
-                <div key={`empty-${i}`} className="h-20 md:h-24 border-b border-r border-gray-100 dark:border-gray-800" />
+                <div key={`empty-${i}`} className="h-14 md:h-24 border-b border-r border-gray-100 dark:border-gray-800" />
               ))}
               {Array.from({ length: getDaysInMonth(calendarYear, calendarMonth) }).map((_, i) => {
                 const day = i + 1;
@@ -353,17 +354,17 @@ export default function EventsContent() {
                         setSelectedDay(isSelected ? null : day);
                       }
                     }}
-                    className={`h-20 md:h-24 border-b border-r border-gray-100 dark:border-gray-800 p-2 text-left transition-colors relative ${
+                    className={`h-14 md:h-24 border-b border-r border-gray-100 dark:border-gray-800 p-1 md:p-2 text-left transition-colors relative ${
                       dayEvents.length > 0 ? "cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-900" : "cursor-default"
                     } ${isSelected ? "bg-gray-50 dark:bg-gray-900 ring-1 ring-inset ring-terracotta/30" : ""}`}
                   >
-                    <span className={`text-sm font-sans inline-flex items-center justify-center w-7 h-7 rounded-full ${isToday ? "bg-terracotta text-white" : "text-gray-700 dark:text-gray-300"}`}>
+                    <span className={`text-xs md:text-sm font-sans inline-flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full ${isToday ? "bg-terracotta text-white" : "text-gray-700 dark:text-gray-300"}`}>
                       {day}
                     </span>
                     {dayEvents.length > 0 && (
-                      <div className="flex flex-wrap gap-1 mt-1">
-                        {dayEvents.slice(0, 3).map((ev) => (
-                          <span key={ev.id} className={`w-2 h-2 rounded-full ${categoryColors[ev.category].dot}`} title={ev.title} />
+                      <div className="flex flex-wrap gap-0.5 md:gap-1 mt-0.5 md:mt-1">
+                        {dayEvents.slice(0, 2).map((ev) => (
+                          <span key={ev.id} className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full ${categoryColors[ev.category].dot}`} title={ev.title} />
                         ))}
                       </div>
                     )}
@@ -575,7 +576,19 @@ function LiveNewsFeed() {
     fetchFeeds();
   }, []);
 
-  if (error || (!loading && articles.length === 0)) return null;
+  if (!loading && articles.length === 0 && !error) return null;
+
+  if (error) {
+    return (
+      <section className="border-t border-gray-100 dark:border-gray-800">
+        <div className="max-w-6xl mx-auto px-6 py-16 text-center">
+          <p className="text-sm text-gray-400 dark:text-gray-500 font-sans">
+            Unable to load live news right now. Check back later.
+          </p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="border-t border-gray-100 dark:border-gray-800">

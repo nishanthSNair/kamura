@@ -79,7 +79,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     headings.push({ id, text, level: match[1].length });
   }
 
-  const processedContent = await remark().use(html).process(content);
+  const processedContent = await remark().use(html, { sanitize: true }).process(content);
   // Add IDs to headings in HTML for anchor navigation
   let contentHtml = processedContent.toString();
   headings.forEach(({ id, text }) => {

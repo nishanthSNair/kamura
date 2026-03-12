@@ -229,12 +229,15 @@ export default function QuizContent() {
           </h2>
 
           {/* Options */}
-          <div className="space-y-3">
+          <div className="space-y-3" role="radiogroup" aria-label={`Question ${currentQ + 1}: ${q.question}`}>
             {q.options.map((option, i) => (
               <button
                 key={i}
                 onClick={() => selectAnswer(i)}
                 disabled={selectedOption !== null}
+                role="radio"
+                aria-checked={selectedOption === i}
+                aria-disabled={selectedOption !== null && selectedOption !== i}
                 className={`w-full text-left p-5 rounded-xl border transition-all duration-300 font-sans text-sm leading-relaxed ${
                   selectedOption === i
                     ? "border-terracotta bg-terracotta/5 text-gray-900 dark:text-gray-100"
@@ -245,6 +248,7 @@ export default function QuizContent() {
               >
                 <span className="flex items-center gap-3">
                   <span
+                    aria-hidden="true"
                     className={`w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 transition-all duration-300 ${
                       selectedOption === i
                         ? "border-terracotta bg-terracotta"

@@ -21,6 +21,16 @@ export default function Navigation() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-[#0f0f0f]/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
@@ -90,7 +100,7 @@ export default function Navigation() {
             </button>
             <ThemeToggle />
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/kamuralife"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors"

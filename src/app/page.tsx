@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
+      <section className="relative h-screen h-dvh flex items-center justify-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{

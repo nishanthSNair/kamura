@@ -33,8 +33,12 @@ export default function ThemeToggle() {
     }
   }
 
-  // Prevent hydration mismatch
-  if (!mounted) return null;
+  // Render invisible placeholder before mount to prevent layout jump
+  if (!mounted) {
+    return (
+      <span className="inline-block w-5 h-5" aria-hidden="true" />
+    );
+  }
 
   return (
     <button

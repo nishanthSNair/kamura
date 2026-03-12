@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
 
 interface SearchItem {
@@ -30,12 +30,21 @@ const TYPE_COLORS: Record<string, string> = {
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const [query, setQuery] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState("");
   const [index, setIndex] = useState<SearchItem[]>([]);
   const [loaded, setLoaded] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
+  const resultsRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
   const stableOnClose = useCallback(() => onClose(), [onClose]);
+
+  // Debounce search query (300ms)
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedQuery(query), 300);
+    return () => clearTimeout(timer);
+  }, [query]);
 
   // Fetch search index on first open
   useEffect(() => {
@@ -50,6 +59,9 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
           ];
           setIndex(all);
           setLoaded(true);
+        })
+        .catch(() => {
+          setLoaded(true);
         });
     }
   }, [isOpen, loaded]);
@@ -60,6 +72,8 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
       setTimeout(() => inputRef.current?.focus(), 100);
     } else {
       setQuery("");
+      setDebouncedQuery("");
+      setActiveIndex(-1);
     }
   }, [isOpen]);
 
@@ -78,35 +92,70 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     };
   }, [isOpen, stableOnClose]);
 
-  const results =
-    query.trim().length < 2
+  const results = useMemo(() =>
+    debouncedQuery.trim().length < 2
       ? []
       : index.filter((item) => {
-          const q = query.toLowerCase();
+          const q = debouncedQuery.toLowerCase();
           return (
             item.title.toLowerCase().includes(q) ||
             item.excerpt.toLowerCase().includes(q) ||
             item.category.toLowerCase().includes(q)
           );
-        });
+        }),
+    [debouncedQuery, index]
+  );
 
-  const grouped = {
+  const grouped = useMemo(() => ({
     listing: results.filter((r) => r.type === "listing").slice(0, 5),
     blog: results.filter((r) => r.type === "blog").slice(0, 5),
     event: results.filter((r) => r.type === "event").slice(0, 5),
-  };
+  }), [results]);
 
-  const hasResults =
-    grouped.listing.length > 0 ||
-    grouped.blog.length > 0 ||
-    grouped.event.length > 0;
+  // Flat list of all visible results for keyboard navigation
+  const flatResults = useMemo(() => [
+    ...grouped.listing,
+    ...grouped.blog,
+    ...grouped.event,
+  ], [grouped]);
+
+  const hasResults = flatResults.length > 0;
+
+  // Reset active index when results change
+  useEffect(() => {
+    setActiveIndex(-1);
+  }, [debouncedQuery]);
 
   function navigate(url: string) {
     router.push(url);
     stableOnClose();
   }
 
+  // Keyboard navigation
+  function handleKeyDown(e: React.KeyboardEvent) {
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setActiveIndex((prev) => (prev < flatResults.length - 1 ? prev + 1 : 0));
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setActiveIndex((prev) => (prev > 0 ? prev - 1 : flatResults.length - 1));
+    } else if (e.key === "Enter" && activeIndex >= 0 && flatResults[activeIndex]) {
+      e.preventDefault();
+      navigate(flatResults[activeIndex].url);
+    }
+  }
+
+  // Scroll active item into view
+  useEffect(() => {
+    if (activeIndex >= 0 && resultsRef.current) {
+      const buttons = resultsRef.current.querySelectorAll("[data-search-result]");
+      buttons[activeIndex]?.scrollIntoView({ block: "nearest" });
+    }
+  }, [activeIndex]);
+
   if (!isOpen) return null;
+
+  let resultIndex = -1;
 
   return (
     <div
@@ -116,6 +165,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
       <div
         className="max-w-2xl mx-auto mt-12 md:mt-24 mx-4 md:mx-auto bg-white dark:bg-[#1a1a1a] rounded-xl shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
+        onKeyDown={handleKeyDown}
       >
         {/* Search input */}
         <div className="flex items-center gap-3 border-b border-gray-200 dark:border-gray-700 px-6 py-4">
@@ -129,6 +179,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             strokeLinecap="round"
             strokeLinejoin="round"
             className="text-gray-400 shrink-0"
+            aria-hidden="true"
           >
             <circle cx="11" cy="11" r="8" />
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
@@ -140,11 +191,16 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="flex-1 text-sm font-sans text-gray-800 dark:text-gray-200 placeholder-gray-400 outline-none bg-transparent"
+            aria-label="Search listings, articles, and events"
+            role="combobox"
+            aria-expanded={hasResults}
+            aria-activedescendant={activeIndex >= 0 ? `search-result-${activeIndex}` : undefined}
           />
           {query && (
             <button
               onClick={() => setQuery("")}
               className="text-gray-400 hover:text-gray-600"
+              aria-label="Clear search"
             >
               <svg
                 width="16"
@@ -165,8 +221,8 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         </div>
 
         {/* Results */}
-        <div className="max-h-[60vh] overflow-y-auto">
-          {query.trim().length < 2 && (
+        <div className="max-h-[60vh] overflow-y-auto" ref={resultsRef} role="listbox">
+          {debouncedQuery.trim().length < 2 && (
             <div className="px-6 py-10 text-center">
               <p className="text-sm text-gray-400 font-sans">
                 Type at least 2 characters to search
@@ -178,10 +234,10 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             </div>
           )}
 
-          {query.trim().length >= 2 && !hasResults && (
+          {debouncedQuery.trim().length >= 2 && !hasResults && (
             <div className="px-6 py-10 text-center">
               <p className="text-sm text-gray-400 font-sans">
-                No results for &ldquo;{query}&rdquo;
+                No results for &ldquo;{debouncedQuery}&rdquo;
               </p>
               <p className="text-xs text-gray-300 font-sans mt-2">
                 Try a different search term
@@ -199,31 +255,43 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                     <p className="text-xs text-gray-400 uppercase tracking-wider font-sans px-2 mb-2">
                       {TYPE_LABELS[type]}
                     </p>
-                    {items.map((item) => (
-                      <button
-                        key={item.url}
-                        onClick={() => navigate(item.url)}
-                        className="w-full text-left px-3 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-start gap-3"
-                      >
-                        <span
-                          className={`text-[10px] px-2 py-0.5 rounded-full font-sans shrink-0 mt-0.5 ${TYPE_COLORS[type]}`}
+                    {items.map((item) => {
+                      resultIndex++;
+                      const idx = resultIndex;
+                      return (
+                        <button
+                          key={item.url}
+                          id={`search-result-${idx}`}
+                          data-search-result
+                          role="option"
+                          aria-selected={activeIndex === idx}
+                          onClick={() => navigate(item.url)}
+                          className={`w-full text-left px-3 py-3 rounded-lg transition-colors flex items-start gap-3 ${
+                            activeIndex === idx
+                              ? "bg-gray-100 dark:bg-gray-800"
+                              : "hover:bg-gray-50 dark:hover:bg-gray-800"
+                          }`}
                         >
-                          {item.type === "listing"
-                            ? "Place"
-                            : item.type === "blog"
-                              ? "Article"
-                              : "Event"}
-                        </span>
-                        <div className="min-w-0">
-                          <p className="text-sm font-medium text-gray-900 dark:text-gray-100 font-sans truncate">
-                            {item.title}
-                          </p>
-                          <p className="text-xs text-gray-400 font-sans truncate mt-0.5">
-                            {item.excerpt}
-                          </p>
-                        </div>
-                      </button>
-                    ))}
+                          <span
+                            className={`text-[10px] px-2 py-0.5 rounded-full font-sans shrink-0 mt-0.5 ${TYPE_COLORS[type]}`}
+                          >
+                            {item.type === "listing"
+                              ? "Place"
+                              : item.type === "blog"
+                                ? "Article"
+                                : "Event"}
+                          </span>
+                          <div className="min-w-0">
+                            <p className="text-sm font-medium text-gray-900 dark:text-gray-100 font-sans truncate">
+                              {item.title}
+                            </p>
+                            <p className="text-xs text-gray-400 font-sans truncate mt-0.5">
+                              {item.excerpt}
+                            </p>
+                          </div>
+                        </button>
+                      );
+                    })}
                   </div>
                 );
               })}
@@ -237,7 +305,15 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             <kbd className="border border-gray-200 rounded px-1 py-0.5 mr-1">
               &#8984;K
             </kbd>
-            to search
+            to search &middot;{" "}
+            <kbd className="border border-gray-200 rounded px-1 py-0.5 mx-0.5">
+              &uarr;&darr;
+            </kbd>{" "}
+            to navigate &middot;{" "}
+            <kbd className="border border-gray-200 rounded px-1 py-0.5 mx-0.5">
+              Enter
+            </kbd>{" "}
+            to select
           </p>
           <button
             onClick={stableOnClose}

@@ -73,8 +73,11 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
                   <img
                     src={post.coverImage}
                     alt={post.title}
+                    width={600}
+                    height={192}
                     className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                     loading="lazy"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </Link>
               )}
