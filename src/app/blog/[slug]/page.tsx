@@ -73,7 +73,7 @@ export default async function BlogPostPage({ params }: Props) {
       />
 
       <article className="pt-24">
-        <header className="max-w-2xl mx-auto px-6 py-12 text-center">
+        <header className="max-w-3xl mx-auto px-6 py-12 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span
               className={`text-xs px-2.5 py-1 rounded-full font-sans ${blogCategoryColors[post.category].bg} ${blogCategoryColors[post.category].text}`}
@@ -91,28 +91,28 @@ export default async function BlogPostPage({ params }: Props) {
           <h1 className="font-serif text-3xl md:text-5xl text-terracotta leading-tight mb-6">
             {post.title}
           </h1>
-          <p className="text-gray-500 dark:text-gray-400 leading-relaxed font-sans">
+          <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed font-sans">
             {post.excerpt}
           </p>
           <div className="w-12 h-px bg-terracotta/40 mx-auto mt-8" />
         </header>
 
         {post.coverImage && (
-          <div className="max-w-2xl mx-auto px-6 mb-10">
+          <div className="max-w-3xl mx-auto px-6 mb-10">
             <img
               src={post.coverImage}
               alt={post.title}
-              width={672}
+              width={768}
               height={400}
-              className="w-full rounded-xl object-cover max-h-[400px]"
-              sizes="(max-width: 672px) 100vw, 672px"
+              className="w-full rounded-xl object-cover max-h-[450px]"
+              sizes="(max-width: 768px) 100vw, 768px"
             />
           </div>
         )}
 
         {/* Table of Contents */}
         {post.headings.length > 2 && (
-          <nav className="max-w-2xl mx-auto px-6 mb-10">
+          <nav className="max-w-3xl mx-auto px-6 mb-10">
             <div className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-gray-50/50 dark:bg-gray-900/50">
               <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-3">
                 In this article
@@ -137,12 +137,12 @@ export default async function BlogPostPage({ params }: Props) {
         )}
 
         <div
-          className="max-w-2xl mx-auto px-6 pb-12 prose prose-gray dark:prose-invert prose-headings:font-serif prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-terracotta prose-a:no-underline hover:prose-a:underline font-sans"
+          className="max-w-3xl mx-auto px-6 pb-12 prose prose-lg dark:prose-invert prose-headings:font-serif prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-p:leading-[1.85] prose-p:mb-6 prose-headings:mt-10 prose-headings:mb-4 prose-li:leading-[1.8] prose-a:text-terracotta prose-a:no-underline hover:prose-a:underline font-sans"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
         {/* Next Steps CTA */}
-        <section className="max-w-2xl mx-auto px-6 pb-12">
+        <section className="max-w-3xl mx-auto px-6 pb-12">
           <div className="border border-terracotta/20 rounded-xl p-8 bg-terracotta/5">
             <h3 className="font-serif text-xl text-gray-900 dark:text-gray-100 mb-3">
               Ready to take the next step?
@@ -207,7 +207,7 @@ export default async function BlogPostPage({ params }: Props) {
           </section>
         )}
 
-        <div className="max-w-2xl mx-auto px-6 py-12 text-center">
+        <div className="max-w-3xl mx-auto px-6 py-12 text-center">
           <Link
             href="/"
             className="text-sm text-gray-800 dark:text-gray-200 underline underline-offset-4 hover:text-terracotta transition-colors font-sans"
