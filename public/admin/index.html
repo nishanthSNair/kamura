@@ -14,6 +14,8 @@
       }
       #loading span { letter-spacing: 0.2em; text-transform: uppercase; font-size: 18px; color: #B5736A; font-weight: 600; }
     </style>
+    <script>window.CMS_MANUAL_INIT = true;</script>
+    <script src="https://unpkg.com/decap-cms-app@3.3.3/dist/decap-cms-app.js"></script>
   </head>
   <body>
     <div id="loading">
@@ -21,12 +23,10 @@
       Loading content manager...
     </div>
     <script>
-      window.CMS_MANUAL_INIT = true;
-    </script>
-    <script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js"></script>
-    <script>
-      window.CMS.init({
+      var CMS = window.DecapCmsApp || window.CMS;
+      CMS.init({
         config: {
+          load_config_file: false,
           backend: {
             name: "github",
             repo: "nishanthSNair/kamura",
