@@ -76,6 +76,171 @@
       "relatedEventId": "peak-longevity-fest-2026",
       "relatedEventTitle": "Peak Longevity Fest 2026",
       "category": "Longevity"
+    },
+    {
+      "id": "senolytics-age-reversal-2025",
+      "title": "The New Frontier in Longevity: Senolytics and Age-Reversal Therapies Show Promise",
+      "source": "Healthspan Research",
+      "date": "Dec 2025",
+      "summary": "Unity Biotechnology reported encouraging Phase 2b results for its senolytic drug UBX1325, while the combination of dasatinib and quercetin continues to show results across 70+ age-related conditions. The global anti-aging market surpassed $85 billion in 2025.",
+      "url": "https://www.gethealthspan.com/research/article/top-ten-longevity-anti-aging-breakthroughs-of-2025",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Longevity"
+    },
+    {
+      "id": "uae-wellness-economy-40b",
+      "title": "UAE Wellness Economy Now Worth $40.8 Billion, Reports Global Wellness Institute",
+      "source": "Global Wellness Institute",
+      "date": "2025",
+      "summary": "A new report reveals the UAE's wellness economy has reached $40.8 billion, driven by wellness tourism growing at 23.5% annually. Wellness travelers in the GCC now spend 35–40% more per trip than average tourists, making it one of the most lucrative tourism segments.",
+      "url": "https://globalwellnessinstitute.org/press-room/press-releases/new-global-wellness-institute-report-shows-uae-wellness-economy-now-worth-40-8-billion/",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Wellness Industry"
+    },
+    {
+      "id": "breathwork-psychedelic-brain",
+      "title": "Scientists Reveal How Breathwork Unlocks Psychedelic-Like States in the Brain",
+      "source": "Nature Communications Psychology",
+      "date": "Sep 2025",
+      "summary": "Landmark research published in Nature found that circular breathwork induces altered states of consciousness similar to psychedelics, predicted by decreases in CO2 saturation. Despite reducing overall brain blood flow, breathwork increased flow to emotion-processing regions, improving well-being and reducing depressive symptoms.",
+      "url": "https://www.nature.com/articles/s44271-025-00247-0",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Holistic"
+    },
+    {
+      "id": "biohacking-market-111b",
+      "title": "Biohacking Market Set to Surge from $24.5B to $111.3B by 2034",
+      "source": "GlobeNewsWire",
+      "date": "May 2025",
+      "summary": "A new market report projects the global biohacking industry will reach $111.3 billion by 2034, driven by preventive healthcare adoption, wearable technology advances, and growing consumer interest in health optimization and longevity protocols.",
+      "url": "https://www.globenewswire.com/news-release/2025/05/16/3083283/28124/en/Biohacking-Market-Report-2025-Set-to-Surge-from-24-5-Billion-in-2024-to-111-3-Billion-by-2034-as-Preventive-Healthcare-and-Wearables-Gain-Ground.html",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Biohacking"
+    },
+    {
+      "id": "xlr8-wellness-dubai-blueprint",
+      "title": "XLR8 Wellness Unveils 2026 Blueprint to Redefine Dubai's Longevity Economy",
+      "source": "EIN Presswire",
+      "date": "Feb 2026",
+      "summary": "XLR8 Wellness announced a strategic plan focused on the 'Uberization' of biohacking — democratizing longevity through a tech-enabled platform offering on-demand NAD+ therapy, genetic screening, and performance diagnostics across Dubai.",
+      "url": "https://www.einpresswire.com/article/887576737/xlr8-wellness-unveils-2026-strategic-blueprint-to-redefine-dubai-s-longevity-economy",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Wellness Industry"
+    },
+    {
+      "id": "google-ai-healthcare-2025",
+      "title": "Google Unveils Next-Gen Healthcare AI Tools at I/O 2025",
+      "source": "Crescendo AI",
+      "date": "May 2025",
+      "summary": "At Google I/O 2025, Google unveiled Gemini-based healthcare AI models for radiology and workflow automation, plus AI assistants supporting real-time clinical decision-making. The global AI healthcare market is projected to reach $45.2 billion by 2026.",
+      "url": "https://www.crescendo.ai/news/ai-in-healthcare-news",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Health Tech"
+    },
+    {
+      "id": "crispr-gpt-gene-editing",
+      "title": "Stanford Develops CRISPR-GPT: An AI Copilot for Gene-Editing Experiments",
+      "source": "Stanford Medicine",
+      "date": "2025",
+      "summary": "Stanford researchers created CRISPR-GPT, an AI tool that generates experiment designs, suggests guide RNA sequences, and forecasts problems in gene-editing research — streamlining work that typically takes months into days.",
+      "url": "https://www.alation.com/blog/ai-healthcare-breakthroughs-2025-innovations/",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Health Tech"
+    },
+    {
+      "id": "wellness-trends-2026-gws",
+      "title": "Global Wellness Summit Releases 10 Wellness Trends for 2026",
+      "source": "Global Wellness Institute",
+      "date": "Jan 2026",
+      "summary": "The annual trends report highlights the rise of 'active wearables' (wearables 3.0) that intervene rather than just track, longevity residences with built-in health optimization, AI-driven hyper-personalized wellness coaching, and digital detox retreats as mainstream wellness offerings.",
+      "url": "https://globalwellnessinstitute.org/press-room/press-releases/global-wellness-summit-releases-10-wellness-trends-for-2026/",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Wellness Industry"
+    },
+    {
+      "id": "longevity-residences-uae",
+      "title": "Longevity, Biohacking & the Rise of Wellness Residences in the UAE",
+      "source": "Elysian Real Estate",
+      "date": "2025",
+      "summary": "A new category of luxury property is emerging in the UAE: wellness residences with built-in preventive medicine, advanced diagnostics, biohacking facilities, and AI-driven personalization embedded directly into daily living spaces.",
+      "url": "https://elysian.com/en/blog-details/Longevity-Biohacking--the-Rise-of-Wellness-Residences-in-the-UAE",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Wellness Industry"
+    },
+    {
+      "id": "ces-2026-fitness-wellness-tech",
+      "title": "CES 2026: The Fitness & Wellness Tech Trends You Need to Know",
+      "source": "Athletech News",
+      "date": "Jan 2026",
+      "summary": "CES 2026 showcased next-generation fitness and wellness technology including continuous biomarker monitors, AI-powered recovery devices, smart cold plunge systems, and wearables that actively guide sleep timing and workout intensity in real-time.",
+      "url": "https://athletechnews.com/ces-2026-top-fitness-wellness-health-tech-trends/",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Health Tech"
+    },
+    {
+      "id": "longevity-trends-2026",
+      "title": "26 Longevity Trends That Will Define 2026",
+      "source": "Hone Health",
+      "date": "Jan 2026",
+      "summary": "From SGLT2 inhibitors being repurposed as anti-aging drugs to continuous hormone monitors, peptide therapy protocols, and AI longevity coaches — a comprehensive look at the science and technology pushing human healthspan forward in 2026.",
+      "url": "https://honehealth.com/edge/longevity-trends/",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Longevity"
+    },
+    {
+      "id": "uae-healthy-ageing-strategy",
+      "title": "UAE's New Strategy Develops Market for Healthy Ageing Solutions",
+      "source": "World Health Expo",
+      "date": "2025",
+      "summary": "The UAE government unveiled a national healthy ageing strategy, positioning the country as a pioneer in longevity and precision medicine. The GCC longevity market is valued between $9–13 billion, with the UAE contributing over $4–6 billion.",
+      "url": "https://www.worldhealthexpo.com/insights/health-innovation/uae-s-new-strategy-develops-market-for-healthy-ageing-solutions",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Longevity"
+    },
+    {
+      "id": "biohacking-gadgets-2025",
+      "title": "Top Biohacking Gadgets for Wellness and Longevity in 2025",
+      "source": "The Hollywood Reporter",
+      "date": "2025",
+      "summary": "From red light therapy panels and portable PEMF devices to advanced sleep trackers and at-home blood biomarker kits — the latest gadgets making clinical-grade biohacking accessible for home use.",
+      "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/biohacking-gadgets-wellness-longevity-1236236436/",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Biohacking"
+    },
+    {
+      "id": "longevity-startups-2026",
+      "title": "9 Anti-Aging and Longevity Startups to Watch in 2026",
+      "source": "We Will Cure",
+      "date": "2026",
+      "summary": "A curated look at the most promising longevity startups, including companies working on senolytic drugs, epigenetic reprogramming, blood-based aging biomarkers, and AI-driven drug discovery platforms targeting age-related diseases.",
+      "url": "https://wewillcure.com/insights/company-profiles/anti-aging-and-longevity-startups-to-watch",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Longevity"
+    },
+    {
+      "id": "dubai-best-wellness-centres-2026",
+      "title": "New Year, New You: 11 of Dubai's Best Wellness Centres for a 2026 Reset",
+      "source": "Grazia Middle East",
+      "date": "Jan 2026",
+      "summary": "Grazia's guide to the top wellness destinations in Dubai for 2026, featuring longevity clinics, cryotherapy studios, float therapy centers, and holistic healing spaces that are defining the city's booming wellness scene.",
+      "url": "https://graziamagazine.com/me/articles/best-wellness-centres-dubai/",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Wellness Industry"
     }
   ]
 }
