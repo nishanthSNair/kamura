@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getAllPosts } from "@/lib/blog";
 import { listings } from "@/data/listings";
 import { events } from "@/data/events";
+import { treatments } from "@/data/treatments";
 
 export async function GET() {
   const posts = getAllPosts();
@@ -20,6 +21,8 @@ export async function GET() {
       excerpt: `${l.tagline} — ${l.location}, ${l.city}`,
       category: l.category,
       url: `/explore/${l.id}`,
+      location: `${l.location}, ${l.city}`,
+      services: l.services.slice(0, 3),
     })),
     events: events.map((e) => ({
       type: "event" as const,
@@ -27,6 +30,15 @@ export async function GET() {
       excerpt: `${e.subtitle} — ${e.dates}`,
       category: e.category,
       url: `/events/${e.id}`,
+    })),
+    treatments: treatments.map((t) => ({
+      type: "treatment" as const,
+      title: t.name,
+      excerpt: `${t.description.slice(0, 120)}...`,
+      category: t.category,
+      url: `/treatments/${t.slug}`,
+      kamuraScore: t.kamuraScore,
+      evidenceLevel: t.evidenceLevel,
     })),
   };
 

@@ -25,6 +25,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: event.subtitle,
       url: `https://kamuralife.com/events/${event.id}`,
       type: "website",
+      images: [
+        {
+          url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&h=630&fit=crop",
+          width: 1200,
+          height: 630,
+          alt: `${event.title} — KAMURA`,
+        },
+      ],
     },
   };
 }

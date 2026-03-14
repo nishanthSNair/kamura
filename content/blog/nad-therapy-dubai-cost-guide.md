@@ -4,6 +4,12 @@ date: "2026-03-04"
 category: "Longevity & Science"
 coverImage: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&q=80&fit=crop"
 excerpt: "NAD+ therapy is one of the most talked-about longevity treatments in Dubai. We explain the science, break down the costs, and review the best clinics offering it."
+kamuraScore: 74
+evidenceLevel: "Moderate"
+depthIndicator: "Deep Dive"
+relatedTreatments: ["nad-injectable", "nad-oral"]
+medicallyReviewed: true
+lastUpdated: "2026-03-04"
 ---
 
 NAD+ therapy has become one of the most sought-after treatments in Dubai's longevity medicine scene. Celebrities, executives, and biohackers swear by it for energy, mental clarity, and anti-aging benefits. But what exactly is NAD+, does the science support the claims, and what should you expect to pay in Dubai? This guide covers everything you need to know before booking your first session.

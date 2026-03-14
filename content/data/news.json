@@ -241,6 +241,72 @@
       "relatedEventId": "",
       "relatedEventTitle": "",
       "category": "Wellness Industry"
+    },
+    {
+      "id": "peptide-therapy-regulation-uae-2026",
+      "title": "UAE Clinics Report Surging Demand for Peptide Therapy as Regulation Framework Takes Shape",
+      "source": "Community Intelligence",
+      "date": "Mar 2026",
+      "summary": "Longevity clinics across Dubai report a 300%+ increase in peptide therapy inquiries over the past year. BPC-157, GHK-Cu, and growth hormone secretagogues lead demand. UAE health authorities are developing clearer frameworks for peptide prescription and import.",
+      "url": "",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Longevity"
+    },
+    {
+      "id": "well-b-festival-2026-announcement",
+      "title": "Well B Festival 2026: Dubai's Newest Holistic Wellness Festival Announced for April",
+      "source": "Community Intelligence",
+      "date": "Mar 2026",
+      "summary": "A new three-day wellness festival is set for April 3–5 in Dubai, featuring breathwork, yoga, sound healing, cold plunge, and a holistic marketplace. The event aims to bring together the city's growing conscious living community.",
+      "url": "",
+      "relatedEventId": "well-b-festival-2026",
+      "relatedEventTitle": "Well B Festival 2026",
+      "category": "Wellness Festival"
+    },
+    {
+      "id": "cgm-adoption-dubai-wellness",
+      "title": "Continuous Glucose Monitors Go Mainstream in Dubai's Wellness Community",
+      "source": "Community Intelligence",
+      "date": "Feb 2026",
+      "summary": "Once reserved for diabetics, CGMs are now worn by wellness enthusiasts across Dubai to optimize nutrition, sleep, and fasting protocols. Community members report using CGMs during Ramadan to fine-tune suhoor and iftar choices for minimal glucose spikes.",
+      "url": "",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Biohacking"
+    },
+    {
+      "id": "ozone-therapy-dubai-growth",
+      "title": "Ozone Therapy Clinics Multiply Across Dubai as Demand for Detox Protocols Surges",
+      "source": "Community Intelligence",
+      "date": "Feb 2026",
+      "summary": "10-pass ozone therapy, ozone saunas, and insufflation protocols are seeing rapid adoption in Dubai's longevity community. Multiple new clinics have opened, driven by word-of-mouth recommendations for detox, immune support, and chronic health conditions.",
+      "url": "",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Longevity"
+    },
+    {
+      "id": "ramadan-biohacking-movement-2026",
+      "title": "The Rise of Ramadan Biohacking: Dubai's Wellness Community Optimizes the Sacred Fast",
+      "source": "Community Intelligence",
+      "date": "Mar 2026",
+      "summary": "Dubai's biohacking community is blending ancient fasting traditions with modern science — using CGMs, strategic supplementation, and cold exposure during Ramadan. Bone broth for iftar, electrolyte-optimized suhoor, and red light therapy sessions have become community staples.",
+      "url": "",
+      "relatedEventId": "",
+      "relatedEventTitle": "",
+      "category": "Biohacking"
+    },
+    {
+      "id": "issca-dubai-stem-cell-2026",
+      "title": "ISSCA Brings International Stem Cell Conference to Dubai for June 2026",
+      "source": "Community Intelligence",
+      "date": "Mar 2026",
+      "summary": "The International Society for Stem Cell Application (ISSCA) is bringing its annual summit to Dubai in June 2026, featuring clinical research presentations, hands-on workshops, and networking with leading regenerative medicine practitioners from around the world.",
+      "url": "",
+      "relatedEventId": "issca-dubai-2026",
+      "relatedEventTitle": "ISSCA Dubai 2026",
+      "category": "Global Summit"
     }
   ]
 }

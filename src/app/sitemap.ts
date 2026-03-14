@@ -3,6 +3,7 @@ import { getAllPosts } from "@/lib/blog";
 import { events } from "@/data/events";
 import { listings } from "@/data/listings";
 import { areas } from "@/data/areas";
+import { treatments } from "@/data/treatments";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://kamuralife.com";
@@ -64,6 +65,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    {
+      url: `${baseUrl}/treatments`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/treatments/methodology`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    ...treatments.map((t) => ({
+      url: `${baseUrl}/treatments/${t.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
     })),
     {
       url: `${baseUrl}/explore/compare`,

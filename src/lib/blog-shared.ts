@@ -5,6 +5,8 @@ export type BlogCategory =
   | "Biohacking"
   | "News & Trends";
 
+export type DepthIndicator = "Deep Dive" | "Evidence Review" | "Comparison" | "Protocol" | "Quick Answer" | "Myth Bust";
+
 export const blogCategoryColors: Record<BlogCategory, { bg: string; text: string }> = {
   "Guides & Reviews": { bg: "bg-blue-100", text: "text-blue-800" },
   "Longevity & Science": { bg: "bg-red-100", text: "text-red-700" },

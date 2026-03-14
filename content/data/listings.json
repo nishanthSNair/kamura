@@ -856,6 +856,348 @@
         "Beginner Reformer",
         "Core Sculpt"
       ]
+    },
+    {
+      "id": "kora-longevity-center",
+      "name": "Kora Longevity Center",
+      "tagline": "Bespoke longevity protocols in DIFC",
+      "description": "A boutique longevity clinic offering personalized protocols including NAD+ IV therapy, peptide therapy, ozone therapy, advanced blood panels, and epigenetic age testing — popular with the Dubai biohacking community.",
+      "location": "DIFC",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://koralongevity.com/",
+      "services": [
+        "NAD+ IV Therapy",
+        "Peptide Therapy",
+        "Ozone Therapy",
+        "Epigenetic Age Testing",
+        "Blood Panels"
+      ]
+    },
+    {
+      "id": "dr-ozone-clinic",
+      "name": "Dr Ozone Clinic",
+      "tagline": "Dubai's dedicated ozone therapy specialists",
+      "description": "A specialist clinic focused on medical ozone therapy, offering 10-pass ozone, rectal insufflation, ozone sauna, and IV ozone protocols for detox, immune support, and chronic health conditions.",
+      "location": "Jumeirah",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://drozoneclinic.com/",
+      "services": [
+        "10-Pass Ozone Therapy",
+        "Ozone Sauna",
+        "IV Ozone",
+        "Rectal Insufflation",
+        "Detox Protocols"
+      ]
+    },
+    {
+      "id": "zoime-longevity-centre",
+      "name": "ZOIME Longevity Centre",
+      "tagline": "Data-driven longevity and performance optimization",
+      "description": "A comprehensive longevity center offering full-body MRI screening, biological age testing, VO2 max testing, DEXA scans, CGM monitoring, and personalized longevity protocols backed by advanced diagnostics.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://zoime.com/",
+      "services": [
+        "Full-Body MRI",
+        "Biological Age Testing",
+        "VO2 Max Testing",
+        "DEXA Scan",
+        "CGM Monitoring",
+        "Longevity Protocols"
+      ]
+    },
+    {
+      "id": "pura-longevity-clinic",
+      "name": "Pura Longevity Clinic",
+      "tagline": "Precision medicine for optimal healthspan",
+      "description": "A longevity-focused clinic offering hormone optimization, advanced blood biomarker panels, peptide protocols, IV nutrient therapy, and personalized anti-aging programs designed for peak health and performance.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://puralongevity.com/",
+      "services": [
+        "Hormone Optimization",
+        "Blood Biomarker Panels",
+        "Peptide Protocols",
+        "IV Nutrient Therapy",
+        "Anti-Aging Programs"
+      ]
+    },
+    {
+      "id": "biohackn",
+      "name": "Biohackn",
+      "tagline": "Community-driven biohacking hub",
+      "description": "A biohacking and wellness center offering red light therapy, PEMF, cold plunge, infrared sauna, IV drips, and group biohacking sessions — a hub for Dubai's growing biohacking community.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://biohackn.com/",
+      "services": [
+        "Red Light Therapy",
+        "PEMF Therapy",
+        "Cold Plunge",
+        "Infrared Sauna",
+        "IV Drips",
+        "Group Sessions"
+      ]
+    },
+    {
+      "id": "recovery-on-demand",
+      "name": "Recovery On Demand",
+      "tagline": "Mobile recovery & wellness to your door",
+      "description": "A mobile recovery service bringing cryotherapy, compression therapy, IV drips, and sports recovery treatments directly to homes, offices, and events across Dubai.",
+      "location": "Mobile — citywide",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://recoveryondemand.ae/",
+      "services": [
+        "Mobile Cryotherapy",
+        "Compression Therapy",
+        "IV Drips",
+        "Sports Recovery",
+        "Corporate Wellness"
+      ]
+    },
+    {
+      "id": "bliss-now-recovery",
+      "name": "Bliss Now Recovery",
+      "tagline": "Urban recovery lounge for mind & body",
+      "description": "A recovery-focused wellness lounge offering float tanks, cold plunge, infrared sauna, compression therapy, and guided breathwork — designed for post-workout recovery and stress relief.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://blissnowrecovery.com/",
+      "services": [
+        "Float Tanks",
+        "Cold Plunge",
+        "Infrared Sauna",
+        "Compression Therapy",
+        "Breathwork"
+      ]
+    },
+    {
+      "id": "os1-fitness",
+      "name": "OS-1 Fitness",
+      "tagline": "Functional fitness meets longevity science",
+      "description": "A functional fitness studio integrating strength training with longevity-focused protocols including zone 2 cardio, VO2 max training, mobility work, and metabolic conditioning — popular with Dubai's biohacking community.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Yoga & Movement",
+      "website": "https://os1fitness.com/",
+      "services": [
+        "Functional Fitness",
+        "Zone 2 Cardio",
+        "VO2 Max Training",
+        "Strength Training",
+        "Mobility Work"
+      ]
+    },
+    {
+      "id": "yofit-hot-studios",
+      "name": "YOFIT Hot Studios",
+      "tagline": "Infrared-heated fitness & yoga studio",
+      "description": "A hot yoga and fitness studio using infrared heating technology for hot yoga, hot Pilates, hot HIIT, and recovery sessions — designed to enhance detoxification, flexibility, and calorie burn.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Yoga & Movement",
+      "website": "https://yofitstudios.com/",
+      "services": [
+        "Hot Yoga",
+        "Hot Pilates",
+        "Hot HIIT",
+        "Infrared Recovery",
+        "Breathwork"
+      ]
+    },
+    {
+      "id": "forus-life",
+      "name": "Forus Life",
+      "tagline": "At-home health testing & functional medicine",
+      "description": "A health-tech platform offering at-home blood testing, hormone panels, gut health tests, food sensitivity testing, and functional medicine consultations — making advanced diagnostics accessible from home.",
+      "location": "Online + mobile service",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://foruslife.com/",
+      "services": [
+        "At-Home Blood Testing",
+        "Hormone Panels",
+        "Gut Health Tests",
+        "Food Sensitivity Testing",
+        "Functional Medicine Consults"
+      ]
+    },
+    {
+      "id": "valeo-health",
+      "name": "Valeo",
+      "tagline": "At-home blood work & health analytics",
+      "description": "A health-tech service providing at-home blood draws, comprehensive biomarker panels, and AI-powered health analytics — delivering lab-quality results with personalized health insights directly to your phone.",
+      "location": "Online + mobile service",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://valeo.co/",
+      "services": [
+        "At-Home Blood Draws",
+        "Biomarker Panels",
+        "Health Analytics",
+        "Personalized Insights",
+        "Wellness Tracking"
+      ]
+    },
+    {
+      "id": "rejuv-wellness",
+      "name": "Rejuv",
+      "tagline": "IV therapy & wellness on demand",
+      "description": "An IV therapy and wellness clinic offering NAD+ drips, vitamin infusions, glutathione, hydration therapy, and custom wellness protocols — with in-clinic and at-home service options.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://rejuv.ae/",
+      "services": [
+        "NAD+ Drips",
+        "Vitamin Infusions",
+        "Glutathione IV",
+        "Hydration Therapy",
+        "At-Home IV Service"
+      ]
+    },
+    {
+      "id": "she-is-liberty",
+      "name": "She Is Liberty",
+      "tagline": "Women's wellness & hormone health specialists",
+      "description": "A women-focused wellness platform offering hormone health coaching, menopause support, cycle syncing guidance, functional nutrition, and community workshops — empowering women to optimize their health at every life stage.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Holistic & Healing",
+      "website": "https://sheisliberty.com/",
+      "services": [
+        "Hormone Health Coaching",
+        "Menopause Support",
+        "Cycle Syncing",
+        "Functional Nutrition",
+        "Women's Workshops"
+      ]
+    },
+    {
+      "id": "everwell-clinic",
+      "name": "Everwell",
+      "tagline": "Preventive health & personalized wellness",
+      "description": "A preventive health clinic offering comprehensive health screenings, genetic testing, personalized supplement protocols, functional medicine consultations, and corporate wellness programs.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://everwell.ae/",
+      "services": [
+        "Health Screenings",
+        "Genetic Testing",
+        "Supplement Protocols",
+        "Functional Medicine",
+        "Corporate Wellness"
+      ]
+    },
+    {
+      "id": "broth-lab",
+      "name": "Broth Lab",
+      "tagline": "Dubai's artisanal bone broth kitchen",
+      "description": "A specialty kitchen producing slow-simmered bone broths from grass-fed, organic sources — available in classic beef, chicken, and turmeric varieties. Popular for gut health, fasting protocols, and post-workout recovery.",
+      "location": "Dubai (delivery citywide)",
+      "city": "Dubai",
+      "category": "Nutrition & Supplements",
+      "website": "https://brothlab.ae/",
+      "services": [
+        "Bone Broth Delivery",
+        "Gut Health Protocols",
+        "Fasting Support",
+        "Organic Sourcing",
+        "Subscription Plans"
+      ]
+    },
+    {
+      "id": "hola-zero-sugar",
+      "name": "Hola Zero Sugar Cafe",
+      "tagline": "Zero-sugar, health-first cafe concept",
+      "description": "A health-conscious cafe serving entirely sugar-free meals, snacks, and beverages — popular with keto, diabetic-friendly, and longevity-minded communities. Offerings include keto desserts, protein bowls, and adaptogenic drinks.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Nutrition & Supplements",
+      "website": "https://holazerosugar.com/",
+      "services": [
+        "Sugar-Free Meals",
+        "Keto Desserts",
+        "Protein Bowls",
+        "Adaptogenic Drinks",
+        "Healthy Catering"
+      ]
+    },
+    {
+      "id": "me-kombucha",
+      "name": "ME Kombucha",
+      "tagline": "UAE's homegrown artisan kombucha",
+      "description": "A local artisan kombucha brand brewing small-batch, raw, probiotic-rich kombucha in unique flavors. Available at health food stores, farmers markets, and via home delivery across the UAE.",
+      "location": "Dubai (delivery UAE-wide)",
+      "city": "Dubai",
+      "category": "Nutrition & Supplements",
+      "website": "https://mekombucha.com/",
+      "services": [
+        "Raw Kombucha",
+        "Probiotic Drinks",
+        "Home Delivery",
+        "Wholesale Supply",
+        "Custom Flavors"
+      ]
+    },
+    {
+      "id": "generation-h",
+      "name": "Generation H",
+      "tagline": "Health food market & community kitchen",
+      "description": "A health food concept store and community kitchen offering organic produce, functional foods, wellness supplements, fresh cold-pressed juices, and educational wellness workshops.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Nutrition & Supplements",
+      "website": "https://generationh.ae/",
+      "services": [
+        "Organic Produce",
+        "Functional Foods",
+        "Cold-Pressed Juices",
+        "Wellness Supplements",
+        "Workshops"
+      ]
+    },
+    {
+      "id": "scoop-wholefoods",
+      "name": "Scoop Wholefoods",
+      "tagline": "Zero-waste health food store",
+      "description": "A zero-waste, bulk health food store offering organic superfoods, nuts, seeds, adaptogens, protein powders, and eco-friendly household products — a go-to for the health-conscious community in Dubai.",
+      "location": "Multiple locations",
+      "city": "Dubai",
+      "category": "Nutrition & Supplements",
+      "website": "https://scoopwholefoods.com/",
+      "services": [
+        "Bulk Superfoods",
+        "Organic Nuts & Seeds",
+        "Adaptogens",
+        "Protein Powders",
+        "Eco Products"
+      ]
+    },
+    {
+      "id": "reset-villa",
+      "name": "Reset Villa",
+      "tagline": "Private wellness retreat villa",
+      "description": "A private villa-style wellness retreat offering cold plunge, infrared sauna, IV therapy, breathwork sessions, and guided detox programs in an intimate, residential setting away from the clinical environment.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Wellness Retreats & Spas",
+      "website": "https://resetvilla.ae/",
+      "services": [
+        "Cold Plunge",
+        "Infrared Sauna",
+        "IV Therapy",
+        "Breathwork Sessions",
+        "Detox Programs"
+      ]
     }
   ]
 }

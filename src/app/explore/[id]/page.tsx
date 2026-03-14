@@ -25,6 +25,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: listing.description,
       url: `https://kamuralife.com/explore/${listing.id}`,
       type: "website",
+      images: [
+        {
+          url: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1200&h=630&fit=crop",
+          width: 1200,
+          height: 630,
+          alt: `${listing.name} — KAMURA`,
+        },
+      ],
     },
   };
 }
@@ -52,6 +60,7 @@ export default async function ListingPage({ params }: Props) {
     "Holistic & Healing": ["holistic", "healing", "sound healing", "breathwork", "reiki", "ayurveda"],
     "Yoga & Movement": ["yoga", "pilates", "movement", "meditation"],
     "Wellness Retreats & Spas": ["retreat", "spa", "wellness retreat", "detox"],
+    "Nutrition & Supplements": ["nutrition", "supplements", "bone broth", "kombucha", "organic", "superfoods"],
   };
   const keywords = categoryKeywords[listing.category] || [];
   const relatedPosts = allPosts

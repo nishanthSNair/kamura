@@ -4,6 +4,11 @@ date: "2026-03-01"
 category: "Guides & Reviews"
 coverImage: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80&fit=crop"
 excerpt: "Cold therapy is one of the fastest-growing wellness trends in the UAE. We break down what cryotherapy actually does, where to try it in Dubai, and what your first session looks like."
+kamuraScore: 62
+evidenceLevel: "Emerging"
+depthIndicator: "Deep Dive"
+relatedTreatments: ["cryotherapy", "cold-plunge"]
+lastUpdated: "2026-03-01"
 ---
 
 Cryotherapy has moved from the fringes of sports science into mainstream wellness culture. In Dubai, a city that rarely drops below 20°C, the appeal of stepping into a -110°C chamber is surprisingly strong. Here's everything you need to know.

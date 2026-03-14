@@ -151,6 +151,82 @@
         "Genomics, AI health, longevity, peak performance & mental wellness",
         "Waitlist now open at worldbiohacksummit.ae"
       ]
+    },
+    {
+      "id": "megacampus-summit-2026",
+      "title": "Megacampus Summit 2026",
+      "subtitle": "Entrepreneurship meets biohacking — personal development, peak performance, and business scaling strategies.",
+      "dates": "March 6–7, 2026",
+      "dateStart": "2026-03-06",
+      "dateEnd": "2026-03-07",
+      "location": "Dubai, UAE",
+      "category": "Biohacking",
+      "attendees": "1,000+",
+      "speakers": "20+",
+      "price": "TBC",
+      "website": "https://megacampus.com",
+      "highlights": [
+        "Entrepreneurship, biohacking & peak performance",
+        "Topics include longevity protocols, business scaling, and self-optimization",
+        "Networking with Dubai's biohacking and business communities"
+      ]
+    },
+    {
+      "id": "well-b-festival-2026",
+      "title": "Well B Festival 2026",
+      "subtitle": "A three-day wellness festival celebrating holistic health, conscious living, and community connection.",
+      "dates": "April 3–5, 2026",
+      "dateStart": "2026-04-03",
+      "dateEnd": "2026-04-05",
+      "location": "Dubai, UAE",
+      "category": "Wellness Festival",
+      "attendees": "5,000+",
+      "speakers": "30+",
+      "price": "TBC",
+      "website": "https://wellbfestival.com",
+      "highlights": [
+        "Breathwork, yoga, sound healing, cold plunge, and cacao ceremonies",
+        "Holistic marketplace with wellness brands and healthy food vendors",
+        "Community-driven programming with local and international practitioners"
+      ]
+    },
+    {
+      "id": "issca-dubai-2026",
+      "title": "ISSCA Dubai 2026 — Stem Cell & Regenerative Medicine",
+      "subtitle": "The International Society for Stem Cell Application's annual summit — advancing regenerative medicine in the Gulf.",
+      "dates": "June 5–6, 2026",
+      "dateStart": "2026-06-05",
+      "dateEnd": "2026-06-06",
+      "location": "Dubai, UAE",
+      "category": "Global Summit",
+      "attendees": "1,500+",
+      "speakers": "40+",
+      "price": "TBC",
+      "website": "https://issca.net",
+      "highlights": [
+        "Stem cell therapy, exosomes, PRP, and regenerative protocols",
+        "Clinical research presentations and hands-on workshops",
+        "Networking with leading regenerative medicine practitioners"
+      ]
+    },
+    {
+      "id": "molodost-longevity-festival-2026",
+      "title": "Molodost Longevity Festival 2026",
+      "subtitle": "A longevity-focused festival blending cutting-edge science with experiential biohacking workshops.",
+      "dates": "2026 (dates TBC)",
+      "dateStart": "2026-06-01",
+      "dateEnd": "2026-06-30",
+      "location": "Dubai, UAE (venue TBC)",
+      "category": "Longevity",
+      "attendees": "500+",
+      "speakers": "15+",
+      "price": "TBC",
+      "website": "https://molodost.com",
+      "highlights": [
+        "Longevity science, anti-aging protocols, and healthspan optimization",
+        "Hands-on biohacking workshops and experiential health zones",
+        "International longevity researchers and community practitioners"
+      ]
     }
   ]
 }

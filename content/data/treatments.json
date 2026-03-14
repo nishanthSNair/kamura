@@ -1,0 +1,1723 @@
+{
+  "treatments": [
+    {
+      "slug": "bpc-157",
+      "name": "BPC-157",
+      "fullName": "Body Protection Compound-157",
+      "category": "Peptides",
+      "description": "A pentadecapeptide derived from human gastric juice with powerful tissue-healing, anti-inflammatory, and gut-protective properties. One of the most researched and community-validated peptides in the longevity space.",
+      "icon": "🧬",
+      "kamuraScore": 92,
+      "scores": { "research": 88, "community": 95, "safety": 90, "accessibility": 80, "value": 75 },
+      "evidenceLevel": "Strong",
+      "tags": ["Gut", "Recovery", "Pain"],
+      "uaeAvailable": true,
+      "studyCount": 100,
+      "communityReports": 150,
+      "administrationRoutes": ["Oral", "Injectable"],
+      "outcomes": [
+        { "name": "Gut Healing & Repair", "direction": "positive", "grade": "A", "description": "Strong evidence for treating leaky gut, IBD, and ulcerative conditions. Multiple animal models and emerging human data showing tissue regeneration.", "studyCount": 14, "consistency": "High", "effectSize": "Large" },
+        { "name": "Tendon & Ligament Repair", "direction": "positive", "grade": "A", "description": "Robust evidence for accelerating connective tissue healing. Widely used post-surgery (ACL, rotator cuff) with consistent positive outcomes.", "studyCount": 22, "consistency": "High", "effectSize": "Large" },
+        { "name": "Pain Reduction", "direction": "positive", "grade": "B", "description": "Unexpected but widely reported analgesic effects. Community members report relief from chronic neck, back, and joint pain within days.", "studyCount": 8, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Neuroprotection", "direction": "neutral", "grade": "C", "description": "Emerging evidence for brain injury recovery and neuroprotective effects. Promising but primarily from animal studies. Human data limited.", "studyCount": 6, "consistency": "Mixed", "effectSize": "Unclear" }
+      ],
+      "community": {
+        "totalReports": 150,
+        "positivePercent": 95,
+        "satisfaction": "4.8/5",
+        "timeToEffect": "3-7 days",
+        "quotes": [
+          { "text": "Resolved 2-year chronic neck pain within days of starting BPC Gold orally", "source": "Community member", "location": "Dubai", "verified": true },
+          { "text": "Gut issues from 15 years of NSAIDs dramatically improved in 3 weeks", "source": "Community member", "location": "Europe", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Oral (Gut Healing)", "dosage": "500mcg - 1mg daily", "notes": "BPC Gold tablets or equivalent. Take on empty stomach." },
+        { "label": "Injectable (Tissue Repair)", "dosage": "250-500mcg daily", "notes": "SubQ injection near injury site. 4-8 week cycles." },
+        { "label": "Recovery Stack", "dosage": "BPC + TB-500", "notes": "The \"Wolverine Protocol\" for post-surgical recovery." }
+      ],
+      "relatedSlugs": ["tb-500", "ghk-cu", "kpv"]
+    },
+    {
+      "slug": "ghk-cu",
+      "name": "GHK-Cu",
+      "fullName": "Copper Peptide GHK-Cu",
+      "category": "Peptides",
+      "description": "A naturally occurring copper peptide with remarkable anti-aging, hair growth, and skin rejuvenation properties. Known for reversing grey hair and improving skin elasticity.",
+      "icon": "✨",
+      "kamuraScore": 86,
+      "scores": { "research": 72, "community": 92, "safety": 88, "accessibility": 75, "value": 70 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Hair", "Skin", "Anti-Aging"],
+      "uaeAvailable": true,
+      "studyCount": 45,
+      "communityReports": 120,
+      "administrationRoutes": ["Topical", "Injectable", "Oral"],
+      "outcomes": [
+        { "name": "Hair Regrowth & Darkening", "direction": "positive", "grade": "A", "description": "Widely reported hair darkening within 1-2 weeks. Community data shows significant hair regrowth with sustained use.", "studyCount": 12, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Skin Rejuvenation", "direction": "positive", "grade": "A", "description": "Strong evidence for collagen synthesis, wound healing, and skin firmness. Used in cosmetic dermatology for decades.", "studyCount": 18, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Tissue Remodeling", "direction": "positive", "grade": "B", "description": "Promotes tissue repair and remodeling through collagen and decorin upregulation. Emerging data on broader anti-aging effects.", "studyCount": 10, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 120,
+        "positivePercent": 92,
+        "satisfaction": "4.6/5",
+        "timeToEffect": "1-2 weeks",
+        "quotes": [
+          { "text": "Hair started darkening noticeably within 10 days — wife noticed before I did", "source": "Community member", "location": "Dubai", "verified": true },
+          { "text": "Skin texture improved dramatically. Friends asking what I changed in my routine", "source": "Community member", "location": "Abu Dhabi", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Topical (Skin/Hair)", "dosage": "1-2ml serum daily", "notes": "Apply to scalp or face. Best results with microneedling." },
+        { "label": "Injectable (Systemic)", "dosage": "200-500mcg daily", "notes": "SubQ injection. 4-8 week cycles for anti-aging." },
+        { "label": "Oral", "dosage": "200mcg daily", "notes": "Less studied route but growing community support." }
+      ],
+      "relatedSlugs": ["bpc-157", "epitalon", "spermidine"]
+    },
+    {
+      "slug": "cjc-1295-ipamorelin",
+      "name": "CJC-1295 + Ipamorelin",
+      "fullName": "CJC-1295 with Ipamorelin Stack",
+      "category": "Peptides",
+      "description": "A synergistic peptide combination that stimulates natural growth hormone release. Widely used for anti-aging, body composition improvement, and recovery enhancement.",
+      "icon": "💉",
+      "kamuraScore": 81,
+      "scores": { "research": 75, "community": 85, "safety": 78, "accessibility": 70, "value": 65 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Growth Hormone", "Anti-Aging", "Recovery"],
+      "uaeAvailable": true,
+      "studyCount": 35,
+      "communityReports": 90,
+      "administrationRoutes": ["Injectable"],
+      "outcomes": [
+        { "name": "Growth Hormone Release", "direction": "positive", "grade": "A", "description": "Well-established GH secretagogue effect. Increases natural GH pulse without shutting down endogenous production.", "studyCount": 15, "consistency": "High", "effectSize": "Large" },
+        { "name": "Body Composition", "direction": "positive", "grade": "B", "description": "Improved fat loss and lean mass gains when combined with exercise. Effects are moderate but consistent.", "studyCount": 8, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Sleep Quality", "direction": "positive", "grade": "B", "description": "Many users report deeper sleep and more vivid dreams. GH release primarily occurs during sleep.", "studyCount": 5, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 90,
+        "positivePercent": 85,
+        "satisfaction": "4.3/5",
+        "timeToEffect": "2-4 weeks",
+        "quotes": [
+          { "text": "Sleep quality improved dramatically within the first week. Feeling more recovered.", "source": "Community member", "location": "Dubai", "verified": true },
+          { "text": "Noticeable body composition changes after 6 weeks — leaner and more energy.", "source": "Community member", "location": "Sharjah", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard Protocol", "dosage": "CJC 100mcg + Ipa 100mcg", "notes": "SubQ injection before bed. 5 days on, 2 days off." },
+        { "label": "Aggressive Protocol", "dosage": "CJC 200mcg + Ipa 200mcg", "notes": "Twice daily (morning + before bed). 12-week cycles." },
+        { "label": "Maintenance", "dosage": "CJC 100mcg + Ipa 100mcg", "notes": "3x per week. For long-term anti-aging maintenance." }
+      ],
+      "relatedSlugs": ["tesamorelin", "growth-hormone", "mots-c"]
+    },
+    {
+      "slug": "tesamorelin",
+      "name": "Tesamorelin",
+      "fullName": "Tesamorelin Acetate",
+      "category": "Peptides",
+      "description": "An FDA-approved GHRH analog primarily used for reducing visceral fat. One of the few peptides with robust clinical trial data in humans for body composition improvement.",
+      "icon": "💊",
+      "kamuraScore": 77,
+      "scores": { "research": 82, "community": 75, "safety": 75, "accessibility": 60, "value": 55 },
+      "evidenceLevel": "Strong",
+      "tags": ["Fat Loss", "Visceral Fat", "Growth Hormone"],
+      "uaeAvailable": true,
+      "studyCount": 25,
+      "communityReports": 60,
+      "administrationRoutes": ["Injectable"],
+      "outcomes": [
+        { "name": "Visceral Fat Reduction", "direction": "positive", "grade": "A", "description": "FDA-approved for HIV-associated lipodystrophy. Strong human data showing significant visceral fat reduction.", "studyCount": 12, "consistency": "High", "effectSize": "Large" },
+        { "name": "Body Composition", "direction": "positive", "grade": "B", "description": "Reduces trunk fat while preserving lean mass. Effects are dose-dependent.", "studyCount": 8, "consistency": "High", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 60,
+        "positivePercent": 75,
+        "satisfaction": "4.0/5",
+        "timeToEffect": "4-8 weeks",
+        "quotes": [
+          { "text": "Visceral fat noticeably reduced after 8 weeks — DEXA scan confirmed.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard", "dosage": "2mg daily", "notes": "SubQ abdominal injection. FDA-approved dose." },
+        { "label": "Anti-Aging", "dosage": "1mg daily", "notes": "Lower dose for general body composition improvement." }
+      ],
+      "relatedSlugs": ["cjc-1295-ipamorelin", "growth-hormone", "semaglutide"]
+    },
+    {
+      "slug": "tb-500",
+      "name": "TB-500",
+      "fullName": "Thymosin Beta-4",
+      "category": "Peptides",
+      "description": "A naturally occurring peptide involved in tissue repair, wound healing, and recovery. Often stacked with BPC-157 for the 'Wolverine Protocol' — a popular post-surgery recovery combination.",
+      "icon": "🔧",
+      "kamuraScore": 76,
+      "scores": { "research": 70, "community": 82, "safety": 80, "accessibility": 68, "value": 60 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Tissue Repair", "Recovery", "Wound Healing"],
+      "uaeAvailable": true,
+      "studyCount": 40,
+      "communityReports": 85,
+      "administrationRoutes": ["Injectable"],
+      "outcomes": [
+        { "name": "Tissue Repair", "direction": "positive", "grade": "A", "description": "Strong preclinical evidence for accelerating tissue healing across multiple tissue types.", "studyCount": 18, "consistency": "High", "effectSize": "Large" },
+        { "name": "Wound Healing", "direction": "positive", "grade": "B", "description": "Promotes angiogenesis and cell migration to injury sites. Human data limited but animal data robust.", "studyCount": 12, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Hair Growth", "direction": "positive", "grade": "C", "description": "Some reports of hair regrowth as a secondary effect. Mechanism unclear.", "studyCount": 3, "consistency": "Low", "effectSize": "Small" }
+      ],
+      "community": {
+        "totalReports": 85,
+        "positivePercent": 82,
+        "satisfaction": "4.2/5",
+        "timeToEffect": "1-2 weeks",
+        "quotes": [
+          { "text": "Combined with BPC-157 post ACL surgery — recovery was remarkably fast.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Loading Phase", "dosage": "2-5mg twice weekly", "notes": "First 4-6 weeks. SubQ injection." },
+        { "label": "Maintenance", "dosage": "2mg twice weekly", "notes": "After loading. Continue until recovery complete." },
+        { "label": "Wolverine Stack", "dosage": "TB-500 + BPC-157", "notes": "Combined protocol for post-surgical recovery." }
+      ],
+      "relatedSlugs": ["bpc-157", "ghk-cu", "stem-cell-therapy"]
+    },
+    {
+      "slug": "kpv",
+      "name": "KPV",
+      "fullName": "Lysine-Proline-Valine",
+      "category": "Peptides",
+      "description": "A tripeptide derived from alpha-MSH with potent anti-inflammatory and immune-modulating properties. Gaining attention for gut inflammation and autoimmune conditions.",
+      "icon": "🛡️",
+      "kamuraScore": 68,
+      "scores": { "research": 55, "community": 75, "safety": 82, "accessibility": 60, "value": 55 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Inflammation", "Immune", "Gut"],
+      "uaeAvailable": true,
+      "studyCount": 15,
+      "communityReports": 45,
+      "administrationRoutes": ["Oral", "Injectable", "Topical"],
+      "outcomes": [
+        { "name": "Gut Inflammation", "direction": "positive", "grade": "B", "description": "Promising data for IBD and colitis. Anti-inflammatory mechanism well-characterized.", "studyCount": 8, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Immune Modulation", "direction": "positive", "grade": "B", "description": "Downregulates inflammatory cytokines without immunosuppression.", "studyCount": 6, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 45,
+        "positivePercent": 75,
+        "satisfaction": "3.9/5",
+        "timeToEffect": "1-2 weeks",
+        "quotes": [
+          { "text": "Noticeable improvement in IBS symptoms within 10 days.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Oral (Gut)", "dosage": "500mcg - 1mg daily", "notes": "Capsule form. Best on empty stomach." },
+        { "label": "Injectable", "dosage": "200-500mcg daily", "notes": "SubQ for systemic anti-inflammatory effects." }
+      ],
+      "relatedSlugs": ["bpc-157", "selank", "functional-mushrooms"]
+    },
+    {
+      "slug": "mots-c",
+      "name": "MOTS-c",
+      "fullName": "Mitochondrial Open Reading Frame of the 12S rRNA-c",
+      "category": "Peptides",
+      "description": "A mitochondrial-derived peptide that enhances metabolic function, improves insulin sensitivity, and promotes exercise-like benefits at the cellular level.",
+      "icon": "⚡",
+      "kamuraScore": 65,
+      "scores": { "research": 60, "community": 65, "safety": 75, "accessibility": 55, "value": 50 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Mitochondria", "Metabolism", "Energy"],
+      "uaeAvailable": true,
+      "studyCount": 18,
+      "communityReports": 35,
+      "administrationRoutes": ["Injectable"],
+      "outcomes": [
+        { "name": "Metabolic Enhancement", "direction": "positive", "grade": "B", "description": "Activates AMPK pathway, improves glucose metabolism. Animal data strong, human data emerging.", "studyCount": 10, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Exercise Mimetic", "direction": "positive", "grade": "C", "description": "Mimics some benefits of exercise at the cellular level. Early-stage research.", "studyCount": 5, "consistency": "Mixed", "effectSize": "Unclear" }
+      ],
+      "community": {
+        "totalReports": 35,
+        "positivePercent": 65,
+        "satisfaction": "3.7/5",
+        "timeToEffect": "2-4 weeks",
+        "quotes": [
+          { "text": "Energy levels noticeably improved. Feels like a metabolic boost.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard", "dosage": "5mg 3x weekly", "notes": "SubQ injection. 8-12 week cycles." }
+      ],
+      "relatedSlugs": ["ss-31", "nad-injectable", "methylene-blue"]
+    },
+    {
+      "slug": "selank",
+      "name": "Selank",
+      "fullName": "Selank Heptapeptide",
+      "category": "Peptides",
+      "description": "A Russian-developed anxiolytic peptide derived from tuftsin. Used for anxiety, cognitive enhancement, and nervous system regulation without sedation or addiction potential.",
+      "icon": "🧠",
+      "kamuraScore": 63,
+      "scores": { "research": 58, "community": 68, "safety": 80, "accessibility": 45, "value": 55 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Anxiety", "Nervous System", "Cognitive"],
+      "uaeAvailable": false,
+      "studyCount": 20,
+      "communityReports": 40,
+      "administrationRoutes": ["Nasal", "Injectable"],
+      "outcomes": [
+        { "name": "Anxiety Reduction", "direction": "positive", "grade": "B", "description": "Approved in Russia as an anxiolytic. Modulates GABA system without benzodiazepine side effects.", "studyCount": 12, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Cognitive Enhancement", "direction": "positive", "grade": "C", "description": "Some evidence for memory and learning improvement. BDNF upregulation observed.", "studyCount": 6, "consistency": "Mixed", "effectSize": "Small" }
+      ],
+      "community": {
+        "totalReports": 40,
+        "positivePercent": 68,
+        "satisfaction": "3.8/5",
+        "timeToEffect": "30 min - 2 hours",
+        "quotes": [
+          { "text": "Noticeable anxiety reduction without any sedation. Clean and subtle.", "source": "Community member", "location": "Europe", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Nasal Spray", "dosage": "200-400mcg daily", "notes": "Intranasal. Effects felt within 30 minutes." },
+        { "label": "Injectable", "dosage": "250-500mcg daily", "notes": "SubQ. Longer-lasting effects." }
+      ],
+      "relatedSlugs": ["semax", "meditation", "breathwork"]
+    },
+    {
+      "slug": "semax",
+      "name": "Semax",
+      "fullName": "Semax Heptapeptide",
+      "category": "Peptides",
+      "description": "A synthetic peptide analog of ACTH(4-7) developed in Russia for cognitive enhancement, neuroprotection, and stroke recovery. Promotes BDNF and NGF expression.",
+      "icon": "🧠",
+      "kamuraScore": 58,
+      "scores": { "research": 55, "community": 58, "safety": 78, "accessibility": 40, "value": 50 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Cognitive", "Neuroprotection", "Focus"],
+      "uaeAvailable": false,
+      "studyCount": 22,
+      "communityReports": 30,
+      "administrationRoutes": ["Nasal", "Injectable"],
+      "outcomes": [
+        { "name": "Cognitive Enhancement", "direction": "positive", "grade": "B", "description": "Enhances BDNF expression and cognitive performance. Approved in Russia for cerebrovascular disorders.", "studyCount": 14, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Neuroprotection", "direction": "positive", "grade": "C", "description": "Used in stroke recovery protocols in Russia. Limited Western clinical data.", "studyCount": 8, "consistency": "Mixed", "effectSize": "Unclear" }
+      ],
+      "community": {
+        "totalReports": 30,
+        "positivePercent": 58,
+        "satisfaction": "3.5/5",
+        "timeToEffect": "30 min - 1 hour",
+        "quotes": [
+          { "text": "Improved focus and verbal fluency. Subtle but noticeable.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Nasal Spray", "dosage": "200-600mcg daily", "notes": "Intranasal administration. Start low, titrate up." }
+      ],
+      "relatedSlugs": ["selank", "methylene-blue", "nad-oral"]
+    },
+    {
+      "slug": "epitalon",
+      "name": "Epitalon",
+      "fullName": "Epithalon / Epithalamin",
+      "category": "Peptides",
+      "description": "A tetrapeptide that activates telomerase, the enzyme responsible for maintaining telomere length. One of the most intriguing anti-aging peptides with decades of Russian research.",
+      "icon": "🧬",
+      "kamuraScore": 55,
+      "scores": { "research": 48, "community": 55, "safety": 80, "accessibility": 45, "value": 45 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Telomeres", "Anti-Aging", "Longevity"],
+      "uaeAvailable": true,
+      "studyCount": 15,
+      "communityReports": 25,
+      "administrationRoutes": ["Injectable"],
+      "outcomes": [
+        { "name": "Telomere Maintenance", "direction": "positive", "grade": "C", "description": "Activates telomerase in human cell cultures. Animal studies show lifespan extension. Human clinical data limited.", "studyCount": 8, "consistency": "Mixed", "effectSize": "Unclear" },
+        { "name": "Melatonin Regulation", "direction": "positive", "grade": "B", "description": "Normalizes melatonin production in older adults. May improve sleep-wake cycles.", "studyCount": 5, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 25,
+        "positivePercent": 55,
+        "satisfaction": "3.4/5",
+        "timeToEffect": "Variable",
+        "quotes": [
+          { "text": "Sleep improved noticeably. Hard to measure anti-aging effects short-term.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard Cycle", "dosage": "5-10mg daily", "notes": "SubQ injection for 10-20 days. Repeat every 4-6 months." }
+      ],
+      "relatedSlugs": ["ghk-cu", "spermidine", "nad-injectable"]
+    },
+    {
+      "slug": "aod-9604",
+      "name": "AOD-9604",
+      "fullName": "Anti-Obesity Drug Fragment 9604",
+      "category": "Peptides",
+      "description": "A modified fragment of growth hormone originally developed for weight loss. Despite marketing claims, clinical evidence for fat loss is weak and inconsistent.",
+      "icon": "💧",
+      "kamuraScore": 34,
+      "scores": { "research": 25, "community": 30, "safety": 70, "accessibility": 55, "value": 20 },
+      "evidenceLevel": "Limited",
+      "tags": ["Weight Loss"],
+      "uaeAvailable": true,
+      "studyCount": 8,
+      "communityReports": 20,
+      "administrationRoutes": ["Injectable", "Oral"],
+      "outcomes": [
+        { "name": "Fat Loss", "direction": "neutral", "grade": "D", "description": "Failed Phase 2 clinical trials for obesity. No significant weight loss observed vs placebo in human studies.", "studyCount": 4, "consistency": "Low", "effectSize": "Negligible" }
+      ],
+      "community": {
+        "totalReports": 20,
+        "positivePercent": 30,
+        "satisfaction": "2.2/5",
+        "timeToEffect": "N/A",
+        "quotes": [
+          { "text": "Didn't notice any difference after 8 weeks. Switched to semaglutide.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Typical Protocol", "dosage": "300mcg daily", "notes": "SubQ injection. Note: Evidence does NOT support efficacy." }
+      ],
+      "relatedSlugs": ["semaglutide", "retatrutide", "tesamorelin"]
+    },
+    {
+      "slug": "ss-31",
+      "name": "SS-31",
+      "fullName": "Elamipretide / SS-31",
+      "category": "Peptides",
+      "description": "A mitochondria-targeted peptide that stabilizes cardiolipin and restores electron transport chain function. Investigated for age-related mitochondrial dysfunction.",
+      "icon": "⚡",
+      "kamuraScore": 60,
+      "scores": { "research": 62, "community": 50, "safety": 75, "accessibility": 40, "value": 45 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Mitochondria", "Energy", "Anti-Aging"],
+      "uaeAvailable": false,
+      "studyCount": 20,
+      "communityReports": 15,
+      "administrationRoutes": ["Injectable"],
+      "outcomes": [
+        { "name": "Mitochondrial Function", "direction": "positive", "grade": "B", "description": "Targets inner mitochondrial membrane. Strong preclinical evidence for restoring mitochondrial function in aged tissues.", "studyCount": 14, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 15,
+        "positivePercent": 50,
+        "satisfaction": "3.3/5",
+        "timeToEffect": "2-4 weeks",
+        "quotes": [
+          { "text": "Subtle increase in energy. Interesting compound but hard to access.", "source": "Community member", "location": "Europe", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Research Protocol", "dosage": "5-40mg daily", "notes": "SubQ injection. Experimental — limited clinical guidance." }
+      ],
+      "relatedSlugs": ["mots-c", "nad-injectable", "methylene-blue"]
+    },
+    {
+      "slug": "retatrutide",
+      "name": "Retatrutide",
+      "fullName": "Retatrutide (LY3437943)",
+      "category": "GLP-1 & Weight Management",
+      "description": "A triple-agonist peptide (GIP/GLP-1/Glucagon receptor) showing the most dramatic weight loss results in clinical trials — up to 24% body weight reduction. Also showing anti-aging effects beyond weight loss.",
+      "icon": "💉",
+      "kamuraScore": 89,
+      "scores": { "research": 82, "community": 97, "safety": 75, "accessibility": 70, "value": 72 },
+      "evidenceLevel": "Strong",
+      "tags": ["Weight Loss", "Anti-Aging", "Metabolic"],
+      "uaeAvailable": true,
+      "studyCount": 15,
+      "communityReports": 180,
+      "administrationRoutes": ["Injectable"],
+      "outcomes": [
+        { "name": "Weight Loss", "direction": "positive", "grade": "A", "description": "Phase 2 trial showed 24.2% body weight loss at highest dose. Most effective weight loss drug ever tested.", "studyCount": 5, "consistency": "High", "effectSize": "Very Large" },
+        { "name": "Biological Age Reversal", "direction": "positive", "grade": "B", "description": "Community reports of significant biomarker improvements. Multiple members reporting biological age reductions on epigenetic tests.", "studyCount": 2, "consistency": "Moderate", "effectSize": "Large" },
+        { "name": "Metabolic Health", "direction": "positive", "grade": "A", "description": "Dramatic improvements in insulin sensitivity, triglycerides, and liver fat.", "studyCount": 5, "consistency": "High", "effectSize": "Large" }
+      ],
+      "community": {
+        "totalReports": 180,
+        "positivePercent": 97,
+        "satisfaction": "4.9/5",
+        "timeToEffect": "1-2 weeks",
+        "quotes": [
+          { "text": "Lost 15kg in 3 months. Blood work dramatically improved across the board.", "source": "Community member", "location": "Dubai", "verified": true },
+          { "text": "Biological age dropped 8 years on TruAge test after 6 months.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard Titration", "dosage": "1mg → 12mg weekly", "notes": "SubQ weekly injection. Gradual dose escalation over 8 weeks." },
+        { "label": "Maintenance", "dosage": "8-12mg weekly", "notes": "After reaching target weight. Ongoing for metabolic benefits." }
+      ],
+      "relatedSlugs": ["tirzepatide", "semaglutide", "cagrilintide"]
+    },
+    {
+      "slug": "tirzepatide",
+      "name": "Tirzepatide",
+      "fullName": "Tirzepatide (Mounjaro/Zepbound)",
+      "category": "GLP-1 & Weight Management",
+      "description": "A dual GIP/GLP-1 receptor agonist approved for type 2 diabetes and obesity. Demonstrates significant weight loss and metabolic improvements in large clinical trials.",
+      "icon": "💉",
+      "kamuraScore": 87,
+      "scores": { "research": 90, "community": 88, "safety": 78, "accessibility": 75, "value": 68 },
+      "evidenceLevel": "Strong",
+      "tags": ["Weight Loss", "Diabetes", "Metabolic"],
+      "uaeAvailable": true,
+      "studyCount": 30,
+      "communityReports": 140,
+      "administrationRoutes": ["Injectable"],
+      "outcomes": [
+        { "name": "Weight Loss", "direction": "positive", "grade": "A", "description": "FDA-approved. SURMOUNT trials showed up to 22.5% weight loss at highest dose.", "studyCount": 15, "consistency": "High", "effectSize": "Very Large" },
+        { "name": "Glycemic Control", "direction": "positive", "grade": "A", "description": "Superior HbA1c reduction compared to other diabetes medications.", "studyCount": 12, "consistency": "High", "effectSize": "Large" }
+      ],
+      "community": {
+        "totalReports": 140,
+        "positivePercent": 88,
+        "satisfaction": "4.5/5",
+        "timeToEffect": "1-2 weeks",
+        "quotes": [
+          { "text": "Mounjaro changed my life. Down 20kg and A1c normalized.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard Titration", "dosage": "2.5mg → 15mg weekly", "notes": "SubQ weekly injection. Escalate every 4 weeks." },
+        { "label": "Weight Loss", "dosage": "10-15mg weekly", "notes": "Target dose for maximal weight loss." }
+      ],
+      "relatedSlugs": ["retatrutide", "semaglutide", "cagrilintide"]
+    },
+    {
+      "slug": "semaglutide",
+      "name": "Semaglutide",
+      "fullName": "Semaglutide (Ozempic/Wegovy)",
+      "category": "GLP-1 & Weight Management",
+      "description": "The most well-known GLP-1 receptor agonist, approved for both diabetes and obesity. Backed by extensive clinical data and the largest user base of any weight loss medication.",
+      "icon": "💉",
+      "kamuraScore": 85,
+      "scores": { "research": 95, "community": 85, "safety": 75, "accessibility": 80, "value": 65 },
+      "evidenceLevel": "Strong",
+      "tags": ["Weight Loss", "Diabetes", "Cardiovascular"],
+      "uaeAvailable": true,
+      "studyCount": 50,
+      "communityReports": 200,
+      "administrationRoutes": ["Injectable", "Oral"],
+      "outcomes": [
+        { "name": "Weight Loss", "direction": "positive", "grade": "A", "description": "STEP trials demonstrated 15-17% weight loss. Largest body of evidence for any weight loss drug.", "studyCount": 20, "consistency": "High", "effectSize": "Large" },
+        { "name": "Cardiovascular Risk", "direction": "positive", "grade": "A", "description": "SELECT trial showed 20% reduction in major cardiovascular events independent of diabetes status.", "studyCount": 8, "consistency": "High", "effectSize": "Large" },
+        { "name": "Glycemic Control", "direction": "positive", "grade": "A", "description": "Gold standard for type 2 diabetes management.", "studyCount": 15, "consistency": "High", "effectSize": "Large" }
+      ],
+      "community": {
+        "totalReports": 200,
+        "positivePercent": 85,
+        "satisfaction": "4.3/5",
+        "timeToEffect": "1-2 weeks",
+        "quotes": [
+          { "text": "Lost 18kg on Ozempic. Food noise completely gone. Life-changing.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard (Ozempic)", "dosage": "0.25mg → 2.4mg weekly", "notes": "SubQ weekly injection. Gradual escalation." },
+        { "label": "Oral (Rybelsus)", "dosage": "3mg → 14mg daily", "notes": "Take on empty stomach with small sip of water." }
+      ],
+      "relatedSlugs": ["retatrutide", "tirzepatide", "cagrilintide"]
+    },
+    {
+      "slug": "cagrilintide",
+      "name": "Cagrilintide",
+      "fullName": "Cagrilintide (CagriSema)",
+      "category": "GLP-1 & Weight Management",
+      "description": "A long-acting amylin analog being studied in combination with semaglutide (CagriSema). Early results suggest enhanced weight loss beyond semaglutide alone.",
+      "icon": "💊",
+      "kamuraScore": 58,
+      "scores": { "research": 55, "community": 45, "safety": 70, "accessibility": 35, "value": 50 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Appetite", "Weight Loss"],
+      "uaeAvailable": false,
+      "studyCount": 8,
+      "communityReports": 10,
+      "administrationRoutes": ["Injectable"],
+      "outcomes": [
+        { "name": "Weight Loss Enhancement", "direction": "positive", "grade": "C", "description": "Phase 2 data shows added weight loss when combined with semaglutide. Not yet available as monotherapy.", "studyCount": 4, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 10,
+        "positivePercent": 45,
+        "satisfaction": "3.0/5",
+        "timeToEffect": "Unknown",
+        "quotes": [
+          { "text": "Interesting data but not widely available yet. Waiting for CagriSema approval.", "source": "Community member", "location": "Europe", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Clinical Trial Dose", "dosage": "2.4mg weekly", "notes": "Only available in clinical trials. Not yet approved." }
+      ],
+      "relatedSlugs": ["semaglutide", "retatrutide", "tirzepatide"]
+    },
+    {
+      "slug": "trt",
+      "name": "TRT - Testosterone",
+      "fullName": "Testosterone Replacement Therapy",
+      "category": "Hormones",
+      "description": "Hormone replacement therapy for men with clinically low testosterone. Improves energy, body composition, mood, libido, and bone density when properly prescribed and monitored.",
+      "icon": "💪",
+      "kamuraScore": 82,
+      "scores": { "research": 90, "community": 85, "safety": 65, "accessibility": 75, "value": 70 },
+      "evidenceLevel": "Strong",
+      "tags": ["Men's Health", "Energy", "Body Composition"],
+      "uaeAvailable": true,
+      "studyCount": 200,
+      "communityReports": 100,
+      "administrationRoutes": ["Injectable", "Topical", "Pellets"],
+      "outcomes": [
+        { "name": "Body Composition", "direction": "positive", "grade": "A", "description": "Well-established increase in lean mass and decrease in fat mass in hypogonadal men.", "studyCount": 40, "consistency": "High", "effectSize": "Large" },
+        { "name": "Energy & Mood", "direction": "positive", "grade": "A", "description": "Consistent improvements in fatigue, mood, and quality of life scores.", "studyCount": 30, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Cardiovascular Risk", "direction": "neutral", "grade": "C", "description": "TRAVERSE trial showed no increased cardiovascular risk. Long-term effects still debated.", "studyCount": 15, "consistency": "Mixed", "effectSize": "Neutral" }
+      ],
+      "community": {
+        "totalReports": 100,
+        "positivePercent": 85,
+        "satisfaction": "4.4/5",
+        "timeToEffect": "2-6 weeks",
+        "quotes": [
+          { "text": "Energy and mood transformation was dramatic. Should have started years ago.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Injectable (Cypionate)", "dosage": "100-200mg weekly", "notes": "IM or SubQ injection. Most common protocol." },
+        { "label": "Topical Gel", "dosage": "50-100mg daily", "notes": "Applied to shoulders/arms. Steady levels." },
+        { "label": "Pellets", "dosage": "150-450mg every 3-6 months", "notes": "Implanted subcutaneously. Longest-acting option." }
+      ],
+      "relatedSlugs": ["dhea", "growth-hormone", "cjc-1295-ipamorelin"]
+    },
+    {
+      "slug": "bioidentical-estrogen",
+      "name": "Bioidentical Estrogen",
+      "fullName": "Bioidentical Estradiol (HRT)",
+      "category": "Hormones",
+      "description": "Bioidentical estradiol replacement for women in perimenopause and menopause. Relieves symptoms and provides cardiovascular, bone, and cognitive protection when started at the right time.",
+      "icon": "🌸",
+      "kamuraScore": 75,
+      "scores": { "research": 85, "community": 72, "safety": 60, "accessibility": 70, "value": 65 },
+      "evidenceLevel": "Strong",
+      "tags": ["Women's HRT", "Menopause", "Bone Health"],
+      "uaeAvailable": true,
+      "studyCount": 150,
+      "communityReports": 60,
+      "administrationRoutes": ["Topical", "Oral", "Patch"],
+      "outcomes": [
+        { "name": "Menopausal Symptom Relief", "direction": "positive", "grade": "A", "description": "Gold standard for hot flashes, night sweats, and vaginal atrophy.", "studyCount": 50, "consistency": "High", "effectSize": "Large" },
+        { "name": "Bone Density", "direction": "positive", "grade": "A", "description": "Prevents and treats postmenopausal osteoporosis.", "studyCount": 30, "consistency": "High", "effectSize": "Large" },
+        { "name": "Cardiovascular Protection", "direction": "positive", "grade": "B", "description": "Cardioprotective when started within 10 years of menopause (timing hypothesis).", "studyCount": 20, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 60,
+        "positivePercent": 72,
+        "satisfaction": "4.1/5",
+        "timeToEffect": "2-4 weeks",
+        "quotes": [
+          { "text": "Life-changing for menopause symptoms. Wish I'd started sooner.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Transdermal Patch", "dosage": "25-100mcg patch", "notes": "Changed twice weekly. Preferred route for safety." },
+        { "label": "Topical Gel", "dosage": "0.5-1.5mg daily", "notes": "Applied to inner arm. Steady absorption." }
+      ],
+      "relatedSlugs": ["progesterone", "dhea", "vitamin-d3-k2"]
+    },
+    {
+      "slug": "progesterone",
+      "name": "Progesterone",
+      "fullName": "Micronized Progesterone",
+      "category": "Hormones",
+      "description": "Bioidentical micronized progesterone used alongside estrogen in HRT. Essential for endometrial protection and provides additional benefits for sleep, mood, and bone health.",
+      "icon": "🌙",
+      "kamuraScore": 73,
+      "scores": { "research": 80, "community": 68, "safety": 72, "accessibility": 70, "value": 65 },
+      "evidenceLevel": "Strong",
+      "tags": ["Women's HRT", "Sleep", "Mood"],
+      "uaeAvailable": true,
+      "studyCount": 80,
+      "communityReports": 45,
+      "administrationRoutes": ["Oral", "Topical", "Vaginal"],
+      "outcomes": [
+        { "name": "Endometrial Protection", "direction": "positive", "grade": "A", "description": "Essential alongside estrogen to prevent endometrial hyperplasia.", "studyCount": 25, "consistency": "High", "effectSize": "Critical" },
+        { "name": "Sleep Improvement", "direction": "positive", "grade": "B", "description": "GABA-A modulation provides natural sedative effect. Widely reported sleep improvement.", "studyCount": 10, "consistency": "High", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 45,
+        "positivePercent": 68,
+        "satisfaction": "3.9/5",
+        "timeToEffect": "1-2 weeks",
+        "quotes": [
+          { "text": "Sleep improved dramatically. The calming effect is noticeable.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Oral (Prometrium)", "dosage": "100-200mg nightly", "notes": "Take at bedtime for sleep benefits." },
+        { "label": "Vaginal", "dosage": "100mg nightly", "notes": "Better endometrial protection, less systemic effect." }
+      ],
+      "relatedSlugs": ["bioidentical-estrogen", "dhea", "magnesium"]
+    },
+    {
+      "slug": "dhea",
+      "name": "DHEA",
+      "fullName": "Dehydroepiandrosterone",
+      "category": "Hormones",
+      "description": "A precursor hormone produced by the adrenal glands that declines with age. Supplementation may support energy, mood, and immune function, though evidence is mixed.",
+      "icon": "🔄",
+      "kamuraScore": 66,
+      "scores": { "research": 60, "community": 62, "safety": 72, "accessibility": 85, "value": 70 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Adrenal", "Aging", "Energy"],
+      "uaeAvailable": true,
+      "studyCount": 50,
+      "communityReports": 35,
+      "administrationRoutes": ["Oral"],
+      "outcomes": [
+        { "name": "Adrenal Support", "direction": "positive", "grade": "B", "description": "Restores DHEA-S levels in older adults. Benefits most pronounced in those with confirmed deficiency.", "studyCount": 15, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Bone Density", "direction": "positive", "grade": "C", "description": "Some evidence for bone mineral density improvement, particularly in women.", "studyCount": 8, "consistency": "Mixed", "effectSize": "Small" }
+      ],
+      "community": {
+        "totalReports": 35,
+        "positivePercent": 62,
+        "satisfaction": "3.5/5",
+        "timeToEffect": "4-8 weeks",
+        "quotes": [
+          { "text": "Energy improved moderately. Best for those with confirmed low DHEA-S.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard", "dosage": "25-50mg daily", "notes": "Oral. Start low. Monitor DHEA-S levels." }
+      ],
+      "relatedSlugs": ["trt", "bioidentical-estrogen", "vitamin-d3-k2"]
+    },
+    {
+      "slug": "growth-hormone",
+      "name": "Growth Hormone",
+      "fullName": "Human Growth Hormone (HGH)",
+      "category": "Hormones",
+      "description": "Recombinant human growth hormone used for anti-aging and body composition. Expensive and requires careful monitoring but has well-documented effects on lean mass and fat reduction.",
+      "icon": "📈",
+      "kamuraScore": 72,
+      "scores": { "research": 80, "community": 70, "safety": 55, "accessibility": 55, "value": 40 },
+      "evidenceLevel": "Strong",
+      "tags": ["Anti-Aging", "Recovery", "Body Composition"],
+      "uaeAvailable": true,
+      "studyCount": 100,
+      "communityReports": 50,
+      "administrationRoutes": ["Injectable"],
+      "outcomes": [
+        { "name": "Body Composition", "direction": "positive", "grade": "A", "description": "Well-established improvements in lean mass and fat reduction in GH-deficient adults.", "studyCount": 30, "consistency": "High", "effectSize": "Large" },
+        { "name": "Skin & Hair", "direction": "positive", "grade": "B", "description": "Reported improvements in skin thickness and hair quality.", "studyCount": 10, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Longevity", "direction": "neutral", "grade": "D", "description": "Paradoxical — low IGF-1 associated with longevity in centenarian studies. Long-term anti-aging benefits uncertain.", "studyCount": 15, "consistency": "Mixed", "effectSize": "Unclear" }
+      ],
+      "community": {
+        "totalReports": 50,
+        "positivePercent": 70,
+        "satisfaction": "3.8/5",
+        "timeToEffect": "4-12 weeks",
+        "quotes": [
+          { "text": "Noticeable changes in body composition and skin. Expensive but effective.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Anti-Aging", "dosage": "1-2 IU daily", "notes": "SubQ injection before bed. Low-dose protocol." },
+        { "label": "Performance", "dosage": "3-6 IU daily", "notes": "Higher dose. Requires careful monitoring of IGF-1." }
+      ],
+      "relatedSlugs": ["cjc-1295-ipamorelin", "tesamorelin", "trt"]
+    },
+    {
+      "slug": "red-light-therapy",
+      "name": "Red Light Therapy",
+      "fullName": "Photobiomodulation (Red/NIR Light)",
+      "category": "Devices & Biohacking",
+      "description": "Low-level light therapy using red (630-670nm) and near-infrared (810-850nm) wavelengths to improve mitochondrial function, reduce inflammation, and promote tissue healing.",
+      "icon": "🔴",
+      "kamuraScore": 78,
+      "scores": { "research": 70, "community": 85, "safety": 95, "accessibility": 90, "value": 72 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Skin", "Recovery", "Pain", "Mitochondria"],
+      "uaeAvailable": true,
+      "studyCount": 60,
+      "communityReports": 110,
+      "administrationRoutes": ["External Device"],
+      "outcomes": [
+        { "name": "Skin Health", "direction": "positive", "grade": "A", "description": "Well-supported for collagen production, wrinkle reduction, and wound healing.", "studyCount": 20, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Pain & Inflammation", "direction": "positive", "grade": "B", "description": "Effective for joint pain, muscle soreness, and inflammatory conditions.", "studyCount": 18, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Hair Growth", "direction": "positive", "grade": "B", "description": "FDA-cleared devices for hair loss. Stimulates hair follicle activity.", "studyCount": 12, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 110,
+        "positivePercent": 85,
+        "satisfaction": "4.3/5",
+        "timeToEffect": "2-4 weeks",
+        "quotes": [
+          { "text": "Skin looks visibly better. Using Joovv panel 15 min daily. Easy habit.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Full Body Panel", "dosage": "10-20 min daily", "notes": "6-12 inches from panel. Consistency is key." },
+        { "label": "Targeted (Pain)", "dosage": "5-10 min per area", "notes": "Direct light to affected joint or muscle." },
+        { "label": "Hair Growth", "dosage": "15-25 min every other day", "notes": "Use FDA-cleared device. 3-6 months for results." }
+      ],
+      "relatedSlugs": ["infrared-sauna", "cold-plunge", "pemf-therapy"]
+    },
+    {
+      "slug": "infrared-sauna",
+      "name": "Infrared Sauna",
+      "fullName": "Far Infrared Sauna Therapy",
+      "category": "Devices & Biohacking",
+      "description": "Sauna therapy using infrared light to heat the body directly, promoting detoxification, cardiovascular conditioning, and recovery at lower temperatures than traditional saunas.",
+      "icon": "🔥",
+      "kamuraScore": 74,
+      "scores": { "research": 65, "community": 82, "safety": 88, "accessibility": 80, "value": 70 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Detox", "Recovery", "Cardiovascular"],
+      "uaeAvailable": true,
+      "studyCount": 35,
+      "communityReports": 90,
+      "administrationRoutes": ["External Device"],
+      "outcomes": [
+        { "name": "Cardiovascular Health", "direction": "positive", "grade": "B", "description": "Finnish sauna studies show reduced cardiovascular mortality with regular use. Infrared offers similar benefits.", "studyCount": 15, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Detoxification", "direction": "positive", "grade": "C", "description": "Enhanced sweating may aid heavy metal excretion. Evidence is mixed but community reports positive.", "studyCount": 8, "consistency": "Mixed", "effectSize": "Small" },
+        { "name": "Recovery & Pain", "direction": "positive", "grade": "B", "description": "Heat shock protein activation supports muscle recovery and reduces chronic pain.", "studyCount": 10, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 90,
+        "positivePercent": 82,
+        "satisfaction": "4.2/5",
+        "timeToEffect": "Immediate",
+        "quotes": [
+          { "text": "Daily infrared sauna sessions transformed my recovery. Sleep quality improved too.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard", "dosage": "20-40 min, 3-5x/week", "notes": "Temperature 120-140°F. Hydrate well before and after." },
+        { "label": "Post-Workout", "dosage": "15-20 min", "notes": "Immediately after training for recovery." }
+      ],
+      "relatedSlugs": ["red-light-therapy", "cold-plunge", "float-therapy"]
+    },
+    {
+      "slug": "cryotherapy",
+      "name": "Whole Body Cryotherapy",
+      "fullName": "Whole Body Cryotherapy (WBC)",
+      "category": "Devices & Biohacking",
+      "description": "Brief exposure to extreme cold (-110°C to -160°C) in a cryo chamber to reduce inflammation, boost recovery, and activate cold stress pathways.",
+      "icon": "❄️",
+      "kamuraScore": 62,
+      "scores": { "research": 50, "community": 78, "safety": 72, "accessibility": 60, "value": 50 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Recovery", "Inflammation", "Performance"],
+      "uaeAvailable": true,
+      "studyCount": 25,
+      "communityReports": 70,
+      "administrationRoutes": ["External Device"],
+      "outcomes": [
+        { "name": "Recovery & Soreness", "direction": "positive", "grade": "B", "description": "Reduces perceived muscle soreness post-exercise. Evidence mixed on actual tissue repair.", "studyCount": 12, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Inflammation Reduction", "direction": "positive", "grade": "C", "description": "Acute anti-inflammatory effects observed. Long-term benefits less clear.", "studyCount": 8, "consistency": "Mixed", "effectSize": "Small" }
+      ],
+      "community": {
+        "totalReports": 70,
+        "positivePercent": 78,
+        "satisfaction": "3.9/5",
+        "timeToEffect": "Immediate",
+        "quotes": [
+          { "text": "Great for post-workout recovery. The mood boost is real.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard Session", "dosage": "2-3 min at -110°C", "notes": "2-3 sessions per week. Not immediately after strength training." }
+      ],
+      "relatedSlugs": ["cold-plunge", "infrared-sauna", "red-light-therapy"]
+    },
+    {
+      "slug": "hyperbaric-oxygen",
+      "name": "Hyperbaric Oxygen",
+      "fullName": "Hyperbaric Oxygen Therapy (HBOT)",
+      "category": "Devices & Biohacking",
+      "description": "Breathing pure oxygen at elevated atmospheric pressure to increase oxygen delivery to tissues. Used for wound healing, cognitive enhancement, and emerging anti-aging applications.",
+      "icon": "🫁",
+      "kamuraScore": 71,
+      "scores": { "research": 72, "community": 68, "safety": 75, "accessibility": 50, "value": 45 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Wound Healing", "Cognitive", "Anti-Aging"],
+      "uaeAvailable": true,
+      "studyCount": 50,
+      "communityReports": 45,
+      "administrationRoutes": ["Chamber"],
+      "outcomes": [
+        { "name": "Wound Healing", "direction": "positive", "grade": "A", "description": "FDA-approved for multiple wound conditions. Well-established mechanism.", "studyCount": 25, "consistency": "High", "effectSize": "Large" },
+        { "name": "Cognitive Function", "direction": "positive", "grade": "B", "description": "Tel Aviv study showed telomere lengthening and cognitive improvement in older adults.", "studyCount": 10, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Anti-Aging", "direction": "positive", "grade": "C", "description": "Emerging evidence for telomere lengthening and senescent cell clearance.", "studyCount": 5, "consistency": "Mixed", "effectSize": "Unclear" }
+      ],
+      "community": {
+        "totalReports": 45,
+        "positivePercent": 68,
+        "satisfaction": "3.8/5",
+        "timeToEffect": "After 10+ sessions",
+        "quotes": [
+          { "text": "Mental clarity improved significantly after 20 sessions. Expensive but worth it.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard", "dosage": "60-90 min at 1.5-2.0 ATA", "notes": "2-3 sessions per week. 20-40 session protocols." },
+        { "label": "Anti-Aging (Tel Aviv Protocol)", "dosage": "90 min at 2.0 ATA", "notes": "60 sessions over 3 months. 5 sessions per week." }
+      ],
+      "relatedSlugs": ["red-light-therapy", "stem-cell-therapy", "nad-injectable"]
+    },
+    {
+      "slug": "float-therapy",
+      "name": "Float Therapy",
+      "fullName": "Sensory Deprivation Float Tank",
+      "category": "Devices & Biohacking",
+      "description": "Floating in a sensory deprivation tank filled with Epsom salt solution. Reduces stress, lowers cortisol, and promotes deep relaxation and meditation-like states.",
+      "icon": "🌊",
+      "kamuraScore": 59,
+      "scores": { "research": 45, "community": 72, "safety": 90, "accessibility": 55, "value": 50 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Stress", "Recovery", "Relaxation"],
+      "uaeAvailable": true,
+      "studyCount": 15,
+      "communityReports": 40,
+      "administrationRoutes": ["Float Tank"],
+      "outcomes": [
+        { "name": "Stress Reduction", "direction": "positive", "grade": "B", "description": "Consistent cortisol reduction and subjective stress relief. Limited but positive studies.", "studyCount": 8, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Pain Relief", "direction": "positive", "grade": "C", "description": "Some evidence for chronic pain reduction. Magnesium absorption may contribute.", "studyCount": 5, "consistency": "Mixed", "effectSize": "Small" }
+      ],
+      "community": {
+        "totalReports": 40,
+        "positivePercent": 72,
+        "satisfaction": "4.0/5",
+        "timeToEffect": "Immediate",
+        "quotes": [
+          { "text": "Most relaxing experience I've ever had. Better than any massage.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard Session", "dosage": "60-90 min", "notes": "1-2 sessions per week for stress management." }
+      ],
+      "relatedSlugs": ["meditation", "breathwork", "infrared-sauna"]
+    },
+    {
+      "slug": "pemf-therapy",
+      "name": "PEMF Therapy",
+      "fullName": "Pulsed Electromagnetic Field Therapy",
+      "category": "Devices & Biohacking",
+      "description": "Non-invasive therapy using electromagnetic fields to stimulate cellular repair, reduce pain, and improve circulation. FDA-cleared for bone healing and depression.",
+      "icon": "⚡",
+      "kamuraScore": 56,
+      "scores": { "research": 55, "community": 55, "safety": 85, "accessibility": 45, "value": 40 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Pain", "Recovery", "Bone Healing"],
+      "uaeAvailable": true,
+      "studyCount": 30,
+      "communityReports": 25,
+      "administrationRoutes": ["External Device"],
+      "outcomes": [
+        { "name": "Pain Reduction", "direction": "positive", "grade": "B", "description": "FDA-cleared for pain management. Multiple studies showing analgesic effects.", "studyCount": 15, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Bone Healing", "direction": "positive", "grade": "A", "description": "FDA-cleared for non-union fractures. Well-established mechanism.", "studyCount": 10, "consistency": "High", "effectSize": "Large" }
+      ],
+      "community": {
+        "totalReports": 25,
+        "positivePercent": 55,
+        "satisfaction": "3.4/5",
+        "timeToEffect": "2-4 weeks",
+        "quotes": [
+          { "text": "Helped with chronic back pain when nothing else worked.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Home Device", "dosage": "20-30 min daily", "notes": "Low-intensity PEMF mat. Consistent daily use." },
+        { "label": "Clinical", "dosage": "30-60 min, 2-3x/week", "notes": "Higher intensity. Professional setting." }
+      ],
+      "relatedSlugs": ["red-light-therapy", "hyperbaric-oxygen", "cryotherapy"]
+    },
+    {
+      "slug": "cold-plunge",
+      "name": "Cold Plunge / Ice Bath",
+      "fullName": "Cold Water Immersion",
+      "category": "Devices & Biohacking",
+      "description": "Deliberate cold exposure through ice baths or cold plunge tubs. Activates cold shock proteins, boosts norepinephrine, and enhances immune function and mental resilience.",
+      "icon": "🧊",
+      "kamuraScore": 70,
+      "scores": { "research": 60, "community": 82, "safety": 75, "accessibility": 85, "value": 80 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Recovery", "Immune", "Mental Resilience"],
+      "uaeAvailable": true,
+      "studyCount": 25,
+      "communityReports": 95,
+      "administrationRoutes": ["Water Immersion"],
+      "outcomes": [
+        { "name": "Norepinephrine Boost", "direction": "positive", "grade": "A", "description": "2-3x increase in norepinephrine from cold exposure. Well-documented mood and alertness effect.", "studyCount": 10, "consistency": "High", "effectSize": "Large" },
+        { "name": "Recovery", "direction": "positive", "grade": "B", "description": "Reduces perceived soreness. May blunt hypertrophy signal if done immediately after strength training.", "studyCount": 8, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Immune Function", "direction": "positive", "grade": "C", "description": "Some evidence for enhanced immune response with regular practice.", "studyCount": 5, "consistency": "Mixed", "effectSize": "Small" }
+      ],
+      "community": {
+        "totalReports": 95,
+        "positivePercent": 82,
+        "satisfaction": "4.3/5",
+        "timeToEffect": "Immediate",
+        "quotes": [
+          { "text": "Morning cold plunge completely transformed my energy and focus. Non-negotiable habit now.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Beginner", "dosage": "30-60 sec at 10-15°C", "notes": "Start warm, gradually decrease temp. 3-5x/week." },
+        { "label": "Advanced", "dosage": "2-5 min at 3-7°C", "notes": "Full immersion. Not immediately after strength training." },
+        { "label": "Huberman Protocol", "dosage": "11 min total/week", "notes": "Spread across sessions. Minimum effective dose." }
+      ],
+      "relatedSlugs": ["cryotherapy", "infrared-sauna", "breathwork"]
+    },
+    {
+      "slug": "eight-sleep",
+      "name": "Eight Sleep",
+      "fullName": "Eight Sleep Pod (Smart Mattress)",
+      "category": "Devices & Biohacking",
+      "description": "A smart mattress cover with active temperature regulation, sleep tracking, and personalized thermal adjustments. The most popular sleep optimization device in the biohacking community.",
+      "icon": "🛏️",
+      "kamuraScore": 79,
+      "scores": { "research": 55, "community": 92, "safety": 98, "accessibility": 75, "value": 65 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Sleep", "Recovery", "Temperature"],
+      "uaeAvailable": true,
+      "studyCount": 5,
+      "communityReports": 80,
+      "administrationRoutes": ["Device"],
+      "outcomes": [
+        { "name": "Sleep Quality", "direction": "positive", "grade": "A", "description": "Overwhelmingly positive community data. Temperature regulation dramatically improves deep sleep.", "studyCount": 3, "consistency": "High", "effectSize": "Large" },
+        { "name": "Recovery", "direction": "positive", "grade": "B", "description": "Better sleep leads to improved HRV and recovery scores. Synergistic with other protocols.", "studyCount": 2, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 80,
+        "positivePercent": 92,
+        "satisfaction": "4.6/5",
+        "timeToEffect": "1-3 nights",
+        "quotes": [
+          { "text": "Deep sleep increased 40%. Best biohacking purchase I've ever made.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Optimal Setup", "dosage": "Cool to -2°C at night, warm to wake", "notes": "Use autopilot mode. Let it learn your patterns over 2 weeks." }
+      ],
+      "relatedSlugs": ["magnesium", "red-light-therapy", "cold-plunge"]
+    },
+    {
+      "slug": "nad-injectable",
+      "name": "NAD+ (Injectable)",
+      "fullName": "Nicotinamide Adenine Dinucleotide (IV/SubQ)",
+      "category": "Supplements",
+      "description": "Direct NAD+ supplementation via IV or subcutaneous injection. Bypasses oral bioavailability issues to rapidly restore cellular NAD+ levels for energy, DNA repair, and anti-aging.",
+      "icon": "💉",
+      "kamuraScore": 74,
+      "scores": { "research": 65, "community": 80, "safety": 72, "accessibility": 55, "value": 45 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Energy", "Aging", "Cellular Health"],
+      "uaeAvailable": true,
+      "studyCount": 25,
+      "communityReports": 75,
+      "administrationRoutes": ["IV", "SubQ"],
+      "outcomes": [
+        { "name": "Energy & Vitality", "direction": "positive", "grade": "B", "description": "Rapid improvements in energy, mental clarity, and physical stamina reported after IV sessions.", "studyCount": 8, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Cellular Repair", "direction": "positive", "grade": "B", "description": "NAD+ is essential for sirtuin activation and DNA repair. Declining levels correlate with aging.", "studyCount": 12, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 75,
+        "positivePercent": 80,
+        "satisfaction": "4.2/5",
+        "timeToEffect": "24-48 hours",
+        "quotes": [
+          { "text": "IV NAD+ gives me an incredible energy boost. Like turning back the clock.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "IV Drip", "dosage": "250-500mg per session", "notes": "2-4 hour infusion. Monthly or quarterly maintenance." },
+        { "label": "SubQ Injection", "dosage": "100-200mg daily", "notes": "Self-administered. More accessible than IV." }
+      ],
+      "relatedSlugs": ["nad-oral", "methylene-blue", "spermidine"]
+    },
+    {
+      "slug": "nad-oral",
+      "name": "NAD+ (Oral NMN/NR)",
+      "fullName": "NMN/NR Oral Supplementation",
+      "category": "Supplements",
+      "description": "Oral NAD+ precursors (NMN or NR) that boost cellular NAD+ levels. More accessible and affordable than injectable NAD+, though bioavailability is lower.",
+      "icon": "💊",
+      "kamuraScore": 65,
+      "scores": { "research": 58, "community": 68, "safety": 82, "accessibility": 85, "value": 65 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Energy", "Aging", "Supplement"],
+      "uaeAvailable": true,
+      "studyCount": 20,
+      "communityReports": 60,
+      "administrationRoutes": ["Oral"],
+      "outcomes": [
+        { "name": "NAD+ Level Restoration", "direction": "positive", "grade": "B", "description": "NMN and NR reliably increase blood NAD+ levels. Functional benefits less clear.", "studyCount": 12, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Energy & Aging", "direction": "positive", "grade": "C", "description": "Some studies show improved physical performance in older adults. Results variable.", "studyCount": 6, "consistency": "Mixed", "effectSize": "Small" }
+      ],
+      "community": {
+        "totalReports": 60,
+        "positivePercent": 68,
+        "satisfaction": "3.7/5",
+        "timeToEffect": "2-4 weeks",
+        "quotes": [
+          { "text": "Gradual energy improvement over 3 weeks. Subtle but consistent.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "NMN", "dosage": "500mg - 1g daily", "notes": "Sublingual or capsule. Take in the morning." },
+        { "label": "NR (Niagen)", "dosage": "300-600mg daily", "notes": "Capsule form. Well-studied." }
+      ],
+      "relatedSlugs": ["nad-injectable", "spermidine", "creatine"]
+    },
+    {
+      "slug": "magnesium",
+      "name": "Magnesium",
+      "fullName": "Magnesium (Glycinate/Threonate/Citrate)",
+      "category": "Supplements",
+      "description": "The most universally recommended supplement in the longevity community. Critical for 300+ enzymatic reactions, sleep quality, muscle function, and nervous system regulation.",
+      "icon": "💎",
+      "kamuraScore": 83,
+      "scores": { "research": 85, "community": 90, "safety": 92, "accessibility": 95, "value": 90 },
+      "evidenceLevel": "Strong",
+      "tags": ["Sleep", "Recovery", "Foundational"],
+      "uaeAvailable": true,
+      "studyCount": 200,
+      "communityReports": 180,
+      "administrationRoutes": ["Oral"],
+      "outcomes": [
+        { "name": "Sleep Quality", "direction": "positive", "grade": "A", "description": "Glycinate and threonate forms improve sleep onset and quality. One of the most effective natural sleep aids.", "studyCount": 25, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Muscle Recovery", "direction": "positive", "grade": "A", "description": "Essential for muscle function and recovery. Deficiency causes cramps and impaired recovery.", "studyCount": 30, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Cognitive Function", "direction": "positive", "grade": "B", "description": "Threonate form specifically crosses BBB. Emerging data for memory and cognitive function.", "studyCount": 8, "consistency": "Moderate", "effectSize": "Small" }
+      ],
+      "community": {
+        "totalReports": 180,
+        "positivePercent": 90,
+        "satisfaction": "4.5/5",
+        "timeToEffect": "1-3 days",
+        "quotes": [
+          { "text": "Sleep transformed from day one. The single most impactful supplement I've added.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Sleep (Glycinate)", "dosage": "200-400mg before bed", "notes": "Magnesium glycinate for sleep. Take 1 hour before bed." },
+        { "label": "Cognitive (Threonate)", "dosage": "1-2g daily", "notes": "Magtein brand. Split AM/PM doses." },
+        { "label": "General (Citrate)", "dosage": "200-400mg daily", "notes": "Good for general supplementation and regularity." }
+      ],
+      "relatedSlugs": ["vitamin-d3-k2", "omega-3", "creatine"]
+    },
+    {
+      "slug": "vitamin-d3-k2",
+      "name": "Vitamin D3 + K2",
+      "fullName": "Vitamin D3 with Vitamin K2 (MK-7)",
+      "category": "Supplements",
+      "description": "The most important foundational supplement stack. Vitamin D3 is critical for immune function, bone health, and mood, while K2 directs calcium to bones and away from arteries.",
+      "icon": "☀️",
+      "kamuraScore": 88,
+      "scores": { "research": 92, "community": 88, "safety": 90, "accessibility": 95, "value": 92 },
+      "evidenceLevel": "Strong",
+      "tags": ["Bone Health", "Immune", "Foundational"],
+      "uaeAvailable": true,
+      "studyCount": 300,
+      "communityReports": 170,
+      "administrationRoutes": ["Oral"],
+      "outcomes": [
+        { "name": "Bone Health", "direction": "positive", "grade": "A", "description": "D3+K2 synergy is gold standard for bone mineral density. K2 directs calcium to bones.", "studyCount": 60, "consistency": "High", "effectSize": "Large" },
+        { "name": "Immune Function", "direction": "positive", "grade": "A", "description": "Vitamin D is critical for innate and adaptive immunity. Deficiency increases infection risk.", "studyCount": 50, "consistency": "High", "effectSize": "Large" },
+        { "name": "Cardiovascular Protection", "direction": "positive", "grade": "B", "description": "K2 prevents arterial calcification. D3 supports healthy blood pressure.", "studyCount": 25, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 170,
+        "positivePercent": 88,
+        "satisfaction": "4.4/5",
+        "timeToEffect": "2-4 weeks",
+        "quotes": [
+          { "text": "D3 levels were critically low. After supplementing, energy and mood dramatically improved.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard", "dosage": "5000 IU D3 + 200mcg K2 daily", "notes": "Take with fat for absorption. Test levels every 6 months." },
+        { "label": "Deficiency Loading", "dosage": "10,000 IU D3 daily for 8 weeks", "notes": "Then retest and switch to maintenance dose." }
+      ],
+      "relatedSlugs": ["magnesium", "omega-3", "creatine"]
+    },
+    {
+      "slug": "spermidine",
+      "name": "Spermidine",
+      "fullName": "Spermidine (Polyamine)",
+      "category": "Supplements",
+      "description": "A natural polyamine found in wheat germ that activates autophagy — the body's cellular cleanup process. Emerging as a key longevity compound.",
+      "icon": "🔬",
+      "kamuraScore": 62,
+      "scores": { "research": 58, "community": 55, "safety": 85, "accessibility": 70, "value": 55 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Autophagy", "Hair", "Longevity"],
+      "uaeAvailable": true,
+      "studyCount": 20,
+      "communityReports": 30,
+      "administrationRoutes": ["Oral"],
+      "outcomes": [
+        { "name": "Autophagy Activation", "direction": "positive", "grade": "B", "description": "Induces autophagy similar to fasting. Observational data links high spermidine intake to longevity.", "studyCount": 12, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Hair Growth", "direction": "positive", "grade": "C", "description": "Small studies suggest hair follicle prolongation. Community reports mixed.", "studyCount": 4, "consistency": "Mixed", "effectSize": "Small" }
+      ],
+      "community": {
+        "totalReports": 30,
+        "positivePercent": 55,
+        "satisfaction": "3.3/5",
+        "timeToEffect": "4-8 weeks",
+        "quotes": [
+          { "text": "Taking it as part of my longevity stack. Hard to measure but aligns with the science.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard", "dosage": "1-5mg daily", "notes": "Wheat germ extract capsules. Take with meals." }
+      ],
+      "relatedSlugs": ["fasting", "epitalon", "ghk-cu"]
+    },
+    {
+      "slug": "methylene-blue",
+      "name": "Methylene Blue",
+      "fullName": "Pharmaceutical Grade Methylene Blue",
+      "category": "Supplements",
+      "description": "A mitochondrial electron carrier and monoamine oxidase inhibitor with cognitive-enhancing and neuroprotective properties. Used at micro-doses for brain health.",
+      "icon": "🔵",
+      "kamuraScore": 52,
+      "scores": { "research": 50, "community": 48, "safety": 55, "accessibility": 60, "value": 50 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Mitochondria", "Cognitive", "Neuroprotection"],
+      "uaeAvailable": true,
+      "studyCount": 18,
+      "communityReports": 25,
+      "administrationRoutes": ["Oral"],
+      "outcomes": [
+        { "name": "Cognitive Enhancement", "direction": "positive", "grade": "C", "description": "Acts as mitochondrial electron shuttle. Some evidence for memory and attention improvement at low doses.", "studyCount": 8, "consistency": "Mixed", "effectSize": "Small" },
+        { "name": "Neuroprotection", "direction": "positive", "grade": "C", "description": "Anti-amyloid properties observed in preclinical studies. Human data limited.", "studyCount": 6, "consistency": "Mixed", "effectSize": "Unclear" }
+      ],
+      "community": {
+        "totalReports": 25,
+        "positivePercent": 48,
+        "satisfaction": "3.2/5",
+        "timeToEffect": "30 min - 2 hours",
+        "quotes": [
+          { "text": "Subtle cognitive boost but blue tongue and urine. Not for everyone.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Micro-Dose", "dosage": "0.5-2mg/kg", "notes": "Pharmaceutical grade only. Low dose essential. Interacts with SSRIs — contraindicated." }
+      ],
+      "relatedSlugs": ["nad-oral", "mots-c", "ss-31"]
+    },
+    {
+      "slug": "astaxanthin",
+      "name": "Astaxanthin",
+      "fullName": "Astaxanthin (Carotenoid Antioxidant)",
+      "category": "Supplements",
+      "description": "A potent carotenoid antioxidant derived from microalgae. 6000x stronger than vitamin C as an antioxidant. Supports skin, eye, and cardiovascular health.",
+      "icon": "🦐",
+      "kamuraScore": 67,
+      "scores": { "research": 62, "community": 65, "safety": 88, "accessibility": 80, "value": 68 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Antioxidant", "Skin", "Eyes"],
+      "uaeAvailable": true,
+      "studyCount": 30,
+      "communityReports": 35,
+      "administrationRoutes": ["Oral"],
+      "outcomes": [
+        { "name": "Skin Protection", "direction": "positive", "grade": "B", "description": "Reduces UV damage, improves skin elasticity and moisture. Internal sunscreen effect.", "studyCount": 12, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Eye Health", "direction": "positive", "grade": "B", "description": "Reduces eye fatigue, may slow age-related macular degeneration.", "studyCount": 8, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 35,
+        "positivePercent": 65,
+        "satisfaction": "3.7/5",
+        "timeToEffect": "2-4 weeks",
+        "quotes": [
+          { "text": "Skin noticeably less sun-sensitive. Great addition to my stack.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard", "dosage": "4-12mg daily", "notes": "Take with fat. Higher doses for skin/sun protection." }
+      ],
+      "relatedSlugs": ["omega-3", "vitamin-d3-k2", "functional-mushrooms"]
+    },
+    {
+      "slug": "omega-3",
+      "name": "Omega-3",
+      "fullName": "Omega-3 Fatty Acids (EPA/DHA)",
+      "category": "Supplements",
+      "description": "Essential fatty acids critical for brain health, cardiovascular function, and inflammation regulation. One of the most studied and recommended supplements globally.",
+      "icon": "🐟",
+      "kamuraScore": 86,
+      "scores": { "research": 92, "community": 85, "safety": 90, "accessibility": 90, "value": 80 },
+      "evidenceLevel": "Strong",
+      "tags": ["Inflammation", "Cardiovascular", "Brain"],
+      "uaeAvailable": true,
+      "studyCount": 500,
+      "communityReports": 150,
+      "administrationRoutes": ["Oral"],
+      "outcomes": [
+        { "name": "Cardiovascular Health", "direction": "positive", "grade": "A", "description": "Reduces triglycerides, lowers blood pressure, and decreases cardiovascular risk.", "studyCount": 100, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Brain Health", "direction": "positive", "grade": "A", "description": "DHA is structural component of brain. EPA reduces neuroinflammation.", "studyCount": 60, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Inflammation", "direction": "positive", "grade": "A", "description": "Potent anti-inflammatory effects via resolvins and protectins.", "studyCount": 80, "consistency": "High", "effectSize": "Large" }
+      ],
+      "community": {
+        "totalReports": 150,
+        "positivePercent": 85,
+        "satisfaction": "4.3/5",
+        "timeToEffect": "2-4 weeks",
+        "quotes": [
+          { "text": "Omega-3 index went from 4% to 10%. Inflammation markers dropped significantly.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard", "dosage": "2-3g EPA+DHA daily", "notes": "High-quality fish oil or algae-based. Take with food." },
+        { "label": "Therapeutic", "dosage": "4-6g EPA+DHA daily", "notes": "For high triglycerides or inflammation. Prescription-grade." }
+      ],
+      "relatedSlugs": ["vitamin-d3-k2", "magnesium", "astaxanthin"]
+    },
+    {
+      "slug": "creatine",
+      "name": "Creatine",
+      "fullName": "Creatine Monohydrate",
+      "category": "Supplements",
+      "description": "The most studied sports supplement in history, now recognized for cognitive and longevity benefits beyond muscle performance. Safe, cheap, and effective.",
+      "icon": "💪",
+      "kamuraScore": 90,
+      "scores": { "research": 95, "community": 92, "safety": 95, "accessibility": 95, "value": 95 },
+      "evidenceLevel": "Strong",
+      "tags": ["Muscle", "Cognitive", "Foundational"],
+      "uaeAvailable": true,
+      "studyCount": 700,
+      "communityReports": 160,
+      "administrationRoutes": ["Oral"],
+      "outcomes": [
+        { "name": "Muscle Performance", "direction": "positive", "grade": "A", "description": "Gold standard for strength and power output. 500+ studies confirming benefits.", "studyCount": 500, "consistency": "High", "effectSize": "Large" },
+        { "name": "Cognitive Function", "direction": "positive", "grade": "B", "description": "Emerging evidence for cognitive benefits, especially under stress or sleep deprivation.", "studyCount": 20, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Bone Health", "direction": "positive", "grade": "C", "description": "Combined with resistance training, may improve bone mineral density.", "studyCount": 8, "consistency": "Mixed", "effectSize": "Small" }
+      ],
+      "community": {
+        "totalReports": 160,
+        "positivePercent": 92,
+        "satisfaction": "4.6/5",
+        "timeToEffect": "1-2 weeks",
+        "quotes": [
+          { "text": "5g daily for 10 years. Simplest and most effective supplement in my stack.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard", "dosage": "3-5g daily", "notes": "Creatine monohydrate. No loading needed. Take any time." },
+        { "label": "Loading (Optional)", "dosage": "20g daily for 5-7 days", "notes": "Then 3-5g maintenance. Faster saturation." }
+      ],
+      "relatedSlugs": ["magnesium", "vitamin-d3-k2", "omega-3"]
+    },
+    {
+      "slug": "functional-mushrooms",
+      "name": "Functional Mushrooms",
+      "fullName": "Lion's Mane, Reishi, Cordyceps, Chaga",
+      "category": "Supplements",
+      "description": "Medicinal mushroom extracts used for cognitive enhancement (Lion's Mane), immune support (Reishi), energy (Cordyceps), and antioxidant protection (Chaga).",
+      "icon": "🍄",
+      "kamuraScore": 68,
+      "scores": { "research": 58, "community": 72, "safety": 85, "accessibility": 80, "value": 70 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Immune", "Cognitive", "Adaptogen"],
+      "uaeAvailable": true,
+      "studyCount": 40,
+      "communityReports": 55,
+      "administrationRoutes": ["Oral"],
+      "outcomes": [
+        { "name": "Cognitive Function (Lion's Mane)", "direction": "positive", "grade": "B", "description": "Promotes NGF synthesis. Small human studies show cognitive improvement in older adults.", "studyCount": 10, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Immune Support (Reishi)", "direction": "positive", "grade": "B", "description": "Beta-glucans modulate immune function. Traditional use backed by some clinical data.", "studyCount": 15, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Energy (Cordyceps)", "direction": "positive", "grade": "C", "description": "May improve oxygen utilization and exercise performance. Evidence mixed.", "studyCount": 8, "consistency": "Mixed", "effectSize": "Small" }
+      ],
+      "community": {
+        "totalReports": 55,
+        "positivePercent": 72,
+        "satisfaction": "3.9/5",
+        "timeToEffect": "2-4 weeks",
+        "quotes": [
+          { "text": "Lion's Mane improved my focus noticeably. Taking it daily in my morning coffee.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Lion's Mane (Focus)", "dosage": "500mg - 1g daily", "notes": "Dual extract (fruiting body + mycelium). Morning." },
+        { "label": "Reishi (Sleep/Immune)", "dosage": "500mg - 1g daily", "notes": "Take in the evening. Calming effect." },
+        { "label": "Cordyceps (Energy)", "dosage": "500mg - 1g daily", "notes": "Take in the morning or pre-workout." }
+      ],
+      "relatedSlugs": ["nad-oral", "astaxanthin", "magnesium"]
+    },
+    {
+      "slug": "breathwork",
+      "name": "Breathwork",
+      "fullName": "Breathwork Practices (Wim Hof, Holotropic, Box)",
+      "category": "Holistic & Mind-Body",
+      "description": "Conscious breathing techniques that modulate the autonomic nervous system, reduce stress, improve HRV, and create physiological states similar to meditation.",
+      "icon": "🌬️",
+      "kamuraScore": 72,
+      "scores": { "research": 58, "community": 82, "safety": 85, "accessibility": 90, "value": 90 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Stress", "HRV", "Nervous System"],
+      "uaeAvailable": true,
+      "studyCount": 20,
+      "communityReports": 80,
+      "administrationRoutes": ["Practice"],
+      "outcomes": [
+        { "name": "Stress Reduction", "direction": "positive", "grade": "A", "description": "Activates parasympathetic nervous system. Rapid cortisol reduction documented.", "studyCount": 10, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "HRV Improvement", "direction": "positive", "grade": "B", "description": "Regular practice improves heart rate variability — a key longevity biomarker.", "studyCount": 6, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 80,
+        "positivePercent": 82,
+        "satisfaction": "4.3/5",
+        "timeToEffect": "Immediate",
+        "quotes": [
+          { "text": "Daily Wim Hof breathwork completely changed my stress resilience.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Wim Hof Method", "dosage": "3 rounds, 30 breaths each", "notes": "Morning practice. 10-15 minutes." },
+        { "label": "Box Breathing", "dosage": "4-4-4-4 seconds", "notes": "For acute stress. Navy SEAL technique." },
+        { "label": "Cyclic Sighing", "dosage": "5 min session", "notes": "Huberman-recommended for rapid calm-down." }
+      ],
+      "relatedSlugs": ["meditation", "cold-plunge", "yoga"]
+    },
+    {
+      "slug": "meditation",
+      "name": "Meditation",
+      "fullName": "Meditation & Mindfulness Practice",
+      "category": "Holistic & Mind-Body",
+      "description": "Regular meditation practice for mental health, stress reduction, cognitive performance, and longevity. One of the most evidence-backed wellness practices with thousands of studies.",
+      "icon": "🧘",
+      "kamuraScore": 80,
+      "scores": { "research": 78, "community": 85, "safety": 98, "accessibility": 95, "value": 95 },
+      "evidenceLevel": "Strong",
+      "tags": ["Mental Health", "Stress", "Cognitive"],
+      "uaeAvailable": true,
+      "studyCount": 3000,
+      "communityReports": 100,
+      "administrationRoutes": ["Practice"],
+      "outcomes": [
+        { "name": "Stress & Anxiety", "direction": "positive", "grade": "A", "description": "Meta-analyses confirm significant reductions in anxiety, depression, and perceived stress.", "studyCount": 200, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Cognitive Function", "direction": "positive", "grade": "A", "description": "Improves attention, working memory, and executive function with regular practice.", "studyCount": 100, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Telomere Length", "direction": "positive", "grade": "C", "description": "Some evidence that long-term meditators have longer telomeres. Causality debated.", "studyCount": 10, "consistency": "Mixed", "effectSize": "Small" }
+      ],
+      "community": {
+        "totalReports": 100,
+        "positivePercent": 85,
+        "satisfaction": "4.4/5",
+        "timeToEffect": "1-2 weeks",
+        "quotes": [
+          { "text": "20 minutes daily meditation completely changed my relationship with stress.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Beginner", "dosage": "10-15 min daily", "notes": "Guided apps (Waking Up, Headspace). Consistency over duration." },
+        { "label": "Advanced", "dosage": "20-45 min daily", "notes": "Vipassana or focused attention. Morning practice ideal." }
+      ],
+      "relatedSlugs": ["breathwork", "yoga", "float-therapy"]
+    },
+    {
+      "slug": "yoga",
+      "name": "Yoga",
+      "fullName": "Yoga Practice (Hatha, Vinyasa, Ashtanga)",
+      "category": "Holistic & Mind-Body",
+      "description": "Ancient practice combining physical postures, breathing, and meditation. Extensive evidence for mobility, stress reduction, and longevity. Adaptable to all fitness levels.",
+      "icon": "🧘‍♀️",
+      "kamuraScore": 78,
+      "scores": { "research": 72, "community": 82, "safety": 88, "accessibility": 90, "value": 88 },
+      "evidenceLevel": "Strong",
+      "tags": ["Mobility", "Stress", "Longevity"],
+      "uaeAvailable": true,
+      "studyCount": 1500,
+      "communityReports": 90,
+      "administrationRoutes": ["Practice"],
+      "outcomes": [
+        { "name": "Flexibility & Mobility", "direction": "positive", "grade": "A", "description": "Consistently improves range of motion, balance, and functional movement.", "studyCount": 100, "consistency": "High", "effectSize": "Large" },
+        { "name": "Stress & Mental Health", "direction": "positive", "grade": "A", "description": "Reduces cortisol, anxiety, and depression. Combines movement with mindfulness.", "studyCount": 80, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Cardiovascular Health", "direction": "positive", "grade": "B", "description": "Regular practice lowers blood pressure and resting heart rate.", "studyCount": 30, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 90,
+        "positivePercent": 82,
+        "satisfaction": "4.3/5",
+        "timeToEffect": "1-2 weeks",
+        "quotes": [
+          { "text": "Yoga is the foundation of my wellness practice. Everything else works better with it.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Beginner", "dosage": "2-3 classes/week", "notes": "Hatha or gentle Vinyasa. Focus on form and breath." },
+        { "label": "Regular", "dosage": "4-6 days/week", "notes": "Mix of styles. Include restoration and Yin." }
+      ],
+      "relatedSlugs": ["meditation", "breathwork", "float-therapy"]
+    },
+    {
+      "slug": "acupuncture",
+      "name": "Acupuncture",
+      "fullName": "Traditional & Medical Acupuncture",
+      "category": "Holistic & Mind-Body",
+      "description": "Ancient Chinese medicine technique using thin needles at specific points to modulate pain, reduce stress, and support various health conditions. Growing evidence base in Western medicine.",
+      "icon": "📍",
+      "kamuraScore": 69,
+      "scores": { "research": 65, "community": 72, "safety": 82, "accessibility": 65, "value": 55 },
+      "evidenceLevel": "Moderate",
+      "tags": ["Pain", "Stress", "Fertility"],
+      "uaeAvailable": true,
+      "studyCount": 200,
+      "communityReports": 50,
+      "administrationRoutes": ["Needles"],
+      "outcomes": [
+        { "name": "Pain Management", "direction": "positive", "grade": "A", "description": "Strong evidence for chronic pain, especially back pain, neck pain, and osteoarthritis.", "studyCount": 80, "consistency": "High", "effectSize": "Moderate" },
+        { "name": "Fertility Support", "direction": "positive", "grade": "B", "description": "Some evidence for improving IVF outcomes and natural conception rates.", "studyCount": 20, "consistency": "Moderate", "effectSize": "Small" },
+        { "name": "Stress & Anxiety", "direction": "positive", "grade": "B", "description": "Activates parasympathetic response. Regular sessions reduce perceived stress.", "studyCount": 15, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 50,
+        "positivePercent": 72,
+        "satisfaction": "4.0/5",
+        "timeToEffect": "After 3-5 sessions",
+        "quotes": [
+          { "text": "Chronic back pain significantly reduced after 6 sessions. Now going weekly.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard Course", "dosage": "1-2 sessions/week", "notes": "6-12 session initial course. Then maintenance." },
+        { "label": "Fertility", "dosage": "2 sessions/week", "notes": "Start 3 months before IVF cycle." }
+      ],
+      "relatedSlugs": ["yoga", "meditation", "breathwork"]
+    },
+    {
+      "slug": "sound-healing",
+      "name": "Sound Healing",
+      "fullName": "Sound Bath / Vibrational Therapy",
+      "category": "Holistic & Mind-Body",
+      "description": "Therapeutic use of singing bowls, gongs, and tuning forks to induce deep relaxation. Popular in Dubai's wellness scene but limited clinical evidence.",
+      "icon": "🔔",
+      "kamuraScore": 48,
+      "scores": { "research": 25, "community": 68, "safety": 92, "accessibility": 55, "value": 45 },
+      "evidenceLevel": "Anecdotal",
+      "tags": ["Stress", "Relaxation"],
+      "uaeAvailable": true,
+      "studyCount": 8,
+      "communityReports": 40,
+      "administrationRoutes": ["Sound Session"],
+      "outcomes": [
+        { "name": "Relaxation & Stress", "direction": "positive", "grade": "C", "description": "Subjective relaxation widely reported. Objective stress markers show some improvement. Rigorous studies lacking.", "studyCount": 5, "consistency": "Mixed", "effectSize": "Small" }
+      ],
+      "community": {
+        "totalReports": 40,
+        "positivePercent": 68,
+        "satisfaction": "3.8/5",
+        "timeToEffect": "Immediate",
+        "quotes": [
+          { "text": "Deeply relaxing experience. Like floating in sound. Hard to describe.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Sound Bath", "dosage": "60-90 min session", "notes": "Weekly or bi-weekly. Lie down and receive." }
+      ],
+      "relatedSlugs": ["meditation", "float-therapy", "breathwork"]
+    },
+    {
+      "slug": "ayurveda",
+      "name": "Ayurveda",
+      "fullName": "Ayurvedic Medicine & Practices",
+      "category": "Holistic & Mind-Body",
+      "description": "Ancient Indian system of medicine emphasizing constitutional typing, herbal remedies, detox protocols, and lifestyle balance. Growing integration with modern longevity science.",
+      "icon": "🌿",
+      "kamuraScore": 55,
+      "scores": { "research": 40, "community": 62, "safety": 70, "accessibility": 60, "value": 55 },
+      "evidenceLevel": "Limited",
+      "tags": ["Holistic", "Traditional", "Herbs"],
+      "uaeAvailable": true,
+      "studyCount": 30,
+      "communityReports": 35,
+      "administrationRoutes": ["Oral", "Topical", "Lifestyle"],
+      "outcomes": [
+        { "name": "Holistic Wellness", "direction": "positive", "grade": "C", "description": "Constitutional approach may help identify individual imbalances. Scientific validation limited.", "studyCount": 10, "consistency": "Mixed", "effectSize": "Unclear" },
+        { "name": "Specific Herbs (Ashwagandha, Turmeric)", "direction": "positive", "grade": "B", "description": "Individual herbs like ashwagandha have strong evidence. System-level evidence is weaker.", "studyCount": 15, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 35,
+        "positivePercent": 62,
+        "satisfaction": "3.5/5",
+        "timeToEffect": "4-12 weeks",
+        "quotes": [
+          { "text": "Ayurvedic consultation helped me understand my body type and optimize my diet.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Constitutional Assessment", "dosage": "Initial consultation", "notes": "Find your dosha type. Customize diet and herbs accordingly." },
+        { "label": "Panchakarma Detox", "dosage": "7-21 day program", "notes": "Full detox protocol. Requires qualified practitioner." }
+      ],
+      "relatedSlugs": ["yoga", "meditation", "functional-mushrooms"]
+    },
+    {
+      "slug": "iv-drip-therapy",
+      "name": "IV Drip Therapy",
+      "fullName": "Intravenous Vitamin & Nutrient Therapy",
+      "category": "Holistic & Mind-Body",
+      "description": "Direct intravenous delivery of vitamins, minerals, and antioxidants. Popular in Dubai for hangover recovery, immune boosting, and general wellness, though evidence for most claims is limited.",
+      "icon": "💧",
+      "kamuraScore": 61,
+      "scores": { "research": 42, "community": 72, "safety": 68, "accessibility": 72, "value": 45 },
+      "evidenceLevel": "Limited",
+      "tags": ["Recovery", "Hydration", "Vitamins"],
+      "uaeAvailable": true,
+      "studyCount": 15,
+      "communityReports": 65,
+      "administrationRoutes": ["IV"],
+      "outcomes": [
+        { "name": "Hydration & Recovery", "direction": "positive", "grade": "B", "description": "Direct hydration is effective. Whether vitamins provide benefit beyond oral supplementation is debated.", "studyCount": 5, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Immune Support", "direction": "neutral", "grade": "D", "description": "High-dose Vitamin C IV has limited evidence for immune benefit in non-deficient individuals.", "studyCount": 8, "consistency": "Low", "effectSize": "Negligible" }
+      ],
+      "community": {
+        "totalReports": 65,
+        "positivePercent": 72,
+        "satisfaction": "3.8/5",
+        "timeToEffect": "Immediate",
+        "quotes": [
+          { "text": "Great for acute recovery. Not sure it's worth the cost for regular use.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Myers' Cocktail", "dosage": "Single IV session", "notes": "B vitamins, Vitamin C, Magnesium, Calcium. 30-60 min." },
+        { "label": "NAD+ IV", "dosage": "250-500mg NAD+", "notes": "2-4 hour infusion. Monthly maintenance." }
+      ],
+      "relatedSlugs": ["nad-injectable", "vitamin-d3-k2", "magnesium"]
+    },
+    {
+      "slug": "inuspheresis",
+      "name": "INUSpheresis",
+      "fullName": "INUSpheresis Apheresis Therapy",
+      "category": "Detox & Functional",
+      "description": "A blood filtration procedure that removes heavy metals, microplastics, environmental toxins, and inflammatory mediators. Gaining popularity in the biohacking community.",
+      "icon": "🩸",
+      "kamuraScore": 58,
+      "scores": { "research": 45, "community": 62, "safety": 65, "accessibility": 35, "value": 30 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Heavy Metals", "Detox", "Blood Filtering"],
+      "uaeAvailable": true,
+      "studyCount": 10,
+      "communityReports": 30,
+      "administrationRoutes": ["Blood Filtration"],
+      "outcomes": [
+        { "name": "Toxin Removal", "direction": "positive", "grade": "C", "description": "Measurable reduction in heavy metals and environmental toxins post-procedure.", "studyCount": 5, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Inflammation Reduction", "direction": "positive", "grade": "C", "description": "Removes inflammatory mediators. Some patients report improved symptoms.", "studyCount": 3, "consistency": "Mixed", "effectSize": "Unclear" }
+      ],
+      "community": {
+        "totalReports": 30,
+        "positivePercent": 62,
+        "satisfaction": "3.6/5",
+        "timeToEffect": "After procedure",
+        "quotes": [
+          { "text": "Blood metals panel showed dramatic reduction after treatment. Expensive but measurable results.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Standard", "dosage": "1-3 sessions", "notes": "4-6 hours per session. Tests before and after to measure." }
+      ],
+      "relatedSlugs": ["ozone-therapy", "infrared-sauna", "iv-drip-therapy"]
+    },
+    {
+      "slug": "ozone-therapy",
+      "name": "Ozone Therapy",
+      "fullName": "Medical Ozone Therapy (MAH/Insufflation)",
+      "category": "Detox & Functional",
+      "description": "Medical application of ozone gas for immune modulation, improved oxygen utilization, and antimicrobial effects. Controversial in mainstream medicine but growing in integrative practice.",
+      "icon": "🌬️",
+      "kamuraScore": 54,
+      "scores": { "research": 42, "community": 58, "safety": 60, "accessibility": 50, "value": 45 },
+      "evidenceLevel": "Limited",
+      "tags": ["Immune", "Detox", "Oxygen"],
+      "uaeAvailable": true,
+      "studyCount": 20,
+      "communityReports": 35,
+      "administrationRoutes": ["IV (MAH)", "Rectal Insufflation", "Topical"],
+      "outcomes": [
+        { "name": "Immune Modulation", "direction": "positive", "grade": "C", "description": "Stimulates immune system and improves oxygen metabolism. Mechanism debated.", "studyCount": 10, "consistency": "Mixed", "effectSize": "Small" },
+        { "name": "Wound Healing", "direction": "positive", "grade": "B", "description": "Topical ozone has better evidence for wound healing applications.", "studyCount": 8, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 35,
+        "positivePercent": 58,
+        "satisfaction": "3.4/5",
+        "timeToEffect": "After 3-5 sessions",
+        "quotes": [
+          { "text": "Felt more energized after MAH sessions. Hard to attribute specifically to ozone.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "MAH (Major Autohemotherapy)", "dosage": "1-3 sessions/week", "notes": "Blood drawn, ozonated, re-infused. Clinical setting only." },
+        { "label": "Rectal Insufflation", "dosage": "200-400ml at 20-30 gamma", "notes": "Home-based option. Gentler than IV." }
+      ],
+      "relatedSlugs": ["inuspheresis", "hyperbaric-oxygen", "iv-drip-therapy"]
+    },
+    {
+      "slug": "stem-cell-therapy",
+      "name": "Stem Cell Therapy",
+      "fullName": "Mesenchymal Stem Cell Therapy",
+      "category": "Detox & Functional",
+      "description": "Regenerative medicine using stem cells (MSCs) for joint repair, anti-aging, and tissue regeneration. Rapidly advancing field with promising but variable results.",
+      "icon": "🧬",
+      "kamuraScore": 64,
+      "scores": { "research": 60, "community": 65, "safety": 58, "accessibility": 40, "value": 30 },
+      "evidenceLevel": "Emerging",
+      "tags": ["Regeneration", "Joint", "Anti-Aging"],
+      "uaeAvailable": true,
+      "studyCount": 30,
+      "communityReports": 40,
+      "administrationRoutes": ["IV", "Intra-articular", "Intrathecal"],
+      "outcomes": [
+        { "name": "Joint Repair", "direction": "positive", "grade": "B", "description": "Promising results for osteoarthritis and cartilage damage. Quality of evidence improving.", "studyCount": 15, "consistency": "Moderate", "effectSize": "Moderate" },
+        { "name": "Anti-Aging (Systemic)", "direction": "positive", "grade": "D", "description": "IV stem cell infusions marketed for anti-aging. Evidence is largely anecdotal.", "studyCount": 5, "consistency": "Low", "effectSize": "Unclear" }
+      ],
+      "community": {
+        "totalReports": 40,
+        "positivePercent": 65,
+        "satisfaction": "3.7/5",
+        "timeToEffect": "4-12 weeks",
+        "quotes": [
+          { "text": "Knee pain dramatically reduced after MSC injection. Avoided surgery.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "Joint Injection", "dosage": "5-50 million MSCs", "notes": "Intra-articular injection. Single treatment, may repeat in 6-12 months." },
+        { "label": "Systemic IV", "dosage": "100-200 million MSCs", "notes": "IV infusion for systemic anti-aging. Controversial." }
+      ],
+      "relatedSlugs": ["bpc-157", "tb-500", "hyperbaric-oxygen"]
+    },
+    {
+      "slug": "fasting",
+      "name": "Fasting (Intermittent)",
+      "fullName": "Intermittent & Extended Fasting",
+      "category": "Detox & Functional",
+      "description": "Deliberate time-restricted eating or multi-day fasting for metabolic health, autophagy activation, and longevity. One of the most studied longevity interventions with growing clinical evidence.",
+      "icon": "⏰",
+      "kamuraScore": 82,
+      "scores": { "research": 78, "community": 88, "safety": 75, "accessibility": 95, "value": 95 },
+      "evidenceLevel": "Strong",
+      "tags": ["Metabolic", "Longevity", "Autophagy"],
+      "uaeAvailable": true,
+      "studyCount": 100,
+      "communityReports": 120,
+      "administrationRoutes": ["Lifestyle"],
+      "outcomes": [
+        { "name": "Metabolic Health", "direction": "positive", "grade": "A", "description": "Improves insulin sensitivity, reduces fasting glucose, and promotes healthy body composition.", "studyCount": 40, "consistency": "High", "effectSize": "Large" },
+        { "name": "Autophagy", "direction": "positive", "grade": "A", "description": "Fasting is the most potent natural activator of autophagy — cellular cleanup and renewal.", "studyCount": 20, "consistency": "High", "effectSize": "Large" },
+        { "name": "Longevity", "direction": "positive", "grade": "B", "description": "Animal models show lifespan extension. Human longevity data emerging from observational studies.", "studyCount": 15, "consistency": "Moderate", "effectSize": "Moderate" }
+      ],
+      "community": {
+        "totalReports": 120,
+        "positivePercent": 88,
+        "satisfaction": "4.4/5",
+        "timeToEffect": "1-2 weeks",
+        "quotes": [
+          { "text": "16:8 fasting completely transformed my relationship with food and my energy levels.", "source": "Community member", "location": "Dubai", "verified": true }
+        ]
+      },
+      "protocols": [
+        { "label": "16:8 (Daily)", "dosage": "16 hours fasting, 8 hour eating window", "notes": "Most sustainable. Skip breakfast or dinner." },
+        { "label": "OMAD", "dosage": "One meal per day", "notes": "More aggressive. Better for metabolic flexibility." },
+        { "label": "72-Hour Fast", "dosage": "3 days water fast quarterly", "notes": "Maximum autophagy activation. Electrolytes essential." }
+      ],
+      "relatedSlugs": ["spermidine", "magnesium", "creatine"]
+    }
+  ]
+}

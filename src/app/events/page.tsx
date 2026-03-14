@@ -5,12 +5,20 @@ import EventsContent from "./EventsContent";
 export const metadata: Metadata = {
   title: "Wellness & Longevity Events in Dubai 2025–2026",
   description:
-    "Upcoming wellness and longevity events in the UAE — biohacking summits, sound healing retreats, fitness expos. Calendar, listings & news coverage.",
+    "Upcoming wellness events in Dubai & UAE — biohacking summits, longevity festivals, stem cell conferences, wellness retreats, and fitness expos. Calendar, listings & news.",
   openGraph: {
     title: "Events | KAMURA",
     description:
       "Summits, festivals & gatherings in the world of longevity & wellness. Discover events shaping wellness in the UAE and beyond.",
     url: "https://kamuralife.com/events",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&h=630&fit=crop",
+        width: 1200,
+        height: 630,
+        alt: "Wellness & Longevity Events — KAMURA",
+      },
+    ],
   },
 };
 

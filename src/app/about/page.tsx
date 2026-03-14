@@ -4,6 +4,20 @@ export const metadata: Metadata = {
   title: "About KAMURA — Longevity & Wellness Platform in Dubai",
   description:
     "KAMURA is Dubai's longevity & wellness discovery platform. Inspired by the Japanese tortoise (Kame, 亀), we curate clinics, studios, and retreats across the UAE.",
+  openGraph: {
+    title: "About KAMURA",
+    description:
+      "Dubai's longevity & wellness discovery platform. Inspired by the Japanese tortoise (Kame, 亀).",
+    url: "https://kamuralife.com/about",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=630&fit=crop",
+        width: 1200,
+        height: 630,
+        alt: "About KAMURA — Heart of Longevity",
+      },
+    ],
+  },
 };
 
 export default function AboutPage() {

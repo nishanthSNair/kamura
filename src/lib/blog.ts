@@ -6,8 +6,9 @@ import remarkGfm from "remark-gfm";
 import html from "remark-html";
 
 // Re-export shared types/utils so server components can import from @/lib/blog
-export { type BlogCategory, blogCategoryColors, formatDate } from "./blog-shared";
-import type { BlogCategory } from "./blog-shared";
+export { type BlogCategory, type DepthIndicator, blogCategoryColors, formatDate } from "./blog-shared";
+import type { BlogCategory, DepthIndicator } from "./blog-shared";
+import type { EvidenceLevel } from "@/data/treatments";
 
 const blogDirectory = path.join(process.cwd(), "content/blog");
 
@@ -22,6 +23,13 @@ export interface BlogPost {
   readingTime: number;
   wordCount: number;
   headings: { id: string; text: string; level: number }[];
+  // Treatment integration fields (optional)
+  kamuraScore?: number;
+  evidenceLevel?: EvidenceLevel;
+  depthIndicator?: DepthIndicator;
+  relatedTreatments?: string[];
+  medicallyReviewed?: boolean;
+  lastUpdated?: string;
 }
 
 export function getAllPosts(): Omit<BlogPost, "content" | "headings">[] {
@@ -47,6 +55,12 @@ export function getAllPosts(): Omit<BlogPost, "content" | "headings">[] {
         coverImage: data.coverImage || undefined,
         readingTime,
         wordCount,
+        ...(data.kamuraScore && { kamuraScore: data.kamuraScore }),
+        ...(data.evidenceLevel && { evidenceLevel: data.evidenceLevel as EvidenceLevel }),
+        ...(data.depthIndicator && { depthIndicator: data.depthIndicator as DepthIndicator }),
+        ...(data.relatedTreatments && { relatedTreatments: data.relatedTreatments }),
+        ...(data.medicallyReviewed && { medicallyReviewed: data.medicallyReviewed }),
+        ...(data.lastUpdated && { lastUpdated: data.lastUpdated }),
       };
     })
     .sort((a, b) => (a.date > b.date ? -1 : 1));
@@ -106,6 +120,12 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     readingTime,
     wordCount,
     headings,
+    ...(data.kamuraScore && { kamuraScore: data.kamuraScore }),
+    ...(data.evidenceLevel && { evidenceLevel: data.evidenceLevel as EvidenceLevel }),
+    ...(data.depthIndicator && { depthIndicator: data.depthIndicator as DepthIndicator }),
+    ...(data.relatedTreatments && { relatedTreatments: data.relatedTreatments }),
+    ...(data.medicallyReviewed && { medicallyReviewed: data.medicallyReviewed }),
+    ...(data.lastUpdated && { lastUpdated: data.lastUpdated }),
   };
 }
 

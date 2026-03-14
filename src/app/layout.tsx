@@ -27,7 +27,19 @@ export const metadata: Metadata = {
     template: "%s | KAMURA",
   },
   description:
-    "Discover the practices, places, and people transforming wellness in Dubai and beyond. Longevity clinics, holistic healing, breathwork, and more.",
+    "Dubai's longevity & wellness discovery platform. Explore 70+ clinics, biohacking studios, peptide therapy, bone broth, and holistic healing across the UAE.",
+  keywords: [
+    "longevity dubai",
+    "biohacking dubai",
+    "wellness dubai",
+    "peptide therapy dubai",
+    "NAD therapy dubai",
+    "cryotherapy dubai",
+    "bone broth dubai",
+    "holistic healing UAE",
+    "wellness centers dubai",
+    "longevity clinics UAE",
+  ],
   metadataBase: new URL("https://kamuralife.com"),
   openGraph: {
     title: "KAMURA — Heart of Longevity & Wellness",
@@ -51,6 +63,7 @@ export const metadata: Metadata = {
     title: "KAMURA — Heart of Longevity & Wellness",
     description:
       "Discover the practices, places, and people transforming wellness in Dubai and beyond.",
+    creator: "@kamaborea",
   },
   verification: {
     google: "TULPYmvCJGmxRx1mLa17Qka0n_Y5jbdg-H-tAe2r65Y",

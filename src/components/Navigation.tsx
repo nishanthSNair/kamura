@@ -40,6 +40,9 @@ export default function Navigation() {
             <Link href="/" className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors">
               Blog
             </Link>
+            <Link href="/treatments" className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors">
+              Treatments
+            </Link>
             <Link href="/explore" className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors">
               Explore
             </Link>
@@ -124,6 +127,13 @@ export default function Navigation() {
               onClick={() => setMobileOpen(false)}
             >
               Blog
+            </Link>
+            <Link
+              href="/treatments"
+              className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors"
+              onClick={() => setMobileOpen(false)}
+            >
+              Treatments
             </Link>
             <Link
               href="/explore"

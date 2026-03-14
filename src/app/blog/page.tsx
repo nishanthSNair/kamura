@@ -11,6 +11,14 @@ export const metadata: Metadata = {
     description:
       "Expert guides on longevity, biohacking, holistic healing, and wellness in Dubai and the UAE.",
     url: "https://kamuralife.com/blog",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&h=630&fit=crop",
+        width: 1200,
+        height: 630,
+        alt: "Wellness Blog — KAMURA",
+      },
+    ],
   },
 };
 

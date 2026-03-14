@@ -17,6 +17,7 @@ const ALL_CATEGORIES: ListingCategory[] = [
   "Holistic & Healing",
   "Yoga & Movement",
   "Wellness Retreats & Spas",
+  "Nutrition & Supplements",
 ];
 
 export function generateStaticParams() {
@@ -34,6 +35,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: area.seoTitle,
       description: area.seoDescription,
+      images: [
+        {
+          url: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1200&h=630&fit=crop",
+          width: 1200,
+          height: 630,
+          alt: `Wellness in ${area.name} — KAMURA`,
+        },
+      ],
     },
   };
 }

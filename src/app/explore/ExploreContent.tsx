@@ -17,6 +17,7 @@ const ALL_CATEGORIES: ListingCategory[] = [
   "Holistic & Healing",
   "Yoga & Movement",
   "Wellness Retreats & Spas",
+  "Nutrition & Supplements",
 ];
 
 export default function ExploreContent() {

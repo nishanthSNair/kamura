@@ -3,6 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPostBySlug, getAllSlugs, getAllPosts, formatDate, blogCategoryColors } from "@/lib/blog";
+import { getTreatmentBySlug } from "@/data/treatments";
+import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
+import EvidenceLevelTag from "@/components/treatments/EvidenceLevelTag";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -92,14 +95,27 @@ export default async function BlogPostPage({ params }: Props) {
 
       <article className="pt-24">
         <header className="max-w-3xl mx-auto px-6 py-12 text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
+          <div className="flex items-center justify-center gap-3 flex-wrap mb-4">
             <span
               className={`text-xs px-2.5 py-1 rounded-full font-sans ${blogCategoryColors[post.category].bg} ${blogCategoryColors[post.category].text}`}
             >
               {post.category}
             </span>
+            {post.evidenceLevel && (
+              <EvidenceLevelTag level={post.evidenceLevel} />
+            )}
+            {post.depthIndicator && (
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 font-sans">
+                {post.depthIndicator}
+              </span>
+            )}
+            {post.medicallyReviewed && (
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 font-sans">
+                Medically Reviewed
+              </span>
+            )}
             <p className="text-xs text-gray-400 dark:text-gray-500 tracking-wide uppercase">
-              {formatDate(post.date)}
+              {formatDate(post.lastUpdated || post.date)}
             </p>
             <span className="text-gray-300 dark:text-gray-600">&middot;</span>
             <p className="text-xs text-gray-400 dark:text-gray-500 font-sans">
@@ -128,13 +144,44 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         )}
 
+        {/* Kamura Score Card */}
+        {post.kamuraScore && post.relatedTreatments && post.relatedTreatments.length > 0 && (() => {
+          const primaryTreatment = getTreatmentBySlug(post.relatedTreatments[0]);
+          if (!primaryTreatment) return null;
+          return (
+            <div className="max-w-3xl mx-auto px-6 mb-10">
+              <Link
+                href={`/treatments/${primaryTreatment.slug}`}
+                className="block border border-kamura-gold/30 rounded-xl p-5 bg-kamura-gold/5 hover:bg-kamura-gold/10 transition-colors"
+              >
+                <div className="flex items-center gap-4">
+                  <KamuraScoreBadge score={post.kamuraScore} size="md" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs text-kamura-gold uppercase tracking-wider font-sans font-semibold mb-1">
+                      Kamura Score
+                    </p>
+                    <p className="text-sm text-gray-700 dark:text-gray-300 font-sans">
+                      This article covers <strong>{primaryTreatment.name}</strong>
+                      {post.relatedTreatments.length > 1 && ` and ${post.relatedTreatments.length - 1} related treatment${post.relatedTreatments.length > 2 ? "s" : ""}`}.
+                      View the full treatment profile for evidence, scores, and protocols.
+                    </p>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-kamura-gold shrink-0">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </div>
+              </Link>
+            </div>
+          );
+        })()}
+
         {/* Table of Contents */}
         {post.headings.length > 2 && (
           <nav className="max-w-3xl mx-auto px-6 mb-10">
             <div className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-gray-50/50 dark:bg-gray-900/50">
-              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-3">
+              <h2 className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-3 font-normal">
                 In this article
-              </p>
+              </h2>
               <ul className="space-y-2">
                 {post.headings.map((heading) => (
                   <li
@@ -190,9 +237,9 @@ export default async function BlogPostPage({ params }: Props) {
         {relatedPosts.length > 0 && (
           <section className="border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50">
             <div className="max-w-6xl mx-auto px-6 py-16">
-              <h3 className="font-serif text-2xl text-gray-900 dark:text-gray-100 mb-8 text-center">
+              <h2 className="font-serif text-2xl text-gray-900 dark:text-gray-100 mb-8 text-center">
                 Continue Reading
-              </h3>
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10">
                 {relatedPosts.map((related) => (
                   <article key={related.slug}>

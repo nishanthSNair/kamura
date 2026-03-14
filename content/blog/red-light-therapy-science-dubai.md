@@ -4,6 +4,12 @@ date: "2026-02-27"
 category: "Biohacking"
 coverImage: "https://images.unsplash.com/photo-1576670159805-381a0b98650d?w=1200&q=80&fit=crop"
 excerpt: "Red light therapy is one of the most researched biohacking modalities available. We break down the wavelengths, the science, what the studies actually say, and the best studios in Dubai."
+kamuraScore: 78
+evidenceLevel: "Moderate"
+depthIndicator: "Evidence Review"
+relatedTreatments: ["red-light-therapy", "infrared-sauna"]
+medicallyReviewed: true
+lastUpdated: "2026-02-27"
 ---
 
 Red light therapy (also called photobiomodulation or low-level light therapy) has quietly become one of the most scientifically substantiated modalities in the biohacking and wellness world. Unlike many treatments that rely primarily on anecdotal evidence, red light therapy has a substantial and growing body of peer-reviewed research behind it — over 5,000 published studies and counting. It is non-invasive, has virtually no side effects, and is now widely available in Dubai's biohacking studios. Here is what you need to know.

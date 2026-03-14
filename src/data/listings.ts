@@ -24,7 +24,8 @@ export type ListingCategory =
   | "Biohacking & Performance"
   | "Holistic & Healing"
   | "Yoga & Movement"
-  | "Wellness Retreats & Spas";
+  | "Wellness Retreats & Spas"
+  | "Nutrition & Supplements";
 
 export const listingCategoryColors: Record<ListingCategory, { bg: string; text: string }> = {
   "Longevity Clinics": { bg: "bg-red-100", text: "text-red-700" },
@@ -32,6 +33,7 @@ export const listingCategoryColors: Record<ListingCategory, { bg: string; text: 
   "Holistic & Healing": { bg: "bg-emerald-100", text: "text-emerald-800" },
   "Yoga & Movement": { bg: "bg-purple-100", text: "text-purple-800" },
   "Wellness Retreats & Spas": { bg: "bg-rose-100", text: "text-rose-800" },
+  "Nutrition & Supplements": { bg: "bg-lime-100", text: "text-lime-800" },
 };
 
 export const categoryDescriptions: Record<ListingCategory, string> = {
@@ -45,6 +47,8 @@ export const categoryDescriptions: Record<ListingCategory, string> = {
     "Studios offering yoga, Pilates, and mindful movement practices in inspiring spaces across the UAE.",
   "Wellness Retreats & Spas":
     "Luxury wellness resorts and retreats offering immersive programs for detox, rejuvenation, and deep restoration.",
+  "Nutrition & Supplements":
+    "Health food stores, bone broth kitchens, kombucha brewers, and specialty shops fueling Dubai's clean-eating and longevity community.",
 };
 
 export const listings: Listing[] = listingsData.listings as Listing[];

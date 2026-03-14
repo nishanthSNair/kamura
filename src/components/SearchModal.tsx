@@ -2,31 +2,20 @@
 
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
-
-interface SearchItem {
-  type: "blog" | "listing" | "event";
-  title: string;
-  excerpt: string;
-  category: string;
-  url: string;
-}
+import {
+  type SearchItem,
+  TYPE_LABELS,
+  TYPE_COLORS,
+  TYPE_DISPLAY,
+  filterSearchItems,
+  groupSearchResults,
+  flattenGrouped,
+} from "@/lib/search-utils";
 
 interface SearchModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
-const TYPE_LABELS: Record<string, string> = {
-  listing: "LISTINGS",
-  blog: "ARTICLES",
-  event: "EVENTS",
-};
-
-const TYPE_COLORS: Record<string, string> = {
-  listing: "bg-terracotta/10 text-terracotta",
-  blog: "bg-blue-100 text-blue-800",
-  event: "bg-emerald-100 text-emerald-800",
-};
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const [query, setQuery] = useState("");
@@ -53,6 +42,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         .then((r) => r.json())
         .then((data) => {
           const all: SearchItem[] = [
+            ...(data.treatments || []),
             ...data.listings,
             ...data.posts,
             ...data.events,
@@ -92,32 +82,14 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     };
   }, [isOpen, stableOnClose]);
 
-  const results = useMemo(() =>
-    debouncedQuery.trim().length < 2
-      ? []
-      : index.filter((item) => {
-          const q = debouncedQuery.toLowerCase();
-          return (
-            item.title.toLowerCase().includes(q) ||
-            item.excerpt.toLowerCase().includes(q) ||
-            item.category.toLowerCase().includes(q)
-          );
-        }),
+  const results = useMemo(
+    () => filterSearchItems(index, debouncedQuery),
     [debouncedQuery, index]
   );
 
-  const grouped = useMemo(() => ({
-    listing: results.filter((r) => r.type === "listing").slice(0, 5),
-    blog: results.filter((r) => r.type === "blog").slice(0, 5),
-    event: results.filter((r) => r.type === "event").slice(0, 5),
-  }), [results]);
+  const grouped = useMemo(() => groupSearchResults(results, 5), [results]);
 
-  // Flat list of all visible results for keyboard navigation
-  const flatResults = useMemo(() => [
-    ...grouped.listing,
-    ...grouped.blog,
-    ...grouped.event,
-  ], [grouped]);
+  const flatResults = useMemo(() => flattenGrouped(grouped), [grouped]);
 
   const hasResults = flatResults.length > 0;
 
@@ -247,7 +219,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
           {hasResults && (
             <div className="py-2">
-              {(["listing", "blog", "event"] as const).map((type) => {
+              {(["treatment", "listing", "blog", "event"] as const).map((type) => {
                 const items = grouped[type];
                 if (items.length === 0) return null;
                 return (
@@ -275,11 +247,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                           <span
                             className={`text-[10px] px-2 py-0.5 rounded-full font-sans shrink-0 mt-0.5 ${TYPE_COLORS[type]}`}
                           >
-                            {item.type === "listing"
-                              ? "Place"
-                              : item.type === "blog"
-                                ? "Article"
-                                : "Event"}
+                            {TYPE_DISPLAY[item.type]}
                           </span>
                           <div className="min-w-0">
                             <p className="text-sm font-medium text-gray-900 dark:text-gray-100 font-sans truncate">

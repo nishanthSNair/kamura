@@ -5,6 +5,13 @@
   --color-foreground: #171717;
   --color-terracotta: #B5736A;
   --color-terracotta-dark: #9A5F57;
+  --color-kamura-gold: #C4956A;
+  --color-score-green: #4ADE80;
+  --color-score-yellow: #FACC15;
+  --color-score-orange: #FB923C;
+  --color-score-red: #F87171;
+  --color-score-blue: #60A5FA;
+  --color-score-purple: #A78BFA;
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
 }
@@ -86,4 +93,12 @@ h1, h2, h3, h4, h5, h6 {
   --tw-prose-hr: #404040;
   --tw-prose-th-borders: #404040;
   --tw-prose-td-borders: #303030;
+}
+
+/* Hide scrollbar for horizontal carousels */
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

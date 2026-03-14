@@ -7,7 +7,11 @@ import {
   type BlogCategory,
   blogCategoryColors,
   formatDate,
+  type DepthIndicator,
 } from "@/lib/blog-shared";
+import type { EvidenceLevel } from "@/data/treatments";
+import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
+import EvidenceLevelTag from "@/components/treatments/EvidenceLevelTag";
 
 interface Post {
   slug: string;
@@ -17,6 +21,9 @@ interface Post {
   category: BlogCategory;
   coverImage?: string;
   readingTime: number;
+  kamuraScore?: number;
+  evidenceLevel?: EvidenceLevel;
+  depthIndicator?: DepthIndicator;
 }
 
 const ALL_CATEGORIES: BlogCategory[] = [
@@ -80,12 +87,20 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
                   />
                 </Link>
               )}
-              <div className="flex items-center gap-3 mb-3">
+              <div className="flex items-center gap-2 flex-wrap mb-3">
                 <span
                   className={`text-xs px-2.5 py-1 rounded-full font-sans ${colors.bg} ${colors.text}`}
                 >
                   {post.category}
                 </span>
+                {post.evidenceLevel && (
+                  <EvidenceLevelTag level={post.evidenceLevel} />
+                )}
+                {post.depthIndicator && (
+                  <span className="text-[10px] px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 font-sans">
+                    {post.depthIndicator}
+                  </span>
+                )}
                 <span className="text-xs text-gray-400 dark:text-gray-500 tracking-wide uppercase">
                   {formatDate(post.date)}
                 </span>
@@ -111,6 +126,11 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
                 <span className="text-xs text-gray-400 dark:text-gray-500 font-sans">
                   {post.readingTime} min read
                 </span>
+                {post.kamuraScore && (
+                  <div className="ml-auto">
+                    <KamuraScoreBadge score={post.kamuraScore} size="sm" />
+                  </div>
+                )}
               </div>
             </article>
           );
