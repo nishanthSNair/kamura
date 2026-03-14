@@ -57,7 +57,7 @@ export default function TopTreatmentsCarousel({ treatments }: TopTreatmentsCarou
           <Link
             key={t.slug}
             href={`/treatments/${t.slug}`}
-            className="min-w-[220px] w-[220px] snap-start bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/[0.06] rounded-xl p-5 hover:border-kamura-gold/30 transition-all shrink-0"
+            className="min-w-[220px] w-[220px] snap-start bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/[0.06] rounded-xl p-5 shadow-sm hover:shadow-md hover:border-kamura-gold/30 transition-all shrink-0"
           >
             <div className="flex items-start justify-between mb-3">
               <span className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xl bg-gray-100 dark:bg-[#242424]">

@@ -21,7 +21,7 @@ export default function FeaturedClinics({ clinics }: FeaturedClinicsProps) {
         <Link
           key={clinic.id}
           href={`/explore/${clinic.id}`}
-          className="group border border-gray-200 dark:border-white/[0.06] rounded-xl p-6 hover:border-terracotta/30 transition-all bg-white dark:bg-[#1a1a1a]"
+          className="group bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/[0.06] rounded-xl p-6 shadow-sm hover:shadow-md hover:border-terracotta/30 transition-all"
         >
           <div className="flex items-start justify-between mb-3">
             <h3 className="font-sans font-semibold text-[15px] text-gray-900 dark:text-[#F5F0EB] leading-tight">

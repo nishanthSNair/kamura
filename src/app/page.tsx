@@ -95,16 +95,16 @@ export default function Home() {
       />
 
       {/* Hero — Search-Centric */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20">
+      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-b from-stone-50 to-white dark:from-[#0f0f0f] dark:to-[#0f0f0f]">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <span className="inline-block px-4 py-1.5 bg-kamura-gold/10 border border-kamura-gold/25 rounded-full text-[11px] font-semibold text-kamura-gold uppercase tracking-[0.12em] mb-6 font-sans">
+          <span className="inline-block px-4 py-1.5 bg-kamura-gold/15 border border-kamura-gold/30 rounded-full text-[11px] font-semibold text-kamura-gold uppercase tracking-[0.12em] mb-6 font-sans">
             The World&apos;s First Unbiased Wellness Intelligence Platform
           </span>
           <h1 className="font-serif text-4xl md:text-[52px] font-bold leading-[1.15] mb-5 text-gray-900 dark:text-[#F5F0EB]">
             Every Wellness Treatment.{" "}
             <span className="text-terracotta">Scored.</span> Transparent.
           </h1>
-          <p className="text-lg text-gray-500 dark:text-[#A89F95] max-w-[580px] mx-auto leading-relaxed font-sans mb-10">
+          <p className="text-lg text-gray-600 dark:text-[#A89F95] max-w-[580px] mx-auto leading-relaxed font-sans mb-10">
             Search {treatments.length}+ treatments, {listings.length}+ clinics,
             and evidence-based articles — all scored on real data, not marketing.
           </p>
@@ -124,7 +124,7 @@ export default function Home() {
       </section>
 
       {/* Browse by Category */}
-      <section className="border-t border-gray-100 dark:border-gray-800">
+      <section className="border-t border-gray-200/60 dark:border-gray-800">
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
           <div className="mb-8">
             <p className="text-xs tracking-[0.3em] uppercase mb-3 text-terracotta font-sans">
@@ -140,7 +140,7 @@ export default function Home() {
       </section>
 
       {/* Top Scored Treatments */}
-      <section className="border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/30">
+      <section className="border-t border-gray-200/60 dark:border-gray-800 bg-stone-50 dark:bg-gray-900/30">
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
           <div className="flex items-end justify-between mb-8">
             <div>
@@ -172,7 +172,7 @@ export default function Home() {
       </section>
 
       {/* Featured Clinics */}
-      <section className="border-t border-gray-100 dark:border-gray-800">
+      <section className="border-t border-gray-200/60 dark:border-gray-800">
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
           <div className="flex items-end justify-between mb-8">
             <div>
@@ -204,12 +204,12 @@ export default function Home() {
       </section>
 
       {/* Latest Articles */}
-      <section className="border-t border-gray-100 dark:border-gray-800">
+      <section className="border-t border-gray-200/60 dark:border-gray-800 bg-stone-50 dark:bg-transparent">
         <BlogGrid posts={posts} />
       </section>
 
       {/* Wellness Quiz CTA */}
-      <section className="border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50">
+      <section className="border-t border-gray-200/60 dark:border-gray-800 bg-white dark:bg-gray-900/50">
         <div className="max-w-4xl mx-auto px-6 py-20 md:py-24">
           <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
             <div className="flex-1 text-center md:text-left">
@@ -250,7 +250,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="border-t border-gray-100 dark:border-gray-800">
+      <section className="border-t border-gray-200/60 dark:border-gray-800 bg-stone-50 dark:bg-transparent">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
           <div className="mb-12">
             <p className="text-xs tracking-[0.3em] uppercase mb-4 text-terracotta font-sans">
