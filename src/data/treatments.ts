@@ -45,6 +45,15 @@ export interface TreatmentProtocol {
   notes: string;
 }
 
+export interface KeyStudy {
+  title: string;
+  authors: string;
+  journal: string;
+  year: number;
+  pmid?: string;
+  finding: string;
+}
+
 export interface Treatment {
   slug: string;
   name: string;
@@ -52,6 +61,7 @@ export interface Treatment {
   category: TreatmentCategory;
   description: string;
   icon: string;
+  imageUrl: string;
   kamuraScore: number;
   scores: {
     research: number;
@@ -69,6 +79,7 @@ export interface Treatment {
   outcomes: TreatmentOutcome[];
   community: TreatmentCommunity;
   protocols: TreatmentProtocol[];
+  keyStudies: KeyStudy[];
   relatedSlugs: string[];
 }
 

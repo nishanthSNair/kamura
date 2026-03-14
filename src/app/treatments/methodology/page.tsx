@@ -125,13 +125,13 @@ export default function MethodologyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <article className="pt-24 pb-20">
+      <article className="pt-24 pb-20 zen-pattern">
         {/* Breadcrumb */}
         <nav className="max-w-3xl mx-auto px-6 mb-8">
           <div className="flex items-center gap-2 text-sm text-gray-400 dark:text-[#6B6560] font-sans">
-            <Link href="/" className="hover:text-kamura-gold transition-colors">Home</Link>
+            <Link href="/" className="hover:text-moss transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/treatments" className="hover:text-kamura-gold transition-colors">Treatments</Link>
+            <Link href="/treatments" className="hover:text-moss transition-colors">Treatments</Link>
             <span>/</span>
             <span className="text-gray-600 dark:text-[#A89F95]">Methodology</span>
           </div>
@@ -139,7 +139,7 @@ export default function MethodologyPage() {
 
         {/* Header */}
         <header className="max-w-3xl mx-auto px-6 text-center mb-12">
-          <p className="text-xs tracking-[0.3em] uppercase mb-4 text-kamura-gold font-sans font-semibold">
+          <p className="text-xs tracking-[0.3em] uppercase mb-4 text-moss dark:text-sage font-sans font-semibold">
             Full Transparency
           </p>
           <h1 className="font-serif text-3xl md:text-5xl text-gray-900 dark:text-[#F5F0EB] leading-tight mb-4">
@@ -148,7 +148,7 @@ export default function MethodologyPage() {
           <p className="text-lg text-gray-500 dark:text-[#A89F95] font-sans leading-relaxed max-w-xl mx-auto">
             A transparent, composite scoring system calculated from 5 weighted factors. No sponsorships. No pay-to-rank. Just data.
           </p>
-          <div className="w-12 h-px bg-kamura-gold/40 mx-auto mt-8" />
+          <div className="w-12 h-px bg-sage/40 mx-auto mt-8" />
         </header>
 
         {/* Formula */}
@@ -327,7 +327,7 @@ export default function MethodologyPage() {
         <section className="max-w-3xl mx-auto px-6 text-center">
           <Link
             href="/treatments"
-            className="inline-block bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-8 py-3 text-sm tracking-[0.1em] uppercase hover:bg-terracotta dark:hover:bg-terracotta dark:hover:text-white transition-colors font-sans"
+            className="inline-block bg-moss text-white px-8 py-3 text-sm tracking-[0.1em] uppercase hover:bg-forest transition-colors font-sans"
           >
             Explore the Treatment Index
           </Link>

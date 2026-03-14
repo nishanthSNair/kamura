@@ -2,37 +2,25 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { treatments, getScoreColor, getScoreTier, getScoreTierColor, ALL_TREATMENT_CATEGORIES, type TreatmentCategory, type Treatment } from "@/data/treatments";
 import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
 import EvidenceLevelTag from "@/components/treatments/EvidenceLevelTag";
-import SubScoreBar from "@/components/treatments/SubScoreBar";
 import FilterChip from "@/components/treatments/FilterChip";
 
 type SortOption = "score" | "evidence" | "community" | "safety" | "name";
 
 const CATEGORY_FILTERS: (TreatmentCategory | "All")[] = [
   "All",
-  "Peptides",
-  "GLP-1 & Weight Management",
-  "Hormones",
+  "Holistic & Mind-Body",
   "Devices & Biohacking",
   "Supplements",
-  "Holistic & Mind-Body",
+  "Peptides",
+  "Hormones",
+  "GLP-1 & Weight Management",
   "Detox & Functional",
 ];
-
-function getSubLabel(value: number): string {
-  if (value >= 85) return "V.High";
-  if (value >= 70) return "High";
-  if (value >= 50) return "Mod.";
-  if (value >= 30) return "Low";
-  return "V.Low";
-}
-
-function getEvidenceLabel(level: string): string {
-  return level;
-}
 
 export default function TreatmentsContent() {
   const searchParams = useSearchParams();
@@ -89,31 +77,39 @@ export default function TreatmentsContent() {
   }, [searchQuery, activeCategory, sortBy]);
 
   return (
-    <div className="pt-20">
-      {/* Hero */}
-      <section className="max-w-[1200px] mx-auto px-6 pt-16 pb-12 text-center">
-        <span className="inline-block px-4 py-1.5 bg-kamura-gold/15 border border-kamura-gold/30 rounded-full text-xs font-semibold text-kamura-gold uppercase tracking-[1.5px] mb-6 font-sans">
-          The World&apos;s First Unbiased Wellness Intelligence Platform
-        </span>
-        <h1 className="font-serif text-4xl md:text-[52px] font-bold leading-tight mb-5 text-gray-900 dark:text-[#F5F0EB]">
-          Every Treatment. Scored. Transparent.
-        </h1>
-        <p className="text-lg text-gray-500 dark:text-[#A89F95] max-w-[700px] mx-auto leading-relaxed font-sans mb-8">
-          We index every wellness and longevity treatment, score them on real evidence,
-          community experience, safety, and accessibility — so you can make decisions
-          based on truth, not marketing.
-        </p>
-        <Link
-          href="/treatments/methodology"
-          className="inline-flex items-center gap-2 text-sm text-kamura-gold hover:text-kamura-gold/80 transition-colors font-sans font-medium"
-        >
-          How we calculate the Kamura Score &rarr;
-        </Link>
+    <div>
+      {/* Nature Hero */}
+      <section className="relative min-h-[50vh] flex items-center justify-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/60 via-black/30 to-forest/50" />
+
+        <div className="relative z-10 text-center px-6 py-20">
+          <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-xs font-semibold text-white/90 uppercase tracking-[1.5px] mb-6 font-sans">
+            Evidence-Based Wellness Intelligence
+          </span>
+          <h1 className="font-serif text-4xl md:text-[52px] font-bold leading-tight mb-5 text-white">
+            Every Treatment. Scored. Transparent.
+          </h1>
+          <p className="text-lg text-white/75 max-w-[700px] mx-auto leading-relaxed font-sans mb-8">
+            We index every wellness and longevity treatment, score them on real evidence,
+            community experience, safety, and accessibility — so you can make decisions
+            based on truth, not marketing.
+          </p>
+          <Link
+            href="/treatments/methodology"
+            className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors font-sans font-medium"
+          >
+            How we calculate the Kamura Score &rarr;
+          </Link>
+        </div>
       </section>
 
       {/* Kamura Score Explainer */}
-      <section className="max-w-[1200px] mx-auto px-6 mb-16">
-        <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10 grid md:grid-cols-2 gap-8 md:gap-10">
+      <section className="max-w-[1200px] mx-auto px-6 -mt-12 relative z-10 mb-16">
+        <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10 grid md:grid-cols-2 gap-8 md:gap-10 shadow-lg">
           <div>
             <h2 className="font-serif text-2xl md:text-[28px] text-gray-900 dark:text-[#F5F0EB] mb-4">
               A score you can trust
@@ -157,7 +153,7 @@ export default function TreatmentsContent() {
             ].map((factor) => (
               <div
                 key={factor.label}
-                className="bg-gray-50 dark:bg-[#242424] border border-gray-200 dark:border-white/[0.06] rounded-xl px-4 py-3 flex items-start gap-3"
+                className="bg-zen-mist/50 dark:bg-forest/10 border border-sage-light/60 dark:border-forest/20 rounded-xl px-4 py-3 flex items-start gap-3"
               >
                 <span className={`w-10 h-10 rounded-[10px] flex items-center justify-center text-lg shrink-0 ${factor.colorClass}`}>
                   {factor.icon}
@@ -170,7 +166,7 @@ export default function TreatmentsContent() {
                     {factor.desc}
                   </div>
                 </div>
-                <span className="text-[13px] font-bold text-kamura-gold shrink-0 font-sans">
+                <span className="text-[13px] font-bold text-moss dark:text-sage shrink-0 font-sans">
                   {factor.weight}
                 </span>
               </div>
@@ -181,7 +177,7 @@ export default function TreatmentsContent() {
 
       {/* Section Label */}
       <section className="max-w-[1200px] mx-auto px-6 mb-4">
-        <p className="text-xs tracking-[0.3em] uppercase mb-2 text-kamura-gold font-sans font-semibold">
+        <p className="text-xs tracking-[0.3em] uppercase mb-2 text-moss dark:text-sage font-sans font-semibold">
           Treatment Index
         </p>
         <h2 className="font-serif text-2xl md:text-[32px] text-gray-900 dark:text-[#F5F0EB]">
@@ -193,14 +189,14 @@ export default function TreatmentsContent() {
       </section>
 
       {/* Filter & Search */}
-      <section className="max-w-[1200px] mx-auto px-6 mb-6">
+      <section className="max-w-[1200px] mx-auto px-6 mb-8">
         <div className="flex flex-wrap gap-3 items-center">
           <input
             type="text"
             placeholder="Search treatments, compounds, or conditions..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="flex-1 min-w-[280px] bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl px-4 py-3 text-sm text-gray-900 dark:text-[#F5F0EB] placeholder:text-gray-400 dark:placeholder:text-[#6B6560] outline-none focus:border-kamura-gold/30 font-sans"
+            className="flex-1 min-w-[280px] bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl px-4 py-3 text-sm text-gray-900 dark:text-[#F5F0EB] placeholder:text-gray-400 dark:placeholder:text-[#6B6560] outline-none focus:border-sage/60 focus:ring-1 focus:ring-sage/20 font-sans"
           />
           {CATEGORY_FILTERS.map((cat) => (
             <FilterChip
@@ -227,22 +223,11 @@ export default function TreatmentsContent() {
         </p>
       </section>
 
-      {/* Treatment Table — Desktop */}
+      {/* Treatment Image Card Grid */}
       <section className="max-w-[1200px] mx-auto px-6 pb-20">
-        {/* Column Headers (desktop only) */}
-        <div className="hidden lg:grid grid-cols-[2.5fr_120px_100px_100px_100px_100px_50px] gap-2 px-5 py-3 text-[11px] font-semibold text-gray-400 dark:text-[#6B6560] uppercase tracking-wider font-sans">
-          <span>Treatment</span>
-          <span className="text-center">Kamura Score</span>
-          <span className="text-center">Evidence</span>
-          <span className="text-center">Community</span>
-          <span className="text-center">Safety</span>
-          <span className="text-center">Access</span>
-          <span />
-        </div>
-
-        <div className="flex flex-col gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((t) => (
-            <TreatmentRow key={t.slug} treatment={t} />
+            <TreatmentCard key={t.slug} treatment={t} />
           ))}
         </div>
 
@@ -258,71 +243,76 @@ export default function TreatmentsContent() {
   );
 }
 
-function TreatmentRow({ treatment: t }: { treatment: Treatment }) {
-  const evidenceColor = getScoreColor(t.scores.research);
-  const communityColor = getScoreColor(t.scores.community);
-  const safetyColor = getScoreColor(t.scores.safety);
-  const accessColor = getScoreColor(t.scores.accessibility);
-
+function TreatmentCard({ treatment: t }: { treatment: Treatment }) {
   return (
-    <Link href={`/treatments/${t.slug}`}>
-      {/* Desktop Row */}
-      <div className="hidden lg:grid grid-cols-[2.5fr_120px_100px_100px_100px_100px_50px] gap-2 items-center px-5 py-4 bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl hover:border-kamura-gold/30 hover:bg-gray-50 dark:hover:bg-[#242424] transition-all cursor-pointer group">
-        {/* Info */}
-        <div className="flex items-center gap-3">
-          <span className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xl bg-gray-100 dark:bg-[#242424] shrink-0">
-            {t.icon}
+    <Link
+      href={`/treatments/${t.slug}`}
+      className="group bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl overflow-hidden hover:border-sage/40 hover:shadow-lg transition-all"
+    >
+      {/* Image */}
+      <div className="relative h-40 overflow-hidden">
+        <Image
+          src={t.imageUrl}
+          alt={t.name}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+
+        {/* Score Badge overlay */}
+        <div className="absolute top-3 right-3">
+          <KamuraScoreBadge score={t.kamuraScore} size="sm" />
+        </div>
+
+        {/* Category badge overlay */}
+        <div className="absolute bottom-3 left-3">
+          <span className="px-2.5 py-1 bg-black/40 backdrop-blur-sm rounded-full text-[11px] font-semibold text-white/90 font-sans">
+            {t.category}
           </span>
-          <div className="min-w-0">
-            <div className="font-semibold text-[15px] text-gray-900 dark:text-[#F5F0EB] font-sans truncate">
-              {t.name}
-            </div>
-            <div className="text-[11px] text-gray-400 dark:text-[#6B6560] uppercase tracking-wide font-sans truncate">
-              {t.category} &bull; {t.tags.join(" · ")}
-            </div>
-          </div>
         </div>
-
-        {/* Score */}
-        <div className="flex justify-center">
-          <KamuraScoreBadge score={t.kamuraScore} size="md" />
-        </div>
-
-        {/* Sub-scores */}
-        <SubScoreBar value={t.scores.research} label={getEvidenceLabel(t.evidenceLevel)} color={evidenceColor} />
-        <SubScoreBar value={t.scores.community} label={`${t.community.positivePercent}%`} color={communityColor} />
-        <SubScoreBar value={t.scores.safety} label={getSubLabel(t.scores.safety)} color={safetyColor} />
-        <SubScoreBar value={t.scores.accessibility} label={getSubLabel(t.scores.accessibility)} color={accessColor} />
-
-        {/* Arrow */}
-        <span className="text-center text-gray-300 dark:text-[#6B6560] text-lg group-hover:text-kamura-gold transition-colors">
-          ›
-        </span>
       </div>
 
-      {/* Mobile Card */}
-      <div className="lg:hidden bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl p-4 hover:border-kamura-gold/30 transition-all cursor-pointer">
-        <div className="flex items-start gap-3">
-          <span className="w-11 h-11 rounded-[10px] flex items-center justify-center text-xl bg-gray-100 dark:bg-[#242424] shrink-0">
-            {t.icon}
-          </span>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center justify-between gap-2">
-              <div className="font-semibold text-[15px] text-gray-900 dark:text-[#F5F0EB] font-sans truncate">
-                {t.name}
-              </div>
-              <KamuraScoreBadge score={t.kamuraScore} size="sm" />
-            </div>
-            <div className="text-[11px] text-gray-400 dark:text-[#6B6560] uppercase tracking-wide font-sans mt-0.5">
-              {t.category} &bull; {t.tags.join(" · ")}
-            </div>
-            <div className="flex items-center gap-3 mt-3">
-              <EvidenceLevelTag level={t.evidenceLevel} />
-              <span className="text-xs text-gray-400 dark:text-[#6B6560] font-sans">
-                {t.community.positivePercent}% positive &bull; {t.communityReports} reports
-              </span>
-            </div>
+      {/* Content */}
+      <div className="p-4">
+        <div className="flex items-start gap-2 mb-2">
+          <span className="text-lg">{t.icon}</span>
+          <div className="min-w-0 flex-1">
+            <h3 className="font-semibold text-[15px] text-gray-900 dark:text-[#F5F0EB] font-sans truncate">
+              {t.name}
+            </h3>
+            {t.fullName !== t.name && (
+              <p className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans truncate">
+                {t.fullName}
+              </p>
+            )}
           </div>
+        </div>
+
+        <p className="text-xs text-gray-500 dark:text-[#A89F95] font-sans leading-relaxed mb-3 line-clamp-2">
+          {t.description}
+        </p>
+
+        <div className="flex items-center gap-2 flex-wrap mb-3">
+          <EvidenceLevelTag level={t.evidenceLevel} />
+          <span className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans">
+            {t.studyCount}+ studies
+          </span>
+          <span className="text-gray-300 dark:text-gray-600">&bull;</span>
+          <span className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans">
+            {t.community.positivePercent}% positive
+          </span>
+        </div>
+
+        <div className="flex flex-wrap gap-1.5">
+          {t.tags.map((tag) => (
+            <span
+              key={tag}
+              className="px-2 py-0.5 bg-zen-mist dark:bg-forest/20 text-[10px] text-gray-500 dark:text-gray-400 rounded-full font-sans"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
     </Link>
