@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme inline {
   --color-background: #ffffff;
@@ -60,45 +61,45 @@ h1, h2, h3, h4, h5, h6 {
   background: #f9fafb;
 }
 
-/* Blog prose — paragraph spacing */
-.prose p {
-  margin-bottom: 1.5em;
-  line-height: 1.85;
+/* Blog prose — paragraph spacing (override typography defaults) */
+.prose :where(p) {
+  margin-bottom: 1.5em !important;
+  line-height: 1.85 !important;
 }
 
 /* Blog prose — heading spacing */
-.prose h2 {
-  margin-top: 2.5em;
-  margin-bottom: 0.75em;
+.prose :where(h2) {
+  margin-top: 2.5em !important;
+  margin-bottom: 0.75em !important;
 }
-.prose h3 {
-  margin-top: 2em;
-  margin-bottom: 0.5em;
+.prose :where(h3) {
+  margin-top: 2em !important;
+  margin-bottom: 0.5em !important;
 }
 
 /* Blog prose — ordered lists spacing */
-.prose ol > li {
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
+.prose :where(ol > li) {
+  margin-top: 0.75em !important;
+  margin-bottom: 0.75em !important;
   padding-left: 0.5em;
 }
-.prose ul > li {
-  margin-top: 0.6em;
-  margin-bottom: 0.6em;
+.prose :where(ul > li) {
+  margin-top: 0.6em !important;
+  margin-bottom: 0.6em !important;
   padding-left: 0.25em;
 }
 
 /* Nested list tighter */
-.prose li > ul,
-.prose li > ol {
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
+.prose :where(li > ul),
+.prose :where(li > ol) {
+  margin-top: 0.4em !important;
+  margin-bottom: 0.4em !important;
 }
 
 /* Space between list and following paragraph */
-.prose ul + p,
-.prose ol + p {
-  margin-top: 1.5em;
+.prose :where(ul + p),
+.prose :where(ol + p) {
+  margin-top: 1.5em !important;
 }
 
 /* Blog prose — strong/bold in lists for better readability */
