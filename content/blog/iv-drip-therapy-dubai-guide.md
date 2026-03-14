@@ -4,6 +4,12 @@ date: "2026-02-21"
 category: "Biohacking"
 coverImage: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=1200&q=80&fit=crop"
 excerpt: "IV drip therapy has become one of Dubai's most popular wellness treatments. We break down the most common formulas, where to get them, what they cost, and whether they're worth it."
+kamuraScore: 79
+evidenceLevel: "Moderate"
+depthIndicator: "Deep Dive"
+relatedTreatments: ["iv-drip-therapy", "nad-injectable"]
+medicallyReviewed: true
+lastUpdated: "2026-01-02"
 ---
 
 Walk into almost any wellness clinic or biohacking studio in Dubai and you'll see IV drip therapy on the menu. What started as a medical intervention for dehydrated hospital patients has become one of the city's most mainstream wellness treatments — used by everyone from jet-lagged executives to weekend warriors recovering from a workout.

@@ -4,6 +4,11 @@ date: "2026-02-20"
 category: "Guides & Reviews"
 coverImage: "https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=1200&q=80&fit=crop"
 excerpt: "You don't need to fly to Bali for a wellness escape. The UAE has world-class retreats right on your doorstep — from desert sanctuaries to oceanfront resorts. Here are the best."
+kamuraScore: 80
+evidenceLevel: "Moderate"
+depthIndicator: "Comparison"
+relatedTreatments: ["yoga", "meditation", "breathwork"]
+lastUpdated: "2026-02-05"
 ---
 
 Dubai is full of day spas and wellness centers, but sometimes you need more than a 60-minute treatment. A proper retreat — where you unplug, follow a structured program, and give your body and mind real time to reset — is a different experience entirely.

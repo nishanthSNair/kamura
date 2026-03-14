@@ -4,6 +4,11 @@ date: "2026-02-22"
 category: "Holistic & Healing"
 coverImage: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=1200&q=80&fit=crop"
 excerpt: "From guided sessions in JLT to transcendental meditation in Al Quoz, Dubai has a growing network of meditation spaces. Here's where to practice, what styles to try, and what it costs."
+kamuraScore: 86
+evidenceLevel: "Strong"
+depthIndicator: "Comparison"
+relatedTreatments: ["meditation", "breathwork"]
+lastUpdated: "2026-01-08"
 ---
 
 Dubai is a city of noise, ambition, and constant stimulation. Perhaps that's exactly why its meditation scene is growing so quickly. More residents are discovering that 20 minutes of structured stillness can do more for their energy, focus, and emotional resilience than another hour in the gym.

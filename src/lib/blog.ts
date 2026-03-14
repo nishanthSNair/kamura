@@ -30,6 +30,7 @@ export interface BlogPost {
   relatedTreatments?: string[];
   medicallyReviewed?: boolean;
   lastUpdated?: string;
+  faqItems?: { question: string; answer: string }[];
 }
 
 export function getAllPosts(): Omit<BlogPost, "content" | "headings">[] {
@@ -126,6 +127,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     ...(data.relatedTreatments && { relatedTreatments: data.relatedTreatments }),
     ...(data.medicallyReviewed && { medicallyReviewed: data.medicallyReviewed }),
     ...(data.lastUpdated && { lastUpdated: data.lastUpdated }),
+    ...(data.faqItems && { faqItems: data.faqItems }),
   };
 }
 

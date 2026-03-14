@@ -4,6 +4,10 @@ date: "2026-03-10"
 category: "Guides & Reviews"
 coverImage: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=1200&q=80&fit=crop"
 excerpt: "Water quality is a hot topic in Dubai's wellness community. We compare Kangen, reverse osmosis, WISEWELL, and other filtration systems to help you choose."
+kamuraScore: 65
+evidenceLevel: "Limited"
+depthIndicator: "Deep Dive"
+lastUpdated: "2025-12-18"
 ---
 
 Few topics generate as much debate in Dubai's wellness community as water. Every week, the same questions surface: *Is Dubai tap water safe? Should I invest in Kangen? What about reverse osmosis? Is alkaline water worth it?*

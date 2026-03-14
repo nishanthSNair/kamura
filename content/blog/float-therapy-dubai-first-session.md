@@ -4,6 +4,11 @@ date: "2026-03-03"
 category: "Holistic & Healing"
 coverImage: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1200&q=80&fit=crop"
 excerpt: "Sensory deprivation tanks are gaining popularity across Dubai. Here's your complete guide to float therapy — what happens during a session, the science behind it, and where to book."
+kamuraScore: 76
+evidenceLevel: "Moderate"
+depthIndicator: "Protocol"
+relatedTreatments: ["float-therapy"]
+lastUpdated: "2026-01-18"
 ---
 
 Float therapy, also known as sensory deprivation or isolation tank therapy, is one of the most underrated wellness modalities available in Dubai. In a city defined by constant stimulation — noise, screens, traffic, social demands — float therapy offers the opposite: an environment of near-total sensory stillness. For 60 to 90 minutes, you float effortlessly in a dark, soundproof tank filled with warm, heavily salted water. The result is a state of deep physical and mental rest that many people describe as unlike anything else they have experienced.

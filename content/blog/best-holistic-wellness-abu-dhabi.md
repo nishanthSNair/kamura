@@ -4,6 +4,11 @@ date: "2026-02-18"
 category: "Guides & Reviews"
 coverImage: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1200&q=80&fit=crop"
 excerpt: "Abu Dhabi is home to some of the UAE's most beautiful wellness spaces. From Ayurvedic retreats to integrative health centers, here are our top picks."
+kamuraScore: 82
+evidenceLevel: "Moderate"
+depthIndicator: "Comparison"
+relatedTreatments: ["yoga", "meditation", "acupuncture", "ayurveda"]
+lastUpdated: "2026-02-15"
 ---
 
 While Dubai often takes the spotlight for wellness and lifestyle, Abu Dhabi has quietly built a remarkable wellness scene of its own. The capital offers a unique blend of luxury, tradition, and nature that makes it an ideal setting for holistic healing.

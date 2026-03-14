@@ -4,6 +4,11 @@ date: "2026-01-20"
 category: "News & Trends"
 coverImage: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1200&q=80&fit=crop"
 excerpt: "From cold plunge pools to AI-driven health diagnostics, Dubai's wellness scene is evolving fast. Here are the trends shaping how we live, heal, and thrive this year."
+kamuraScore: 80
+evidenceLevel: "Moderate"
+depthIndicator: "Evidence Review"
+relatedTreatments: ["red-light-therapy", "breathwork", "cold-plunge"]
+lastUpdated: "2026-01-15"
 ---
 
 Dubai's wellness industry continues to push boundaries. As we move through 2026, several exciting trends are reshaping how residents and visitors approach health, healing, and longevity.

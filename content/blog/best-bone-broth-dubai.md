@@ -4,6 +4,11 @@ date: "2026-03-12"
 category: "Guides & Reviews"
 coverImage: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=1200&q=80&fit=crop"
 excerpt: "Bone broth is a staple in Dubai's wellness community — for gut healing, fasting, and daily nutrition. Here's where to find the best bone broth in the city."
+kamuraScore: 68
+evidenceLevel: "Emerging"
+depthIndicator: "Comparison"
+relatedTreatments: ["functional-mushrooms", "magnesium"]
+lastUpdated: "2025-12-25"
 ---
 
 Walk into any longevity-focused kitchen in Dubai and you'll likely find bone broth simmering on the stove — or stacked in the freezer. It's become a non-negotiable staple for the city's wellness community, recommended for everything from gut healing to breaking intermittent fasts.

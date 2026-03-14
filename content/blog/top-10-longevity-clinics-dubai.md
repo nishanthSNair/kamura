@@ -4,6 +4,11 @@ date: "2026-03-10"
 category: "Guides & Reviews"
 coverImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80&fit=crop"
 excerpt: "Dubai is fast becoming a global hub for longevity medicine. We've curated the best clinics offering cutting-edge treatments from NAD+ therapy to full-body diagnostics."
+kamuraScore: 85
+evidenceLevel: "Moderate"
+depthIndicator: "Deep Dive"
+relatedTreatments: ["nad-injectable", "hyperbaric-oxygen", "iv-drip-therapy", "cryotherapy"]
+lastUpdated: "2026-03-01"
 ---
 
 Dubai has positioned itself as one of the world's leading destinations for longevity and preventive medicine. With state-of-the-art facilities and world-class practitioners, the city offers some of the most advanced health optimization services on the planet.

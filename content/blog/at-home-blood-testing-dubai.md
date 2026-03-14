@@ -4,6 +4,11 @@ date: "2026-03-08"
 category: "Guides & Reviews"
 coverImage: "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=1200&q=80&fit=crop"
 excerpt: "Dubai's longevity community runs regular blood panels to track biomarkers. We compare the top at-home blood testing services: Valeo, Forus Life, DarDoc, and more."
+kamuraScore: 80
+evidenceLevel: "Moderate"
+depthIndicator: "Comparison"
+relatedTreatments: ["vitamin-d3-k2", "magnesium", "omega-3"]
+lastUpdated: "2025-12-20"
 ---
 
 If there's one thing Dubai's biohacking and longevity community agrees on, it's this: **you can't optimize what you don't measure.** Regular blood work has become the foundation of every serious wellness protocol — and thanks to at-home testing services, getting comprehensive panels has never been easier.

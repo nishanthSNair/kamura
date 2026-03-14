@@ -4,6 +4,11 @@ date: "2026-02-23"
 category: "Guides & Reviews"
 coverImage: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80&fit=crop"
 excerpt: "Abu Dhabi's wellness scene is growing fast — and it offers something Dubai doesn't. We review the best centers for Ayurveda, yoga, spa treatments, and holistic healing in the capital."
+kamuraScore: 80
+evidenceLevel: "Moderate"
+depthIndicator: "Comparison"
+relatedTreatments: ["yoga", "iv-drip-therapy", "acupuncture"]
+lastUpdated: "2026-01-10"
 ---
 
 Dubai gets most of the wellness headlines, but Abu Dhabi is quietly building a compelling wellness ecosystem of its own. The capital's approach to wellness is distinct — less flashy, more grounded, with a stronger emphasis on traditional healing systems, community-driven studios, and resort-based immersive experiences.

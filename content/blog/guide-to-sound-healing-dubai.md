@@ -4,6 +4,11 @@ date: "2026-02-28"
 category: "Holistic & Healing"
 coverImage: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200&q=80&fit=crop"
 excerpt: "Sound baths, gong meditation, and singing bowls — Dubai's sound healing scene is thriving. Here's where to go, what to expect, and which modality suits you best."
+kamuraScore: 74
+evidenceLevel: "Emerging"
+depthIndicator: "Deep Dive"
+relatedTreatments: ["sound-healing", "meditation"]
+lastUpdated: "2026-02-08"
 ---
 
 Sound healing is one of the fastest-growing wellness practices in Dubai. What was once considered alternative or esoteric is now offered at luxury hotels, corporate wellness programs, and dedicated healing studios across the city. If you've been curious about sound baths, this guide covers everything you need to know.

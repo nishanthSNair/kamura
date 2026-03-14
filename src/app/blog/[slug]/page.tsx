@@ -6,6 +6,8 @@ import { getPostBySlug, getAllSlugs, getAllPosts, formatDate, blogCategoryColors
 import { getTreatmentBySlug } from "@/data/treatments";
 import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
 import EvidenceLevelTag from "@/components/treatments/EvidenceLevelTag";
+import ReadingProgress from "@/components/blog/ReadingProgress";
+import TableOfContents from "@/components/blog/TableOfContents";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -51,39 +53,56 @@ export default async function BlogPostPage({ params }: Props) {
   const differentCategory = otherPosts.filter((p) => p.category !== post.category);
   const relatedPosts = [...sameCategory, ...differentCategory].slice(0, 3);
 
+  const jsonLdGraph: Record<string, unknown>[] = [
+    {
+      "@type": "Article",
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.date,
+      ...(post.coverImage && { image: post.coverImage }),
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `https://kamuralife.com/blog/${slug}`,
+      },
+      author: {
+        "@type": "Organization",
+        name: "KAMURA",
+        url: "https://kamuralife.com",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "KAMURA",
+        url: "https://kamuralife.com",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+        { "@type": "ListItem", position: 2, name: "Blog", item: "https://kamuralife.com/blog" },
+        { "@type": "ListItem", position: 3, name: post.title },
+      ],
+    },
+  ];
+
+  // FAQ Schema for posts with faqItems
+  if (post.faqItems && post.faqItems.length > 0) {
+    jsonLdGraph.push({
+      "@type": "FAQPage",
+      mainEntity: post.faqItems.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    });
+  }
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Article",
-        headline: post.title,
-        description: post.excerpt,
-        datePublished: post.date,
-        ...(post.coverImage && { image: post.coverImage }),
-        mainEntityOfPage: {
-          "@type": "WebPage",
-          "@id": `https://kamuralife.com/blog/${slug}`,
-        },
-        author: {
-          "@type": "Organization",
-          name: "KAMURA",
-          url: "https://kamuralife.com",
-        },
-        publisher: {
-          "@type": "Organization",
-          name: "KAMURA",
-          url: "https://kamuralife.com",
-        },
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
-          { "@type": "ListItem", position: 2, name: "Blog", item: "https://kamuralife.com/blog" },
-          { "@type": "ListItem", position: 3, name: post.title },
-        ],
-      },
-    ],
+    "@graph": jsonLdGraph,
   };
 
   return (
@@ -92,6 +111,8 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      <ReadingProgress />
 
       <article className="pt-24">
         <header className="max-w-3xl mx-auto px-6 py-12 text-center">
@@ -149,7 +170,7 @@ export default async function BlogPostPage({ params }: Props) {
           const primaryTreatment = getTreatmentBySlug(post.relatedTreatments[0]);
           if (!primaryTreatment) return null;
           return (
-            <div className="max-w-3xl mx-auto px-6 mb-10">
+            <div className="max-w-5xl mx-auto px-6 mb-10 lg:pr-[280px]">
               <Link
                 href={`/treatments/${primaryTreatment.slug}`}
                 className="block border border-kamura-gold/30 rounded-xl p-5 bg-kamura-gold/5 hover:bg-kamura-gold/10 transition-colors"
@@ -175,36 +196,42 @@ export default async function BlogPostPage({ params }: Props) {
           );
         })()}
 
-        {/* Table of Contents */}
-        {post.headings.length > 2 && (
-          <nav className="max-w-3xl mx-auto px-6 mb-10">
-            <div className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-gray-50/50 dark:bg-gray-900/50">
-              <h2 className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-3 font-normal">
-                In this article
-              </h2>
-              <ul className="space-y-2">
-                {post.headings.map((heading) => (
-                  <li
-                    key={heading.id}
-                    style={{ paddingLeft: `${(heading.level - 1) * 16}px` }}
-                  >
-                    <a
-                      href={`#${heading.id}`}
-                      className="text-sm text-gray-600 dark:text-gray-400 hover:text-terracotta transition-colors font-sans"
-                    >
-                      {heading.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </nav>
-        )}
+        {/* Main Content — 2-column layout with sticky TOC sidebar */}
+        <div className="max-w-5xl mx-auto px-6 pb-12 grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-12">
+          {/* Left: Article Content */}
+          <div
+            className="prose prose-lg dark:prose-invert prose-headings:font-serif prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-p:leading-[1.85] prose-p:mb-6 prose-headings:mt-10 prose-headings:mb-4 prose-li:leading-[1.8] prose-a:text-terracotta prose-a:no-underline hover:prose-a:underline font-sans max-w-none"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
 
-        <div
-          className="max-w-3xl mx-auto px-6 pb-12 prose prose-lg dark:prose-invert prose-headings:font-serif prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-p:leading-[1.85] prose-p:mb-6 prose-headings:mt-10 prose-headings:mb-4 prose-li:leading-[1.8] prose-a:text-terracotta prose-a:no-underline hover:prose-a:underline font-sans"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+          {/* Right: Sticky TOC Sidebar */}
+          {post.headings.length > 2 && (
+            <TableOfContents headings={post.headings} />
+          )}
+        </div>
+
+        {/* FAQ Section (for posts with faqItems) */}
+        {post.faqItems && post.faqItems.length > 0 && (
+          <section className="max-w-3xl mx-auto px-6 pb-12">
+            <div className="border border-sage/20 rounded-xl p-8 bg-zen-mist/50 dark:bg-forest/5">
+              <h2 className="font-serif text-2xl text-gray-900 dark:text-gray-100 mb-6">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-6">
+                {post.faqItems.map((faq, i) => (
+                  <div key={i}>
+                    <h3 className="font-sans text-base font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                      {faq.question}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Next Steps CTA */}
         <section className="max-w-3xl mx-auto px-6 pb-12">
@@ -233,40 +260,55 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Related Posts */}
+        {/* Related Posts with Images */}
         {relatedPosts.length > 0 && (
           <section className="border-t border-sage-light/60 dark:border-forest/30 bg-zen-mist/50 dark:bg-forest/5">
             <div className="max-w-6xl mx-auto px-6 py-16">
               <h2 className="font-serif text-2xl text-gray-900 dark:text-gray-100 mb-8 text-center">
                 Continue Reading
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10">
-                {relatedPosts.map((related) => (
-                  <article key={related.slug}>
-                    <p className="text-xs text-gray-400 dark:text-gray-500 tracking-wide uppercase mb-3">
-                      {formatDate(related.date)}
-                      <span className="text-gray-300 dark:text-gray-600 mx-2">&middot;</span>
-                      {related.readingTime} min read
-                    </p>
-                    <h4 className="font-serif text-lg text-terracotta leading-snug mb-3">
-                      <Link
-                        href={`/blog/${related.slug}`}
-                        className="hover:text-terracotta-dark transition-colors"
-                      >
-                        {related.title}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {relatedPosts.map((related) => {
+                  const colors = blogCategoryColors[related.category];
+                  return (
+                    <article key={related.slug} className="group">
+                      <Link href={`/blog/${related.slug}`} className="block mb-4 overflow-hidden rounded-lg relative h-44">
+                        {related.coverImage ? (
+                          <Image
+                            src={related.coverImage}
+                            alt={related.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                          />
+                        ) : (
+                          <div className={`w-full h-full ${colors.bg} flex items-center justify-center`}>
+                            <span className={`text-3xl font-serif ${colors.text} opacity-40`}>K</span>
+                          </div>
+                        )}
                       </Link>
-                    </h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-sans mb-3">
-                      {related.excerpt}
-                    </p>
-                    <Link
-                      href={`/blog/${related.slug}`}
-                      className="text-sm text-gray-800 dark:text-gray-200 underline underline-offset-4 hover:text-terracotta transition-colors font-sans"
-                    >
-                      Read More
-                    </Link>
-                  </article>
-                ))}
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className={`text-[10px] px-2 py-0.5 rounded-full font-sans ${colors.bg} ${colors.text}`}>
+                          {related.category}
+                        </span>
+                        <span className="text-xs text-gray-400 dark:text-gray-500">
+                          {related.readingTime} min read
+                        </span>
+                      </div>
+                      <h4 className="font-serif text-lg text-terracotta leading-snug mb-2">
+                        <Link
+                          href={`/blog/${related.slug}`}
+                          className="hover:text-terracotta-dark transition-colors"
+                        >
+                          {related.title}
+                        </Link>
+                      </h4>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed font-sans line-clamp-2">
+                        {related.excerpt}
+                      </p>
+                    </article>
+                  );
+                })}
               </div>
             </div>
           </section>
