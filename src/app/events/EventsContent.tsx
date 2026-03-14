@@ -174,7 +174,7 @@ export default function EventsContent() {
               "url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80')",
           }}
         />
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/50 via-black/25 to-forest/40" />
         <div className="relative z-10 text-center text-white px-6 max-w-3xl">
           <p className="text-xs tracking-[0.3em] uppercase mb-6 text-white/80">
             KAMURA Events
@@ -225,7 +225,7 @@ export default function EventsContent() {
             placeholder="Search events by name, location, or category..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl text-sm font-sans text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-[#1a1a1a] focus:outline-none focus:border-terracotta/50 focus:ring-1 focus:ring-terracotta/20 transition-colors"
+            className="w-full pl-12 pr-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl text-sm font-sans text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-[#1a1a1a] focus:outline-none focus:border-sage/50 focus:ring-1 focus:ring-sage/20 transition-colors"
           />
           {searchQuery && (
             <button
@@ -250,8 +250,8 @@ export default function EventsContent() {
               }}
               className={`px-4 py-2 text-sm font-sans rounded-full border transition-all duration-200 ${
                 activeCategory === cat
-                  ? "bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100"
-                  : "bg-white dark:bg-[#1a1a1a] text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500"
+                  ? "bg-moss text-white border-moss"
+                  : "bg-white dark:bg-[#1a1a1a] text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-sage dark:hover:border-sage/50"
               }`}
             >
               {cat}
@@ -430,7 +430,7 @@ export default function EventsContent() {
           </p>
           <a
             href="mailto:hello@kamuralife.com?subject=Event%20Submission&body=Event%20Name%3A%0ADate%3A%0ALocation%3A%0AWebsite%3A%0ABrief%20Description%3A"
-            className="inline-flex items-center gap-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-8 py-3 text-sm tracking-[0.1em] uppercase hover:bg-terracotta dark:hover:bg-terracotta dark:hover:text-white transition-colors font-sans"
+            className="inline-flex items-center gap-2 bg-moss text-white px-8 py-3 text-sm tracking-[0.1em] uppercase hover:bg-forest transition-colors font-sans"
           >
             Submit an Event
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -441,7 +441,7 @@ export default function EventsContent() {
       </section>
 
       {/* News & Coverage Feed */}
-      <section className="border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50">
+      <section className="border-t border-sage-light/60 dark:border-forest/30 bg-zen-mist/50 dark:bg-forest/5">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
           <div className="mb-12">
             <h2 className="font-serif text-3xl md:text-4xl text-gray-900 dark:text-gray-100 mb-3">

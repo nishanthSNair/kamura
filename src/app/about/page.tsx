@@ -32,7 +32,7 @@ export default function AboutPage() {
               "url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=80')",
           }}
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/50 via-black/20 to-forest/40" />
         <div className="relative z-10 text-center text-white px-6">
           <h1 className="text-4xl md:text-6xl font-serif leading-tight">
             Kamura &mdash; Heart of Longevity
@@ -41,7 +41,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="max-w-2xl mx-auto px-6 py-20 md:py-28">
+      <section className="max-w-2xl mx-auto px-6 py-20 md:py-28 zen-pattern">
         <div className="space-y-8">
           <div>
             <h2 className="font-serif text-2xl text-terracotta mb-6">
@@ -63,7 +63,7 @@ export default function AboutPage() {
             That is how we believe life should be lived.
           </p>
 
-          <div className="w-12 h-px bg-terracotta/40" />
+          <div className="w-12 h-px bg-sage/40" />
 
           <div>
             <h2 className="font-serif text-2xl text-terracotta mb-6">

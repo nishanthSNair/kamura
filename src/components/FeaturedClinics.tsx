@@ -21,7 +21,7 @@ export default function FeaturedClinics({ clinics }: FeaturedClinicsProps) {
         <Link
           key={clinic.id}
           href={`/explore/${clinic.id}`}
-          className="group bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/[0.06] rounded-xl p-6 shadow-sm hover:shadow-md hover:border-terracotta/30 transition-all"
+          className="group bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/[0.06] rounded-xl p-6 shadow-sm hover:shadow-md hover:border-sage/30 transition-all"
         >
           <div className="flex items-start justify-between mb-3">
             <h3 className="font-sans font-semibold text-[15px] text-gray-900 dark:text-[#F5F0EB] leading-tight">
@@ -37,7 +37,7 @@ export default function FeaturedClinics({ clinics }: FeaturedClinicsProps) {
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="text-gray-300 dark:text-gray-600 group-hover:text-terracotta transition-colors shrink-0 mt-0.5"
+              className="text-gray-300 dark:text-gray-600 group-hover:text-sage transition-colors shrink-0 mt-0.5"
             >
               <polyline points="9 18 15 12 9 6" />
             </svg>
@@ -52,7 +52,7 @@ export default function FeaturedClinics({ clinics }: FeaturedClinicsProps) {
             {clinic.services.slice(0, 3).map((service) => (
               <span
                 key={service}
-                className="text-[10px] px-2 py-0.5 rounded-full bg-gray-100 dark:bg-[#242424] text-gray-500 dark:text-[#A89F95] font-sans"
+                className="text-[10px] px-2 py-0.5 rounded-full bg-zen-mist dark:bg-forest/20 text-gray-500 dark:text-[#A89F95] font-sans"
               >
                 {service}
               </span>

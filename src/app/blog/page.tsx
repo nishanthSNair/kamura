@@ -53,7 +53,7 @@ export default function BlogIndexPage() {
 
       <section className="pt-24">
         <div className="max-w-6xl mx-auto px-6 pt-12 pb-4">
-          <p className="text-xs tracking-[0.3em] uppercase mb-4 text-terracotta font-sans">
+          <p className="text-xs tracking-[0.3em] uppercase mb-4 text-moss dark:text-sage font-sans">
             KAMURA Blog
           </p>
           <h1 className="font-serif text-4xl md:text-5xl text-gray-900 dark:text-gray-100 mb-4 leading-tight">
@@ -63,7 +63,7 @@ export default function BlogIndexPage() {
             Expert guides on longevity clinics, biohacking studios, holistic
             healing, and wellness trends across Dubai and the UAE.
           </p>
-          <div className="w-12 h-px bg-terracotta/40 mt-6" />
+          <div className="w-12 h-px bg-sage/40 mt-6" />
         </div>
       </section>
 

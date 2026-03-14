@@ -50,7 +50,7 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
         <p className="text-gray-500 dark:text-gray-400 font-sans">
           Guides, deep-dives, and trends in longevity &amp; wellness
         </p>
-        <div className="w-12 h-px bg-terracotta/40 mt-6" />
+        <div className="w-12 h-px bg-sage/40 mt-6" />
       </div>
 
       {/* Category Filter Chips */}
@@ -61,8 +61,8 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
             onClick={() => setActive(cat)}
             className={`px-4 py-2 text-sm font-sans rounded-full border transition-all duration-200 ${
               active === cat
-                ? "bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100"
-                : "bg-white dark:bg-[#1a1a1a] text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500"
+                ? "bg-moss text-white border-moss"
+                : "bg-white dark:bg-[#1a1a1a] text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-sage dark:hover:border-sage/50"
             }`}
           >
             {cat}

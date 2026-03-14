@@ -101,7 +101,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <article className="pt-24 pb-16">
+      <article className="pt-24 pb-16 zen-pattern">
         {/* Breadcrumb */}
         <nav className="max-w-[1200px] mx-auto px-6 mb-8">
           <div className="flex items-center gap-2 text-sm text-gray-400 dark:text-[#6B6560] font-sans">
@@ -291,7 +291,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
 
         {/* Medical Disclaimer */}
         <section className="max-w-[1200px] mx-auto px-6 mt-12">
-          <div className="border border-gray-200 dark:border-white/[0.06] rounded-xl p-6 bg-gray-50/50 dark:bg-[#1A1A1A]">
+          <div className="border border-gray-200 dark:border-white/[0.06] rounded-xl p-6 bg-zen-mist/50 dark:bg-[#1A1A1A]">
             <p className="text-xs text-gray-400 dark:text-[#6B6560] font-sans leading-relaxed">
               <strong className="text-gray-500 dark:text-[#A89F95]">Medical Disclaimer:</strong> The
               information on this page is for educational purposes only and is not intended as medical advice.

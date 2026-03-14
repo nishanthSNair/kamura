@@ -2,26 +2,26 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-[#0f0f0f]">
+    <footer className="border-t border-sage-light/60 dark:border-forest/30 bg-cream dark:bg-[#0f120e]">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <Link href="/" className="font-serif text-lg tracking-[0.15em] text-gray-900 dark:text-white">
             KAMURA
           </Link>
           <div className="flex items-center gap-8 text-sm text-gray-500 dark:text-gray-400">
-            <Link href="/" className="hover:text-terracotta transition-colors">
+            <Link href="/" className="hover:text-moss transition-colors">
               Blog
             </Link>
-            <Link href="/treatments" className="hover:text-terracotta transition-colors">
+            <Link href="/treatments" className="hover:text-moss transition-colors">
               Treatments
             </Link>
-            <Link href="/explore" className="hover:text-terracotta transition-colors">
+            <Link href="/explore" className="hover:text-moss transition-colors">
               Explore
             </Link>
-            <Link href="/events" className="hover:text-terracotta transition-colors">
+            <Link href="/events" className="hover:text-moss transition-colors">
               Events
             </Link>
-            <Link href="/about" className="hover:text-terracotta transition-colors">
+            <Link href="/about" className="hover:text-moss transition-colors">
               About
             </Link>
           </div>

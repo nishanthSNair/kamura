@@ -125,7 +125,7 @@ export default function QuizContent() {
                 "url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80')",
             }}
           />
-          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-b from-forest/50 via-black/25 to-forest/40" />
           <div className="relative z-10 text-center text-white px-6 max-w-3xl">
             <p className="text-xs tracking-[0.3em] uppercase mb-6 text-white/80">
               KAMURA Wellness Quiz
@@ -195,7 +195,7 @@ export default function QuizContent() {
     const q = questions[currentQ];
 
     return (
-      <section className="min-h-screen bg-white dark:bg-[#1a1a1a] pt-24 pb-20">
+      <section className="min-h-screen bg-white dark:bg-[#1a1a1a] pt-24 pb-20 zen-pattern">
         <div className="max-w-2xl mx-auto px-6">
           {/* Progress Bar */}
           <div className="mb-12">
@@ -209,7 +209,7 @@ export default function QuizContent() {
             </div>
             <div className="h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
               <div
-                className="h-full bg-terracotta rounded-full transition-all duration-500 ease-out"
+                className="h-full bg-sage rounded-full transition-all duration-500 ease-out"
                 style={{ width: `${progress}%` }}
               />
             </div>
@@ -240,10 +240,10 @@ export default function QuizContent() {
                 aria-disabled={selectedOption !== null && selectedOption !== i}
                 className={`w-full text-left p-5 rounded-xl border transition-all duration-300 font-sans text-sm leading-relaxed ${
                   selectedOption === i
-                    ? "border-terracotta bg-terracotta/5 text-gray-900 dark:text-gray-100"
+                    ? "border-sage bg-sage/5 text-gray-900 dark:text-gray-100"
                     : selectedOption !== null
                     ? "border-gray-100 dark:border-gray-800 text-gray-400 dark:text-gray-500 cursor-not-allowed"
-                    : "border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-terracotta/50 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer"
+                    : "border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-sage/50 hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer"
                 }`}
               >
                 <span className="flex items-center gap-3">
@@ -251,7 +251,7 @@ export default function QuizContent() {
                     aria-hidden="true"
                     className={`w-6 h-6 rounded-full border-2 flex items-center justify-center shrink-0 transition-all duration-300 ${
                       selectedOption === i
-                        ? "border-terracotta bg-terracotta"
+                        ? "border-moss bg-moss"
                         : "border-gray-300 dark:border-gray-600"
                     }`}
                   >
@@ -294,7 +294,7 @@ export default function QuizContent() {
                   cy="60"
                   r="52"
                   fill="none"
-                  stroke="#B5736A"
+                  stroke="#6B7F5E"
                   strokeWidth="8"
                   strokeLinecap="round"
                   strokeDasharray={`${results.scorePercent * 3.27} 327`}
@@ -318,7 +318,7 @@ export default function QuizContent() {
               Your overall wellness score
             </p>
 
-            <div className="w-12 h-px bg-terracotta/40 mx-auto" />
+            <div className="w-12 h-px bg-sage/40 mx-auto" />
           </div>
         </section>
 
@@ -370,7 +370,7 @@ export default function QuizContent() {
                 </div>
                 <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-terracotta/70 rounded-full transition-all duration-700 ease-out"
+                    className="h-full bg-sage/70 rounded-full transition-all duration-700 ease-out"
                     style={{ width: `${score}%` }}
                   />
                 </div>
@@ -434,7 +434,7 @@ export default function QuizContent() {
                   href={listing!.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1a1a1a] hover:border-terracotta/30 hover:shadow-sm transition-all group"
+                  className="flex items-center justify-between p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1a1a1a] hover:border-sage/30 hover:shadow-sm transition-all group"
                 >
                   <div>
                     <p className="text-sm font-sans font-medium text-gray-800 dark:text-gray-200 group-hover:text-terracotta transition-colors">
@@ -460,7 +460,7 @@ export default function QuizContent() {
         </section>
 
         {/* Share & Actions */}
-        <section className="border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50">
+        <section className="border-t border-sage-light/60 dark:border-forest/30 bg-zen-mist/50 dark:bg-forest/5">
           <div className="max-w-2xl mx-auto px-6 py-16 text-center">
             <h3 className="font-serif text-xl text-gray-900 dark:text-gray-100 mb-6">
               Share Your Results
@@ -505,7 +505,7 @@ export default function QuizContent() {
               </button>
             </div>
 
-            <div className="w-12 h-px bg-terracotta/40 mx-auto mb-10" />
+            <div className="w-12 h-px bg-sage/40 mx-auto mb-10" />
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
@@ -516,7 +516,7 @@ export default function QuizContent() {
               </button>
               <Link
                 href="/explore"
-                className="px-6 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-sm tracking-[0.1em] uppercase hover:bg-terracotta dark:hover:bg-terracotta dark:hover:text-white transition-colors font-sans rounded-lg text-center"
+                className="px-6 py-3 bg-moss text-white text-sm tracking-[0.1em] uppercase hover:bg-forest transition-colors font-sans rounded-lg text-center"
               >
                 Explore Directory
               </Link>

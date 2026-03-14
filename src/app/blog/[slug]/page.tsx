@@ -128,7 +128,7 @@ export default async function BlogPostPage({ params }: Props) {
           <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed font-sans">
             {post.excerpt}
           </p>
-          <div className="w-12 h-px bg-terracotta/40 mx-auto mt-8" />
+          <div className="w-12 h-px bg-sage/40 mx-auto mt-8" />
         </header>
 
         {post.coverImage && (
@@ -208,7 +208,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Next Steps CTA */}
         <section className="max-w-3xl mx-auto px-6 pb-12">
-          <div className="border border-terracotta/20 rounded-xl p-8 bg-terracotta/5">
+          <div className="border border-sage/20 rounded-xl p-8 bg-sage/5">
             <h3 className="font-serif text-xl text-gray-900 dark:text-gray-100 mb-3">
               Ready to take the next step?
             </h3>
@@ -219,13 +219,13 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/quiz"
-                className="inline-block bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-6 py-2.5 text-sm tracking-[0.1em] uppercase hover:bg-terracotta dark:hover:bg-terracotta dark:hover:text-white transition-colors font-sans"
+                className="inline-block bg-moss text-white px-6 py-2.5 text-sm tracking-[0.1em] uppercase hover:bg-forest transition-colors font-sans"
               >
                 Take the Quiz
               </Link>
               <Link
                 href="/explore"
-                className="inline-block border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-2.5 text-sm tracking-[0.1em] uppercase hover:border-terracotta hover:text-terracotta transition-colors font-sans"
+                className="inline-block border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-2.5 text-sm tracking-[0.1em] uppercase hover:border-sage hover:text-moss transition-colors font-sans"
               >
                 Explore Directory
               </Link>
@@ -235,7 +235,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
-          <section className="border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50">
+          <section className="border-t border-sage-light/60 dark:border-forest/30 bg-zen-mist/50 dark:bg-forest/5">
             <div className="max-w-6xl mx-auto px-6 py-16">
               <h2 className="font-serif text-2xl text-gray-900 dark:text-gray-100 mb-8 text-center">
                 Continue Reading

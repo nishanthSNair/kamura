@@ -71,7 +71,7 @@ export default function ExploreContent() {
               "url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80')",
           }}
         />
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest/60 via-black/30 to-forest/50" />
         <div className="relative z-10 text-center text-white px-6 max-w-3xl">
           <p className="text-xs tracking-[0.3em] uppercase mb-6 text-white/80">
             KAMURA Explore
@@ -94,7 +94,7 @@ export default function ExploreContent() {
             <Link
               key={area.slug}
               href={`/explore/area/${area.slug}`}
-              className="px-3 py-1.5 text-xs font-sans rounded-full border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-terracotta hover:text-terracotta transition-colors"
+              className="px-3 py-1.5 text-xs font-sans rounded-full border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-sage hover:text-moss transition-colors"
             >
               {area.name}
             </Link>
@@ -102,7 +102,7 @@ export default function ExploreContent() {
           <span className="text-gray-200 dark:text-gray-700 mx-1">|</span>
           <Link
             href="/explore/compare"
-            className="px-3 py-1.5 text-xs font-sans rounded-full border border-terracotta/30 text-terracotta hover:bg-terracotta/5 transition-colors"
+            className="px-3 py-1.5 text-xs font-sans rounded-full border border-sage/30 text-moss hover:bg-sage/5 transition-colors"
           >
             Compare Centers
           </Link>
@@ -110,7 +110,7 @@ export default function ExploreContent() {
       </section>
 
       {/* Category Filter */}
-      <section className="sticky top-[65px] z-40 bg-white/95 dark:bg-[#0f0f0f]/95 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
+      <section className="sticky top-[65px] z-40 bg-cream/95 dark:bg-[#0f120e]/95 backdrop-blur-sm border-b border-sage-light/60 dark:border-forest/30">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex gap-2 overflow-x-auto no-scrollbar">
             {["All", ...ALL_CATEGORIES].map((cat) => (
@@ -119,8 +119,8 @@ export default function ExploreContent() {
                 onClick={() => scrollToCategory(cat)}
                 className={`px-4 py-2 text-sm font-sans rounded-full border whitespace-nowrap transition-all duration-200 ${
                   activeCategory === cat
-                    ? "bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 border-gray-900 dark:border-gray-100"
-                    : "bg-white dark:bg-[#1a1a1a] text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500"
+                    ? "bg-moss text-white border-moss"
+                    : "bg-white dark:bg-[#1a1a1a] text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-sage dark:hover:border-sage/50"
                 }`}
               >
                 {cat}
@@ -156,7 +156,7 @@ export default function ExploreContent() {
                 <p className="text-gray-500 dark:text-gray-400 font-sans leading-relaxed max-w-2xl">
                   {categoryDescriptions[category]}
                 </p>
-                <div className="w-12 h-px bg-terracotta/40 mt-4" />
+                <div className="w-12 h-px bg-sage/40 mt-4" />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -241,7 +241,7 @@ export default function ExploreContent() {
       </div>
 
       {/* Bottom CTA */}
-      <section className="border-t border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50">
+      <section className="border-t border-sage-light/60 dark:border-forest/30 bg-zen-mist/50 dark:bg-forest/5">
         <div className="max-w-xl mx-auto px-6 py-20 text-center">
           <h2 className="font-serif text-2xl text-gray-900 dark:text-gray-100 mb-4">
             Know a place we should feature?
@@ -253,7 +253,7 @@ export default function ExploreContent() {
           </p>
           <a
             href="mailto:hello@kamuralife.com"
-            className="inline-block bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 px-8 py-3 text-sm tracking-[0.1em] uppercase hover:bg-terracotta dark:hover:bg-terracotta dark:hover:text-white transition-colors font-sans"
+            className="inline-block bg-moss text-white px-8 py-3 text-sm tracking-[0.1em] uppercase hover:bg-forest transition-colors font-sans"
           >
             Suggest a Place
           </a>

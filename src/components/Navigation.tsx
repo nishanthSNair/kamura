@@ -33,23 +33,23 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-[#0f0f0f]/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/90 dark:bg-[#0f120e]/90 backdrop-blur-sm border-b border-sage-light/60 dark:border-forest/30">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Left nav links - desktop */}
           <div className="hidden md:flex items-center gap-8 text-sm tracking-wide min-w-[200px]">
-            <Link href="/" className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors">
+            <Link href="/" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
               Blog
             </Link>
-            <Link href="/treatments" className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors">
+            <Link href="/treatments" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
               Treatments
             </Link>
-            <Link href="/explore" className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors">
+            <Link href="/explore" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
               Explore
             </Link>
-            <Link href="/events" className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors">
+            <Link href="/events" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
               Events
             </Link>
-            <Link href="/about" className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors">
+            <Link href="/about" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
               About
             </Link>
           </div>
@@ -83,7 +83,7 @@ export default function Navigation() {
           <div className="flex items-center justify-end gap-4 min-w-[200px]">
             <button
               onClick={() => setSearchOpen(true)}
-              className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors"
+              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
               aria-label="Search"
             >
               <svg
@@ -106,7 +106,7 @@ export default function Navigation() {
               href="https://instagram.com/kamuralife"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors"
+              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
               aria-label="Instagram"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -120,38 +120,38 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="md:hidden bg-white dark:bg-[#0f0f0f] border-t border-gray-100 dark:border-gray-800 px-6 py-4 flex flex-col gap-4 text-sm tracking-wide">
+          <div className="md:hidden bg-cream dark:bg-[#0f120e] border-t border-sage-light/60 dark:border-forest/30 px-6 py-4 flex flex-col gap-4 text-sm tracking-wide">
             <Link
               href="/"
-              className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors"
+              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               Blog
             </Link>
             <Link
               href="/treatments"
-              className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors"
+              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               Treatments
             </Link>
             <Link
               href="/explore"
-              className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors"
+              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               Explore
             </Link>
             <Link
               href="/events"
-              className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors"
+              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               Events
             </Link>
             <Link
               href="/about"
-              className="text-gray-800 dark:text-gray-200 hover:text-terracotta transition-colors"
+              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               About
@@ -161,7 +161,7 @@ export default function Navigation() {
                 setMobileOpen(false);
                 setSearchOpen(true);
               }}
-              className="text-gray-800 hover:text-terracotta transition-colors text-left"
+              className="text-gray-800 hover:text-moss dark:hover:text-sage transition-colors text-left"
             >
               Search
             </button>
