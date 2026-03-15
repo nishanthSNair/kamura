@@ -8,11 +8,16 @@ import Toast from "@/components/admin/Toast";
 
 const CATEGORIES = [
   { label: "Peptides", value: "Peptides" },
-  { label: "Therapy", value: "Therapy" },
-  { label: "Supplements", value: "Supplements" },
-  { label: "Diagnostics", value: "Diagnostics" },
-  { label: "Technology", value: "Technology" },
-  { label: "IV Treatments", value: "IV Treatments" },
+  { label: "Supplements & Nutraceuticals", value: "Supplements & Nutraceuticals" },
+  { label: "Devices & Technology", value: "Devices & Technology" },
+  { label: "Traditional & Alternative Medicine", value: "Traditional & Alternative Medicine" },
+  { label: "Mind-Body & Movement", value: "Mind-Body & Movement" },
+  { label: "Hormones", value: "Hormones" },
+  { label: "GLP-1 & Weight Management", value: "GLP-1 & Weight Management" },
+  { label: "IV & Infusion Therapies", value: "IV & Infusion Therapies" },
+  { label: "Regenerative Medicine", value: "Regenerative Medicine" },
+  { label: "Longevity Pharmaceuticals", value: "Longevity Pharmaceuticals" },
+  { label: "Detox & Functional", value: "Detox & Functional" },
 ];
 
 const EVIDENCE_LEVELS = [

@@ -2,6 +2,7 @@ import Link from "next/link";
 
 interface CategoryItem {
   name: string;
+  slug: string;
   icon: string;
   treatmentCount: number;
 }
@@ -12,11 +13,11 @@ interface CategoryGridProps {
 
 export default function CategoryGrid({ categories }: CategoryGridProps) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
       {categories.map((cat) => (
         <Link
           key={cat.name}
-          href={`/treatments?category=${encodeURIComponent(cat.name)}`}
+          href={`/treatments/category/${cat.slug}`}
           className="group bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/[0.06] rounded-xl p-4 text-center shadow-sm hover:shadow-md hover:border-sage/40 hover:bg-sage/5 transition-all"
         >
           <span className="text-2xl block mb-2">{cat.icon}</span>

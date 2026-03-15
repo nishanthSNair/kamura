@@ -13,13 +13,7 @@ type SortOption = "score" | "evidence" | "community" | "safety" | "name";
 
 const CATEGORY_FILTERS: (TreatmentCategory | "All")[] = [
   "All",
-  "Holistic & Mind-Body",
-  "Devices & Biohacking",
-  "Supplements",
-  "Peptides",
-  "Hormones",
-  "GLP-1 & Weight Management",
-  "Detox & Functional",
+  ...ALL_TREATMENT_CATEGORIES,
 ];
 
 export default function TreatmentsContent() {
@@ -190,33 +184,37 @@ export default function TreatmentsContent() {
 
       {/* Filter & Search */}
       <section className="max-w-[1200px] mx-auto px-6 mb-8">
-        <div className="flex flex-wrap gap-3 items-center">
-          <input
-            type="text"
-            placeholder="Search treatments, compounds, or conditions..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="flex-1 min-w-[280px] bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl px-4 py-3 text-sm text-gray-900 dark:text-[#F5F0EB] placeholder:text-gray-400 dark:placeholder:text-[#6B6560] outline-none focus:border-sage/60 focus:ring-1 focus:ring-sage/20 font-sans"
-          />
-          {CATEGORY_FILTERS.map((cat) => (
-            <FilterChip
-              key={cat}
-              label={cat === "GLP-1 & Weight Management" ? "GLP-1" : cat === "Devices & Biohacking" ? "Devices" : cat === "Holistic & Mind-Body" ? "Holistic" : cat === "Detox & Functional" ? "Detox" : cat}
-              active={activeCategory === cat}
-              onClick={() => setActiveCategory(cat)}
+        <div className="flex flex-col gap-3">
+          <div className="flex gap-3 items-center">
+            <input
+              type="text"
+              placeholder="Search treatments, compounds, or conditions..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="flex-1 min-w-[200px] bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl px-4 py-3 text-sm text-gray-900 dark:text-[#F5F0EB] placeholder:text-gray-400 dark:placeholder:text-[#6B6560] outline-none focus:border-sage/60 focus:ring-1 focus:ring-sage/20 font-sans"
             />
-          ))}
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as SortOption)}
-            className="px-4 py-2.5 bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl text-[13px] text-gray-500 dark:text-[#A89F95] font-sans cursor-pointer outline-none"
-          >
-            <option value="score">Sort: Kamura Score</option>
-            <option value="evidence">Sort: Evidence Level</option>
-            <option value="community">Sort: Community Rating</option>
-            <option value="safety">Sort: Safety</option>
-            <option value="name">Sort: Name (A-Z)</option>
-          </select>
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as SortOption)}
+              className="px-4 py-2.5 bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl text-[13px] text-gray-500 dark:text-[#A89F95] font-sans cursor-pointer outline-none shrink-0"
+            >
+              <option value="score">Sort: Kamura Score</option>
+              <option value="evidence">Sort: Evidence Level</option>
+              <option value="community">Sort: Community Rating</option>
+              <option value="safety">Sort: Safety</option>
+              <option value="name">Sort: Name (A-Z)</option>
+            </select>
+          </div>
+          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+            {CATEGORY_FILTERS.map((cat) => (
+              <FilterChip
+                key={cat}
+                label={cat === "GLP-1 & Weight Management" ? "GLP-1" : cat === "Devices & Technology" ? "Devices" : cat === "Supplements & Nutraceuticals" ? "Supplements" : cat === "Mind-Body & Movement" ? "Mind-Body" : cat === "Traditional & Alternative Medicine" ? "Traditional" : cat === "IV & Infusion Therapies" ? "IV Therapy" : cat === "Regenerative Medicine" ? "Regenerative" : cat === "Longevity Pharmaceuticals" ? "Pharma" : cat === "Detox & Functional" ? "Detox" : cat}
+                active={activeCategory === cat}
+                onClick={() => setActiveCategory(cat)}
+              />
+            ))}
+          </div>
         </div>
         <p className="text-xs text-gray-400 dark:text-[#6B6560] mt-3 font-sans">
           Showing {filtered.length} of {treatments.length} treatments

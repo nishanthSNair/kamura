@@ -10,6 +10,7 @@ import {
   getScoreColor,
 } from "@/data/treatments";
 import { listings } from "@/data/listings";
+import { categoryNameToSlug } from "@/data/treatment-categories";
 import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
 import EvidenceLevelTag from "@/components/treatments/EvidenceLevelTag";
 import ScoreBreakdownPanel from "@/components/treatments/ScoreBreakdownPanel";
@@ -84,13 +85,25 @@ export default async function TreatmentDetailPage({ params }: Props) {
         alternateName: t.fullName,
         description: t.description,
         url: `https://kamuralife.com/treatments/${slug}`,
+        relevantSpecialty: {
+          "@type": "MedicalSpecialty",
+          name: t.category,
+        },
+        study: t.keyStudies.slice(0, 3).map((s) => ({
+          "@type": "MedicalStudy",
+          name: s.title,
+          author: s.authors,
+          datePublished: String(s.year),
+          description: s.finding,
+        })),
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
           { "@type": "ListItem", position: 2, name: "Treatments", item: "https://kamuralife.com/treatments" },
-          { "@type": "ListItem", position: 3, name: t.name },
+          { "@type": "ListItem", position: 3, name: t.category, item: `https://kamuralife.com/treatments/category/${categoryNameToSlug(t.category)}` },
+          { "@type": "ListItem", position: 4, name: t.name },
         ],
       },
     ],

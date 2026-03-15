@@ -21,8 +21,50 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: "KAMURA",
+        url: "https://kamuralife.com",
+        description:
+          "The world's first unbiased wellness intelligence platform. Evidence-based treatment scoring, clinic discovery, and longevity resources.",
+        foundingDate: "2024",
+        areaServed: {
+          "@type": "Place",
+          name: "United Arab Emirates",
+        },
+        sameAs: ["https://www.instagram.com/kamaborea/"],
+      },
+      {
+        "@type": "AboutPage",
+        name: "About KAMURA",
+        url: "https://kamuralife.com/about",
+        description:
+          "KAMURA is Dubai's longevity & wellness discovery platform. Inspired by the Japanese tortoise (Kame, 亀).",
+        mainEntity: {
+          "@type": "Organization",
+          name: "KAMURA",
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+          { "@type": "ListItem", position: 2, name: "About" },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center">
         <div

@@ -161,7 +161,7 @@ export default function Navigation() {
                 setMobileOpen(false);
                 setSearchOpen(true);
               }}
-              className="text-gray-800 hover:text-moss dark:hover:text-sage transition-colors text-left"
+              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors text-left"
             >
               Search
             </button>

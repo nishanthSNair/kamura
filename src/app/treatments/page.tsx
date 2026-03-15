@@ -4,13 +4,13 @@ import { treatments } from "@/data/treatments";
 import TreatmentsContent from "./TreatmentsContent";
 
 export const metadata: Metadata = {
-  title: "Every Treatment Scored & Ranked",
+  title: `${treatments.length} Wellness Treatments Scored & Ranked | KAMURA`,
   description:
-    "The world's first unbiased wellness treatment index. 50+ treatments scored on research evidence, community validation, safety, accessibility, and value. Transparent methodology, zero bias.",
+    `The world's first unbiased wellness treatment index. ${treatments.length} treatments across 11 categories scored on research evidence, community validation, safety, accessibility, and value. Transparent methodology, zero bias.`,
   openGraph: {
-    title: "Treatment Index | KAMURA",
+    title: `Treatment Index — ${treatments.length} Treatments | KAMURA`,
     description:
-      "50+ wellness treatments scored transparently on evidence, community data, safety, and value. The Kamura Score — zero bias, full transparency.",
+      `${treatments.length} wellness treatments scored transparently on evidence, community data, safety, and value. The Kamura Score — zero bias, full transparency.`,
     url: "https://kamuralife.com/treatments",
     images: [
       {

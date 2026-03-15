@@ -4,6 +4,7 @@ import { events } from "@/data/events";
 import { listings } from "@/data/listings";
 import { areas } from "@/data/areas";
 import { treatments } from "@/data/treatments";
+import { CATEGORY_META } from "@/data/treatment-categories";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://kamuralife.com";
@@ -78,6 +79,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    ...CATEGORY_META.map((cat) => ({
+      url: `${baseUrl}/treatments/category/${cat.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    })),
     ...treatments.map((t) => ({
       url: `${baseUrl}/treatments/${t.slug}`,
       lastModified: new Date(),

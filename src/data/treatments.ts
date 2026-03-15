@@ -4,10 +4,14 @@ export type TreatmentCategory =
   | "Peptides"
   | "GLP-1 & Weight Management"
   | "Hormones"
-  | "Devices & Biohacking"
-  | "Supplements"
-  | "Holistic & Mind-Body"
-  | "Detox & Functional";
+  | "Devices & Technology"
+  | "Supplements & Nutraceuticals"
+  | "Mind-Body & Movement"
+  | "Detox & Functional"
+  | "Traditional & Alternative Medicine"
+  | "IV & Infusion Therapies"
+  | "Regenerative Medicine"
+  | "Longevity Pharmaceuticals";
 
 export type EvidenceLevel = "Strong" | "Moderate" | "Emerging" | "Limited" | "Anecdotal";
 export type ScoreTier = "Gold Standard" | "Strong" | "Promising" | "Limited" | "Insufficient";
@@ -151,11 +155,15 @@ export function getTreatmentsByCategory(category: TreatmentCategory): Treatment[
 
 export const ALL_TREATMENT_CATEGORIES: TreatmentCategory[] = [
   "Peptides",
-  "GLP-1 & Weight Management",
+  "Supplements & Nutraceuticals",
+  "Devices & Technology",
+  "Traditional & Alternative Medicine",
+  "Mind-Body & Movement",
   "Hormones",
-  "Devices & Biohacking",
-  "Supplements",
-  "Holistic & Mind-Body",
+  "GLP-1 & Weight Management",
+  "IV & Infusion Therapies",
+  "Regenerative Medicine",
+  "Longevity Pharmaceuticals",
   "Detox & Functional",
 ];
 

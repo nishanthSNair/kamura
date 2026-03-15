@@ -2319,7 +2319,7 @@
       "slug": "red-light-therapy",
       "name": "Red Light Therapy",
       "fullName": "Photobiomodulation (Red/NIR Light)",
-      "category": "Devices & Biohacking",
+      "category": "Devices & Technology",
       "description": "Low-level light therapy using red (630-670nm) and near-infrared (810-850nm) wavelengths to improve mitochondrial function, reduce inflammation, and promote tissue healing.",
       "icon": "🔴",
       "kamuraScore": 78,
@@ -2440,7 +2440,7 @@
       "slug": "infrared-sauna",
       "name": "Infrared Sauna",
       "fullName": "Far Infrared Sauna Therapy",
-      "category": "Devices & Biohacking",
+      "category": "Devices & Technology",
       "description": "Sauna therapy using infrared light to heat the body directly, promoting detoxification, cardiovascular conditioning, and recovery at lower temperatures than traditional saunas.",
       "icon": "🔥",
       "kamuraScore": 74,
@@ -2555,7 +2555,7 @@
       "slug": "cryotherapy",
       "name": "Whole Body Cryotherapy",
       "fullName": "Whole Body Cryotherapy (WBC)",
-      "category": "Devices & Biohacking",
+      "category": "Devices & Technology",
       "description": "Brief exposure to extreme cold (-110°C to -160°C) in a cryo chamber to reduce inflammation, boost recovery, and activate cold stress pathways.",
       "icon": "❄️",
       "kamuraScore": 62,
@@ -2656,7 +2656,7 @@
       "slug": "hyperbaric-oxygen",
       "name": "Hyperbaric Oxygen",
       "fullName": "Hyperbaric Oxygen Therapy (HBOT)",
-      "category": "Devices & Biohacking",
+      "category": "Devices & Technology",
       "description": "Breathing pure oxygen at elevated atmospheric pressure to increase oxygen delivery to tissues. Used for wound healing, cognitive enhancement, and emerging anti-aging applications.",
       "icon": "🫁",
       "kamuraScore": 71,
@@ -2771,7 +2771,7 @@
       "slug": "float-therapy",
       "name": "Float Therapy",
       "fullName": "Sensory Deprivation Float Tank",
-      "category": "Devices & Biohacking",
+      "category": "Devices & Technology",
       "description": "Floating in a sensory deprivation tank filled with Epsom salt solution. Reduces stress, lowers cortisol, and promotes deep relaxation and meditation-like states.",
       "icon": "🌊",
       "kamuraScore": 59,
@@ -2872,7 +2872,7 @@
       "slug": "pemf-therapy",
       "name": "PEMF Therapy",
       "fullName": "Pulsed Electromagnetic Field Therapy",
-      "category": "Devices & Biohacking",
+      "category": "Devices & Technology",
       "description": "Non-invasive therapy using electromagnetic fields to stimulate cellular repair, reduce pain, and improve circulation. FDA-cleared for bone healing and depression.",
       "icon": "⚡",
       "kamuraScore": 56,
@@ -2978,7 +2978,7 @@
       "slug": "cold-plunge",
       "name": "Cold Plunge / Ice Bath",
       "fullName": "Cold Water Immersion",
-      "category": "Devices & Biohacking",
+      "category": "Devices & Technology",
       "description": "Deliberate cold exposure through ice baths or cold plunge tubs. Activates cold shock proteins, boosts norepinephrine, and enhances immune function and mental resilience.",
       "icon": "🧊",
       "kamuraScore": 70,
@@ -3098,7 +3098,7 @@
       "slug": "eight-sleep",
       "name": "Eight Sleep",
       "fullName": "Eight Sleep Pod (Smart Mattress)",
-      "category": "Devices & Biohacking",
+      "category": "Devices & Technology",
       "description": "A smart mattress cover with active temperature regulation, sleep tracking, and personalized thermal adjustments. The most popular sleep optimization device in the biohacking community.",
       "icon": "🛏️",
       "kamuraScore": 79,
@@ -3199,7 +3199,7 @@
       "slug": "nad-injectable",
       "name": "NAD+ (Injectable)",
       "fullName": "Nicotinamide Adenine Dinucleotide (IV/SubQ)",
-      "category": "Supplements",
+      "category": "IV & Infusion Therapies",
       "description": "Direct NAD+ supplementation via IV or subcutaneous injection. Bypasses oral bioavailability issues to rapidly restore cellular NAD+ levels for energy, DNA repair, and anti-aging.",
       "icon": "💉",
       "kamuraScore": 74,
@@ -3306,7 +3306,7 @@
       "slug": "nad-oral",
       "name": "NAD+ (Oral NMN/NR)",
       "fullName": "NMN/NR Oral Supplementation",
-      "category": "Supplements",
+      "category": "Supplements & Nutraceuticals",
       "description": "Oral NAD+ precursors (NMN or NR) that boost cellular NAD+ levels. More accessible and affordable than injectable NAD+, though bioavailability is lower.",
       "icon": "💊",
       "kamuraScore": 65,
@@ -3412,7 +3412,7 @@
       "slug": "magnesium",
       "name": "Magnesium",
       "fullName": "Magnesium (Glycinate/Threonate/Citrate)",
-      "category": "Supplements",
+      "category": "Supplements & Nutraceuticals",
       "description": "The most universally recommended supplement in the longevity community. Critical for 300+ enzymatic reactions, sleep quality, muscle function, and nervous system regulation.",
       "icon": "💎",
       "kamuraScore": 83,
@@ -3532,7 +3532,7 @@
       "slug": "vitamin-d3-k2",
       "name": "Vitamin D3 + K2",
       "fullName": "Vitamin D3 with Vitamin K2 (MK-7)",
-      "category": "Supplements",
+      "category": "Supplements & Nutraceuticals",
       "description": "The most important foundational supplement stack. Vitamin D3 is critical for immune function, bone health, and mood, while K2 directs calcium to bones and away from arteries.",
       "icon": "☀️",
       "kamuraScore": 88,
@@ -3647,7 +3647,7 @@
       "slug": "spermidine",
       "name": "Spermidine",
       "fullName": "Spermidine (Polyamine)",
-      "category": "Supplements",
+      "category": "Supplements & Nutraceuticals",
       "description": "A natural polyamine found in wheat germ that activates autophagy — the body's cellular cleanup process. Emerging as a key longevity compound.",
       "icon": "🔬",
       "kamuraScore": 62,
@@ -3748,7 +3748,7 @@
       "slug": "methylene-blue",
       "name": "Methylene Blue",
       "fullName": "Pharmaceutical Grade Methylene Blue",
-      "category": "Supplements",
+      "category": "Supplements & Nutraceuticals",
       "description": "A mitochondrial electron carrier and monoamine oxidase inhibitor with cognitive-enhancing and neuroprotective properties. Used at micro-doses for brain health.",
       "icon": "🔵",
       "kamuraScore": 52,
@@ -3849,7 +3849,7 @@
       "slug": "astaxanthin",
       "name": "Astaxanthin",
       "fullName": "Astaxanthin (Carotenoid Antioxidant)",
-      "category": "Supplements",
+      "category": "Supplements & Nutraceuticals",
       "description": "A potent carotenoid antioxidant derived from microalgae. 6000x stronger than vitamin C as an antioxidant. Supports skin, eye, and cardiovascular health.",
       "icon": "🦐",
       "kamuraScore": 67,
@@ -3950,7 +3950,7 @@
       "slug": "omega-3",
       "name": "Omega-3",
       "fullName": "Omega-3 Fatty Acids (EPA/DHA)",
-      "category": "Supplements",
+      "category": "Supplements & Nutraceuticals",
       "description": "Essential fatty acids critical for brain health, cardiovascular function, and inflammation regulation. One of the most studied and recommended supplements globally.",
       "icon": "🐟",
       "kamuraScore": 86,
@@ -4065,7 +4065,7 @@
       "slug": "creatine",
       "name": "Creatine",
       "fullName": "Creatine Monohydrate",
-      "category": "Supplements",
+      "category": "Supplements & Nutraceuticals",
       "description": "The most studied sports supplement in history, now recognized for cognitive and longevity benefits beyond muscle performance. Safe, cheap, and effective.",
       "icon": "💪",
       "kamuraScore": 90,
@@ -4180,7 +4180,7 @@
       "slug": "functional-mushrooms",
       "name": "Functional Mushrooms",
       "fullName": "Lion's Mane, Reishi, Cordyceps, Chaga",
-      "category": "Supplements",
+      "category": "Supplements & Nutraceuticals",
       "description": "Medicinal mushroom extracts used for cognitive enhancement (Lion's Mane), immune support (Reishi), energy (Cordyceps), and antioxidant protection (Chaga).",
       "icon": "🍄",
       "kamuraScore": 68,
@@ -4300,7 +4300,7 @@
       "slug": "breathwork",
       "name": "Breathwork",
       "fullName": "Breathwork Practices (Wim Hof, Holotropic, Box)",
-      "category": "Holistic & Mind-Body",
+      "category": "Mind-Body & Movement",
       "description": "Conscious breathing techniques that modulate the autonomic nervous system, reduce stress, improve HRV, and create physiological states similar to meditation.",
       "icon": "🌬️",
       "kamuraScore": 72,
@@ -4411,7 +4411,7 @@
       "slug": "meditation",
       "name": "Meditation",
       "fullName": "Meditation & Mindfulness Practice",
-      "category": "Holistic & Mind-Body",
+      "category": "Mind-Body & Movement",
       "description": "Regular meditation practice for mental health, stress reduction, cognitive performance, and longevity. One of the most evidence-backed wellness practices with thousands of studies.",
       "icon": "🧘",
       "kamuraScore": 80,
@@ -4526,7 +4526,7 @@
       "slug": "yoga",
       "name": "Yoga",
       "fullName": "Yoga Practice (Hatha, Vinyasa, Ashtanga)",
-      "category": "Holistic & Mind-Body",
+      "category": "Mind-Body & Movement",
       "description": "Ancient practice combining physical postures, breathing, and meditation. Extensive evidence for mobility, stress reduction, and longevity. Adaptable to all fitness levels.",
       "icon": "🧘‍♀️",
       "kamuraScore": 78,
@@ -4641,7 +4641,7 @@
       "slug": "acupuncture",
       "name": "Acupuncture",
       "fullName": "Traditional & Medical Acupuncture",
-      "category": "Holistic & Mind-Body",
+      "category": "Traditional & Alternative Medicine",
       "description": "Ancient Chinese medicine technique using thin needles at specific points to modulate pain, reduce stress, and support various health conditions. Growing evidence base in Western medicine.",
       "icon": "📍",
       "kamuraScore": 69,
@@ -4720,9 +4720,10 @@
         }
       ],
       "relatedSlugs": [
-        "yoga",
-        "meditation",
-        "breathwork"
+        "hijama",
+        "dry-cupping",
+        "reflexology",
+        "ayurveda"
       ],
       "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=500&fit=crop",
       "keyStudies": [
@@ -4756,7 +4757,7 @@
       "slug": "sound-healing",
       "name": "Sound Healing",
       "fullName": "Sound Bath / Vibrational Therapy",
-      "category": "Holistic & Mind-Body",
+      "category": "Mind-Body & Movement",
       "description": "Therapeutic use of singing bowls, gongs, and tuning forks to induce deep relaxation. Popular in Dubai's wellness scene but limited clinical evidence.",
       "icon": "🔔",
       "kamuraScore": 48,
@@ -4847,7 +4848,7 @@
       "slug": "ayurveda",
       "name": "Ayurveda",
       "fullName": "Ayurvedic Medicine & Practices",
-      "category": "Holistic & Mind-Body",
+      "category": "Traditional & Alternative Medicine",
       "description": "Ancient Indian system of medicine emphasizing constitutional typing, herbal remedies, detox protocols, and lifestyle balance. Growing integration with modern longevity science.",
       "icon": "🌿",
       "kamuraScore": 55,
@@ -4955,7 +4956,7 @@
       "slug": "iv-drip-therapy",
       "name": "IV Drip Therapy",
       "fullName": "Intravenous Vitamin & Nutrient Therapy",
-      "category": "Holistic & Mind-Body",
+      "category": "IV & Infusion Therapies",
       "description": "Direct intravenous delivery of vitamins, minerals, and antioxidants. Popular in Dubai for hangover recovery, immune boosting, and general wellness, though evidence for most claims is limited.",
       "icon": "💧",
       "kamuraScore": 61,
@@ -5270,7 +5271,7 @@
       "slug": "stem-cell-therapy",
       "name": "Stem Cell Therapy",
       "fullName": "Mesenchymal Stem Cell Therapy",
-      "category": "Detox & Functional",
+      "category": "Regenerative Medicine",
       "description": "Regenerative medicine using stem cells (MSCs) for joint repair, anti-aging, and tissue regeneration. Rapidly advancing field with promising but variable results.",
       "icon": "🧬",
       "kamuraScore": 64,
@@ -5342,9 +5343,9 @@
         }
       ],
       "relatedSlugs": [
-        "bpc-157",
-        "tb-500",
-        "hyperbaric-oxygen"
+        "prp-therapy",
+        "exosome-therapy",
+        "bpc-157"
       ],
       "imageUrl": "https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=800&h=500&fit=crop",
       "keyStudies": [
@@ -5378,7 +5379,7 @@
       "slug": "fasting",
       "name": "Fasting (Intermittent)",
       "fullName": "Intermittent & Extended Fasting",
-      "category": "Detox & Functional",
+      "category": "Mind-Body & Movement",
       "description": "Deliberate time-restricted eating or multi-day fasting for metabolic health, autophagy activation, and longevity. One of the most studied longevity interventions with growing clinical evidence.",
       "icon": "⏰",
       "kamuraScore": 82,
@@ -5491,6 +5492,2055 @@
           "year": 2015,
           "pmid": "25540401",
           "finding": "Periodic fasting-mimicking diet reduced biomarkers for aging, diabetes, cardiovascular disease, and cancer in human pilot study."
+        }
+      ]
+    },
+    {
+      "slug": "hijama",
+      "name": "Hijama",
+      "fullName": "Hijama (Wet Cupping Therapy)",
+      "category": "Traditional & Alternative Medicine",
+      "description": "Ancient therapeutic practice involving controlled skin incisions and suction cups to draw out blood, believed to remove toxins, reduce inflammation, and stimulate immune response. Deeply rooted in Islamic Prophetic medicine and widely practiced across the Middle East with growing clinical evidence for pain management and cardiovascular health.",
+      "icon": "🩸",
+      "kamuraScore": 72,
+      "scores": {
+        "research": 52,
+        "community": 82,
+        "safety": 75,
+        "accessibility": 85,
+        "value": 68
+      },
+      "evidenceLevel": "Moderate",
+      "tags": [
+        "Pain",
+        "Detox",
+        "Blood Pressure",
+        "Immunity",
+        "Traditional"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 60,
+      "communityReports": 120,
+      "administrationRoutes": [
+        "Topical (Cupping + Incisions)"
+      ],
+      "outcomes": [
+        {
+          "name": "Musculoskeletal Pain Relief",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Multiple RCTs demonstrate significant reduction in chronic low back, neck, and general musculoskeletal pain. Kim et al. (2011) showed meaningful NRS and ODI improvements at 4 weeks.",
+          "studyCount": 12,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Blood Pressure Reduction",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Two RCTs show systolic BP reduction of 8-13 mmHg. Proposed mechanism via nitric oxide release and clearance of oxidized blood components.",
+          "studyCount": 5,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Immune Modulation",
+          "direction": "positive",
+          "grade": "C",
+          "description": "Observational studies show changes in WBC counts and NK cell activity post-cupping. Taibah theory proposes selective clearance of senescent blood components.",
+          "studyCount": 6,
+          "consistency": "Mixed",
+          "effectSize": "Small"
+        }
+      ],
+      "community": {
+        "totalReports": 120,
+        "positivePercent": 80,
+        "satisfaction": "4.2/5",
+        "timeToEffect": "1-3 sessions",
+        "quotes": [
+          {
+            "text": "Chronic shoulder pain cleared after 2 Hijama sessions. My go-to therapy now.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          },
+          {
+            "text": "Blood pressure dropped from 150/95 to 130/85 after 3 sessions combined with lifestyle changes.",
+            "source": "Community member",
+            "location": "Abu Dhabi",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Pain Management",
+          "dosage": "1 session every 2-4 weeks",
+          "notes": "3-8 cups placed on back, shoulders, or affected area. 4-6 session initial course."
+        },
+        {
+          "label": "General Wellness",
+          "dosage": "1 session per month",
+          "notes": "4-6 cups on upper back. Follow Sunnah days for traditional timing."
+        }
+      ],
+      "relatedSlugs": [
+        "acupuncture",
+        "dry-cupping",
+        "ayurveda"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "The medical perspective of cupping therapy: Effects and mechanisms of action",
+          "authors": "Al-Bedah AMN et al.",
+          "journal": "J Tradit Complement Med",
+          "year": 2019,
+          "pmid": "30425927",
+          "finding": "Comprehensive review of 60+ studies concluding wet cupping has analgesic and anti-inflammatory effects via nitric oxide modulation and pain gate theory."
+        },
+        {
+          "title": "Effectiveness of wet cupping as adjunctive therapy for hypertension",
+          "authors": "Aleyeidi NA et al.",
+          "journal": "J Integr Med",
+          "year": 2015,
+          "pmid": "26343101",
+          "finding": "RCT (n=40) showed wet cupping significantly reduced systolic BP by 13.2 mmHg vs control at 4 weeks."
+        },
+        {
+          "title": "Evaluation of wet-cupping for persistent nonspecific low back pain",
+          "authors": "Kim JI et al.",
+          "journal": "BMC Complement Altern Med",
+          "year": 2011,
+          "pmid": "21251269",
+          "finding": "RCT found wet cupping significantly reduced pain (NRS) and improved disability (ODI) for chronic low back pain."
+        }
+      ]
+    },
+    {
+      "slug": "dry-cupping",
+      "name": "Dry Cupping",
+      "fullName": "Dry Cupping Therapy",
+      "category": "Traditional & Alternative Medicine",
+      "description": "Non-invasive suction therapy using cups placed on the skin to create negative pressure, promoting blood flow, fascial release, and pain relief without skin incisions. Gained mainstream visibility through Olympic athletes and widely used in sports recovery.",
+      "icon": "⭕",
+      "kamuraScore": 72,
+      "scores": {
+        "research": 52,
+        "community": 78,
+        "safety": 88,
+        "accessibility": 92,
+        "value": 82
+      },
+      "evidenceLevel": "Moderate",
+      "tags": [
+        "Pain",
+        "Sports Recovery",
+        "Fascia",
+        "Traditional"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 40,
+      "communityReports": 90,
+      "administrationRoutes": [
+        "Topical (Suction Cups)"
+      ],
+      "outcomes": [
+        {
+          "name": "Musculoskeletal Pain Relief",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Meta-analysis of 16 RCTs shows significant pain reduction for chronic low back and neck pain. Effect comparable to acupuncture.",
+          "studyCount": 16,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Sports Recovery (DOMS)",
+          "direction": "positive",
+          "grade": "C",
+          "description": "Moderate evidence for reduced muscle soreness and perceived fatigue after exercise. Widely adopted by Olympic athletes.",
+          "studyCount": 11,
+          "consistency": "Moderate",
+          "effectSize": "Small"
+        }
+      ],
+      "community": {
+        "totalReports": 90,
+        "positivePercent": 76,
+        "satisfaction": "4.0/5",
+        "timeToEffect": "Immediate-3 days",
+        "quotes": [
+          {
+            "text": "Incredible for post-workout recovery. The bruising looks dramatic but I feel so much lighter after.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Pain Relief",
+          "dosage": "2-3 sessions per week",
+          "notes": "10-15 minutes per session. Silicone or glass cups. 4-6 week course."
+        },
+        {
+          "label": "Sports Recovery",
+          "dosage": "Post-training session",
+          "notes": "5-10 minutes on major muscle groups. Can combine with massage."
+        }
+      ],
+      "relatedSlugs": [
+        "hijama",
+        "acupuncture",
+        "cryotherapy"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Effectiveness of cupping therapy for low back pain: a systematic review",
+          "authors": "Zhang YJ et al.",
+          "journal": "Acupunct Med",
+          "year": 2017,
+          "pmid": "28153960",
+          "finding": "Meta-analysis of 16 RCTs (n=921) showed significant pain reduction vs controls for chronic low back pain."
+        },
+        {
+          "title": "The effect of dry cupping on performance and recovery",
+          "authors": "Bridgett R et al.",
+          "journal": "J Altern Complement Med",
+          "year": 2018,
+          "pmid": "29185815",
+          "finding": "Systematic review found moderate evidence that dry cupping reduces DOMS and perceived fatigue post-exercise."
+        },
+        {
+          "title": "Cupping therapy for musculoskeletal pain: systematic review",
+          "authors": "Yuan QL et al.",
+          "journal": "BMC Complement Altern Med",
+          "year": 2015,
+          "pmid": "26099391",
+          "finding": "Cupping superior to no treatment for musculoskeletal conditions; comparable to acupuncture."
+        }
+      ]
+    },
+    {
+      "slug": "reflexology",
+      "name": "Reflexology",
+      "fullName": "Reflexology (Foot & Hand Therapy)",
+      "category": "Traditional & Alternative Medicine",
+      "description": "Practice of applying pressure to specific points on the feet, hands, and ears believed to correspond to different body organs and systems. Used for relaxation, pain reduction, and stress management with limited but growing clinical evidence.",
+      "icon": "🦶",
+      "kamuraScore": 52,
+      "scores": {
+        "research": 35,
+        "community": 62,
+        "safety": 92,
+        "accessibility": 70,
+        "value": 60
+      },
+      "evidenceLevel": "Limited",
+      "tags": [
+        "Stress",
+        "Pain",
+        "Relaxation",
+        "Traditional"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 25,
+      "communityReports": 45,
+      "administrationRoutes": [
+        "Manual Pressure"
+      ],
+      "outcomes": [
+        {
+          "name": "Anxiety & Stress Reduction",
+          "direction": "positive",
+          "grade": "C",
+          "description": "Some RCTs show reduced anxiety scores in hospital/surgical settings. Effect may be largely non-specific relaxation response.",
+          "studyCount": 8,
+          "consistency": "Mixed",
+          "effectSize": "Small"
+        },
+        {
+          "name": "Pain Management",
+          "direction": "positive",
+          "grade": "C",
+          "description": "Limited evidence for pain reduction in cancer patients and headache. Ernst et al. Cochrane reviews note methodological weaknesses.",
+          "studyCount": 6,
+          "consistency": "Low",
+          "effectSize": "Small"
+        }
+      ],
+      "community": {
+        "totalReports": 45,
+        "positivePercent": 65,
+        "satisfaction": "3.8/5",
+        "timeToEffect": "Immediate relaxation",
+        "quotes": [
+          {
+            "text": "Very relaxing experience. I go weekly as part of my wellness routine.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Standard Session",
+          "dosage": "45-60 min session",
+          "notes": "Weekly sessions recommended. Focus on feet for general wellness."
+        }
+      ],
+      "relatedSlugs": [
+        "acupuncture",
+        "meditation",
+        "yoga"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Reflexology for anxiety and pain reduction in cancer patients",
+          "authors": "Stephenson NL et al.",
+          "journal": "Oncol Nurs Forum",
+          "year": 2000,
+          "pmid": "10775923",
+          "finding": "RCT showed reflexology significantly reduced anxiety in breast and lung cancer patients compared to control."
+        },
+        {
+          "title": "Is reflexology an effective intervention? A systematic review",
+          "authors": "Ernst E",
+          "journal": "Med J Aust",
+          "year": 2009,
+          "pmid": "19835535",
+          "finding": "Systematic review concluded reflexology is not convincingly effective for any medical condition; most positive findings have methodological limitations."
+        }
+      ]
+    },
+    {
+      "slug": "prp-therapy",
+      "name": "PRP Therapy",
+      "fullName": "Platelet-Rich Plasma Therapy",
+      "category": "Regenerative Medicine",
+      "description": "An autologous blood-derived treatment where concentrated platelets and growth factors are injected to accelerate tissue healing, reduce joint pain, restore hair growth, and rejuvenate skin. One of the most widely adopted regenerative treatments globally.",
+      "icon": "🩸",
+      "kamuraScore": 80,
+      "scores": {
+        "research": 72,
+        "community": 85,
+        "safety": 92,
+        "accessibility": 88,
+        "value": 65
+      },
+      "evidenceLevel": "Moderate",
+      "tags": [
+        "Joint Health",
+        "Hair Restoration",
+        "Skin",
+        "Recovery",
+        "Regenerative"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 150,
+      "communityReports": 200,
+      "administrationRoutes": [
+        "Intra-articular Injection",
+        "Intradermal Injection",
+        "Subcutaneous Injection"
+      ],
+      "outcomes": [
+        {
+          "name": "Joint Pain & Osteoarthritis",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Strong RCT evidence for knee OA. PRP outperforms hyaluronic acid and placebo at 6-12 months with ~40-50% VAS improvement.",
+          "studyCount": 25,
+          "consistency": "High",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Hair Restoration",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Good RCT evidence for androgenetic alopecia. ~30% increase in hair density at 3 months. Multiple sessions needed.",
+          "studyCount": 15,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Tendon Healing",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Meta-analysis of 18 RCTs found significant pain reduction and functional improvement in chronic tendinopathy.",
+          "studyCount": 18,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        }
+      ],
+      "community": {
+        "totalReports": 200,
+        "positivePercent": 78,
+        "satisfaction": "4.2/5",
+        "timeToEffect": "2-6 weeks",
+        "quotes": [
+          {
+            "text": "Three PRP sessions eliminated my knee pain after years of failed cortisone injections.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Knee Osteoarthritis",
+          "dosage": "3-5 mL intra-articular, 3 injections at 2-week intervals",
+          "notes": "Avoid NSAIDs 72 hours before/after."
+        },
+        {
+          "label": "Hair Restoration",
+          "dosage": "3-5 mL scalp injections, 3-4 monthly sessions",
+          "notes": "Maintenance every 6-12 months."
+        }
+      ],
+      "relatedSlugs": [
+        "stem-cell-therapy",
+        "bpc-157",
+        "exosome-therapy"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Efficacy of Intra-articular PRP Injections in Knee OA: A Systematic Review",
+          "authors": "Meheux CJ et al.",
+          "journal": "Arthroscopy",
+          "year": 2016,
+          "pmid": "26432430",
+          "finding": "6 Level I studies (739 patients) found PRP significantly improved pain and function vs hyaluronic acid and placebo."
+        },
+        {
+          "title": "The Effect of PRP in Hair Regrowth: A Randomized Placebo-Controlled Trial",
+          "authors": "Gentile P et al.",
+          "journal": "Stem Cells Transl Med",
+          "year": 2015,
+          "pmid": "26460330",
+          "finding": "RCT showed PRP significantly increased hair count (+33.6 hairs/cm2) at 3 months vs placebo."
+        },
+        {
+          "title": "Effectiveness of PRP in Treatment of Tendinopathy",
+          "authors": "Fitzpatrick J et al.",
+          "journal": "Am J Sports Med",
+          "year": 2017,
+          "pmid": "27268111",
+          "finding": "Meta-analysis of 18 RCTs found significant pain reduction in chronic tendinopathy."
+        }
+      ]
+    },
+    {
+      "slug": "exosome-therapy",
+      "name": "Exosome Therapy",
+      "fullName": "Mesenchymal Stem Cell Exosome Therapy",
+      "category": "Regenerative Medicine",
+      "description": "Cell-free regenerative treatment using exosomes (nano-vesicles) derived from mesenchymal stem cells. Contains growth factors and miRNAs that promote tissue repair. Exciting preclinical science but limited clinical validation.",
+      "icon": "🔬",
+      "kamuraScore": 42,
+      "scores": {
+        "research": 35,
+        "community": 55,
+        "safety": 40,
+        "accessibility": 50,
+        "value": 30
+      },
+      "evidenceLevel": "Limited",
+      "tags": [
+        "Regenerative",
+        "Joints",
+        "Skin",
+        "Emerging"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 20,
+      "communityReports": 30,
+      "administrationRoutes": [
+        "Injectable",
+        "Topical"
+      ],
+      "outcomes": [
+        {
+          "name": "Joint & Cartilage Repair",
+          "direction": "neutral",
+          "grade": "C",
+          "description": "Promising preclinical data for cartilage protection and anti-inflammation in OA models. No completed Phase III human trials.",
+          "studyCount": 8,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Skin Rejuvenation",
+          "direction": "neutral",
+          "grade": "C",
+          "description": "Strong in vitro evidence for enhanced fibroblast function. Human evidence limited to small case series from aesthetic clinics.",
+          "studyCount": 5,
+          "consistency": "Low",
+          "effectSize": "Unclear"
+        }
+      ],
+      "community": {
+        "totalReports": 30,
+        "positivePercent": 60,
+        "satisfaction": "3.5/5",
+        "timeToEffect": "2-8 weeks",
+        "quotes": [
+          {
+            "text": "Noticed improvement in skin texture after exosome facial, but hard to know if it was the exosomes or the microneedling.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Aesthetic (Facial)",
+          "dosage": "1-2 sessions, 4 weeks apart",
+          "notes": "Combined with microneedling. $1500-5000 per session."
+        },
+        {
+          "label": "Joint Injection",
+          "dosage": "Single injection",
+          "notes": "Ultrasound-guided. Clinic-dependent protocols."
+        }
+      ],
+      "relatedSlugs": [
+        "stem-cell-therapy",
+        "prp-therapy",
+        "ghk-cu"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "MSC-derived exosomes: a new therapeutic approach to osteoarthritis",
+          "authors": "Cosenza S et al.",
+          "journal": "Stem Cells Int",
+          "year": 2017,
+          "pmid": "28698718",
+          "finding": "MSC exosomes reduced cartilage degradation and synovial inflammation in murine OA models."
+        },
+        {
+          "title": "Exosomes from adipose MSCs accelerate wound healing",
+          "authors": "Hu L et al.",
+          "journal": "Sci Rep",
+          "year": 2016,
+          "pmid": "27819283",
+          "finding": "Adipose MSC exosomes enhanced fibroblast proliferation and accelerated wound closure by 40% in murine model."
+        }
+      ]
+    },
+    {
+      "slug": "prolotherapy",
+      "name": "Prolotherapy",
+      "fullName": "Prolotherapy (Dextrose Injection Therapy)",
+      "category": "Regenerative Medicine",
+      "description": "Injection of dextrose (sugar water) solution into damaged joints, tendons, and ligaments to stimulate the body's natural healing response. Decades of use in sports medicine with growing RCT evidence for knee and low back pain.",
+      "icon": "💉",
+      "kamuraScore": 62,
+      "scores": {
+        "research": 55,
+        "community": 65,
+        "safety": 82,
+        "accessibility": 68,
+        "value": 70
+      },
+      "evidenceLevel": "Moderate",
+      "tags": [
+        "Joint Health",
+        "Pain",
+        "Sports",
+        "Regenerative"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 35,
+      "communityReports": 60,
+      "administrationRoutes": [
+        "Injectable (Periarticular)"
+      ],
+      "outcomes": [
+        {
+          "name": "Knee Osteoarthritis",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Rabago et al. RCTs show significant pain and function improvement in knee OA at 12 months vs saline injection.",
+          "studyCount": 8,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Low Back Pain",
+          "direction": "positive",
+          "grade": "C",
+          "description": "Mixed evidence for chronic low back pain. Some RCTs positive, others show no benefit over saline controls.",
+          "studyCount": 6,
+          "consistency": "Mixed",
+          "effectSize": "Small"
+        }
+      ],
+      "community": {
+        "totalReports": 60,
+        "positivePercent": 68,
+        "satisfaction": "3.8/5",
+        "timeToEffect": "4-8 weeks",
+        "quotes": [
+          {
+            "text": "After 4 prolotherapy sessions, my runner's knee finally stopped clicking. Back to training.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Knee OA",
+          "dosage": "3-6 injections at 4-week intervals",
+          "notes": "15-25% dextrose solution. Ultrasound-guided preferred."
+        },
+        {
+          "label": "Tendon/Ligament",
+          "dosage": "3-4 injections at 3-week intervals",
+          "notes": "12.5-15% dextrose. Expect temporary soreness."
+        }
+      ],
+      "relatedSlugs": [
+        "prp-therapy",
+        "stem-cell-therapy",
+        "bpc-157"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Dextrose prolotherapy for knee osteoarthritis: a randomized controlled trial",
+          "authors": "Rabago D et al.",
+          "journal": "Ann Fam Med",
+          "year": 2013,
+          "pmid": "23420128",
+          "finding": "RCT showed dextrose prolotherapy significantly improved pain and function in knee OA at 52 weeks vs saline injection."
+        },
+        {
+          "title": "A systematic review of dextrose prolotherapy for chronic musculoskeletal pain",
+          "authors": "Rabago D et al.",
+          "journal": "Clin J Sport Med",
+          "year": 2005,
+          "pmid": "15782048",
+          "finding": "Systematic review found prolotherapy effective for chronic low back pain and knee OA in most controlled trials."
+        }
+      ]
+    },
+    {
+      "slug": "glutathione-iv",
+      "name": "Glutathione IV",
+      "fullName": "Intravenous Glutathione Therapy",
+      "category": "IV & Infusion Therapies",
+      "description": "Intravenous infusion of glutathione, the body's master antioxidant, for detoxification support, skin brightening, and oxidative stress reduction. Popular in wellness clinics globally, especially in the Middle East and Southeast Asia.",
+      "icon": "💧",
+      "kamuraScore": 62,
+      "scores": {
+        "research": 45,
+        "community": 72,
+        "safety": 68,
+        "accessibility": 78,
+        "value": 55
+      },
+      "evidenceLevel": "Emerging",
+      "tags": [
+        "Detox",
+        "Skin",
+        "Antioxidant",
+        "IV Therapy"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 20,
+      "communityReports": 80,
+      "administrationRoutes": [
+        "Intravenous"
+      ],
+      "outcomes": [
+        {
+          "name": "Oxidative Stress Reduction",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Consistent evidence that IV glutathione rapidly raises plasma GSH levels and reduces oxidative stress markers. Effect is transient (24-72 hours).",
+          "studyCount": 8,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Skin Brightening",
+          "direction": "neutral",
+          "grade": "C",
+          "description": "Mechanistic plausibility through tyrosinase inhibition. Some observational reports of improvement after serial infusions but no large RCTs.",
+          "studyCount": 4,
+          "consistency": "Low",
+          "effectSize": "Small"
+        }
+      ],
+      "community": {
+        "totalReports": 80,
+        "positivePercent": 70,
+        "satisfaction": "3.9/5",
+        "timeToEffect": "Immediate-48 hours",
+        "quotes": [
+          {
+            "text": "Noticeable energy boost and skin glow after each session. I do it monthly as part of my wellness routine.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Wellness/Detox",
+          "dosage": "600-1200mg IV, weekly for 4-8 weeks",
+          "notes": "Often combined with vitamin C drip. Maintenance monthly."
+        },
+        {
+          "label": "Skin Brightening",
+          "dosage": "1200-2000mg IV, 2x/week for 6-8 weeks",
+          "notes": "Higher frequency needed. Results vary."
+        }
+      ],
+      "relatedSlugs": [
+        "iv-drip-therapy",
+        "nad-injectable",
+        "chelation-therapy"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Glutathione as a skin whitening agent: facts, myths, evidence and controversies",
+          "authors": "Sonthalia S et al.",
+          "journal": "Indian J Dermatol Venereol Leprol",
+          "year": 2016,
+          "pmid": "27088927",
+          "finding": "Review concluded mechanistic rationale exists for skin lightening but high-quality RCTs are lacking."
+        },
+        {
+          "title": "Oral supplementation with whey-based glutathione formulation raises glutathione levels",
+          "authors": "Richie JP Jr et al.",
+          "journal": "Eur J Nutr",
+          "year": 2015,
+          "pmid": "25389048",
+          "finding": "RCT (n=54) demonstrated sustained GSH elevation is achievable; IV route expected to produce higher acute levels."
+        }
+      ]
+    },
+    {
+      "slug": "chelation-therapy",
+      "name": "Chelation Therapy",
+      "fullName": "EDTA Chelation Therapy",
+      "category": "IV & Infusion Therapies",
+      "description": "Intravenous infusion of EDTA (ethylenediaminetetraacetic acid) to bind and remove heavy metals from the bloodstream. FDA-approved for lead poisoning; used off-label for cardiovascular disease with mixed evidence from the TACT trial.",
+      "icon": "🧪",
+      "kamuraScore": 55,
+      "scores": {
+        "research": 50,
+        "community": 52,
+        "safety": 55,
+        "accessibility": 58,
+        "value": 48
+      },
+      "evidenceLevel": "Moderate",
+      "tags": [
+        "Detox",
+        "Heavy Metals",
+        "Cardiovascular",
+        "IV Therapy"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 30,
+      "communityReports": 40,
+      "administrationRoutes": [
+        "Intravenous"
+      ],
+      "outcomes": [
+        {
+          "name": "Heavy Metal Removal",
+          "direction": "positive",
+          "grade": "A",
+          "description": "FDA-approved for lead and heavy metal poisoning. Well-established mechanism of chelation and renal excretion.",
+          "studyCount": 15,
+          "consistency": "High",
+          "effectSize": "Large"
+        },
+        {
+          "name": "Cardiovascular Disease",
+          "direction": "positive",
+          "grade": "C",
+          "description": "TACT trial showed modest benefit in diabetic patients with prior MI, but results were controversial. TACT2 follow-up ongoing.",
+          "studyCount": 5,
+          "consistency": "Mixed",
+          "effectSize": "Small"
+        }
+      ],
+      "community": {
+        "totalReports": 40,
+        "positivePercent": 62,
+        "satisfaction": "3.6/5",
+        "timeToEffect": "After series of 20-40 sessions",
+        "quotes": [
+          {
+            "text": "Heavy metal levels dropped significantly after 20 sessions. Expensive but necessary for my mercury exposure.",
+            "source": "Community member",
+            "location": "Abu Dhabi",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Heavy Metal Detox",
+          "dosage": "1.5-3g EDTA IV, 20-40 sessions over 6-12 months",
+          "notes": "Monitor kidney function, mineral levels. Supplement calcium, zinc, magnesium."
+        }
+      ],
+      "relatedSlugs": [
+        "glutathione-iv",
+        "iv-drip-therapy",
+        "inuspheresis"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Effect of disodium EDTA chelation regimen on cardiovascular events in patients with previous MI: TACT",
+          "authors": "Lamas GA et al.",
+          "journal": "JAMA",
+          "year": 2013,
+          "pmid": "23549581",
+          "finding": "RCT (n=1708) showed modest 18% reduction in composite cardiovascular endpoint, significant benefit in diabetic subgroup (39% reduction)."
+        }
+      ]
+    },
+    {
+      "slug": "rapamycin",
+      "name": "Rapamycin",
+      "fullName": "Rapamycin (Sirolimus) for Longevity",
+      "category": "Longevity Pharmaceuticals",
+      "description": "An mTOR inhibitor originally used in organ transplant patients, now emerging as the most evidence-backed pharmacological longevity intervention. The landmark Harrison 2009 study showed lifespan extension in mice, and the PEARL trial (2025) confirmed safety in healthy adults at longevity doses.",
+      "icon": "⚗️",
+      "kamuraScore": 73,
+      "scores": {
+        "research": 82,
+        "community": 78,
+        "safety": 72,
+        "accessibility": 58,
+        "value": 74
+      },
+      "evidenceLevel": "Strong",
+      "tags": [
+        "Longevity",
+        "Anti-Aging",
+        "mTOR",
+        "Immune",
+        "Geroprotective"
+      ],
+      "uaeAvailable": false,
+      "studyCount": 80,
+      "communityReports": 100,
+      "administrationRoutes": [
+        "Oral"
+      ],
+      "outcomes": [
+        {
+          "name": "Lifespan Extension (Animal)",
+          "direction": "positive",
+          "grade": "A",
+          "description": "9-14% lifespan extension in genetically diverse mice (Harrison 2009 Nature). Replicated at 3 NIA ITP sites. Strongest animal longevity drug data of any compound.",
+          "studyCount": 20,
+          "consistency": "High",
+          "effectSize": "Large"
+        },
+        {
+          "name": "Immune Function Enhancement",
+          "direction": "positive",
+          "grade": "A",
+          "description": "Two RCTs (Mannick 2014, 2018) showed ~20% improved vaccine response and significantly reduced infection rates for 12 months after 6 weeks of low-dose treatment.",
+          "studyCount": 5,
+          "consistency": "High",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Anti-Aging Skin",
+          "direction": "positive",
+          "grade": "C",
+          "description": "Chung et al. 2019 RCT showed topical rapamycin reduced senescence markers (p16INK4A) and increased collagen VII in human skin. Promising but small sample.",
+          "studyCount": 2,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        }
+      ],
+      "community": {
+        "totalReports": 100,
+        "positivePercent": 75,
+        "satisfaction": "4.0/5",
+        "timeToEffect": "8-24 weeks",
+        "quotes": [
+          {
+            "text": "Been on 5mg weekly for a year. Labs look great, immune function improved. Longevity physician monitors closely.",
+            "source": "Community member",
+            "location": "USA",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Standard Longevity",
+          "dosage": "3-5mg once weekly",
+          "notes": "Most common off-label longevity dose. Monitor CBC, lipids, fasting glucose quarterly."
+        },
+        {
+          "label": "PEARL Protocol",
+          "dosage": "5-10mg once weekly for 48 weeks",
+          "notes": "Based on published PEARL trial data. Drug holidays before vaccines or surgery."
+        }
+      ],
+      "relatedSlugs": [
+        "metformin",
+        "nad-injectable",
+        "spermidine"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Rapamycin fed late in life extends lifespan in genetically heterogeneous mice",
+          "authors": "Harrison DE et al.",
+          "journal": "Nature",
+          "year": 2009,
+          "pmid": "19587680",
+          "finding": "First demonstration that a drug can extend mammalian lifespan. +14% for females, +9% for males at 3 independent NIA ITP sites."
+        },
+        {
+          "title": "mTOR inhibition improves immune function in the elderly",
+          "authors": "Mannick JB et al.",
+          "journal": "Sci Transl Med",
+          "year": 2014,
+          "pmid": "25540326",
+          "finding": "RAD001 enhanced influenza vaccine response by ~20% in elderly volunteers and reduced PD-1 exhaustion markers."
+        },
+        {
+          "title": "TORC1 inhibition enhances immune function and reduces infections in the elderly",
+          "authors": "Mannick JB et al.",
+          "journal": "Sci Transl Med",
+          "year": 2018,
+          "pmid": "29997249",
+          "finding": "Phase 2a RCT: 6 weeks of TORC1 inhibition significantly decreased infection rates for a full year (P=0.001)."
+        },
+        {
+          "title": "Influence of rapamycin on safety and healthspan metrics after one year: PEARL trial",
+          "authors": "Moel M et al.",
+          "journal": "Aging",
+          "year": 2025,
+          "pmid": "40188830",
+          "finding": "First year-long RCT of rapamycin in healthy adults. Safety equal to placebo. Women on 10mg/week showed improved lean mass and pain."
+        }
+      ]
+    },
+    {
+      "slug": "metformin",
+      "name": "Metformin",
+      "fullName": "Metformin Hydrochloride (Off-Label Longevity)",
+      "category": "Longevity Pharmaceuticals",
+      "description": "A first-line diabetes drug with 60+ years of clinical history, now emerging as the most evidence-backed pharmaceutical for anti-aging. The Bannister study showed metformin users outliving non-diabetic controls, and the TAME trial is the first FDA-approved trial targeting aging itself.",
+      "icon": "💊",
+      "kamuraScore": 82,
+      "scores": {
+        "research": 92,
+        "community": 75,
+        "safety": 88,
+        "accessibility": 78,
+        "value": 95
+      },
+      "evidenceLevel": "Strong",
+      "tags": [
+        "Longevity",
+        "Anti-Aging",
+        "Cardiovascular",
+        "Cancer Prevention",
+        "Metabolic"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 53,
+      "communityReports": 120,
+      "administrationRoutes": [
+        "Oral"
+      ],
+      "outcomes": [
+        {
+          "name": "Longevity / All-Cause Mortality",
+          "direction": "positive",
+          "grade": "A",
+          "description": "36% reduction in all-cause mortality (UKPDS 34); metformin users outlive non-diabetic controls by 15% (Bannister 2014). 53-study meta-analysis confirms geroprotective effects.",
+          "studyCount": 53,
+          "consistency": "High",
+          "effectSize": "Large"
+        },
+        {
+          "name": "Cardiovascular Protection",
+          "direction": "positive",
+          "grade": "A",
+          "description": "42% reduction in diabetes-related death (UKPDS 34). HR=0.76 for CVD vs non-metformin therapies.",
+          "studyCount": 30,
+          "consistency": "High",
+          "effectSize": "Large"
+        },
+        {
+          "name": "Cancer Prevention",
+          "direction": "positive",
+          "grade": "B",
+          "description": "31% reduction in cancer incidence and 34% in cancer mortality in pooled analysis of 47 studies. Effect attenuated to 10-18% after bias correction.",
+          "studyCount": 47,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Diabetes Prevention",
+          "direction": "positive",
+          "grade": "A",
+          "description": "31% reduction in diabetes incidence in pre-diabetic populations (DPP, NEJM 2002). NNT=13.9 over 3 years.",
+          "studyCount": 10,
+          "consistency": "High",
+          "effectSize": "Large"
+        }
+      ],
+      "community": {
+        "totalReports": 120,
+        "positivePercent": 78,
+        "satisfaction": "4.0/5",
+        "timeToEffect": "4-12 weeks",
+        "quotes": [
+          {
+            "text": "500mg XR for 2 years. Fasting glucose from 98 to 82, HbA1c from 5.6 to 5.1. Zero side effects after first week.",
+            "source": "Community member",
+            "location": "USA",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Conservative Starter",
+          "dosage": "250-500mg once daily with dinner",
+          "notes": "Extended-release preferred. Supplement B12 (1000mcg/day)."
+        },
+        {
+          "label": "Standard Longevity",
+          "dosage": "500mg twice daily (1000mg/day)",
+          "notes": "Most common off-label dose. Monitor fasting glucose, HbA1c, B12, eGFR every 6 months."
+        }
+      ],
+      "relatedSlugs": [
+        "rapamycin",
+        "nad-injectable",
+        "berberine",
+        "fasting"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Can people with type 2 diabetes live longer than those without?",
+          "authors": "Bannister CA et al.",
+          "journal": "Diabetes Obes Metab",
+          "year": 2014,
+          "pmid": "25041462",
+          "finding": "Metformin users lived 15% longer than matched non-diabetic controls (n=180,926, 503,384 person-years)."
+        },
+        {
+          "title": "Effect of intensive blood-glucose control with metformin (UKPDS 34)",
+          "authors": "UKPDS Group",
+          "journal": "The Lancet",
+          "year": 1998,
+          "pmid": "9742977",
+          "finding": "Landmark RCT: metformin reduced all-cause mortality by 36%, diabetes-related death by 42% over 10.7 years."
+        },
+        {
+          "title": "Metformin reduces all-cause mortality and diseases of ageing: systematic review",
+          "authors": "Campbell JM et al.",
+          "journal": "Ageing Res Rev",
+          "year": 2017,
+          "pmid": "28802803",
+          "finding": "53-study meta-analysis: metformin users had lower all-cause mortality than non-diabetics (HR=0.93)."
+        },
+        {
+          "title": "Metformin as a Tool to Target Aging",
+          "authors": "Barzilai N et al.",
+          "journal": "Cell Metab",
+          "year": 2016,
+          "pmid": "27304507",
+          "finding": "Outlines the TAME trial — first FDA-approved clinical trial testing a drug for aging as an indication."
+        }
+      ]
+    },
+    {
+      "slug": "berberine",
+      "name": "Berberine",
+      "fullName": "Berberine Hydrochloride",
+      "category": "Supplements & Nutraceuticals",
+      "description": "A bioactive alkaloid found in goldenseal, barberry, and Oregon grape with strong evidence for blood sugar control and cholesterol management. Often called 'nature's metformin' due to its AMPK-activating metabolic effects.",
+      "icon": "🌿",
+      "kamuraScore": 74,
+      "scores": {
+        "research": 75,
+        "community": 68,
+        "safety": 65,
+        "accessibility": 78,
+        "value": 82
+      },
+      "evidenceLevel": "Moderate",
+      "tags": [
+        "Blood Sugar",
+        "Cholesterol",
+        "Metabolic",
+        "Gut Health",
+        "AMPK"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 46,
+      "communityReports": 80,
+      "administrationRoutes": [
+        "Oral"
+      ],
+      "outcomes": [
+        {
+          "name": "Blood Sugar Control",
+          "direction": "positive",
+          "grade": "A",
+          "description": "Strong meta-analytic evidence from 28-46 RCTs. Reduces FPG by 0.54-0.86 mmol/L and HbA1c by 0.54-0.73%. Comparable to metformin in some head-to-head trials.",
+          "studyCount": 46,
+          "consistency": "High",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Cholesterol & Lipids",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Consistent reductions in TG, TC, and LDL. Most effective as adjunct to statins. 44-RCT meta-analysis supports cardiovascular benefits.",
+          "studyCount": 44,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Weight Management",
+          "direction": "positive",
+          "grade": "C",
+          "description": "Significant BMI reduction (MD -1.07) in metabolic syndrome populations. AMPK-mediated mechanism. Not a standalone weight-loss agent.",
+          "studyCount": 10,
+          "consistency": "Moderate",
+          "effectSize": "Small"
+        }
+      ],
+      "community": {
+        "totalReports": 80,
+        "positivePercent": 72,
+        "satisfaction": "3.9/5",
+        "timeToEffect": "2-4 weeks",
+        "quotes": [
+          {
+            "text": "Fasting glucose dropped from 112 to 94 after 6 weeks of berberine 500mg 3x daily. Nature's metformin indeed.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Blood Sugar Support",
+          "dosage": "500mg 2-3x daily with meals",
+          "notes": "Start low (500mg/day) to minimize GI effects. Take with food."
+        },
+        {
+          "label": "Lipid Management",
+          "dosage": "500mg 2x daily",
+          "notes": "Can combine with statins for enhanced effect. Monitor liver enzymes."
+        }
+      ],
+      "relatedSlugs": [
+        "metformin",
+        "magnesium",
+        "omega-3",
+        "fasting"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Effects of berberine on blood glucose in type 2 diabetes: systematic review and meta-analysis",
+          "authors": "Liang Y et al.",
+          "journal": "Endocr J",
+          "year": 2019,
+          "pmid": "30393248",
+          "finding": "Meta-analysis of 28 RCTs: berberine significantly reduced FPG, PPG, and HbA1c in type 2 diabetes."
+        },
+        {
+          "title": "Berberine on metabolic profiles in type 2 diabetic patients: systematic review",
+          "authors": "Guo J et al.",
+          "journal": "Oxid Med Cell Longev",
+          "year": 2021,
+          "pmid": "34956436",
+          "finding": "46-RCT meta-analysis: berberine reduced HbA1c by 0.73%, improved HOMA-IR, BMI, and lipid profiles."
+        },
+        {
+          "title": "Efficacy and safety of berberine for cardiovascular diseases",
+          "authors": "Yang L et al.",
+          "journal": "Phytomedicine",
+          "year": 2023,
+          "pmid": "36805484",
+          "finding": "44-RCT meta-analysis: berberine plus statins significantly reduced inflammatory markers and unstable plaque counts."
+        }
+      ]
+    },
+    {
+      "slug": "coq10",
+      "name": "CoQ10",
+      "fullName": "Coenzyme Q10 (Ubiquinone/Ubiquinol)",
+      "category": "Supplements & Nutraceuticals",
+      "description": "An essential mitochondrial cofactor and potent antioxidant that declines with age. The landmark Q-SYMBIO trial demonstrated a 50% reduction in major cardiovascular events in heart failure patients. Widely used for energy, heart health, and statin side effect management.",
+      "icon": "❤️",
+      "kamuraScore": 81,
+      "scores": {
+        "research": 78,
+        "community": 82,
+        "safety": 90,
+        "accessibility": 85,
+        "value": 70
+      },
+      "evidenceLevel": "Moderate",
+      "tags": [
+        "Heart Health",
+        "Energy",
+        "Mitochondria",
+        "Statin Support",
+        "Anti-Aging"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 50,
+      "communityReports": 100,
+      "administrationRoutes": [
+        "Oral"
+      ],
+      "outcomes": [
+        {
+          "name": "Heart Health (Heart Failure)",
+          "direction": "positive",
+          "grade": "A",
+          "description": "Q-SYMBIO trial: 50% reduction in MACE, 40% mortality reduction with 300mg/day. Confirmed by 2024 meta-analysis of 16 studies.",
+          "studyCount": 16,
+          "consistency": "High",
+          "effectSize": "Large"
+        },
+        {
+          "name": "Statin Side Effects",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Mixed evidence. One meta-analysis of 12 RCTs shows significant symptom relief for muscle pain and weakness. Another 8-RCT meta-analysis shows no benefit.",
+          "studyCount": 12,
+          "consistency": "Mixed",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Energy & Mitochondrial Function",
+          "direction": "positive",
+          "grade": "C",
+          "description": "Mechanistically plausible as essential electron transport chain cofactor. Widely used anecdotally but systematic reviews find insufficient clinical evidence.",
+          "studyCount": 8,
+          "consistency": "Mixed",
+          "effectSize": "Small"
+        }
+      ],
+      "community": {
+        "totalReports": 100,
+        "positivePercent": 80,
+        "satisfaction": "4.2/5",
+        "timeToEffect": "2-4 weeks",
+        "quotes": [
+          {
+            "text": "CoQ10 eliminated the muscle aches I was getting from statins. Cardiologist approved the combination.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "General Wellness",
+          "dosage": "100-200mg daily with meals",
+          "notes": "Ubiquinol form has better bioavailability than ubiquinone. Take with fat-containing food."
+        },
+        {
+          "label": "Heart Failure Support",
+          "dosage": "100mg 3x daily (300mg/day)",
+          "notes": "Q-SYMBIO protocol. Under physician guidance alongside standard HF medication."
+        }
+      ],
+      "relatedSlugs": [
+        "nad-oral",
+        "omega-3",
+        "magnesium",
+        "astaxanthin"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "The effect of CoQ10 on morbidity and mortality in chronic heart failure: Q-SYMBIO",
+          "authors": "Mortensen SA et al.",
+          "journal": "JACC Heart Fail",
+          "year": 2014,
+          "pmid": "25282031",
+          "finding": "Landmark RCT (n=420): CoQ10 300mg/day reduced MACE by 50%, CV mortality by 43%, all-cause mortality by 44% over 2 years."
+        },
+        {
+          "title": "Effects of CoQ10 on Statin-Induced Myopathy: Updated Meta-Analysis",
+          "authors": "Qu H et al.",
+          "journal": "J Am Heart Assoc",
+          "year": 2018,
+          "pmid": "30371340",
+          "finding": "Meta-analysis of 12 RCTs: CoQ10 significantly ameliorated muscle pain, weakness, cramps, and tiredness."
+        }
+      ]
+    },
+    {
+      "slug": "resveratrol",
+      "name": "Resveratrol",
+      "fullName": "Trans-Resveratrol",
+      "category": "Supplements & Nutraceuticals",
+      "description": "A polyphenol found in red grapes and wine that activates SIRT1 longevity pathways. The Baur et al. 2006 Nature study sparked global interest, though poor oral bioavailability (~1%) limits human translation of the compelling animal data.",
+      "icon": "🍇",
+      "kamuraScore": 74,
+      "scores": {
+        "research": 72,
+        "community": 65,
+        "safety": 88,
+        "accessibility": 90,
+        "value": 72
+      },
+      "evidenceLevel": "Moderate",
+      "tags": [
+        "Longevity",
+        "SIRT1",
+        "Cardiovascular",
+        "Antioxidant"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 40,
+      "communityReports": 70,
+      "administrationRoutes": [
+        "Oral"
+      ],
+      "outcomes": [
+        {
+          "name": "SIRT1 Activation / Longevity",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Strong mechanistic evidence for SIRT1/AMPK activation. Baur et al. Nature study showed improved survival in obese mice. Translation limited by ~1% oral bioavailability.",
+          "studyCount": 12,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Cardiovascular Protection",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Systematic review of 19 human studies: consistently improved flow-mediated dilation, reduced LDL oxidation and inflammatory markers.",
+          "studyCount": 19,
+          "consistency": "High",
+          "effectSize": "Small"
+        }
+      ],
+      "community": {
+        "totalReports": 70,
+        "positivePercent": 68,
+        "satisfaction": "3.8/5",
+        "timeToEffect": "4-8 weeks",
+        "quotes": [
+          {
+            "text": "Taking 500mg trans-resveratrol with piperine daily. CRP dropped noticeably at 3-month labs.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Longevity / CV Support",
+          "dosage": "150-500mg daily",
+          "notes": "Trans-resveratrol form preferred. Take with fat and piperine for better absorption."
+        },
+        {
+          "label": "Liposomal Form",
+          "dosage": "250-500mg daily",
+          "notes": "Liposomal delivery may improve bioavailability. More expensive ($40-80/month)."
+        }
+      ],
+      "relatedSlugs": [
+        "spermidine",
+        "nad-oral",
+        "omega-3"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1474722883778-792e7990302f?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Resveratrol improves health and survival of mice on a high-calorie diet",
+          "authors": "Baur JA et al.",
+          "journal": "Nature",
+          "year": 2006,
+          "pmid": "17086191",
+          "finding": "Landmark study: resveratrol improved survival, motor function, insulin sensitivity, and mitochondrial biogenesis in obese mice via SIRT1 activation."
+        },
+        {
+          "title": "Calorie restriction-like effects of 30 days of resveratrol in obese humans",
+          "authors": "Timmers S et al.",
+          "journal": "Cell Metab",
+          "year": 2011,
+          "pmid": "22055504",
+          "finding": "First human RCT: 150mg/day mimicked caloric restriction effects — improved HOMA-IR and activated AMPK/SIRT1 in obese men."
+        }
+      ]
+    },
+    {
+      "slug": "quercetin-fisetin",
+      "name": "Quercetin + Fisetin",
+      "fullName": "Quercetin & Fisetin (Senolytic Stack)",
+      "category": "Supplements & Nutraceuticals",
+      "description": "A natural senolytic combination that selectively clears senescent 'zombie' cells. Kirkland's Mayo Clinic research established quercetin as a senolytic, while Yousefzadeh showed fisetin extends lifespan ~10% in mice. First-in-human pilot data is promising.",
+      "icon": "🧹",
+      "kamuraScore": 68,
+      "scores": {
+        "research": 68,
+        "community": 60,
+        "safety": 72,
+        "accessibility": 75,
+        "value": 70
+      },
+      "evidenceLevel": "Emerging",
+      "tags": [
+        "Senolytic",
+        "Longevity",
+        "Anti-Aging",
+        "Inflammation"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 25,
+      "communityReports": 50,
+      "administrationRoutes": [
+        "Oral"
+      ],
+      "outcomes": [
+        {
+          "name": "Senescent Cell Clearance",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Strong preclinical evidence from Kirkland/Mayo. First-in-human pilot (n=14) showed functional improvements. Intermittent 'hit and run' dosing protocol is key.",
+          "studyCount": 15,
+          "consistency": "High",
+          "effectSize": "Large"
+        },
+        {
+          "name": "Physical Function",
+          "direction": "positive",
+          "grade": "C",
+          "description": "IPF pilot showed improved 6-minute walk distance (+21.5m) and chair-stand time consistent with senescent cell reduction.",
+          "studyCount": 3,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        }
+      ],
+      "community": {
+        "totalReports": 50,
+        "positivePercent": 65,
+        "satisfaction": "3.7/5",
+        "timeToEffect": "Monthly protocol",
+        "quotes": [
+          {
+            "text": "Doing the 2-day senolytic protocol monthly (1g quercetin + 500mg fisetin). Feel noticeably more energized the week after.",
+            "source": "Community member",
+            "location": "USA",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Senolytic Protocol",
+          "dosage": "Quercetin 1000mg + Fisetin 500mg for 2-3 consecutive days, once monthly",
+          "notes": "Intermittent dosing is key — NOT daily. Take with fat-containing meal for absorption."
+        },
+        {
+          "label": "Fisetin-Only Protocol",
+          "dosage": "Fisetin 500-1500mg for 2 days, once monthly",
+          "notes": "Some protocols use fisetin alone based on Yousefzadeh data."
+        }
+      ],
+      "relatedSlugs": [
+        "rapamycin",
+        "metformin",
+        "spermidine",
+        "resveratrol"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "The Achilles' heel of senescent cells: from transcriptome to senolytic drugs",
+          "authors": "Zhu Y, Kirkland JL et al.",
+          "journal": "Aging Cell",
+          "year": 2015,
+          "pmid": "25754370",
+          "finding": "Foundational senolytic paper: dasatinib + quercetin selectively killed senescent cells, extending healthspan in aged mice."
+        },
+        {
+          "title": "Fisetin is a senotherapeutic that extends health and lifespan",
+          "authors": "Yousefzadeh MJ et al.",
+          "journal": "EBioMedicine",
+          "year": 2018,
+          "pmid": "30279143",
+          "finding": "Fisetin extended median lifespan ~10% in wild-type mice and reduced senescent cell burden."
+        },
+        {
+          "title": "Senolytics in idiopathic pulmonary fibrosis: first-in-human pilot",
+          "authors": "Justice JN, Kirkland JL et al.",
+          "journal": "EBioMedicine",
+          "year": 2019,
+          "pmid": "30616998",
+          "finding": "First human senolytic study (n=14): D+Q improved 6-minute walk distance, chair-stand time, and gait speed in IPF patients."
+        }
+      ]
+    },
+    {
+      "slug": "neurofeedback",
+      "name": "Neurofeedback",
+      "fullName": "EEG Neurofeedback (Brain Training)",
+      "category": "Devices & Technology",
+      "description": "Real-time EEG-based brain training that teaches self-regulation of brain activity patterns. Used for ADHD, anxiety, peak performance, and cognitive optimization. Growing evidence base with meta-analyses supporting efficacy for attention disorders.",
+      "icon": "🧠",
+      "kamuraScore": 62,
+      "scores": {
+        "research": 58,
+        "community": 65,
+        "safety": 88,
+        "accessibility": 55,
+        "value": 52
+      },
+      "evidenceLevel": "Moderate",
+      "tags": [
+        "Brain",
+        "ADHD",
+        "Anxiety",
+        "Performance",
+        "Technology"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 40,
+      "communityReports": 50,
+      "administrationRoutes": [
+        "EEG Session"
+      ],
+      "outcomes": [
+        {
+          "name": "ADHD Symptom Improvement",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Arns et al. meta-analyses show significant improvements in inattention and impulsivity. Effects may persist 6+ months post-treatment.",
+          "studyCount": 15,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Anxiety Reduction",
+          "direction": "positive",
+          "grade": "C",
+          "description": "Some RCTs show reduced anxiety scores. Alpha-theta training protocols most commonly used. Evidence less robust than for ADHD.",
+          "studyCount": 8,
+          "consistency": "Mixed",
+          "effectSize": "Small"
+        }
+      ],
+      "community": {
+        "totalReports": 50,
+        "positivePercent": 68,
+        "satisfaction": "3.8/5",
+        "timeToEffect": "10-20 sessions",
+        "quotes": [
+          {
+            "text": "After 15 sessions, my focus and ability to concentrate improved dramatically. Expensive but worth it.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "ADHD Protocol",
+          "dosage": "20-40 sessions, 2-3x per week",
+          "notes": "SMR/beta training at Cz/C4. 30-minute sessions. Improvement typically seen after 10 sessions."
+        }
+      ],
+      "relatedSlugs": [
+        "meditation",
+        "breathwork",
+        "float-therapy"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Efficacy of neurofeedback treatment in ADHD: effects on inattention, impulsivity and hyperactivity: a meta-analysis",
+          "authors": "Arns M et al.",
+          "journal": "Clin EEG Neurosci",
+          "year": 2009,
+          "pmid": "19715181",
+          "finding": "Meta-analysis showed neurofeedback produces large effect sizes for inattention and impulsivity in ADHD, comparable to stimulant medication."
+        }
+      ]
+    },
+    {
+      "slug": "hydrogen-therapy",
+      "name": "Hydrogen Therapy",
+      "fullName": "Molecular Hydrogen Therapy (H2)",
+      "category": "Devices & Technology",
+      "description": "Therapeutic use of molecular hydrogen (H2) via inhalation or hydrogen-rich water for its selective antioxidant properties. Over 1000 published papers since Ohsawa's 2007 Nature Medicine study, showing potential for inflammation, oxidative stress, and athletic recovery.",
+      "icon": "💨",
+      "kamuraScore": 55,
+      "scores": {
+        "research": 48,
+        "community": 58,
+        "safety": 88,
+        "accessibility": 52,
+        "value": 50
+      },
+      "evidenceLevel": "Emerging",
+      "tags": [
+        "Antioxidant",
+        "Inflammation",
+        "Recovery",
+        "Technology"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 80,
+      "communityReports": 40,
+      "administrationRoutes": [
+        "Inhalation",
+        "Hydrogen-Rich Water"
+      ],
+      "outcomes": [
+        {
+          "name": "Oxidative Stress / Inflammation",
+          "direction": "positive",
+          "grade": "C",
+          "description": "Ohsawa 2007 showed H2 selectively reduces hydroxyl radicals. Numerous animal studies, but human RCTs are small and heterogeneous.",
+          "studyCount": 30,
+          "consistency": "Mixed",
+          "effectSize": "Small"
+        },
+        {
+          "name": "Athletic Recovery",
+          "direction": "positive",
+          "grade": "C",
+          "description": "Small RCTs suggest reduced muscle fatigue and lactate accumulation. Effects are modest and inconsistent across studies.",
+          "studyCount": 8,
+          "consistency": "Mixed",
+          "effectSize": "Small"
+        }
+      ],
+      "community": {
+        "totalReports": 40,
+        "positivePercent": 62,
+        "satisfaction": "3.5/5",
+        "timeToEffect": "1-4 weeks",
+        "quotes": [
+          {
+            "text": "Drinking hydrogen water daily for a month. Subtle but noticeable improvement in energy and workout recovery.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Hydrogen Water",
+          "dosage": "500-1000mL hydrogen-rich water daily",
+          "notes": "Use within minutes of generation for maximum H2 concentration."
+        },
+        {
+          "label": "H2 Inhalation",
+          "dosage": "2-4% H2 gas, 30-60 min sessions",
+          "notes": "Clinical-grade hydrogen generators. Under medical supervision."
+        }
+      ],
+      "relatedSlugs": [
+        "cryotherapy",
+        "hyperbaric-oxygen",
+        "red-light-therapy"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Hydrogen acts as a therapeutic antioxidant by selectively reducing cytotoxic oxygen radicals",
+          "authors": "Ohsawa I et al.",
+          "journal": "Nat Med",
+          "year": 2007,
+          "pmid": "17486089",
+          "finding": "Landmark study: molecular hydrogen selectively reduces hydroxyl radicals (most cytotoxic ROS) without affecting beneficial signaling ROS."
+        }
+      ]
+    },
+    {
+      "slug": "ems-training",
+      "name": "EMS Training",
+      "fullName": "Whole-Body Electrical Muscle Stimulation",
+      "category": "Devices & Technology",
+      "description": "Technology-assisted exercise using electrical impulses to contract muscles during training. A 20-minute EMS session can recruit significantly more muscle fibers than conventional exercise. Growing evidence for body composition improvement and strength gains.",
+      "icon": "⚡",
+      "kamuraScore": 60,
+      "scores": {
+        "research": 52,
+        "community": 65,
+        "safety": 72,
+        "accessibility": 60,
+        "value": 55
+      },
+      "evidenceLevel": "Moderate",
+      "tags": [
+        "Fitness",
+        "Strength",
+        "Body Composition",
+        "Technology"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 30,
+      "communityReports": 55,
+      "administrationRoutes": [
+        "Wearable Device"
+      ],
+      "outcomes": [
+        {
+          "name": "Body Composition",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Kemmler et al. RCTs show significant fat reduction and lean mass increase. 20-minute sessions 1-2x/week comparable to 60-min conventional training.",
+          "studyCount": 12,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "Strength Gains",
+          "direction": "positive",
+          "grade": "C",
+          "description": "Moderate evidence for improved maximal strength and endurance. Benefits most pronounced in untrained or elderly populations.",
+          "studyCount": 10,
+          "consistency": "Moderate",
+          "effectSize": "Small"
+        }
+      ],
+      "community": {
+        "totalReports": 55,
+        "positivePercent": 72,
+        "satisfaction": "4.0/5",
+        "timeToEffect": "4-8 weeks",
+        "quotes": [
+          {
+            "text": "20 minutes of EMS feels like a 90-minute gym session. Visible toning after 6 weeks.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Fitness",
+          "dosage": "20 min sessions, 1-2x per week",
+          "notes": "At certified EMS studios (Body Time, miha bodytec). Rest 48-72 hours between sessions."
+        }
+      ],
+      "relatedSlugs": [
+        "cryotherapy",
+        "cold-plunge",
+        "yoga"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Whole-body electromyostimulation for body composition and strength in untrained",
+          "authors": "Kemmler W et al.",
+          "journal": "Front Physiol",
+          "year": 2016,
+          "pmid": "27625614",
+          "finding": "RCT showed WB-EMS significantly improved body composition (reduced body fat, increased lean mass) and strength in untrained adults."
+        }
+      ]
+    },
+    {
+      "slug": "lymphatic-drainage",
+      "name": "Lymphatic Drainage",
+      "fullName": "Manual Lymphatic Drainage (MLD)",
+      "category": "Mind-Body & Movement",
+      "description": "A gentle massage technique designed to encourage the natural drainage of lymph fluid, reduce swelling, and support immune function. Well-established for post-surgical edema management with limited evidence for general wellness detox claims.",
+      "icon": "🌊",
+      "kamuraScore": 55,
+      "scores": {
+        "research": 45,
+        "community": 62,
+        "safety": 90,
+        "accessibility": 65,
+        "value": 55
+      },
+      "evidenceLevel": "Limited",
+      "tags": [
+        "Detox",
+        "Recovery",
+        "Post-Surgery",
+        "Lymphatic"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 20,
+      "communityReports": 50,
+      "administrationRoutes": [
+        "Manual Therapy"
+      ],
+      "outcomes": [
+        {
+          "name": "Post-Surgical Edema",
+          "direction": "positive",
+          "grade": "B",
+          "description": "Good evidence for reducing lymphedema after breast cancer surgery. Established medical application.",
+          "studyCount": 10,
+          "consistency": "Moderate",
+          "effectSize": "Moderate"
+        },
+        {
+          "name": "General Detox / Wellness",
+          "direction": "neutral",
+          "grade": "C",
+          "description": "Popular in wellness circles but clinical evidence for 'detox' benefits beyond edema reduction is limited.",
+          "studyCount": 5,
+          "consistency": "Low",
+          "effectSize": "Small"
+        }
+      ],
+      "community": {
+        "totalReports": 50,
+        "positivePercent": 70,
+        "satisfaction": "4.0/5",
+        "timeToEffect": "Immediate-48 hours",
+        "quotes": [
+          {
+            "text": "Face looks visibly less puffy after lymphatic drainage. Great before events or after long flights.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "General Wellness",
+          "dosage": "60-90 min session, weekly or bi-weekly",
+          "notes": "Gentle pressure technique. Hydrate well before and after."
+        }
+      ],
+      "relatedSlugs": [
+        "yoga",
+        "fasting",
+        "infrared-sauna"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Manual lymphatic drainage for lymphedema following breast cancer treatment",
+          "authors": "Ezzo J et al.",
+          "journal": "Cochrane Database Syst Rev",
+          "year": 2015,
+          "pmid": "25994425",
+          "finding": "Cochrane review found MLD may offer additional benefit to compression bandaging for swelling reduction in breast cancer lymphedema."
+        }
+      ]
+    },
+    {
+      "slug": "grounding-earthing",
+      "name": "Grounding",
+      "fullName": "Grounding / Earthing Therapy",
+      "category": "Mind-Body & Movement",
+      "description": "Practice of direct physical contact with the Earth's surface to absorb free electrons, hypothesized to reduce inflammation, normalize cortisol rhythms, and improve blood viscosity. Emerging and controversial evidence with limited but intriguing studies.",
+      "icon": "🌍",
+      "kamuraScore": 38,
+      "scores": {
+        "research": 22,
+        "community": 48,
+        "safety": 95,
+        "accessibility": 92,
+        "value": 85
+      },
+      "evidenceLevel": "Limited",
+      "tags": [
+        "Inflammation",
+        "Sleep",
+        "Stress",
+        "Natural"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 12,
+      "communityReports": 30,
+      "administrationRoutes": [
+        "Direct Earth Contact"
+      ],
+      "outcomes": [
+        {
+          "name": "Inflammation / Cortisol",
+          "direction": "positive",
+          "grade": "D",
+          "description": "Chevalier et al. small studies suggest normalized cortisol rhythms and reduced inflammatory markers. Studies are very small (n<20) with methodological limitations.",
+          "studyCount": 5,
+          "consistency": "Low",
+          "effectSize": "Unclear"
+        },
+        {
+          "name": "Blood Viscosity",
+          "direction": "positive",
+          "grade": "D",
+          "description": "One small pilot study showed improved blood viscosity (zeta potential) after grounding. Intriguing but unreplicated.",
+          "studyCount": 2,
+          "consistency": "Low",
+          "effectSize": "Unclear"
+        }
+      ],
+      "community": {
+        "totalReports": 30,
+        "positivePercent": 58,
+        "satisfaction": "3.5/5",
+        "timeToEffect": "Immediate-1 week",
+        "quotes": [
+          {
+            "text": "Walking barefoot on grass for 30 minutes daily improved my sleep quality. Simple and free.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Daily Earthing",
+          "dosage": "30-60 minutes barefoot on natural ground",
+          "notes": "Grass, sand, or soil. Morning recommended. Free and accessible."
+        },
+        {
+          "label": "Grounding Sheets/Mats",
+          "dosage": "8 hours overnight",
+          "notes": "Conductive sheets connected to ground port. $50-150 investment."
+        }
+      ],
+      "relatedSlugs": [
+        "meditation",
+        "yoga",
+        "cold-plunge"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Earthing: health implications of reconnecting the human body to the Earth's surface electrons",
+          "authors": "Chevalier G et al.",
+          "journal": "J Environ Public Health",
+          "year": 2012,
+          "pmid": "22291721",
+          "finding": "Review of emerging research suggesting earthing may improve sleep, reduce pain and stress, and normalize cortisol rhythms through electron transfer."
+        }
+      ]
+    },
+    {
+      "slug": "colon-hydrotherapy",
+      "name": "Colon Hydrotherapy",
+      "fullName": "Colon Hydrotherapy (Colonic Irrigation)",
+      "category": "Detox & Functional",
+      "description": "Procedure involving gentle infusion of warm water into the colon to flush waste material. Popular in wellness circles for 'detoxification' but with limited clinical evidence and some safety concerns including risk of electrolyte imbalance and perforation.",
+      "icon": "🚿",
+      "kamuraScore": 35,
+      "scores": {
+        "research": 15,
+        "community": 50,
+        "safety": 42,
+        "accessibility": 55,
+        "value": 35
+      },
+      "evidenceLevel": "Limited",
+      "tags": [
+        "Detox",
+        "Gut",
+        "Wellness"
+      ],
+      "uaeAvailable": true,
+      "studyCount": 8,
+      "communityReports": 35,
+      "administrationRoutes": [
+        "Rectal Infusion"
+      ],
+      "outcomes": [
+        {
+          "name": "Detoxification",
+          "direction": "neutral",
+          "grade": "D",
+          "description": "No clinical evidence that colon cleansing removes toxins beyond normal bowel function. The colon naturally eliminates waste effectively.",
+          "studyCount": 3,
+          "consistency": "Low",
+          "effectSize": "None"
+        },
+        {
+          "name": "Pre-Procedure Bowel Prep",
+          "direction": "positive",
+          "grade": "B",
+          "description": "FDA-approved as bowel preparation for colonoscopy and similar procedures. Well-established medical use.",
+          "studyCount": 5,
+          "consistency": "High",
+          "effectSize": "Large"
+        }
+      ],
+      "community": {
+        "totalReports": 35,
+        "positivePercent": 55,
+        "satisfaction": "3.3/5",
+        "timeToEffect": "Immediate",
+        "quotes": [
+          {
+            "text": "Felt lighter and less bloated after the session, but the effect was temporary.",
+            "source": "Community member",
+            "location": "Dubai",
+            "verified": true
+          }
+        ]
+      },
+      "protocols": [
+        {
+          "label": "Wellness Cleanse",
+          "dosage": "Single session or series of 3, spaced 1-2 weeks apart",
+          "notes": "Ensure facility is properly licensed. Hydrate well. Not recommended as regular practice."
+        }
+      ],
+      "relatedSlugs": [
+        "fasting",
+        "ozone-therapy",
+        "inuspheresis"
+      ],
+      "imageUrl": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&h=500&fit=crop",
+      "keyStudies": [
+        {
+          "title": "Colon cleansing: a popular, but misunderstood natural therapy",
+          "authors": "Acosta RD, Cash BD",
+          "journal": "J Clin Gastroenterol",
+          "year": 2009,
+          "pmid": "19262405",
+          "finding": "Review concluded there is no evidence to support wellness claims for colonic irrigation and raised safety concerns including perforation and electrolyte imbalance."
         }
       ]
     }

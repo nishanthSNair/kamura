@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 import { testimonials } from "@/data/testimonials";
-import { treatments, ALL_TREATMENT_CATEGORIES } from "@/data/treatments";
+import { treatments } from "@/data/treatments";
 import { listings } from "@/data/listings";
+import { CATEGORY_META } from "@/data/treatment-categories";
 import BlogGrid from "./BlogGrid";
 import InlineSearch from "@/components/InlineSearch";
 import TopTreatmentsCarousel from "@/components/TopTreatmentsCarousel";
@@ -13,27 +14,7 @@ import CategoryGrid from "@/components/CategoryGrid";
 export const metadata: Metadata = {
   title: "KAMURA — Every Wellness Treatment. Scored. Transparent.",
   description:
-    "The world's first unbiased wellness intelligence platform. Search 50+ treatments scored on evidence, safety, and community data. 48+ UAE clinics. Zero bias.",
-};
-
-const CATEGORY_ORDER = [
-  "Holistic & Mind-Body",
-  "Devices & Biohacking",
-  "Supplements",
-  "Detox & Functional",
-  "Hormones",
-  "GLP-1 & Weight Management",
-  "Peptides",
-];
-
-const CATEGORY_ICONS: Record<string, string> = {
-  "Holistic & Mind-Body": "\u{1F9D8}",
-  "Devices & Biohacking": "\u{1F52C}",
-  Supplements: "\u{1F33F}",
-  "Detox & Functional": "\u{1F343}",
-  Hormones: "\u{26A1}",
-  "GLP-1 & Weight Management": "\u{1F48A}",
-  Peptides: "\u{1F9EC}",
+    `The world's first unbiased wellness intelligence platform. Search ${treatments.length}+ treatments scored on evidence, safety, and community data. ${listings.length}+ UAE clinics. Zero bias.`,
 };
 
 export default function Home() {
@@ -50,7 +31,7 @@ export default function Home() {
     category: string;
   }> = [];
 
-  for (const cat of CATEGORY_ORDER) {
+  for (const { name: cat } of CATEGORY_META) {
     const best = treatments
       .filter((t) => t.category === cat)
       .sort((a, b) => b.kamuraScore - a.kamuraScore)[0];
@@ -94,11 +75,12 @@ export default function Home() {
       services: l.services,
     }));
 
-  // Category data — ordered with Holistic first, Peptides last
-  const categoryData = CATEGORY_ORDER.map((cat) => ({
-    name: cat,
-    icon: CATEGORY_ICONS[cat] || "\u{2728}",
-    treatmentCount: treatments.filter((t) => t.category === cat).length,
+  // Category data from centralized metadata
+  const categoryData = CATEGORY_META.map((cat) => ({
+    name: cat.name,
+    slug: cat.slug,
+    icon: cat.icon,
+    treatmentCount: treatments.filter((t) => t.category === cat.name).length,
   }));
 
   const jsonLd = {
@@ -143,7 +125,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#F7F5F0]/85 via-[#F7F5F0]/70 to-[#F7F5F0]/95 dark:from-[#0f120e]/90 dark:via-[#0f120e]/75 dark:to-[#0f120e]/95" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center pt-24 pb-12">
-          <span className="inline-block px-4 py-1.5 bg-sage/15 border border-sage/30 rounded-full text-[11px] font-semibold text-moss dark:text-sage uppercase tracking-[0.12em] mb-6 font-sans">
+          <span className="inline-block px-4 py-1.5 bg-sage/25 border border-sage/40 rounded-full text-[11px] font-semibold text-forest dark:text-sage uppercase tracking-[0.12em] mb-6 font-sans">
             The World&apos;s First Unbiased Wellness Intelligence Platform
           </span>
           <h1 className="font-serif text-4xl md:text-[52px] font-bold leading-[1.15] mb-5 text-gray-900 dark:text-[#F5F0EB]">
@@ -282,17 +264,17 @@ export default function Home() {
               </Link>
             </div>
             <div className="flex gap-4 shrink-0">
-              <div className="w-24 h-24 rounded-xl bg-zen-mist border border-sage-light flex flex-col items-center justify-center p-3">
+              <div className="w-24 h-24 rounded-xl bg-zen-mist dark:bg-forest/20 border border-sage-light dark:border-forest/30 flex flex-col items-center justify-center p-3">
                 <span className="font-serif text-2xl text-moss">10</span>
-                <span className="text-xs text-sage-dark font-sans">Questions</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400 font-sans">Questions</span>
               </div>
-              <div className="w-24 h-24 rounded-xl bg-zen-mist border border-sage-light flex flex-col items-center justify-center p-3">
+              <div className="w-24 h-24 rounded-xl bg-zen-mist dark:bg-forest/20 border border-sage-light dark:border-forest/30 flex flex-col items-center justify-center p-3">
                 <span className="font-serif text-2xl text-moss">5</span>
-                <span className="text-xs text-sage-dark font-sans">Archetypes</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400 font-sans">Archetypes</span>
               </div>
-              <div className="w-24 h-24 rounded-xl bg-zen-mist border border-sage-light flex flex-col items-center justify-center p-3">
+              <div className="w-24 h-24 rounded-xl bg-zen-mist dark:bg-forest/20 border border-sage-light dark:border-forest/30 flex flex-col items-center justify-center p-3">
                 <span className="font-serif text-2xl text-moss">2</span>
-                <span className="text-xs text-sage-dark font-sans">Minutes</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400 font-sans">Minutes</span>
               </div>
             </div>
           </div>
