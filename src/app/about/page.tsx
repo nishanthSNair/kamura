@@ -35,6 +35,7 @@ export default function AboutPage() {
           "@type": "Place",
           name: "United Arab Emirates",
         },
+        email: "kamuralife@gmail.com",
         sameAs: ["https://www.instagram.com/kamaborea/"],
       },
       {
@@ -123,6 +124,23 @@ export default function AboutPage() {
             searching for the best longevity clinic in the UAE, Kamura is your
             guide to living a longer, healthier, more intentional life.
           </p>
+
+          <div className="w-12 h-px bg-sage/40" />
+
+          <div>
+            <h2 className="font-serif text-2xl text-terracotta mb-6">
+              Get in Touch
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-sans">
+              Have a question, partnership inquiry, or just want to say hello?
+            </p>
+            <a
+              href="mailto:kamuralife@gmail.com"
+              className="inline-block mt-4 text-moss dark:text-sage hover:text-forest dark:hover:text-white transition-colors font-sans font-medium"
+            >
+              kamuralife@gmail.com
+            </a>
+          </div>
         </div>
       </section>
     </>

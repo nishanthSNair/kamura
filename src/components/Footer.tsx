@@ -25,9 +25,17 @@ export default function Footer() {
               About
             </Link>
           </div>
-          <p className="text-xs text-gray-400">
-            &copy; {new Date().getFullYear()} Kamura. All rights reserved.
-          </p>
+          <div className="flex items-center gap-4">
+            <a
+              href="mailto:kamuralife@gmail.com"
+              className="text-xs text-gray-400 hover:text-moss transition-colors"
+            >
+              kamuralife@gmail.com
+            </a>
+            <p className="text-xs text-gray-400">
+              &copy; {new Date().getFullYear()} Kamura. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
