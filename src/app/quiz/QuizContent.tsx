@@ -288,7 +288,7 @@ export default function QuizContent() {
             {/* Score Circle */}
             <div className="relative w-40 h-40 mx-auto mb-8">
               <svg className="w-40 h-40 -rotate-90" viewBox="0 0 120 120">
-                <circle cx="60" cy="60" r="52" fill="none" stroke="#f3f4f6" strokeWidth="8" />
+                <circle cx="60" cy="60" r="52" fill="none" className="stroke-gray-200 dark:stroke-gray-700" strokeWidth="8" />
                 <circle
                   cx="60"
                   cy="60"

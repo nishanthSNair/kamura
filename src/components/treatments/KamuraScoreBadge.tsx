@@ -25,21 +25,19 @@ export default function KamuraScoreBadge({ score, size = "md", showLabel = false
   return (
     <div className="flex flex-col items-center gap-1.5">
       <div
-        className={`${sizeClasses[size]} rounded-full flex items-center justify-center font-bold relative`}
-        style={{ backgroundColor: `${color}20`, color }}
+        className={`${sizeClasses[size]} rounded-full flex items-center justify-center font-bold relative ${color.bg} ${color.text}`}
       >
         <span
-          className={`absolute ${ringClasses[size]} rounded-full`}
-          style={{ borderColor: color }}
+          className={`absolute ${ringClasses[size]} rounded-full ${color.border}`}
         />
         {score}
       </div>
       {showLabel && (
         <>
-          <span className="text-[11px] text-gray-400 dark:text-gray-500 uppercase tracking-wider font-semibold font-sans">
+          <span className="text-[11px] text-gray-500 dark:text-gray-500 uppercase tracking-wider font-semibold font-sans">
             Kamura Score
           </span>
-          <span className="text-xs font-semibold font-sans" style={{ color }}>
+          <span className={`text-xs font-semibold font-sans ${color.text}`}>
             {tier}
           </span>
         </>

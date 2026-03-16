@@ -7,9 +7,9 @@ interface OutcomeCardProps {
 
 function DirectionIcon({ direction }: { direction: TreatmentOutcome["direction"] }) {
   const config = {
-    positive: { symbol: "↑", bg: "bg-[#4ADE80]/12", text: "text-[#4ADE80]" },
-    neutral: { symbol: "↔", bg: "bg-[#FACC15]/12", text: "text-[#FACC15]" },
-    negative: { symbol: "↓", bg: "bg-[#F87171]/12", text: "text-[#F87171]" },
+    positive: { symbol: "↑", bg: "bg-[#16A34A]/15 dark:bg-[#4ADE80]/12", text: "text-[#16A34A] dark:text-[#4ADE80]" },
+    neutral: { symbol: "↔", bg: "bg-[#CA8A04]/15 dark:bg-[#FACC15]/12", text: "text-[#CA8A04] dark:text-[#FACC15]" },
+    negative: { symbol: "↓", bg: "bg-[#DC2626]/15 dark:bg-[#F87171]/12", text: "text-[#DC2626] dark:text-[#F87171]" },
   };
   const c = config[direction];
 
@@ -31,8 +31,7 @@ export default function OutcomeCard({ outcome }: OutcomeCardProps) {
           {outcome.name}
         </span>
         <span
-          className="ml-auto text-xs font-bold px-1.5 py-0.5 rounded"
-          style={{ color: gradeColor, backgroundColor: `${gradeColor}20` }}
+          className={`ml-auto text-xs font-bold px-1.5 py-0.5 rounded ${gradeColor.text} ${gradeColor.bg}`}
         >
           {outcome.grade}
         </span>

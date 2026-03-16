@@ -7,7 +7,6 @@ import {
   getTreatmentBySlug,
   getScoreTier,
   getScoreTierColor,
-  getScoreColor,
 } from "@/data/treatments";
 import { listings } from "@/data/listings";
 import { categoryNameToSlug } from "@/data/treatment-categories";

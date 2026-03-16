@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { treatments, getScoreColor, getScoreTier, getScoreTierColor, ALL_TREATMENT_CATEGORIES, type TreatmentCategory, type Treatment } from "@/data/treatments";
+import { treatments, getScoreTier, getScoreTierColor, ALL_TREATMENT_CATEGORIES, type TreatmentCategory, type Treatment } from "@/data/treatments";
 import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
 import EvidenceLevelTag from "@/components/treatments/EvidenceLevelTag";
 import FilterChip from "@/components/treatments/FilterChip";

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { treatments, getScoreColor, getScoreTier } from "@/data/treatments";
+import { treatments } from "@/data/treatments";
 import { CATEGORY_META, getCategoryBySlug } from "@/data/treatment-categories";
 import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
 import EvidenceLevelTag from "@/components/treatments/EvidenceLevelTag";

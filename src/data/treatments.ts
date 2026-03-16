@@ -100,48 +100,48 @@ export function getScoreTier(score: number): ScoreTier {
 export function getScoreTierColor(tier: ScoreTier): { text: string; bg: string; border: string } {
   switch (tier) {
     case "Gold Standard":
-      return { text: "text-[#C4956A]", bg: "bg-[#C4956A]/15", border: "border-[#C4956A]/30" };
+      return { text: "text-[#C4956A] dark:text-[#C4956A]", bg: "bg-[#C4956A]/20 dark:bg-[#C4956A]/15", border: "border-[#C4956A]/40 dark:border-[#C4956A]/30" };
     case "Strong":
-      return { text: "text-[#4ADE80]", bg: "bg-[#4ADE80]/12", border: "border-[#4ADE80]/20" };
+      return { text: "text-[#16A34A] dark:text-[#4ADE80]", bg: "bg-[#16A34A]/15 dark:bg-[#4ADE80]/12", border: "border-[#16A34A]/30 dark:border-[#4ADE80]/20" };
     case "Promising":
-      return { text: "text-[#FACC15]", bg: "bg-[#FACC15]/12", border: "border-[#FACC15]/20" };
+      return { text: "text-[#CA8A04] dark:text-[#FACC15]", bg: "bg-[#CA8A04]/15 dark:bg-[#FACC15]/12", border: "border-[#CA8A04]/30 dark:border-[#FACC15]/20" };
     case "Limited":
-      return { text: "text-[#FB923C]", bg: "bg-[#FB923C]/12", border: "border-[#FB923C]/20" };
+      return { text: "text-[#EA580C] dark:text-[#FB923C]", bg: "bg-[#EA580C]/15 dark:bg-[#FB923C]/12", border: "border-[#EA580C]/30 dark:border-[#FB923C]/20" };
     case "Insufficient":
-      return { text: "text-[#F87171]", bg: "bg-[#F87171]/12", border: "border-[#F87171]/20" };
+      return { text: "text-[#DC2626] dark:text-[#F87171]", bg: "bg-[#DC2626]/15 dark:bg-[#F87171]/12", border: "border-[#DC2626]/30 dark:border-[#F87171]/20" };
   }
 }
 
-export function getScoreColor(score: number): string {
-  if (score >= 85) return "#C4956A";
-  if (score >= 70) return "#4ADE80";
-  if (score >= 50) return "#FACC15";
-  if (score >= 30) return "#FB923C";
-  return "#F87171";
+export function getScoreColor(score: number): { text: string; bg: string; border: string } {
+  if (score >= 85) return { text: "text-[#B5736A] dark:text-[#C4956A]", bg: "bg-[#B5736A]/15 dark:bg-[#C4956A]/15", border: "border-[#B5736A] dark:border-[#C4956A]" };
+  if (score >= 70) return { text: "text-[#16A34A] dark:text-[#4ADE80]", bg: "bg-[#16A34A]/15 dark:bg-[#4ADE80]/15", border: "border-[#16A34A] dark:border-[#4ADE80]" };
+  if (score >= 50) return { text: "text-[#CA8A04] dark:text-[#FACC15]", bg: "bg-[#CA8A04]/15 dark:bg-[#FACC15]/15", border: "border-[#CA8A04] dark:border-[#FACC15]" };
+  if (score >= 30) return { text: "text-[#EA580C] dark:text-[#FB923C]", bg: "bg-[#EA580C]/15 dark:bg-[#FB923C]/15", border: "border-[#EA580C] dark:border-[#FB923C]" };
+  return { text: "text-[#DC2626] dark:text-[#F87171]", bg: "bg-[#DC2626]/15 dark:bg-[#F87171]/15", border: "border-[#DC2626] dark:border-[#F87171]" };
 }
 
 export function getEvidenceLevelColor(level: EvidenceLevel): { text: string; bg: string } {
   switch (level) {
     case "Strong":
-      return { text: "text-[#4ADE80]", bg: "bg-[#4ADE80]/12" };
+      return { text: "text-[#16A34A] dark:text-[#4ADE80]", bg: "bg-[#16A34A]/15 dark:bg-[#4ADE80]/12" };
     case "Moderate":
-      return { text: "text-[#60A5FA]", bg: "bg-[#60A5FA]/12" };
+      return { text: "text-[#2563EB] dark:text-[#60A5FA]", bg: "bg-[#2563EB]/15 dark:bg-[#60A5FA]/12" };
     case "Emerging":
-      return { text: "text-[#FACC15]", bg: "bg-[#FACC15]/12" };
+      return { text: "text-[#CA8A04] dark:text-[#FACC15]", bg: "bg-[#CA8A04]/15 dark:bg-[#FACC15]/12" };
     case "Limited":
-      return { text: "text-[#FB923C]", bg: "bg-[#FB923C]/12" };
+      return { text: "text-[#EA580C] dark:text-[#FB923C]", bg: "bg-[#EA580C]/15 dark:bg-[#FB923C]/12" };
     case "Anecdotal":
-      return { text: "text-[#F87171]", bg: "bg-[#F87171]/12" };
+      return { text: "text-[#DC2626] dark:text-[#F87171]", bg: "bg-[#DC2626]/15 dark:bg-[#F87171]/12" };
   }
 }
 
-export function getGradeColor(grade: OutcomeGrade): string {
+export function getGradeColor(grade: OutcomeGrade): { text: string; bg: string } {
   switch (grade) {
-    case "A": return "#4ADE80";
-    case "B": return "#60A5FA";
-    case "C": return "#FACC15";
-    case "D": return "#FB923C";
-    case "F": return "#F87171";
+    case "A": return { text: "text-[#16A34A] dark:text-[#4ADE80]", bg: "bg-[#16A34A]/15 dark:bg-[#4ADE80]/12" };
+    case "B": return { text: "text-[#2563EB] dark:text-[#60A5FA]", bg: "bg-[#2563EB]/15 dark:bg-[#60A5FA]/12" };
+    case "C": return { text: "text-[#CA8A04] dark:text-[#FACC15]", bg: "bg-[#CA8A04]/15 dark:bg-[#FACC15]/12" };
+    case "D": return { text: "text-[#EA580C] dark:text-[#FB923C]", bg: "bg-[#EA580C]/15 dark:bg-[#FB923C]/12" };
+    case "F": return { text: "text-[#DC2626] dark:text-[#F87171]", bg: "bg-[#DC2626]/15 dark:bg-[#F87171]/12" };
   }
 }
 

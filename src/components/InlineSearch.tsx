@@ -190,7 +190,7 @@ export default function InlineSearch({
               <p className="text-sm text-gray-400 font-sans">
                 No results for &ldquo;{debouncedQuery}&rdquo;
               </p>
-              <p className="text-xs text-gray-300 dark:text-gray-600 font-sans mt-1">
+              <p className="text-xs text-gray-400 dark:text-gray-600 font-sans mt-1">
                 Try a different search term
               </p>
             </div>
