@@ -39,6 +39,63 @@
       ]
     },
     {
+      "id": "longevity-med-summit-2026",
+      "title": "Longevity Med Summit 2026 (4th Edition)",
+      "subtitle": "Physicians, researchers, and wellness innovators exploring breakthroughs in healthy aging, regenerative therapies, and AI-driven diagnostics.",
+      "dates": "January 21–22, 2026",
+      "dateStart": "2026-01-21",
+      "dateEnd": "2026-01-22",
+      "location": "Jafza Convention Center, Dubai",
+      "category": "Longevity",
+      "attendees": "1,000+",
+      "speakers": "40+",
+      "price": "TBC",
+      "website": "https://longevitymedsummit.com",
+      "highlights": [
+        "4th edition bringing together physicians, researchers & biotech leaders",
+        "Breakthroughs in healthy aging, regenerative therapies & preventive healthcare",
+        "AI-driven diagnostics, stem cell therapeutics & functional regeneration"
+      ]
+    },
+    {
+      "id": "sakina-mental-health-2026",
+      "title": "SAKINA Integrated Mental Health Conference 2026 (6th Edition)",
+      "subtitle": "The largest integrated mental health congress in the Middle East — from insight to impact, driving the future of mental health.",
+      "dates": "February 6–7, 2026",
+      "dateStart": "2026-02-06",
+      "dateEnd": "2026-02-07",
+      "location": "Conrad Etihad Towers, Abu Dhabi",
+      "category": "Health & MedTech",
+      "attendees": "2,000+",
+      "speakers": "50+",
+      "price": "Registration required",
+      "website": "https://imh-uae.com",
+      "highlights": [
+        "Theme: 'From Insight to Impact' — bridging research, practice & lived experiences",
+        "Emerging therapies, digital mental health solutions & future-ready care models",
+        "Organized by SEHA (PureHealth Group) — international experts, policymakers & advocates"
+      ]
+    },
+    {
+      "id": "form-fest-2026",
+      "title": "Form Fest 2026 — Dubai's First Pilates Festival",
+      "subtitle": "The first dedicated Pilates festival in Dubai — world-class instructors, reformer sessions, mat flows, and technique workshops.",
+      "dates": "February 7–8, 2026",
+      "dateStart": "2026-02-07",
+      "dateEnd": "2026-02-08",
+      "location": "Mama Shelter Dubai, Business Bay",
+      "category": "Fitness",
+      "attendees": "500+",
+      "speakers": "15+",
+      "price": "From AED 1,650",
+      "website": "https://formfest.me",
+      "highlights": [
+        "Dubai's first-ever dedicated Pilates festival",
+        "Reformer sessions, mat flows, technique workshops & panel discussions",
+        "Top international Pilates instructors — includes 3 sessions, snacks & goodie bag"
+      ]
+    },
+    {
       "id": "kayan-wellness-festival-2026",
       "title": "Kayan Wellness Festival 2026 (2nd Edition)",
       "subtitle": "The Middle East's award-winning wellness festival — breathwork, sound healing, yoga, cacao ceremonies, and more.",
@@ -134,6 +191,63 @@
       ]
     },
     {
+      "id": "dubai-active-show-2026",
+      "title": "Dubai Active Show & Future Wellness Summit 2026",
+      "subtitle": "The Middle East's leading fitness & wellness expo — 450+ brands, live workouts, competitions, and the Future Wellness Summit conference.",
+      "dates": "October 30 – November 1, 2026",
+      "dateStart": "2026-10-30",
+      "dateEnd": "2026-11-01",
+      "location": "Dubai Exhibition Centre, Expo City Dubai",
+      "category": "Fitness",
+      "attendees": "45,000+",
+      "speakers": "50+",
+      "price": "TBC",
+      "website": "https://dubaiactiveshow.com",
+      "highlights": [
+        "450+ brands — fitness equipment, wellness tech, nutrition & recovery solutions",
+        "Future Wellness Summit: longevity-driven health, spas, retreats & next-gen interventions",
+        "Live competitions, free workouts, talks & workshops across 3 days"
+      ]
+    },
+    {
+      "id": "revive-me-summit-2026",
+      "title": "Revive ME — Global Longevity & Health Tech Summit",
+      "subtitle": "The region's first-of-its-kind healthy longevity conference — regenerative medicine, genomics, precision health, and biohacking.",
+      "dates": "November 11–12, 2026",
+      "dateStart": "2026-11-11",
+      "dateEnd": "2026-11-12",
+      "location": "ADNEC Marina, Abu Dhabi",
+      "category": "Longevity",
+      "attendees": "2,000+",
+      "speakers": "40+",
+      "price": "TBC",
+      "website": "https://revivemeexpo.com",
+      "highlights": [
+        "First-of-its-kind longevity conference and exhibition in the region",
+        "Regenerative medicine, genomics, precision health, biohacking & AI technologies",
+        "Policymakers, healthcare leaders, investors & disruptive innovators"
+      ]
+    },
+    {
+      "id": "me-organic-natural-expo-2026",
+      "title": "Middle East Organic & Natural Products Expo 2026",
+      "subtitle": "The region's premier organic and natural products trade show — clean eating, supplements, holistic wellness, and sustainable living.",
+      "dates": "November 16–18, 2026",
+      "dateStart": "2026-11-16",
+      "dateEnd": "2026-11-18",
+      "location": "Dubai World Trade Centre",
+      "category": "Wellness Festival",
+      "attendees": "10,000+",
+      "speakers": "30+",
+      "price": "Free (trade visitor registration)",
+      "website": "https://organicandnatural.com",
+      "highlights": [
+        "Organic food, natural supplements, clean beauty & sustainable wellness brands",
+        "Nutrition experts, holistic health practitioners & sustainability advocates",
+        "B2B and B2C — open to trade professionals and wellness consumers"
+      ]
+    },
+    {
       "id": "world-biohack-summit-2026",
       "title": "World Biohack Summit 2026 (4th Edition)",
       "subtitle": "Expanding on 2025's sold-out 3rd edition — genomics, AI health, longevity & peak performance.",
@@ -172,22 +286,41 @@
       ]
     },
     {
+      "id": "flow-fest-dubai-2026",
+      "title": "The Flow Fest Dubai 2026",
+      "subtitle": "The world's largest celebration of wellness, movement, creativity, and healing — yoga, meditation, dance, art, and community.",
+      "dates": "March 28–29, 2026",
+      "dateStart": "2026-03-28",
+      "dateEnd": "2026-03-29",
+      "location": "Creek Park, Dubai",
+      "category": "Wellness Festival",
+      "attendees": "3,000+",
+      "speakers": "20+",
+      "price": "From AED 99.50",
+      "website": "https://theflowfest.com",
+      "highlights": [
+        "Yoga, mindful walking, dance workshops & guided meditations",
+        "Art installations, writing sessions, storytelling circles & wellness talks",
+        "Family-friendly — open to wellness enthusiasts, yoga lovers & creatives"
+      ]
+    },
+    {
       "id": "well-b-festival-2026",
       "title": "Well B Festival 2026",
       "subtitle": "A three-day wellness festival celebrating holistic health, conscious living, and community connection.",
       "dates": "April 3–5, 2026",
       "dateStart": "2026-04-03",
       "dateEnd": "2026-04-05",
-      "location": "Dubai, UAE",
+      "location": "Meydan Racecourse, Dubai",
       "category": "Wellness Festival",
       "attendees": "5,000+",
       "speakers": "30+",
-      "price": "TBC",
+      "price": "From AED 195",
       "website": "https://wellbfestival.com",
       "highlights": [
-        "Breathwork, yoga, sound healing, cold plunge, and cacao ceremonies",
-        "Holistic marketplace with wellness brands and healthy food vendors",
-        "Community-driven programming with local and international practitioners"
+        "Daily yoga, pilates, meditation, breathwork & Competitive Hive Rocks challenge",
+        "Recovery zone: ice baths, infrared saunas, red light therapy, compression tech",
+        "Holistic marketplace with wellness brands, healthy food vendors & community programming"
       ]
     },
     {
