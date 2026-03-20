@@ -100,8 +100,8 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
                     </span>
                   )}
                 </div>
-                <h2 className="font-serif text-2xl md:text-3xl text-terracotta leading-snug mb-4">
-                  <Link href={`/blog/${featured.slug}`} className="hover:text-terracotta-dark transition-colors">
+                <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-gray-100 leading-snug mb-4">
+                  <Link href={`/blog/${featured.slug}`} className="hover:text-terracotta transition-colors">
                     {featured.title}
                   </Link>
                 </h2>
@@ -143,8 +143,8 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
             const colors = blogCategoryColors[post.category];
             return (
               <article key={post.slug}>
-                {post.coverImage && (
-                  <Link href={`/blog/${post.slug}`} className="block mb-4 overflow-hidden rounded-lg relative h-48">
+                <Link href={`/blog/${post.slug}`} className="block mb-4 overflow-hidden rounded-lg relative aspect-[16/10]">
+                  {post.coverImage ? (
                     <Image
                       src={post.coverImage}
                       alt={post.title}
@@ -152,8 +152,12 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
                       className="object-cover hover:scale-105 transition-transform duration-300"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
-                  </Link>
-                )}
+                  ) : (
+                    <div className={`w-full h-full ${colors.bg} flex items-center justify-center`}>
+                      <span className={`text-4xl font-serif ${colors.text} opacity-20`}>K</span>
+                    </div>
+                  )}
+                </Link>
                 <div className="flex items-center gap-2 flex-wrap mb-3">
                   <span
                     className={`text-xs px-2.5 py-1 rounded-full font-sans ${colors.bg} ${colors.text}`}
@@ -172,10 +176,10 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
                     {formatDate(post.date)}
                   </span>
                 </div>
-                <h3 className="font-serif text-xl text-terracotta leading-snug mb-3">
+                <h3 className="font-serif text-xl text-gray-900 dark:text-gray-100 leading-snug mb-3">
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="hover:text-terracotta-dark transition-colors"
+                    className="hover:text-terracotta transition-colors"
                   >
                     {post.title}
                   </Link>

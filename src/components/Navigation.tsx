@@ -128,55 +128,50 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile menu */}
-        {mobileOpen && (
-          <div className="md:hidden bg-cream dark:bg-[#0f120e] border-t border-sage-light/60 dark:border-forest/30 px-6 py-4 flex flex-col gap-4 text-sm tracking-wide">
-            <Link
-              href="/"
-              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              Blog
-            </Link>
-            <Link
-              href="/treatments"
-              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              Treatments
-            </Link>
-            <Link
-              href="/explore"
-              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              Explore
-            </Link>
-            <Link
-              href="/events"
-              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              Events
-            </Link>
-            <Link
-              href="/about"
-              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
-              onClick={() => setMobileOpen(false)}
-            >
-              About
-            </Link>
+        {/* Mobile menu — animated slide + fade */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            mobileOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="bg-cream/95 dark:bg-[#0f120e]/95 backdrop-blur-md border-t border-sage-light/60 dark:border-forest/30 px-6 py-5 flex flex-col gap-5 text-sm tracking-wide">
+            {[
+              { href: "/", label: "Blog" },
+              { href: "/treatments", label: "Treatments" },
+              { href: "/explore", label: "Explore" },
+              { href: "/events", label: "Events" },
+              { href: "/about", label: "About" },
+            ].map((item, i) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
+                style={{
+                  opacity: mobileOpen ? 1 : 0,
+                  transform: mobileOpen ? "translateX(0)" : "translateX(-8px)",
+                  transition: `opacity 0.3s ease ${i * 50 + 100}ms, transform 0.3s ease ${i * 50 + 100}ms`,
+                }}
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
             <button
               onClick={() => {
                 setMobileOpen(false);
                 setSearchOpen(true);
               }}
               className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors text-left"
+              style={{
+                opacity: mobileOpen ? 1 : 0,
+                transform: mobileOpen ? "translateX(0)" : "translateX(-8px)",
+                transition: "opacity 0.3s ease 350ms, transform 0.3s ease 350ms",
+              }}
             >
               Search
             </button>
           </div>
-        )}
+        </div>
       </nav>
 
       <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />

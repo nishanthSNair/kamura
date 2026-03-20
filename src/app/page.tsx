@@ -10,6 +10,7 @@ import InlineSearch from "@/components/InlineSearch";
 import TopTreatmentsCarousel from "@/components/TopTreatmentsCarousel";
 import FeaturedClinics from "@/components/FeaturedClinics";
 import CategoryGrid from "@/components/CategoryGrid";
+import FadeInOnScroll from "@/components/FadeInOnScroll";
 
 export const metadata: Metadata = {
   title: "KAMURA — Every Wellness Treatment. Scored. Transparent.",
@@ -123,7 +124,7 @@ export default function Home() {
               "url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1920&q=80')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F7F5F0]/85 via-[#F7F5F0]/70 to-[#F7F5F0]/95 dark:from-[#0f120e]/90 dark:via-[#0f120e]/75 dark:to-[#0f120e]/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F7F5F0]/60 via-[#F7F5F0]/40 to-[#F7F5F0]/80 dark:from-[#0f120e]/70 dark:via-[#0f120e]/50 dark:to-[#0f120e]/85" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center pt-24 pb-12">
           <span className="inline-block px-4 py-1.5 bg-sage/25 border border-sage/40 rounded-full text-[11px] font-semibold text-forest dark:text-sage uppercase tracking-[0.12em] mb-6 font-sans">
             The World&apos;s First Unbiased Wellness Intelligence Platform
@@ -137,9 +138,7 @@ export default function Home() {
             Search {treatments.length}+ treatments, {listings.length}+ clinics,
             and evidence-based articles — all scored on real data, not marketing.
           </p>
-          <p className="text-sage-dark dark:text-sage/60 text-2xl mb-8 opacity-60">
-            &#x1F422;
-          </p>
+          <img src="/favicon-leaf.svg" alt="" className="w-8 h-8 mx-auto mb-8 opacity-50" />
 
           <InlineSearch
             placeholder="Search treatments, clinics, or articles..."
@@ -157,32 +156,30 @@ export default function Home() {
 
       {/* Browse by Category */}
       <section className="border-t border-sage-light/60 dark:border-forest/20 zen-pattern">
-        <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
-          <div className="mb-8">
-            <p className="text-xs tracking-[0.3em] uppercase mb-3 text-moss dark:text-sage font-sans">
-              Browse by Category
-            </p>
-            <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-gray-100">
+        <FadeInOnScroll className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+          <div className="text-center mb-10">
+            <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-gray-100 mb-3">
               Explore Treatment Categories
             </h2>
-            <div className="w-12 h-px bg-sage/40 mt-5" />
+            <p className="text-sm text-gray-500 dark:text-gray-400 font-sans max-w-md mx-auto">
+              {treatments.length} treatments across {categoryData.length} categories, scored on evidence and community data.
+            </p>
           </div>
           <CategoryGrid categories={categoryData} />
-        </div>
+        </FadeInOnScroll>
       </section>
 
       {/* Explore Our Treatment Index */}
       <section className="border-t border-sage-light/60 dark:border-forest/20 bg-zen-mist dark:bg-forest/10 zen-pattern">
-        <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+        <FadeInOnScroll className="max-w-6xl mx-auto px-6 py-16 md:py-20">
           <div className="flex items-end justify-between mb-8">
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase mb-3 text-moss dark:text-sage font-sans">
-                Wellness Modalities
-              </p>
               <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-gray-100">
-                Explore Our Treatment Index
+                Top-Rated Treatments
               </h2>
-              <div className="w-12 h-px bg-sage/40 mt-5" />
+              <p className="text-sm text-gray-500 dark:text-gray-400 font-sans mt-2">
+                The highest-scoring treatments from each category.
+              </p>
             </div>
             <Link
               href="/treatments"
@@ -200,21 +197,20 @@ export default function Home() {
               View all {treatments.length} treatments &rarr;
             </Link>
           </div>
-        </div>
+        </FadeInOnScroll>
       </section>
 
       {/* Featured Clinics */}
       <section className="border-t border-sage-light/60 dark:border-forest/20">
-        <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+        <FadeInOnScroll className="max-w-6xl mx-auto px-6 py-16 md:py-20">
           <div className="flex items-end justify-between mb-8">
             <div>
               <p className="text-xs tracking-[0.3em] uppercase mb-3 text-moss dark:text-sage font-sans">
-                Verified Clinics
+                {listings.length}+ clinics &amp; studios across the UAE
               </p>
               <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-gray-100">
                 Featured Wellness Centers
               </h2>
-              <div className="w-12 h-px bg-sage/40 mt-5" />
             </div>
             <Link
               href="/explore"
@@ -232,7 +228,7 @@ export default function Home() {
               Explore all clinics &rarr;
             </Link>
           </div>
-        </div>
+        </FadeInOnScroll>
       </section>
 
       {/* Latest Articles */}
@@ -242,14 +238,11 @@ export default function Home() {
 
       {/* Wellness Quiz CTA */}
       <section className="border-t border-sage-light/60 dark:border-forest/20 bg-white dark:bg-forest/5">
-        <div className="max-w-4xl mx-auto px-6 py-20 md:py-24">
+        <FadeInOnScroll className="max-w-4xl mx-auto px-6 py-20 md:py-24">
           <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
             <div className="flex-1 text-center md:text-left">
-              <p className="text-xs tracking-[0.3em] uppercase mb-4 text-moss dark:text-sage font-sans">
-                Interactive Quiz
-              </p>
               <h2 className="font-serif text-3xl md:text-4xl text-gray-900 dark:text-gray-100 mb-4 leading-snug">
-                Discover Your Wellness Path
+                Discover Your <span className="text-moss dark:text-sage">Wellness Path</span>
               </h2>
               <p className="text-gray-500 dark:text-gray-400 font-sans leading-relaxed mb-6">
                 Are you The Biohacker, The Yogi, or The Healer? Take our 2-minute
@@ -278,20 +271,19 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </FadeInOnScroll>
       </section>
 
       {/* Testimonials */}
       <section className="border-t border-sage-light/60 dark:border-forest/20 bg-zen-mist dark:bg-transparent zen-pattern">
-        <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
-          <div className="mb-12">
-            <p className="text-xs tracking-[0.3em] uppercase mb-4 text-moss dark:text-sage font-sans">
-              Community
-            </p>
+        <FadeInOnScroll className="max-w-6xl mx-auto px-6 py-20 md:py-28">
+          <div className="text-center mb-12">
             <h2 className="font-serif text-3xl md:text-4xl text-gray-900 dark:text-gray-100 mb-3">
               What People Are Saying
             </h2>
-            <div className="w-12 h-px bg-sage/40 mt-6" />
+            <p className="text-sm text-gray-500 dark:text-gray-400 font-sans">
+              Real feedback from the community.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((t) => (
@@ -313,7 +305,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
+        </FadeInOnScroll>
       </section>
     </>
   );

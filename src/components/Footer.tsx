@@ -1,10 +1,27 @@
 import Link from "next/link";
 import Image from "next/image";
+import NewsletterSignup from "./NewsletterSignup";
 
 export default function Footer() {
   return (
     <footer className="border-t border-sage-light/60 dark:border-forest/30 bg-cream dark:bg-[#0f120e]">
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      {/* Newsletter */}
+      <div className="max-w-6xl mx-auto px-6 pt-14 pb-10 border-b border-sage-light/40 dark:border-forest/20">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
+          <div className="text-center md:text-left max-w-sm">
+            <h3 className="font-serif text-xl text-gray-900 dark:text-gray-100 mb-2">
+              Stay in the loop
+            </h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400 font-sans">
+              New treatments, events, and wellness insights — delivered to your inbox.
+            </p>
+          </div>
+          <NewsletterSignup />
+        </div>
+      </div>
+
+      {/* Footer links */}
+      <div className="max-w-6xl mx-auto px-6 py-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <Link href="/" className="flex items-center gap-2.5">
             <Image
@@ -35,18 +52,26 @@ export default function Footer() {
               About
             </Link>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 text-xs text-gray-400">
             <a
               href="mailto:kamuralife@gmail.com"
-              className="text-xs text-gray-400 hover:text-moss transition-colors"
+              className="hover:text-moss transition-colors"
             >
               kamuralife@gmail.com
             </a>
-            <p className="text-xs text-gray-400">
-              &copy; {new Date().getFullYear()} Kamura. All rights reserved.
-            </p>
+            <a
+              href="https://instagram.com/kamuralife"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-moss transition-colors"
+            >
+              @kamuralife
+            </a>
           </div>
         </div>
+        <p className="text-xs text-gray-400 text-center mt-8">
+          &copy; {new Date().getFullYear()} Kamura. All rights reserved.
+        </p>
       </div>
     </footer>
   );
