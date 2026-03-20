@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
-import { testimonials } from "@/data/testimonials";
 import { treatments } from "@/data/treatments";
 import { listings } from "@/data/listings";
 import { CATEGORY_META } from "@/data/treatment-categories";
@@ -274,39 +273,6 @@ export default function Home() {
         </FadeInOnScroll>
       </section>
 
-      {/* Testimonials */}
-      <section className="border-t border-sage-light/60 dark:border-forest/20 bg-zen-mist dark:bg-transparent zen-pattern">
-        <FadeInOnScroll className="max-w-6xl mx-auto px-6 py-20 md:py-28">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl text-gray-900 dark:text-gray-100 mb-3">
-              What People Are Saying
-            </h2>
-            <p className="text-sm text-gray-500 dark:text-gray-400 font-sans">
-              Real feedback from the community.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((t) => (
-              <div
-                key={t.id}
-                className="border border-sage-light/60 dark:border-gray-700 rounded-xl p-8 bg-white dark:bg-[#1a1a1a]"
-              >
-                <p className="font-serif text-lg text-gray-800 dark:text-gray-200 leading-relaxed mb-6 italic">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div>
-                  <p className="font-sans text-sm font-medium text-gray-900 dark:text-gray-100">
-                    {t.name}
-                  </p>
-                  <p className="font-sans text-xs text-gray-400 dark:text-gray-500">
-                    {t.role}, {t.location}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </FadeInOnScroll>
-      </section>
     </>
   );
 }
