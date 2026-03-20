@@ -36,7 +36,8 @@ export default function AboutPage() {
           name: "United Arab Emirates",
         },
         email: "kamuralife@gmail.com",
-        sameAs: ["https://www.instagram.com/kamaborea/"],
+        logo: "https://kamuralife.com/logo-light.png",
+        sameAs: ["https://www.instagram.com/kamuralife/"],
       },
       {
         "@type": "AboutPage",

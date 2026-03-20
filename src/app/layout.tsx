@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: "KAMURA — Heart of Longevity & Wellness",
     description:
       "Discover the practices, places, and people transforming wellness in Dubai and beyond.",
-    creator: "@kamaborea",
+    creator: "@kamuralife",
   },
   verification: {
     google: "TULPYmvCJGmxRx1mLa17Qka0n_Y5jbdg-H-tAe2r65Y",

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="160 140 480 380" width="480" height="380">
+  <defs>
+    <linearGradient id="leafGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7a9e7e"/><stop offset="100%" stop-color="#5c7c5f"/>
+    </linearGradient>
+    <linearGradient id="leafGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8aad8d"/><stop offset="100%" stop-color="#7a9e7e"/>
+    </linearGradient>
+    <linearGradient id="leafGrad3" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#95b897"/><stop offset="100%" stop-color="#7a9e7e"/>
+    </linearGradient>
+    <linearGradient id="leafGrad4" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7a9e7e"/><stop offset="100%" stop-color="#8aad8d"/>
+    </linearGradient>
+    <linearGradient id="stemGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#7a9e7e"/><stop offset="100%" stop-color="#5c7c5f"/>
+    </linearGradient>
+    <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c4a882"/><stop offset="50%" stop-color="#d4b896"/><stop offset="100%" stop-color="#b89b76"/>
+    </linearGradient>
+  </defs>
+  <!-- Enso circle -->
+  <path d="M 400 180.0 A 160.0 160.0 0 1 1 295.0 460.0"
+        fill="none" stroke="url(#circleGrad)" stroke-width="5.0" stroke-linecap="round" opacity="0.6"/>
+  <!-- Stem -->
+  <path d="M 400 440.0 Q 400 380.0 400 310.0"
+        fill="none" stroke="url(#stemGrad)" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <!-- Leaves -->
+  <path d="M 400 400.0 Q 340.0 370.0 310.0 310.0 Q 350.0 330.0 400 360.0 Z" fill="url(#leafGrad1)" opacity="0.85"/>
+  <path d="M 400 400.0 Q 460.0 370.0 490.0 310.0 Q 450.0 330.0 400 360.0 Z" fill="url(#leafGrad2)" opacity="0.85"/>
+  <path d="M 400 370.0 Q 350.0 330.0 330.0 265.0 Q 360.0 300.0 400 330.0 Z" fill="url(#leafGrad3)" opacity="0.9"/>
+  <path d="M 400 370.0 Q 450.0 330.0 470.0 265.0 Q 440.0 300.0 400 330.0 Z" fill="url(#leafGrad4)" opacity="0.9"/>
+  <path d="M 400 335.0 Q 365.0 290.0 355.0 225.0 Q 375.0 275.0 400 305.0 Z" fill="url(#leafGrad1)" opacity="0.95"/>
+  <path d="M 400 335.0 Q 435.0 290.0 445.0 225.0 Q 425.0 275.0 400 305.0 Z" fill="url(#leafGrad2)" opacity="0.95"/>
+  <path d="M 400 310.0 Q 385.0 255.0 390.0 195.0 Q 400 240.0 410.0 195.0 Q 415.0 255.0 400 310.0 Z" fill="url(#leafGrad3)" opacity="1"/>
+  <circle cx="400" cy="200.0" r="3.0" fill="#7a9e7e" opacity="0.7"/>
+</svg>

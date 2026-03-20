@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import SearchModal from "./SearchModal";
 import ThemeToggle from "./ThemeToggle";
@@ -75,8 +76,17 @@ export default function Navigation() {
           </button>
 
           {/* Center brand */}
-          <Link href="/" className="font-serif text-2xl tracking-[0.15em] text-gray-900 dark:text-white">
-            KAMURA
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/logo-symbol.svg"
+              alt=""
+              width={28}
+              height={28}
+              className="w-7 h-7"
+            />
+            <span className="font-serif text-2xl tracking-[0.15em] text-gray-900 dark:text-white">
+              KAMURA
+            </span>
           </Link>
 
           {/* Right - Search + Instagram */}
