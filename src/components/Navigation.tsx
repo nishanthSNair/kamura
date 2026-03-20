@@ -76,13 +76,13 @@ export default function Navigation() {
           </button>
 
           {/* Center brand */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2.5">
             <Image
               src="/logo-symbol.svg"
               alt=""
-              width={28}
-              height={28}
-              className="w-7 h-7"
+              width={36}
+              height={36}
+              className="w-9 h-9"
             />
             <span className="font-serif text-2xl tracking-[0.15em] text-gray-900 dark:text-white">
               KAMURA

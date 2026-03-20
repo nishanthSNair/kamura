@@ -6,15 +6,15 @@ export default function Footer() {
     <footer className="border-t border-sage-light/60 dark:border-forest/30 bg-cream dark:bg-[#0f120e]">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2.5">
             <Image
               src="/logo-symbol.svg"
               alt=""
-              width={24}
-              height={24}
-              className="w-6 h-6"
+              width={32}
+              height={32}
+              className="w-8 h-8"
             />
-            <span className="font-serif text-lg tracking-[0.15em] text-gray-900 dark:text-white">
+            <span className="font-serif text-xl tracking-[0.15em] text-gray-900 dark:text-white">
               KAMURA
             </span>
           </Link>
