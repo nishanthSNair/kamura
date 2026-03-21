@@ -16,6 +16,7 @@ import ScoreBreakdownPanel from "@/components/treatments/ScoreBreakdownPanel";
 import OutcomeCard from "@/components/treatments/OutcomeCard";
 import CommunityQuote from "@/components/treatments/CommunityQuote";
 import StudyCitation from "@/components/treatments/StudyCitation";
+import ShareButtons from "@/components/ShareButtons";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -185,6 +186,16 @@ export default async function TreatmentDetailPage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        {/* Share */}
+        <div className="max-w-[1200px] mx-auto px-6 mt-6">
+          <ShareButtons
+            url={`https://kamuralife.com/treatments/${t.slug}`}
+            title={`${t.name} — Kamura Score: ${t.kamuraScore}`}
+            description={t.description}
+            variant="block"
+          />
+        </div>
 
         {/* Score Breakdown */}
         <section className="max-w-[1200px] mx-auto px-6 -mt-1">

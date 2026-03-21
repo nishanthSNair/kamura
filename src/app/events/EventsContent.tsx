@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { events, categoryColors, type Event, type EventCategory } from "@/data/events";
 import { news } from "@/data/news";
+import ShareButtons from "@/components/ShareButtons";
 
 const TODAY = new Date();
 TODAY.setHours(0, 0, 0, 0);
@@ -792,6 +793,13 @@ function EventCard({
                 Add to Calendar
               </a>
             )}
+            <span className="w-px h-5 bg-gray-200 dark:bg-gray-700 self-center" />
+            <ShareButtons
+              url={`https://kamuralife.com/events/${event.id}`}
+              title={event.title}
+              description={event.subtitle}
+              variant="inline"
+            />
           </div>
         </div>
       </div>

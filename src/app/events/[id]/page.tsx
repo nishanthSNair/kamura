@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { events, categoryColors } from "@/data/events";
 import { news } from "@/data/news";
+import ShareButtons from "@/components/ShareButtons";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -184,6 +185,14 @@ export default async function EventPage({ params }: Props) {
               <line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" />
             </svg>
           </a>
+          <div className="mt-6">
+            <ShareButtons
+              url={`https://kamuralife.com/events/${event.id}`}
+              title={event.title}
+              description={event.subtitle}
+              variant="block"
+            />
+          </div>
         </section>
 
         {/* Related News */}
