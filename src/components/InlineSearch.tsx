@@ -16,11 +16,13 @@ import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
 interface InlineSearchProps {
   placeholder?: string;
   popularSearches?: string[];
+  variant?: "default" | "hero";
 }
 
 export default function InlineSearch({
   placeholder = "Search treatments, clinics, or articles...",
   popularSearches,
+  variant = "default",
 }: InlineSearchProps) {
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
@@ -126,7 +128,7 @@ export default function InlineSearch({
   let resultIndex = -1;
 
   return (
-    <div ref={containerRef} className="relative w-full max-w-[640px] mx-auto">
+    <div ref={containerRef} className={`relative w-full max-w-[640px] mx-auto ${variant === "hero" ? "search-hero" : ""}`}>
       {/* Search input */}
       <div className="relative">
         <svg
@@ -139,7 +141,7 @@ export default function InlineSearch({
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+          className="search-icon absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
         >
           <circle cx="11" cy="11" r="8" />
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
@@ -169,7 +171,7 @@ export default function InlineSearch({
               setQuery("");
               setIsOpen(false);
             }}
-            className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+            className="clear-btn absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
             aria-label="Clear search"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -263,14 +265,14 @@ export default function InlineSearch({
       {/* Popular searches */}
       {popularSearches && !showDropdown && (
         <div className="flex flex-wrap justify-center gap-2 mt-5">
-          <span className="text-xs text-gray-500 dark:text-gray-500 font-sans self-center mr-1">
+          <span className="popular-label text-xs text-gray-500 dark:text-gray-500 font-sans self-center mr-1">
             Popular:
           </span>
           {popularSearches.map((term) => (
             <button
               key={term}
               onClick={() => handlePopularClick(term)}
-              className="px-3.5 py-1.5 rounded-full text-[13px] font-sans bg-white dark:bg-[#1A1A1A] border border-gray-300 dark:border-white/[0.08] text-gray-600 dark:text-[#A89F95] shadow-sm hover:shadow-md hover:border-sage/40 hover:text-gray-900 dark:hover:text-[#F5F0EB] transition-all"
+              className="popular-tag px-3.5 py-1.5 rounded-full text-[13px] font-sans bg-white dark:bg-[#1A1A1A] border border-gray-300 dark:border-white/[0.08] text-gray-600 dark:text-[#A89F95] shadow-sm hover:shadow-md hover:border-sage/40 hover:text-gray-900 dark:hover:text-[#F5F0EB] transition-all"
             >
               {term}
             </button>

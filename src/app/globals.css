@@ -165,6 +165,53 @@ h1, h2, h3, h4, h5, h6 {
                     radial-gradient(ellipse at 60% 80%, rgba(61,90,58,0.07) 0%, transparent 50%);
 }
 
+/* Hero scroll indicator — gentle bounce */
+@keyframes gentle-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+.animate-gentle-bounce {
+  animation: gentle-bounce 3s ease-in-out infinite;
+}
+
+/* Hero search bar — glass morphism variant */
+.search-hero input {
+  background: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.search-hero input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.search-hero input:focus {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08), 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.search-hero .search-icon {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.search-hero .clear-btn {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.search-hero .clear-btn:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.search-hero .popular-tag {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.search-hero .popular-tag:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+.search-hero .popular-label {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
 /* Hide scrollbar for horizontal carousels */
 .hide-scrollbar {
   scrollbar-width: none;

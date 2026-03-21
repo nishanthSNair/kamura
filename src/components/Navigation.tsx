@@ -9,6 +9,17 @@ import ThemeToggle from "./ThemeToggle";
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Track scroll position for transparent nav
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 50);
+    }
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Cmd+K / Ctrl+K keyboard shortcut
   useEffect(() => {
@@ -34,33 +45,39 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-cream/90 dark:bg-[#0f120e]/90 backdrop-blur-sm border-b border-sage-light/60 dark:border-forest/30">
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-cream/90 dark:bg-[#0f120e]/90 backdrop-blur-sm border-b border-sage-light/60 dark:border-forest/30"
+          : "bg-transparent border-b border-transparent"
+      }`}>
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Left nav links - desktop */}
           <div className="hidden md:flex items-center gap-8 text-sm tracking-wide min-w-[200px]">
-            <Link href="/blog" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
-              Blog
-            </Link>
-            <Link href="/treatments" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
-              Treatments
-            </Link>
-            <Link href="/blueprint" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
-              Blueprint
-            </Link>
-            <Link href="/explore" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
-              Explore
-            </Link>
-            <Link href="/events" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
-              Events
-            </Link>
-            <Link href="/about" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
-              About
-            </Link>
+            {[
+              { href: "/blog", label: "Blog" },
+              { href: "/treatments", label: "Treatments" },
+              { href: "/blueprint", label: "Blueprint" },
+              { href: "/explore", label: "Explore" },
+              { href: "/events", label: "Events" },
+              { href: "/about", label: "About" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`transition-colors ${
+                  scrolled
+                    ? "text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage"
+                    : "text-white/90 hover:text-white"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden text-gray-800 dark:text-gray-200"
+            className={`md:hidden transition-colors ${scrolled ? "text-gray-800 dark:text-gray-200" : "text-white"}`}
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -85,9 +102,9 @@ export default function Navigation() {
               alt=""
               width={36}
               height={36}
-              className="w-9 h-9"
+              className={`w-9 h-9 transition-all ${scrolled ? "" : "drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"}`}
             />
-            <span className="font-serif text-2xl tracking-[0.15em] text-gray-900 dark:text-white">
+            <span className={`font-serif text-2xl tracking-[0.15em] transition-colors ${scrolled ? "text-gray-900 dark:text-white" : "text-white"}`}>
               KAMURA
             </span>
           </Link>
@@ -96,7 +113,7 @@ export default function Navigation() {
           <div className="flex items-center justify-end gap-4 min-w-[200px]">
             <button
               onClick={() => setSearchOpen(true)}
-              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
+              className={`transition-colors ${scrolled ? "text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage" : "text-white/90 hover:text-white"}`}
               aria-label="Search"
             >
               <svg
@@ -119,7 +136,7 @@ export default function Navigation() {
               href="https://instagram.com/kamuralife"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors"
+              className={`transition-colors ${scrolled ? "text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage" : "text-white/90 hover:text-white"}`}
               aria-label="Instagram"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
