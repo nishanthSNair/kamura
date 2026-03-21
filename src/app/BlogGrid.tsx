@@ -109,10 +109,10 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
                   {featured.excerpt}
                 </p>
                 <div className="flex items-center gap-4">
-                  <span className="text-xs text-gray-400 dark:text-gray-500 tracking-wide uppercase">
+                  <span className="text-xs text-gray-500 dark:text-gray-500 tracking-wide uppercase">
                     {formatDate(featured.date)}
                   </span>
-                  <span className="text-xs text-gray-400 dark:text-gray-500 font-sans">
+                  <span className="text-xs text-gray-500 dark:text-gray-500 font-sans">
                     {featured.readingTime} min read
                   </span>
                   {featured.kamuraScore && (
@@ -172,7 +172,7 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
                       {post.depthIndicator}
                     </span>
                   )}
-                  <span className="text-xs text-gray-400 dark:text-gray-500 tracking-wide uppercase">
+                  <span className="text-xs text-gray-500 dark:text-gray-500 tracking-wide uppercase">
                     {formatDate(post.date)}
                   </span>
                 </div>
@@ -194,7 +194,7 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
                   >
                     Read More
                   </Link>
-                  <span className="text-xs text-gray-400 dark:text-gray-500 font-sans">
+                  <span className="text-xs text-gray-500 dark:text-gray-500 font-sans">
                     {post.readingTime} min read
                   </span>
                   {post.kamuraScore && (
@@ -210,7 +210,7 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
       )}
 
       {filtered.length === 0 && (
-        <p className="text-gray-400 dark:text-gray-500 text-center py-16 font-sans">
+        <p className="text-gray-500 dark:text-gray-500 text-center py-16 font-sans">
           No articles in this category yet.
         </p>
       )}

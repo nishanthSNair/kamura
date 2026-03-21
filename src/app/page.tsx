@@ -137,7 +137,7 @@ export default function Home() {
             Search {treatments.length}+ treatments, {listings.length}+ clinics,
             and evidence-based articles — all scored on real data, not marketing.
           </p>
-          <img src="/favicon-leaf.svg" alt="" className="w-8 h-8 mx-auto mb-8 opacity-50" />
+          <img src="/favicon-leaf.svg" alt="" className="w-8 h-8 mx-auto mb-8 opacity-60" />
 
           <InlineSearch
             placeholder="Search treatments, clinics, or articles..."
@@ -169,7 +169,7 @@ export default function Home() {
       </section>
 
       {/* Explore Our Treatment Index */}
-      <section className="border-t border-sage-light/60 dark:border-forest/20 bg-zen-mist dark:bg-forest/10 zen-pattern">
+      <section className="border-t border-sage-light/60 dark:border-forest/20 bg-white dark:bg-forest/10 zen-pattern">
         <FadeInOnScroll className="max-w-6xl mx-auto px-6 py-16 md:py-20">
           <div className="flex items-end justify-between mb-8">
             <div>
@@ -231,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* Latest Articles */}
-      <section className="border-t border-sage-light/60 dark:border-forest/20 bg-cream dark:bg-transparent">
+      <section className="border-t border-sage-light/60 dark:border-forest/20 dark:bg-transparent">
         <BlogGrid posts={posts} />
       </section>
 

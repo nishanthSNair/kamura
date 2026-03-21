@@ -156,7 +156,7 @@ export default function TreatmentsContent() {
                   <div className="font-semibold text-sm text-gray-900 dark:text-[#F5F0EB] font-sans">
                     {factor.label}
                   </div>
-                  <div className="text-xs text-gray-400 dark:text-[#6B6560] font-sans mt-0.5">
+                  <div className="text-xs text-gray-500 dark:text-[#6B6560] font-sans mt-0.5">
                     {factor.desc}
                   </div>
                 </div>
@@ -216,7 +216,7 @@ export default function TreatmentsContent() {
             ))}
           </div>
         </div>
-        <p className="text-xs text-gray-400 dark:text-[#6B6560] mt-3 font-sans">
+        <p className="text-xs text-gray-500 dark:text-[#6B6560] mt-3 font-sans">
           Showing {filtered.length} of {treatments.length} treatments
         </p>
       </section>
@@ -231,7 +231,7 @@ export default function TreatmentsContent() {
 
         {filtered.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-gray-400 dark:text-[#6B6560] font-sans">
+            <p className="text-gray-500 dark:text-[#6B6560] font-sans">
               No treatments found matching your search.
             </p>
           </div>
@@ -280,7 +280,7 @@ function TreatmentCard({ treatment: t }: { treatment: Treatment }) {
               {t.name}
             </h3>
             {t.fullName !== t.name && (
-              <p className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans truncate">
+              <p className="text-[11px] text-gray-500 dark:text-[#6B6560] font-sans truncate">
                 {t.fullName}
               </p>
             )}
@@ -293,11 +293,11 @@ function TreatmentCard({ treatment: t }: { treatment: Treatment }) {
 
         <div className="flex items-center gap-2 flex-wrap mb-3">
           <EvidenceLevelTag level={t.evidenceLevel} />
-          <span className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans">
+          <span className="text-[11px] text-gray-500 dark:text-[#6B6560] font-sans">
             {t.studyCount}+ studies
           </span>
           <span className="text-gray-300 dark:text-gray-600">&bull;</span>
-          <span className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans">
+          <span className="text-[11px] text-gray-500 dark:text-[#6B6560] font-sans">
             {t.community.positivePercent}% positive
           </span>
         </div>

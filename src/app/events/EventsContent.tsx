@@ -195,19 +195,19 @@ export default function EventsContent() {
           <div className="flex flex-wrap justify-center gap-8 md:gap-16">
             <div className="text-center">
               <p className="font-serif text-2xl text-gray-900 dark:text-gray-100">{events.length}</p>
-              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans">Events Tracked</p>
+              <p className="text-xs text-gray-500 dark:text-gray-500 uppercase tracking-wider font-sans">Events Tracked</p>
             </div>
             <div className="text-center">
               <p className="font-serif text-2xl text-emerald-700">{upcomingCount}</p>
-              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans">Upcoming</p>
+              <p className="text-xs text-gray-500 dark:text-gray-500 uppercase tracking-wider font-sans">Upcoming</p>
             </div>
             <div className="text-center">
               <p className="font-serif text-2xl text-gray-900 dark:text-gray-100">{totalAttendees.toLocaleString()}+</p>
-              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans">Total Attendees</p>
+              <p className="text-xs text-gray-500 dark:text-gray-500 uppercase tracking-wider font-sans">Total Attendees</p>
             </div>
             <div className="text-center">
               <p className="font-serif text-2xl text-gray-900 dark:text-gray-100">{ALL_CATEGORIES.length}</p>
-              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans">Categories</p>
+              <p className="text-xs text-gray-500 dark:text-gray-500 uppercase tracking-wider font-sans">Categories</p>
             </div>
           </div>
         </div>
@@ -217,7 +217,7 @@ export default function EventsContent() {
       <section className="max-w-6xl mx-auto px-6 pt-10 pb-6">
         {/* Search */}
         <div className="relative mb-6">
-          <svg className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-500" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
           <input
@@ -230,7 +230,7 @@ export default function EventsContent() {
           {searchQuery && (
             <button
               onClick={() => setSearchQuery("")}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
@@ -326,7 +326,7 @@ export default function EventsContent() {
 
             <div className="grid grid-cols-7 border-b border-gray-200 dark:border-gray-700">
               {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
-                <div key={i} className="px-1 md:px-2 py-2 md:py-3 text-center text-[10px] md:text-xs font-sans uppercase tracking-wider text-gray-400 dark:text-gray-500">
+                <div key={i} className="px-1 md:px-2 py-2 md:py-3 text-center text-[10px] md:text-xs font-sans uppercase tracking-wider text-gray-500 dark:text-gray-500">
                   <span className="md:hidden">{d}</span>
                   <span className="hidden md:inline">{["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][i]}</span>
                 </div>
@@ -396,7 +396,7 @@ export default function EventsContent() {
       {activeTab !== "calendar" && (
         <section className="max-w-6xl mx-auto px-6 pb-20">
           {filteredEvents.length === 0 ? (
-            <p className="text-gray-400 dark:text-gray-500 text-center py-16 font-sans">
+            <p className="text-gray-500 dark:text-gray-500 text-center py-16 font-sans">
               No events found{searchQuery ? ` for "${searchQuery}"` : " for this filter"}.
             </p>
           ) : (
@@ -471,7 +471,7 @@ export default function EventsContent() {
                     {item.category}
                   </span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500 font-sans mb-3">
+                <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-500 font-sans mb-3">
                   <span className="font-medium text-gray-600 dark:text-gray-400">{item.source}</span>
                   <span>&middot;</span>
                   <span>{item.date}</span>
@@ -582,7 +582,7 @@ function LiveNewsFeed() {
     return (
       <section className="border-t border-gray-100 dark:border-gray-800">
         <div className="max-w-6xl mx-auto px-6 py-16 text-center">
-          <p className="text-sm text-gray-400 dark:text-gray-500 font-sans">
+          <p className="text-sm text-gray-500 dark:text-gray-500 font-sans">
             Unable to load live news right now. Check back later.
           </p>
         </div>
@@ -630,7 +630,7 @@ function LiveNewsFeed() {
                 rel="noopener noreferrer"
                 className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-[#1a1a1a] hover:shadow-md transition-shadow flex flex-col"
               >
-                <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500 font-sans mb-3">
+                <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-500 font-sans mb-3">
                   <span className="font-medium text-gray-600 dark:text-gray-400">{article.source}</span>
                   <span>&middot;</span>
                   <span>{formatPubDate(article.pubDate)}</span>
@@ -743,20 +743,20 @@ function EventCard({
         <div className="px-6 pb-6 border-t border-gray-100 dark:border-gray-800 pt-4">
           <div className="grid grid-cols-3 gap-4 mb-5">
             <div>
-              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-1">Attendees</p>
+              <p className="text-xs text-gray-500 dark:text-gray-500 uppercase tracking-wider font-sans mb-1">Attendees</p>
               <p className="text-sm font-sans text-gray-800 dark:text-gray-200">{event.attendees}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-1">Speakers</p>
+              <p className="text-xs text-gray-500 dark:text-gray-500 uppercase tracking-wider font-sans mb-1">Speakers</p>
               <p className="text-sm font-sans text-gray-800 dark:text-gray-200">{event.speakers}</p>
             </div>
             <div>
-              <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-1">Price</p>
+              <p className="text-xs text-gray-500 dark:text-gray-500 uppercase tracking-wider font-sans mb-1">Price</p>
               <p className="text-sm font-sans text-gray-800 dark:text-gray-200">{event.price}</p>
             </div>
           </div>
           <div className="mb-5">
-            <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-2">Key Highlights</p>
+            <p className="text-xs text-gray-500 dark:text-gray-500 uppercase tracking-wider font-sans mb-2">Key Highlights</p>
             <ul className="space-y-2">
               {event.highlights.map((h, i) => (
                 <li key={i} className="text-sm text-gray-600 dark:text-gray-400 font-sans flex gap-2">

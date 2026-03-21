@@ -68,7 +68,7 @@ export default function TopTreatmentsCarousel({ treatments }: TopTreatmentsCarou
             <h3 className="font-sans font-semibold text-[15px] text-gray-900 dark:text-[#F5F0EB] mb-1 leading-tight">
               {t.name}
             </h3>
-            <p className="text-[11px] text-gray-400 dark:text-[#6B6560] uppercase tracking-wide font-sans mb-3">
+            <p className="text-[11px] text-gray-500 dark:text-[#6B6560] uppercase tracking-wide font-sans mb-3">
               {t.category}
             </p>
             <EvidenceLevelTag level={t.evidenceLevel} />

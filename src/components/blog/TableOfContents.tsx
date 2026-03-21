@@ -35,7 +35,7 @@ export default function TableOfContents({ headings }: { headings: Heading[] }) {
 
   return (
     <nav className="hidden lg:block sticky top-24 self-start">
-      <p className="text-[11px] text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-3 font-semibold">
+      <p className="text-[11px] text-gray-500 dark:text-gray-500 uppercase tracking-wider font-sans mb-3 font-semibold">
         On this page
       </p>
       <ul className="space-y-1.5 border-l border-gray-200 dark:border-gray-700">

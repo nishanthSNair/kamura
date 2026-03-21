@@ -261,7 +261,7 @@ export default function InlineSearch({
       {/* Popular searches */}
       {popularSearches && !showDropdown && (
         <div className="flex flex-wrap justify-center gap-2 mt-5">
-          <span className="text-xs text-gray-400 dark:text-gray-500 font-sans self-center mr-1">
+          <span className="text-xs text-gray-500 dark:text-gray-500 font-sans self-center mr-1">
             Popular:
           </span>
           {popularSearches.map((term) => (

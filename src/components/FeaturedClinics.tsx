@@ -64,7 +64,7 @@ export default function FeaturedClinics({ clinics }: FeaturedClinicsProps) {
               <p className="text-[13px] text-gray-500 dark:text-[#A89F95] font-sans leading-relaxed mb-3 line-clamp-2">
                 {clinic.tagline}
               </p>
-              <p className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans mb-3 flex items-center gap-1">
+              <p className="text-[11px] text-gray-500 dark:text-[#6B6560] font-sans mb-3 flex items-center gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                   <circle cx="12" cy="10" r="3" />
@@ -81,7 +81,7 @@ export default function FeaturedClinics({ clinics }: FeaturedClinicsProps) {
                   </span>
                 ))}
                 {clinic.services.length > 3 && (
-                  <span className="text-[10px] text-gray-400 dark:text-[#6B6560] font-sans self-center">
+                  <span className="text-[10px] text-gray-500 dark:text-[#6B6560] font-sans self-center">
                     +{clinic.services.length - 3} more
                   </span>
                 )}

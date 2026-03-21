@@ -135,11 +135,11 @@ export default async function BlogPostPage({ params }: Props) {
                 Medically Reviewed
               </span>
             )}
-            <p className="text-xs text-gray-400 dark:text-gray-500 tracking-wide uppercase">
+            <p className="text-xs text-gray-500 dark:text-gray-500 tracking-wide uppercase">
               {formatDate(post.lastUpdated || post.date)}
             </p>
             <span className="text-gray-300 dark:text-gray-600">&middot;</span>
-            <p className="text-xs text-gray-400 dark:text-gray-500 font-sans">
+            <p className="text-xs text-gray-500 dark:text-gray-500 font-sans">
               {post.readingTime} min read
             </p>
           </div>
@@ -291,11 +291,11 @@ export default async function BlogPostPage({ params }: Props) {
                         <span className={`text-[10px] px-2 py-0.5 rounded-full font-sans ${colors.bg} ${colors.text}`}>
                           {related.category}
                         </span>
-                        <span className="text-xs text-gray-400 dark:text-gray-500">
+                        <span className="text-xs text-gray-500 dark:text-gray-500">
                           {related.readingTime} min read
                         </span>
                       </div>
-                      <h4 className="font-serif text-lg text-terracotta leading-snug mb-2">
+                      <h4 className="font-serif text-lg text-gray-900 dark:text-gray-100 leading-snug mb-2">
                         <Link
                           href={`/blog/${related.slug}`}
                           className="hover:text-terracotta-dark transition-colors"

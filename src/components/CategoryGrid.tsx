@@ -24,7 +24,7 @@ export default function CategoryGrid({ categories }: CategoryGridProps) {
           <p className="text-[13px] font-sans font-medium text-gray-900 dark:text-[#F5F0EB] mb-0.5 leading-tight">
             {cat.name}
           </p>
-          <p className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans">
+          <p className="text-[11px] text-gray-500 dark:text-[#6B6560] font-sans">
             {cat.treatmentCount} treatments
           </p>
         </Link>
