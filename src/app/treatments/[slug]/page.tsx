@@ -14,9 +14,15 @@ import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
 import EvidenceLevelTag from "@/components/treatments/EvidenceLevelTag";
 import ScoreBreakdownPanel from "@/components/treatments/ScoreBreakdownPanel";
 import OutcomeCard from "@/components/treatments/OutcomeCard";
-import CommunityQuote from "@/components/treatments/CommunityQuote";
 import StudyCitation from "@/components/treatments/StudyCitation";
 import ShareButtons from "@/components/ShareButtons";
+import SectionNav from "@/components/treatments/SectionNav";
+import AtAGlanceStrip from "@/components/treatments/AtAGlanceStrip";
+import MechanismSection from "@/components/treatments/MechanismSection";
+import SideEffectsPanel from "@/components/treatments/SideEffectsPanel";
+import InteractionsPanel from "@/components/treatments/InteractionsPanel";
+import CostGuide from "@/components/treatments/CostGuide";
+import FAQAccordion from "@/components/treatments/FAQAccordion";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -76,6 +82,21 @@ export default async function TreatmentDetailPage({ params }: Props) {
     )
     .slice(0, 3);
 
+  // Build dynamic section nav based on available data
+  const sections: { id: string; label: string }[] = [
+    { id: "score", label: "Score" },
+    ...(t.mechanism ? [{ id: "mechanism", label: "How It Works" }] : []),
+    { id: "evidence", label: "Evidence" },
+    ...(t.keyStudies.length > 0 ? [{ id: "research", label: "Research" }] : []),
+    ...(t.sideEffects ? [{ id: "safety", label: "Safety" }] : []),
+    ...(t.interactions || t.contraindications?.length ? [{ id: "interactions", label: "Interactions" }] : []),
+    { id: "protocol", label: "Protocol" },
+    ...(t.costEstimate ? [{ id: "cost", label: "Cost" }] : []),
+    ...(t.faq?.length ? [{ id: "faq", label: "FAQ" }] : []),
+    ...(relevantListings.length > 0 ? [{ id: "locations", label: "Locations" }] : []),
+    ...(related.length > 0 ? [{ id: "related", label: "Related" }] : []),
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -85,6 +106,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
         alternateName: t.fullName,
         description: t.description,
         url: `https://kamuralife.com/treatments/${slug}`,
+        ...(t.lastUpdated && { dateModified: t.lastUpdated }),
         relevantSpecialty: {
           "@type": "MedicalSpecialty",
           name: t.category,
@@ -125,7 +147,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
       />
 
       <article className="zen-pattern">
-        {/* Hero Banner with Nature Image */}
+        {/* Hero Banner */}
         <section className="relative min-h-[50vh] flex items-end">
           <div className="absolute inset-0">
             <Image
@@ -195,7 +217,17 @@ export default async function TreatmentDetailPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Share — mobile only (sidebar handles desktop) */}
+        {/* At a Glance Strip */}
+        <AtAGlanceStrip
+          score={t.kamuraScore}
+          evidenceLevel={t.evidenceLevel}
+          costEstimate={t.costEstimate}
+          timeToEffect={t.community.timeToEffect}
+          uaeAvailable={t.uaeAvailable}
+          lastUpdated={t.lastUpdated}
+        />
+
+        {/* Share — mobile only */}
         <div className="max-w-[1200px] mx-auto px-6 mt-6 lg:hidden">
           <ShareButtons
             url={`https://kamuralife.com/treatments/${t.slug}`}
@@ -205,216 +237,208 @@ export default async function TreatmentDetailPage({ params }: Props) {
           />
         </div>
 
-        {/* Score Breakdown */}
-        <section className="max-w-[1200px] mx-auto px-6 -mt-1">
-          <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl overflow-hidden">
-            <ScoreBreakdownPanel scores={t.scores} />
-          </div>
-        </section>
+        {/* Two-column layout: SectionNav + Content */}
+        <div className="max-w-[1200px] mx-auto px-6 mt-10 grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-8 lg:gap-12">
+          {/* Left: Sticky Section Nav (desktop only) */}
+          <SectionNav sections={sections} />
 
-        {/* Key Research — Clinical Core */}
-        {t.keyStudies.length > 0 && (
-          <section className="max-w-[1200px] mx-auto px-6 mt-10">
-            <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="text-lg">📄</span>
-                <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB]">
-                  Key Research
+          {/* Right: Main Content */}
+          <div className="space-y-10">
+            {/* Score Breakdown */}
+            <section id="score" className="scroll-mt-24">
+              <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl overflow-hidden">
+                <ScoreBreakdownPanel scores={t.scores} />
+              </div>
+            </section>
+
+            {/* How It Works */}
+            <MechanismSection mechanism={t.mechanism} name={t.name} />
+
+            {/* Evidence by Outcome */}
+            <section id="evidence" className="scroll-mt-24">
+              <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
+                <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5 flex items-center gap-2.5">
+                  <span className="text-lg">📊</span> Evidence by Outcome
                 </h2>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {t.outcomes.map((outcome) => (
+                    <OutcomeCard key={outcome.name} outcome={outcome} />
+                  ))}
+                </div>
               </div>
-              <p className="text-xs text-moss dark:text-sage uppercase tracking-wider font-semibold font-sans mb-6">
-                Peer-Reviewed Evidence &bull; {t.keyStudies.length} Citations
-              </p>
+            </section>
 
-              <div className="space-y-6">
-                {t.keyStudies.map((study, i) => (
-                  <StudyCitation key={i} study={study} index={i + 1} />
-                ))}
-              </div>
+            {/* Key Research */}
+            {t.keyStudies.length > 0 && (
+              <section id="research" className="scroll-mt-24">
+                <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-lg">📄</span>
+                    <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB]">
+                      Key Research
+                    </h2>
+                  </div>
+                  <p className="text-xs text-moss dark:text-sage uppercase tracking-wider font-semibold font-sans mb-6">
+                    Peer-Reviewed Evidence &bull; {t.keyStudies.length} Citations
+                  </p>
 
-              <div className="mt-6 pt-4 border-t border-gray-200 dark:border-white/[0.06]">
-                <p className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans italic">
-                  Citations sourced from PubMed, Cochrane Library, and peer-reviewed journals. Study findings are summarized for accessibility.
-                  Always consult the original publication for full methodology and results.
+                  <div className="space-y-6">
+                    {t.keyStudies.map((study, i) => (
+                      <StudyCitation key={i} study={study} index={i + 1} />
+                    ))}
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-gray-200 dark:border-white/[0.06]">
+                    <p className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans italic">
+                      Citations sourced from PubMed, Cochrane Library, and peer-reviewed journals. Study findings are summarized for accessibility.
+                      Always consult the original publication for full methodology and results.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            )}
+
+            {/* Side Effects & Safety */}
+            <SideEffectsPanel sideEffects={t.sideEffects} />
+
+            {/* Interactions & Contraindications */}
+            <InteractionsPanel interactions={t.interactions} contraindications={t.contraindications} />
+
+            {/* Protocol Snapshot */}
+            <section id="protocol" className="scroll-mt-24">
+              <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
+                <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5 flex items-center gap-2.5">
+                  <span className="text-lg">📋</span> Protocol Snapshot
+                </h2>
+                <div className="grid md:grid-cols-3 gap-4 mb-4">
+                  {t.protocols.map((protocol) => (
+                    <div
+                      key={protocol.label}
+                      className="bg-zen-mist/50 dark:bg-forest/10 border border-sage-light/60 dark:border-forest/20 rounded-xl p-4"
+                    >
+                      <div className="text-[11px] text-gray-400 dark:text-[#6B6560] uppercase tracking-wider font-semibold font-sans mb-1.5">
+                        {protocol.label}
+                      </div>
+                      <div className="text-[15px] font-semibold text-gray-900 dark:text-[#F5F0EB] font-sans">
+                        {protocol.dosage}
+                      </div>
+                      <div className="text-xs text-gray-500 dark:text-[#A89F95] font-sans mt-1">
+                        {protocol.notes}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-gray-400 dark:text-[#6B6560] font-sans italic">
+                  Protocols are for informational purposes only. Always consult a qualified healthcare provider
+                  before starting any treatment protocol.
                 </p>
               </div>
-            </div>
-          </section>
-        )}
+            </section>
 
-        {/* Evidence by Outcome */}
-        <section className="max-w-[1200px] mx-auto px-6 mt-10">
-          <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
-            <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5 flex items-center gap-2.5">
-              <span className="text-lg">📊</span> Evidence by Outcome
-            </h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              {t.outcomes.map((outcome) => (
-                <OutcomeCard key={outcome.name} outcome={outcome} />
-              ))}
-            </div>
-          </div>
-        </section>
+            {/* Cost Guide */}
+            <CostGuide costEstimate={t.costEstimate} uaeAvailable={t.uaeAvailable} />
 
-        {/* Community Insights */}
-        <section className="max-w-[1200px] mx-auto px-6 mt-10">
-          <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
-            <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5 flex items-center gap-2.5">
-              <span className="text-lg">👥</span> Community Insights
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              {[
-                { value: `${t.community.totalReports}+`, label: "Reports" },
-                { value: `${t.community.positivePercent}%`, label: "Positive" },
-                { value: t.community.satisfaction, label: "Satisfaction" },
-                { value: t.community.timeToEffect, label: "Time to Effect" },
-              ].map((stat) => (
-                <div
-                  key={stat.label}
-                  className="bg-zen-mist/50 dark:bg-forest/10 border border-sage-light/60 dark:border-forest/20 rounded-xl p-4 text-center"
-                >
-                  <div className="text-2xl font-bold text-moss dark:text-sage font-sans">{stat.value}</div>
-                  <div className="text-[11px] text-gray-400 dark:text-[#6B6560] uppercase tracking-wider font-semibold font-sans mt-1">
-                    {stat.label}
-                  </div>
+            {/* FAQ */}
+            <FAQAccordion faq={t.faq} treatmentName={t.name} />
+
+            {/* Where to Get It */}
+            {relevantListings.length > 0 && (
+              <section id="locations" className="scroll-mt-24">
+                <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5">
+                  Where to Get It (UAE)
+                </h2>
+                <div className="grid md:grid-cols-3 gap-4">
+                  {relevantListings.map((listing) => (
+                    <Link
+                      key={listing.id}
+                      href={`/explore/${listing.id}`}
+                      className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl p-4 hover:border-sage/40 transition-all"
+                    >
+                      <div className="font-semibold text-sm text-gray-900 dark:text-[#F5F0EB] font-sans">
+                        {listing.name}
+                      </div>
+                      <div className="text-xs text-gray-400 dark:text-[#6B6560] font-sans mt-1">
+                        {listing.location}, {listing.city}
+                      </div>
+                      <div className="text-xs text-moss dark:text-sage font-sans mt-2">
+                        View details &rarr;
+                      </div>
+                    </Link>
+                  ))}
                 </div>
-              ))}
-            </div>
-            <div className="grid md:grid-cols-2 gap-3">
-              {t.community.quotes.map((quote, i) => (
-                <CommunityQuote key={i} quote={quote} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Protocol Snapshot */}
-        <section className="max-w-[1200px] mx-auto px-6 mt-10">
-          <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
-            <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5 flex items-center gap-2.5">
-              <span className="text-lg">📋</span> Protocol Snapshot
-            </h2>
-            <div className="grid md:grid-cols-3 gap-4 mb-4">
-              {t.protocols.map((protocol) => (
-                <div
-                  key={protocol.label}
-                  className="bg-zen-mist/50 dark:bg-forest/10 border border-sage-light/60 dark:border-forest/20 rounded-xl p-4"
+                <Link
+                  href="/explore"
+                  className="inline-block mt-4 text-sm text-moss dark:text-sage hover:text-forest transition-colors font-sans"
                 >
-                  <div className="text-[11px] text-gray-400 dark:text-[#6B6560] uppercase tracking-wider font-semibold font-sans mb-1.5">
-                    {protocol.label}
-                  </div>
-                  <div className="text-[15px] font-semibold text-gray-900 dark:text-[#F5F0EB] font-sans">
-                    {protocol.dosage}
-                  </div>
-                  <div className="text-xs text-gray-500 dark:text-[#A89F95] font-sans mt-1">
-                    {protocol.notes}
-                  </div>
+                  Browse all wellness centers &rarr;
+                </Link>
+              </section>
+            )}
+
+            {/* Related Treatments */}
+            {related.length > 0 && (
+              <section id="related" className="scroll-mt-24">
+                <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5">
+                  Related Treatments
+                </h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {related.map((r) => r && (
+                    <Link
+                      key={r.slug}
+                      href={`/treatments/${r.slug}`}
+                      className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl overflow-hidden hover:border-sage/40 transition-all group"
+                    >
+                      <div className="relative h-28">
+                        <Image
+                          src={r.imageUrl}
+                          alt={r.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          sizes="(max-width: 768px) 50vw, 25vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                        <div className="absolute bottom-2 right-2">
+                          <KamuraScoreBadge score={r.kamuraScore} size="sm" />
+                        </div>
+                      </div>
+                      <div className="p-3 text-center">
+                        <div className="font-semibold text-sm text-gray-900 dark:text-[#F5F0EB] font-sans">
+                          {r.name}
+                        </div>
+                        <div className="text-[11px] text-gray-400 dark:text-[#6B6560] uppercase tracking-wide font-sans mt-0.5">
+                          {r.category}
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
-              ))}
+              </section>
+            )}
+
+            {/* Medical Disclaimer */}
+            <section className="scroll-mt-24">
+              <div className="border border-sage-light/60 dark:border-forest/20 rounded-xl p-6 bg-zen-mist/50 dark:bg-forest/5">
+                <p className="text-xs text-gray-400 dark:text-[#6B6560] font-sans leading-relaxed">
+                  <strong className="text-gray-500 dark:text-[#A89F95]">Medical Disclaimer:</strong> The
+                  information on this page is for educational purposes only and is not intended as medical advice.
+                  Kamura Scores reflect a combination of research evidence, community data, and other factors — they
+                  are not clinical recommendations. Research citations are provided for reference; always consult
+                  the original publications for complete study details. Consult a qualified healthcare provider before starting,
+                  stopping, or modifying any treatment. Individual results may vary.
+                </p>
+              </div>
+            </section>
+
+            {/* Back link */}
+            <div className="pb-8 text-center">
+              <Link
+                href="/treatments"
+                className="text-sm text-gray-600 dark:text-gray-400 underline underline-offset-4 hover:text-moss transition-colors font-sans"
+              >
+                &larr; Back to Treatment Index
+              </Link>
             </div>
-            <p className="text-xs text-gray-400 dark:text-[#6B6560] font-sans italic">
-              Protocols are for informational purposes only. Always consult a qualified healthcare provider
-              before starting any treatment protocol.
-            </p>
           </div>
-        </section>
-
-        {/* Where to Get It */}
-        {relevantListings.length > 0 && (
-          <section className="max-w-[1200px] mx-auto px-6 mt-10">
-            <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5">
-              Where to Get It (UAE)
-            </h2>
-            <div className="grid md:grid-cols-3 gap-4">
-              {relevantListings.map((listing) => (
-                <Link
-                  key={listing.id}
-                  href={`/explore/${listing.id}`}
-                  className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl p-4 hover:border-sage/40 transition-all"
-                >
-                  <div className="font-semibold text-sm text-gray-900 dark:text-[#F5F0EB] font-sans">
-                    {listing.name}
-                  </div>
-                  <div className="text-xs text-gray-400 dark:text-[#6B6560] font-sans mt-1">
-                    {listing.location}, {listing.city}
-                  </div>
-                  <div className="text-xs text-moss dark:text-sage font-sans mt-2">
-                    View details &rarr;
-                  </div>
-                </Link>
-              ))}
-            </div>
-            <Link
-              href="/explore"
-              className="inline-block mt-4 text-sm text-moss dark:text-sage hover:text-forest transition-colors font-sans"
-            >
-              Browse all wellness centers &rarr;
-            </Link>
-          </section>
-        )}
-
-        {/* Related Treatments */}
-        {related.length > 0 && (
-          <section className="max-w-[1200px] mx-auto px-6 mt-10">
-            <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5">
-              Related Treatments
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {related.map((r) => r && (
-                <Link
-                  key={r.slug}
-                  href={`/treatments/${r.slug}`}
-                  className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl overflow-hidden hover:border-sage/40 transition-all group"
-                >
-                  <div className="relative h-28">
-                    <Image
-                      src={r.imageUrl}
-                      alt={r.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 50vw, 25vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <div className="absolute bottom-2 right-2">
-                      <KamuraScoreBadge score={r.kamuraScore} size="sm" />
-                    </div>
-                  </div>
-                  <div className="p-3 text-center">
-                    <div className="font-semibold text-sm text-gray-900 dark:text-[#F5F0EB] font-sans">
-                      {r.name}
-                    </div>
-                    <div className="text-[11px] text-gray-400 dark:text-[#6B6560] uppercase tracking-wide font-sans mt-0.5">
-                      {r.category}
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Medical Disclaimer */}
-        <section className="max-w-[1200px] mx-auto px-6 mt-12">
-          <div className="border border-sage-light/60 dark:border-forest/20 rounded-xl p-6 bg-zen-mist/50 dark:bg-forest/5">
-            <p className="text-xs text-gray-400 dark:text-[#6B6560] font-sans leading-relaxed">
-              <strong className="text-gray-500 dark:text-[#A89F95]">Medical Disclaimer:</strong> The
-              information on this page is for educational purposes only and is not intended as medical advice.
-              Kamura Scores reflect a combination of research evidence, community data, and other factors — they
-              are not clinical recommendations. Research citations are provided for reference; always consult
-              the original publications for complete study details. Consult a qualified healthcare provider before starting,
-              stopping, or modifying any treatment. Individual results may vary.
-            </p>
-          </div>
-        </section>
-
-        {/* Back link */}
-        <div className="max-w-[1200px] mx-auto px-6 mt-8 pb-16 text-center">
-          <Link
-            href="/treatments"
-            className="text-sm text-gray-600 dark:text-gray-400 underline underline-offset-4 hover:text-moss transition-colors font-sans"
-          >
-            &larr; Back to Treatment Index
-          </Link>
         </div>
       </article>
     </>

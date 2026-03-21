@@ -58,6 +58,23 @@ export interface KeyStudy {
   finding: string;
 }
 
+export interface SideEffects {
+  common: string[];
+  rare: string[];
+  serious: string[];
+}
+
+export interface Interactions {
+  drugs: string[];
+  supplements: string[];
+  food: string[];
+}
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 export interface Treatment {
   slug: string;
   name: string;
@@ -85,6 +102,15 @@ export interface Treatment {
   protocols: TreatmentProtocol[];
   keyStudies: KeyStudy[];
   relatedSlugs: string[];
+
+  // Optional enriched data fields
+  sideEffects?: SideEffects;
+  interactions?: Interactions;
+  contraindications?: string[];
+  mechanism?: string;
+  faq?: FAQItem[];
+  costEstimate?: string;
+  lastUpdated?: string;
 }
 
 // --- Helper functions ---
@@ -166,5 +192,9 @@ export const ALL_TREATMENT_CATEGORIES: TreatmentCategory[] = [
   "Longevity Pharmaceuticals",
   "Detox & Functional",
 ];
+
+export function formatLastUpdated(iso: string): string {
+  return new Date(iso).toLocaleDateString("en-US", { month: "long", year: "numeric" });
+}
 
 export const treatments: Treatment[] = treatmentsData.treatments as Treatment[];
