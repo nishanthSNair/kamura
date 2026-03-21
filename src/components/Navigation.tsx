@@ -44,6 +44,9 @@ export default function Navigation() {
             <Link href="/treatments" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
               Treatments
             </Link>
+            <Link href="/blueprint" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
+              Blueprint
+            </Link>
             <Link href="/explore" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
               Explore
             </Link>
@@ -138,6 +141,7 @@ export default function Navigation() {
             {[
               { href: "/", label: "Blog" },
               { href: "/treatments", label: "Treatments" },
+              { href: "/blueprint", label: "Blueprint" },
               { href: "/explore", label: "Explore" },
               { href: "/events", label: "Events" },
               { href: "/about", label: "About" },

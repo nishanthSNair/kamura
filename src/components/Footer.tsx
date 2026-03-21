@@ -26,6 +26,9 @@ export default function Footer() {
             <Link href="/treatments" className="hover:text-moss transition-colors">
               Treatments
             </Link>
+            <Link href="/blueprint" className="hover:text-moss transition-colors">
+              Blueprint
+            </Link>
             <Link href="/explore" className="hover:text-moss transition-colors">
               Explore
             </Link>
