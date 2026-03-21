@@ -47,6 +47,8 @@ export default function InlineSearch({
       .then((r) => r.json())
       .then((data) => {
         indexRef.current = [
+          ...(data.goals || []),
+          ...(data.comparisons || []),
           ...(data.treatments || []),
           ...(data.listings || []),
           ...(data.posts || []),
@@ -198,7 +200,7 @@ export default function InlineSearch({
 
           {hasResults && (
             <div className="py-2">
-              {(["treatment", "listing", "blog", "event"] as const).map((type) => {
+              {(["goal", "comparison", "treatment", "listing", "blog", "event"] as const).map((type) => {
                 const items = grouped[type];
                 if (items.length === 0) return null;
                 return (

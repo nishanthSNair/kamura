@@ -20,7 +20,7 @@ export default function Footer() {
             </span>
           </Link>
           <div className="flex items-center gap-8 text-sm text-gray-500 dark:text-gray-400">
-            <Link href="/" className="hover:text-moss transition-colors">
+            <Link href="/blog" className="hover:text-moss transition-colors">
               Blog
             </Link>
             <Link href="/treatments" className="hover:text-moss transition-colors">

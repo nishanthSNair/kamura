@@ -2,11 +2,9 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { treatments, getScoreTier, getScoreTierColor, ALL_TREATMENT_CATEGORIES, type TreatmentCategory, type Treatment } from "@/data/treatments";
-import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
-import EvidenceLevelTag from "@/components/treatments/EvidenceLevelTag";
+import { treatments, getScoreTier, getScoreTierColor, ALL_TREATMENT_CATEGORIES, type TreatmentCategory } from "@/data/treatments";
+import TreatmentListCard from "@/components/treatments/TreatmentListCard";
 import FilterChip from "@/components/treatments/FilterChip";
 
 type SortOption = "score" | "evidence" | "community" | "safety" | "name";
@@ -225,7 +223,7 @@ export default function TreatmentsContent() {
       <section className="max-w-[1200px] mx-auto px-6 pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((t) => (
-            <TreatmentCard key={t.slug} treatment={t} />
+            <TreatmentListCard key={t.slug} treatment={t} />
           ))}
         </div>
 
@@ -241,78 +239,3 @@ export default function TreatmentsContent() {
   );
 }
 
-function TreatmentCard({ treatment: t }: { treatment: Treatment }) {
-  return (
-    <Link
-      href={`/treatments/${t.slug}`}
-      className="group bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl overflow-hidden hover:border-sage/40 hover:shadow-lg transition-all"
-    >
-      {/* Image */}
-      <div className="relative h-40 overflow-hidden">
-        <Image
-          src={t.imageUrl}
-          alt={t.name}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-
-        {/* Score Badge overlay */}
-        <div className="absolute top-3 right-3">
-          <KamuraScoreBadge score={t.kamuraScore} size="sm" />
-        </div>
-
-        {/* Category badge overlay */}
-        <div className="absolute bottom-3 left-3">
-          <span className="px-2.5 py-1 bg-black/40 backdrop-blur-sm rounded-full text-[11px] font-semibold text-white/90 font-sans">
-            {t.category}
-          </span>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="p-4">
-        <div className="flex items-start gap-2 mb-2">
-          <span className="text-lg">{t.icon}</span>
-          <div className="min-w-0 flex-1">
-            <h3 className="font-semibold text-[15px] text-gray-900 dark:text-[#F5F0EB] font-sans truncate">
-              {t.name}
-            </h3>
-            {t.fullName !== t.name && (
-              <p className="text-[11px] text-gray-500 dark:text-[#6B6560] font-sans truncate">
-                {t.fullName}
-              </p>
-            )}
-          </div>
-        </div>
-
-        <p className="text-xs text-gray-500 dark:text-[#A89F95] font-sans leading-relaxed mb-3 line-clamp-2">
-          {t.description}
-        </p>
-
-        <div className="flex items-center gap-2 flex-wrap mb-3">
-          <EvidenceLevelTag level={t.evidenceLevel} />
-          <span className="text-[11px] text-gray-500 dark:text-[#6B6560] font-sans">
-            {t.studyCount}+ studies
-          </span>
-          <span className="text-gray-300 dark:text-gray-600">&bull;</span>
-          <span className="text-[11px] text-gray-500 dark:text-[#6B6560] font-sans">
-            {t.community.positivePercent}% positive
-          </span>
-        </div>
-
-        <div className="flex flex-wrap gap-1.5">
-          {t.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-2 py-0.5 bg-zen-mist dark:bg-forest/20 text-[10px] text-gray-500 dark:text-gray-400 rounded-full font-sans"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-    </Link>
-  );
-}

@@ -5,6 +5,8 @@ import { listings } from "@/data/listings";
 import { events } from "@/data/events";
 import { CATEGORY_META } from "@/data/treatment-categories";
 import { areas } from "@/data/areas";
+import { WELLNESS_GOALS } from "@/data/wellness-goals";
+import { POPULAR_COMPARISONS } from "@/data/treatment-comparisons";
 
 const INDEXNOW_KEY = "a79a643f-a5f6-4ce1-9fcc-7fa23583fcb2";
 const HOST = "kamuralife.com";
@@ -56,6 +58,17 @@ function getAllUrls(): string[] {
     urls.push(`${BASE_URL}/events/${e.id}`);
   }
 
+  // Treatment comparisons
+  urls.push(`${BASE_URL}/treatments/compare`);
+  for (const comp of POPULAR_COMPARISONS) {
+    urls.push(`${BASE_URL}/treatments/compare/${comp.slug1}-vs-${comp.slug2}`);
+  }
+
+  // Best-for goal pages
+  for (const goal of WELLNESS_GOALS) {
+    urls.push(`${BASE_URL}/treatments/best-for/${goal.slug}`);
+  }
+
   return urls;
 }
 
@@ -102,13 +115,15 @@ export async function GET() {
     keyUrl: `${BASE_URL}/${INDEXNOW_KEY}.txt`,
     totalUrls: urls.length,
     categories: {
-      static: 10,
+      static: 11,
       blog: getAllPosts().length,
       treatments: treatments.length,
       treatmentCategories: CATEGORY_META.length,
       listings: listings.length,
       areas: areas.length,
       events: events.length,
+      comparisons: POPULAR_COMPARISONS.length,
+      goals: WELLNESS_GOALS.length,
     },
     usage: "POST to this endpoint to submit all URLs to IndexNow (Bing, Yandex, etc.)",
   });

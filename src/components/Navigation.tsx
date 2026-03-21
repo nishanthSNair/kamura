@@ -38,7 +38,7 @@ export default function Navigation() {
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Left nav links - desktop */}
           <div className="hidden md:flex items-center gap-8 text-sm tracking-wide min-w-[200px]">
-            <Link href="/" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
+            <Link href="/blog" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
               Blog
             </Link>
             <Link href="/treatments" className="text-gray-800 dark:text-gray-200 hover:text-moss dark:hover:text-sage transition-colors">
@@ -139,7 +139,7 @@ export default function Navigation() {
         >
           <div className="bg-cream/95 dark:bg-[#0f120e]/95 backdrop-blur-md border-t border-sage-light/60 dark:border-forest/30 px-6 py-5 flex flex-col gap-5 text-sm tracking-wide">
             {[
-              { href: "/", label: "Blog" },
+              { href: "/blog", label: "Blog" },
               { href: "/treatments", label: "Treatments" },
               { href: "/blueprint", label: "Blueprint" },
               { href: "/explore", label: "Explore" },

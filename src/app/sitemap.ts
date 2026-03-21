@@ -5,6 +5,8 @@ import { listings } from "@/data/listings";
 import { areas } from "@/data/areas";
 import { treatments } from "@/data/treatments";
 import { CATEGORY_META } from "@/data/treatment-categories";
+import { WELLNESS_GOALS } from "@/data/wellness-goals";
+import { POPULAR_COMPARISONS } from "@/data/treatment-comparisons";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://kamuralife.com";
@@ -95,6 +97,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/treatments/${t.slug}`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
+      priority: 0.9,
+    })),
+    {
+      url: `${baseUrl}/treatments/compare`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    ...POPULAR_COMPARISONS.map((c) => ({
+      url: `${baseUrl}/treatments/compare/${c.slug1}-vs-${c.slug2}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
+    ...WELLNESS_GOALS.map((g) => ({
+      url: `${baseUrl}/treatments/best-for/${g.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
       priority: 0.9,
     })),
     {

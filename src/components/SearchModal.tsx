@@ -42,10 +42,12 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
         .then((r) => r.json())
         .then((data) => {
           const all: SearchItem[] = [
+            ...(data.goals || []),
+            ...(data.comparisons || []),
             ...(data.treatments || []),
-            ...data.listings,
-            ...data.posts,
-            ...data.events,
+            ...(data.listings || []),
+            ...(data.posts || []),
+            ...(data.events || []),
           ];
           setIndex(all);
           setLoaded(true);
@@ -219,7 +221,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
           {hasResults && (
             <div className="py-2">
-              {(["treatment", "listing", "blog", "event"] as const).map((type) => {
+              {(["goal", "comparison", "treatment", "listing", "blog", "event"] as const).map((type) => {
                 const items = grouped[type];
                 if (items.length === 0) return null;
                 return (
