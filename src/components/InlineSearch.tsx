@@ -160,7 +160,7 @@ export default function InlineSearch({
             if (query.trim().length >= 2) setIsOpen(true);
           }}
           onKeyDown={handleKeyDown}
-          className="w-full bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.08] rounded-2xl pl-13 pr-5 py-4.5 text-base text-gray-900 dark:text-[#F5F0EB] placeholder:text-gray-400 dark:placeholder:text-[#6B6560] outline-none focus:border-sage/60 focus:ring-2 focus:ring-sage/20 font-sans shadow-lg hover:shadow-xl transition-all"
+          className="w-full bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.08] rounded-2xl pl-13 pr-5 py-4.5 text-base text-gray-900 dark:text-[#F0EBE2] placeholder:text-gray-400 dark:placeholder:text-[#6B6358] outline-none focus:border-sage/60 focus:ring-2 focus:ring-sage/20 font-sans shadow-lg hover:shadow-xl transition-all"
           aria-label="Search treatments, clinics, or articles"
           role="combobox"
           aria-expanded={showDropdown}
@@ -186,7 +186,7 @@ export default function InlineSearch({
       {showDropdown && (
         <div
           ref={resultsRef}
-          className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/[0.08] rounded-xl shadow-2xl max-h-[400px] overflow-y-auto z-50"
+          className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.08] rounded-xl shadow-2xl max-h-[400px] overflow-y-auto z-50"
           role="listbox"
         >
           {!hasResults && (
@@ -272,7 +272,7 @@ export default function InlineSearch({
             <button
               key={term}
               onClick={() => handlePopularClick(term)}
-              className="popular-tag px-3.5 py-1.5 rounded-full text-[13px] font-sans bg-white dark:bg-[#1A1A1A] border border-gray-300 dark:border-white/[0.08] text-gray-600 dark:text-[#A89F95] shadow-sm hover:shadow-md hover:border-sage/40 hover:text-gray-900 dark:hover:text-[#F5F0EB] transition-all"
+              className="popular-tag px-3.5 py-1.5 rounded-full text-[13px] font-sans bg-white dark:bg-[#1C1815] border border-gray-300 dark:border-white/[0.08] text-gray-600 dark:text-[#A89F90] shadow-sm hover:shadow-md hover:border-sage/40 hover:text-gray-900 dark:hover:text-[#F0EBE2] transition-all"
             >
               {term}
             </button>

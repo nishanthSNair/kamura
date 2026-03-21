@@ -64,7 +64,7 @@ export default function ShareButtons({
   if (variant === "sidebar") {
     return (
       <div className="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col gap-2">
-        <div className="flex flex-col gap-1.5 bg-white/90 dark:bg-[#1a1a1a]/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-2xl p-2 shadow-lg shadow-black/5">
+        <div className="flex flex-col gap-1.5 bg-white/90 dark:bg-[#1C1815]/90 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-2xl p-2 shadow-lg shadow-black/5">
           <p className="text-[9px] text-gray-400 dark:text-gray-500 uppercase tracking-widest font-sans text-center px-1 pt-1 pb-0.5 font-semibold">
             Share
           </p>

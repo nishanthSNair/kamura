@@ -108,12 +108,12 @@ export default async function CategoryPage({ params }: Props) {
 
       {/* Breadcrumbs */}
       <section className="max-w-[1200px] mx-auto px-6 py-4">
-        <nav className="flex items-center gap-2 text-xs text-gray-400 dark:text-[#6B6560] font-sans">
+        <nav className="flex items-center gap-2 text-xs text-gray-400 dark:text-[#6B6358] font-sans">
           <Link href="/" className="hover:text-moss dark:hover:text-sage transition-colors">Home</Link>
           <span>&rsaquo;</span>
           <Link href="/treatments" className="hover:text-moss dark:hover:text-sage transition-colors">Treatments</Link>
           <span>&rsaquo;</span>
-          <span className="text-gray-600 dark:text-[#A89F95]">{cat.name}</span>
+          <span className="text-gray-600 dark:text-[#A89F90]">{cat.name}</span>
         </nav>
       </section>
 
@@ -124,7 +124,7 @@ export default async function CategoryPage({ params }: Props) {
             <Link
               key={t.slug}
               href={`/treatments/${t.slug}`}
-              className="group bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl overflow-hidden hover:border-sage/40 hover:shadow-lg transition-all"
+              className="group bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-xl overflow-hidden hover:border-sage/40 hover:shadow-lg transition-all"
             >
               <div className="relative h-40 overflow-hidden">
                 <Image
@@ -144,28 +144,28 @@ export default async function CategoryPage({ params }: Props) {
                 <div className="flex items-start gap-2 mb-2">
                   <span className="text-lg">{t.icon}</span>
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-semibold text-[15px] text-gray-900 dark:text-[#F5F0EB] font-sans truncate">
+                    <h3 className="font-semibold text-[15px] text-gray-900 dark:text-[#F0EBE2] font-sans truncate">
                       {t.name}
                     </h3>
                     {t.fullName !== t.name && (
-                      <p className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans truncate">
+                      <p className="text-[11px] text-gray-400 dark:text-[#6B6358] font-sans truncate">
                         {t.fullName}
                       </p>
                     )}
                   </div>
                 </div>
 
-                <p className="text-xs text-gray-500 dark:text-[#A89F95] font-sans leading-relaxed mb-3 line-clamp-2">
+                <p className="text-xs text-gray-500 dark:text-[#A89F90] font-sans leading-relaxed mb-3 line-clamp-2">
                   {t.description}
                 </p>
 
                 <div className="flex items-center gap-2 flex-wrap mb-3">
                   <EvidenceLevelTag level={t.evidenceLevel} />
-                  <span className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans">
+                  <span className="text-[11px] text-gray-400 dark:text-[#6B6358] font-sans">
                     {t.studyCount}+ studies
                   </span>
                   <span className="text-gray-300 dark:text-gray-600">&bull;</span>
-                  <span className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans">
+                  <span className="text-[11px] text-gray-400 dark:text-[#6B6358] font-sans">
                     {t.community.positivePercent}% positive
                   </span>
                 </div>
@@ -187,7 +187,7 @@ export default async function CategoryPage({ params }: Props) {
 
         {categoryTreatments.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-gray-400 dark:text-[#6B6560] font-sans">
+            <p className="text-gray-400 dark:text-[#6B6358] font-sans">
               No treatments in this category yet.
             </p>
           </div>

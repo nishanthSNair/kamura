@@ -134,7 +134,7 @@ export default async function BestForGoalPage({ params }: Props) {
 
       {/* Breadcrumbs */}
       <section className="max-w-[1200px] mx-auto px-6 py-4">
-        <nav className="flex items-center gap-2 text-xs text-gray-400 dark:text-[#6B6560] font-sans">
+        <nav className="flex items-center gap-2 text-xs text-gray-400 dark:text-[#6B6358] font-sans">
           <Link
             href="/"
             className="hover:text-moss dark:hover:text-sage transition-colors"
@@ -149,7 +149,7 @@ export default async function BestForGoalPage({ params }: Props) {
             Treatments
           </Link>
           <span>&rsaquo;</span>
-          <span className="text-gray-600 dark:text-[#A89F95]">
+          <span className="text-gray-600 dark:text-[#A89F90]">
             Best for {goal.label}
           </span>
         </nav>
@@ -165,7 +165,7 @@ export default async function BestForGoalPage({ params }: Props) {
           </div>
         ) : (
           <div className="text-center py-16">
-            <p className="text-gray-400 dark:text-[#6B6560] font-sans">
+            <p className="text-gray-400 dark:text-[#6B6358] font-sans">
               No treatments matched for this goal yet.
             </p>
           </div>
@@ -195,7 +195,7 @@ export default async function BestForGoalPage({ params }: Props) {
               <Link
                 key={g.slug}
                 href={`/treatments/best-for/${g.slug}`}
-                className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] hover:border-sage/40 hover:shadow-md transition-all text-center"
+                className="flex flex-col items-center gap-2 p-4 rounded-xl bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] hover:border-sage/40 hover:shadow-md transition-all text-center"
               >
                 <span className="text-2xl">{g.icon}</span>
                 <span className="text-xs font-sans text-gray-600 dark:text-gray-400">

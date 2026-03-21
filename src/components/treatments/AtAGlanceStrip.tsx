@@ -50,7 +50,7 @@ export default function AtAGlanceStrip({
         </svg>
       ),
       value: timeToEffect,
-      valueClass: "text-gray-900 dark:text-[#F5F0EB]",
+      valueClass: "text-gray-900 dark:text-[#F0EBE2]",
       label: "Time to Effect",
     },
     ...(costEstimate
@@ -62,7 +62,7 @@ export default function AtAGlanceStrip({
               </svg>
             ),
             value: costEstimate,
-            valueClass: "text-gray-900 dark:text-[#F5F0EB]",
+            valueClass: "text-gray-900 dark:text-[#F0EBE2]",
             label: "Est. Cost",
           },
         ]
@@ -83,7 +83,7 @@ export default function AtAGlanceStrip({
 
   return (
     <section className="max-w-[1200px] mx-auto px-6 -mt-6 relative z-10">
-      <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl overflow-hidden">
+      <div className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-2xl overflow-hidden">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 divide-x divide-gray-100 dark:divide-white/[0.04]">
           {cells.map((cell) => (
             <div key={cell.label} className="px-4 py-4 text-center">
@@ -93,7 +93,7 @@ export default function AtAGlanceStrip({
               <div className={`text-sm font-semibold font-sans leading-tight ${cell.valueClass}`}>
                 {cell.value}
               </div>
-              <div className="text-[10px] text-gray-400 dark:text-[#6B6560] uppercase tracking-wider font-semibold font-sans mt-1">
+              <div className="text-[10px] text-gray-400 dark:text-[#6B6358] uppercase tracking-wider font-semibold font-sans mt-1">
                 {cell.label}
               </div>
             </div>
@@ -101,7 +101,7 @@ export default function AtAGlanceStrip({
         </div>
         {lastUpdated && (
           <div className="border-t border-gray-100 dark:border-white/[0.04] px-4 py-2 text-center">
-            <span className="text-[10px] text-gray-400 dark:text-[#6B6560] font-sans">
+            <span className="text-[10px] text-gray-400 dark:text-[#6B6358] font-sans">
               Last reviewed: {formatLastUpdated(lastUpdated)}
             </span>
           </div>

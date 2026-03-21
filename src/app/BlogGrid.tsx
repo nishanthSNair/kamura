@@ -54,7 +54,7 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
             className={`px-4 py-2 text-sm font-sans rounded-full border transition-all duration-200 ${
               active === cat
                 ? "bg-moss text-white border-moss"
-                : "bg-white dark:bg-[#1a1a1a] text-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-sage dark:hover:border-sage/50"
+                : "bg-white dark:bg-[#1C1815] text-gray-700 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-sage dark:hover:border-sage/50"
             }`}
           >
             {cat}

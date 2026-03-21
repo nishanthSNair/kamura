@@ -101,17 +101,17 @@ export default function TreatmentsContent() {
 
       {/* Kamura Score Explainer */}
       <section className="max-w-[1200px] mx-auto px-6 -mt-12 relative z-10 mb-16">
-        <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10 grid md:grid-cols-2 gap-8 md:gap-10 shadow-lg">
+        <div className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10 grid md:grid-cols-2 gap-8 md:gap-10 shadow-lg">
           <div>
-            <h2 className="font-serif text-2xl md:text-[28px] text-gray-900 dark:text-[#F5F0EB] mb-4">
+            <h2 className="font-serif text-2xl md:text-[28px] text-gray-900 dark:text-[#F0EBE2] mb-4">
               A score you can trust
             </h2>
-            <p className="text-gray-500 dark:text-[#A89F95] text-[15px] leading-relaxed font-sans mb-3">
+            <p className="text-gray-500 dark:text-[#A89F90] text-[15px] leading-relaxed font-sans mb-3">
               Unlike rating sites influenced by advertising, the Kamura Score is calculated
               from publicly verifiable data. Every sub-score is shown transparently — you can
               see exactly why a treatment scores the way it does.
             </p>
-            <p className="text-gray-500 dark:text-[#A89F95] text-[15px] leading-relaxed font-sans mb-5">
+            <p className="text-gray-500 dark:text-[#A89F90] text-[15px] leading-relaxed font-sans mb-5">
               Treatments are graded on a 0-100 scale and assigned a tier:
             </p>
             <div className="flex flex-wrap gap-2">
@@ -151,10 +151,10 @@ export default function TreatmentsContent() {
                   {factor.icon}
                 </span>
                 <div className="flex-1 min-w-0">
-                  <div className="font-semibold text-sm text-gray-900 dark:text-[#F5F0EB] font-sans">
+                  <div className="font-semibold text-sm text-gray-900 dark:text-[#F0EBE2] font-sans">
                     {factor.label}
                   </div>
-                  <div className="text-xs text-gray-500 dark:text-[#6B6560] font-sans mt-0.5">
+                  <div className="text-xs text-gray-500 dark:text-[#6B6358] font-sans mt-0.5">
                     {factor.desc}
                   </div>
                 </div>
@@ -172,10 +172,10 @@ export default function TreatmentsContent() {
         <p className="text-xs tracking-[0.3em] uppercase mb-2 text-moss dark:text-sage font-sans font-semibold">
           Treatment Index
         </p>
-        <h2 className="font-serif text-2xl md:text-[32px] text-gray-900 dark:text-[#F5F0EB]">
+        <h2 className="font-serif text-2xl md:text-[32px] text-gray-900 dark:text-[#F0EBE2]">
           Every Modality, Ranked
         </h2>
-        <p className="text-gray-500 dark:text-[#A89F95] text-[15px] mt-2 font-sans">
+        <p className="text-gray-500 dark:text-[#A89F90] text-[15px] mt-2 font-sans">
           Browse all treatments, filter by category, sort by score. Click any treatment for the full evidence breakdown.
         </p>
       </section>
@@ -189,12 +189,12 @@ export default function TreatmentsContent() {
               placeholder="Search treatments, compounds, or conditions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1 min-w-[200px] bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl px-4 py-3 text-sm text-gray-900 dark:text-[#F5F0EB] placeholder:text-gray-400 dark:placeholder:text-[#6B6560] outline-none focus:border-sage/60 focus:ring-1 focus:ring-sage/20 font-sans"
+              className="flex-1 min-w-[200px] bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-xl px-4 py-3 text-sm text-gray-900 dark:text-[#F0EBE2] placeholder:text-gray-400 dark:placeholder:text-[#6B6358] outline-none focus:border-sage/60 focus:ring-1 focus:ring-sage/20 font-sans"
             />
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortOption)}
-              className="px-4 py-2.5 bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl text-[13px] text-gray-500 dark:text-[#A89F95] font-sans cursor-pointer outline-none shrink-0"
+              className="px-4 py-2.5 bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-xl text-[13px] text-gray-500 dark:text-[#A89F90] font-sans cursor-pointer outline-none shrink-0"
             >
               <option value="score">Sort: Kamura Score</option>
               <option value="evidence">Sort: Evidence Level</option>
@@ -214,7 +214,7 @@ export default function TreatmentsContent() {
             ))}
           </div>
         </div>
-        <p className="text-xs text-gray-500 dark:text-[#6B6560] mt-3 font-sans">
+        <p className="text-xs text-gray-500 dark:text-[#6B6358] mt-3 font-sans">
           Showing {filtered.length} of {treatments.length} treatments
         </p>
       </section>
@@ -229,7 +229,7 @@ export default function TreatmentsContent() {
 
         {filtered.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-gray-500 dark:text-[#6B6560] font-sans">
+            <p className="text-gray-500 dark:text-[#6B6358] font-sans">
               No treatments found matching your search.
             </p>
           </div>

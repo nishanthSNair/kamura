@@ -80,7 +80,7 @@ export default function SaveBlueprintModal({
       />
 
       {/* Modal */}
-      <div className="relative z-10 w-full max-w-md bg-white dark:bg-[#1a1a1a] rounded-2xl border border-gray-200 dark:border-white/[0.06] shadow-2xl p-8 animate-blueprint-fade-in">
+      <div className="relative z-10 w-full max-w-md bg-white dark:bg-[#1C1815] rounded-2xl border border-gray-200 dark:border-white/[0.06] shadow-2xl p-8 animate-blueprint-fade-in">
         {saved ? (
           <div className="text-center">
             <div className="w-16 h-16 rounded-full bg-score-green/10 flex items-center justify-center mx-auto mb-4">

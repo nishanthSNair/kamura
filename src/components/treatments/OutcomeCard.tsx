@@ -27,7 +27,7 @@ export default function OutcomeCard({ outcome }: OutcomeCardProps) {
     <div className="bg-gray-50 dark:bg-[#242424] border border-gray-200 dark:border-white/[0.06] rounded-xl p-4">
       <div className="flex items-center gap-2 mb-1.5">
         <DirectionIcon direction={outcome.direction} />
-        <span className="font-semibold text-sm text-gray-900 dark:text-[#F5F0EB] font-sans">
+        <span className="font-semibold text-sm text-gray-900 dark:text-[#F0EBE2] font-sans">
           {outcome.name}
         </span>
         <span
@@ -36,10 +36,10 @@ export default function OutcomeCard({ outcome }: OutcomeCardProps) {
           {outcome.grade}
         </span>
       </div>
-      <p className="text-[13px] text-gray-500 dark:text-[#A89F95] leading-relaxed font-sans mb-2">
+      <p className="text-[13px] text-gray-500 dark:text-[#A89F90] leading-relaxed font-sans mb-2">
         {outcome.description}
       </p>
-      <p className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans">
+      <p className="text-[11px] text-gray-400 dark:text-[#6B6358] font-sans">
         {outcome.studyCount} studies &bull; Consistency: {outcome.consistency} &bull; Effect: {outcome.effectSize}
       </p>
     </div>

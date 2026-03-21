@@ -25,11 +25,11 @@ export default function MechanismSection({ mechanism, name }: MechanismSectionPr
             <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
             <line x1="12" y1="17" x2="12.01" y2="17" />
           </svg>
-          <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB]">
+          <h2 className="font-serif text-xl text-gray-900 dark:text-[#F0EBE2]">
             How {name} Works
           </h2>
         </div>
-        <p className="text-[15px] text-gray-600 dark:text-[#A89F95] font-sans leading-relaxed">
+        <p className="text-[15px] text-gray-600 dark:text-[#A89F90] font-sans leading-relaxed">
           {mechanism}
         </p>
       </div>

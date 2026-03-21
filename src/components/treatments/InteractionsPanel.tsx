@@ -18,7 +18,7 @@ export default function InteractionsPanel({ interactions, contraindications }: I
   return (
     <section id="interactions" className="scroll-mt-24">
       <div className="bg-[#EA580C]/[0.03] dark:bg-[#FB923C]/[0.03] border border-[#EA580C]/15 dark:border-[#FB923C]/15 rounded-2xl p-8 md:p-10">
-        <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5 flex items-center gap-2.5">
+        <h2 className="font-serif text-xl text-gray-900 dark:text-[#F0EBE2] mb-5 flex items-center gap-2.5">
           <svg
             width="20"
             height="20"
@@ -46,7 +46,7 @@ export default function InteractionsPanel({ interactions, contraindications }: I
                 </h3>
                 <ul className="space-y-1.5">
                   {interactions.drugs.map((item) => (
-                    <li key={item} className="text-sm text-gray-600 dark:text-[#A89F95] font-sans flex gap-2">
+                    <li key={item} className="text-sm text-gray-600 dark:text-[#A89F90] font-sans flex gap-2">
                       <span className="text-[#EA580C] dark:text-[#FB923C] mt-1 shrink-0">•</span>
                       {item}
                     </li>
@@ -61,7 +61,7 @@ export default function InteractionsPanel({ interactions, contraindications }: I
                 </h3>
                 <ul className="space-y-1.5">
                   {interactions.supplements.map((item) => (
-                    <li key={item} className="text-sm text-gray-600 dark:text-[#A89F95] font-sans flex gap-2">
+                    <li key={item} className="text-sm text-gray-600 dark:text-[#A89F90] font-sans flex gap-2">
                       <span className="text-[#CA8A04] dark:text-[#FACC15] mt-1 shrink-0">•</span>
                       {item}
                     </li>
@@ -76,7 +76,7 @@ export default function InteractionsPanel({ interactions, contraindications }: I
                 </h3>
                 <ul className="space-y-1.5">
                   {interactions.food.map((item) => (
-                    <li key={item} className="text-sm text-gray-600 dark:text-[#A89F95] font-sans flex gap-2">
+                    <li key={item} className="text-sm text-gray-600 dark:text-[#A89F90] font-sans flex gap-2">
                       <span className="text-gray-400 dark:text-gray-500 mt-1 shrink-0">•</span>
                       {item}
                     </li>
@@ -97,7 +97,7 @@ export default function InteractionsPanel({ interactions, contraindications }: I
             </h3>
             <ul className="space-y-1.5">
               {contraindications.map((item) => (
-                <li key={item} className="text-sm text-gray-600 dark:text-[#A89F95] font-sans flex gap-2">
+                <li key={item} className="text-sm text-gray-600 dark:text-[#A89F90] font-sans flex gap-2">
                   <span className="text-[#DC2626] dark:text-[#F87171] mt-1 shrink-0">•</span>
                   {item}
                 </li>

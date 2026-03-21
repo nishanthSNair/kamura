@@ -162,14 +162,14 @@ export default function BlueprintBuilder({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           {/* LEFT: Body + Indicators */}
           <div className="space-y-6">
-            <div className="bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-4 md:p-6">
+            <div className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-4 md:p-6">
               <BodySilhouette
                 baselines={state.baselines}
                 projections={projections}
                 activeZones={activeZones}
               />
             </div>
-            <div className="bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-4 md:p-6">
+            <div className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-4 md:p-6">
               <WellnessIndicatorPanel
                 baselines={state.baselines}
                 projections={projections}
@@ -182,7 +182,7 @@ export default function BlueprintBuilder({
           </div>
 
           {/* CENTER: Timeline */}
-          <div className="bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-4 md:p-6">
+          <div className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-4 md:p-6">
             <DayTimeline
               timeline={state.timeline}
               selectedTreatmentId={state.selectedTreatmentId}
@@ -206,7 +206,7 @@ export default function BlueprintBuilder({
           </div>
 
           {/* RIGHT: Treatment Library */}
-          <div className="bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-4 md:p-6 max-h-[80vh] lg:max-h-none overflow-y-auto hide-scrollbar">
+          <div className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-4 md:p-6 max-h-[80vh] lg:max-h-none overflow-y-auto hide-scrollbar">
             <TreatmentLibrary
               selectedId={state.selectedTreatmentId}
               placedIds={placedIds}

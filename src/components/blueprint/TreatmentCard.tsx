@@ -39,7 +39,7 @@ export default function TreatmentCard({
       className={`rounded-xl border p-3 cursor-pointer transition-all select-none ${
         isSelected
           ? "border-terracotta bg-terracotta/5 dark:bg-terracotta/10 ring-1 ring-terracotta/30"
-          : "border-gray-200 dark:border-white/[0.06] bg-white dark:bg-[#1a1a1a] hover:border-sage/40"
+          : "border-gray-200 dark:border-white/[0.06] bg-white dark:bg-[#1C1815] hover:border-sage/40"
       } ${isPlaced ? "opacity-50" : ""}`}
     >
       {/* Header */}

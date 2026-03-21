@@ -92,7 +92,7 @@ const factors = [
 ];
 
 const tiers = [
-  { name: "Gold Standard", range: "85-100", color: "#C4956A", meaning: "Strong evidence + high community validation + good safety" },
+  { name: "Gold Standard", range: "85-100", color: "#C4A882", meaning: "Strong evidence + high community validation + good safety" },
   { name: "Strong", range: "70-84", color: "#4ADE80", meaning: "Solid evidence and positive community outcomes" },
   { name: "Promising", range: "50-69", color: "#FACC15", meaning: "Emerging evidence or mixed results, worth monitoring" },
   { name: "Limited", range: "30-49", color: "#FB923C", meaning: "Weak evidence or significant concerns" },
@@ -128,12 +128,12 @@ export default function MethodologyPage() {
       <article className="pt-24 pb-20 zen-pattern">
         {/* Breadcrumb */}
         <nav className="max-w-3xl mx-auto px-6 mb-8">
-          <div className="flex items-center gap-2 text-sm text-gray-400 dark:text-[#6B6560] font-sans">
+          <div className="flex items-center gap-2 text-sm text-gray-400 dark:text-[#6B6358] font-sans">
             <Link href="/" className="hover:text-moss transition-colors">Home</Link>
             <span>/</span>
             <Link href="/treatments" className="hover:text-moss transition-colors">Treatments</Link>
             <span>/</span>
-            <span className="text-gray-600 dark:text-[#A89F95]">Methodology</span>
+            <span className="text-gray-600 dark:text-[#A89F90]">Methodology</span>
           </div>
         </nav>
 
@@ -142,10 +142,10 @@ export default function MethodologyPage() {
           <p className="text-xs tracking-[0.3em] uppercase mb-4 text-moss dark:text-sage font-sans font-semibold">
             Full Transparency
           </p>
-          <h1 className="font-serif text-3xl md:text-5xl text-gray-900 dark:text-[#F5F0EB] leading-tight mb-4">
+          <h1 className="font-serif text-3xl md:text-5xl text-gray-900 dark:text-[#F0EBE2] leading-tight mb-4">
             How the Kamura Score Works
           </h1>
-          <p className="text-lg text-gray-500 dark:text-[#A89F95] font-sans leading-relaxed max-w-xl mx-auto">
+          <p className="text-lg text-gray-500 dark:text-[#A89F90] font-sans leading-relaxed max-w-xl mx-auto">
             A transparent, composite scoring system calculated from 5 weighted factors. No sponsorships. No pay-to-rank. Just data.
           </p>
           <div className="w-12 h-px bg-sage/40 mx-auto mt-8" />
@@ -153,11 +153,11 @@ export default function MethodologyPage() {
 
         {/* Formula */}
         <section className="max-w-3xl mx-auto px-6 mb-12">
-          <div className="bg-gray-50 dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl p-6 text-center">
-            <p className="text-xs text-gray-400 dark:text-[#6B6560] uppercase tracking-wider font-semibold font-sans mb-3">
+          <div className="bg-gray-50 dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-xl p-6 text-center">
+            <p className="text-xs text-gray-400 dark:text-[#6B6358] uppercase tracking-wider font-semibold font-sans mb-3">
               The Formula
             </p>
-            <p className="font-mono text-sm md:text-base text-gray-700 dark:text-[#A89F95]">
+            <p className="font-mono text-sm md:text-base text-gray-700 dark:text-[#A89F90]">
               Kamura Score = (Research &times; 0.35) + (Community &times; 0.25) + (Safety &times; 0.20) + (Access &times; 0.10) + (Value &times; 0.10)
             </p>
           </div>
@@ -165,7 +165,7 @@ export default function MethodologyPage() {
 
         {/* Five Factors */}
         <section className="max-w-3xl mx-auto px-6 mb-16">
-          <h2 className="font-serif text-2xl text-gray-900 dark:text-[#F5F0EB] mb-8">
+          <h2 className="font-serif text-2xl text-gray-900 dark:text-[#F0EBE2] mb-8">
             The Five Factors
           </h2>
 
@@ -173,13 +173,13 @@ export default function MethodologyPage() {
             {factors.map((factor) => (
               <div
                 key={factor.name}
-                className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl p-6"
+                className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-xl p-6"
               >
                 <div className="flex items-start gap-4 mb-4">
                   <span className="text-2xl">{factor.icon}</span>
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
-                      <h3 className="font-serif text-lg text-gray-900 dark:text-[#F5F0EB]">
+                      <h3 className="font-serif text-lg text-gray-900 dark:text-[#F0EBE2]">
                         {factor.name}
                       </h3>
                       <span
@@ -189,10 +189,10 @@ export default function MethodologyPage() {
                         {factor.weight}% weight
                       </span>
                     </div>
-                    <p className="text-sm text-gray-500 dark:text-[#A89F95] font-sans leading-relaxed mt-1">
+                    <p className="text-sm text-gray-500 dark:text-[#A89F90] font-sans leading-relaxed mt-1">
                       {factor.description}
                     </p>
-                    <p className="text-xs text-gray-400 dark:text-[#6B6560] font-sans mt-2">
+                    <p className="text-xs text-gray-400 dark:text-[#6B6358] font-sans mt-2">
                       <strong>Data sources:</strong> {factor.sources}
                     </p>
                   </div>
@@ -201,10 +201,10 @@ export default function MethodologyPage() {
                 <div className="space-y-1.5">
                   {factor.rubric.map((r) => (
                     <div key={r.range} className="flex items-start gap-3 text-sm font-sans">
-                      <span className="text-xs font-mono font-bold text-gray-400 dark:text-[#6B6560] w-12 shrink-0 pt-0.5">
+                      <span className="text-xs font-mono font-bold text-gray-400 dark:text-[#6B6358] w-12 shrink-0 pt-0.5">
                         {r.range}
                       </span>
-                      <span className="text-gray-600 dark:text-[#A89F95]">{r.criteria}</span>
+                      <span className="text-gray-600 dark:text-[#A89F90]">{r.criteria}</span>
                     </div>
                   ))}
                 </div>
@@ -215,14 +215,14 @@ export default function MethodologyPage() {
 
         {/* Score Tiers */}
         <section className="max-w-3xl mx-auto px-6 mb-16">
-          <h2 className="font-serif text-2xl text-gray-900 dark:text-[#F5F0EB] mb-6">
+          <h2 className="font-serif text-2xl text-gray-900 dark:text-[#F0EBE2] mb-6">
             Score Tiers
           </h2>
           <div className="space-y-3">
             {tiers.map((tier) => (
               <div
                 key={tier.name}
-                className="flex items-center gap-4 bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl px-5 py-3"
+                className="flex items-center gap-4 bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-xl px-5 py-3"
               >
                 <span
                   className="w-3 h-3 rounded-full shrink-0"
@@ -231,10 +231,10 @@ export default function MethodologyPage() {
                 <span className="font-semibold text-sm font-sans w-32 shrink-0" style={{ color: tier.color }}>
                   {tier.name}
                 </span>
-                <span className="text-xs font-mono text-gray-400 dark:text-[#6B6560] w-12 shrink-0">
+                <span className="text-xs font-mono text-gray-400 dark:text-[#6B6358] w-12 shrink-0">
                   {tier.range}
                 </span>
-                <span className="text-sm text-gray-500 dark:text-[#A89F95] font-sans">
+                <span className="text-sm text-gray-500 dark:text-[#A89F90] font-sans">
                   {tier.meaning}
                 </span>
               </div>
@@ -244,17 +244,17 @@ export default function MethodologyPage() {
 
         {/* Evidence Levels */}
         <section className="max-w-3xl mx-auto px-6 mb-16">
-          <h2 className="font-serif text-2xl text-gray-900 dark:text-[#F5F0EB] mb-4">
+          <h2 className="font-serif text-2xl text-gray-900 dark:text-[#F0EBE2] mb-4">
             Evidence Level Tags
           </h2>
-          <p className="text-sm text-gray-500 dark:text-[#A89F95] font-sans leading-relaxed mb-6">
+          <p className="text-sm text-gray-500 dark:text-[#A89F90] font-sans leading-relaxed mb-6">
             Each treatment is scored globally (Kamura Score) but also graded per-outcome, because a treatment may be excellent for one use and limited for another.
           </p>
           <div className="space-y-3">
             {evidenceLevels.map((el) => (
               <div
                 key={el.level}
-                className="flex items-center gap-4 bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl px-5 py-3"
+                className="flex items-center gap-4 bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-xl px-5 py-3"
               >
                 <span
                   className="w-2 h-2 rounded-full shrink-0"
@@ -263,7 +263,7 @@ export default function MethodologyPage() {
                 <span className="font-semibold text-sm font-sans w-24 shrink-0" style={{ color: el.color }}>
                   {el.level}
                 </span>
-                <span className="text-sm text-gray-500 dark:text-[#A89F95] font-sans">
+                <span className="text-sm text-gray-500 dark:text-[#A89F90] font-sans">
                   {el.criteria}
                 </span>
               </div>
@@ -273,10 +273,10 @@ export default function MethodologyPage() {
 
         {/* Per-Outcome Grading */}
         <section className="max-w-3xl mx-auto px-6 mb-16">
-          <h2 className="font-serif text-2xl text-gray-900 dark:text-[#F5F0EB] mb-4">
+          <h2 className="font-serif text-2xl text-gray-900 dark:text-[#F0EBE2] mb-4">
             Per-Outcome Grading (A-F)
           </h2>
-          <p className="text-sm text-gray-500 dark:text-[#A89F95] font-sans leading-relaxed mb-4">
+          <p className="text-sm text-gray-500 dark:text-[#A89F90] font-sans leading-relaxed mb-4">
             Each treatment&apos;s outcomes are individually graded from A to F. For example, BPC-157 scores A for gut healing but C for neuroprotection — because real science is nuanced.
           </p>
           <div className="grid grid-cols-5 gap-3">
@@ -289,12 +289,12 @@ export default function MethodologyPage() {
             ].map((g) => (
               <div
                 key={g.grade}
-                className="text-center bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl p-4"
+                className="text-center bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-xl p-4"
               >
                 <span className="text-2xl font-bold font-sans" style={{ color: g.color }}>
                   {g.grade}
                 </span>
-                <p className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans mt-1">
+                <p className="text-[11px] text-gray-400 dark:text-[#6B6358] font-sans mt-1">
                   {g.meaning}
                 </p>
               </div>
@@ -304,21 +304,21 @@ export default function MethodologyPage() {
 
         {/* Conflict of Interest */}
         <section className="max-w-3xl mx-auto px-6 mb-16">
-          <h2 className="font-serif text-2xl text-gray-900 dark:text-[#F5F0EB] mb-4">
+          <h2 className="font-serif text-2xl text-gray-900 dark:text-[#F0EBE2] mb-4">
             Our Commitment
           </h2>
-          <div className="space-y-4 text-sm text-gray-500 dark:text-[#A89F95] font-sans leading-relaxed">
+          <div className="space-y-4 text-sm text-gray-500 dark:text-[#A89F90] font-sans leading-relaxed">
             <p>
-              <strong className="text-gray-700 dark:text-[#F5F0EB]">No sponsored rankings.</strong> No treatment manufacturer or clinic can pay to improve their Kamura Score. Rankings are calculated purely from data.
+              <strong className="text-gray-700 dark:text-[#F0EBE2]">No sponsored rankings.</strong> No treatment manufacturer or clinic can pay to improve their Kamura Score. Rankings are calculated purely from data.
             </p>
             <p>
-              <strong className="text-gray-700 dark:text-[#F5F0EB]">Full transparency.</strong> Every sub-score is visible. You can see exactly why a treatment scores the way it does. We show what works AND what doesn&apos;t.
+              <strong className="text-gray-700 dark:text-[#F0EBE2]">Full transparency.</strong> Every sub-score is visible. You can see exactly why a treatment scores the way it does. We show what works AND what doesn&apos;t.
             </p>
             <p>
-              <strong className="text-gray-700 dark:text-[#F5F0EB]">Community-driven updates.</strong> Scores are updated as new research is published and community data grows. If you&apos;ve used a treatment, your experience contributes to future scores.
+              <strong className="text-gray-700 dark:text-[#F0EBE2]">Community-driven updates.</strong> Scores are updated as new research is published and community data grows. If you&apos;ve used a treatment, your experience contributes to future scores.
             </p>
             <p>
-              <strong className="text-gray-700 dark:text-[#F5F0EB]">Corrections welcome.</strong> If you believe a score is inaccurate, contact us with evidence and we&apos;ll review. Our methodology is open to scrutiny.
+              <strong className="text-gray-700 dark:text-[#F0EBE2]">Corrections welcome.</strong> If you believe a score is inaccurate, contact us with evidence and we&apos;ll review. Our methodology is open to scrutiny.
             </p>
           </div>
         </section>

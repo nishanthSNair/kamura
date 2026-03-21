@@ -159,7 +159,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
               sizes="100vw"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0f120e]/90 via-[#0f120e]/40 to-forest/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#14110E]/90 via-[#14110E]/40 to-forest/30" />
 
           <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 pb-10 pt-32">
             {/* Breadcrumb */}
@@ -246,7 +246,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
           <div className="space-y-10">
             {/* Score Breakdown */}
             <section id="score" className="scroll-mt-24">
-              <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl overflow-hidden">
+              <div className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-2xl overflow-hidden">
                 <ScoreBreakdownPanel scores={t.scores} />
               </div>
             </section>
@@ -256,8 +256,8 @@ export default async function TreatmentDetailPage({ params }: Props) {
 
             {/* Evidence by Outcome */}
             <section id="evidence" className="scroll-mt-24">
-              <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
-                <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5 flex items-center gap-2.5">
+              <div className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
+                <h2 className="font-serif text-xl text-gray-900 dark:text-[#F0EBE2] mb-5 flex items-center gap-2.5">
                   <span className="text-lg">📊</span> Evidence by Outcome
                 </h2>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -271,10 +271,10 @@ export default async function TreatmentDetailPage({ params }: Props) {
             {/* Key Research */}
             {t.keyStudies.length > 0 && (
               <section id="research" className="scroll-mt-24">
-                <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
+                <div className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-lg">📄</span>
-                    <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB]">
+                    <h2 className="font-serif text-xl text-gray-900 dark:text-[#F0EBE2]">
                       Key Research
                     </h2>
                   </div>
@@ -289,7 +289,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
                   </div>
 
                   <div className="mt-6 pt-4 border-t border-gray-200 dark:border-white/[0.06]">
-                    <p className="text-[11px] text-gray-400 dark:text-[#6B6560] font-sans italic">
+                    <p className="text-[11px] text-gray-400 dark:text-[#6B6358] font-sans italic">
                       Citations sourced from PubMed, Cochrane Library, and peer-reviewed journals. Study findings are summarized for accessibility.
                       Always consult the original publication for full methodology and results.
                     </p>
@@ -306,8 +306,8 @@ export default async function TreatmentDetailPage({ params }: Props) {
 
             {/* Protocol Snapshot */}
             <section id="protocol" className="scroll-mt-24">
-              <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
-                <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5 flex items-center gap-2.5">
+              <div className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
+                <h2 className="font-serif text-xl text-gray-900 dark:text-[#F0EBE2] mb-5 flex items-center gap-2.5">
                   <span className="text-lg">📋</span> Protocol Snapshot
                 </h2>
                 <div className="grid md:grid-cols-3 gap-4 mb-4">
@@ -316,19 +316,19 @@ export default async function TreatmentDetailPage({ params }: Props) {
                       key={protocol.label}
                       className="bg-zen-mist/50 dark:bg-forest/10 border border-sage-light/60 dark:border-forest/20 rounded-xl p-4"
                     >
-                      <div className="text-[11px] text-gray-400 dark:text-[#6B6560] uppercase tracking-wider font-semibold font-sans mb-1.5">
+                      <div className="text-[11px] text-gray-400 dark:text-[#6B6358] uppercase tracking-wider font-semibold font-sans mb-1.5">
                         {protocol.label}
                       </div>
-                      <div className="text-[15px] font-semibold text-gray-900 dark:text-[#F5F0EB] font-sans">
+                      <div className="text-[15px] font-semibold text-gray-900 dark:text-[#F0EBE2] font-sans">
                         {protocol.dosage}
                       </div>
-                      <div className="text-xs text-gray-500 dark:text-[#A89F95] font-sans mt-1">
+                      <div className="text-xs text-gray-500 dark:text-[#A89F90] font-sans mt-1">
                         {protocol.notes}
                       </div>
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-gray-400 dark:text-[#6B6560] font-sans italic">
+                <p className="text-xs text-gray-400 dark:text-[#6B6358] font-sans italic">
                   Protocols are for informational purposes only. Always consult a qualified healthcare provider
                   before starting any treatment protocol.
                 </p>
@@ -344,7 +344,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
             {/* Where to Get It */}
             {relevantListings.length > 0 && (
               <section id="locations" className="scroll-mt-24">
-                <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5">
+                <h2 className="font-serif text-xl text-gray-900 dark:text-[#F0EBE2] mb-5">
                   Where to Get It (UAE)
                 </h2>
                 <div className="grid md:grid-cols-3 gap-4">
@@ -352,12 +352,12 @@ export default async function TreatmentDetailPage({ params }: Props) {
                     <Link
                       key={listing.id}
                       href={`/explore/${listing.id}`}
-                      className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl p-4 hover:border-sage/40 transition-all"
+                      className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-xl p-4 hover:border-sage/40 transition-all"
                     >
-                      <div className="font-semibold text-sm text-gray-900 dark:text-[#F5F0EB] font-sans">
+                      <div className="font-semibold text-sm text-gray-900 dark:text-[#F0EBE2] font-sans">
                         {listing.name}
                       </div>
-                      <div className="text-xs text-gray-400 dark:text-[#6B6560] font-sans mt-1">
+                      <div className="text-xs text-gray-400 dark:text-[#6B6358] font-sans mt-1">
                         {listing.location}, {listing.city}
                       </div>
                       <div className="text-xs text-moss dark:text-sage font-sans mt-2">
@@ -378,7 +378,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
             {/* Related Treatments */}
             {related.length > 0 && (
               <section id="related" className="scroll-mt-24">
-                <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5">
+                <h2 className="font-serif text-xl text-gray-900 dark:text-[#F0EBE2] mb-5">
                   Related Treatments
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -386,7 +386,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
                     <Link
                       key={r.slug}
                       href={`/treatments/${r.slug}`}
-                      className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-xl overflow-hidden hover:border-sage/40 transition-all group"
+                      className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-xl overflow-hidden hover:border-sage/40 transition-all group"
                     >
                       <div className="relative h-28">
                         <Image
@@ -402,10 +402,10 @@ export default async function TreatmentDetailPage({ params }: Props) {
                         </div>
                       </div>
                       <div className="p-3 text-center">
-                        <div className="font-semibold text-sm text-gray-900 dark:text-[#F5F0EB] font-sans">
+                        <div className="font-semibold text-sm text-gray-900 dark:text-[#F0EBE2] font-sans">
                           {r.name}
                         </div>
-                        <div className="text-[11px] text-gray-400 dark:text-[#6B6560] uppercase tracking-wide font-sans mt-0.5">
+                        <div className="text-[11px] text-gray-400 dark:text-[#6B6358] uppercase tracking-wide font-sans mt-0.5">
                           {r.category}
                         </div>
                       </div>
@@ -418,8 +418,8 @@ export default async function TreatmentDetailPage({ params }: Props) {
             {/* Medical Disclaimer */}
             <section className="scroll-mt-24">
               <div className="border border-sage-light/60 dark:border-forest/20 rounded-xl p-6 bg-zen-mist/50 dark:bg-forest/5">
-                <p className="text-xs text-gray-400 dark:text-[#6B6560] font-sans leading-relaxed">
-                  <strong className="text-gray-500 dark:text-[#A89F95]">Medical Disclaimer:</strong> The
+                <p className="text-xs text-gray-400 dark:text-[#6B6358] font-sans leading-relaxed">
+                  <strong className="text-gray-500 dark:text-[#A89F90]">Medical Disclaimer:</strong> The
                   information on this page is for educational purposes only and is not intended as medical advice.
                   Kamura Scores reflect a combination of research evidence, community data, and other factors — they
                   are not clinical recommendations. Research citations are provided for reference; always consult

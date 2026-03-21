@@ -140,15 +140,15 @@ export default function AboutPage() {
                 What We Do
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <div className="text-center p-5 rounded-xl border border-sage-light/60 dark:border-forest/30 bg-white dark:bg-[#1a1a1a]">
+                <div className="text-center p-5 rounded-xl border border-sage-light/60 dark:border-forest/30 bg-white dark:bg-[#1C1815]">
                   <span className="font-serif text-3xl text-moss block mb-2">{treatments.length}+</span>
                   <span className="text-sm text-gray-500 dark:text-gray-400 font-sans">Treatments scored on evidence, safety &amp; community data</span>
                 </div>
-                <div className="text-center p-5 rounded-xl border border-sage-light/60 dark:border-forest/30 bg-white dark:bg-[#1a1a1a]">
+                <div className="text-center p-5 rounded-xl border border-sage-light/60 dark:border-forest/30 bg-white dark:bg-[#1C1815]">
                   <span className="font-serif text-3xl text-moss block mb-2">{listings.length}+</span>
                   <span className="text-sm text-gray-500 dark:text-gray-400 font-sans">Clinics, studios &amp; wellness centers across the UAE</span>
                 </div>
-                <div className="text-center p-5 rounded-xl border border-sage-light/60 dark:border-forest/30 bg-white dark:bg-[#1a1a1a]">
+                <div className="text-center p-5 rounded-xl border border-sage-light/60 dark:border-forest/30 bg-white dark:bg-[#1C1815]">
                   <span className="font-serif text-3xl text-moss block mb-2">30+</span>
                   <span className="text-sm text-gray-500 dark:text-gray-400 font-sans">Evidence-based articles and guides</span>
                 </div>

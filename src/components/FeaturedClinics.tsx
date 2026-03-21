@@ -34,13 +34,13 @@ export default function FeaturedClinics({ clinics }: FeaturedClinicsProps) {
           <Link
             key={clinic.id}
             href={`/explore/${clinic.id}`}
-            className="group bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/[0.06] rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:border-sage/30 transition-all"
+            className="group bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:border-sage/30 transition-all"
           >
             {/* Category accent bar */}
             <div className={`h-1 ${accent.bar}`} />
             <div className="p-6">
               <div className="flex items-start justify-between mb-2">
-                <h3 className="font-sans font-semibold text-[15px] text-gray-900 dark:text-[#F5F0EB] leading-tight">
+                <h3 className="font-sans font-semibold text-[15px] text-gray-900 dark:text-[#F0EBE2] leading-tight">
                   {clinic.name}
                 </h3>
                 <svg
@@ -61,10 +61,10 @@ export default function FeaturedClinics({ clinics }: FeaturedClinicsProps) {
               <span className={`inline-block text-[10px] px-2 py-0.5 rounded-full font-sans mb-3 ${accent.badge} ${accent.text}`}>
                 {clinic.category}
               </span>
-              <p className="text-[13px] text-gray-500 dark:text-[#A89F95] font-sans leading-relaxed mb-3 line-clamp-2">
+              <p className="text-[13px] text-gray-500 dark:text-[#A89F90] font-sans leading-relaxed mb-3 line-clamp-2">
                 {clinic.tagline}
               </p>
-              <p className="text-[11px] text-gray-500 dark:text-[#6B6560] font-sans mb-3 flex items-center gap-1">
+              <p className="text-[11px] text-gray-500 dark:text-[#6B6358] font-sans mb-3 flex items-center gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                   <circle cx="12" cy="10" r="3" />
@@ -75,13 +75,13 @@ export default function FeaturedClinics({ clinics }: FeaturedClinicsProps) {
                 {clinic.services.slice(0, 3).map((service) => (
                   <span
                     key={service}
-                    className="text-[10px] px-2 py-0.5 rounded-full bg-zen-mist dark:bg-forest/20 text-gray-500 dark:text-[#A89F95] font-sans"
+                    className="text-[10px] px-2 py-0.5 rounded-full bg-zen-mist dark:bg-forest/20 text-gray-500 dark:text-[#A89F90] font-sans"
                   >
                     {service}
                   </span>
                 ))}
                 {clinic.services.length > 3 && (
-                  <span className="text-[10px] text-gray-500 dark:text-[#6B6560] font-sans self-center">
+                  <span className="text-[10px] text-gray-500 dark:text-[#6B6358] font-sans self-center">
                     +{clinic.services.length - 3} more
                   </span>
                 )}

@@ -31,7 +31,7 @@ function RadioCard({
       className={`w-full text-left px-5 py-4 rounded-xl border transition-all font-sans ${
         selected
           ? "border-terracotta bg-terracotta/5 dark:bg-terracotta/10"
-          : "border-gray-200 dark:border-white/[0.06] bg-white dark:bg-[#1a1a1a] hover:border-sage/40"
+          : "border-gray-200 dark:border-white/[0.06] bg-white dark:bg-[#1C1815] hover:border-sage/40"
       }`}
     >
       <span
@@ -179,7 +179,7 @@ export default function IntakeForm({
                     onUpdate("age", parseInt(e.target.value) || undefined)
                   }
                   placeholder="Enter your age"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/[0.06] bg-white dark:bg-[#1a1a1a] text-gray-900 dark:text-gray-100 font-sans focus:outline-none focus:border-terracotta transition-colors"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/[0.06] bg-white dark:bg-[#1C1815] text-gray-900 dark:text-gray-100 font-sans focus:outline-none focus:border-terracotta transition-colors"
                 />
               </div>
               <div>
@@ -226,7 +226,7 @@ export default function IntakeForm({
                     onUpdate("heightCm", parseInt(e.target.value) || undefined)
                   }
                   placeholder="170"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/[0.06] bg-white dark:bg-[#1a1a1a] text-gray-900 dark:text-gray-100 font-sans focus:outline-none focus:border-terracotta transition-colors"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/[0.06] bg-white dark:bg-[#1C1815] text-gray-900 dark:text-gray-100 font-sans focus:outline-none focus:border-terracotta transition-colors"
                 />
               </div>
               <div>
@@ -242,7 +242,7 @@ export default function IntakeForm({
                     onUpdate("weightKg", parseInt(e.target.value) || undefined)
                   }
                   placeholder="70"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/[0.06] bg-white dark:bg-[#1a1a1a] text-gray-900 dark:text-gray-100 font-sans focus:outline-none focus:border-terracotta transition-colors"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/[0.06] bg-white dark:bg-[#1C1815] text-gray-900 dark:text-gray-100 font-sans focus:outline-none focus:border-terracotta transition-colors"
                 />
               </div>
             </div>
@@ -521,7 +521,7 @@ export default function IntakeForm({
                         ? "border-terracotta bg-terracotta/10 text-terracotta dark:text-terracotta"
                         : atMax
                           ? "border-gray-100 dark:border-white/[0.04] text-gray-300 dark:text-gray-600 cursor-not-allowed"
-                          : "border-gray-200 dark:border-white/[0.06] text-gray-700 dark:text-gray-300 hover:border-sage/40 bg-white dark:bg-[#1a1a1a]"
+                          : "border-gray-200 dark:border-white/[0.06] text-gray-700 dark:text-gray-300 hover:border-sage/40 bg-white dark:bg-[#1C1815]"
                     }`}
                   >
                     {goal}

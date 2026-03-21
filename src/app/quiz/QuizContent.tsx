@@ -151,7 +151,7 @@ export default function QuizContent() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-red-50 flex items-center justify-center">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5886A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                 </svg>
               </div>
@@ -162,7 +162,7 @@ export default function QuizContent() {
             </div>
             <div>
               <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-amber-50 flex items-center justify-center">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5886A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10" />
                   <path d="M12 16v-4M12 8h.01" />
                 </svg>
@@ -174,7 +174,7 @@ export default function QuizContent() {
             </div>
             <div>
               <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-emerald-50 flex items-center justify-center">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5886A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
@@ -195,7 +195,7 @@ export default function QuizContent() {
     const q = questions[currentQ];
 
     return (
-      <section className="min-h-screen bg-white dark:bg-[#1a1a1a] pt-24 pb-20 zen-pattern">
+      <section className="min-h-screen bg-white dark:bg-[#1C1815] pt-24 pb-20 zen-pattern">
         <div className="max-w-2xl mx-auto px-6">
           {/* Progress Bar */}
           <div className="mb-12">
@@ -391,7 +391,7 @@ export default function QuizContent() {
             {primary.plan.map((week, wi) => (
               <div
                 key={week.week}
-                className={`rounded-xl border p-6 ${wi === 0 ? `${primary.color.border} ${primary.color.bg}` : "border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1a1a1a]"}`}
+                className={`rounded-xl border p-6 ${wi === 0 ? `${primary.color.border} ${primary.color.bg}` : "border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1C1815]"}`}
               >
                 <div className="flex items-center gap-3 mb-3">
                   <span className={`text-xs font-sans font-medium px-2.5 py-1 rounded-full ${wi === 0 ? `${primary.color.text} bg-white/60` : "text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800"}`}>
@@ -434,7 +434,7 @@ export default function QuizContent() {
                   href={listing!.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1a1a1a] hover:border-sage/30 hover:shadow-sm transition-all group"
+                  className="flex items-center justify-between p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1C1815] hover:border-sage/30 hover:shadow-sm transition-all group"
                 >
                   <div>
                     <p className="text-sm font-sans font-medium text-gray-800 dark:text-gray-200 group-hover:text-terracotta transition-colors">
@@ -444,7 +444,7 @@ export default function QuizContent() {
                       {listing!.tagline} &middot; {listing!.location}, {listing!.city}
                     </p>
                   </div>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 ml-4">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5886A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 ml-4">
                     <line x1="7" y1="17" x2="17" y2="7" />
                     <polyline points="7 7 17 7 17 17" />
                   </svg>

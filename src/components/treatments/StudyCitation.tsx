@@ -9,14 +9,14 @@ export default function StudyCitation({ study, index }: StudyCitationProps) {
   return (
     <div className="border-l-2 border-sage/40 pl-5 py-3">
       <div className="flex items-start gap-3">
-        <span className="text-xs font-mono font-bold text-gray-400 dark:text-[#6B6560] mt-0.5 shrink-0 w-5">
+        <span className="text-xs font-mono font-bold text-gray-400 dark:text-[#6B6358] mt-0.5 shrink-0 w-5">
           [{index}]
         </span>
         <div className="min-w-0">
-          <p className="text-[15px] font-semibold text-gray-900 dark:text-[#F5F0EB] font-sans leading-snug mb-1">
+          <p className="text-[15px] font-semibold text-gray-900 dark:text-[#F0EBE2] font-sans leading-snug mb-1">
             {study.title}
           </p>
-          <p className="text-xs text-gray-500 dark:text-[#A89F95] font-sans mb-2">
+          <p className="text-xs text-gray-500 dark:text-[#A89F90] font-sans mb-2">
             {study.authors}
             <span className="text-gray-300 dark:text-gray-600 mx-1.5">&bull;</span>
             <em>{study.journal}</em>
@@ -29,7 +29,7 @@ export default function StudyCitation({ study, index }: StudyCitationProps) {
               </>
             )}
           </p>
-          <p className="text-sm text-gray-600 dark:text-[#A89F95] font-sans leading-relaxed">
+          <p className="text-sm text-gray-600 dark:text-[#A89F90] font-sans leading-relaxed">
             <span className="text-moss dark:text-sage font-semibold text-xs uppercase tracking-wider">Key Finding: </span>
             {study.finding}
           </p>

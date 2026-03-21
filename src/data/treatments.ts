@@ -126,7 +126,7 @@ export function getScoreTier(score: number): ScoreTier {
 export function getScoreTierColor(tier: ScoreTier): { text: string; bg: string; border: string } {
   switch (tier) {
     case "Gold Standard":
-      return { text: "text-[#C4956A] dark:text-[#C4956A]", bg: "bg-[#C4956A]/20 dark:bg-[#C4956A]/15", border: "border-[#C4956A]/40 dark:border-[#C4956A]/30" };
+      return { text: "text-[#C4A882] dark:text-[#C4A882]", bg: "bg-[#C4A882]/20 dark:bg-[#C4A882]/15", border: "border-[#C4A882]/40 dark:border-[#C4A882]/30" };
     case "Strong":
       return { text: "text-[#16A34A] dark:text-[#4ADE80]", bg: "bg-[#16A34A]/15 dark:bg-[#4ADE80]/12", border: "border-[#16A34A]/30 dark:border-[#4ADE80]/20" };
     case "Promising":
@@ -139,7 +139,7 @@ export function getScoreTierColor(tier: ScoreTier): { text: string; bg: string; 
 }
 
 export function getScoreColor(score: number): { text: string; bg: string; border: string } {
-  if (score >= 85) return { text: "text-[#B5736A] dark:text-[#C4956A]", bg: "bg-[#B5736A]/15 dark:bg-[#C4956A]/15", border: "border-[#B5736A] dark:border-[#C4956A]" };
+  if (score >= 85) return { text: "text-[#B5886A] dark:text-[#C4A882]", bg: "bg-[#B5886A]/15 dark:bg-[#C4A882]/15", border: "border-[#B5886A] dark:border-[#C4A882]" };
   if (score >= 70) return { text: "text-[#16A34A] dark:text-[#4ADE80]", bg: "bg-[#16A34A]/15 dark:bg-[#4ADE80]/15", border: "border-[#16A34A] dark:border-[#4ADE80]" };
   if (score >= 50) return { text: "text-[#CA8A04] dark:text-[#FACC15]", bg: "bg-[#CA8A04]/15 dark:bg-[#FACC15]/15", border: "border-[#CA8A04] dark:border-[#FACC15]" };
   if (score >= 30) return { text: "text-[#EA580C] dark:text-[#FB923C]", bg: "bg-[#EA580C]/15 dark:bg-[#FB923C]/15", border: "border-[#EA580C] dark:border-[#FB923C]" };

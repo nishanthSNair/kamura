@@ -43,8 +43,8 @@ export default function SideEffectsPanel({ sideEffects }: SideEffectsPanelProps)
 
   return (
     <section id="safety" className="scroll-mt-24">
-      <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
-        <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5 flex items-center gap-2.5">
+      <div className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-8 md:p-10">
+        <h2 className="font-serif text-xl text-gray-900 dark:text-[#F0EBE2] mb-5 flex items-center gap-2.5">
           <svg
             width="20"
             height="20"
@@ -74,7 +74,7 @@ export default function SideEffectsPanel({ sideEffects }: SideEffectsPanelProps)
                   <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider font-sans">
                     {severity.label}
                   </span>
-                  <span className="text-[10px] text-gray-400 dark:text-[#6B6560] font-sans">
+                  <span className="text-[10px] text-gray-400 dark:text-[#6B6358] font-sans">
                     ({items.length})
                   </span>
                 </div>

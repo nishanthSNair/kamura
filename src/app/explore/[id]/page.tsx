@@ -293,7 +293,7 @@ export default async function ListingPage({ params }: Props) {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="block p-5 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-[#1a1a1a] hover:shadow-sm transition-shadow"
+                  className="block p-5 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-[#1C1815] hover:shadow-sm transition-shadow"
                 >
                   <p className="text-xs text-gray-400 dark:text-gray-500 font-sans mb-1 uppercase tracking-wide">
                     {post.category}
@@ -346,7 +346,7 @@ export default async function ListingPage({ params }: Props) {
                   <Link
                     key={related.id}
                     href={`/explore/${related.id}`}
-                    className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-[#1a1a1a] hover:shadow-md transition-shadow flex flex-col"
+                    className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-[#1C1815] hover:shadow-md transition-shadow flex flex-col"
                   >
                     <div className="flex items-center gap-2 mb-3">
                       <span className={`text-xs px-2.5 py-1 rounded-full font-sans ${colors.bg} ${colors.text}`}>

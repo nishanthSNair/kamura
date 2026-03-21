@@ -226,7 +226,7 @@ export default function EventsContent() {
             placeholder="Search events by name, location, or category..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl text-sm font-sans text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-[#1a1a1a] focus:outline-none focus:border-sage/50 focus:ring-1 focus:ring-sage/20 transition-colors"
+            className="w-full pl-12 pr-4 py-3 border border-gray-200 dark:border-gray-700 rounded-xl text-sm font-sans text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-[#1C1815] focus:outline-none focus:border-sage/50 focus:ring-1 focus:ring-sage/20 transition-colors"
           />
           {searchQuery && (
             <button
@@ -252,7 +252,7 @@ export default function EventsContent() {
               className={`px-4 py-2 text-sm font-sans rounded-full border transition-all duration-200 ${
                 activeCategory === cat
                   ? "bg-moss text-white border-moss"
-                  : "bg-white dark:bg-[#1a1a1a] text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-sage dark:hover:border-sage/50"
+                  : "bg-white dark:bg-[#1C1815] text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-sage dark:hover:border-sage/50"
               }`}
             >
               {cat}
@@ -271,7 +271,7 @@ export default function EventsContent() {
               }}
               className={`px-5 py-2 text-sm font-sans rounded-md transition-all duration-200 capitalize ${
                 activeTab === tab
-                  ? "bg-white dark:bg-[#1a1a1a] text-gray-900 dark:text-gray-100 shadow-sm"
+                  ? "bg-white dark:bg-[#1C1815] text-gray-900 dark:text-gray-100 shadow-sm"
                   : "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
               }`}
             >
@@ -458,7 +458,7 @@ export default function EventsContent() {
             {news.map((item, i) => (
               <article
                 key={item.id}
-                className="fade-in-on-scroll opacity-0 translate-y-4 transition-all duration-500 bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 rounded-xl p-6 flex flex-col"
+                className="fade-in-on-scroll opacity-0 translate-y-4 transition-all duration-500 bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-gray-700 rounded-xl p-6 flex flex-col"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -629,7 +629,7 @@ function LiveNewsFeed() {
                 href={article.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-[#1a1a1a] hover:shadow-md transition-shadow flex flex-col"
+                className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-[#1C1815] hover:shadow-md transition-shadow flex flex-col"
               >
                 <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-500 font-sans mb-3">
                   <span className="font-medium text-gray-600 dark:text-gray-400">{article.source}</span>
@@ -687,7 +687,7 @@ function EventCard({
   return (
     <div
       id={`event-${event.id}`}
-      className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-[#1a1a1a] transition-shadow duration-300 hover:shadow-md"
+      className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-[#1C1815] transition-shadow duration-300 hover:shadow-md"
     >
       <button
         onClick={onToggle}

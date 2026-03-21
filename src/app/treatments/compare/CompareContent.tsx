@@ -191,7 +191,7 @@ export default function CompareContent({ initialSlugs }: CompareContentProps) {
 
       {/* Breadcrumb */}
       <div className="max-w-[1200px] mx-auto px-6 py-4">
-        <nav className="flex items-center gap-2 text-xs text-gray-400 dark:text-[#6B6560] font-sans">
+        <nav className="flex items-center gap-2 text-xs text-gray-400 dark:text-[#6B6358] font-sans">
           <Link
             href="/"
             className="hover:text-moss dark:hover:text-sage transition-colors"
@@ -206,7 +206,7 @@ export default function CompareContent({ initialSlugs }: CompareContentProps) {
             Treatments
           </Link>
           <span>&rsaquo;</span>
-          <span className="text-gray-600 dark:text-[#A89F95]">Compare</span>
+          <span className="text-gray-600 dark:text-[#A89F90]">Compare</span>
         </nav>
       </div>
 
@@ -219,7 +219,7 @@ export default function CompareContent({ initialSlugs }: CompareContentProps) {
           ].map(({ sel, setSel, t, label }, i) => (
             <div
               key={i}
-              className="border border-gray-200 dark:border-white/[0.06] rounded-xl p-5 bg-white dark:bg-[#1a1a1a]"
+              className="border border-gray-200 dark:border-white/[0.06] rounded-xl p-5 bg-white dark:bg-[#1C1815]"
             >
               <p className="text-xs text-gray-400 dark:text-gray-500 uppercase tracking-wider font-sans mb-3">
                 {label}
@@ -426,7 +426,7 @@ export default function CompareContent({ initialSlugs }: CompareContentProps) {
                 t ? (
                   <div
                     key={i}
-                    className="border border-gray-200 dark:border-white/[0.06] rounded-xl overflow-hidden bg-white dark:bg-[#1a1a1a]"
+                    className="border border-gray-200 dark:border-white/[0.06] rounded-xl overflow-hidden bg-white dark:bg-[#1C1815]"
                   >
                     <div className="p-4 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-white/[0.06] flex items-center justify-between">
                       <Link

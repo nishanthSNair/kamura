@@ -107,18 +107,18 @@ export default function Home() {
       </section>
 
       {/* ── Welcome / Philosophy ── */}
-      <section className="py-24 md:py-36 bg-cream dark:bg-[#0f120e] zen-pattern">
+      <section className="py-24 md:py-36 bg-cream dark:bg-[#14110E] zen-pattern">
         <FadeInOnScroll>
           <div className="max-w-2xl mx-auto px-6 text-center">
             <div className="w-12 h-[1px] bg-terracotta/40 mx-auto mb-8" />
 
-            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-gray-900 dark:text-[#F5F0EB] leading-[1.4] mb-6">
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-gray-900 dark:text-[#F0EBE2] leading-[1.4] mb-6">
               We believe wellness should be{" "}
               <em className="italic text-terracotta dark:text-terracotta">transparent</em>,
               personal, and rooted in evidence.
             </h2>
 
-            <p className="text-base text-gray-500 dark:text-[#A89F95] leading-relaxed font-sans max-w-lg mx-auto">
+            <p className="text-base text-gray-500 dark:text-[#A89F90] leading-relaxed font-sans max-w-lg mx-auto">
               KAMURA scores every treatment on research, safety, and real community
               experience — so you can make informed choices about your health with
               clarity and confidence.
@@ -130,13 +130,13 @@ export default function Home() {
       </section>
 
       {/* ── Discover — Editorial Feature Cards ── */}
-      <section className="py-20 md:py-28 bg-[#F3F1EC] dark:bg-[#131712]">
+      <section className="py-20 md:py-28 bg-[#EDE7DB] dark:bg-[#1A1610]">
         <div className="max-w-6xl mx-auto px-6">
           <FadeInOnScroll>
             <p className="text-xs uppercase tracking-[0.2em] text-terracotta font-sans mb-3 text-center">
               Start Your Journey
             </p>
-            <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-[#F5F0EB] text-center mb-14">
+            <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-[#F0EBE2] text-center mb-14">
               Three Ways to Discover
             </h2>
           </FadeInOnScroll>
@@ -226,7 +226,7 @@ export default function Home() {
       </section>
 
       {/* ── Curated Treatments ── */}
-      <section className="py-20 md:py-28 bg-cream dark:bg-[#0f120e]">
+      <section className="py-20 md:py-28 bg-cream dark:bg-[#14110E]">
         <div className="max-w-6xl mx-auto px-6">
           <FadeInOnScroll>
             <div className="flex items-end justify-between mb-12">
@@ -234,7 +234,7 @@ export default function Home() {
                 <p className="text-xs uppercase tracking-[0.2em] text-terracotta font-sans mb-3">
                   Evidence-Based
                 </p>
-                <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-[#F5F0EB]">
+                <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-[#F0EBE2]">
                   Highest Rated Treatments
                 </h2>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-2 font-sans max-w-md">
@@ -254,7 +254,7 @@ export default function Home() {
           <FadeInOnScroll delay={100}>
             <Link
               href={`/treatments/${topTreatments[0].slug}`}
-              className="block mb-5 rounded-2xl bg-white dark:bg-[#1a1f17] border border-gray-200/40 dark:border-white/[0.06] p-6 md:p-8 hover:shadow-lg transition-all duration-500 group"
+              className="block mb-5 rounded-2xl bg-white dark:bg-[#201C16] border border-gray-200/40 dark:border-white/[0.06] p-6 md:p-8 hover:shadow-lg transition-all duration-500 group"
             >
               <div className="flex flex-col md:flex-row md:items-center gap-6">
                 <KamuraScoreBadge score={topTreatments[0].kamuraScore} size="lg" showLabel />
@@ -262,7 +262,7 @@ export default function Home() {
                   <p className="text-xs uppercase tracking-[0.15em] text-gray-400 dark:text-gray-500 font-sans mb-1">
                     {topTreatments[0].category} &middot; {topTreatments[0].evidenceLevel} Evidence
                   </p>
-                  <h3 className="font-serif text-xl md:text-2xl text-gray-900 dark:text-[#F5F0EB] group-hover:text-moss dark:group-hover:text-sage transition-colors mb-2">
+                  <h3 className="font-serif text-xl md:text-2xl text-gray-900 dark:text-[#F0EBE2] group-hover:text-moss dark:group-hover:text-sage transition-colors mb-2">
                     {topTreatments[0].name}
                   </h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400 font-sans leading-relaxed max-w-xl">
@@ -285,7 +285,7 @@ export default function Home() {
                 <FadeInOnScroll key={t.slug} delay={150 + i * 50}>
                   <Link
                     href={`/treatments/${t.slug}`}
-                    className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-[#1a1f17] border border-gray-200/40 dark:border-white/[0.06] hover:shadow-md hover:border-gray-300 dark:hover:border-white/[0.12] transition-all duration-300 group"
+                    className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-[#201C16] border border-gray-200/40 dark:border-white/[0.06] hover:shadow-md hover:border-gray-300 dark:hover:border-white/[0.12] transition-all duration-300 group"
                   >
                     <div
                       className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-base relative shrink-0 ${color.bg} ${color.text}`}
@@ -294,7 +294,7 @@ export default function Home() {
                       {t.kamuraScore}
                     </div>
                     <div className="min-w-0">
-                      <p className="font-sans text-sm font-semibold text-gray-900 dark:text-[#F5F0EB] group-hover:text-moss dark:group-hover:text-sage transition-colors truncate">
+                      <p className="font-sans text-sm font-semibold text-gray-900 dark:text-[#F0EBE2] group-hover:text-moss dark:group-hover:text-sage transition-colors truncate">
                         {t.name}
                       </p>
                       <p className="text-xs text-gray-400 dark:text-gray-500 truncate">
@@ -317,13 +317,13 @@ export default function Home() {
       </section>
 
       {/* ── Wellness Goals — Horizontal Scroll Strip ── */}
-      <section className="py-20 md:py-28 bg-[#F3F1EC] dark:bg-[#131712] overflow-hidden">
+      <section className="py-20 md:py-28 bg-[#EDE7DB] dark:bg-[#1A1610] overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
           <FadeInOnScroll>
             <p className="text-xs uppercase tracking-[0.2em] text-terracotta font-sans mb-3 text-center">
               Personalized Paths
             </p>
-            <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-[#F5F0EB] text-center mb-4">
+            <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-[#F0EBE2] text-center mb-4">
               What Are You Seeking?
             </h2>
             <p className="text-sm text-gray-500 dark:text-gray-400 font-sans text-center max-w-md mx-auto mb-12">
@@ -337,7 +337,7 @@ export default function Home() {
                 <Link
                   key={goal.slug}
                   href={`/treatments/best-for/${goal.slug}`}
-                  className="flex items-center gap-3 px-6 py-4 rounded-full border border-gray-200/60 dark:border-white/[0.06] bg-white dark:bg-[#1a1f17] hover:shadow-md hover:border-sage/40 dark:hover:border-sage/20 transition-all duration-300 shrink-0 snap-start group"
+                  className="flex items-center gap-3 px-6 py-4 rounded-full border border-gray-200/60 dark:border-white/[0.06] bg-white dark:bg-[#201C16] hover:shadow-md hover:border-sage/40 dark:hover:border-sage/20 transition-all duration-300 shrink-0 snap-start group"
                 >
                   <span className="text-lg">{goal.icon}</span>
                   <span className="font-sans text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-moss dark:group-hover:text-sage transition-colors whitespace-nowrap">
@@ -352,7 +352,7 @@ export default function Home() {
 
       {/* ── Stories / Blog — Editorial Magazine Layout ── */}
       {latestPosts.length > 0 && (
-        <section className="py-20 md:py-28 bg-cream dark:bg-[#0f120e]">
+        <section className="py-20 md:py-28 bg-cream dark:bg-[#14110E]">
           <div className="max-w-6xl mx-auto px-6">
             <FadeInOnScroll>
               <div className="flex items-end justify-between mb-12">
@@ -360,7 +360,7 @@ export default function Home() {
                   <p className="text-xs uppercase tracking-[0.2em] text-terracotta font-sans mb-3">
                     Wellness Stories
                   </p>
-                  <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-[#F5F0EB]">
+                  <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-[#F0EBE2]">
                     Latest from the Journal
                   </h2>
                 </div>
@@ -377,7 +377,7 @@ export default function Home() {
             <FadeInOnScroll delay={100}>
               <Link
                 href={`/blog/${latestPosts[0].slug}`}
-                className="block rounded-2xl overflow-hidden bg-white dark:bg-[#1a1f17] border border-gray-200/40 dark:border-white/[0.06] hover:shadow-xl transition-all duration-500 group mb-5"
+                className="block rounded-2xl overflow-hidden bg-white dark:bg-[#201C16] border border-gray-200/40 dark:border-white/[0.06] hover:shadow-xl transition-all duration-500 group mb-5"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2">
                   {latestPosts[0].coverImage && (
@@ -393,7 +393,7 @@ export default function Home() {
                     <p className="text-[11px] uppercase tracking-[0.15em] text-terracotta font-sans mb-3">
                       {latestPosts[0].category} &middot; {latestPosts[0].readingTime} min read
                     </p>
-                    <h3 className="font-serif text-xl md:text-2xl text-gray-900 dark:text-[#F5F0EB] group-hover:text-moss dark:group-hover:text-sage transition-colors mb-3 leading-snug">
+                    <h3 className="font-serif text-xl md:text-2xl text-gray-900 dark:text-[#F0EBE2] group-hover:text-moss dark:group-hover:text-sage transition-colors mb-3 leading-snug">
                       {latestPosts[0].title}
                     </h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400 font-sans leading-relaxed line-clamp-3">
@@ -417,7 +417,7 @@ export default function Home() {
                 <FadeInOnScroll key={post.slug} delay={200 + i * 100}>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="rounded-2xl border border-gray-200/40 dark:border-white/[0.06] bg-white dark:bg-[#1a1f17] hover:shadow-lg transition-all duration-500 overflow-hidden group"
+                    className="rounded-2xl border border-gray-200/40 dark:border-white/[0.06] bg-white dark:bg-[#201C16] hover:shadow-lg transition-all duration-500 overflow-hidden group"
                   >
                     {post.coverImage && (
                       <div className="aspect-[16/9] overflow-hidden">
@@ -432,7 +432,7 @@ export default function Home() {
                       <p className="text-[11px] uppercase tracking-[0.15em] text-terracotta font-sans mb-2">
                         {post.category} &middot; {post.readingTime} min read
                       </p>
-                      <h3 className="font-sans text-sm font-semibold text-gray-900 dark:text-[#F5F0EB] group-hover:text-moss dark:group-hover:text-sage transition-colors line-clamp-2 mb-1.5">
+                      <h3 className="font-sans text-sm font-semibold text-gray-900 dark:text-[#F0EBE2] group-hover:text-moss dark:group-hover:text-sage transition-colors line-clamp-2 mb-1.5">
                         {post.title}
                       </h3>
                       <p className="text-xs text-gray-400 dark:text-gray-500 line-clamp-2">
@@ -455,18 +455,18 @@ export default function Home() {
       )}
 
       {/* ── Final CTA — Warm Closing ── */}
-      <section className="py-24 md:py-32 bg-[#F3F1EC] dark:bg-[#131712] zen-pattern">
+      <section className="py-24 md:py-32 bg-[#EDE7DB] dark:bg-[#1A1610] zen-pattern">
         <FadeInOnScroll>
           <div className="max-w-2xl mx-auto px-6 text-center">
             <div className="w-12 h-[1px] bg-terracotta/40 mx-auto mb-8" />
 
-            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-gray-900 dark:text-[#F5F0EB] leading-[1.4] mb-5">
+            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-gray-900 dark:text-[#F0EBE2] leading-[1.4] mb-5">
               Your Wellness Journey
               <br />
               Is Uniquely Yours
             </h2>
 
-            <p className="text-base text-gray-500 dark:text-[#A89F95] leading-relaxed font-sans max-w-md mx-auto mb-10">
+            <p className="text-base text-gray-500 dark:text-[#A89F90] leading-relaxed font-sans max-w-md mx-auto mb-10">
               Whether you are just beginning to explore or deepening a practice you
               already love, KAMURA is here to light the way.
             </p>

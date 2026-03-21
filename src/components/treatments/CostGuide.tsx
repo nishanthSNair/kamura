@@ -8,7 +8,7 @@ export default function CostGuide({ costEstimate, uaeAvailable }: CostGuideProps
 
   return (
     <section id="cost" className="scroll-mt-24">
-      <div className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-6 md:p-8">
+      <div className="bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-2xl p-6 md:p-8">
         <div className="flex items-start gap-4">
           <div className="w-10 h-10 rounded-full bg-terracotta/10 dark:bg-terracotta/15 flex items-center justify-center shrink-0">
             <svg
@@ -27,13 +27,13 @@ export default function CostGuide({ costEstimate, uaeAvailable }: CostGuideProps
             </svg>
           </div>
           <div>
-            <h2 className="font-serif text-lg text-gray-900 dark:text-[#F5F0EB] mb-1">
+            <h2 className="font-serif text-lg text-gray-900 dark:text-[#F0EBE2] mb-1">
               Cost Guide
             </h2>
             <p className="text-lg font-semibold text-terracotta dark:text-kamura-gold font-sans mb-1">
               {costEstimate}
             </p>
-            <p className="text-xs text-gray-400 dark:text-[#6B6560] font-sans">
+            <p className="text-xs text-gray-400 dark:text-[#6B6358] font-sans">
               {uaeAvailable
                 ? "Estimated UAE pricing. Costs vary by provider, dosage, and treatment plan."
                 : "Limited UAE availability. Costs may vary for international sourcing."}

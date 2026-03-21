@@ -150,7 +150,7 @@ export default async function AreaPage({ params }: Props) {
                 {catListings.map((listing) => (
                   <article
                     key={listing.id}
-                    className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-[#1a1a1a] hover:shadow-md transition-shadow flex flex-col"
+                    className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-[#1C1815] hover:shadow-md transition-shadow flex flex-col"
                   >
                     <div className="flex items-center gap-2 mb-4">
                       <span

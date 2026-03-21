@@ -34,7 +34,7 @@ export default function FAQAccordion({ faq, treatmentName }: FAQAccordionProps) 
       />
 
       <div className="bg-zen-mist/60 dark:bg-forest/5 border border-sage-light/40 dark:border-forest/15 rounded-2xl p-8 md:p-10">
-        <h2 className="font-serif text-xl text-gray-900 dark:text-[#F5F0EB] mb-5 flex items-center gap-2.5">
+        <h2 className="font-serif text-xl text-gray-900 dark:text-[#F0EBE2] mb-5 flex items-center gap-2.5">
           <svg
             width="20"
             height="20"
@@ -57,14 +57,14 @@ export default function FAQAccordion({ faq, treatmentName }: FAQAccordionProps) 
           {faq.map((item, i) => (
             <div
               key={i}
-              className="border border-sage-light/30 dark:border-forest/15 rounded-xl bg-white/60 dark:bg-[#1A1A1A]/60 overflow-hidden"
+              className="border border-sage-light/30 dark:border-forest/15 rounded-xl bg-white/60 dark:bg-[#1C1815]/60 overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between px-5 py-4 text-left"
                 aria-expanded={openIndex === i}
               >
-                <span className="text-sm font-semibold text-gray-900 dark:text-[#F5F0EB] font-sans pr-4">
+                <span className="text-sm font-semibold text-gray-900 dark:text-[#F0EBE2] font-sans pr-4">
                   {item.question}
                 </span>
                 <svg
@@ -89,7 +89,7 @@ export default function FAQAccordion({ faq, treatmentName }: FAQAccordionProps) 
                 }`}
               >
                 <div className="px-5 pb-4">
-                  <p className="text-sm text-gray-600 dark:text-[#A89F95] font-sans leading-relaxed">
+                  <p className="text-sm text-gray-600 dark:text-[#A89F90] font-sans leading-relaxed">
                     {item.answer}
                   </p>
                 </div>

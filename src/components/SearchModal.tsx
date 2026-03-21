@@ -137,7 +137,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
       onClick={stableOnClose}
     >
       <div
-        className="max-w-2xl mx-auto mt-12 md:mt-24 mx-4 md:mx-auto bg-white dark:bg-[#1a1a1a] rounded-xl shadow-2xl overflow-hidden"
+        className="max-w-2xl mx-auto mt-12 md:mt-24 mx-4 md:mx-auto bg-white dark:bg-[#1C1815] rounded-xl shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
         onKeyDown={handleKeyDown}
       >

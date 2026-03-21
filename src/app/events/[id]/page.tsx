@@ -218,7 +218,7 @@ export default async function EventPage({ params }: Props) {
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block p-5 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-[#1a1a1a] hover:shadow-sm transition-shadow"
+                    className="block p-5 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-[#1C1815] hover:shadow-sm transition-shadow"
                   >
                     <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500 font-sans mb-2">
                       <span className="font-medium text-gray-600 dark:text-gray-400">{item.source}</span>

@@ -110,7 +110,7 @@ export default function ExploreContent() {
       </section>
 
       {/* Category Filter */}
-      <section className="sticky top-[65px] z-40 bg-cream/95 dark:bg-[#0f120e]/95 backdrop-blur-sm border-b border-sage-light/60 dark:border-forest/30">
+      <section className="sticky top-[65px] z-40 bg-cream/95 dark:bg-[#14110E]/95 backdrop-blur-sm border-b border-sage-light/60 dark:border-forest/30">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex gap-2 overflow-x-auto no-scrollbar">
             {["All", ...ALL_CATEGORIES].map((cat) => (
@@ -120,7 +120,7 @@ export default function ExploreContent() {
                 className={`px-4 py-2 text-sm font-sans rounded-full border whitespace-nowrap transition-all duration-200 ${
                   activeCategory === cat
                     ? "bg-moss text-white border-moss"
-                    : "bg-white dark:bg-[#1a1a1a] text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-sage dark:hover:border-sage/50"
+                    : "bg-white dark:bg-[#1C1815] text-gray-600 dark:text-gray-400 border-gray-200 dark:border-gray-700 hover:border-sage dark:hover:border-sage/50"
                 }`}
               >
                 {cat}
@@ -163,7 +163,7 @@ export default function ExploreContent() {
                 {catListings.map((listing, i) => (
                   <article
                     key={listing.id}
-                    className="fade-in-on-scroll opacity-0 translate-y-4 transition-all duration-500 border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-[#1a1a1a] hover:shadow-md flex flex-col"
+                    className="fade-in-on-scroll opacity-0 translate-y-4 transition-all duration-500 border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-[#1C1815] hover:shadow-md flex flex-col"
                     style={{ transitionDelay: `${i * 80}ms` }}
                   >
                     <div className="flex items-center gap-2 mb-4">
