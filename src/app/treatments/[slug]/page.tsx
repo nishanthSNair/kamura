@@ -116,6 +116,14 @@ export default async function TreatmentDetailPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
+      {/* Sticky sidebar share — desktop */}
+      <ShareButtons
+        url={`https://kamuralife.com/treatments/${t.slug}`}
+        title={`${t.name} — Kamura Score: ${t.kamuraScore}`}
+        description={t.description}
+        variant="sidebar"
+      />
+
       <article className="zen-pattern">
         {/* Hero Banner with Nature Image */}
         <section className="relative min-h-[50vh] flex items-end">
@@ -187,13 +195,13 @@ export default async function TreatmentDetailPage({ params }: Props) {
           </div>
         </section>
 
-        {/* Share */}
-        <div className="max-w-[1200px] mx-auto px-6 mt-6">
+        {/* Share — mobile only (sidebar handles desktop) */}
+        <div className="max-w-[1200px] mx-auto px-6 mt-6 lg:hidden">
           <ShareButtons
             url={`https://kamuralife.com/treatments/${t.slug}`}
             title={`${t.name} — Kamura Score: ${t.kamuraScore}`}
             description={t.description}
-            variant="block"
+            variant="inline"
           />
         </div>
 

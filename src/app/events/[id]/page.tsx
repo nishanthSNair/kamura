@@ -98,6 +98,14 @@ export default async function EventPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
+      {/* Sticky sidebar share — desktop */}
+      <ShareButtons
+        url={`https://kamuralife.com/events/${event.id}`}
+        title={event.title}
+        description={event.subtitle}
+        variant="sidebar"
+      />
+
       <article className="pt-24">
         {/* Header */}
         <header className="max-w-3xl mx-auto px-6 py-12">
@@ -185,12 +193,13 @@ export default async function EventPage({ params }: Props) {
               <line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" />
             </svg>
           </a>
-          <div className="mt-6">
+          {/* Share — mobile only (sidebar handles desktop) */}
+          <div className="mt-6 lg:hidden">
             <ShareButtons
               url={`https://kamuralife.com/events/${event.id}`}
               title={event.title}
               description={event.subtitle}
-              variant="block"
+              variant="inline"
             />
           </div>
         </section>
