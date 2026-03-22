@@ -59,7 +59,7 @@ export default function LiveNewsFeed({
         for (const feedUrl of feeds) {
           try {
             const res = await fetch(
-              `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}&count=${maxArticles}`
+              `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`
             );
             if (!res.ok) continue;
             const data = await res.json();
