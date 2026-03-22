@@ -279,3 +279,19 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--color-moss) !important;
   background: rgba(61, 90, 58, 0.1);
 }
+
+/* Checker — zone hover invite pulse */
+@keyframes zone-invite {
+  0%, 100% { fill-opacity: 0.08; }
+  50% { fill-opacity: 0.2; }
+}
+.zone-invite { animation: zone-invite 2s ease-in-out infinite; }
+
+/* Checker — result card entrance stagger */
+@keyframes result-slide-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-result-card {
+  animation: result-slide-in 0.4s ease-out both;
+}

@@ -176,7 +176,7 @@ export default function Home() {
               </Link>
             </FadeInOnScroll>
 
-            {/* Top right card — Build Your Blueprint */}
+            {/* Top right card — Wellness Checker */}
             <FadeInOnScroll delay={200}>
               <Link
                 href="/blueprint"
@@ -190,10 +190,10 @@ export default function Home() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
                   <h3 className="font-serif text-xl text-white mb-1">
-                    Build Your Blueprint
+                    Wellness Checker
                   </h3>
                   <p className="text-sm text-white/70 font-sans">
-                    Design a personalized wellness protocol tailored to your goals.
+                    Tap your body, pick your concerns, get personalized treatment recommendations.
                   </p>
                 </div>
               </Link>

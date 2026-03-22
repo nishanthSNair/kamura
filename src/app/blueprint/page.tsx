@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import BlueprintApp from "./BlueprintApp";
+import WellnessCheckerApp from "./WellnessCheckerApp";
 
 export const metadata: Metadata = {
-  title: "Body Blueprint Builder",
+  title: "Wellness Checker | KAMURA",
   description:
-    "Build your personalized wellness day. Map treatments to your body, see real-time projections for 6 wellness indicators, and design your longevity protocol.",
+    "Select your wellness concerns on our interactive body map and get personalized, evidence-based treatment recommendations ranked by relevance and Kamura Score.",
   openGraph: {
-    title: "Body Blueprint Builder | KAMURA",
+    title: "Wellness Checker | KAMURA",
     description:
-      "Design your personalized wellness protocol. Drag treatments onto a daily timeline and watch your body blueprint come to life.",
+      "Interactive wellness checker. Tap your body, pick your concerns, get ranked treatment recommendations backed by research.",
     url: "https://kamuralife.com/blueprint",
     images: [
       {
         url: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200&h=630&fit=crop",
         width: 1200,
         height: 630,
-        alt: "Body Blueprint Builder — KAMURA",
+        alt: "Wellness Checker — KAMURA",
       },
     ],
   },
@@ -25,5 +25,5 @@ export const metadata: Metadata = {
 };
 
 export default function BlueprintPage() {
-  return <BlueprintApp />;
+  return <WellnessCheckerApp />;
 }

@@ -56,7 +56,7 @@ export default function Navigation() {
             {[
               { href: "/blog", label: "Blog" },
               { href: "/treatments", label: "Treatments" },
-              { href: "/blueprint", label: "Blueprint" },
+              { href: "/blueprint", label: "Wellness Check" },
               { href: "/explore", label: "Explore" },
               { href: "/events", label: "Events" },
               { href: "/about", label: "About" },
@@ -158,7 +158,7 @@ export default function Navigation() {
             {[
               { href: "/blog", label: "Blog" },
               { href: "/treatments", label: "Treatments" },
-              { href: "/blueprint", label: "Blueprint" },
+              { href: "/blueprint", label: "Wellness Check" },
               { href: "/explore", label: "Explore" },
               { href: "/events", label: "Events" },
               { href: "/about", label: "About" },

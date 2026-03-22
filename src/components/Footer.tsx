@@ -27,7 +27,7 @@ export default function Footer() {
               Treatments
             </Link>
             <Link href="/blueprint" className="hover:text-moss transition-colors">
-              Blueprint
+              Wellness Check
             </Link>
             <Link href="/explore" className="hover:text-moss transition-colors">
               Explore
