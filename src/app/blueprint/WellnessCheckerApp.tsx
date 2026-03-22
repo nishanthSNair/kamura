@@ -3,14 +3,19 @@
 import { useReducer } from "react";
 import InteractiveBody from "@/components/checker/InteractiveBody";
 import ConcernPicker from "@/components/checker/ConcernPicker";
-import CheckerResults from "@/components/checker/CheckerResults";
+import WellnessReport from "@/components/checker/WellnessReport";
 import CheckerProgress from "@/components/checker/CheckerProgress";
 import {
   type BodyZone,
   type WellnessConcern,
   type ConcernDuration,
 } from "@/data/wellness-concerns";
-import { rankTreatments, type MatchedTreatment } from "@/data/wellness-checker";
+import {
+  rankTreatments,
+  enrichResults,
+  type EnrichedMatchedTreatment,
+  type BlogPostSummary,
+} from "@/data/wellness-checker";
 
 type Stage = "body-map" | "concern-picker" | "results";
 
@@ -20,7 +25,7 @@ interface CheckerState {
   selectedConcerns: WellnessConcern[];
   completedZones: BodyZone[];
   duration: ConcernDuration | null;
-  results: MatchedTreatment[];
+  results: EnrichedMatchedTreatment[];
 }
 
 type Action =
@@ -64,10 +69,11 @@ function reducer(state: CheckerState, action: Action): CheckerState {
     }
 
     case "VIEW_RESULTS": {
-      const results = rankTreatments({
+      const ranked = rankTreatments({
         selectedConcerns: state.selectedConcerns,
         duration: state.duration || undefined,
       });
+      const results = enrichResults(ranked);
       return { ...state, stage: "results", results };
     }
 
@@ -82,7 +88,11 @@ function reducer(state: CheckerState, action: Action): CheckerState {
   }
 }
 
-export default function WellnessCheckerApp() {
+interface WellnessCheckerAppProps {
+  blogPosts: BlogPostSummary[];
+}
+
+export default function WellnessCheckerApp({ blogPosts }: WellnessCheckerAppProps) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const stepNumber =
@@ -127,10 +137,11 @@ export default function WellnessCheckerApp() {
       )}
 
       {state.stage === "results" && (
-        <CheckerResults
+        <WellnessReport
           results={state.results}
           selectedConcerns={state.selectedConcerns}
           completedZones={state.completedZones}
+          blogPosts={blogPosts}
           onAddAnother={() => dispatch({ type: "ADD_ANOTHER_ZONE" })}
           onRestart={() => dispatch({ type: "RESTART" })}
         />

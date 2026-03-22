@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { getAllPosts } from "@/lib/blog";
+import type { BlogPostSummary } from "@/data/wellness-checker";
 import WellnessCheckerApp from "./WellnessCheckerApp";
 
 export const metadata: Metadata = {
   title: "Wellness Checker | KAMURA",
   description:
-    "Select your wellness concerns on our interactive body map and get personalized, evidence-based treatment recommendations ranked by relevance and Kamura Score.",
+    "Select your wellness concerns on our interactive body map and get a personalized wellness report with evidence-based treatment recommendations, daily protocols, and educational insights.",
   openGraph: {
     title: "Wellness Checker | KAMURA",
     description:
-      "Interactive wellness checker. Tap your body, pick your concerns, get ranked treatment recommendations backed by research.",
+      "Interactive wellness checker. Tap your body, pick your concerns, get a comprehensive wellness report backed by research.",
     url: "https://kamuralife.com/blueprint",
     images: [
       {
@@ -25,5 +27,16 @@ export const metadata: Metadata = {
 };
 
 export default function BlueprintPage() {
-  return <WellnessCheckerApp />;
+  // Fetch blog posts on the server and pass lightweight summaries to the client
+  const allPosts = getAllPosts();
+  const blogPosts: BlogPostSummary[] = allPosts.map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    excerpt: p.excerpt,
+    category: p.category,
+    readingTime: p.readingTime,
+    relatedTreatments: p.relatedTreatments,
+  }));
+
+  return <WellnessCheckerApp blogPosts={blogPosts} />;
 }

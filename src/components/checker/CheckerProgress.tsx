@@ -5,7 +5,7 @@ interface CheckerProgressProps {
   totalSteps: number;
 }
 
-const STEP_LABELS = ["Body Map", "Concerns", "Results"];
+const STEP_LABELS = ["Body Map", "Concerns", "Report"];
 
 export default function CheckerProgress({
   currentStep,
