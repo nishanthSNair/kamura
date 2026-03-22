@@ -7,6 +7,7 @@ import { getAllPosts } from "@/lib/blog";
 import InlineSearch from "@/components/InlineSearch";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
+import LiveNewsFeed from "@/components/LiveNewsFeed";
 
 export const metadata: Metadata = {
   title: "KAMURA — The Heart of Longevity",
@@ -453,6 +454,9 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      {/* ── Live News Feed ── */}
+      <LiveNewsFeed showMoreLink="/events" />
 
       {/* ── Final CTA — Warm Closing ── */}
       <section className="py-24 md:py-32 bg-[#EDE7DB] dark:bg-[#1A1610] zen-pattern">

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { events, categoryColors, type Event, type EventCategory } from "@/data/events";
 import { news } from "@/data/news";
 import ShareButtons from "@/components/ShareButtons";
+import LiveNewsFeed from "@/components/LiveNewsFeed";
 
 const TODAY = new Date();
 TODAY.setHours(0, 0, 0, 0);
@@ -503,171 +504,15 @@ export default function EventsContent() {
       </section>
 
       {/* Live Wellness News Feed */}
-      <LiveNewsFeed />
+      <LiveNewsFeed
+        maxArticles={9}
+        title="Live Wellness News"
+        subtitle="Latest headlines from around the web — updated automatically"
+      />
     </>
   );
 }
 
-/* ─── Live News Feed Component ─── */
-
-interface RssItem {
-  title: string;
-  link: string;
-  pubDate: string;
-  description: string;
-  source: string;
-}
-
-function LiveNewsFeed() {
-  const [articles, setArticles] = useState<RssItem[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    const feeds = [
-      "https://news.google.com/rss/search?q=wellness+dubai+longevity&hl=en-US&gl=US&ceid=US:en",
-      "https://news.google.com/rss/search?q=biohacking+UAE+health&hl=en-US&gl=US&ceid=US:en",
-    ];
-
-    async function fetchFeeds() {
-      try {
-        const results: RssItem[] = [];
-
-        for (const feedUrl of feeds) {
-          try {
-            const res = await fetch(
-              `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}&count=6`
-            );
-            if (!res.ok) continue;
-            const data = await res.json();
-            if (data.status === "ok" && data.items) {
-              for (const item of data.items) {
-                results.push({
-                  title: item.title || "",
-                  link: item.link || "",
-                  pubDate: item.pubDate || "",
-                  description: (item.description || "").replace(/<[^>]+>/g, "").slice(0, 150),
-                  source: item.author || extractDomain(item.link),
-                });
-              }
-            }
-          } catch {
-            // Skip failed feed
-          }
-        }
-
-        // Deduplicate by title
-        const seen = new Set<string>();
-        const unique = results.filter((item) => {
-          const key = item.title.toLowerCase().slice(0, 50);
-          if (seen.has(key)) return false;
-          seen.add(key);
-          return true;
-        });
-
-        unique.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
-        setArticles(unique.slice(0, 9));
-      } catch {
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchFeeds();
-  }, []);
-
-  if (!loading && articles.length === 0 && !error) return null;
-
-  if (error) {
-    return (
-      <section className="border-t border-gray-100 dark:border-gray-800">
-        <div className="max-w-6xl mx-auto px-6 py-16 text-center">
-          <p className="text-sm text-gray-500 dark:text-gray-500 font-sans">
-            Unable to load live news right now. Check back later.
-          </p>
-        </div>
-      </section>
-    );
-  }
-
-  return (
-    <section className="border-t border-gray-100 dark:border-gray-800">
-      <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
-        <div className="mb-12">
-          <div className="flex items-center gap-3 mb-3">
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl text-gray-900 dark:text-gray-100">
-              Live Wellness News
-            </h2>
-          </div>
-          <p className="text-gray-500 dark:text-gray-400 font-sans">
-            Latest headlines from around the web — updated automatically
-          </p>
-          <div className="w-12 h-px bg-terracotta/40 mt-6" />
-        </div>
-
-        {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 animate-pulse">
-                <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-1/3 mb-4" />
-                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full mb-2" />
-                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-2/3 mb-4" />
-                <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-full" />
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {articles.map((article, i) => (
-              <a
-                key={i}
-                href={article.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-gray-200 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-[#1C1815] hover:shadow-md transition-shadow flex flex-col"
-              >
-                <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-500 font-sans mb-3">
-                  <span className="font-medium text-gray-600 dark:text-gray-400">{article.source}</span>
-                  <span>&middot;</span>
-                  <span>{formatPubDate(article.pubDate)}</span>
-                </div>
-                <h3 className="font-serif text-base text-gray-900 dark:text-gray-100 leading-snug mb-3 flex-1 hover:text-terracotta transition-colors">
-                  {article.title}
-                </h3>
-                {article.description && (
-                  <p className="text-xs text-gray-500 dark:text-gray-400 font-sans leading-relaxed line-clamp-2">
-                    {article.description}
-                  </p>
-                )}
-              </a>
-            ))}
-          </div>
-        )}
-      </div>
-    </section>
-  );
-}
-
-function extractDomain(url: string): string {
-  try {
-    return new URL(url).hostname.replace("www.", "");
-  } catch {
-    return "Source";
-  }
-}
-
-function formatPubDate(dateStr: string): string {
-  try {
-    return new Date(dateStr).toLocaleDateString("en-US", { month: "short", day: "numeric" });
-  } catch {
-    return dateStr;
-  }
-}
 
 /* ─── Event Card Component ─── */
 
