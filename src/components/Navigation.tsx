@@ -100,11 +100,11 @@ export default function Navigation() {
             <Image
               src="/logo-symbol.svg"
               alt=""
-              width={36}
-              height={36}
-              className={`w-9 h-9 transition-all ${scrolled ? "" : "drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"}`}
+              width={44}
+              height={44}
+              className={`w-11 h-11 transition-all ${scrolled ? "" : "drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"}`}
             />
-            <span className={`font-serif text-2xl tracking-[0.15em] transition-colors ${scrolled ? "text-gray-900 dark:text-white" : "text-white"}`}>
+            <span className={`font-serif text-3xl tracking-[0.15em] transition-colors ${scrolled ? "text-gray-900 dark:text-white" : "text-white"}`}>
               KAMURA
             </span>
           </Link>

@@ -11,11 +11,11 @@ export default function Footer() {
             <Image
               src="/logo-symbol.svg"
               alt=""
-              width={32}
-              height={32}
-              className="w-8 h-8"
+              width={40}
+              height={40}
+              className="w-10 h-10"
             />
-            <span className="font-serif text-xl tracking-[0.15em] text-gray-900 dark:text-white">
+            <span className="font-serif text-2xl tracking-[0.15em] text-gray-900 dark:text-white">
               KAMURA
             </span>
           </Link>
