@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { treatments, getScoreColor } from "@/data/treatments";
-import { WELLNESS_GOALS } from "@/data/wellness-goals";
 import { getAllPosts } from "@/lib/blog";
 import InlineSearch from "@/components/InlineSearch";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
@@ -82,7 +81,7 @@ export default function Home() {
             and find the path to your best self.
           </p>
 
-          <div className="max-w-[520px] mx-auto">
+          <div className="max-w-[520px] mx-auto mb-10">
             <InlineSearch
               placeholder="What are you looking for?"
               popularSearches={[
@@ -94,43 +93,46 @@ export default function Home() {
               variant="hero"
             />
           </div>
-        </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-gentle-bounce">
-          <span className="text-xs uppercase tracking-[0.2em] text-white/60 font-sans">
-            Explore
-          </span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-white/60">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </div>
-      </section>
-
-      {/* ── Welcome / Philosophy ── */}
-      <section className="py-24 md:py-36 bg-cream dark:bg-[#14110E] zen-pattern">
-        <FadeInOnScroll>
-          <div className="max-w-2xl mx-auto px-6 text-center">
-            <div className="w-12 h-[1px] bg-terracotta/40 mx-auto mb-8" />
-
-            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-gray-900 dark:text-[#F0EBE2] leading-[1.4] mb-6">
-              We believe wellness should be{" "}
-              <em className="italic text-terracotta dark:text-terracotta">transparent</em>,
-              personal, and rooted in evidence.
-            </h2>
-
-            <p className="text-base text-gray-500 dark:text-[#A89F90] leading-relaxed font-sans max-w-lg mx-auto">
-              KAMURA scores every treatment on research, safety, and real community
-              experience — so you can make informed choices about your health with
-              clarity and confidence.
-            </p>
-
-            <div className="w-12 h-[1px] bg-terracotta/40 mx-auto mt-8" />
+          {/* Quick-action buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Link
+              href="/treatments"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/20 text-white rounded-full font-sans text-sm font-medium transition-all duration-300"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 5H2v7l6.29 6.29c.94.94 2.48.94 3.42 0l4.58-4.58c.94-.94.94-2.48 0-3.42L9 5z" />
+                <circle cx="6" cy="9" r="1" fill="currentColor" />
+              </svg>
+              {treatments.length}+ Treatments
+            </Link>
+            <Link
+              href="/blueprint"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/20 text-white rounded-full font-sans text-sm font-medium transition-all duration-300"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+                <path d="M9 14l2 2 4-4" />
+              </svg>
+              Wellness Checker
+            </Link>
+            <Link
+              href="/quiz"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/20 text-white rounded-full font-sans text-sm font-medium transition-all duration-300"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                <circle cx="12" cy="17" r="0.5" fill="currentColor" />
+              </svg>
+              Take the Quiz
+            </Link>
           </div>
-        </FadeInOnScroll>
+        </div>
       </section>
 
-      {/* ── Discover — Editorial Feature Cards ── */}
+      {/* ── Discover — Three Service Cards ── */}
       <section className="py-20 md:py-28 bg-[#EDE7DB] dark:bg-[#1A1610]">
         <div className="max-w-6xl mx-auto px-6">
           <FadeInOnScroll>
@@ -200,10 +202,10 @@ export default function Home() {
               </Link>
             </FadeInOnScroll>
 
-            {/* Bottom right card — Take the Quiz */}
+            {/* Bottom right card — Read the Journal */}
             <FadeInOnScroll delay={300}>
               <Link
-                href="/quiz"
+                href="/blog"
                 className="group relative block rounded-2xl overflow-hidden aspect-[16/9] hover:shadow-xl transition-all duration-500"
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent z-10" />
@@ -214,10 +216,10 @@ export default function Home() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
                   <h3 className="font-serif text-xl text-white mb-1">
-                    Find Your Match
+                    Read the Journal
                   </h3>
                   <p className="text-sm text-white/70 font-sans">
-                    Answer a few questions and discover treatments aligned to you.
+                    Wellness stories, research deep-dives, and expert insights.
                   </p>
                 </div>
               </Link>
@@ -226,8 +228,132 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Curated Treatments ── */}
+      {/* ── Kamura Score Explainer ── */}
       <section className="py-20 md:py-28 bg-cream dark:bg-[#14110E]">
+        <div className="max-w-6xl mx-auto px-6">
+          <FadeInOnScroll>
+            <div className="text-center mb-14">
+              <p className="text-xs uppercase tracking-[0.2em] text-terracotta font-sans mb-3">
+                Our Methodology
+              </p>
+              <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-[#F0EBE2] mb-4">
+                Every Treatment, Transparently Scored
+              </h2>
+              <p className="text-sm text-gray-500 dark:text-gray-400 font-sans max-w-lg mx-auto leading-relaxed">
+                The Kamura Score combines five weighted factors so you can make informed wellness decisions with confidence. No sponsored rankings, no bias.
+              </p>
+            </div>
+          </FadeInOnScroll>
+
+          {/* Five scoring factors */}
+          <FadeInOnScroll delay={100}>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+              {[
+                {
+                  icon: (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" />
+                      <path d="M8.5 2h7" />
+                    </svg>
+                  ),
+                  name: "Research",
+                  weight: "35%",
+                  desc: "Clinical trials, meta-analyses, peer-reviewed studies",
+                },
+                {
+                  icon: (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                  ),
+                  name: "Community",
+                  weight: "25%",
+                  desc: "400+ real-world reports, sentiment, outcomes",
+                },
+                {
+                  icon: (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      <path d="M9 12l2 2 4-4" />
+                    </svg>
+                  ),
+                  name: "Safety",
+                  weight: "20%",
+                  desc: "Side effects, interactions, long-term safety data",
+                },
+                {
+                  icon: (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="2" y1="12" x2="22" y2="12" />
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                  ),
+                  name: "Access",
+                  weight: "10%",
+                  desc: "Availability in UAE, ease of use, prescriptions",
+                },
+                {
+                  icon: (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="12" y1="1" x2="12" y2="23" />
+                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
+                  ),
+                  name: "Value",
+                  weight: "10%",
+                  desc: "Cost relative to effectiveness and outcomes",
+                },
+              ].map((factor) => (
+                <div
+                  key={factor.name}
+                  className="flex flex-col items-center text-center p-5 rounded-xl bg-white dark:bg-[#201C16] border border-gray-200/40 dark:border-white/[0.06]"
+                >
+                  <div className="text-terracotta mb-3">{factor.icon}</div>
+                  <p className="font-sans text-sm font-semibold text-gray-900 dark:text-[#F0EBE2] mb-0.5">
+                    {factor.name}
+                  </p>
+                  <p className="text-lg font-bold text-terracotta font-sans mb-2">
+                    {factor.weight}
+                  </p>
+                  <p className="text-[11px] text-gray-400 dark:text-gray-500 font-sans leading-snug">
+                    {factor.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </FadeInOnScroll>
+
+          {/* Example score + CTA */}
+          <FadeInOnScroll delay={200}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <div className="flex items-center gap-4">
+                <KamuraScoreBadge score={92} size="lg" showLabel />
+                <div>
+                  <p className="font-sans text-sm font-medium text-gray-900 dark:text-[#F0EBE2]">
+                    Example: Gold Standard
+                  </p>
+                  <p className="text-xs text-gray-400 dark:text-gray-500 font-sans">
+                    Strong evidence + high community validation + good safety
+                  </p>
+                </div>
+              </div>
+              <Link
+                href="/treatments/methodology"
+                className="inline-flex items-center gap-1.5 text-sm font-sans text-moss dark:text-sage hover:underline underline-offset-4"
+              >
+                See full methodology &rarr;
+              </Link>
+            </div>
+          </FadeInOnScroll>
+        </div>
+      </section>
+
+      {/* ── Curated Treatments ── */}
+      <section className="py-20 md:py-28 bg-[#EDE7DB] dark:bg-[#1A1610]">
         <div className="max-w-6xl mx-auto px-6">
           <FadeInOnScroll>
             <div className="flex items-end justify-between mb-12">
@@ -317,35 +443,98 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Wellness Goals — Horizontal Scroll Strip ── */}
-      <section className="py-20 md:py-28 bg-[#EDE7DB] dark:bg-[#1A1610] overflow-hidden">
+      {/* ── Wellness Checker Promo — How It Works ── */}
+      <section className="py-20 md:py-28 bg-cream dark:bg-[#14110E]">
         <div className="max-w-6xl mx-auto px-6">
           <FadeInOnScroll>
-            <p className="text-xs uppercase tracking-[0.2em] text-terracotta font-sans mb-3 text-center">
-              Personalized Paths
-            </p>
-            <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-[#F0EBE2] text-center mb-4">
-              What Are You Seeking?
-            </h2>
-            <p className="text-sm text-gray-500 dark:text-gray-400 font-sans text-center max-w-md mx-auto mb-12">
-              Find the highest-rated treatments for your specific wellness goal.
-            </p>
+            <div className="text-center mb-14">
+              <p className="text-xs uppercase tracking-[0.2em] text-terracotta font-sans mb-3">
+                Personalized For You
+              </p>
+              <h2 className="font-serif text-2xl md:text-3xl text-gray-900 dark:text-[#F0EBE2] mb-4">
+                Your Wellness, Mapped
+              </h2>
+              <p className="text-sm text-gray-500 dark:text-gray-400 font-sans max-w-lg mx-auto leading-relaxed">
+                Get personalized, evidence-based treatment recommendations based on your specific concerns. Our checker analyzes {treatments.length}+ treatments across research, safety, and community data.
+              </p>
+            </div>
           </FadeInOnScroll>
 
+          {/* 3-step flow */}
           <FadeInOnScroll delay={100}>
-            <div className="flex gap-3 overflow-x-auto hide-scrollbar pb-2 -mx-6 px-6 snap-x">
-              {WELLNESS_GOALS.map((goal) => (
-                <Link
-                  key={goal.slug}
-                  href={`/treatments/best-for/${goal.slug}`}
-                  className="flex items-center gap-3 px-6 py-4 rounded-full border border-gray-200/60 dark:border-white/[0.06] bg-white dark:bg-[#201C16] hover:shadow-md hover:border-sage/40 dark:hover:border-sage/20 transition-all duration-300 shrink-0 snap-start group"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {[
+                {
+                  step: "01",
+                  icon: (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="8" r="4" />
+                      <path d="M12 12v8" />
+                      <path d="M8 20h8" />
+                      <path d="M9 16h6" />
+                    </svg>
+                  ),
+                  title: "Select Your Body Zone",
+                  desc: "Tap on the interactive body map to choose the area you want to address.",
+                },
+                {
+                  step: "02",
+                  icon: (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                      <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+                      <path d="M9 14l2 2 4-4" />
+                    </svg>
+                  ),
+                  title: "Pick Your Concerns",
+                  desc: "Choose specific wellness concerns — sleep, pain, energy, stress, and more.",
+                },
+                {
+                  step: "03",
+                  icon: (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                      <line x1="16" y1="13" x2="8" y2="13" />
+                      <line x1="16" y1="17" x2="8" y2="17" />
+                      <polyline points="10 9 9 9 8 9" />
+                    </svg>
+                  ),
+                  title: "Get Your Wellness Report",
+                  desc: "Receive ranked treatments, daily protocols, key studies, and educational insights.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.step}
+                  className="flex flex-col items-center text-center p-6 rounded-xl bg-white dark:bg-[#201C16] border border-gray-200/40 dark:border-white/[0.06]"
                 >
-                  <span className="text-lg">{goal.icon}</span>
-                  <span className="font-sans text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-moss dark:group-hover:text-sage transition-colors whitespace-nowrap">
-                    {goal.label}
-                  </span>
-                </Link>
+                  <p className="text-xs font-bold text-terracotta/50 font-sans mb-3">
+                    STEP {item.step}
+                  </p>
+                  <div className="text-terracotta mb-4">{item.icon}</div>
+                  <h3 className="font-serif text-lg text-gray-900 dark:text-[#F0EBE2] mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 font-sans leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
               ))}
+            </div>
+          </FadeInOnScroll>
+
+          <FadeInOnScroll delay={200}>
+            <div className="text-center">
+              <Link
+                href="/blueprint"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-terracotta hover:bg-terracotta-dark text-white rounded-full font-sans text-sm font-medium transition-colors duration-300"
+              >
+                Try the Wellness Checker
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </Link>
             </div>
           </FadeInOnScroll>
         </div>
@@ -353,7 +542,7 @@ export default function Home() {
 
       {/* ── Stories / Blog — Editorial Magazine Layout ── */}
       {latestPosts.length > 0 && (
-        <section className="py-20 md:py-28 bg-cream dark:bg-[#14110E]">
+        <section className="py-20 md:py-28 bg-[#EDE7DB] dark:bg-[#1A1610]">
           <div className="max-w-6xl mx-auto px-6">
             <FadeInOnScroll>
               <div className="flex items-end justify-between mb-12">
@@ -459,7 +648,7 @@ export default function Home() {
       <LiveNewsFeed showMoreLink="/events" />
 
       {/* ── Final CTA — Warm Closing ── */}
-      <section className="py-24 md:py-32 bg-[#EDE7DB] dark:bg-[#1A1610] zen-pattern">
+      <section className="py-24 md:py-32 bg-cream dark:bg-[#14110E] zen-pattern">
         <FadeInOnScroll>
           <div className="max-w-2xl mx-auto px-6 text-center">
             <div className="w-12 h-[1px] bg-terracotta/40 mx-auto mb-8" />

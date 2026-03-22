@@ -182,11 +182,10 @@ export default function EventsContent() {
             KAMURA Events
           </p>
           <h1 className="text-4xl md:text-6xl font-serif mb-6 leading-tight">
-            Summits, Festivals &amp; Gatherings
+            Wellness &amp; Longevity Events in Dubai
           </h1>
           <p className="text-lg md:text-xl text-white/90 leading-relaxed font-sans">
-            Discover the events shaping wellness in the UAE and beyond — from
-            biohacking summits to sound healing retreats.
+            Your complete guide to wellness events in the UAE — biohacking summits, longevity festivals, health conferences, and retreats.
           </p>
         </div>
       </section>
