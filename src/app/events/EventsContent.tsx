@@ -420,6 +420,30 @@ export default function EventsContent() {
         </section>
       )}
 
+      {/* Cross-links to other sections */}
+      <section className="border-t border-gray-100 dark:border-gray-800 bg-zen-mist/30 dark:bg-forest/5">
+        <div className="max-w-6xl mx-auto px-6 py-16">
+          <p className="text-xs uppercase tracking-widest text-gray-400 dark:text-gray-500 font-sans mb-6 text-center">Explore KAMURA</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link href="/treatments" className="block p-6 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-[#1C1815] hover:border-terracotta/40 transition-colors text-center">
+              <span className="text-3xl mb-2 block">🔬</span>
+              <span className="font-serif text-lg text-gray-900 dark:text-gray-100 block mb-1">Browse Treatments</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400 font-sans">100+ treatments scored on evidence</span>
+            </Link>
+            <Link href="/blueprint" className="block p-6 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-[#1C1815] hover:border-terracotta/40 transition-colors text-center">
+              <span className="text-3xl mb-2 block">🩺</span>
+              <span className="font-serif text-lg text-gray-900 dark:text-gray-100 block mb-1">Wellness Checker</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400 font-sans">Personalized treatment recommendations</span>
+            </Link>
+            <Link href="/explore" className="block p-6 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-[#1C1815] hover:border-terracotta/40 transition-colors text-center">
+              <span className="text-3xl mb-2 block">📍</span>
+              <span className="font-serif text-lg text-gray-900 dark:text-gray-100 block mb-1">Find Clinics</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400 font-sans">70+ wellness centers in Dubai & UAE</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Submit Your Event CTA */}
       <section className="border-t border-gray-100 dark:border-gray-800">
         <div className="max-w-4xl mx-auto px-6 py-16 text-center">

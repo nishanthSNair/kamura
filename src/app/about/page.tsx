@@ -4,9 +4,24 @@ import { listings } from "@/data/listings";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 
 export const metadata: Metadata = {
-  title: "About KAMURA — Longevity & Wellness Platform in Dubai",
+  title: "About KAMURA — Longevity & Wellness Intelligence Platform in Dubai",
   description:
-    "KAMURA is Dubai's longevity & wellness discovery platform. Inspired by the Japanese tortoise (Kame, 亀), we curate clinics, studios, and retreats across the UAE.",
+    "KAMURA is Dubai's longevity & wellness discovery platform. Evidence-based treatment scoring, 100+ treatments ranked, 70+ clinics curated. Inspired by the Japanese tortoise (Kame, 亀).",
+  keywords: [
+    "KAMURA",
+    "kamuralife",
+    "wellness platform Dubai",
+    "longevity platform",
+    "wellness intelligence",
+    "treatment scoring platform",
+    "Kamura Score",
+    "unbiased wellness",
+    "wellness discovery Dubai",
+    "longevity Dubai",
+  ],
+  alternates: {
+    canonical: "https://kamuralife.com/about",
+  },
   openGraph: {
     title: "About KAMURA",
     description:

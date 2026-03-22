@@ -26,6 +26,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.excerpt,
+    keywords: [
+      post.category?.toLowerCase(),
+      "wellness guide",
+      "longevity",
+      "biohacking",
+    ].filter(Boolean),
+    alternates: {
+      canonical: `https://kamuralife.com/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,

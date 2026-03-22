@@ -2,9 +2,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Kamura Score Methodology",
+  title: "Kamura Score Methodology — How We Score Treatments",
   description:
-    "How the Kamura Score works — a transparent, 5-factor composite scoring system for wellness treatments. Research evidence, community validation, safety, accessibility, and value.",
+    "How the Kamura Score works — a transparent, 5-factor composite scoring system for wellness treatments. Research evidence (35%), community validation (25%), safety (20%), accessibility (10%), and value (10%). Zero bias.",
+  keywords: [
+    "Kamura Score",
+    "treatment scoring methodology",
+    "wellness treatment ratings",
+    "evidence-based scoring",
+    "treatment safety rating",
+    "unbiased wellness ratings",
+    "wellness treatment evidence",
+    "treatment ranking system",
+  ],
+  alternates: {
+    canonical: "https://kamuralife.com/treatments/methodology",
+  },
   openGraph: {
     title: "Kamura Score Methodology | KAMURA",
     description:
@@ -110,11 +123,23 @@ const evidenceLevels = [
 export default function MethodologyPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
-      { "@type": "ListItem", position: 2, name: "Treatments", item: "https://kamuralife.com/treatments" },
-      { "@type": "ListItem", position: 3, name: "Methodology" },
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: "How the Kamura Score Works",
+        description: "A transparent, 5-factor composite scoring system for wellness treatments. Research evidence, community validation, safety, accessibility, and value.",
+        url: "https://kamuralife.com/treatments/methodology",
+        author: { "@type": "Organization", name: "KAMURA", url: "https://kamuralife.com" },
+        publisher: { "@type": "Organization", name: "KAMURA", url: "https://kamuralife.com" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+          { "@type": "ListItem", position: 2, name: "Treatments", item: "https://kamuralife.com/treatments" },
+          { "@type": "ListItem", position: 3, name: "Methodology" },
+        ],
+      },
     ],
   };
 

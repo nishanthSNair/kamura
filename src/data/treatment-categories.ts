@@ -122,6 +122,16 @@ export const CATEGORY_META: CategoryMeta[] = [
     seoDescription: "Explore detox and functional medicine treatments scored on evidence and safety. Liver cleanse, coffee enema, colon hydrotherapy, and more.",
     imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
   },
+  {
+    slug: "exercise-fitness",
+    name: "Exercise & Fitness",
+    shortLabel: "Exercise",
+    icon: "\u{1F3CB}",
+    description: "Evidence-based exercise modalities for longevity, strength, cardiovascular health, and metabolic optimization. Includes Zone 2 training, HIIT, resistance training, and more.",
+    seoTitle: "Exercise & Fitness Treatments — Scored & Ranked",
+    seoDescription: "Explore exercise and fitness modalities scored on longevity research and health outcomes. Zone 2 cardio, HIIT, resistance training, walking, and more.",
+    imageUrl: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=80",
+  },
 ];
 
 export function getCategoryBySlug(slug: string): CategoryMeta | undefined {

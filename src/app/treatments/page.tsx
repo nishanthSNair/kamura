@@ -6,7 +6,32 @@ import TreatmentsContent from "./TreatmentsContent";
 export const metadata: Metadata = {
   title: `${treatments.length} Wellness Treatments Scored & Ranked | KAMURA`,
   description:
-    `The world's first unbiased wellness treatment index. ${treatments.length} treatments across 11 categories scored on research evidence, community validation, safety, accessibility, and value. Transparent methodology, zero bias.`,
+    `The world's first unbiased wellness treatment index. ${treatments.length} treatments across 12 categories — peptides, NAD+, red light therapy, semaglutide, cryotherapy, HBOT & more — scored on research evidence, safety, and community data.`,
+  keywords: [
+    "wellness treatments",
+    "treatment rankings",
+    "peptide therapy",
+    "BPC-157",
+    "NAD+ therapy",
+    "red light therapy",
+    "semaglutide",
+    "tirzepatide",
+    "GLP-1 weight loss",
+    "cryotherapy",
+    "hyperbaric oxygen therapy",
+    "stem cell therapy",
+    "biohacking treatments",
+    "longevity supplements",
+    "treatment comparison",
+    "Kamura Score",
+    "evidence-based treatments",
+    "hormone therapy",
+    "IV therapy",
+    "exercise for longevity",
+  ],
+  alternates: {
+    canonical: "https://kamuralife.com/treatments",
+  },
   openGraph: {
     title: `Treatment Index — ${treatments.length} Treatments | KAMURA`,
     description:

@@ -46,13 +46,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
+    keywords: [
+      `${t1.name} vs ${t2.name}`,
+      `${t1.name.toLowerCase()} comparison`,
+      `${t2.name.toLowerCase()} comparison`,
+      "treatment comparison",
+      "wellness treatment comparison",
+    ],
     openGraph: {
       title: `${title} | KAMURA`,
       description,
       url: `https://kamuralife.com/treatments/compare/${slugPair}`,
     },
     alternates: {
-      canonical: `/treatments/compare/${slugPair}`,
+      canonical: `https://kamuralife.com/treatments/compare/${slugPair}`,
     },
   };
 }

@@ -3,9 +3,26 @@ import { getAllPosts } from "@/lib/blog";
 import BlogGrid from "../BlogGrid";
 
 export const metadata: Metadata = {
-  title: "Wellness Blog — Guides, Science & Trends",
+  title: "Wellness Blog — Longevity Guides, Biohacking Science & Trends",
   description:
-    "Read expert guides on longevity clinics, biohacking, holistic healing, and wellness trends in Dubai and the UAE. Practical tips, prices, and recommendations.",
+    "Expert guides on peptide therapy, NAD+ infusions, red light therapy, biohacking, Ayurveda, and wellness trends in Dubai. Evidence-based longevity articles with practical tips.",
+  keywords: [
+    "wellness blog",
+    "longevity guides",
+    "biohacking blog",
+    "peptide therapy guide",
+    "NAD+ benefits",
+    "red light therapy guide",
+    "wellness Dubai blog",
+    "holistic healing",
+    "Ayurveda Dubai",
+    "biohacking tips",
+    "longevity science",
+    "wellness trends 2026",
+  ],
+  alternates: {
+    canonical: "https://kamuralife.com/blog",
+  },
   openGraph: {
     title: "Wellness Blog | KAMURA",
     description:

@@ -4,11 +4,25 @@ import type { BlogPostSummary } from "@/data/wellness-checker";
 import WellnessCheckerApp from "./WellnessCheckerApp";
 
 export const metadata: Metadata = {
-  title: "Wellness Checker | KAMURA",
+  title: "Wellness Checker — Personalized Treatment Recommendations | KAMURA",
   description:
-    "Select your wellness concerns on our interactive body map and get a personalized wellness report with evidence-based treatment recommendations, daily protocols, and educational insights.",
+    "Free interactive wellness checker. Select concerns on our body map and get a personalized report with evidence-based treatment recommendations — peptides, supplements, red light therapy, and more.",
+  keywords: [
+    "wellness checker",
+    "wellness assessment",
+    "personalized treatment recommendations",
+    "body map health",
+    "wellness report",
+    "treatment finder",
+    "health recommendations",
+    "evidence-based wellness",
+    "longevity recommendations",
+    "biohacking recommendations",
+    "peptide therapy recommendations",
+    "wellness tool",
+  ],
   openGraph: {
-    title: "Wellness Checker | KAMURA",
+    title: "Wellness Checker — Personalized Recommendations | KAMURA",
     description:
       "Interactive wellness checker. Tap your body, pick your concerns, get a comprehensive wellness report backed by research.",
     url: "https://kamuralife.com/blueprint",
@@ -22,7 +36,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "/blueprint",
+    canonical: "https://kamuralife.com/blueprint",
   },
 };
 
@@ -38,5 +52,45 @@ export default function BlueprintPage() {
     relatedTreatments: p.relatedTreatments,
   }));
 
-  return <WellnessCheckerApp blogPosts={blogPosts} />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        name: "KAMURA Wellness Checker",
+        url: "https://kamuralife.com/blueprint",
+        description:
+          "Interactive body-map wellness checker that provides personalized, evidence-based treatment recommendations across 100+ treatments.",
+        applicationCategory: "HealthApplication",
+        operatingSystem: "Any",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+        },
+        provider: {
+          "@type": "Organization",
+          name: "KAMURA",
+          url: "https://kamuralife.com",
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+          { "@type": "ListItem", position: 2, name: "Wellness Checker", item: "https://kamuralife.com/blueprint" },
+        ],
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <WellnessCheckerApp blogPosts={blogPosts} />
+    </>
+  );
 }

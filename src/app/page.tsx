@@ -9,8 +9,32 @@ import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
 import LiveNewsFeed from "@/components/LiveNewsFeed";
 
 export const metadata: Metadata = {
-  title: "KAMURA — The Heart of Longevity",
-  description: `The world's first unbiased wellness intelligence platform. Search ${treatments.length}+ treatments scored on evidence, safety, and community data. Zero bias.`,
+  title: "KAMURA — The Heart of Longevity | Wellness Intelligence Platform",
+  description: `The world's first unbiased wellness intelligence platform. Search ${treatments.length}+ treatments — peptides, NAD+, red light therapy, GLP-1 & more — scored on evidence, safety, and community data. Discover longevity clinics in Dubai.`,
+  keywords: [
+    "wellness platform",
+    "longevity treatments",
+    "biohacking Dubai",
+    "peptide therapy",
+    "NAD+ therapy",
+    "red light therapy",
+    "semaglutide",
+    "GLP-1 weight loss",
+    "wellness Dubai",
+    "longevity clinic Dubai",
+    "treatment scoring",
+    "Kamura Score",
+    "evidence-based wellness",
+    "wellness checker",
+    "biohacking treatments",
+    "cryotherapy",
+    "HBOT hyperbaric oxygen",
+    "stem cell therapy Dubai",
+    "wellness intelligence",
+  ],
+  alternates: {
+    canonical: "https://kamuralife.com",
+  },
 };
 
 export default function Home() {

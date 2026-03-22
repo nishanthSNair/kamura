@@ -20,6 +20,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${listing.name} — ${listing.tagline}`,
     description: listing.description,
+    keywords: [
+      listing.category.toLowerCase(),
+      listing.city.toLowerCase(),
+      ...listing.services.slice(0, 5).map((s) => s.toLowerCase()),
+      "wellness Dubai",
+    ],
+    alternates: {
+      canonical: `https://kamuralife.com/explore/${listing.id}`,
+    },
     openGraph: {
       title: `${listing.name} | KAMURA`,
       description: listing.description,

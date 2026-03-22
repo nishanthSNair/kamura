@@ -20,10 +20,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cat = getCategoryBySlug(slug);
   if (!cat) return {};
 
-  const count = treatments.filter((t) => t.category === cat.name).length;
+  const catTreatments = treatments.filter((t) => t.category === cat.name);
   return {
-    title: `${cat.seoTitle} | ${count} Treatments | KAMURA`,
+    title: `${cat.seoTitle} | ${catTreatments.length} Treatments | KAMURA`,
     description: cat.seoDescription,
+    keywords: [
+      cat.name.toLowerCase(),
+      `${cat.shortLabel.toLowerCase()} treatments`,
+      ...catTreatments.slice(0, 5).map((t) => t.name.toLowerCase()),
+    ],
+    alternates: {
+      canonical: `https://kamuralife.com/treatments/category/${slug}`,
+    },
     openGraph: {
       title: `${cat.seoTitle} | KAMURA`,
       description: cat.seoDescription,

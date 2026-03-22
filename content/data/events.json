@@ -360,6 +360,101 @@
         "Hands-on biohacking workshops and experiential health zones",
         "International longevity researchers and community practitioners"
       ]
+    },
+    {
+      "id": "apex-biohacking-masters-expo-2026",
+      "title": "Apex Biohacking Masters Expo 2026",
+      "subtitle": "A four-day biohacking, biotech, beauty, longevity, and wellness exhibition with expert seminars led by global authorities in regenerative medicine and performance science.",
+      "dates": "April 11–14, 2026",
+      "dateStart": "2026-04-11",
+      "dateEnd": "2026-04-14",
+      "location": "Dubai, UAE",
+      "category": "Biohacking",
+      "attendees": "2,000+",
+      "speakers": "30+",
+      "price": "TBC",
+      "website": "https://www.eventbrite.com/e/apex-biohacking-masters-expos-in-dubai-uae-tickets-1577645743889",
+      "highlights": [
+        "Days 1–3: Industry & business focus — professional exhibitions and B2B meetings",
+        "Biohacking, biotech, beauty, longevity & wellness sectors under one roof",
+        "Expert seminars by global authorities in regenerative medicine, performance science & biotech innovation"
+      ]
+    },
+    {
+      "id": "wellbeing-at-work-summit-2026",
+      "title": "Wellbeing at Work Summit Middle East 2026",
+      "subtitle": "Corporate wellness leaders and HR innovators exploring workplace wellbeing strategies, mental health in the workplace, and employee performance optimization.",
+      "dates": "January 29, 2026",
+      "dateStart": "2026-01-29",
+      "dateEnd": "2026-01-29",
+      "location": "Standard Chartered Office, Dubai",
+      "category": "Wellness Festival",
+      "attendees": "300+",
+      "speakers": "15+",
+      "price": "Registration required",
+      "website": "https://wellbeingatwork.world",
+      "highlights": [
+        "Corporate wellness strategies, mental health, and employee performance",
+        "HR leaders, wellness practitioners, and workplace health innovators",
+        "Panel discussions on burnout prevention, resilience, and holistic employee care"
+      ]
+    },
+    {
+      "id": "dubai-desert-wellness-retreat-2026",
+      "title": "Dubai Desert Wellness Retreat 2026",
+      "subtitle": "An immersive desert wellness experience combining yoga, sound healing, breathwork, and mindfulness in the Arabian dunes.",
+      "dates": "March 20–22, 2026",
+      "dateStart": "2026-03-20",
+      "dateEnd": "2026-03-22",
+      "location": "Al Marmoom Desert Conservation Reserve, Dubai",
+      "category": "Wellness Festival",
+      "attendees": "200+",
+      "speakers": "10+",
+      "price": "From AED 1,200",
+      "website": "https://kamuralife.com/events",
+      "highlights": [
+        "Sunrise yoga, sound healing, and guided meditation in the Arabian desert",
+        "Breathwork workshops, ice bath sessions, and nature immersion",
+        "Farm-to-table wellness meals and community bonding under the stars"
+      ]
+    },
+    {
+      "id": "gulf-functional-medicine-conference-2026",
+      "title": "Gulf Functional Medicine Conference 2026",
+      "subtitle": "Leading functional and integrative medicine practitioners sharing the latest in root-cause medicine, gut health, and personalized nutrition.",
+      "dates": "May 15–16, 2026",
+      "dateStart": "2026-05-15",
+      "dateEnd": "2026-05-16",
+      "location": "Jumeirah Emirates Towers, Dubai",
+      "category": "Health & MedTech",
+      "attendees": "800+",
+      "speakers": "25+",
+      "price": "From AED 750",
+      "website": "https://kamuralife.com/events",
+      "highlights": [
+        "Root-cause medicine, gut microbiome, and personalized nutrition protocols",
+        "Functional lab testing workshops and clinical case studies",
+        "Networking with integrative medicine practitioners across the Gulf region"
+      ]
+    },
+    {
+      "id": "uae-yoga-festival-2026",
+      "title": "UAE Yoga Festival 2026",
+      "subtitle": "A celebration of yoga and mindfulness — featuring master teachers, diverse yoga styles, meditation, and wellness workshops.",
+      "dates": "September 18–20, 2026",
+      "dateStart": "2026-09-18",
+      "dateEnd": "2026-09-20",
+      "location": "Hatta, Dubai",
+      "category": "Fitness",
+      "attendees": "1,500+",
+      "speakers": "20+",
+      "price": "From AED 350",
+      "website": "https://kamuralife.com/events",
+      "highlights": [
+        "Hatha, vinyasa, kundalini, yin, and acroyoga with international teachers",
+        "Meditation, pranayama, and sound healing sessions in Hatta's mountain setting",
+        "Wellness marketplace, plant-based food stalls, and community connection"
+      ]
     }
   ]
 }

@@ -26,6 +26,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${goal.seoTitle} | ${matching.length} Treatments`,
     description: goal.seoDescription,
+    keywords: [
+      `best treatments for ${goal.slug.replace(/-/g, " ")}`,
+      `${goal.slug.replace(/-/g, " ")} treatments`,
+      `${goal.slug.replace(/-/g, " ")} longevity`,
+      ...matching.slice(0, 5).map((t) => t.name.toLowerCase()),
+    ],
     openGraph: {
       title: `${goal.seoTitle} | KAMURA`,
       description: goal.seoDescription,
@@ -33,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: goal.imageUrl, width: 1200, height: 630 }],
     },
     alternates: {
-      canonical: `/treatments/best-for/${goal.slug}`,
+      canonical: `https://kamuralife.com/treatments/best-for/${goal.slug}`,
     },
   };
 }

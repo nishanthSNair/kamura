@@ -41,6 +41,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${t.name} — Kamura Score: ${t.kamuraScore} (${tier})`,
     description: `${t.description} Evidence level: ${t.evidenceLevel}. ${t.communityReports}+ community reports. ${t.keyStudies.length} key studies cited.`,
+    keywords: [
+      t.name.toLowerCase(),
+      `${t.name.toLowerCase()} benefits`,
+      `${t.name.toLowerCase()} side effects`,
+      `${t.name.toLowerCase()} review`,
+      t.category.toLowerCase(),
+      ...t.tags.map((tag) => tag.toLowerCase()),
+    ],
+    alternates: {
+      canonical: `https://kamuralife.com/treatments/${slug}`,
+    },
     openGraph: {
       title: `${t.name} | Kamura Score: ${t.kamuraScore} | KAMURA`,
       description: t.description,

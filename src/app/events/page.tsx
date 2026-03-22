@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "kamura events",
   ],
   alternates: {
-    canonical: "/events",
+    canonical: "https://kamuralife.com/events",
   },
   openGraph: {
     title: "Wellness & Longevity Events in Dubai 2025–2026",

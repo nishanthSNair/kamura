@@ -19,8 +19,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!event) return {};
 
   return {
-    title: event.title,
+    title: `${event.title} — ${event.location}`,
     description: event.subtitle,
+    keywords: [
+      "wellness event",
+      "longevity event",
+      event.category.toLowerCase(),
+      event.location.toLowerCase(),
+      "wellness events Dubai",
+    ],
+    alternates: {
+      canonical: `https://kamuralife.com/events/${event.id}`,
+    },
     openGraph: {
       title: `${event.title} | KAMURA`,
       description: event.subtitle,
@@ -237,6 +247,27 @@ export default async function EventPage({ params }: Props) {
             </div>
           </section>
         )}
+
+        {/* Cross-links — internal linking */}
+        <section className="border-t border-gray-100 dark:border-gray-800">
+          <div className="max-w-3xl mx-auto px-6 py-12">
+            <p className="text-xs uppercase tracking-widest text-gray-400 dark:text-gray-500 font-sans mb-4">Explore More</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <Link href="/treatments" className="block p-4 border border-gray-200 dark:border-gray-700 rounded-xl hover:border-terracotta/40 transition-colors text-center">
+                <span className="text-2xl mb-1 block">🔬</span>
+                <span className="text-sm font-sans font-medium text-gray-700 dark:text-gray-300">Browse Treatments</span>
+              </Link>
+              <Link href="/blueprint" className="block p-4 border border-gray-200 dark:border-gray-700 rounded-xl hover:border-terracotta/40 transition-colors text-center">
+                <span className="text-2xl mb-1 block">🩺</span>
+                <span className="text-sm font-sans font-medium text-gray-700 dark:text-gray-300">Wellness Checker</span>
+              </Link>
+              <Link href="/explore" className="block p-4 border border-gray-200 dark:border-gray-700 rounded-xl hover:border-terracotta/40 transition-colors text-center">
+                <span className="text-2xl mb-1 block">📍</span>
+                <span className="text-sm font-sans font-medium text-gray-700 dark:text-gray-300">Find Clinics</span>
+              </Link>
+            </div>
+          </div>
+        </section>
 
         {/* Back Link */}
         <div className="max-w-3xl mx-auto px-6 py-12 text-center">

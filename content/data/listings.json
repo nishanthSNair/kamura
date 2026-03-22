@@ -1198,6 +1198,108 @@
         "Breathwork Sessions",
         "Detox Programs"
       ]
+    },
+    {
+      "id": "contrast-wellness",
+      "name": "Contrast Wellness",
+      "tagline": "Dubai's leading contrast therapy studios",
+      "description": "Private Finnish sauna suites paired with glacier-cold ice bath plunges, enhanced with red light therapy and NormaTec compression. Four locations across Dubai.",
+      "location": "Dubai Creek Harbour, City Walk, JVC, Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://www.contrast-wellness.com/",
+      "services": [
+        "Contrast Therapy",
+        "Finnish Sauna",
+        "Ice Baths",
+        "Red Light Therapy",
+        "Compression Therapy"
+      ]
+    },
+    {
+      "id": "novomed-functional-medicine",
+      "name": "Novomed Centers",
+      "tagline": "Multi-specialty healthcare with functional medicine",
+      "description": "Leading healthcare group offering functional medicine, biohacking protocols, healthy aging programs, and integrative health across multiple UAE locations.",
+      "location": "Multiple locations",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://www.novomed.com/",
+      "services": [
+        "Functional Medicine",
+        "Biohacking",
+        "Healthy Aging",
+        "Regenerative Medicine",
+        "Integrative Health"
+      ]
+    },
+    {
+      "id": "wellth-integrative",
+      "name": "Wellth Clinic",
+      "tagline": "Dubai's first integrative medicine hub",
+      "description": "A holistic medical centre combining Ayurveda, Chinese medicine, chiropractic, functional medicine, physiotherapy, yoga, and Pilates under one roof.",
+      "location": "Jumeirah 2, Al Wasl Road",
+      "city": "Dubai",
+      "category": "Holistic & Healing",
+      "website": "https://wellth.ae/",
+      "services": [
+        "Ayurveda",
+        "Chinese Medicine",
+        "Chiropractic",
+        "Functional Medicine",
+        "Yoga & Pilates"
+      ]
+    },
+    {
+      "id": "biolite-healthness",
+      "name": "Biolite Healthness",
+      "tagline": "Dubai's first day retreat",
+      "description": "A regenerative medicine and holistic healthcare center combining advanced diagnostics, anti-aging treatments, and restorative wellness in a resort-like day retreat setting.",
+      "location": "Jumeirah",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://www.biolitedubai.com/",
+      "services": [
+        "Regenerative Medicine",
+        "Anti-Aging",
+        "IV Therapy",
+        "Diagnostics",
+        "Holistic Wellness"
+      ]
+    },
+    {
+      "id": "limitless-human",
+      "name": "Limitless Human",
+      "tagline": "Human optimization center",
+      "description": "Advanced diagnostics, biohacking protocols, and longevity science for peak human performance. Personalized optimization plans based on cutting-edge biomarker testing.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://limitlesshuman.ae/",
+      "services": [
+        "Advanced Diagnostics",
+        "Biohacking",
+        "Longevity Protocols",
+        "Biomarker Testing",
+        "Performance Optimization"
+      ]
+    },
+    {
+      "id": "hundred-wellness",
+      "name": "The Hundred Wellness Centre",
+      "tagline": "Pioneering wellness since 2008",
+      "description": "Founded by Emirati Asma Hilal Lootah, one of Dubai's original wellness destinations offering Pilates, yoga, physiotherapy, nutrition, and holistic health under one roof.",
+      "location": "Jumeirah",
+      "city": "Dubai",
+      "category": "Yoga & Movement",
+      "website": "https://www.thehundred.ae/",
+      "services": [
+        "Pilates",
+        "Yoga",
+        "Physiotherapy",
+        "Nutrition",
+        "Holistic Health"
+      ]
     }
   ]
 }
