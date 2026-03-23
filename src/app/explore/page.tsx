@@ -3,9 +3,9 @@ import { listings } from "@/data/listings";
 import ExploreContent from "./ExploreContent";
 
 export const metadata: Metadata = {
-  title: `Explore ${listings.length}+ Wellness Clinics & Centers in Dubai & UAE`,
+  title: `Explore ${listings.length}+ Wellness, Fitness & Sports Centers in Dubai & UAE`,
   description:
-    `Browse ${listings.length}+ curated longevity clinics, biohacking studios, peptide therapy centers, IV drip lounges, holistic healers, yoga studios, and wellness retreats across Dubai, Abu Dhabi, and Sharjah.`,
+    `Browse ${listings.length}+ curated longevity clinics, biohacking studios, padel courts, gyms, boxing gyms, yoga studios, outdoor adventures, and wellness retreats across Dubai, Abu Dhabi, and the UAE.`,
   keywords: [
     "wellness clinics Dubai",
     "longevity clinic Dubai",
@@ -22,6 +22,22 @@ export const metadata: Metadata = {
     "functional medicine Dubai",
     "Ayurveda Dubai",
     "red light therapy Dubai",
+    "padel Dubai",
+    "padel courts Dubai",
+    "pickleball Dubai",
+    "best gym Dubai",
+    "CrossFit Dubai",
+    "Pilates studio Dubai",
+    "boxing gym Dubai",
+    "MMA Dubai",
+    "BJJ Dubai",
+    "Muay Thai Dubai",
+    "kayaking Dubai",
+    "diving Dubai",
+    "rock climbing Dubai",
+    "cycling Dubai",
+    "running clubs Dubai",
+    "outdoor fitness Dubai",
   ],
   alternates: {
     canonical: "https://kamuralife.com/explore",
@@ -29,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Explore Wellness Centers | KAMURA",
     description:
-      `${listings.length}+ curated longevity clinics, biohacking studios, holistic healers, and wellness retreats across the UAE.`,
+      `${listings.length}+ curated longevity clinics, biohacking studios, gyms, padel courts, boxing gyms, and wellness retreats across the UAE.`,
     url: "https://kamuralife.com/explore",
     images: [
       {

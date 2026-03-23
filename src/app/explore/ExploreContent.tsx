@@ -6,19 +6,11 @@ import {
   listings,
   listingCategoryColors,
   categoryDescriptions,
+  ALL_LISTING_CATEGORIES,
   type ListingCategory,
   type Listing,
 } from "@/data/listings";
 import { areas } from "@/data/areas";
-
-const ALL_CATEGORIES: ListingCategory[] = [
-  "Longevity Clinics",
-  "Biohacking & Performance",
-  "Holistic & Healing",
-  "Yoga & Movement",
-  "Wellness Retreats & Spas",
-  "Nutrition & Supplements",
-];
 
 export default function ExploreContent() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
@@ -43,8 +35,8 @@ export default function ExploreContent() {
 
   const categoriesToShow =
     activeCategory === "All"
-      ? ALL_CATEGORIES
-      : ALL_CATEGORIES.filter((c) => c === activeCategory);
+      ? ALL_LISTING_CATEGORIES
+      : ALL_LISTING_CATEGORIES.filter((c) => c === activeCategory);
 
   function getListingsForCategory(category: ListingCategory): Listing[] {
     return listings.filter((l) => l.category === category);
@@ -80,8 +72,8 @@ export default function ExploreContent() {
             Explore Wellness in the UAE
           </h1>
           <p className="text-lg md:text-xl text-white/90 leading-relaxed font-sans">
-            Curated experts, clinics, studios &amp; retreats — handpicked for
-            your longevity journey.
+            Curated clinics, gyms, studios, courts &amp; retreats — handpicked
+            for your wellness &amp; fitness journey.
           </p>
         </div>
       </section>
@@ -113,7 +105,7 @@ export default function ExploreContent() {
       <section className="sticky top-[65px] z-40 bg-cream/95 dark:bg-[#14110E]/95 backdrop-blur-sm border-b border-sage-light/60 dark:border-forest/30">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex gap-2 overflow-x-auto no-scrollbar">
-            {["All", ...ALL_CATEGORIES].map((cat) => (
+            {["All", ...ALL_LISTING_CATEGORIES].map((cat) => (
               <button
                 key={cat}
                 onClick={() => scrollToCategory(cat)}

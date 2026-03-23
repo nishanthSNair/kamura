@@ -59,6 +59,13 @@ export const metadata: Metadata = {
     "functional medicine dubai",
     "hormone therapy dubai",
     "testosterone therapy UAE",
+    "padel Dubai",
+    "best gym Dubai",
+    "boxing gym Dubai",
+    "CrossFit Dubai",
+    "MMA Dubai",
+    "kayaking Dubai",
+    "outdoor fitness Dubai",
   ],
   icons: {
     icon: [

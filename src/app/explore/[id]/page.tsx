@@ -70,6 +70,10 @@ export default async function ListingPage({ params }: Props) {
     "Yoga & Movement": ["yoga", "pilates", "movement", "meditation"],
     "Wellness Retreats & Spas": ["retreat", "spa", "wellness retreat", "detox"],
     "Nutrition & Supplements": ["nutrition", "supplements", "bone broth", "kombucha", "organic", "superfoods"],
+    "Padel & Racquet Sports": ["padel", "pickleball", "racquet", "tennis", "squash", "sports court"],
+    "Gyms & Fitness Studios": ["gym", "fitness", "CrossFit", "pilates", "HIIT", "strength", "cycling", "workout"],
+    "Combat & Martial Arts": ["boxing", "MMA", "martial arts", "BJJ", "jiu-jitsu", "muay thai", "kickboxing"],
+    "Outdoor & Adventure": ["outdoor", "kayaking", "diving", "surfing", "cycling", "running", "climbing", "hiking"],
   };
   const keywords = categoryKeywords[listing.category] || [];
   const relatedPosts = allPosts

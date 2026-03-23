@@ -4,21 +4,12 @@ import { notFound } from "next/navigation";
 import { areas, getListingsForArea } from "@/data/areas";
 import {
   listingCategoryColors,
-  type ListingCategory,
+  ALL_LISTING_CATEGORIES,
 } from "@/data/listings";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
-
-const ALL_CATEGORIES: ListingCategory[] = [
-  "Longevity Clinics",
-  "Biohacking & Performance",
-  "Holistic & Healing",
-  "Yoga & Movement",
-  "Wellness Retreats & Spas",
-  "Nutrition & Supplements",
-];
 
 export function generateStaticParams() {
   return areas.map((area) => ({ slug: area.slug }));
@@ -55,7 +46,7 @@ export default async function AreaPage({ params }: Props) {
   const areaListings = getListingsForArea(area);
 
   // Group listings by category
-  const categoriesWithListings = ALL_CATEGORIES.filter((cat) =>
+  const categoriesWithListings = ALL_LISTING_CATEGORIES.filter((cat) =>
     areaListings.some((l) => l.category === cat)
   );
 

@@ -1300,6 +1300,908 @@
         "Nutrition",
         "Holistic Health"
       ]
+    },
+    {
+      "id": "just-padel",
+      "name": "Just Padel",
+      "tagline": "Dubai's largest padel court network",
+      "description": "Just Padel operates multiple padel courts across Dubai at Kite Beach, Mina Rashid, and Dubai South. Ideal for beginners and seasoned players with flexible booking, coaching programs, and social leagues.",
+      "location": "Kite Beach, Mina Rashid & Dubai South",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://justpadel.ae/",
+      "featured": true,
+      "services": [
+        "Padel Courts",
+        "Coaching",
+        "Leagues & Tournaments",
+        "Equipment Rental",
+        "Social Play"
+      ]
+    },
+    {
+      "id": "central-padel",
+      "name": "Central Padel",
+      "tagline": "Professional-grade padel with international standards",
+      "description": "Central Padel is internationally recognised for its professional coaching and competitive play. Indoor and outdoor courts, regular tournaments, and structured training programs for all levels.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://centralpadel.com/",
+      "services": [
+        "Indoor Courts",
+        "Outdoor Courts",
+        "Professional Coaching",
+        "Tournaments",
+        "Academy Programs"
+      ]
+    },
+    {
+      "id": "redline-padel-club",
+      "name": "Redline Padel Club",
+      "tagline": "Lifestyle-driven padel destination in Dubai",
+      "description": "Redline Padel Club stands out as one of Dubai's most lifestyle-driven padel destinations with consistent court conditions, professional coaching staff, an active tournament calendar, and vibrant social atmosphere.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://www.redlinesportsclub.com/",
+      "services": [
+        "Padel Courts",
+        "Coaching",
+        "Tournaments",
+        "Social Events",
+        "Pro Shop"
+      ]
+    },
+    {
+      "id": "matcha-club",
+      "name": "Matcha Club",
+      "tagline": "Padel, yoga, and café culture in Al Quoz",
+      "description": "Matcha Club in Al Quoz features six outdoor padel courts alongside yoga studios for post-game stretching and a Nette café serving Japanese-European breakfast. A unique wellness-meets-sport experience.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://matchaclub.ae/",
+      "services": [
+        "Padel Courts",
+        "Yoga Studio",
+        "Café",
+        "Social Play",
+        "Coaching"
+      ]
+    },
+    {
+      "id": "club-padel",
+      "name": "Club Padel",
+      "tagline": "Indoor and outdoor padel courts across Dubai",
+      "description": "Club Padel offers premium indoor and outdoor padel courts with flexible booking, group sessions, and competitive leagues. A go-to venue for the growing Dubai padel community.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://www.clubpadel.ae/",
+      "services": [
+        "Indoor Courts",
+        "Outdoor Courts",
+        "Leagues",
+        "Coaching",
+        "Court Rental"
+      ]
+    },
+    {
+      "id": "padel-edition",
+      "name": "Padel Edition",
+      "tagline": "Premium indoor padel experience",
+      "description": "Padel Edition is a dedicated indoor padel facility in Dubai offering climate-controlled courts year-round, perfect for summer play. Professional coaching and league play available.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://padeledition.ae/",
+      "services": [
+        "Indoor Padel Courts",
+        "Coaching",
+        "League Play",
+        "Private Bookings"
+      ]
+    },
+    {
+      "id": "rra-padel-academy",
+      "name": "RRA Padel Academy",
+      "tagline": "Padel with Burj Khalifa views at Dusit Thani",
+      "description": "RRA Padel Academy at Dusit Thani Dubai provides padel with a view — courts boasting Instagram-worthy backdrops of the Burj Khalifa in DIFC. Professional coaching and social play.",
+      "location": "DIFC, Dusit Thani Dubai",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://rrapadel.com/",
+      "services": [
+        "Padel Courts",
+        "Academy Coaching",
+        "Social Play",
+        "Corporate Events"
+      ]
+    },
+    {
+      "id": "nas-sports-complex",
+      "name": "NAS Sports Complex",
+      "tagline": "Multi-sport complex with padel and more",
+      "description": "NAS Sports Complex in Al Quoz is a multi-sport venue featuring padel courts alongside football pitches, swimming pools, and fitness facilities. One of Dubai's most established sports destinations.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://nassportscomplex.ae/",
+      "featured": true,
+      "services": [
+        "Padel Courts",
+        "Football Pitches",
+        "Swimming Pool",
+        "Fitness Centre",
+        "Multi-Sport Venue"
+      ]
+    },
+    {
+      "id": "dutch-padel-club",
+      "name": "Dutch Padel Club",
+      "tagline": "Coaching-focused padel in Sports City",
+      "description": "Dutch Padel Club in Dubai Sports City is known for its coaching programs and social padel community. Group lessons, private coaching, and regular social play sessions.",
+      "location": "Dubai Sports City",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://dutchpadelclub.com/",
+      "services": [
+        "Padel Courts",
+        "Group Coaching",
+        "Private Lessons",
+        "Social Play"
+      ]
+    },
+    {
+      "id": "just-pickle",
+      "name": "Just Pickle",
+      "tagline": "Dubai's dedicated pickleball venue",
+      "description": "Just Pickle by the Just Padel team brings dedicated pickleball courts to Dubai — the fastest-growing sport in the world. Beginner-friendly with coaching, open play, and competitive leagues.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://justpadel.ae/",
+      "services": [
+        "Pickleball Courts",
+        "Coaching",
+        "Open Play",
+        "Leagues",
+        "Equipment Rental"
+      ]
+    },
+    {
+      "id": "embody-fitness",
+      "name": "Embody Fitness",
+      "tagline": "Dubai's most exclusive personal training studio",
+      "description": "Embody Fitness in DIFC caps membership at 250 for an ultra-private experience. Bespoke 8-12 week transformation programs, recovery suites with ice baths, saunas, and sports massage. Five-star spa aesthetics.",
+      "location": "DIFC",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.embodyfitness.com/",
+      "featured": true,
+      "services": [
+        "Personal Training",
+        "Body Transformation",
+        "DEXA Scans",
+        "Recovery Suite",
+        "Nutrition Coaching"
+      ]
+    },
+    {
+      "id": "warehouse-gym",
+      "name": "The Warehouse Gym",
+      "tagline": "Dubai's iconic industrial-style fitness hub",
+      "description": "The Warehouse Gym's flagship Al Quoz location is a Dubai fitness institution. Raw industrial aesthetic, serious lifting equipment, CrossFit, boxing ring, spin studio, juice bar, and ladies-only spaces across multiple locations.",
+      "location": "Al Quoz (flagship) + 5 locations",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.thewarehousegym.com/",
+      "featured": true,
+      "services": [
+        "Strength Training",
+        "CrossFit",
+        "Boxing",
+        "Spin",
+        "Group Classes",
+        "Ladies Section"
+      ]
+    },
+    {
+      "id": "viya-fit",
+      "name": "Viya Fit",
+      "tagline": "Luxury gym with rooftop padel in Dubai Marina",
+      "description": "Viya Fit in Dubai Marina delivers a luxury gym experience with reformer Pilates studios, rooftop padel courts, outdoor running tracks, and state-of-the-art changing rooms catering to both performance and comfort.",
+      "location": "Dubai Marina",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://viyafit.com/",
+      "services": [
+        "Gym Floor",
+        "Reformer Pilates",
+        "Rooftop Padel",
+        "Running Track",
+        "Recovery Amenities"
+      ]
+    },
+    {
+      "id": "wellfit",
+      "name": "Wellfit",
+      "tagline": "Multi-functional lifestyle gym with climbing wall",
+      "description": "Wellfit in Al Quoz is a multi-functional lifestyle gym featuring strength zones, CrossFit-style training, recovery suites, indoor cycling, and even climbing walls. Family-friendly with diverse programming.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://wellfit.ae/",
+      "services": [
+        "Gym Floor",
+        "CrossFit",
+        "Climbing Wall",
+        "Indoor Cycling",
+        "Recovery Suite",
+        "Group Classes"
+      ]
+    },
+    {
+      "id": "gymnation",
+      "name": "GymNation",
+      "tagline": "Affordable mega gyms with 24/7 access across Dubai",
+      "description": "GymNation is the UAE's largest gym chain with 10+ locations offering massive floor space, functional fitness zones, Hyrox training areas, group classes, and 24/7 access at affordable prices.",
+      "location": "10+ locations across Dubai & UAE",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://gymnation.com/",
+      "services": [
+        "24/7 Gym Access",
+        "Functional Fitness",
+        "Hyrox Training",
+        "Group Classes",
+        "Affordable Memberships"
+      ]
+    },
+    {
+      "id": "barrys",
+      "name": "Barry's",
+      "tagline": "The best workout in the world — HIIT in the Red Room",
+      "description": "Barry's brings its globally iconic Red Room to Dubai with locations in DIFC and Dubai Marina. High-intensity interval training combining treadmill cardio and floor strength work in an electrifying atmosphere.",
+      "location": "DIFC & Dubai Marina",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.barrys.com/",
+      "featured": true,
+      "services": [
+        "HIIT Classes",
+        "Treadmill Intervals",
+        "Strength Training",
+        "Fuel Bar",
+        "Boutique Fitness"
+      ]
+    },
+    {
+      "id": "f45-training",
+      "name": "F45 Training",
+      "tagline": "45-minute team training that changes lives",
+      "description": "F45 Training brings functional 45-minute team workouts to multiple Dubai locations. Circuit-based HIIT with a different workout every day, technology-driven screens, and a strong global community.",
+      "location": "Marina, JLT, Downtown & more",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://f45training.ae/",
+      "services": [
+        "HIIT Classes",
+        "Functional Training",
+        "Team Workouts",
+        "45-Minute Sessions"
+      ]
+    },
+    {
+      "id": "crank",
+      "name": "Crank",
+      "tagline": "Homegrown Dubai HIIT and cycling studio",
+      "description": "Crank is a homegrown Dubai brand offering high-intensity group classes across multiple locations. TRX, battle ropes, sleds, and functional movements. Known for tough workouts and a strong community.",
+      "location": "Business Bay, JLT, Dubai Hills & more",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.crankfit.com/",
+      "services": [
+        "HIIT Classes",
+        "Indoor Cycling",
+        "Functional Training",
+        "Group Classes"
+      ]
+    },
+    {
+      "id": "core-direction",
+      "name": "Core Direction",
+      "tagline": "Premium reformer Pilates studio",
+      "description": "Core Direction is a premium reformer Pilates studio in Dubai offering small-group classes focusing on core strength, flexibility, and posture. Expert instructors and a boutique atmosphere.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://coredirection.com/",
+      "services": [
+        "Reformer Pilates",
+        "Mat Pilates",
+        "Small Group Classes",
+        "Private Sessions"
+      ]
+    },
+    {
+      "id": "club-pilates",
+      "name": "Club Pilates",
+      "tagline": "Global reformer Pilates franchise in Dubai",
+      "description": "Club Pilates brings its world-renowned reformer-based classes to Dubai at City Walk and Dubai Hills. Four levels from intro to advanced, TRX integration, and experienced instructors.",
+      "location": "City Walk & Dubai Hills",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.clubpilates.ae/",
+      "services": [
+        "Reformer Pilates",
+        "TRX Integration",
+        "4 Class Levels",
+        "Small Group Format"
+      ]
+    },
+    {
+      "id": "bare-fitness",
+      "name": "BARE",
+      "tagline": "Outdoor beach fitness and calisthenics at Kite Beach",
+      "description": "BARE runs outdoor bootcamps and calisthenics sessions on Kite Beach at sunrise. Bodyweight training, functional fitness, and community-driven beach workouts under the Dubai sky.",
+      "location": "Kite Beach",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://bare.fitness/",
+      "services": [
+        "Beach Bootcamps",
+        "Calisthenics",
+        "Outdoor Training",
+        "Sunrise Sessions"
+      ]
+    },
+    {
+      "id": "vogue-fitness",
+      "name": "Vogue Fitness",
+      "tagline": "Premier CrossFit and functional fitness facility",
+      "description": "Vogue Fitness is a premium CrossFit and functional fitness facility hosting regional competitions. Huge space, top-tier coaching, Olympic lifting platforms, and dedicated Hyrox training areas.",
+      "location": "Al Quoz (Dubai) & Abu Dhabi",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.voguefitness.com/",
+      "services": [
+        "CrossFit",
+        "Functional Fitness",
+        "Hyrox Prep",
+        "Olympic Lifting",
+        "Competitions"
+      ]
+    },
+    {
+      "id": "crossfit-gold-box",
+      "name": "CrossFit Gold Box",
+      "tagline": "One of Dubai's original and most popular CrossFit boxes",
+      "description": "CrossFit Gold Box in Al Quoz is one of the original and most popular CrossFit boxes in Dubai. Strong community, experienced coaches, competition team, and specialty programs in Olympic lifting and gymnastics.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.crossfitgoldbox.com/",
+      "services": [
+        "CrossFit",
+        "Olympic Lifting",
+        "Gymnastics",
+        "Competition Team",
+        "Open Gym"
+      ]
+    },
+    {
+      "id": "tribefit",
+      "name": "TribeFit",
+      "tagline": "CrossFit gym meets social hub in JLT",
+      "description": "TribeFit in JLT combines CrossFit and functional fitness with a social hub featuring a rooftop pool. A community-driven gym where fitness meets Dubai lifestyle.",
+      "location": "JLT",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://tribefit.co/",
+      "services": [
+        "CrossFit",
+        "Group Classes",
+        "Rooftop Pool",
+        "Social Hub",
+        "Personal Training"
+      ]
+    },
+    {
+      "id": "fitrepublik",
+      "name": "FitRepublik",
+      "tagline": "100,000 sq ft mega fitness campus",
+      "description": "FitRepublik in Dubai Sports City is one of the largest fitness facilities in the region at over 100,000 sq ft. Olympic pool, climbing wall, indoor track, CrossFit area, spin studio, and padel court.",
+      "location": "Dubai Sports City",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.fitrepublik.com/",
+      "services": [
+        "Olympic Pool",
+        "Climbing Wall",
+        "CrossFit",
+        "Indoor Track",
+        "Spin Studio",
+        "Padel"
+      ]
+    },
+    {
+      "id": "flywheel-sports",
+      "name": "Flywheel Sports",
+      "tagline": "Performance-tracked indoor cycling in DIFC",
+      "description": "Flywheel Sports in DIFC offers performance-based indoor cycling with real-time metrics and a Torqboard leaderboard for competitive riders. Premium boutique cycling experience.",
+      "location": "DIFC",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.flywheelsports.ae/",
+      "services": [
+        "Indoor Cycling",
+        "Performance Tracking",
+        "Leaderboard",
+        "Premium Amenities"
+      ]
+    },
+    {
+      "id": "fortius-dubai",
+      "name": "Fortius",
+      "tagline": "Performance-focused CrossFit and strength training",
+      "description": "Fortius is a performance-focused CrossFit and strength training gym in Dubai. Competitive programming, experienced coaching, and a community of serious athletes.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.fortiusdubai.com/",
+      "services": [
+        "CrossFit",
+        "Strength Training",
+        "Competition Prep",
+        "Personal Training"
+      ]
+    },
+    {
+      "id": "ufc-gym",
+      "name": "UFC Gym",
+      "tagline": "Official UFC-branded MMA and fitness across Dubai",
+      "description": "UFC Gym operates 5+ branches across Dubai including One Central, JBR, and Mirdif. Full MMA offering with boxing, kickboxing, BJJ, and HIIT classes alongside premium gym facilities.",
+      "location": "One Central, JBR, Mirdif & more",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://www.ufcgym.ae/",
+      "featured": true,
+      "services": [
+        "MMA",
+        "Boxing",
+        "Kickboxing",
+        "BJJ",
+        "HIIT",
+        "Gym Floor"
+      ]
+    },
+    {
+      "id": "round-10",
+      "name": "Round 10 Boxing Club",
+      "tagline": "Authentic boxing gym with competition focus",
+      "description": "Round 10 Boxing Club in Dubai's D3 Design District is a dedicated boxing gym with a strong community following. Technical boxing training for all levels with a gritty, authentic atmosphere.",
+      "location": "D3 Design District",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://round10bc.com/",
+      "featured": true,
+      "services": [
+        "Technical Boxing",
+        "Sparring",
+        "Competition Training",
+        "Fitness Boxing",
+        "Personal Training"
+      ]
+    },
+    {
+      "id": "team-nogueira",
+      "name": "Team Nogueira Dubai",
+      "tagline": "World-class BJJ and MMA by UFC legend",
+      "description": "Founded by UFC legend Rodrigo 'Minotauro' Nogueira, Team Nogueira Dubai offers world-class MMA and Brazilian Jiu-Jitsu training at JLT and Al Quoz. Gi and no-gi BJJ, MMA, and striking classes.",
+      "location": "JLT & Al Quoz",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://teamnogueiradubai.com/",
+      "featured": true,
+      "services": [
+        "Brazilian Jiu-Jitsu",
+        "MMA",
+        "Striking",
+        "Kids Programs",
+        "Competition Team"
+      ]
+    },
+    {
+      "id": "tk-mma",
+      "name": "TK MMA & Fitness",
+      "tagline": "Pioneer of MMA in the UAE",
+      "description": "TK MMA & Fitness, owned by Tam Khan — the pioneer of MMA in the UAE — offers comprehensive combat training including boxing, Muay Thai, BJJ, and MMA in a purpose-built facility.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://tkmmafit.com/",
+      "services": [
+        "MMA",
+        "Boxing",
+        "Muay Thai",
+        "BJJ",
+        "Fitness Classes"
+      ]
+    },
+    {
+      "id": "champions-club",
+      "name": "Champions Club",
+      "tagline": "Train with a 3x world champion",
+      "description": "Champions Club is headed by three-time world champion Prince Amir. Learn MMA fundamentals including cardio fitness, self-defence, Jiu-Jitsu, boxing, and Muay Thai kickboxing.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://championsclubdubai.com/",
+      "services": [
+        "MMA",
+        "Boxing",
+        "Jiu-Jitsu",
+        "Muay Thai",
+        "Self-Defence"
+      ]
+    },
+    {
+      "id": "cobra-fitness",
+      "name": "Cobra Fitness",
+      "tagline": "Muay Thai and combat sports with Thai trainers",
+      "description": "Cobra Fitness is a well-established combat sports gym with a strong Muay Thai program led by authentic Thai trainers. Also offering boxing, BJJ, spin, and kids programs. Known for producing competitive fighters.",
+      "location": "JLT (Dubai) & Abu Dhabi",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://cobrafitness.com/",
+      "services": [
+        "Muay Thai",
+        "Boxing",
+        "BJJ",
+        "MMA",
+        "Kids Programs",
+        "Spin"
+      ]
+    },
+    {
+      "id": "971-mma",
+      "name": "971 MMA",
+      "tagline": "Professional MMA training in Dubai",
+      "description": "971 MMA is a professional MMA training facility in Dubai catering to both aspiring fighters and fitness enthusiasts. Expert coaching in mixed martial arts, striking, and grappling.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://971mma.com/",
+      "services": [
+        "MMA",
+        "Striking",
+        "Grappling",
+        "Fighter Development",
+        "Fitness MMA"
+      ]
+    },
+    {
+      "id": "real-boxing-only",
+      "name": "Real Boxing Only (RBO)",
+      "tagline": "Pure boxing, no frills — Al Quoz",
+      "description": "Real Boxing Only is a pure boxing gym in Al Quoz used by amateur and professional boxers. An authentic, no-frills training environment focused on technical development and conditioning.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://realboxingonly.com/",
+      "services": [
+        "Technical Boxing",
+        "Sparring",
+        "Conditioning",
+        "Amateur Boxing",
+        "Pro Training"
+      ]
+    },
+    {
+      "id": "golden-gloves",
+      "name": "Golden Gloves Boxing",
+      "tagline": "Boxing and kickboxing for all levels",
+      "description": "Golden Gloves offers boxing and kickboxing training across multiple Dubai locations. Both competitive and fitness-oriented programs with experienced trainers.",
+      "location": "Al Quoz & more",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://goldenglovesfitness.com/",
+      "services": [
+        "Boxing",
+        "Kickboxing",
+        "Fitness Boxing",
+        "Competition Training",
+        "Personal Training"
+      ]
+    },
+    {
+      "id": "palms-sports",
+      "name": "Palms Sports",
+      "tagline": "Large fitness chain with dedicated combat zones",
+      "description": "Palms Sports is a large fitness club chain across Dubai with dedicated combat sports areas including boxing rings and MMA cages. Accessible to beginners with structured group classes.",
+      "location": "Multiple locations",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://palmssports.com/",
+      "services": [
+        "Boxing",
+        "MMA",
+        "Muay Thai",
+        "Gym Floor",
+        "Group Classes"
+      ]
+    },
+    {
+      "id": "gracie-jiu-jitsu-dubai",
+      "name": "Gracie Jiu-Jitsu Dubai",
+      "tagline": "Gracie lineage BJJ with structured curriculum",
+      "description": "Gracie Jiu-Jitsu Dubai brings the legendary Gracie family's structured BJJ curriculum to the UAE. White belt to black belt progression with emphasis on self-defence and sport Jiu-Jitsu.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://www.graciebarradubai.com/",
+      "services": [
+        "Brazilian Jiu-Jitsu",
+        "Self-Defence",
+        "Kids BJJ",
+        "Competition Team",
+        "Structured Curriculum"
+      ]
+    },
+    {
+      "id": "seayou-watersports",
+      "name": "SeaYou Watersports",
+      "tagline": "Dubai's top operator for kayaking, SUP, and open water swimming",
+      "description": "SeaYou Watersports offers SUP tours around Palm Jumeirah, kayaking, and open water swim sessions. The most popular operator for non-motorized water sports in Dubai.",
+      "location": "Palm Jumeirah & JBR",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://seayou.ae/",
+      "featured": true,
+      "services": [
+        "SUP Tours",
+        "Kayaking",
+        "Open Water Swimming",
+        "Group Sessions",
+        "Equipment Rental"
+      ]
+    },
+    {
+      "id": "nalu-watersports",
+      "name": "Nalu Watersports",
+      "tagline": "SUP, kayaking, and surf lessons at multiple beaches",
+      "description": "Nalu Watersports offers SUP lessons and rentals, kayak tours, and surf lessons across La Mer, JBR, and Palm Jumeirah. A well-established operator with multiple beach locations.",
+      "location": "La Mer, JBR & Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://naluwatersports.com/",
+      "services": [
+        "SUP Lessons",
+        "Kayak Tours",
+        "Surf Lessons",
+        "Equipment Rental"
+      ]
+    },
+    {
+      "id": "kite-n-surf",
+      "name": "Kite N Surf",
+      "tagline": "IKO-certified kitesurfing at Kite Beach",
+      "description": "Kite N Surf at Kite Beach offers IKO-certified kitesurfing lessons, surfing, and SUP. Located at Dubai's dedicated kitesurfing zone with ideal wind conditions.",
+      "location": "Kite Beach, Umm Suqeim",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://kitensurf.ae/",
+      "services": [
+        "Kitesurfing Lessons",
+        "Surfing",
+        "SUP",
+        "Equipment Rental"
+      ]
+    },
+    {
+      "id": "surf-house-dubai",
+      "name": "Surf House Dubai",
+      "tagline": "Dubai's surfing community hub near Burj Al Arab",
+      "description": "Surf House Dubai at Sunset Beach is a community hub for the Dubai surfing scene. Surf lessons, SUP sessions, and a laid-back beach culture near the Burj Al Arab.",
+      "location": "Sunset Beach, Umm Suqeim",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://surfhousedubai.com/",
+      "services": [
+        "Surf Lessons",
+        "SUP",
+        "Beach Community",
+        "Equipment Rental"
+      ]
+    },
+    {
+      "id": "wesup",
+      "name": "WeSUP",
+      "tagline": "Wellness-focused paddleboarding and SUP yoga",
+      "description": "WeSUP offers wellness-oriented paddleboarding at Palm Jumeirah — SUP yoga sessions, sunrise and sunset paddle tours, and SUP fitness classes combining wellness with water sports.",
+      "location": "Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://wesup.ae/",
+      "services": [
+        "SUP Yoga",
+        "Sunrise Paddles",
+        "Sunset Tours",
+        "SUP Fitness"
+      ]
+    },
+    {
+      "id": "al-boom-diving",
+      "name": "Al Boom Diving",
+      "tagline": "UAE's longest-running dive operator",
+      "description": "Al Boom Diving is one of the longest-running dive operators in the UAE offering PADI courses, dive trips to Fujairah and Musandam, and snorkeling excursions. Full gear rental and certification programs.",
+      "location": "Al Wasl Road & Fujairah trips",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://alboomdiving.com/",
+      "featured": true,
+      "services": [
+        "PADI Courses",
+        "Dive Trips",
+        "Snorkeling",
+        "Gear Rental",
+        "Certification"
+      ]
+    },
+    {
+      "id": "hatta-kayak",
+      "name": "Hatta Kayak",
+      "tagline": "Kayaking at Hatta Dam with mountain views",
+      "description": "Hatta Kayak offers kayaking and pedal boating on the stunning Hatta Dam. Part of the Hatta adventure hub which includes mountain biking trails, hiking, and a zipline.",
+      "location": "Hatta Dam",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://visithatta.com/",
+      "services": [
+        "Kayaking",
+        "Pedal Boating",
+        "Mountain Biking",
+        "Hiking Trails",
+        "Zipline"
+      ]
+    },
+    {
+      "id": "dubai-creek-striders",
+      "name": "Dubai Creek Striders",
+      "tagline": "Dubai's oldest and largest running club",
+      "description": "Dubai Creek Striders is one of the oldest and largest running clubs in Dubai. Weekly runs, race training programs, social events, and all levels welcome. Part of the UAE athletics community.",
+      "location": "Creek Park & citywide",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://dubaicreekstriders.com/",
+      "services": [
+        "Group Runs",
+        "Race Training",
+        "Social Events",
+        "All Levels",
+        "Weekly Sessions"
+      ]
+    },
+    {
+      "id": "midnight-runners-dubai",
+      "name": "Midnight Runners Dubai",
+      "tagline": "Free social running crew — music, community, nightlife",
+      "description": "Midnight Runners Dubai is a free social running crew meeting across Downtown, DIFC, and JLT. Evening runs followed by socializing — music-driven, themed events, and a global brand with a strong Dubai chapter.",
+      "location": "Downtown, DIFC & JLT",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://midnightrunners.com/",
+      "services": [
+        "Free Group Runs",
+        "Social Events",
+        "Evening Runs",
+        "Themed Sessions",
+        "Community"
+      ]
+    },
+    {
+      "id": "cycle-hub-dubai",
+      "name": "Cycle Hub Dubai",
+      "tagline": "Base camp for the 86km Al Qudra cycle track",
+      "description": "Cycle Hub Dubai is the base for rides on the Al Qudra cycle track — an 86km dedicated cycling track in the desert. Bike rentals, servicing, and regular group rides for all levels.",
+      "location": "Al Qudra Cycle Track",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://cyclehubdubai.com/",
+      "services": [
+        "Bike Rental",
+        "Group Rides",
+        "Bike Servicing",
+        "86km Desert Track"
+      ]
+    },
+    {
+      "id": "wolfis-bike-shop",
+      "name": "Wolfi's Bike Shop",
+      "tagline": "Dubai's cycling community hub in Al Quoz",
+      "description": "Wolfi's Bike Shop in Al Quoz is one of Dubai's most well-known cycling shops with an attached riding community. Group rides, bike fitting, servicing, and the heart of the Dubai cycling scene.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://wolfisbikeshop.com/",
+      "services": [
+        "Bike Shop",
+        "Group Rides",
+        "Bike Fitting",
+        "Servicing",
+        "Community Rides"
+      ]
+    },
+    {
+      "id": "clymb-abu-dhabi",
+      "name": "CLYMB Abu Dhabi",
+      "tagline": "World's tallest indoor climbing wall at 43 metres",
+      "description": "CLYMB Abu Dhabi on Yas Island features the world's tallest indoor climbing wall at 43 metres and the world's widest indoor skydiving chamber. Climbing routes for all skill levels.",
+      "location": "Yas Island",
+      "city": "Abu Dhabi",
+      "category": "Outdoor & Adventure",
+      "website": "https://clymbabudhabi.com/",
+      "featured": true,
+      "services": [
+        "Indoor Climbing",
+        "Indoor Skydiving",
+        "All Skill Levels",
+        "43m Wall",
+        "Adventure"
+      ]
+    },
+    {
+      "id": "el-camaleon-climbing",
+      "name": "El Camaleon Climbing",
+      "tagline": "Dubai's first dedicated bouldering gym",
+      "description": "El Camaleon Climbing in Al Quoz is one of the first dedicated bouldering and climbing gyms in Dubai. Multiple walls with different grades, regular competitions, and a passionate community.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://elcamaleonclimbing.com/",
+      "services": [
+        "Bouldering",
+        "Lead Climbing",
+        "Youth Programs",
+        "Competitions",
+        "Coaching"
+      ]
+    },
+    {
+      "id": "rock-republic",
+      "name": "Rock Republic",
+      "tagline": "Modern bouldering gym with regularly reset routes",
+      "description": "Rock Republic in Al Quoz is a modern bouldering gym with regularly reset routes, youth programs, coaching, and community events. Popular with both beginners and experienced climbers.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://rockrepublic.ae/",
+      "services": [
+        "Bouldering",
+        "Route Setting",
+        "Youth Programs",
+        "Coaching",
+        "Community Events"
+      ]
+    },
+    {
+      "id": "uae-trekkers",
+      "name": "UAE Trekkers",
+      "tagline": "Largest hiking community in the UAE",
+      "description": "UAE Trekkers is one of the largest hiking communities in the UAE. Regular weekend hikes from easy to advanced across Hatta, Ras Al Khaimah, Fujairah, and Musandam. Hundreds of active members.",
+      "location": "Hatta, RAK, Fujairah & Musandam",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://uaetrekkers.com/",
+      "services": [
+        "Group Hikes",
+        "Weekend Adventures",
+        "All Difficulty Levels",
+        "Mountain Trails",
+        "Social Community"
+      ]
     }
   ]
 }
