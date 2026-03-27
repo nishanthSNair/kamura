@@ -12,7 +12,11 @@ export type TreatmentCategory =
   | "IV & Infusion Therapies"
   | "Regenerative Medicine"
   | "Longevity Pharmaceuticals"
-  | "Exercise & Fitness";
+  | "Exercise & Fitness"
+  | "Skin & Aesthetic Wellness"
+  | "Diagnostics & Testing"
+  | "Nutrition & Dietary Protocols"
+  | "Sexual & Reproductive Health";
 
 export type EvidenceLevel = "Strong" | "Moderate" | "Emerging" | "Limited" | "Anecdotal";
 export type ScoreTier = "Gold Standard" | "Strong" | "Promising" | "Limited" | "Insufficient";
@@ -193,6 +197,10 @@ export const ALL_TREATMENT_CATEGORIES: TreatmentCategory[] = [
   "Longevity Pharmaceuticals",
   "Detox & Functional",
   "Exercise & Fitness",
+  "Skin & Aesthetic Wellness",
+  "Diagnostics & Testing",
+  "Nutrition & Dietary Protocols",
+  "Sexual & Reproductive Health",
 ];
 
 export function formatLastUpdated(iso: string): string {
