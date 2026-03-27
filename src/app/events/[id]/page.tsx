@@ -257,7 +257,7 @@ export default async function EventPage({ params }: Props) {
                 <span className="text-2xl mb-1 block">🔬</span>
                 <span className="text-sm font-sans font-medium text-gray-700 dark:text-gray-300">Browse Treatments</span>
               </Link>
-              <Link href="/blueprint" className="block p-4 border border-gray-200 dark:border-gray-700 rounded-xl hover:border-terracotta/40 transition-colors text-center">
+              <Link href="/wellness-checker" className="block p-4 border border-gray-200 dark:border-gray-700 rounded-xl hover:border-terracotta/40 transition-colors text-center">
                 <span className="text-2xl mb-1 block">🩺</span>
                 <span className="text-sm font-sans font-medium text-gray-700 dark:text-gray-300">Wellness Checker</span>
               </Link>

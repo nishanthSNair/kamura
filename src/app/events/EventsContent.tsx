@@ -430,7 +430,7 @@ export default function EventsContent() {
               <span className="font-serif text-lg text-gray-900 dark:text-gray-100 block mb-1">Browse Treatments</span>
               <span className="text-xs text-gray-500 dark:text-gray-400 font-sans">100+ treatments scored on evidence</span>
             </Link>
-            <Link href="/blueprint" className="block p-6 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-[#1C1815] hover:border-terracotta/40 transition-colors text-center">
+            <Link href="/wellness-checker" className="block p-6 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-[#1C1815] hover:border-terracotta/40 transition-colors text-center">
               <span className="text-3xl mb-2 block">🩺</span>
               <span className="font-serif text-lg text-gray-900 dark:text-gray-100 block mb-1">Wellness Checker</span>
               <span className="text-xs text-gray-500 dark:text-gray-400 font-sans">Personalized treatment recommendations</span>

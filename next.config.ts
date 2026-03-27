@@ -9,6 +9,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/blueprint",
+        destination: "/wellness-checker",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

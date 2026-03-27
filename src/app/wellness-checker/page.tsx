@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Wellness Checker — Personalized Recommendations | KAMURA",
     description:
       "Interactive wellness checker. Tap your body, pick your concerns, get a comprehensive wellness report backed by research.",
-    url: "https://kamuralife.com/blueprint",
+    url: "https://kamuralife.com/wellness-checker",
     images: [
       {
         url: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200&h=630&fit=crop",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://kamuralife.com/blueprint",
+    canonical: "https://kamuralife.com/wellness-checker",
   },
 };
 
@@ -58,7 +58,7 @@ export default function BlueprintPage() {
       {
         "@type": "WebApplication",
         name: "KAMURA Wellness Checker",
-        url: "https://kamuralife.com/blueprint",
+        url: "https://kamuralife.com/wellness-checker",
         description:
           "Interactive body-map wellness checker that provides personalized, evidence-based treatment recommendations across 100+ treatments.",
         applicationCategory: "HealthApplication",
@@ -78,7 +78,7 @@ export default function BlueprintPage() {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
-          { "@type": "ListItem", position: 2, name: "Wellness Checker", item: "https://kamuralife.com/blueprint" },
+          { "@type": "ListItem", position: 2, name: "Wellness Checker", item: "https://kamuralife.com/wellness-checker" },
         ],
       },
     ],

@@ -22,7 +22,7 @@ function getAllUrls(): string[] {
     `${BASE_URL}/events`,
     `${BASE_URL}/about`,
     `${BASE_URL}/quiz`,
-    `${BASE_URL}/blueprint`,
+    `${BASE_URL}/wellness-checker`,
     `${BASE_URL}/explore/compare`,
     `${BASE_URL}/treatments/methodology`,
   ];
