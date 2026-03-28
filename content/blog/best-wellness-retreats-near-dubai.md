@@ -2,7 +2,7 @@
 title: "Best Wellness Retreats Within 2 Hours of Dubai"
 date: "2026-02-20"
 category: "Guides & Reviews"
-coverImage: "https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=1200&q=80&fit=crop"
+coverImage: "https://images.unsplash.com/photo-1764730358483-38395275edb5?w=1200&q=80&fit=crop"
 excerpt: "You don't need to fly to Bali for a wellness escape. The UAE has world-class retreats right on your doorstep — from desert sanctuaries to oceanfront resorts. Here are the best."
 kamuraScore: 80
 evidenceLevel: "Moderate"

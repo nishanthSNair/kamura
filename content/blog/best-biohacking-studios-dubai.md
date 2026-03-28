@@ -2,7 +2,7 @@
 title: "Best Biohacking Studios in Dubai & the UAE"
 date: "2026-03-05"
 category: "Guides & Reviews"
-coverImage: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&q=80&fit=crop"
+coverImage: "https://images.unsplash.com/photo-1758577515333-e71b713059f1?w=1200&q=80&fit=crop"
 excerpt: "Dubai is emerging as a global biohacking capital. We review the best studios offering cryotherapy, HBOT, neurofeedback, and performance optimization across the UAE."
 kamuraScore: 86
 evidenceLevel: "Moderate"

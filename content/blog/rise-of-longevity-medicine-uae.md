@@ -2,7 +2,7 @@
 title: "The Rise of Longevity Medicine in the UAE: Why Dubai Is Becoming a Global Hub"
 date: "2026-02-24"
 category: "News & Trends"
-coverImage: "https://images.unsplash.com/photo-1551190822-a9ce113ac100?w=1200&q=80&fit=crop"
+coverImage: "https://images.unsplash.com/photo-1456419641729-4a4a5e730748?w=1200&q=80&fit=crop"
 excerpt: "From Swiss longevity clinics to hyperbaric oxygen mega-centers, the UAE is rapidly positioning itself as the world's next major destination for longevity medicine. Here's what's driving the boom."
 kamuraScore: 85
 evidenceLevel: "Moderate"

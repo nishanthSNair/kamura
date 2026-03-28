@@ -2,7 +2,7 @@
 title: "Ayurveda in the UAE: A Guide to Traditional Healing"
 date: "2026-02-28"
 category: "Holistic & Healing"
-coverImage: "https://images.unsplash.com/photo-1611073615830-79c0a4b0e265?w=1200&q=80&fit=crop"
+coverImage: "https://images.unsplash.com/photo-1677599082447-6549af4c5454?w=1200&q=80&fit=crop"
 excerpt: "Ayurveda has deep roots in the UAE's diverse community. We explore the principles behind this 5,000-year-old healing system, the best centers in Dubai and Abu Dhabi, and how it complements modern medicine."
 kamuraScore: 75
 evidenceLevel: "Emerging"
