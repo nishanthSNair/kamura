@@ -2,7 +2,7 @@
 title: "Beginner's Guide to Biohacking: Where to Start in Dubai"
 date: "2026-02-15"
 category: "Biohacking"
-coverImage: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1200&q=80&fit=crop"
+coverImage: "https://images.unsplash.com/photo-1596236100223-f3c656de3038?w=1200&q=80&fit=crop"
 excerpt: "Curious about biohacking but don't know where to begin? From cold exposure to red light therapy, here's a practical guide to getting started in Dubai without breaking the bank."
 kamuraScore: 84
 evidenceLevel: "Moderate"

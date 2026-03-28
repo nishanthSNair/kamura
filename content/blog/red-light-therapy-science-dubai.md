@@ -2,7 +2,7 @@
 title: "Red Light Therapy: The Science and Where to Try It in Dubai"
 date: "2026-02-27"
 category: "Biohacking"
-coverImage: "https://images.unsplash.com/photo-1576670159805-381a0b98650d?w=1200&q=80&fit=crop"
+coverImage: "https://images.unsplash.com/photo-1772289935544-e5e6cf99adc9?w=1200&q=80&fit=crop"
 excerpt: "Red light therapy is one of the most researched biohacking modalities available. We break down the wavelengths, the science, what the studies actually say, and the best studios in Dubai."
 kamuraScore: 78
 evidenceLevel: "Moderate"

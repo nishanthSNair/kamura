@@ -2,7 +2,7 @@
 title: "Ramadan Biohacking: Suhoor, Iftar & Fasting Protocols for Optimal Health"
 date: "2026-03-06"
 category: "Biohacking"
-coverImage: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=1200&q=80&fit=crop"
+coverImage: "https://images.unsplash.com/photo-1772457677641-394bbc0c20f6?w=1200&q=80&fit=crop"
 excerpt: "Dubai's longevity community shares how to optimize Ramadan fasting for health, energy, and longevity — combining ancient wisdom with modern biohacking."
 kamuraScore: 83
 evidenceLevel: "Moderate"

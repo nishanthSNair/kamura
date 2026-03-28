@@ -2,7 +2,7 @@
 title: "Best Infrared Saunas in Dubai: Benefits, Costs, and Where to Go"
 date: "2026-03-02"
 category: "Guides & Reviews"
-coverImage: "https://images.unsplash.com/photo-1554244933-d876deb6b2ff?w=1200&q=80&fit=crop"
+coverImage: "https://images.unsplash.com/photo-1759302354553-cf87ceb9135c?w=1200&q=80&fit=crop"
 excerpt: "Infrared saunas are one of the most accessible biohacking tools in Dubai. We explain how they differ from traditional saunas, review the best studios, and help you build a weekly routine."
 kamuraScore: 82
 evidenceLevel: "Moderate"

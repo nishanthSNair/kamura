@@ -2,7 +2,7 @@
 title: "Float Therapy in Dubai: What to Expect at Your First Session"
 date: "2026-03-03"
 category: "Holistic & Healing"
-coverImage: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1200&q=80&fit=crop"
+coverImage: "https://images.unsplash.com/photo-1501791187590-9ef2612ba1eb?w=1200&q=80&fit=crop"
 excerpt: "Sensory deprivation tanks are gaining popularity across Dubai. Here's your complete guide to float therapy — what happens during a session, the science behind it, and where to book."
 kamuraScore: 76
 evidenceLevel: "Moderate"

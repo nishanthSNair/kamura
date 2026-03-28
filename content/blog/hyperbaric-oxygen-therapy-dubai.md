@@ -2,7 +2,7 @@
 title: "Hyperbaric Oxygen Therapy in Dubai: A Complete Guide"
 date: "2026-03-01"
 category: "Longevity & Science"
-coverImage: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200&q=80&fit=crop"
+coverImage: "https://images.unsplash.com/photo-1765830403209-a5eceac4c198?w=1200&q=80&fit=crop"
 excerpt: "HBOT is one of the most powerful longevity tools available in Dubai. We break down the science, what a session involves, where to go, and what it costs."
 kamuraScore: 71
 evidenceLevel: "Moderate"

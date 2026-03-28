@@ -2,7 +2,7 @@
 title: "Complete Guide to Sound Healing in Dubai"
 date: "2026-02-28"
 category: "Holistic & Healing"
-coverImage: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1200&q=80&fit=crop"
+coverImage: "https://images.unsplash.com/photo-1681310375333-73f41177e50f?w=1200&q=80&fit=crop"
 excerpt: "Sound baths, gong meditation, and singing bowls — Dubai's sound healing scene is thriving. Here's where to go, what to expect, and which modality suits you best."
 kamuraScore: 74
 evidenceLevel: "Emerging"
