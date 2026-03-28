@@ -118,6 +118,10 @@ export default function RootLayout({
  return (
  <html lang="en">
  <head>
+ <link rel="preconnect" href="https://images.unsplash.com" />
+ <link rel="dns-prefetch" href="https://images.unsplash.com" />
+ <link rel="preconnect" href="https://www.googletagmanager.com" />
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
  <link rel="alternate" type="application/rss+xml" title="KAMURA Blog" href="/rss.xml" />
  <Script
  src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}

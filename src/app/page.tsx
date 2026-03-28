@@ -176,10 +176,12 @@ export default function Home() {
  className="group relative block rounded-2xl overflow-hidden aspect-[4/5] md:aspect-auto md:row-span-2 hover:shadow-xl transition-all duration-500"
  >
  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent z-10" />
- <img
+ <Image
  src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80"
  alt=""
- className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+ fill
+ sizes="(max-width: 768px) 100vw, 50vw"
+ className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
  />
  <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
  <p className="text-xs uppercase tracking-[0.2em] text-white/60 font-sans mb-2">
@@ -210,10 +212,12 @@ export default function Home() {
  className="group relative block rounded-2xl overflow-hidden aspect-[16/9] hover:shadow-xl transition-all duration-500"
  >
  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent z-10" />
- <img
+ <Image
  src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80"
  alt=""
- className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+ fill
+ sizes="(max-width: 768px) 100vw, 50vw"
+ className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
  />
  <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
  <h3 className="font-serif text-xl text-white mb-1">
@@ -233,10 +237,12 @@ export default function Home() {
  className="group relative block rounded-2xl overflow-hidden aspect-[16/9] hover:shadow-xl transition-all duration-500"
  >
  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent z-10" />
- <img
+ <Image
  src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=800&q=80"
  alt=""
- className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+ fill
+ sizes="(max-width: 768px) 100vw, 50vw"
+ className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
  />
  <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
  <h3 className="font-serif text-xl text-white mb-1">
@@ -595,11 +601,13 @@ export default function Home() {
  >
  <div className="grid grid-cols-1 md:grid-cols-2">
  {latestPosts[0].coverImage && (
- <div className="aspect-[16/10] md:aspect-auto overflow-hidden">
- <img
+ <div className="aspect-[16/10] md:aspect-auto overflow-hidden relative">
+ <Image
  src={latestPosts[0].coverImage}
  alt=""
- className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+ fill
+ sizes="(max-width: 768px) 100vw, 50vw"
+ className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
  />
  </div>
  )}
@@ -634,11 +642,13 @@ export default function Home() {
  className="rounded-2xl border border-gray-200/40 bg-white hover:shadow-lg transition-all duration-500 overflow-hidden group"
  >
  {post.coverImage && (
- <div className="aspect-[16/9] overflow-hidden">
- <img
+ <div className="aspect-[16/9] overflow-hidden relative">
+ <Image
  src={post.coverImage}
  alt=""
- className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+ fill
+ sizes="(max-width: 640px) 100vw, 50vw"
+ className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
  />
  </div>
  )}
