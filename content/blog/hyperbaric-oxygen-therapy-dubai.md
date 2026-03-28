@@ -3,13 +3,25 @@ title: "Hyperbaric Oxygen Therapy in Dubai: A Complete Guide"
 date: "2026-03-01"
 category: "Longevity & Science"
 coverImage: "https://images.unsplash.com/photo-1765830403209-a5eceac4c198?w=1200&q=80&fit=crop"
-excerpt: "HBOT is one of the most powerful longevity tools available in Dubai. We break down the science, what a session involves, where to go, and what it costs."
-kamuraScore: 71
-evidenceLevel: "Moderate"
+excerpt: "HBOT is one of the most clinically validated longevity treatments available — and Dubai is home to the world's largest hyperbaric center. Here's the science, what a session involves, and what it costs."
 depthIndicator: "Deep Dive"
-relatedTreatments: ["hyperbaric-oxygen"]
-medicallyReviewed: true
-lastUpdated: "2026-03-01"
+relatedTreatments: ["hyperbaric-oxygen", "nad-injectable", "stem-cell-therapy", "biological-age-testing", "brain-photobiomodulation"]
+lastUpdated: "2026-03-28"
+author:
+  name: "Nishanth Saseendran"
+  linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
+  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+faqItems:
+  - question: "How much does hyperbaric oxygen therapy cost in Dubai?"
+    answer: "Single sessions range from AED 500-1,500. Ten-session packages cost AED 4,500-12,000. The full Aviv Medical Program (40-60 sessions with comprehensive assessments) costs AED 55,000-75,000. Wellth by Medcare offers more accessible individual sessions from AED 500-800."
+  - question: "How long is an HBOT session?"
+    answer: "A typical session lasts 60-90 minutes at treatment pressure, plus 5-10 minutes each for pressurization and depressurization. The Aviv protocol uses approximately 90-minute sessions. You can read, listen to music, meditate, or rest during the treatment phase."
+  - question: "Does HBOT actually reverse aging?"
+    answer: "A landmark 2020 study from Tel Aviv University demonstrated that 60 HBOT sessions reversed two key aging biomarkers: telomere lengthening of up to 20% and senescent cell reduction of up to 37%. A follow-up study showed measurable cognitive improvements in adults over 64. The evidence is among the strongest in longevity medicine."
+  - question: "Is HBOT safe?"
+    answer: "HBOT is generally very safe at accredited facilities. Common minor side effects include temporary ear discomfort during pressurization (resolved by equalizing), mild fatigue, and occasionally temporary vision changes. Avoid HBOT if you have untreated pneumothorax, certain ear conditions, or are pregnant."
+  - question: "How many HBOT sessions do I need?"
+    answer: "For meaningful results, research supports 40-60 sessions over 8-12 weeks. This is the protocol behind the Aviv aging-reversal studies. Individual sessions at AED 500-800 can provide recovery benefits, but the strongest evidence is for multi-session protocols."
 ---
 
 Hyperbaric oxygen therapy (HBOT) is one of the most clinically validated and scientifically compelling treatments in the longevity medicine toolkit. Originally developed for treating decompression sickness in deep-sea divers, HBOT has evolved into a powerful intervention for brain health, wound healing, anti-aging, and performance optimization. Dubai is home to some of the most advanced HBOT facilities in the world, including the largest hyperbaric center globally. Here is everything you need to know before booking your first session.

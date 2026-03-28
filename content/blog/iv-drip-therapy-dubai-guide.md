@@ -1,18 +1,30 @@
 ---
 title: "IV Drip Therapy in Dubai: Formulas, Clinics & What to Expect"
 date: "2026-02-21"
-category: "Biohacking"
+category: "Guides & Reviews"
 coverImage: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=1200&q=80&fit=crop"
 excerpt: "IV drip therapy has become one of Dubai's most popular wellness treatments. We break down the most common formulas, where to get them, what they cost, and whether they're worth it."
-kamuraScore: 79
-evidenceLevel: "Moderate"
 depthIndicator: "Deep Dive"
-relatedTreatments: ["iv-drip-therapy", "nad-injectable"]
-medicallyReviewed: true
-lastUpdated: "2026-01-02"
+relatedTreatments: ["iv-drip-therapy", "nad-injectable", "nad-iv-infusion", "glutathione-iv", "high-dose-vitamin-c-iv", "myers-cocktail", "vitamin-b-complex", "magnesium"]
+lastUpdated: "2026-03-28"
+author:
+  name: "Nishanth Saseendran"
+  linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
+  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+faqItems:
+  - question: "How much does IV drip therapy cost in Dubai?"
+    answer: "Prices range from AED 300-500 for basic hydration drips to AED 1,000-1,500 for NAD+ infusions. A Myers' Cocktail typically costs AED 300-600, glutathione drips AED 400-800, and immunity drips AED 400-700. Multi-session packages usually offer 20-30% discounts."
+  - question: "Is IV drip therapy safe?"
+    answer: "IV drip therapy is generally safe when administered by trained medical professionals at licensed clinics. Common minor side effects include a small bruise at the injection site and temporary warmth or coolness during the infusion. NAD+ infusions can cause temporary nausea if infused too quickly. Always disclose your medications and health conditions beforehand."
+  - question: "How often should I get IV drip therapy?"
+    answer: "For general wellness maintenance, once a month is typical. For immune support during winter or travel season, every 2 weeks. For anti-aging NAD+ protocols, every 2-4 weeks. Athletic recovery may benefit from weekly or biweekly sessions. Start with your specific goal and adjust based on how your body responds."
+  - question: "What is the best IV drip for energy in Dubai?"
+    answer: "The Myers' Cocktail (B vitamins, vitamin C, magnesium, calcium) is the most popular choice for energy. For sustained energy and anti-aging benefits, NAD+ infusions are more potent but require 2-4 hour sessions and cost significantly more. A B-complex drip is an affordable middle ground."
+  - question: "Do IV drips actually work better than oral supplements?"
+    answer: "IV delivery achieves near-100% bioavailability compared to 10-30% for many oral supplements, depending on gut health and nutrient form. This means the nutrients are immediately available to your cells. However, IV therapy is more expensive and time-consuming. For most people, a combination of daily oral supplements plus periodic IV sessions offers the best value."
 ---
 
-Walk into almost any wellness clinic or biohacking studio in Dubai and you'll see IV drip therapy on the menu. What started as a medical intervention for dehydrated hospital patients has become one of the city's most mainstream wellness treatments — used by everyone from jet-lagged executives to weekend warriors recovering from a workout.
+Walk into almost any wellness clinic in Dubai and you'll see IV drip therapy on the menu. What started as a medical intervention for dehydrated hospital patients has become one of the city's most mainstream wellness treatments — used by everyone from jet-lagged executives to weekend warriors recovering from a workout.
 
 But with dozens of formulas, wildly varying prices, and bold marketing claims, it's worth understanding what IV therapy actually does, which formulas are backed by evidence, and where to get it done safely.
 
@@ -34,24 +46,24 @@ A typical IV drip session looks like this:
 
 ## The Most Popular IV Formulas in Dubai
 
-### Myers' Cocktail
+### [Myers' Cocktail](/treatments/myers-cocktail)
 
-The original IV wellness formula, developed by Dr. John Myers in the 1960s. A balanced blend of B vitamins (B1, B2, B3, B5, B6, B12), vitamin C, magnesium, and calcium. It's the Swiss Army knife of IV drips — broadly beneficial for energy, immune support, hydration, and general wellness.
+The original IV wellness formula, developed by Dr. John Myers in the 1960s. A balanced blend of [B vitamins](/treatments/vitamin-b-complex) (B1, B2, B3, B5, B6, B12), [vitamin C](/treatments/high-dose-vitamin-c-iv), [magnesium](/treatments/magnesium), and calcium. It's the Swiss Army knife of IV drips — broadly beneficial for energy, immune support, hydration, and general wellness.
 
 **Best for:** General wellness, fatigue, mild dehydration, post-travel recovery
 **Typical cost:** AED 300–600
 **Evidence level:** The most studied IV formula, with research supporting its use for fatigue, fibromyalgia, and acute asthma
 
-### NAD+ Infusion
+### [NAD+ Infusion](/treatments/nad-iv-infusion)
 
-NAD+ (nicotinamide adenine dinucleotide) is a coenzyme essential for cellular energy production, DNA repair, and metabolism. NAD+ levels decline significantly with age — by age 50, most people have roughly half the NAD+ they had at 20. IV NAD+ infusions aim to restore these levels, supporting mitochondrial function, cognitive clarity, and cellular repair.
+[NAD+](/treatments/nad-injectable) (nicotinamide adenine dinucleotide) is a coenzyme essential for cellular energy production, DNA repair, and metabolism. NAD+ levels decline significantly with age — by age 50, most people have roughly half the NAD+ they had at 20. IV NAD+ infusions aim to restore these levels, supporting mitochondrial function, cognitive clarity, and cellular repair.
 
 **Best for:** Anti-aging, energy, cognitive function, cellular repair, post-illness recovery
 **Typical cost:** AED 1,000–1,500 per session (NAD+ is expensive to produce)
 **Session time:** 2–4 hours (NAD+ must be infused slowly to avoid side effects like nausea or flushing)
 **Evidence level:** Growing research base. Animal studies are strong; human clinical trials are expanding. Widely used in longevity medicine
 
-### Glutathione Drip
+### [Glutathione Drip](/treatments/glutathione-iv)
 
 Glutathione is the body's master antioxidant — produced naturally by the liver, it plays a crucial role in detoxification, immune function, and skin health. IV glutathione delivers high concentrations directly to the bloodstream, supporting liver detox, reducing oxidative stress, and — as a widely noted side effect — brightening skin tone. It's one of the most popular IV formulas in Dubai and across the Middle East.
 

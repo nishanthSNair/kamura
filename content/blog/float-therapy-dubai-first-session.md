@@ -4,11 +4,24 @@ date: "2026-03-03"
 category: "Holistic & Healing"
 coverImage: "https://images.unsplash.com/photo-1501791187590-9ef2612ba1eb?w=1200&q=80&fit=crop"
 excerpt: "Sensory deprivation tanks are gaining popularity across Dubai. Here's your complete guide to float therapy — what happens during a session, the science behind it, and where to book."
-kamuraScore: 76
-evidenceLevel: "Moderate"
 depthIndicator: "Protocol"
-relatedTreatments: ["float-therapy"]
-lastUpdated: "2026-01-18"
+relatedTreatments: ["float-therapy", "magnesium", "meditation", "sleep-optimisation"]
+lastUpdated: "2026-03-28"
+author:
+  name: "Nishanth Saseendran"
+  linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
+  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+faqItems:
+  - question: "How much does float therapy cost in Dubai?"
+    answer: "First-time introductory floats cost AED 150-200 for 60 minutes. Standard 60-minute sessions are AED 200-280, and extended 90-minute sessions AED 280-350. Three-session packages run AED 500-750, and five-session packages AED 800-1,200."
+  - question: "What should I expect at my first float session?"
+    answer: "You shower, insert earplugs, enter a warm saltwater tank, and close the door. The first 10-15 minutes may feel restless — this is normal. Then deep relaxation sets in. Music plays at the end to signal session completion. Allow 15-20 minutes of quiet time afterward before driving."
+  - question: "Is float therapy claustrophobic?"
+    answer: "Most people are surprised to find it is not. Float tanks are larger than they appear, and you can leave the door open or the light on at any time. You are always in control. If claustrophobia is a concern, try a float room (larger open pool) rather than a pod-style tank."
+  - question: "How often should I float?"
+    answer: "For general stress management, once a week or every two weeks. The benefits are cumulative — regular sessions produce deeper and longer-lasting effects. For chronic pain or anxiety, some protocols recommend 2-3 sessions per week during an initial 4-6 week period, then transitioning to weekly maintenance."
+  - question: "Can I float if I have cuts or sensitive skin?"
+    answer: "Do not shave or wax on the day of your session — the high salt concentration will sting fresh cuts or irritated skin. Minor healed cuts are generally fine. The Epsom salt solution actually provides beneficial transdermal magnesium absorption."
 ---
 
 Float therapy, also known as sensory deprivation or isolation tank therapy, is one of the most underrated wellness modalities available in Dubai. In a city defined by constant stimulation — noise, screens, traffic, social demands — float therapy offers the opposite: an environment of near-total sensory stillness. For 60 to 90 minutes, you float effortlessly in a dark, soundproof tank filled with warm, heavily salted water. The result is a state of deep physical and mental rest that many people describe as unlike anything else they have experienced.

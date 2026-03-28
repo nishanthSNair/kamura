@@ -3,15 +3,28 @@ title: "At-Home Blood Testing in Dubai: Valeo vs Forus Life vs DarDoc"
 date: "2026-03-08"
 category: "Guides & Reviews"
 coverImage: "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=1200&q=80&fit=crop"
-excerpt: "Dubai's longevity community runs regular blood panels to track biomarkers. We compare the top at-home blood testing services: Valeo, Forus Life, DarDoc, and more."
-kamuraScore: 80
-evidenceLevel: "Moderate"
+excerpt: "Regular blood work is the foundation of any serious wellness protocol. We compare Dubai's top at-home blood testing services — Valeo, Forus Life, DarDoc, and Mediclinic — covering panels, pricing, and turnaround times."
 depthIndicator: "Comparison"
-relatedTreatments: ["vitamin-d3-k2", "magnesium", "omega-3"]
-lastUpdated: "2025-12-20"
+relatedTreatments: ["vitamin-d3-k2", "magnesium", "omega-3", "hormone-panel-testing", "longevity-screening", "biological-age-testing", "cgm-tracking"]
+lastUpdated: "2026-03-28"
+author:
+  name: "Nishanth Saseendran"
+  linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
+  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+faqItems:
+  - question: "How much does at-home blood testing cost in Dubai?"
+    answer: "Prices start from AED 200-300 for basic panels through DarDoc or Mediclinic at Home, AED 400-500 for comprehensive panels through Valeo or Forus Life, and can reach AED 1,500-2,000+ for advanced longevity panels with 100+ biomarkers."
+  - question: "What blood tests should I get for longevity?"
+    answer: "Beyond standard panels, longevity-focused testing includes hs-CRP (inflammation), homocysteine (cardiovascular risk), fasting insulin (metabolic health), ApoB (superior cholesterol marker), DHEA-S (aging marker), free testosterone, vitamin D, ferritin, and omega-3 index. Test every 3-6 months for active optimization."
+  - question: "Which at-home blood testing service is best in Dubai?"
+    answer: "It depends on your priorities. Valeo excels at AI-powered analytics and trend tracking. Forus Life is best for gut health and functional medicine. DarDoc offers the most affordable insurance-compatible testing. Mediclinic at Home provides hospital-grade lab reliability."
+  - question: "Do I need to fast before a blood test?"
+    answer: "Yes, for accurate results on glucose, insulin, and lipid panels. Fast for 12-14 hours before your draw. Also test at the same time of day each session — morning is best for hormones like testosterone and cortisol, which fluctuate throughout the day."
+  - question: "What is a good vitamin D level for Dubai residents?"
+    answer: "Despite year-round sun, many UAE residents are vitamin D deficient due to indoor lifestyles and sun avoidance. Standard 'normal' range is above 30 ng/mL, but longevity practitioners typically aim for 60-80 ng/mL. Regular testing every 3-6 months is recommended."
 ---
 
-If there's one thing Dubai's biohacking and longevity community agrees on, it's this: **you can't optimize what you don't measure.** Regular blood work has become the foundation of every serious wellness protocol — and thanks to at-home testing services, getting comprehensive panels has never been easier.
+If there's one thing Dubai's longevity and wellness community agrees on, it's this: **you can't optimize what you don't measure.** Regular blood work has become the foundation of every serious wellness protocol — and thanks to at-home testing services, getting comprehensive panels has never been easier.
 
 No more hospital waiting rooms. No more scheduling hassles. A phlebotomist comes to your home, draws your blood, and results appear on your phone within days.
 

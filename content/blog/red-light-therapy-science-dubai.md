@@ -1,15 +1,27 @@
 ---
 title: "Red Light Therapy: The Science and Where to Try It in Dubai"
 date: "2026-02-27"
-category: "Biohacking"
+category: "Longevity & Science"
 coverImage: "https://images.unsplash.com/photo-1772289935544-e5e6cf99adc9?w=1200&q=80&fit=crop"
-excerpt: "Red light therapy is one of the most researched biohacking modalities available. We break down the wavelengths, the science, what the studies actually say, and the best studios in Dubai."
-kamuraScore: 78
-evidenceLevel: "Moderate"
+excerpt: "Red light therapy is one of the most researched wellness modalities available — with over 5,000 published studies. We break down the wavelengths, the science, and the best studios in Dubai."
 depthIndicator: "Evidence Review"
-relatedTreatments: ["red-light-therapy", "infrared-sauna"]
-medicallyReviewed: true
-lastUpdated: "2026-02-27"
+relatedTreatments: ["red-light-therapy", "infrared-sauna", "led-light-therapy-skin", "brain-photobiomodulation", "cryotherapy", "sleep-optimisation"]
+lastUpdated: "2026-03-28"
+author:
+  name: "Nishanth Saseendran"
+  linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
+  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+faqItems:
+  - question: "Does red light therapy actually work?"
+    answer: "Yes. Red light therapy has over 5,000 peer-reviewed studies supporting its benefits. The mechanism is well-understood: specific wavelengths (630-670nm red and 810-850nm near-infrared) stimulate cytochrome c oxidase in mitochondria, increasing ATP production by 20-50%. Benefits span skin health, inflammation reduction, muscle recovery, sleep, and brain function."
+  - question: "How much does red light therapy cost in Dubai?"
+    answer: "Studio sessions cost AED 100-200 for 15-20 minutes. Five-session packages run AED 400-800. Monthly unlimited memberships (where available) cost AED 600-1,000. Home devices cost AED 1,500-8,000 depending on size and pay for themselves within 3-6 months of equivalent studio use."
+  - question: "How often should I do red light therapy?"
+    answer: "For skin health, 3-5 times per week for 10-15 minutes per area. For muscle recovery, before or after training sessions. For general wellness, daily or every other day for 10-20 minutes. Consistency over 4-6 weeks is key — red light therapy benefits are cumulative, not instant."
+  - question: "Should I buy a home red light therapy device or go to a studio?"
+    answer: "Studios offer clinical-grade power and full-body coverage, but per-session costs add up with regular use. A quality home device (AED 1,500-3,000 for half-body) pays for itself in 3-6 months if you plan to use it 3+ times per week. Look for dual wavelength (660nm + 850nm) with at least 80-100 mW/cm² power density."
+  - question: "Can red light therapy improve sleep?"
+    answer: "Yes. A 2012 study in the Journal of Athletic Training found that 14 days of red light therapy significantly improved sleep quality and serum melatonin levels. Red light in the evening supports melatonin production without the sleep-disrupting effects of blue light. Use red-only wavelengths (not NIR) for evening sessions."
 ---
 
 Red light therapy (also called photobiomodulation or low-level light therapy) has quietly become one of the most scientifically substantiated modalities in the biohacking and wellness world. Unlike many treatments that rely primarily on anecdotal evidence, red light therapy has a substantial and growing body of peer-reviewed research behind it — over 5,000 published studies and counting. It is non-invasive, has virtually no side effects, and is now widely available in Dubai's biohacking studios. Here is what you need to know.

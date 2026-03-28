@@ -4,11 +4,22 @@ date: "2026-02-28"
 category: "Holistic & Healing"
 coverImage: "https://images.unsplash.com/photo-1681310375333-73f41177e50f?w=1200&q=80&fit=crop"
 excerpt: "Sound baths, gong meditation, and singing bowls — Dubai's sound healing scene is thriving. Here's where to go, what to expect, and which modality suits you best."
-kamuraScore: 74
-evidenceLevel: "Emerging"
 depthIndicator: "Deep Dive"
-relatedTreatments: ["sound-healing", "meditation"]
-lastUpdated: "2026-02-08"
+relatedTreatments: ["sound-healing", "meditation", "breathwork", "sleep-optimisation"]
+lastUpdated: "2026-03-28"
+author:
+  name: "Nishanth Saseendran"
+  linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
+  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+faqItems:
+  - question: "How much does a sound healing session cost in Dubai?"
+    answer: "Group sound baths typically cost AED 120-200 per session. Home of Wellness, Illuminations, The Chi Room, and Sohum Wellness Sanctuary all offer group sessions in this range. Private one-on-one sessions are available from AED 300-500."
+  - question: "Do I need any experience for sound healing?"
+    answer: "No. Sound healing is completely passive — you lie down and let the sound wash over you. No meditation experience is required. It is one of the most beginner-friendly wellness modalities available. Many people who struggle with seated meditation find sound baths much more accessible."
+  - question: "Is there scientific evidence for sound healing?"
+    answer: "Research is emerging but promising. A 2017 study in the Journal of Evidence-Based Integrative Medicine found significant reductions in tension, anger, and fatigue after singing bowl sessions. Studies show sound therapy can reduce anxiety, lower blood pressure, decrease pain perception, and improve sleep quality."
+  - question: "What type of sound healing should I try first?"
+    answer: "For first-timers, a Tibetan singing bowl session is the most gentle and accessible option. If you want something more immersive, try a multi-instrument sound journey. Gong baths are more intense and better suited for experienced participants. Group sessions are recommended over private for the shared energy."
 ---
 
 Sound healing is one of the fastest-growing wellness practices in Dubai. What was once considered alternative or esoteric is now offered at luxury hotels, corporate wellness programs, and dedicated healing studios across the city. If you've been curious about sound baths, this guide covers everything you need to know.

@@ -3,15 +3,28 @@ title: "Best Infrared Saunas in Dubai: Benefits, Costs, and Where to Go"
 date: "2026-03-02"
 category: "Guides & Reviews"
 coverImage: "https://images.unsplash.com/photo-1759302354553-cf87ceb9135c?w=1200&q=80&fit=crop"
-excerpt: "Infrared saunas are one of the most accessible biohacking tools in Dubai. We explain how they differ from traditional saunas, review the best studios, and help you build a weekly routine."
-kamuraScore: 82
-evidenceLevel: "Moderate"
+excerpt: "Infrared saunas are one of the most accessible wellness tools in Dubai. We explain how they differ from traditional saunas, review the best studios, and help you build a weekly routine."
 depthIndicator: "Comparison"
-relatedTreatments: ["infrared-sauna"]
-lastUpdated: "2026-01-12"
+relatedTreatments: ["infrared-sauna", "cryotherapy", "contrast-therapy", "red-light-therapy", "sleep-optimisation"]
+lastUpdated: "2026-03-28"
+author:
+  name: "Nishanth Saseendran"
+  linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
+  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+faqItems:
+  - question: "What is the difference between infrared and traditional saunas?"
+    answer: "Traditional saunas heat the air to 80-100°C and warm your body from the outside. Infrared saunas use infrared light panels to heat your body directly at lower air temperatures (45-60°C), penetrating 3-4cm into tissue. The result: deeper sweat, longer sessions, and more comfortable temperatures."
+  - question: "How much does an infrared sauna session cost in Dubai?"
+    answer: "Single sessions range from AED 100-200 for 30-45 minutes. Five-session packages cost AED 400-800, and 10-session packages AED 750-1,500. Monthly unlimited memberships (where available) run AED 800-1,200. Combo packages with cryotherapy are AED 250-350."
+  - question: "How often should I use an infrared sauna?"
+    answer: "For general wellness and stress management, 2-3 sessions per week is ideal. For athletic recovery, 3-4 sessions weekly post-workout. For detoxification, 4-5 sessions per week during an initial 2-week phase, then reduce to 2-3 times weekly for maintenance."
+  - question: "Can infrared saunas help with detoxification?"
+    answer: "Yes. Research published in the Journal of Environmental and Public Health found that infrared-induced sweat contains higher concentrations of heavy metals (arsenic, cadmium, lead, mercury) and environmental toxins than exercise-induced sweat. This is particularly relevant for Dubai residents exposed to construction dust and environmental pollutants."
+  - question: "Is it safe to use an infrared sauna every day?"
+    answer: "Daily use is generally safe for healthy individuals who hydrate well. Drink at least 500ml of water before and 500ml-1 liter after each session. Add electrolytes if doing frequent sessions. Avoid sauna after drinking alcohol. Listen to your body — if you feel dizzy or excessively fatigued, reduce frequency."
 ---
 
-Infrared saunas have become one of the most popular wellness modalities in Dubai, and for good reason. They offer many of the benefits of traditional saunas — detoxification, cardiovascular conditioning, pain relief, relaxation — but at lower, more comfortable temperatures. Whether you are a seasoned biohacker or simply looking for a better way to unwind and recover, infrared sauna therapy deserves a place in your wellness routine.
+Infrared saunas have become one of the most popular wellness modalities in Dubai, and for good reason. They offer many of the benefits of traditional saunas — detoxification, cardiovascular conditioning, pain relief, relaxation — but at lower, more comfortable temperatures. Whether you are a seasoned wellness enthusiast or simply looking for a better way to unwind and recover, infrared sauna therapy deserves a place in your wellness routine.
 
 ## What Makes Infrared Different from Traditional Saunas?
 

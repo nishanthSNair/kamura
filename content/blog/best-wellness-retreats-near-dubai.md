@@ -4,11 +4,22 @@ date: "2026-02-20"
 category: "Guides & Reviews"
 coverImage: "https://images.unsplash.com/photo-1764730358483-38395275edb5?w=1200&q=80&fit=crop"
 excerpt: "You don't need to fly to Bali for a wellness escape. The UAE has world-class retreats right on your doorstep — from desert sanctuaries to oceanfront resorts. Here are the best."
-kamuraScore: 80
-evidenceLevel: "Moderate"
 depthIndicator: "Comparison"
-relatedTreatments: ["yoga", "meditation", "breathwork"]
-lastUpdated: "2026-02-05"
+relatedTreatments: ["yoga", "meditation", "breathwork", "infrared-sauna", "massage-therapy", "sleep-optimisation"]
+lastUpdated: "2026-03-28"
+author:
+  name: "Nishanth Saseendran"
+  linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
+  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+faqItems:
+  - question: "What is the best wellness retreat near Dubai?"
+    answer: "ZOYA Health & Wellbeing Resort in Ajman (45 minutes from Dubai) is purpose-built for wellness with 9 structured programs. Six Senses Zighy Bay in Oman (2 hours) is consistently ranked among the world's best. The Retreat Palm Dubai is the closest option, right on Palm Jumeirah."
+  - question: "How much do wellness retreats near Dubai cost?"
+    answer: "Accessible options like ZOYA and The Retreat start from AED 800-1,500 per night. Premium resorts like Anantara and Talise run AED 2,000-4,000 per night. Luxury options like Six Senses start from AED 4,000-8,000 per night. Multi-day programs offer better value than single-night stays."
+  - question: "How long should a wellness retreat be?"
+    answer: "One day provides a reset but not deep change. Three days is the minimum for a meaningful detox or de-stress program. Five to seven days is ideal for lasting impact and habit formation. Ten or more days can be genuinely transformational for chronic stress or health reset."
+  - question: "What should I look for in a wellness retreat?"
+    answer: "Look for structured programs (not just a hotel with a spa), pre-arrival health assessment, qualified practitioners, healthy cuisine as part of the experience, a post-retreat take-home plan, and ideally a no-phone policy or digital detox component."
 ---
 
 Dubai is full of day spas and wellness centers, but sometimes you need more than a 60-minute treatment. A proper retreat — where you unplug, follow a structured program, and give your body and mind real time to reset — is a different experience entirely.

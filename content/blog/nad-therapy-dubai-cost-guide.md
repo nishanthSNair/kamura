@@ -4,12 +4,24 @@ date: "2026-03-04"
 category: "Longevity & Science"
 coverImage: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&q=80&fit=crop"
 excerpt: "NAD+ therapy is one of the most talked-about longevity treatments in Dubai. We explain the science, break down the costs, and review the best clinics offering it."
-kamuraScore: 74
-evidenceLevel: "Moderate"
 depthIndicator: "Deep Dive"
-relatedTreatments: ["nad-injectable", "nad-oral"]
-medicallyReviewed: true
-lastUpdated: "2026-03-04"
+relatedTreatments: ["nad-injectable", "nad-oral", "nad-iv-infusion", "nmn", "nr-nicotinamide-riboside", "iv-drip-therapy", "sleep-optimisation", "resistance-training"]
+lastUpdated: "2026-03-28"
+author:
+  name: "Nishanth Saseendran"
+  linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
+  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+faqItems:
+  - question: "How much does NAD+ IV therapy cost in Dubai?"
+    answer: "A single NAD+ IV session costs AED 1,500-3,000 depending on the dose (250mg-1,000mg) and clinic. Most practitioners recommend an initial loading phase of 4-6 sessions over 2-3 weeks, followed by monthly maintenance. A realistic first-year cost is AED 15,000-30,000."
+  - question: "How long does a NAD+ IV session take?"
+    answer: "NAD+ must be infused slowly to avoid side effects like nausea and chest tightness. A standard session takes 2-4 hours depending on the dose. Higher doses (500-1,000mg) take longer. Most clinics provide comfortable recliners, and you can read, work, or rest during the infusion."
+  - question: "What does NAD+ therapy feel like?"
+    answer: "During the infusion, some people experience temporary chest tightness, warmth, or mild nausea — these are normal and subside when the drip rate is adjusted. After the session, many report increased energy, mental clarity, and improved mood, sometimes within hours. Others notice effects building over the first 24-48 hours."
+  - question: "Is NMN or NR as effective as NAD+ IV?"
+    answer: "Oral NAD+ precursors (NMN, NR) are more convenient and affordable (AED 300-600/month) but have lower bioavailability than IV infusion. Many longevity practitioners use both: daily oral NMN for maintenance and periodic IV sessions for more significant NAD+ restoration. The combination approach may offer the best value."
+  - question: "Who should not get NAD+ therapy?"
+    answer: "NAD+ therapy is not recommended for pregnant or breastfeeding women (insufficient safety data), people with active cancer (NAD+ may promote broad cell growth — consult your oncologist), and those on certain medications without physician clearance. Always discuss your full medical history with the administering clinic."
 ---
 
 NAD+ therapy has become one of the most sought-after treatments in Dubai's longevity medicine scene. Celebrities, executives, and biohackers swear by it for energy, mental clarity, and anti-aging benefits. But what exactly is NAD+, does the science support the claims, and what should you expect to pay in Dubai? This guide covers everything you need to know before booking your first session.

@@ -1,14 +1,25 @@
 ---
 title: "Wellness on a Budget: Free & Affordable Ways to Feel Great in Dubai"
 date: "2026-02-26"
-category: "News & Trends"
+category: "Guides & Reviews"
 coverImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80&fit=crop"
 excerpt: "You don't need a luxury clinic membership to prioritize your health in Dubai. From free beach yoga to budget cryotherapy sessions, here's how to build a wellness routine without breaking the bank."
-kamuraScore: 78
-evidenceLevel: "Moderate"
 depthIndicator: "Protocol"
-relatedTreatments: ["meditation", "breathwork", "yoga", "cold-plunge"]
-lastUpdated: "2026-01-25"
+relatedTreatments: ["meditation", "breathwork", "yoga", "cold-plunge", "cryotherapy", "infrared-sauna", "grounding-earthing", "walking", "vitamin-d3-k2", "red-light-therapy"]
+lastUpdated: "2026-03-28"
+author:
+  name: "Nishanth Saseendran"
+  linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
+  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+faqItems:
+  - question: "What are the best free wellness activities in Dubai?"
+    answer: "Morning sunlight exposure (10-15 minutes for circadian rhythm and vitamin D), beach yoga and park workouts at JBR, Kite Beach, and Safa Park, cold showers for inflammation and mood, breathwork apps (Wim Hof, Othership), and barefoot walking on sand for grounding. These cost nothing and are available year-round."
+  - question: "How much does a basic wellness routine cost in Dubai?"
+    answer: "A diverse weekly routine including free activities (sunlight, walking, cold showers), one community yoga class (AED 50), group meditation (AED 60), cryotherapy (AED 150), and infrared sauna (AED 150) costs approximately AED 410 per week — covering movement, cold exposure, breathwork, meditation, and recovery."
+  - question: "When is the Dubai Fitness Challenge?"
+    answer: "The Dubai Fitness Challenge (DFC) runs annually in late October through November. For 30 days, the city offers free fitness classes, wellness activations, pop-up fitness villages, and community events backed by Sheikh Hamdan. It is one of the best free wellness events globally."
+  - question: "Are there affordable cryotherapy options in Dubai?"
+    answer: "Yes. Single sessions start from AED 150-175 at CRYO in Jumeirah 1 and UCRYO Wellness Center. You do not need to commit to a package. Multi-session packages bring per-session costs down further. Try it once or twice a month as a budget-friendly recovery tool."
 ---
 
 Dubai's wellness scene is often associated with high-end longevity clinics and luxury spa retreats. But the truth is, some of the most effective wellness practices cost little or nothing at all. Whether you're a resident watching your spending or a visitor looking to stay healthy on the road, Dubai offers surprising value for the wellness-minded.
