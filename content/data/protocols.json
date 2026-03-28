@@ -1,0 +1,606 @@
+{
+  "protocols": [
+    {
+      "slug": "bryan-johnson-blueprint",
+      "name": "Blueprint Protocol",
+      "creator": "Bryan Johnson",
+      "creatorTitle": "Tech entrepreneur, founder of Kernel & Blueprint",
+      "tagline": "The world's most measured human. A comprehensive anti-aging protocol backed by 100+ biomarkers and $2M+/year in testing.",
+      "description": "Bryan Johnson's Blueprint is the most extreme and well-documented longevity protocol in the world. After selling Braintree/Venmo for $800M, Johnson dedicated his life to reversing aging. His protocol involves 100+ supplements, strict vegan diet, rigorous exercise, and comprehensive biomarker tracking — all managed by a team of 30+ doctors. He has achieved measurable age reversal across multiple organs and has the biological markers of someone decades younger.",
+      "imageUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&q=80",
+      "creatorImageUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80",
+      "difficulty": "Expert",
+      "monthlyCost": "$1,500-2,000+ (supplements & testing)",
+      "timeCommitment": "3-4 hours/day",
+      "keyPrinciples": [
+        "Don't Die — the singular goal driving every decision",
+        "Autonomous self — body governed by data and algorithms, not cravings",
+        "Measure everything — 100+ biomarkers tracked continuously",
+        "Zero compromise on sleep — 8:30pm bedtime non-negotiable",
+        "Vegan whole-food nutrition — 1,977 calories exactly",
+        "Every action must have evidence behind it"
+      ],
+      "supplements": [
+        {"name": "Acarbose", "dose": "200mg", "timing": "With dinner", "purpose": "Glucose management, longevity (ITP validated)"},
+        {"name": "Ashwagandha", "dose": "600mg", "timing": "Morning", "purpose": "Cortisol reduction, stress resilience"},
+        {"name": "B Complex", "dose": "1 capsule", "timing": "Morning", "purpose": "Methylation, energy metabolism"},
+        {"name": "CoQ10", "dose": "100mg", "timing": "Morning", "purpose": "Mitochondrial function, cellular energy"},
+        {"name": "Collagen Peptides", "dose": "Varies", "timing": "Morning", "purpose": "Skin elasticity, joint health"},
+        {"name": "Creatine", "dose": "2.5g", "timing": "Morning", "purpose": "Muscle function, cognitive enhancement"},
+        {"name": "Curcumin", "dose": "500mg", "timing": "Morning", "purpose": "Anti-inflammatory"},
+        {"name": "DHEA", "dose": "25mg", "timing": "Morning", "purpose": "Hormone optimization"},
+        {"name": "EPA/DHA (Fish Oil)", "dose": "800mg", "timing": "Morning", "purpose": "Omega-3, anti-inflammatory, cardiovascular"},
+        {"name": "Garlic (Aged Extract)", "dose": "1.2g", "timing": "Morning", "purpose": "Cardiovascular, antimicrobial"},
+        {"name": "Genistein", "dose": "125mg", "timing": "Morning", "purpose": "Phytoestrogen, bone health"},
+        {"name": "Glucosamine", "dose": "1,500mg", "timing": "Morning", "purpose": "Joint health, cartilage support"},
+        {"name": "Lithium (low-dose)", "dose": "1mg", "timing": "Morning", "purpose": "Neuroprotection, mood stability"},
+        {"name": "Lycopene", "dose": "10mg", "timing": "Morning", "purpose": "Antioxidant, prostate health"},
+        {"name": "Metformin", "dose": "500mg", "timing": "With dinner", "purpose": "Glucose metabolism, longevity"},
+        {"name": "NR (Nicotinamide Riboside)", "dose": "375mg", "timing": "Morning", "purpose": "NAD+ precursor, cellular aging"},
+        {"name": "Rapamycin", "dose": "13mg biweekly", "timing": "Biweekly", "purpose": "mTOR inhibition, autophagy, longevity"},
+        {"name": "Spermidine", "dose": "10mg", "timing": "Morning", "purpose": "Autophagy, cellular renewal"},
+        {"name": "Taurine", "dose": "1g", "timing": "Morning", "purpose": "Cardiovascular, longevity"},
+        {"name": "Vitamin D3", "dose": "2,000 IU", "timing": "Morning", "purpose": "Immune, bone, metabolic health"},
+        {"name": "Vitamin K2-MK7", "dose": "100mcg", "timing": "Morning", "purpose": "Calcium metabolism, bone health"},
+        {"name": "Zinc", "dose": "15mg", "timing": "Morning", "purpose": "Immune function, hormone support"}
+      ],
+      "exercises": [
+        {"name": "High-Intensity Exercise", "frequency": "3x/week", "duration": "60 min", "details": "Structured strength training with progressive overload — legs, push, pull rotation"},
+        {"name": "Zone 2 Cardio", "frequency": "3-4x/week", "duration": "30-45 min", "details": "Treadmill or outdoor — 60-70% max heart rate for metabolic health"},
+        {"name": "Flexibility & Mobility", "frequency": "Daily", "duration": "15-20 min", "details": "Stretching, yoga-inspired movements, joint mobility work"},
+        {"name": "Posture Exercises", "frequency": "Daily", "duration": "10 min", "details": "Targeted exercises for spine alignment and postural correction"}
+      ],
+      "nutrition": {
+        "title": "Nutrition Protocol",
+        "icon": "🥗",
+        "items": [
+          "Exactly 1,977 calories per day — no more, no less",
+          "100% plant-based (vegan) whole foods",
+          "Super Veggie: broccoli, cauliflower, mushrooms, garlic, ginger, lentils, hemp seeds (daily staple)",
+          "Nutty Pudding: macadamia nut milk, walnuts, blueberries, pomegranate, cacao, sunflower lecithin",
+          "Third meal varies: sweet potato, vegetables, legumes",
+          "Final meal at 11:00am — nothing after (strict caloric restriction window)",
+          "No alcohol, no processed sugar, no processed foods",
+          "Olive oil: 30ml extra virgin daily",
+          "Dark chocolate: 15g (85%+ cacao)"
+        ]
+      },
+      "sleep": {
+        "title": "Sleep Protocol",
+        "icon": "😴",
+        "items": [
+          "Bedtime: 8:30pm sharp — non-negotiable",
+          "Wake: ~5:00-5:30am naturally (no alarm)",
+          "8+ hours sleep opportunity every night",
+          "Blue light blocking glasses from 6pm",
+          "Bedroom temperature: 65-67°F (18-19°C)",
+          "Complete darkness — blackout curtains, no LEDs",
+          "Wind-down routine: no screens after 7pm",
+          "Sleep tracking with Oura Ring + Eight Sleep mattress",
+          "Sleep score consistently 95-100/100"
+        ]
+      },
+      "testing": {
+        "title": "Testing & Measurement",
+        "icon": "🔬",
+        "items": [
+          "100+ biomarkers tracked every 3-6 months",
+          "Full-body MRI annually",
+          "DEXA scan every 6 months",
+          "Epigenetic age testing (biological age clock)",
+          "Brain MRI and cognitive testing",
+          "Whole-genome sequencing",
+          "Continuous glucose monitor (CGM)",
+          "Heart rate variability (HRV) tracking 24/7",
+          "Organ-specific age testing (heart, lungs, liver, kidneys)",
+          "VO2 max testing",
+          "Microbiome analysis",
+          "Skin age assessment"
+        ]
+      },
+      "pharmaceuticals": {
+        "title": "Pharmaceuticals",
+        "icon": "💊",
+        "items": [
+          "Rapamycin 13mg biweekly (mTOR inhibition)",
+          "Metformin 500mg daily (glucose metabolism)",
+          "Acarbose 200mg daily (carb absorption, ITP validated)",
+          "17-alpha estradiol (non-feminizing, lifespan extension in animal models)",
+          "Low-dose lithium 1mg (neuroprotection)",
+          "Tretinoin 0.05% nightly (skin aging reversal)",
+          "Minoxidil 5% (hair maintenance)"
+        ]
+      },
+      "keyResults": [
+        "Biological age 18+ years younger than chronological age",
+        "Heart of a 37-year-old (chronological age ~48)",
+        "Lung capacity of a young adult",
+        "Skin age measured at early 20s",
+        "Perfect sleep scores (95-100 on Oura Ring)",
+        "Speed of aging: 0.69 (aging 31% slower than average)",
+        "Fitness levels exceeding most 18-year-olds",
+        "Epigenetic age consistently declining year over year"
+      ],
+      "relatedTreatmentSlugs": ["rapamycin", "metformin", "acarbose", "spermidine", "nmn", "nr-nicotinamide-riboside", "creatine", "caloric-restriction", "time-restricted-eating", "biological-age-testing", "oura-ring"],
+      "sourceUrl": "https://blueprint.bryanjohnson.com",
+      "sourceLabel": "blueprint.bryanjohnson.com",
+      "tags": ["longevity", "anti-aging", "biohacking", "extreme", "vegan", "data-driven", "supplements"]
+    },
+    {
+      "slug": "peter-attia-outlive",
+      "name": "Outlive Protocol (Medicine 3.0)",
+      "creator": "Peter Attia",
+      "creatorTitle": "Physician, longevity researcher, author of Outlive",
+      "tagline": "Proactive Medicine 3.0 — defeat the Four Horsemen of chronic disease through exercise, nutrition, sleep, emotional health, and targeted pharmacology.",
+      "description": "Peter Attia's longevity framework, detailed in his bestselling book Outlive: The Science and Art of Longevity, represents the most evidence-based and medically rigorous approach to healthspan optimization. Unlike extreme protocols, Attia's framework is designed for long-term sustainability and personalization. He focuses on defeating the 'Four Horsemen' — cardiovascular disease, cancer, neurodegenerative disease, and metabolic dysfunction — through five tactical pillars: exercise, nutrition, sleep, emotional health, and pharmacology.",
+      "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&q=80",
+      "creatorImageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80",
+      "difficulty": "Intermediate",
+      "monthlyCost": "$200-800 (supplements + periodic testing)",
+      "timeCommitment": "10-14 hours/week (mostly exercise)",
+      "keyPrinciples": [
+        "Medicine 3.0: proactive, preventive, personalized — not waiting for disease",
+        "The Four Horsemen: ASCVD, cancer, neurodegeneration, metabolic dysfunction",
+        "Exercise is the most powerful longevity drug available",
+        "Centenarian Decathlon: train now for what you want to do at 90+",
+        "Lifespan is meaningless without healthspan (the Marginal Decade)",
+        "Personalize everything based on individual risk factors and genetics"
+      ],
+      "supplements": [
+        {"name": "EPA/DHA (Fish Oil)", "dose": "~2g combined", "timing": "Daily with food", "purpose": "Omega-3 index >8%, cardiovascular and brain health"},
+        {"name": "Vitamin D3", "dose": "5,000 IU", "timing": "Morning", "purpose": "Target blood level 40-60 ng/mL"},
+        {"name": "Magnesium L-Threonate", "dose": "~200mg elemental", "timing": "Before bed", "purpose": "Sleep quality, brain penetration"},
+        {"name": "Magnesium Bisglycinate", "dose": "~200mg elemental", "timing": "With meals", "purpose": "General magnesium status"},
+        {"name": "Creatine Monohydrate", "dose": "5g", "timing": "Daily", "purpose": "Muscle function, potential cognitive benefits"},
+        {"name": "Glycine", "dose": "2g", "timing": "Before bed", "purpose": "Sleep quality"},
+        {"name": "Phosphatidylserine", "dose": "200mg", "timing": "Before bed", "purpose": "Lower evening cortisol, improve sleep"},
+        {"name": "Methylfolate + Methyl-B12", "dose": "Standard dose", "timing": "Morning", "purpose": "Methylation support (MTHFR variant)"},
+        {"name": "CoQ10", "dose": "100-200mg", "timing": "Morning", "purpose": "Mitochondrial function (especially if on statin)"}
+      ],
+      "exercises": [
+        {"name": "Zone 2 Cardio", "frequency": "3-4x/week", "duration": "45-60 min", "details": "Cycling, incline treadmill, rowing. At lactate equilibrium (~2 mmol/L). Minimum 3 hrs/week total."},
+        {"name": "VO2 Max Intervals", "frequency": "1-2x/week", "duration": "30-40 min", "details": "4-min intervals at max effort, 4-min recovery, 4-6 rounds. Norwegian 4x4 protocol. VO2 max is the strongest mortality predictor."},
+        {"name": "Strength Training", "frequency": "3-4x/week", "duration": "45-60 min", "details": "Dead hangs (2+ min target), farmer carries, trap bar deadlifts, squats, pull-ups, rows, bench press. Focus on grip strength and eccentric loading."},
+        {"name": "Stability Training", "frequency": "Daily", "duration": "20-30 min", "details": "DNS (Dynamic Neuromuscular Stabilization), foot stability, scapular work, spine anti-rotation/extension, hip CARs. The foundation preventing injury."}
+      ],
+      "nutrition": {
+        "title": "Nutrition Framework",
+        "icon": "🥩",
+        "items": [
+          "Protein first: ~1g per pound of bodyweight daily (~180-200g for Attia)",
+          "Distribute protein across 3-4 meals (~40-50g per meal for optimal MPS)",
+          "Sources: eggs, whey protein, beef, chicken, fish, Greek yogurt",
+          "Carbs calibrated to training demands — more on heavy days, less on rest",
+          "Favor monounsaturated fats (olive oil, avocado) and omega-3s",
+          "No strict eating window — protein targets take priority over time restriction",
+          "CGM for 2-4 weeks to learn individual glycemic responses",
+          "Target: average glucose 85-95 mg/dL, post-meal <140 mg/dL",
+          "Zero alcohol (considers it a clear net negative for longevity)",
+          "He moved AWAY from extended fasting (too much muscle loss)"
+        ]
+      },
+      "sleep": {
+        "title": "Sleep Optimization",
+        "icon": "😴",
+        "items": [
+          "7.5-8.5 hours sleep opportunity (7+ hours actual sleep)",
+          "Bedroom temperature: 65-67°F (18-19°C)",
+          "Eight Sleep or cooling device for bed temperature control",
+          "Complete darkness — blackout curtains, no LEDs",
+          "Blue-light blocking glasses 1-2 hours before bed",
+          "No caffeine after noon (slow CYP1A2 metabolizer)",
+          "Sleep supplements: Mg L-threonate, glycine, phosphatidylserine",
+          "Track with WHOOP and/or Oura Ring",
+          "Aggressive screening for sleep apnea"
+        ]
+      },
+      "testing": {
+        "title": "Screening & Testing",
+        "icon": "🔬",
+        "items": [
+          "ApoB: primary lipid marker, target <60 mg/dL (the #1 modifiable CV risk factor)",
+          "Lp(a): test once (genetic, doesn't change). If elevated, manage aggressively",
+          "Coronary Artery Calcium (CAC) score: men 40+, women 50+",
+          "Fasting insulin + HOMA-IR: more important than fasting glucose",
+          "OGTT: 2-hour glucose tolerance test for early detection",
+          "Whole-body MRI (PRENUVO): annually — his most aggressive screening rec",
+          "DEXA scan: annually for lean mass, visceral fat, bone density",
+          "VO2 max testing: annually to track aerobic fitness trajectory",
+          "Colonoscopy starting at 40 (earlier than standard guidelines)",
+          "ApoE genotype: test once for Alzheimer's risk stratification",
+          "Full thyroid panel: TSH, free T3, free T4, reverse T3, antibodies",
+          "Blood work every 3-6 months"
+        ]
+      },
+      "pharmaceuticals": {
+        "title": "Pharmaceutical Approach",
+        "icon": "💊",
+        "items": [
+          "Rapamycin: ~5-8mg once weekly (cyclic, 8 weeks on/off) — most promising longevity drug",
+          "Statins + Ezetimibe + PCSK9 inhibitors: aggressive apoB reduction to <60 mg/dL",
+          "No longer takes Metformin (may blunt exercise benefits, exercise is a better AMPK activator)",
+          "TRT when testosterone levels are suboptimal and symptomatic",
+          "GLP-1 agonists: powerful for metabolic health, but MUST do resistance training on them",
+          "Low-dose aspirin: only in specific high-risk cases (moved away from routine use)"
+        ]
+      },
+      "mindset": {
+        "title": "Emotional Health (5th Pillar)",
+        "icon": "🧠",
+        "items": [
+          "Considers emotional health equally important as physical health",
+          "Regular psychotherapy — he sees a therapist consistently",
+          "Trauma processing: completed a residential treatment program",
+          "Dialectical Behavior Therapy (DBT) for emotional regulation",
+          "Internal Family Systems (IFS) therapy",
+          "Journaling and self-reflection practices",
+          "Active relationship work with family",
+          "'What's the point of extra years if they're filled with emotional suffering?'"
+        ]
+      },
+      "keyResults": [
+        "VO2 max in top 2-5% for age (targeting >55 ml/kg/min)",
+        "ApoB consistently below 60 mg/dL",
+        "Fasting insulin below 5 μIU/mL",
+        "Body composition: ~10-12% body fat with maximal lean mass",
+        "Grip strength above average for age",
+        "Dead hang: 2+ minutes",
+        "Sleep efficiency >85% with high deep sleep percentage",
+        "HbA1c <5.3% (more aggressive than standard target)"
+      ],
+      "relatedTreatmentSlugs": ["rapamycin", "omega-3", "vitamin-d3-k2", "magnesium", "creatine", "zone-2-cardio", "vo2-max-training", "resistance-training", "dexa-scan", "whole-body-mri", "coronary-calcium-score", "oura-ring", "whoop-band"],
+      "sourceUrl": "https://peterattiamd.com",
+      "sourceLabel": "peterattiamd.com / Outlive (book)",
+      "tags": ["longevity", "medicine-3.0", "evidence-based", "exercise", "cardiovascular", "cancer-prevention", "sustainable"]
+    },
+    {
+      "slug": "andrew-huberman-toolkit",
+      "name": "Huberman Lab Toolkit",
+      "creator": "Andrew Huberman",
+      "creatorTitle": "Stanford neuroscientist, host of Huberman Lab podcast",
+      "tagline": "Neuroscience-backed daily protocols for sleep, focus, energy, and performance — the most actionable wellness toolkit online.",
+      "description": "Andrew Huberman's protocols are derived from his work as a Stanford School of Medicine neuroscience professor and his hugely popular Huberman Lab podcast. Unlike other longevity protocols, Huberman's approach focuses on optimizing daily neurochemistry and circadian biology through specific, actionable behaviors. His toolkit covers morning sunlight, cold exposure, specific supplement stacks, and precise exercise timing — all backed by his explanations of the underlying neuroscience.",
+      "imageUrl": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80",
+      "creatorImageUrl": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80",
+      "difficulty": "Beginner",
+      "monthlyCost": "$100-300 (supplements + sunlight is free)",
+      "timeCommitment": "2-3 hours/day",
+      "keyPrinciples": [
+        "Morning sunlight within 30 min of waking — the #1 most impactful free tool",
+        "Leverage dopamine, serotonin, and adrenaline through behavior, not just supplements",
+        "Deliberate cold exposure for dopamine (2.5x baseline for hours)",
+        "Non-sleep deep rest (NSDR) as a powerful recovery and focus tool",
+        "Caffeine delay: wait 90-120 min after waking before coffee",
+        "Optimize circadian rhythm as the foundation for all other health"
+      ],
+      "supplements": [
+        {"name": "AG1 (Athletic Greens)", "dose": "1 scoop", "timing": "Morning", "purpose": "Foundational nutrition, gut health (sponsor disclosure)"},
+        {"name": "Omega-3 (EPA/DHA)", "dose": "2-3g", "timing": "Daily", "purpose": "Mood, brain health, anti-inflammatory"},
+        {"name": "Vitamin D3", "dose": "5,000 IU", "timing": "Morning", "purpose": "Immune and bone health (if not getting enough sun)"},
+        {"name": "Magnesium Threonate", "dose": "145mg", "timing": "Before bed", "purpose": "Sleep quality, brain penetration, GABA enhancement"},
+        {"name": "Magnesium Bisglycinate", "dose": "200mg", "timing": "Before bed", "purpose": "Muscle relaxation, sleep"},
+        {"name": "Theanine", "dose": "100-400mg", "timing": "Before bed", "purpose": "Sleep onset, reduces anxiety (skip if vivid dreams)"},
+        {"name": "Apigenin", "dose": "50mg", "timing": "Before bed", "purpose": "Mild sedative, sleep onset via chloride channels"},
+        {"name": "Inositol", "dose": "900mg", "timing": "Before bed", "purpose": "Fall back asleep if waking at night"},
+        {"name": "Tongkat Ali", "dose": "400mg", "timing": "Morning", "purpose": "Free testosterone increase, energy"},
+        {"name": "Fadogia Agrestis", "dose": "425mg", "timing": "Morning", "purpose": "Luteinizing hormone, testosterone (cycle 8 weeks on/off)"},
+        {"name": "Alpha-GPC", "dose": "300mg", "timing": "Pre-workout", "purpose": "Focus, acetylcholine, power output"},
+        {"name": "Creatine", "dose": "5g", "timing": "Daily", "purpose": "Cognitive and physical performance"},
+        {"name": "Rhodiola Rosea", "dose": "100-200mg", "timing": "Before intense work", "purpose": "Cortisol modulation, fatigue resistance"}
+      ],
+      "exercises": [
+        {"name": "Resistance Training", "frequency": "3-4x/week", "duration": "60-75 min", "details": "Legs, torso push, torso pull, small body parts rotation. 3-4 sets per exercise, 5-12 rep range. Trains in the morning for cortisol/testosterone optimization."},
+        {"name": "Cardiovascular Training", "frequency": "3x/week", "duration": "30-60 min", "details": "Zone 2 cardio (long jog, hike) + 1 HIIT session. He alternates weeks: some focus more on endurance, others on strength."},
+        {"name": "Deliberate Cold Exposure", "frequency": "3-5x/week", "duration": "1-5 min", "details": "Cold shower or ice bath at ~50°F (10°C). End on cold (not warm). 2.5x dopamine increase lasting 2-3 hours. Avoid immediately post-strength training."},
+        {"name": "Deliberate Heat Exposure", "frequency": "3-4x/week", "duration": "20 min", "details": "Sauna at 170-210°F (80-100°C). For growth hormone release, cardiovascular benefit, and heat shock proteins."}
+      ],
+      "nutrition": {
+        "title": "Nutrition Approach",
+        "icon": "🥩",
+        "items": [
+          "Low-carb early in the day (fasting or light protein) to maintain focus via alertness neurochemistry",
+          "Larger carb-containing meal later in day (supports serotonin and sleep onset)",
+          "Emphasis on quality proteins, healthy fats, and fermented foods for gut health",
+          "Yerba mate tea as preferred caffeine source (GLP-1 releasing properties)",
+          "Caffeine delay: wait 90-120 minutes after waking to allow adenosine clearance",
+          "Hydration: water with electrolytes (sodium, potassium, magnesium) first thing in morning",
+          "He intermittent fasts most days (first meal around noon), but not dogmatic about it"
+        ]
+      },
+      "sleep": {
+        "title": "Sleep Toolkit",
+        "icon": "😴",
+        "items": [
+          "Morning sunlight: 10-30 min within 30 min of waking (THE most important sleep tool)",
+          "Evening sunlight viewing to signal the circadian clock for upcoming night",
+          "Room temperature: cool (65-67°F / 18-19°C)",
+          "Supplements: Mg threonate + Mg bisglycinate + apigenin + theanine (the 'sleep stack')",
+          "NSDR (Non-Sleep Deep Rest): 10-20 min Yoga Nidra or body scan if sleep is disrupted",
+          "No bright lights overhead between 10pm-4am (dim lights, low placement)",
+          "Reveri app for self-hypnosis / NSDR protocols",
+          "If you wake at night: inositol 900mg to fall back asleep",
+          "Consistent wake time is more important than consistent bedtime"
+        ]
+      },
+      "testing": {
+        "title": "Key Metrics",
+        "icon": "🔬",
+        "items": [
+          "Track sleep with Oura Ring or WHOOP",
+          "Monitor HRV trends for recovery and stress",
+          "Hormone panel (testosterone, cortisol, thyroid) periodically",
+          "Blood work basics: lipids, metabolic panel, inflammation markers",
+          "Subjective: rate focus, energy, mood, and sleep quality daily"
+        ]
+      },
+      "keyResults": [
+        "Morning sunlight sets circadian clock — improves sleep onset by 30+ min",
+        "Cold exposure: 2.5x baseline dopamine lasting 2-3 hours (equivalent to some drugs)",
+        "NSDR shown to restore dopamine levels in basal ganglia by 65%",
+        "Resistance training in AM optimizes testosterone and cortisol curves",
+        "Caffeine delay prevents afternoon crash and improves sustained alertness",
+        "Sleep stack (Mg + apigenin + theanine) improves sleep quality metrics significantly"
+      ],
+      "relatedTreatmentSlugs": ["cold-plunge", "infrared-sauna", "meditation", "tongkat-ali", "rhodiola-rosea", "magnesium", "l-theanine", "apigenin", "creatine", "omega-3", "oura-ring", "whoop-band", "resistance-training", "yoga"],
+      "sourceUrl": "https://hubermanlab.com",
+      "sourceLabel": "hubermanlab.com",
+      "tags": ["neuroscience", "circadian", "dopamine", "sleep", "cold-exposure", "beginner-friendly", "free-tools"]
+    },
+    {
+      "slug": "david-sinclair-longevity",
+      "name": "Sinclair Longevity Protocol",
+      "creator": "David Sinclair",
+      "creatorTitle": "Harvard genetics professor, author of Lifespan",
+      "tagline": "The Information Theory of Aging — NMN, resveratrol, and lifestyle interventions to reprogram your epigenetic clock.",
+      "description": "David Sinclair is a professor of genetics at Harvard Medical School and one of the most influential aging researchers in the world. His book Lifespan: Why We Age and Why We Don't Have To popularized the concept that aging is a disease that can be treated. His protocol centers on the Information Theory of Aging — the idea that aging is caused by loss of epigenetic information, not just DNA damage. He advocates for sirtuin-activating compounds, NAD+ boosters, and stress-mimetic behaviors to reprogram cellular aging.",
+      "imageUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&q=80",
+      "creatorImageUrl": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&q=80",
+      "difficulty": "Intermediate",
+      "monthlyCost": "$200-500 (NMN + resveratrol are the main costs)",
+      "timeCommitment": "1-2 hours/day",
+      "keyPrinciples": [
+        "Aging is a disease — and it can be treated like one",
+        "The Information Theory of Aging: epigenetic noise causes aging, not just DNA mutations",
+        "Activate survival circuits: sirtuins, AMPK, mTOR inhibition",
+        "Hormesis: beneficial stress (cold, heat, fasting, exercise) activates longevity genes",
+        "NMN/NR to boost NAD+ levels (decline with age drives cellular dysfunction)",
+        "Eat less often, maintain some hunger, expose yourself to temperature extremes"
+      ],
+      "supplements": [
+        {"name": "NMN (Nicotinamide Mononucleotide)", "dose": "1g", "timing": "Morning", "purpose": "NAD+ precursor — the cornerstone of his protocol"},
+        {"name": "Resveratrol", "dose": "1g", "timing": "Morning with yogurt (fat for absorption)", "purpose": "Sirtuin activator, polyphenol antioxidant"},
+        {"name": "Metformin", "dose": "800mg (1g claimed at times)", "timing": "Evening", "purpose": "AMPK activation, glucose management (skips on exercise days)"},
+        {"name": "Vitamin D3", "dose": "Dose varies", "timing": "Morning", "purpose": "Immune and metabolic health"},
+        {"name": "Vitamin K2", "dose": "Standard dose", "timing": "Morning", "purpose": "Calcium metabolism, paired with D3"},
+        {"name": "Spermidine", "dose": "1mg+", "timing": "Morning", "purpose": "Autophagy induction"},
+        {"name": "Quercetin", "dose": "500mg", "timing": "Morning", "purpose": "Senolytic, anti-inflammatory"},
+        {"name": "TMG (Trimethylglycine)", "dose": "500mg-1g", "timing": "With NMN", "purpose": "Methyl donor (NMN may deplete methyl groups)"},
+        {"name": "Alpha-Lipoic Acid", "dose": "Standard dose", "timing": "Morning", "purpose": "Antioxidant, insulin sensitivity"},
+        {"name": "CoQ10", "dose": "Standard dose", "timing": "Morning", "purpose": "Mitochondrial support"}
+      ],
+      "exercises": [
+        {"name": "Cardiovascular Exercise", "frequency": "3-4x/week", "duration": "30-60 min", "details": "Running, walking, or cycling. He emphasizes getting heart rate up and out of breath. Aims for hypoxic stress to trigger survival circuits."},
+        {"name": "Weight Training", "frequency": "2-3x/week", "duration": "30-45 min", "details": "Basic resistance training. He's not as exercise-focused as Attia but recognizes its importance for NAD+ production and muscle maintenance."},
+        {"name": "Cold Exposure", "frequency": "Regular", "duration": "Varies", "details": "Cold showers and/or ice baths as hormetic stress to activate cold shock proteins and sirtuins."},
+        {"name": "Heat Exposure", "frequency": "Regular", "duration": "15-20 min", "details": "Sauna sessions for heat shock protein production."}
+      ],
+      "nutrition": {
+        "title": "Nutrition Philosophy",
+        "icon": "🥗",
+        "items": [
+          "Eat less often — skip breakfast most days (intermittent fasting)",
+          "Primarily plant-based diet, limited meat consumption",
+          "Avoid sugar and simple carbs",
+          "Resveratrol taken with yogurt or olive oil for fat-assisted absorption",
+          "Skips metformin on days he exercises (may blunt exercise benefits)",
+          "Emphasizes xenohormesis: eat stressed plants (colorful, organic vegetables)",
+          "Maintains slight caloric deficit or at least avoids overeating",
+          "Olive oil as primary fat source"
+        ]
+      },
+      "sleep": {
+        "title": "Sleep & Recovery",
+        "icon": "😴",
+        "items": [
+          "Prioritizes consistent sleep schedule",
+          "Cool bedroom temperature",
+          "Limits blue light exposure in evening",
+          "Not as detailed or prescriptive about sleep as Huberman or Attia",
+          "Focuses more on the molecular interventions than behavioral sleep optimization"
+        ]
+      },
+      "testing": {
+        "title": "Testing & Biomarkers",
+        "icon": "🔬",
+        "items": [
+          "Epigenetic age testing (biological age clocks) — central to his framework",
+          "InsideTracker blood work panels (he was an early advisor/investor)",
+          "NAD+ blood levels",
+          "Standard metabolic panels, lipids, inflammation markers",
+          "Tracks biological age vs chronological age over time",
+          "Advocates for widespread adoption of biological age testing"
+        ]
+      },
+      "keyResults": [
+        "Claims biological age approximately 10 years younger than chronological age",
+        "Elevated NAD+ blood levels from NMN supplementation",
+        "Improved blood biomarkers over years of protocol adherence",
+        "Research lab has demonstrated age reversal in mice (ICE mice model)",
+        "Yamanaka factor partial reprogramming research showing age reversal in animal models"
+      ],
+      "relatedTreatmentSlugs": ["nmn", "nr-nicotinamide-riboside", "resveratrol", "metformin", "spermidine", "quercetin-fisetin", "fasting", "cold-plunge", "infrared-sauna", "biological-age-testing", "alpha-lipoic-acid"],
+      "sourceUrl": "https://lifespanbook.com",
+      "sourceLabel": "Lifespan (book) / Sinclair Lab",
+      "tags": ["longevity", "epigenetics", "NMN", "sirtuins", "NAD+", "research-driven", "Harvard"]
+    },
+    {
+      "slug": "valter-longo-longevity-diet",
+      "name": "Longevity Diet & FMD Protocol",
+      "creator": "Valter Longo",
+      "creatorTitle": "USC Longevity Institute director, author of The Longevity Diet",
+      "tagline": "Fasting-mimicking science meets Blue Zone wisdom — the most researched dietary approach to longevity.",
+      "description": "Valter Longo directs the USC Longevity Institute and is one of the most respected aging researchers in the world. His protocol combines decades of laboratory research on fasting and IGF-1 with observations from Blue Zone populations who live to 100+. The centerpiece is the Fasting Mimicking Diet (FMD) — a 5-day low-calorie protocol that triggers cellular regeneration while still allowing food. His Longevity Diet is a daily eating pattern inspired by Okinawan and Mediterranean centenarians.",
+      "imageUrl": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1920&q=80",
+      "creatorImageUrl": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&q=80",
+      "difficulty": "Beginner",
+      "monthlyCost": "$50-250 (ProLon kit: ~$200 per 5-day cycle)",
+      "timeCommitment": "Minimal daily (5-day FMD every 1-3 months)",
+      "keyPrinciples": [
+        "Longevity comes from five pillars: basic research, epidemiology, clinical studies, centenarian studies, and complexity theory",
+        "Low IGF-1 and low insulin are key longevity signals",
+        "Periodic fasting triggers stem cell regeneration and autophagy",
+        "The Fasting Mimicking Diet provides fasting benefits while minimizing risks",
+        "Pescatarian diet closest to centenarian eating patterns",
+        "Eat within a 12-hour window, nothing 3-4 hours before bed"
+      ],
+      "supplements": [
+        {"name": "Omega-3 (Fish/Algae Oil)", "dose": "Standard", "timing": "Daily", "purpose": "Anti-inflammatory, cardiovascular"},
+        {"name": "Vitamin D3", "dose": "Based on blood levels", "timing": "Daily", "purpose": "Bone and immune health"},
+        {"name": "Vitamin B12", "dose": "Standard", "timing": "Daily", "purpose": "Essential for pescatarian/plant-based diet"},
+        {"name": "Multi-Mineral Complex", "dose": "Every 3 days", "timing": "With food", "purpose": "Zinc, magnesium, calcium — not daily to avoid excess"}
+      ],
+      "exercises": [
+        {"name": "Walking", "frequency": "Daily", "duration": "30-60 min", "details": "Brisk walking as primary exercise — mirrors Blue Zone populations who walk extensively."},
+        {"name": "Light Resistance Training", "frequency": "2-3x/week", "duration": "30 min", "details": "Moderate weights or bodyweight exercises. Enough to maintain muscle mass without excessive mTOR stimulation."},
+        {"name": "Active Lifestyle", "frequency": "Daily", "duration": "Throughout day", "details": "Take stairs, garden, manual tasks. Blue Zone centenarians don't 'exercise' — they move constantly."}
+      ],
+      "nutrition": {
+        "title": "The Longevity Diet",
+        "icon": "🐟",
+        "items": [
+          "Pescatarian base: mostly plant-based with fish 2-3x per week",
+          "Low protein (0.31-0.36g per pound of bodyweight) — especially low animal protein",
+          "After age 65-70: increase protein to prevent sarcopenia",
+          "Complex carbs: whole grains, legumes, vegetables as the foundation",
+          "Healthy fats: olive oil, nuts as primary fat sources",
+          "Minimize saturated fat and processed food",
+          "Eat within a 12-hour window (e.g., 7am-7pm)",
+          "Nothing 3-4 hours before bed",
+          "Inspired by Okinawan, Sardinian, and Loma Linda centenarian diets",
+          "Two meals + one snack per day (or three small meals)"
+        ]
+      },
+      "sleep": {
+        "title": "Sleep",
+        "icon": "😴",
+        "items": [
+          "Standard sleep hygiene recommendations",
+          "Not eating 3-4 hours before bed improves sleep quality",
+          "Regular sleep schedule aligned with circadian rhythm"
+        ]
+      },
+      "testing": {
+        "title": "Key Markers to Track",
+        "icon": "🔬",
+        "items": [
+          "IGF-1 levels: lower is generally better for longevity (except in elderly)",
+          "Fasting glucose and insulin",
+          "Inflammatory markers (CRP)",
+          "Cholesterol panel",
+          "Body composition: healthy weight maintenance is key",
+          "Blood pressure and standard metabolic markers"
+        ]
+      },
+      "keyResults": [
+        "FMD clinical trial: reduced body weight, blood pressure, IGF-1, and aging biomarkers",
+        "3 monthly FMD cycles reduced inflammatory markers and improved metabolic health",
+        "Mouse studies: FMD promoted multi-system regeneration and reduced cancer incidence",
+        "Centenarian populations following similar dietary patterns live to 100+ routinely",
+        "ProLon FMD shown to promote stem cell regeneration after refeeding"
+      ],
+      "relatedTreatmentSlugs": ["fasting-mimicking-diet", "fasting", "caloric-restriction", "time-restricted-eating", "mediterranean-diet", "omega-3", "walking"],
+      "sourceUrl": "https://www.valterlongo.com",
+      "sourceLabel": "The Longevity Diet (book) / USC Longevity Institute",
+      "tags": ["longevity", "fasting", "FMD", "Blue-Zones", "pescatarian", "evidence-based", "accessible"]
+    },
+    {
+      "slug": "rhonda-patrick-foundmyfitness",
+      "name": "FoundMyFitness Protocol",
+      "creator": "Rhonda Patrick",
+      "creatorTitle": "PhD in biomedical science, FoundMyFitness podcast host",
+      "tagline": "Micronutrient optimization and heat/cold stress — a research-dense, practical approach to healthspan based on nutrigenomics.",
+      "description": "Rhonda Patrick holds a PhD in biomedical science and is known for translating complex research into actionable health protocols. Her FoundMyFitness platform is one of the most respected sources for evidence-based health information. Her approach emphasizes micronutrient adequacy, sauna and cold exposure for hormesis, sulforaphane from broccoli sprouts, and omega-3 optimization. She is particularly known for her deep dives into the science of heat shock proteins, vitamin D, and the gut-brain axis.",
+      "imageUrl": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80",
+      "creatorImageUrl": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80",
+      "difficulty": "Intermediate",
+      "monthlyCost": "$150-400 (supplements + sauna access)",
+      "timeCommitment": "1-2 hours/day",
+      "keyPrinciples": [
+        "Micronutrient adequacy is the foundation — most people are deficient in key vitamins and minerals",
+        "Hormesis: sauna and cold exposure activate powerful protective pathways",
+        "Sulforaphane (broccoli sprouts) is one of the most potent NRF2 activators available",
+        "Omega-3 index matters — target >8% for optimal brain and cardiovascular health",
+        "Vitamin D is a hormone, not just a vitamin — target 40-60 ng/mL",
+        "Time-restricted eating supports circadian biology and metabolic health"
+      ],
+      "supplements": [
+        {"name": "Vitamin D3", "dose": "4,000-5,000 IU", "timing": "Morning with food", "purpose": "Target 40-60 ng/mL blood level. Immune, brain, bone, mood."},
+        {"name": "Omega-3 (EPA/DHA)", "dose": "4g+ combined", "timing": "With meals", "purpose": "Target omega-3 index >8%. Brain health, anti-inflammatory."},
+        {"name": "Magnesium", "dose": "~400mg", "timing": "Evening", "purpose": "Widespread deficiency. Sleep, muscle function, 300+ enzymatic reactions."},
+        {"name": "Sulforaphane (Broccoli Sprout Extract)", "dose": "100g fresh sprouts or supplement", "timing": "Morning", "purpose": "NRF2 activation, phase II detoxification, anti-cancer."},
+        {"name": "Vitamin K2 (MK-7)", "dose": "100mcg", "timing": "With D3", "purpose": "Directs calcium to bones, away from arteries."},
+        {"name": "Vitamin C", "dose": "500mg+", "timing": "Daily", "purpose": "Antioxidant, immune, collagen synthesis."},
+        {"name": "Multivitamin/Mineral", "dose": "Standard", "timing": "Morning", "purpose": "Insurance policy for micronutrient gaps."},
+        {"name": "Probiotics", "dose": "Multi-strain", "timing": "Morning", "purpose": "Gut health, immune modulation, gut-brain axis."},
+        {"name": "Lutein + Zeaxanthin", "dose": "10-20mg lutein", "timing": "With food", "purpose": "Eye health, macular protection, cognitive benefits."}
+      ],
+      "exercises": [
+        {"name": "Sauna", "frequency": "4-7x/week", "duration": "20-30 min at 174°F+", "details": "She is one of the strongest advocates for regular sauna use. Cites Finnish studies showing 40% all-cause mortality reduction with 4-7x/week sauna."},
+        {"name": "High-Intensity Exercise", "frequency": "3-4x/week", "duration": "30-60 min", "details": "Mix of resistance training and high-intensity intervals. Triggers BDNF, mitochondrial biogenesis, and muscle protein synthesis."},
+        {"name": "Cold Exposure", "frequency": "Several times/week", "duration": "2-5 min", "details": "Cold water immersion after or separate from exercise. Norepinephrine release, brown fat activation, mood enhancement."},
+        {"name": "Moderate Aerobic", "frequency": "Daily", "duration": "30+ min", "details": "Walking, cycling, or moderate cardio for cardiovascular health and BDNF production."}
+      ],
+      "nutrition": {
+        "title": "Nutrition Protocol",
+        "icon": "🥦",
+        "items": [
+          "Micronutrient-dense whole foods as the foundation",
+          "Broccoli sprouts: grows her own, eats 100g+ regularly for sulforaphane",
+          "Wild-caught salmon and fatty fish 3-4x/week for DHA/EPA",
+          "Diverse colorful vegetables for phytonutrients and fiber",
+          "Fermented foods: sauerkraut, kimchi, yogurt for microbiome",
+          "Berries daily (especially blueberries) for polyphenols",
+          "Time-restricted eating: typically eats within a 10-hour window",
+          "Adequate protein for muscle maintenance (higher than Longo's recommendations)",
+          "Minimizes processed foods, sugar, and excessive omega-6 oils"
+        ]
+      },
+      "sleep": {
+        "title": "Sleep",
+        "icon": "😴",
+        "items": [
+          "Consistent sleep-wake schedule",
+          "Sauna in the evening can improve deep sleep",
+          "Magnesium supplementation before bed",
+          "Prioritizes darkness and cool temperature",
+          "Monitors sleep quality metrics"
+        ]
+      },
+      "testing": {
+        "title": "Key Tests She Recommends",
+        "icon": "🔬",
+        "items": [
+          "Omega-3 Index blood test (target >8%)",
+          "25-OH Vitamin D (target 40-60 ng/mL)",
+          "Comprehensive metabolic panel",
+          "Inflammatory markers (hsCRP)",
+          "Homocysteine (target <10 μmol/L)",
+          "ApoE genotype testing",
+          "Genetic testing (23andMe-style) for nutrigenomic insights",
+          "DEXA scan for body composition"
+        ]
+      },
+      "keyResults": [
+        "Sauna use: 4-7x/week associated with 40% lower all-cause mortality (Finnish study)",
+        "Sulforaphane: one of the most potent NRF2 activators, anti-cancer properties demonstrated",
+        "Omega-3 index >8% associated with significantly lower cardiovascular and cognitive risks",
+        "Vitamin D optimization: reduces risk of respiratory infections, autoimmune conditions, and cancer",
+        "Time-restricted eating improves metabolic markers and circadian alignment"
+      ],
+      "relatedTreatmentSlugs": ["sulforaphane", "omega-3", "vitamin-d3-k2", "infrared-sauna", "cold-plunge", "probiotics", "magnesium", "time-restricted-eating", "biological-age-testing"],
+      "sourceUrl": "https://www.foundmyfitness.com",
+      "sourceLabel": "foundmyfitness.com",
+      "tags": ["micronutrients", "sauna", "sulforaphane", "omega-3", "vitamin-D", "evidence-based", "hormesis"]
+    }
+  ]
+}

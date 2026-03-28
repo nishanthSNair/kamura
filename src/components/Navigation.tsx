@@ -56,7 +56,7 @@ export default function Navigation() {
             {[
               { href: "/blog", label: "Blog" },
               { href: "/treatments", label: "Treatments" },
-              { href: "/wellness-checker", label: "Wellness Check" },
+              { href: "/protocols", label: "Protocols" },
               { href: "/explore", label: "Explore" },
               { href: "/events", label: "Events" },
               { href: "/about", label: "About" },
@@ -158,7 +158,7 @@ export default function Navigation() {
             {[
               { href: "/blog", label: "Blog" },
               { href: "/treatments", label: "Treatments" },
-              { href: "/wellness-checker", label: "Wellness Check" },
+              { href: "/protocols", label: "Protocols" },
               { href: "/explore", label: "Explore" },
               { href: "/events", label: "Events" },
               { href: "/about", label: "About" },
