@@ -23,6 +23,7 @@ import SideEffectsPanel from "@/components/treatments/SideEffectsPanel";
 import InteractionsPanel from "@/components/treatments/InteractionsPanel";
 import CostGuide from "@/components/treatments/CostGuide";
 import FAQAccordion from "@/components/treatments/FAQAccordion";
+import AddToStackButton from "@/components/stack/AddToStackButton";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -217,6 +218,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
                       Available in UAE
                     </span>
                   )}
+                  <AddToStackButton slug={t.slug} variant="button" />
                 </div>
               </div>
 

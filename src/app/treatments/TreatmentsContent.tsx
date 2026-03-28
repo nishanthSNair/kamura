@@ -1,10 +1,14 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { treatments, getScoreTier, getScoreTierColor, ALL_TREATMENT_CATEGORIES, type TreatmentCategory } from "@/data/treatments";
+import { treatments, getScoreTierColor, ALL_TREATMENT_CATEGORIES, type TreatmentCategory } from "@/data/treatments";
+import { groupByTier } from "@/data/tiers";
+import { useStackContext } from "@/context/StackContext";
 import TreatmentListCard from "@/components/treatments/TreatmentListCard";
+import TierSection from "@/components/treatments/TierSection";
+import ViewToggle, { type ViewMode } from "@/components/treatments/ViewToggle";
 import FilterChip from "@/components/treatments/FilterChip";
 
 type SortOption = "score" | "evidence" | "community" | "safety" | "name";
@@ -17,6 +21,7 @@ const CATEGORY_FILTERS: (TreatmentCategory | "All")[] = [
 export default function TreatmentsContent() {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get("category") || "All";
+  const stackParam = searchParams.get("stack");
   const validCategory = ALL_TREATMENT_CATEGORIES.includes(initialCategory as TreatmentCategory)
     ? (initialCategory as TreatmentCategory)
     : "All";
@@ -24,16 +29,21 @@ export default function TreatmentsContent() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<TreatmentCategory | "All">(validCategory);
   const [sortBy, setSortBy] = useState<SortOption>("score");
+  const [viewMode, setViewMode] = useState<ViewMode>("tier");
+
+  // Import shared stack from URL params
+  const { importFromParams } = useStackContext();
+  useEffect(() => {
+    if (stackParam) importFromParams(stackParam);
+  }, [stackParam, importFromParams]);
 
   const filtered = useMemo(() => {
     let result = [...treatments];
 
-    // Filter by category
     if (activeCategory !== "All") {
       result = result.filter((t) => t.category === activeCategory);
     }
 
-    // Filter by search
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(
@@ -46,7 +56,6 @@ export default function TreatmentsContent() {
       );
     }
 
-    // Sort
     switch (sortBy) {
       case "score":
         result.sort((a, b) => b.kamuraScore - a.kamuraScore);
@@ -67,6 +76,8 @@ export default function TreatmentsContent() {
 
     return result;
   }, [searchQuery, activeCategory, sortBy]);
+
+  const tierGroups = useMemo(() => groupByTier(filtered), [filtered]);
 
   return (
     <div>
@@ -183,7 +194,7 @@ export default function TreatmentsContent() {
       {/* Filter & Search */}
       <section className="max-w-[1200px] mx-auto px-6 mb-8">
         <div className="flex flex-col gap-3">
-          <div className="flex gap-3 items-center">
+          <div className="flex gap-3 items-center flex-wrap">
             <input
               type="text"
               placeholder="Search treatments, compounds, or conditions..."
@@ -191,6 +202,7 @@ export default function TreatmentsContent() {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="flex-1 min-w-[200px] bg-white dark:bg-[#1C1815] border border-gray-200 dark:border-white/[0.06] rounded-xl px-4 py-3 text-sm text-gray-900 dark:text-[#F0EBE2] placeholder:text-gray-400 dark:placeholder:text-[#6B6358] outline-none focus:border-sage/60 focus:ring-1 focus:ring-sage/20 font-sans"
             />
+            <ViewToggle mode={viewMode} onChange={setViewMode} />
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortOption)}
@@ -219,23 +231,43 @@ export default function TreatmentsContent() {
         </p>
       </section>
 
-      {/* Treatment Image Card Grid */}
+      {/* Treatment Content — Tier View or Grid View */}
       <section className="max-w-[1200px] mx-auto px-6 pb-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((t) => (
-            <TreatmentListCard key={t.slug} treatment={t} />
-          ))}
-        </div>
-
-        {filtered.length === 0 && (
-          <div className="text-center py-16">
-            <p className="text-gray-500 dark:text-[#6B6358] font-sans">
-              No treatments found matching your search.
-            </p>
+        {viewMode === "tier" ? (
+          <div className="space-y-4">
+            {tierGroups.map((group, i) => (
+              <TierSection
+                key={group.tier.letter}
+                tier={group.tier}
+                treatments={group.treatments}
+                defaultOpen={i === 0}
+              />
+            ))}
+            {tierGroups.length === 0 && (
+              <div className="text-center py-16">
+                <p className="text-gray-500 dark:text-[#6B6358] font-sans">
+                  No treatments found matching your search.
+                </p>
+              </div>
+            )}
           </div>
+        ) : (
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filtered.map((t) => (
+                <TreatmentListCard key={t.slug} treatment={t} />
+              ))}
+            </div>
+            {filtered.length === 0 && (
+              <div className="text-center py-16">
+                <p className="text-gray-500 dark:text-[#6B6358] font-sans">
+                  No treatments found matching your search.
+                </p>
+              </div>
+            )}
+          </>
         )}
       </section>
     </div>
   );
 }
-

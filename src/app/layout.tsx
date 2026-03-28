@@ -5,6 +5,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import StackProviderWrapper from "@/components/StackProviderWrapper";
+import StackShell from "@/components/stack/StackShell";
 import "./globals.css";
 
 const GA_ID = "G-DVKBZLV95P";
@@ -135,9 +137,12 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${playfair.variable} ${inter.variable} antialiased`}>
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
+        <StackProviderWrapper>
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
+          <StackShell />
+        </StackProviderWrapper>
         <Analytics />
         <SpeedInsights />
       </body>

@@ -207,4 +207,7 @@ export function formatLastUpdated(iso: string): string {
   return new Date(iso).toLocaleDateString("en-US", { month: "long", year: "numeric" });
 }
 
-export const treatments: Treatment[] = treatmentsData.treatments as Treatment[];
+// Normalize: 52 treatments imported with kamuraScore on 0-10 scale
+export const treatments: Treatment[] = (treatmentsData.treatments as Treatment[]).map((t) =>
+  t.kamuraScore <= 10 ? { ...t, kamuraScore: Math.round(t.kamuraScore * 10) } : t
+);
