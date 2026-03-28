@@ -10,7 +10,7 @@ lastUpdated: "2026-03-28"
 author:
   name: "Nishanth Saseendran"
   linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
-  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+  bio: "Nishanth Saseendran is a biotech commercialization strategist who has spent his career turning complex science into market-ready healthcare products. He has led go-to-market strategy and strategic partnerships across genomics, precision health, and longevity — commercializing millions of AED worth of scientific innovation across the Middle East. His background spans clinical trials in rural East Africa, healthcare startup launches, and building business infrastructure for cutting-edge biotech companies."
 faqItems:
   - question: "Is Dubai tap water safe to drink?"
     answer: "Dubai's tap water is desalinated by DEWA and meets safety standards. However, concerns include variable pipe quality in older buildings, rooftop tank storage, chlorine additives, and microplastics. Most health-conscious residents use some form of filtration — at minimum a carbon filter, ideally a reverse osmosis system."

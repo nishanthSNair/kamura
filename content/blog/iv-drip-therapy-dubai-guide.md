@@ -10,7 +10,7 @@ lastUpdated: "2026-03-28"
 author:
   name: "Nishanth Saseendran"
   linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
-  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+  bio: "Nishanth Saseendran is a biotech commercialization strategist who has spent his career turning complex science into market-ready healthcare products. He has led go-to-market strategy and strategic partnerships across genomics, precision health, and longevity — commercializing millions of AED worth of scientific innovation across the Middle East. His background spans clinical trials in rural East Africa, healthcare startup launches, and building business infrastructure for cutting-edge biotech companies."
 faqItems:
   - question: "How much does IV drip therapy cost in Dubai?"
     answer: "Prices range from AED 300-500 for basic hydration drips to AED 1,000-1,500 for NAD+ infusions. A Myers' Cocktail typically costs AED 300-600, glutathione drips AED 400-800, and immunity drips AED 400-700. Multi-session packages usually offer 20-30% discounts."

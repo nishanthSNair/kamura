@@ -10,7 +10,7 @@ lastUpdated: "2026-03-28"
 author:
   name: "Nishanth Saseendran"
   linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
-  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+  bio: "Nishanth Saseendran is a biotech commercialization strategist who has spent his career turning complex science into market-ready healthcare products. He has led go-to-market strategy and strategic partnerships across genomics, precision health, and longevity — commercializing millions of AED worth of scientific innovation across the Middle East. His background spans clinical trials in rural East Africa, healthcare startup launches, and building business infrastructure for cutting-edge biotech companies."
 faqItems:
   - question: "Does red light therapy actually work?"
     answer: "Yes. Red light therapy has over 5,000 peer-reviewed studies supporting its benefits. The mechanism is well-understood: specific wavelengths (630-670nm red and 810-850nm near-infrared) stimulate cytochrome c oxidase in mitochondria, increasing ATP production by 20-50%. Benefits span skin health, inflammation reduction, muscle recovery, sleep, and brain function."

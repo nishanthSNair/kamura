@@ -10,7 +10,7 @@ lastUpdated: "2026-03-28"
 author:
   name: "Nishanth Saseendran"
   linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
-  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+  bio: "Nishanth Saseendran is a biotech commercialization strategist who has spent his career turning complex science into market-ready healthcare products. He has led go-to-market strategy and strategic partnerships across genomics, precision health, and longevity — commercializing millions of AED worth of scientific innovation across the Middle East. His background spans clinical trials in rural East Africa, healthcare startup launches, and building business infrastructure for cutting-edge biotech companies."
 faqItems:
   - question: "What is the best wellness retreat near Dubai?"
     answer: "ZOYA Health & Wellbeing Resort in Ajman (45 minutes from Dubai) is purpose-built for wellness with 9 structured programs. Six Senses Zighy Bay in Oman (2 hours) is consistently ranked among the world's best. The Retreat Palm Dubai is the closest option, right on Palm Jumeirah."

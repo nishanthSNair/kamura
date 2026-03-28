@@ -10,7 +10,7 @@ lastUpdated: "2026-03-28"
 author:
   name: "Nishanth Saseendran"
   linkedin: "https://www.linkedin.com/in/nishanthsaseendran/"
-  bio: "Nishanth Saseendran is a biotech commercialization strategist with experience across genomics, longevity, and precision health. He has commercialized multi-million AED science and healthcare initiatives across the Middle East. He built Kamura to bring evidence-based evaluation to an industry that often lacks it."
+  bio: "Nishanth Saseendran is a biotech commercialization strategist who has spent his career turning complex science into market-ready healthcare products. He has led go-to-market strategy and strategic partnerships across genomics, precision health, and longevity — commercializing millions of AED worth of scientific innovation across the Middle East. His background spans clinical trials in rural East Africa, healthcare startup launches, and building business infrastructure for cutting-edge biotech companies."
 faqItems:
   - question: "How much does cryotherapy cost in Dubai?"
     answer: "Single sessions start from AED 150-250 depending on the studio. CRYO in Jumeirah 1 starts from AED 150, UCRYO from AED 175, and Formation from AED 250. Multi-session packages offer 20-30% discounts. Some studios include cryotherapy in monthly membership packages."
