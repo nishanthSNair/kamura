@@ -5,12 +5,12 @@ import StackFAB from "./StackFAB";
 import StackDrawer from "./StackDrawer";
 
 export default function StackShell() {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+ const [drawerOpen, setDrawerOpen] = useState(false);
 
-  return (
-    <>
-      <StackFAB onClick={() => setDrawerOpen(true)} />
-      <StackDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
-    </>
-  );
+ return (
+ <>
+ <StackFAB onClick={() => setDrawerOpen(true)} />
+ <StackDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} />
+ </>
+ );
 }

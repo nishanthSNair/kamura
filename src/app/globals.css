@@ -1,254 +1,251 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@custom-variant dark (&:where(.dark, .dark *));
-
 @theme inline {
-  --color-background: #FAF7F2;
-  --color-foreground: #2A2520;
-  --color-terracotta: #B5886A;
-  --color-terracotta-dark: #9A7357;
-  --color-kamura-gold: #C4A882;
-  --color-sage: #B0BCA4;
-  --color-sage-dark: #96A78B;
-  --color-sage-light: #D6DDD0;
-  --color-moss: #7B8D68;
-  --color-forest: #4A5E3E;
-  --color-cream: #FAF7F2;
-  --color-zen-mist: #F5F2ED;
-  --color-score-green: #4ADE80;
-  --color-score-yellow: #FACC15;
-  --color-score-orange: #FB923C;
-  --color-score-red: #F87171;
-  --color-score-blue: #60A5FA;
-  --color-score-purple: #A78BFA;
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
+ --color-background: #FAF7F2;
+ --color-foreground: #2A2520;
+ --color-terracotta: #B5886A;
+ --color-terracotta-dark: #9A7357;
+ --color-kamura-gold: #C4A882;
+ --color-sage: #B0BCA4;
+ --color-sage-dark: #96A78B;
+ --color-sage-light: #D6DDD0;
+ --color-moss: #7B8D68;
+ --color-forest: #4A5E3E;
+ --color-cream: #FAF7F2;
+ --color-zen-mist: #F5F2ED;
+ --color-score-green: #4ADE80;
+ --color-score-yellow: #FACC15;
+ --color-score-orange: #FB923C;
+ --color-score-red: #F87171;
+ --color-score-blue: #60A5FA;
+ --color-score-purple: #A78BFA;
+ --font-sans: var(--font-inter);
+ --font-serif: var(--font-playfair);
 }
 
 body {
-  background: var(--color-background);
-  color: var(--color-foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
+ background: var(--color-background);
+ color: var(--color-foreground);
+ font-family: var(--font-sans), system-ui, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif), Georgia, serif;
+ font-family: var(--font-serif), Georgia, serif;
 }
 
 /* Blog prose — tables */
 .prose table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2em 0;
-  font-size: 0.95em;
+ width: 100%;
+ border-collapse: collapse;
+ margin: 2em 0;
+ font-size: 0.95em;
 }
 .prose th,
 .prose td {
-  border: 1px solid #e5e7eb;
-  padding: 0.75em 1em;
-  text-align: left;
+ border: 1px solid #e5e7eb;
+ padding: 0.75em 1em;
+ text-align: left;
 }
 .prose th {
-  background: #F5F2ED;
-  font-weight: 600;
+ background: #F5F2ED;
+ font-weight: 600;
 }
 .prose tbody tr:nth-child(even) {
-  background: #FAF7F2;
+ background: #FAF7F2;
 }
 
 /* Blog prose — paragraph spacing (override typography defaults) */
 .prose :where(p) {
-  margin-bottom: 1.5em !important;
-  line-height: 1.85 !important;
+ margin-bottom: 1.5em !important;
+ line-height: 1.85 !important;
 }
 
 /* Blog prose — heading spacing */
 .prose :where(h2) {
-  margin-top: 2.5em !important;
-  margin-bottom: 0.75em !important;
+ margin-top: 2.5em !important;
+ margin-bottom: 0.75em !important;
 }
 .prose :where(h3) {
-  margin-top: 2em !important;
-  margin-bottom: 0.5em !important;
+ margin-top: 2em !important;
+ margin-bottom: 0.5em !important;
 }
 
 /* Blog prose — ordered lists spacing */
 .prose :where(ol > li) {
-  margin-top: 0.75em !important;
-  margin-bottom: 0.75em !important;
-  padding-left: 0.5em;
+ margin-top: 0.75em !important;
+ margin-bottom: 0.75em !important;
+ padding-left: 0.5em;
 }
 .prose :where(ul > li) {
-  margin-top: 0.6em !important;
-  margin-bottom: 0.6em !important;
-  padding-left: 0.25em;
+ margin-top: 0.6em !important;
+ margin-bottom: 0.6em !important;
+ padding-left: 0.25em;
 }
 
 /* Nested list tighter */
 .prose :where(li > ul),
 .prose :where(li > ol) {
-  margin-top: 0.4em !important;
-  margin-bottom: 0.4em !important;
+ margin-top: 0.4em !important;
+ margin-bottom: 0.4em !important;
 }
 
 /* Space between list and following paragraph */
 .prose :where(ul + p),
 .prose :where(ol + p) {
-  margin-top: 1.5em !important;
+ margin-top: 1.5em !important;
 }
 
 /* Blog prose — strong/bold in lists for better readability */
 .prose li strong {
-  color: #2A2520;
+ color: #2A2520;
 }
 
 /* Blog prose — blockquote styling */
 .prose blockquote {
-  border-left: 3px solid var(--color-sage);
-  padding: 1em 1.5em;
-  margin: 2em 0;
-  background: var(--color-zen-mist);
-  border-radius: 0 8px 8px 0;
+ border-left: 3px solid var(--color-sage);
+ padding: 1em 1.5em;
+ margin: 2em 0;
+ background: var(--color-zen-mist);
+ border-radius: 0 8px 8px 0;
 }
 
 /* Blog prose — horizontal rule */
 .prose hr {
-  margin: 2.5em 0;
-  border-color: var(--color-sage-light);
+ margin: 2.5em 0;
+ border-color: var(--color-sage-light);
 }
 
 
 /* Zen nature pattern — subtle organic radial gradients */
 .zen-pattern {
-  background-image: radial-gradient(ellipse at 20% 50%, rgba(168,181,160,0.10) 0%, transparent 50%),
-                    radial-gradient(ellipse at 80% 20%, rgba(168,181,160,0.07) 0%, transparent 50%),
-                    radial-gradient(ellipse at 60% 80%, rgba(168,181,160,0.08) 0%, transparent 50%);
+ background-image: radial-gradient(ellipse at 20% 50%, rgba(168,181,160,0.10) 0%, transparent 50%),
+ radial-gradient(ellipse at 80% 20%, rgba(168,181,160,0.07) 0%, transparent 50%),
+ radial-gradient(ellipse at 60% 80%, rgba(168,181,160,0.08) 0%, transparent 50%);
 }
 
 /* Hero scroll indicator — gentle bounce */
 @keyframes gentle-bounce {
-  0%, 100% { transform: translateY(0); opacity: 0.6; }
-  50% { transform: translateY(6px); opacity: 1; }
+ 0%, 100% { transform: translateY(0); opacity: 0.6; }
+ 50% { transform: translateY(6px); opacity: 1; }
 }
 .animate-gentle-bounce {
-  animation: gentle-bounce 3s ease-in-out infinite;
+ animation: gentle-bounce 3s ease-in-out infinite;
 }
 
 /* Hero search bar — glass morphism variant */
 .search-hero input {
-  background: rgba(255, 255, 255, 0.12) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-color: rgba(255, 255, 255, 0.2) !important;
-  color: white !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ background: rgba(255, 255, 255, 0.12) !important;
+ backdrop-filter: blur(12px);
+ -webkit-backdrop-filter: blur(12px);
+ border-color: rgba(255, 255, 255, 0.2) !important;
+ color: white !important;
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 .search-hero input::placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
+ color: rgba(255, 255, 255, 0.5) !important;
 }
 .search-hero input:focus {
-  border-color: rgba(255, 255, 255, 0.4) !important;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08), 0 4px 30px rgba(0, 0, 0, 0.1);
+ border-color: rgba(255, 255, 255, 0.4) !important;
+ box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08), 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 .search-hero .search-icon {
-  color: rgba(255, 255, 255, 0.5) !important;
+ color: rgba(255, 255, 255, 0.5) !important;
 }
 .search-hero .clear-btn {
-  color: rgba(255, 255, 255, 0.5) !important;
+ color: rgba(255, 255, 255, 0.5) !important;
 }
 .search-hero .clear-btn:hover {
-  color: rgba(255, 255, 255, 0.8) !important;
+ color: rgba(255, 255, 255, 0.8) !important;
 }
 .search-hero .popular-tag {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(255, 255, 255, 0.15) !important;
-  color: rgba(255, 255, 255, 0.7) !important;
+ background: rgba(255, 255, 255, 0.1) !important;
+ border-color: rgba(255, 255, 255, 0.15) !important;
+ color: rgba(255, 255, 255, 0.7) !important;
 }
 .search-hero .popular-tag:hover {
-  background: rgba(255, 255, 255, 0.2) !important;
-  color: white !important;
+ background: rgba(255, 255, 255, 0.2) !important;
+ color: white !important;
 }
 .search-hero .popular-label {
-  color: rgba(255, 255, 255, 0.4) !important;
+ color: rgba(255, 255, 255, 0.4) !important;
 }
 
 /* Hide scrollbar for horizontal carousels */
 .hide-scrollbar {
-  scrollbar-width: none;
+ scrollbar-width: none;
 }
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;
+ display: none;
 }
 
 /* Blueprint — zone pulse animations */
 @keyframes zone-pulse-green {
-  0% { opacity: 0.15; }
-  50% { opacity: 0.6; }
-  100% { opacity: 0.15; }
+ 0% { opacity: 0.15; }
+ 50% { opacity: 0.6; }
+ 100% { opacity: 0.15; }
 }
 @keyframes zone-pulse-amber {
-  0% { opacity: 0.15; }
-  50% { opacity: 0.5; }
-  100% { opacity: 0.15; }
+ 0% { opacity: 0.15; }
+ 50% { opacity: 0.5; }
+ 100% { opacity: 0.15; }
 }
 .zone-pulse-green { animation: zone-pulse-green 0.6s ease-out; }
 .zone-pulse-amber { animation: zone-pulse-amber 0.6s ease-out; }
 
 /* Blueprint — step fade-in transition */
 @keyframes blueprint-fade-in {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+ from { opacity: 0; transform: translateY(12px); }
+ to { opacity: 1; transform: translateY(0); }
 }
 .animate-blueprint-fade-in { animation: blueprint-fade-in 0.4s ease-out; }
 
 /* Blueprint — custom slider thumb */
 .blueprint-slider {
-  appearance: none;
-  -webkit-appearance: none;
-  height: 6px;
-  border-radius: 9999px;
-  outline: none;
-  cursor: pointer;
+ appearance: none;
+ -webkit-appearance: none;
+ height: 6px;
+ border-radius: 9999px;
+ outline: none;
+ cursor: pointer;
 }
 .blueprint-slider::-webkit-slider-thumb {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--color-terracotta);
-  cursor: pointer;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+ appearance: none;
+ -webkit-appearance: none;
+ width: 22px;
+ height: 22px;
+ border-radius: 50%;
+ background: var(--color-terracotta);
+ cursor: pointer;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 .blueprint-slider::-moz-range-thumb {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--color-terracotta);
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+ width: 22px;
+ height: 22px;
+ border-radius: 50%;
+ background: var(--color-terracotta);
+ cursor: pointer;
+ border: none;
+ box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Blueprint — drop zone highlight */
 .drop-zone-highlight {
-  border-color: var(--color-sage) !important;
-  background: rgba(168, 181, 160, 0.08);
+ border-color: var(--color-sage) !important;
+ background: rgba(168, 181, 160, 0.08);
 }
 
 /* Checker — zone hover invite pulse */
 @keyframes zone-invite {
-  0%, 100% { fill-opacity: 0.08; }
-  50% { fill-opacity: 0.2; }
+ 0%, 100% { fill-opacity: 0.08; }
+ 50% { fill-opacity: 0.2; }
 }
 .zone-invite { animation: zone-invite 2s ease-in-out infinite; }
 
 /* Checker — result card entrance stagger */
 @keyframes result-slide-in {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
+ from { opacity: 0; transform: translateY(16px); }
+ to { opacity: 1; transform: translateY(0); }
 }
 .animate-result-card {
-  animation: result-slide-in 0.4s ease-out both;
+ animation: result-slide-in 0.4s ease-out both;
 }
