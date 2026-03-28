@@ -15,13 +15,13 @@ faqItems:
   - question: "How big is the UAE wellness market in 2026?"
     answer: "According to the Global Wellness Institute, the UAE wellness economy is now worth $40.8 billion — making it the largest in the Middle East and one of the fastest-growing wellness markets in the world, up 14.3% since 2019."
   - question: "What wellness services can you get at home in the UAE?"
-    answer: "Residents can now access at-home blood testing, telehealth consultations for hormone and peptide protocols, home biohacking devices like red light panels and cold plunge tubs, and supplement delivery through compounding pharmacies."
+    answer: "Residents can now access at-home blood testing from providers like Valeo Health, Justlife, and Dardoc, plus telehealth consultations for hormone and peptide protocols, home biohacking devices like red light panels and cold plunge tubs, and supplement delivery through compounding pharmacies."
   - question: "Are longevity clinics growing in the UAE?"
     answer: "Yes. Clinics offering membership-based longevity programs with quarterly biomarker panels, hybrid in-person and remote monitoring models, and specialized treatments like IV therapy, hyperbaric oxygen, and cryotherapy are expanding rapidly across Dubai and Abu Dhabi."
   - question: "How did COVID change wellness in the UAE?"
     answer: "COVID shifted UAE residents from aesthetic wellness toward preventive, evidence-based health practices. People began tracking biomarkers, optimizing hormones, and building personal health protocols — creating one of the most health-literate expat populations globally."
   - question: "What is the UAE home healthcare market worth?"
-    answer: "The UAE's home healthcare market alone is projected to grow from $1.18 billion in 2025 to $2.19 billion by 2031, a CAGR of 10.84%. The longevity sector specifically is expected to reach $32 billion by 2026."
+    answer: "The UAE's home healthcare market is already worth $1.18 billion and growing at nearly 11% annually, driven by nationwide compulsory health insurance introduced in January 2025 and rapid adoption of digital health technologies. It is projected to reach $2.19 billion by 2031."
   - question: "What is wellness real estate in Dubai?"
     answer: "Wellness real estate refers to residential developments with built-in health infrastructure — cold plunge pools, infrared saunas, meditation rooms, advanced air filtration, and circadian lighting systems. It's one of the fastest-growing segments of Dubai's property market."
 ---
@@ -38,27 +38,30 @@ This is what I'm seeing on the ground.
 
 The missile interceptions and heightened security alerts across the Gulf in recent months have changed daily behavior. Schools shifted to hybrid. Many offices went remote again. And people — especially expat families — are spending significantly more time at home.
 
-This isn't just a temporary adjustment. It's accelerating a trend that COVID started but never finished: **the medicalization of the home.**
+This isn't just a temporary adjustment. It's accelerating a trend that COVID started but never finished: the medicalization of the home. The UAE's home healthcare market is already worth $1.18 billion and growing at nearly 11% annually, driven by nationwide compulsory health insurance introduced in January 2025 and rapid adoption of digital health technologies.
 
 What does that look like in practice?
 
-- **At-home blood testing** has surged. Companies like BIOVIT, Valeo, and HealthHub now offer doorstep phlebotomy with results in 24 hours. You no longer need to visit a lab. See our guide on [hormone panel testing](/treatments/hormone-panel-testing) to know what to test for.
-- **Telehealth consultations** for [hormone therapy](/treatments/hormone-pellet-therapy), peptide protocols, and longevity assessments are becoming the default first touchpoint — not the clinic visit.
-- **Home biohacking devices** — [red light panels](/treatments/red-light-therapy), [PEMF mats](/treatments/pemf-therapy), [cold plunge tubs](/treatments/cold-plunge), HRV monitors — are selling faster than clinic memberships. People are building personal wellness setups in their villas and apartments.
-- **Supplement and peptide delivery** through compounding pharmacies and direct-to-consumer brands is replacing the in-clinic dispensary model. Treatments like [NAD+ supplements](/treatments/nad-oral) and [collagen peptides](/treatments/collagen-peptides) are now ordered online and delivered to your door.
+- **At-home blood testing has surged.** At home-first health services will pick up more. Valeo Health and Justlife, Dardoc offer doorstep phlebotomy with results. Even established hospitals like Aster, Life Mediclinic and Cleveland Clinic Abu Dhabi are expanding their home service divisions, sending nurses and phlebotomists directly to residents. You no longer need to visit a lab for a comprehensive [hormone panel](/treatments/hormone-panel-testing) or metabolic screening — the lab comes to you.
 
-The home isn't replacing clinics. But it's becoming the place where 80% of daily wellness happens, and clinics are becoming the place you go for the 20% that requires professional oversight.
+- **Telehealth is the new front door.** The UAE telemedicine market is growing at a 19.7% CAGR through 2030. Consultations for [TRT](/treatments/trt), peptide protocols, and [longevity screening](/treatments/longevity-screening) are becoming the default first touchpoint — not the clinic visit.
+
+- **Home biohacking devices are outselling clinic memberships.** [Red light therapy](/treatments/red-light-therapy) panels, [PEMF therapy](/treatments/pemf-therapy) mats, [cold plunge](/treatments/cold-plunge) tubs, and [HRV biofeedback](/treatments/hrv-biofeedback) monitors — people are building personal wellness setups in their villas and apartments.
+
+- **Direct-to-consumer supplement delivery is replacing the in-clinic dispensary.** Compounding pharmacies and D2C brands are delivering [BPC-157](/treatments/bpc-157), [NMN](/treatments/nmn), and [NAD+ supplements](/treatments/nad-oral) directly to residents' doors.
+
+The home isn't replacing clinics. But it's becoming the place where 80% of daily wellness happens, and clinics are becoming the place you go for the 20% that requires professional oversight — [IV therapy](/treatments/iv-drip-therapy), [hyperbaric oxygen](/treatments/hyperbaric-oxygen), [stem cell therapy](/treatments/stem-cell-therapy), and advanced diagnostics like [whole-body MRI](/treatments/whole-body-mri).
 
 ## Post-COVID Changed the Patient — Not Just the System
 
 COVID didn't just introduce telehealth. It fundamentally changed how people in the UAE think about their health.
 
-Before 2020, wellness in Dubai was largely aesthetic — spa days, detox juices, Instagram-friendly yoga retreats. There's nothing wrong with that, but it wasn't medicine.
+Before 2020, wellness in Dubai was largely aesthetic — spa days, detox juices, Instagram-friendly [yoga](/treatments/yoga) retreats. There's nothing wrong with that, but it wasn't medicine.
 
 Post-COVID, something shifted:
 
 - **Prevention became personal.** People who watched family members struggle with COVID complications started asking: *What's my baseline? What are my inflammatory markers? What's my metabolic health?*
-- **Longevity went mainstream.** Concepts like biological age, [NAD+ levels](/treatments/nad-injectable), and hormone optimization moved from biohacker forums to dinner table conversations.
+- **Longevity went mainstream.** Concepts like biological age, [NAD+ levels](/treatments/nad-oral), and hormone optimization moved from biohacker forums to dinner table conversations.
 - **Trust in self-directed health grew.** People learned to read their own blood work, track their HRV, and make protocol decisions — often before consulting a doctor.
 
 The UAE now has one of the most health-literate expat populations in the world. And they're not waiting for the healthcare system to catch up. They're building their own stacks.
