@@ -7,6 +7,8 @@ import { treatments, type Treatment } from "@/data/treatments";
 import { parseCostRange, sumCostRanges, formatCostRange } from "@/lib/cost-utils";
 import { findSynergies, findInteractions } from "@/lib/stack-analysis";
 import ProtocolCompare from "./ProtocolCompare";
+import ShareCardModal from "@/components/share-cards/ShareCardModal";
+import StackCard from "@/components/share-cards/StackCard";
 
 interface StackDrawerProps {
  open: boolean;
@@ -22,6 +24,7 @@ const TIMING_LABELS: Record<StackTiming, string> = {
 export default function StackDrawer({ open, onClose }: StackDrawerProps) {
  const { items, removeItem, updateTiming, clearStack, exportToParams } = useStackContext();
  const [showCompare, setShowCompare] = useState(false);
+ const [showShareCard, setShowShareCard] = useState(false);
  const [copied, setCopied] = useState(false);
 
  const treatmentMap = useMemo(() => {
@@ -212,11 +215,19 @@ export default function StackDrawer({ open, onClose }: StackDrawerProps) {
  <div className="border-t border-gray-200 px-6 py-4 space-y-2.5">
  <div className="flex gap-2.5">
  <button
- onClick={handleShare}
+ onClick={() => setShowShareCard(true)}
  className="flex-1 px-4 py-2.5 bg-[#B5736A] hover:bg-[#9A5F57] text-white text-sm font-semibold rounded-xl transition-colors font-sans"
  >
- {copied ? "Copied!" : "Share Stack"}
+ Share as Image
  </button>
+ <button
+ onClick={handleShare}
+ className="flex-1 px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-semibold rounded-xl transition-colors font-sans"
+ >
+ {copied ? "Copied!" : "Copy Link"}
+ </button>
+ </div>
+ <div className="flex gap-2.5">
  <button
  onClick={() => setShowCompare(true)}
  className="flex-1 px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-semibold rounded-xl transition-colors font-sans"
@@ -237,6 +248,31 @@ export default function StackDrawer({ open, onClose }: StackDrawerProps) {
 
  {/* Protocol Compare Modal */}
  {showCompare && <ProtocolCompare onClose={() => setShowCompare(false)} />}
+
+ {/* Stack Share Card Modal */}
+ {showShareCard && (() => {
+ const cardTreatments = stackTreatments.map(({ item, treatment: t }) => ({
+  name: t.name,
+  kamuraScore: t.kamuraScore,
+  timing: item.timing,
+ }));
+ const avgScore = cardTreatments.length > 0
+  ? cardTreatments.reduce((sum, t) => sum + t.kamuraScore, 0) / cardTreatments.length
+  : 0;
+ return (
+  <ShareCardModal
+  open={showShareCard}
+  onClose={() => setShowShareCard(false)}
+  title="Share Your Stack"
+  fileName="kamura-stack.png"
+  shareText={`My wellness stack — ${cardTreatments.length} treatments, avg Kamura Score ${avgScore.toFixed(1)}/100. Build yours at kamuralife.com`}
+  cardWidth={1080}
+  cardHeight={1350}
+  >
+  <StackCard treatments={cardTreatments} averageScore={avgScore} />
+  </ShareCardModal>
+ );
+ })()}
  </>
  );
 }

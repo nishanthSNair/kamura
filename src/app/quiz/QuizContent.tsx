@@ -10,6 +10,8 @@ import {
  type WellnessDimension,
 } from "@/data/quiz";
 import { listings } from "@/data/listings";
+import ShareCardModal from "@/components/share-cards/ShareCardModal";
+import ArchetypeCard from "@/components/share-cards/ArchetypeCard";
 
 type QuizState = "intro" | "playing" | "results";
 
@@ -18,6 +20,7 @@ export default function QuizContent() {
  const [currentQ, setCurrentQ] = useState(0);
  const [answers, setAnswers] = useState<number[]>([]);
  const [selectedOption, setSelectedOption] = useState<number | null>(null);
+ const [showShareCard, setShowShareCard] = useState(false);
  const [archetypeVotes, setArchetypeVotes] = useState<Record<WellnessArchetype, number>>({
  "The Biohacker": 0,
  "The Yogi": 0,
@@ -467,6 +470,17 @@ export default function QuizContent() {
  </h3>
  <div className="flex flex-wrap gap-3 justify-center mb-10">
  <button
+ onClick={() => setShowShareCard(true)}
+ className="px-6 py-3 bg-moss text-white text-sm font-sans font-semibold hover:bg-forest transition-colors rounded-lg flex items-center gap-2"
+ >
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+ <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+ <circle cx="8.5" cy="8.5" r="1.5" />
+ <polyline points="21 15 16 10 5 21" />
+ </svg>
+ Share as Image
+ </button>
+ <button
  onClick={() => {
  const text = `I'm ${primary.name} with a wellness score of ${results.scorePercent}/100! Discover your wellness path at kamuralife.com/quiz`;
  if (navigator.share) {
@@ -523,6 +537,27 @@ export default function QuizContent() {
  </div>
  </div>
  </section>
+
+ {/* Archetype Share Card Modal */}
+ <ShareCardModal
+ open={showShareCard}
+ onClose={() => setShowShareCard(false)}
+ title="Share Your Archetype"
+ fileName="kamura-archetype.png"
+ shareText={`I'm ${primary.name} with a wellness score of ${results.scorePercent}/100! Discover your wellness archetype at kamuralife.com/quiz`}
+ cardWidth={1080}
+ cardHeight={1920}
+ >
+ <ArchetypeCard
+  archetypeName={results.primaryArchetype}
+  tagline={primary.tagline}
+  scorePercent={results.scorePercent}
+  scoreLabel={results.scoreLabel}
+  dimensionAverages={results.dimensionAverages}
+  traits={primary.traits}
+  secondaryArchetypeName={results.secondaryArchetype}
+ />
+ </ShareCardModal>
  </>
  );
  }

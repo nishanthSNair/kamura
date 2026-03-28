@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import {
  type WellnessConcern,
  type BodyZone,
@@ -16,6 +16,8 @@ import ConcernExplainer from "./ConcernExplainer";
 import ReportTreatmentCard from "./ReportTreatmentCard";
 import ProtocolPlan from "./ProtocolPlan";
 import RelatedContent from "./RelatedContent";
+import ShareCardModal from "@/components/share-cards/ShareCardModal";
+import BodyMapCard from "@/components/share-cards/BodyMapCard";
 
 interface WellnessReportProps {
  results: EnrichedMatchedTreatment[];
@@ -50,6 +52,20 @@ export default function WellnessReport({
 
  const hasProtocol = protocol.morning.length > 0 || protocol.midday.length > 0 || protocol.evening.length > 0;
 
+ const [showShareCard, setShowShareCard] = useState(false);
+
+ // Data for share card
+ const shareCardZones = completedZones
+ .map((z) => ZONES.find((zc) => zc.zone === z))
+ .filter(Boolean)
+ .map((z) => ({ icon: z!.icon, label: z!.label }));
+
+ const shareCardTreatments = results.slice(0, 5).map((r, i) => ({
+ rank: i + 1,
+ name: r.treatment.name,
+ kamuraScore: r.treatment.kamuraScore,
+ }));
+
  return (
  <div className="min-h-screen px-6 pt-24 pb-20">
  <div className="max-w-4xl mx-auto">
@@ -64,17 +80,30 @@ export default function WellnessReport({
 
  {/* Action bar */}
  <div className="flex flex-wrap gap-2 mt-4">
+ {results.length > 0 && (
+  <button
+  onClick={() => setShowShareCard(true)}
+  className="px-4 py-2 text-sm font-sans text-white bg-moss hover:bg-forest rounded-full transition-colors flex items-center gap-1.5"
+  >
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+   <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+   <circle cx="8.5" cy="8.5" r="1.5" />
+   <polyline points="21 15 16 10 5 21" />
+  </svg>
+  Share as Image
+  </button>
+ )}
  <button
- onClick={onAddAnother}
- className="px-4 py-2 text-sm font-sans text-terracotta border border-terracotta/30 rounded-full hover:bg-terracotta/5 transition-colors"
+  onClick={onAddAnother}
+  className="px-4 py-2 text-sm font-sans text-terracotta border border-terracotta/30 rounded-full hover:bg-terracotta/5 transition-colors"
  >
- + Add another area
+  + Add another area
  </button>
  <button
- onClick={onRestart}
- className="px-4 py-2 text-sm font-sans text-gray-400 hover:text-gray-600 transition-colors"
+  onClick={onRestart}
+  className="px-4 py-2 text-sm font-sans text-gray-400 hover:text-gray-600 transition-colors"
  >
- Start over
+  Start over
  </button>
  </div>
  </div>
@@ -192,6 +221,23 @@ export default function WellnessReport({
  </div>
  </section>
  </div>
+
+ {/* Body Map Share Card Modal */}
+ <ShareCardModal
+ open={showShareCard}
+ onClose={() => setShowShareCard(false)}
+ title="Share Your Protocol"
+ fileName="kamura-protocol.png"
+ shareText={`My ${shareCardZones.map(z => z.label).join(" & ")} protocol — ${shareCardTreatments.length} evidence-based treatments from KAMURA Wellness Checker. Try it at kamuralife.com/wellness-checker`}
+ cardWidth={1080}
+ cardHeight={1350}
+ >
+ <BodyMapCard
+  zones={shareCardZones}
+  concernCount={selectedConcerns.length}
+  topTreatments={shareCardTreatments}
+ />
+ </ShareCardModal>
  </div>
  );
 }
