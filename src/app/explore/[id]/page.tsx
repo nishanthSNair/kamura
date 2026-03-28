@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { listings, listingCategoryColors, categoryDescriptions } from "@/data/listings";
 import { getAllPosts } from "@/lib/blog";
+import ShareButtons from "@/components/ShareButtons";
 
 interface Props {
  params: Promise<{ id: string }>;
@@ -132,6 +133,14 @@ export default async function ListingPage({ params }: Props) {
  <script
  type="application/ld+json"
  dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+ />
+
+ {/* Sticky sidebar share — desktop */}
+ <ShareButtons
+ url={`https://kamuralife.com/explore/${listing.id}`}
+ title={listing.name}
+ description={listing.tagline}
+ variant="sidebar"
  />
 
  <article className="pt-24">

@@ -8,6 +8,7 @@ import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
 import EvidenceLevelTag from "@/components/treatments/EvidenceLevelTag";
 import ReadingProgress from "@/components/blog/ReadingProgress";
 import TableOfContents from "@/components/blog/TableOfContents";
+import ShareButtons from "@/components/ShareButtons";
 
 interface Props {
  params: Promise<{ slug: string }>;
@@ -145,6 +146,14 @@ export default async function BlogPostPage({ params }: Props) {
 
  <ReadingProgress />
 
+ {/* Sticky sidebar share — desktop */}
+ <ShareButtons
+ url={`https://kamuralife.com/blog/${slug}`}
+ title={post.title}
+ description={post.excerpt}
+ variant="sidebar"
+ />
+
  <article className="pt-24">
  <header className="max-w-3xl mx-auto px-6 py-12 text-center">
  <div className="flex items-center justify-center gap-3 flex-wrap mb-4">
@@ -181,6 +190,14 @@ export default async function BlogPostPage({ params }: Props) {
  {post.excerpt}
  </p>
  <div className="w-12 h-px bg-sage/40 mx-auto mt-8" />
+ {/* Inline share — visible on mobile, hidden on lg where sidebar shows */}
+ <div className="flex justify-center mt-6 lg:hidden">
+ <ShareButtons
+ url={`https://kamuralife.com/blog/${slug}`}
+ title={post.title}
+ description={post.excerpt}
+ />
+ </div>
  </header>
 
  {post.coverImage && (

@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { protocols, getProtocolBySlug } from "@/data/protocols";
 import { getTreatmentBySlug } from "@/data/treatments";
 import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
+import ShareButtons from "@/components/ShareButtons";
 
 interface Props {
  params: Promise<{ slug: string }>;
@@ -97,6 +98,14 @@ export default async function ProtocolDetailPage({ params }: Props) {
  <script
  type="application/ld+json"
  dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+ />
+
+ {/* Sticky sidebar share — desktop */}
+ <ShareButtons
+ url={`https://kamuralife.com/protocols/${slug}`}
+ title={`${p.name} by ${p.creator}`}
+ description={p.tagline}
+ variant="sidebar"
  />
 
  {/* Hero */}
