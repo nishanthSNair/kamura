@@ -31,6 +31,12 @@ export interface BlogPost {
  medicallyReviewed?: boolean;
  lastUpdated?: string;
  faqItems?: { question: string; answer: string }[];
+ author?: {
+  name: string;
+  avatar?: string;
+  role?: string;
+  bio?: string;
+ };
 }
 
 export function getAllPosts(): Omit<BlogPost, "content" | "headings">[] {
@@ -62,6 +68,7 @@ export function getAllPosts(): Omit<BlogPost, "content" | "headings">[] {
  ...(data.relatedTreatments && { relatedTreatments: data.relatedTreatments }),
  ...(data.medicallyReviewed && { medicallyReviewed: data.medicallyReviewed }),
  ...(data.lastUpdated && { lastUpdated: data.lastUpdated }),
+ ...(data.author && { author: data.author }),
  };
  })
  .sort((a, b) => (a.date > b.date ? -1 : 1));
@@ -128,6 +135,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
  ...(data.medicallyReviewed && { medicallyReviewed: data.medicallyReviewed }),
  ...(data.lastUpdated && { lastUpdated: data.lastUpdated }),
  ...(data.faqItems && { faqItems: data.faqItems }),
+ ...(data.author && { author: data.author }),
  };
 }
 

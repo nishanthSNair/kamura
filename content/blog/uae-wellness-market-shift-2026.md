@@ -6,6 +6,9 @@ coverImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200
 excerpt: "Between regional tensions, post-COVID health awareness, and the rise of home-based wellness, the UAE is quietly becoming one of the most interesting wellness markets in the world. Here's what's actually happening on the ground."
 depthIndicator: "Opinion & Analysis"
 lastUpdated: "2026-03-28"
+author:
+  name: "Nishanth"
+  role: "Co-Founder, KAMURA"
 faqItems:
   - question: "How is the UAE wellness market changing in 2026?"
     answer: "The UAE wellness market is shifting toward home-based health solutions, telehealth-first models, and membership-based longevity clinics. Regional tensions and post-COVID health awareness are accelerating the trend of building personal wellness setups at home."
