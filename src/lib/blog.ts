@@ -36,6 +36,7 @@ export interface BlogPost {
   avatar?: string;
   role?: string;
   bio?: string;
+  linkedin?: string;
  };
 }
 

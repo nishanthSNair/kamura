@@ -97,6 +97,7 @@ export default async function BlogPostPage({ params }: Props) {
   name: post.author.name,
   ...(post.author.role && { jobTitle: post.author.role }),
   ...(post.author.avatar && { image: post.author.avatar }),
+  ...(post.author.linkedin && { sameAs: [post.author.linkedin] }),
  }
  : {
   "@type": "Organization",
@@ -198,7 +199,14 @@ export default async function BlogPostPage({ params }: Props) {
  </p>
  {post.author?.name && (
  <p className="text-sm text-gray-500 font-sans mt-8">
-  Written by <span className="font-semibold text-gray-900">{post.author.name}</span>
+  Written by{" "}
+  {post.author.linkedin ? (
+   <a href={post.author.linkedin} target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-900 underline decoration-terracotta/30 hover:decoration-terracotta transition-colors">
+    {post.author.name}
+   </a>
+  ) : (
+   <span className="font-semibold text-gray-900">{post.author.name}</span>
+  )}
  </p>
  )}
  <div className="w-12 h-px bg-sage/40 mx-auto mt-8" />
