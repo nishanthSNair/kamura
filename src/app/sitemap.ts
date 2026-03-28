@@ -7,6 +7,7 @@ import { treatments } from "@/data/treatments";
 import { CATEGORY_META } from "@/data/treatment-categories";
 import { WELLNESS_GOALS } from "@/data/wellness-goals";
 import { POPULAR_COMPARISONS } from "@/data/treatment-comparisons";
+import { protocols } from "@/data/protocols";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://kamuralife.com";
@@ -128,6 +129,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
+    })),
+    {
+      url: `${baseUrl}/protocols`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    ...protocols.map((p) => ({
+      url: `${baseUrl}/protocols/${p.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
     })),
   ];
 }

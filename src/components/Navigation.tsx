@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import SearchModal from "./SearchModal";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -131,7 +130,6 @@ export default function Navigation() {
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
               </svg>
             </button>
-            <ThemeToggle />
             <a
               href="https://instagram.com/kamuralife"
               target="_blank"

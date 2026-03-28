@@ -31,7 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "wellness guide",
       "longevity",
       "biohacking",
+      ...(post.title.toLowerCase().includes("dubai") ? ["dubai", "uae"] : []),
     ].filter(Boolean),
+    authors: [{ name: "KAMURA", url: "https://kamuralife.com" }],
     alternates: {
       canonical: `https://kamuralife.com/blog/${slug}`,
     },
@@ -40,9 +42,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
+      ...(post.lastUpdated && { modifiedTime: post.lastUpdated }),
+      section: post.category,
+      authors: ["KAMURA"],
+      url: `https://kamuralife.com/blog/${slug}`,
+      siteName: "KAMURA",
       ...(post.coverImage && {
         images: [{ url: post.coverImage, width: 1200, height: 630, alt: post.title }],
       }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      creator: "@kamuralife",
+      ...(post.coverImage && { images: [post.coverImage] }),
     },
   };
 }
@@ -68,7 +82,10 @@ export default async function BlogPostPage({ params }: Props) {
       headline: post.title,
       description: post.excerpt,
       datePublished: post.date,
+      ...(post.lastUpdated && { dateModified: post.lastUpdated }),
       ...(post.coverImage && { image: post.coverImage }),
+      wordCount: post.wordCount,
+      articleSection: post.category,
       mainEntityOfPage: {
         "@type": "WebPage",
         "@id": `https://kamuralife.com/blog/${slug}`,
@@ -77,11 +94,16 @@ export default async function BlogPostPage({ params }: Props) {
         "@type": "Organization",
         name: "KAMURA",
         url: "https://kamuralife.com",
+        logo: "https://kamuralife.com/icon-192.png",
       },
       publisher: {
         "@type": "Organization",
         name: "KAMURA",
         url: "https://kamuralife.com",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://kamuralife.com/icon-192.png",
+        },
       },
     },
     {

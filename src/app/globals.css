@@ -3,8 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --color-background: #F5F0E6;
-  --color-foreground: #171717;
+  --color-background: #FAF7F2;
+  --color-foreground: #2A2520;
   --color-terracotta: #B5886A;
   --color-terracotta-dark: #9A7357;
   --color-kamura-gold: #C4A882;
@@ -13,8 +13,8 @@
   --color-sage-light: #D6DDD0;
   --color-moss: #7B8D68;
   --color-forest: #4A5E3E;
-  --color-cream: #F5F0E6;
-  --color-zen-mist: #ECF0E6;
+  --color-cream: #FAF7F2;
+  --color-zen-mist: #F5F2ED;
   --color-score-green: #4ADE80;
   --color-score-yellow: #FACC15;
   --color-score-orange: #FB923C;
@@ -30,11 +30,6 @@ body {
   color: var(--color-foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   transition: background-color 0.3s, color 0.3s;
-}
-
-.dark body {
-  background: #14110E;
-  color: #e5e5e5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,11 +50,11 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
 }
 .prose th {
-  background: #f9fafb;
+  background: #F5F2ED;
   font-weight: 600;
 }
 .prose tbody tr:nth-child(even) {
-  background: #f9fafb;
+  background: #FAF7F2;
 }
 
 /* Blog prose — paragraph spacing (override typography defaults) */
@@ -105,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Blog prose — strong/bold in lists for better readability */
 .prose li strong {
-  color: #1f2937;
+  color: #2A2520;
 }
 
 /* Blog prose — blockquote styling */
@@ -123,47 +118,12 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--color-sage-light);
 }
 
-/* Dark mode prose overrides for blog content */
-.dark .prose table th,
-.dark .prose table td {
-  border-color: #374151;
-}
-.dark .prose table th {
-  background: #1f2937;
-}
-.dark .prose table tbody tr:nth-child(even) {
-  background: #1C1815;
-}
-.dark .prose li strong {
-  color: #f5f5f5;
-}
-.dark .prose blockquote {
-  background: rgba(61, 90, 58, 0.08);
-  border-left-color: var(--color-moss);
-}
-
-.dark .prose {
-  --tw-prose-body: #d4d4d4;
-  --tw-prose-headings: #f5f5f5;
-  --tw-prose-links: #B5886A;
-  --tw-prose-bold: #f5f5f5;
-  --tw-prose-quotes: #a3a3a3;
-  --tw-prose-code: #f5f5f5;
-  --tw-prose-hr: #404040;
-  --tw-prose-th-borders: #404040;
-  --tw-prose-td-borders: #303030;
-}
 
 /* Zen nature pattern — subtle organic radial gradients */
 .zen-pattern {
   background-image: radial-gradient(ellipse at 20% 50%, rgba(168,181,160,0.10) 0%, transparent 50%),
                     radial-gradient(ellipse at 80% 20%, rgba(168,181,160,0.07) 0%, transparent 50%),
                     radial-gradient(ellipse at 60% 80%, rgba(168,181,160,0.08) 0%, transparent 50%);
-}
-.dark .zen-pattern {
-  background-image: radial-gradient(ellipse at 20% 50%, rgba(61,90,58,0.08) 0%, transparent 50%),
-                    radial-gradient(ellipse at 80% 20%, rgba(61,90,58,0.06) 0%, transparent 50%),
-                    radial-gradient(ellipse at 60% 80%, rgba(61,90,58,0.07) 0%, transparent 50%);
 }
 
 /* Hero scroll indicator — gentle bounce */
@@ -275,10 +235,6 @@ h1, h2, h3, h4, h5, h6 {
 .drop-zone-highlight {
   border-color: var(--color-sage) !important;
   background: rgba(168, 181, 160, 0.08);
-}
-.dark .drop-zone-highlight {
-  border-color: var(--color-moss) !important;
-  background: rgba(61, 90, 58, 0.1);
 }
 
 /* Checker — zone hover invite pulse */
