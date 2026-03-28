@@ -5,6 +5,7 @@ category: "News & Trends"
 coverImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80&fit=crop"
 excerpt: "The UAE wellness economy is worth $40.8 billion and growing fast. From home biohacking setups to longevity clinics and wellness real estate, here's what's actually changing on the ground in Dubai in 2026."
 depthIndicator: "Opinion & Analysis"
+relatedTreatments: ["longevity-screening", "biological-age-testing", "nad-iv-infusion", "peptide-therapy-overview", "red-light-therapy", "cryotherapy", "infrared-sauna", "cold-plunge", "iv-vitamin-infusions", "hormone-panel-testing", "cgm-tracking", "hyperbaric-oxygen-therapy"]
 lastUpdated: "2026-03-28"
 author:
   name: "Nishanth Saseendran"

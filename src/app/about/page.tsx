@@ -36,6 +36,15 @@ export const metadata: Metadata = {
  },
  ],
  },
+ twitter: {
+ card: "summary_large_image",
+ title: "About KAMURA",
+ description:
+  "Dubai's longevity & wellness discovery platform. Evidence-based treatment scoring, curated clinics, and expert guides.",
+ images: [
+  "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=630&fit=crop",
+ ],
+ },
 };
 
 export default function AboutPage() {

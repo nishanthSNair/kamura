@@ -4,7 +4,7 @@ import { treatments } from "@/data/treatments";
 import TreatmentsContent from "./TreatmentsContent";
 
 export const metadata: Metadata = {
- title: `${treatments.length} Wellness Treatments Scored & Ranked | KAMURA`,
+ title: `${treatments.length} Wellness Treatments Scored & Ranked`,
  description:
  `The world's first unbiased wellness treatment index. ${treatments.length} treatments across 12 categories — peptides, NAD+, red light therapy, semaglutide, cryotherapy, HBOT & more — scored on research evidence, safety, and community data.`,
  keywords: [

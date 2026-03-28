@@ -56,20 +56,40 @@ export const metadata: Metadata = {
  },
  ],
  },
+ twitter: {
+ card: "summary_large_image",
+ title: "Explore Wellness Centers | KAMURA",
+ description:
+  "Curated longevity clinics, biohacking studios, gyms, padel courts, and wellness retreats across Dubai and the UAE.",
+ images: [
+  "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1200&h=630&fit=crop",
+ ],
+ },
 };
 
 export default function ExplorePage() {
  const jsonLd = {
  "@context": "https://schema.org",
- "@type": "ItemList",
- name: "Wellness Centers in Dubai & UAE",
- numberOfItems: listings.length,
- itemListElement: listings.map((listing, i) => ({
- "@type": "ListItem",
- position: i + 1,
- url: `https://kamuralife.com/explore/${listing.id}`,
- name: listing.name,
- })),
+ "@graph": [
+ {
+  "@type": "ItemList",
+  name: "Wellness Centers in Dubai & UAE",
+  numberOfItems: listings.length,
+  itemListElement: listings.map((listing, i) => ({
+  "@type": "ListItem",
+  position: i + 1,
+  url: `https://kamuralife.com/explore/${listing.id}`,
+  name: listing.name,
+  })),
+ },
+ {
+  "@type": "BreadcrumbList",
+  itemListElement: [
+  { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+  { "@type": "ListItem", position: 2, name: "Explore" },
+  ],
+ },
+ ],
  };
 
  return (

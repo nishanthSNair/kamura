@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
         destination: "/wellness-checker",
         permanent: true,
       },
+      {
+        source: "/blog/peptides-101-dubai",
+        destination: "/blog/peptides-101-beginners-guide-dubai",
+        permanent: true,
+      },
     ];
   },
 };

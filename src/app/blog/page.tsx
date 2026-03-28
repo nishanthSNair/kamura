@@ -37,6 +37,15 @@ export const metadata: Metadata = {
  },
  ],
  },
+ twitter: {
+ card: "summary_large_image",
+ title: "Wellness Blog | KAMURA",
+ description:
+  "Expert guides on longevity, biohacking, holistic healing, and wellness in Dubai and the UAE.",
+ images: [
+  "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&h=630&fit=crop",
+ ],
+ },
 };
 
 export default function BlogIndexPage() {
@@ -44,21 +53,32 @@ export default function BlogIndexPage() {
 
  const jsonLd = {
  "@context": "https://schema.org",
- "@type": "CollectionPage",
- name: "KAMURA Wellness Blog",
- description:
- "Expert guides on longevity, biohacking, holistic healing, and wellness in Dubai and the UAE.",
- url: "https://kamuralife.com/blog",
- mainEntity: {
- "@type": "ItemList",
- numberOfItems: posts.length,
- itemListElement: posts.map((post, i) => ({
-  "@type": "ListItem",
-  position: i + 1,
-  url: `https://kamuralife.com/blog/${post.slug}`,
-  name: post.title,
- })),
+ "@graph": [
+ {
+  "@type": "CollectionPage",
+  name: "KAMURA Wellness Blog",
+  description:
+  "Expert guides on longevity, biohacking, holistic healing, and wellness in Dubai and the UAE.",
+  url: "https://kamuralife.com/blog",
+  mainEntity: {
+  "@type": "ItemList",
+  numberOfItems: posts.length,
+  itemListElement: posts.map((post, i) => ({
+   "@type": "ListItem",
+   position: i + 1,
+   url: `https://kamuralife.com/blog/${post.slug}`,
+   name: post.title,
+  })),
+  },
  },
+ {
+  "@type": "BreadcrumbList",
+  itemListElement: [
+  { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+  { "@type": "ListItem", position: 2, name: "Blog" },
+  ],
+ },
+ ],
  };
 
  return (

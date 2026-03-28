@@ -4,7 +4,7 @@ import type { BlogPostSummary } from "@/data/wellness-checker";
 import WellnessCheckerApp from "./WellnessCheckerApp";
 
 export const metadata: Metadata = {
- title: "Wellness Checker — Personalized Treatment Recommendations | KAMURA",
+ title: "Wellness Checker — Personalized Treatment Recommendations",
  description:
  "Free interactive wellness checker. Select concerns on our body map and get a personalized report with evidence-based treatment recommendations — peptides, supplements, red light therapy, and more.",
  keywords: [
