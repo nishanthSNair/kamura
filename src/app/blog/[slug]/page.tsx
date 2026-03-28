@@ -197,33 +197,8 @@ export default async function BlogPostPage({ params }: Props) {
  {post.excerpt}
  </p>
  {post.author?.name && (
- <div className="flex items-center justify-center gap-3 mt-8">
-  {post.author.avatar ? (
-  <Image
-   src={post.author.avatar}
-   alt={post.author.name}
-   width={40}
-   height={40}
-   className="rounded-full object-cover"
-  />
-  ) : (
-  <div className="w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center">
-   <span className="text-sm font-semibold text-moss font-sans">
-   {post.author.name.charAt(0).toUpperCase()}
-   </span>
-  </div>
-  )}
-  <div className="text-left">
-  <p className="text-sm font-semibold text-gray-900 font-sans">{post.author.name}</p>
-  {post.author.role && (
-   <p className="text-xs text-gray-500 font-sans">{post.author.role}</p>
-  )}
-  </div>
- </div>
- )}
- {post.author?.bio && (
- <p className="text-xs text-gray-400 font-sans mt-3 max-w-md mx-auto">
-  {post.author.bio}
+ <p className="text-sm text-gray-500 font-sans mt-8">
+  Written by <span className="font-semibold text-gray-900">{post.author.name}</span>
  </p>
  )}
  <div className="w-12 h-px bg-sage/40 mx-auto mt-8" />

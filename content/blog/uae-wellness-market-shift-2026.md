@@ -7,8 +7,7 @@ excerpt: "Between regional tensions, post-COVID health awareness, and the rise o
 depthIndicator: "Opinion & Analysis"
 lastUpdated: "2026-03-28"
 author:
-  name: "Nishanth"
-  role: "Co-Founder, KAMURA"
+  name: "Nishanth Saseendran"
 faqItems:
   - question: "How is the UAE wellness market changing in 2026?"
     answer: "The UAE wellness market is shifting toward home-based health solutions, telehealth-first models, and membership-based longevity clinics. Regional tensions and post-COVID health awareness are accelerating the trend of building personal wellness setups at home."
