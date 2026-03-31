@@ -34,6 +34,11 @@ export interface MatchedTreatment {
 export interface CheckerInput {
  selectedConcerns: WellnessConcern[];
  duration?: ConcernDuration;
+ age?: number;
+ goals?: string[];
+ budget?: string;
+ conditions?: string[];
+ treatmentPreference?: string;
 }
 
 // --- Enriched types for the report ---
@@ -76,10 +81,42 @@ const EVIDENCE_SCORES: Record<string, number> = {
 const MORNING_KEYWORDS = ["empty stomach", "morning", "fasting", "before breakfast", "upon waking"];
 const EVENING_KEYWORDS = ["evening", "night", "before bed", "bedtime", "sleep", "pm"];
 
+// --- Goal-to-tag mapping for relevance boosting ---
+
+const GOAL_TAGS: Record<string, string[]> = {
+ energy: ["energy", "mitochondria", "atp", "fatigue", "metabolism"],
+ sleep: ["sleep", "recovery", "melatonin", "circadian", "insomnia"],
+ weight: ["weight", "metabolism", "fat loss", "appetite", "glp-1", "body composition"],
+ pain: ["pain", "inflammation", "anti-inflammatory", "joint", "recovery"],
+ cognitive: ["cognitive", "brain", "focus", "memory", "neuroprotection", "nootropic"],
+ stress: ["stress", "anxiety", "cortisol", "adaptogen", "calm", "relaxation"],
+ longevity: ["longevity", "aging", "anti-aging", "telomere", "nad+", "senescence", "autophagy"],
+ immunity: ["immune", "immunity", "antioxidant", "antimicrobial"],
+ skin: ["skin", "collagen", "dermal", "complexion", "anti-aging"],
+ performance: ["performance", "endurance", "strength", "recovery", "athletic", "muscle"],
+};
+
+// Natural/mind-body categories for preference filtering
+const NATURAL_CATEGORIES = new Set([
+ "Supplements & Nutraceuticals",
+ "Mind-Body & Movement",
+ "Traditional & Alternative Medicine",
+ "Nutrition & Dietary Protocols",
+ "Exercise & Fitness",
+]);
+
+const BIOHACKING_CATEGORIES = new Set([
+ "Devices & Technology",
+ "Peptides",
+ "Diagnostics & Testing",
+ "Longevity Pharmaceuticals",
+ "Regenerative Medicine",
+]);
+
 // --- Core ranking algorithm ---
 
 export function rankTreatments(input: CheckerInput): MatchedTreatment[] {
- const { selectedConcerns, duration } = input;
+ const { selectedConcerns, duration, age, goals, treatmentPreference } = input;
 
  const allMatchTags = new Set<string>();
  const allMatchOutcomes = new Set<string>();
@@ -87,6 +124,15 @@ export function rankTreatments(input: CheckerInput): MatchedTreatment[] {
  for (const concern of selectedConcerns) {
  for (const t of concern.matchTags) allMatchTags.add(t.toLowerCase());
  for (const o of concern.matchOutcomes) allMatchOutcomes.add(o.toLowerCase());
+ }
+
+ // Build goal tag set for boosting
+ const goalTags = new Set<string>();
+ if (goals) {
+ for (const goal of goals) {
+  const tags = GOAL_TAGS[goal];
+  if (tags) tags.forEach((t) => goalTags.add(t));
+ }
  }
 
  const results: MatchedTreatment[] = [];
@@ -143,6 +189,39 @@ export function rankTreatments(input: CheckerInput): MatchedTreatment[] {
 
  if (duration === "years" && treatment.evidenceLevel === "Strong") {
  relevanceScore = Math.min(relevanceScore + 5, 100);
+ }
+
+ // Goal alignment boost
+ if (goalTags.size > 0) {
+  const goalHits = treatment.tags.filter((t) => goalTags.has(t.toLowerCase())).length;
+  if (goalHits > 0) {
+  relevanceScore = Math.min(relevanceScore + goalHits * 3, 100);
+  }
+ }
+
+ // Age-based adjustments
+ if (age) {
+  const tName = treatment.name.toLowerCase();
+  const tTags = treatment.tags.map((t) => t.toLowerCase());
+  // Boost longevity for 35+
+  if (age >= 35 && tTags.some((t) => ["longevity", "nad+", "anti-aging", "autophagy"].includes(t))) {
+  relevanceScore = Math.min(relevanceScore + 3, 100);
+  }
+  // Slight caution for intense protocols at 60+
+  if (age >= 60 && tTags.some((t) => ["high-intensity", "extreme"].includes(t))) {
+  relevanceScore = Math.max(relevanceScore - 5, 0);
+  }
+  // Boost hormone-related for 40+
+  if (age >= 40 && (tName.includes("hormone") || tName.includes("testosterone"))) {
+  relevanceScore = Math.min(relevanceScore + 2, 100);
+  }
+ }
+
+ // Preference alignment
+ if (treatmentPreference === "natural" && !NATURAL_CATEGORIES.has(treatment.category)) {
+  relevanceScore = Math.max(relevanceScore - 8, 0);
+ } else if (treatmentPreference === "biohacking" && BIOHACKING_CATEGORIES.has(treatment.category)) {
+  relevanceScore = Math.min(relevanceScore + 4, 100);
  }
 
  const combinedScore = relevanceScore * 0.6 + treatment.kamuraScore * 0.4;

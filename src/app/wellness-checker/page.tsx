@@ -4,15 +4,15 @@ import type { BlogPostSummary } from "@/data/wellness-checker";
 import WellnessCheckerApp from "./WellnessCheckerApp";
 
 export const metadata: Metadata = {
- title: "Wellness Checker — Personalized Treatment Recommendations",
+ title: "Wellness Dashboard — Personalized Assessment & Treatment Plan",
  description:
- "Free interactive wellness checker. Select concerns on our body map and get a personalized report with evidence-based treatment recommendations — peptides, supplements, red light therapy, and more.",
+ "Free comprehensive wellness assessment. Answer questions about your lifestyle, health concerns, and goals — get a personalized dashboard with scored treatments, daily protocols, budget planning, and progress tracking.",
  keywords: [
- "wellness checker",
  "wellness assessment",
+ "wellness dashboard",
  "personalized treatment recommendations",
+ "wellness questionnaire",
  "body map health",
- "wellness report",
  "treatment finder",
  "health recommendations",
  "evidence-based wellness",
@@ -20,11 +20,13 @@ export const metadata: Metadata = {
  "biohacking recommendations",
  "peptide therapy recommendations",
  "wellness tool",
+ "wellness score",
+ "daily wellness protocol",
  ],
  openGraph: {
- title: "Wellness Checker — Personalized Recommendations | KAMURA",
+ title: "Wellness Dashboard — Personalized Assessment | KAMURA",
  description:
- "Interactive wellness checker. Tap your body, pick your concerns, get a comprehensive wellness report backed by research.",
+ "Comprehensive wellness assessment. Build your profile, get a personalized dashboard with evidence-based treatments, daily protocols, and progress tracking.",
  url: "https://kamuralife.com/wellness-checker",
  images: [
  {
@@ -57,10 +59,10 @@ export default function BlueprintPage() {
  "@graph": [
  {
  "@type": "WebApplication",
- name: "KAMURA Wellness Checker",
+ name: "KAMURA Wellness Dashboard",
  url: "https://kamuralife.com/wellness-checker",
  description:
- "Interactive body-map wellness checker that provides personalized, evidence-based treatment recommendations across 100+ treatments.",
+ "Comprehensive wellness assessment and personalized dashboard with evidence-based treatment recommendations, daily protocols, and progress tracking across 100+ treatments.",
  applicationCategory: "HealthApplication",
  operatingSystem: "Any",
  offers: {
