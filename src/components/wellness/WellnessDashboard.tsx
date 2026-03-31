@@ -265,6 +265,16 @@ export default function WellnessDashboard({
             <strong>Important:</strong> This dashboard is for educational and informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider before starting any new treatment.
           </p>
         </div>
+
+        {/* Start Over */}
+        <div className="mt-6 flex justify-center">
+          <button
+            onClick={onRetake}
+            className="px-6 py-3 text-sm font-sans text-gray-400 hover:text-gray-600 border border-gray-200 hover:border-gray-300 rounded-full transition-colors"
+          >
+            Start Over
+          </button>
+        </div>
       </div>
 
       {/* Share Card Modal */}
