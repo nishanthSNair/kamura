@@ -89,16 +89,13 @@ Below is every peptide that matters in the current longevity and wellness landsc
 | Peptide | Category | What It Does | Delivery |
 |---------|----------|-------------|----------|
 | **[CJC-1295 / Ipamorelin](/treatments/cjc-1295-ipamorelin)** | GH Secretagogue Stack | CJC-1295 (GHRH analogue) paired with Ipamorelin (selective GH secretagogue). Stimulates natural, pulsatile growth hormone release without the side-effect profile of synthetic HGH. One of the most widely prescribed peptide combinations globally. | Injection |
-| **Ipamorelin** | GH Secretagogue | Selective growth hormone secretagogue. Stimulates the pituitary gland to release GH in a natural, pulsatile pattern. Preferred for its clean side-effect profile — does not significantly raise cortisol or prolactin. | Injection |
 | **[Sermorelin](/treatments/sermorelin)** | GHRH Analogue | One of the earliest peptides used in anti-aging medicine. Stimulates natural GH production from the pituitary. FDA-approved as a diagnostic agent. Well-studied safety profile. | Injection |
-| **Tesamorelin (30mg)** | GHRH Analogue | Higher-dose formulation for extended longevity and body composition protocols. Same mechanism as standard tesamorelin, dosed for sustained GH optimization over longer treatment periods. | Injection |
 
 ### Hormonal & Sexual Health
 
 | Peptide | Category | What It Does | Delivery |
 |---------|----------|-------------|----------|
 | **[PT-141](/treatments/pt-141)** | Melanocortin Agonist | FDA-approved as Vyleesi for hypoactive sexual desire disorder. Works through the central nervous system (not the vascular system like Viagra). Effective for both men and women. | Injection |
-| **Gonadorelin** | GnRH Analogue | Synthetic gonadotropin-releasing hormone. Stimulates LH and FSH production. Commonly prescribed alongside TRT (testosterone replacement therapy) to preserve testicular function and fertility. | Injection |
 | **Kisspeptin-10 Acetate** | Reproductive Neuropeptide | Stimulates GnRH release, playing a critical role in reproductive health, puberty onset, and hormonal regulation. Emerging research in fertility, hormonal balance, and metabolic signaling. | Injection |
 
 ### Cognitive & Neuroprotective
