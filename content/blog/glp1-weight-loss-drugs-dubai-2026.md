@@ -2,7 +2,7 @@
 title: "GLP-1 Weight Loss Drugs in Dubai: Your Complete 2026 Guide to Ozempic, Mounjaro, Wegovy & Foundayo"
 date: "2026-04-04"
 category: "Longevity & Science"
-coverImage: "https://images.unsplash.com/photo-1768479619859-8ee2556a04b1?w=1200&h=630&fit=crop"
+coverImage: "https://images.unsplash.com/photo-1758691462954-e6fa5005474b?w=1200&h=630&fit=crop"
 excerpt: "GLP-1 drugs are the most significant advancement in obesity treatment in decades. This guide covers every option available in Dubai — from Ozempic and Mounjaro to the new oral pill Foundayo — with real costs, side effects, Kamura Scores, and where to access them."
 depthIndicator: "Deep Dive"
 relatedTreatments: ["semaglutide", "tirzepatide", "retatrutide", "orforglipron"]
