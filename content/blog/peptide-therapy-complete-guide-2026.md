@@ -5,7 +5,7 @@ category: "Longevity & Science"
 coverImage: "https://images.unsplash.com/photo-1578496779937-3815e442abed?w=1200&h=630&fit=crop"
 excerpt: "Tirzepatide, BPC-157, GHK-Cu, NAD+, Semax and 15 more decoded. The real story on UAE compounding pharmacies, the FDA's 2026 reclassification, pharmaceutical vs research grade, and why your supply chain matters more than your stack."
 depthIndicator: "Deep Dive"
-relatedTreatments: ["bpc-157", "ghk-cu", "tb-500", "cjc-1295-ipamorelin", "semaglutide", "tirzepatide", "nad-injectable", "epithalon", "pt-141", "sermorelin", "tesamorelin", "aod-9604", "thymosin-alpha-1", "mots-c", "semax"]
+relatedTreatments: ["bpc-157", "ghk-cu", "tb-500", "cjc-1295-ipamorelin", "semaglutide", "tirzepatide", "nad-injectable", "epithalon", "pt-141", "sermorelin", "tesamorelin", "aod-9604", "thymosin-alpha-1", "mots-c", "semax", "selank"]
 lastUpdated: "2026-04-04"
 author:
   name: "Nishanth Saseendran"
@@ -46,7 +46,7 @@ The demand is being driven by five distinct use cases, each with its own level o
 
 - **Growth hormone optimization.** [CJC-1295/Ipamorelin](/treatments/cjc-1295-ipamorelin), [Sermorelin](/treatments/sermorelin), and [Tesamorelin](/treatments/tesamorelin) stimulate your body's own GH production — a cleaner approach than synthetic HGH with a better side-effect profile.
 
-- **Hormonal, cognitive, and sexual health.** From Gonadorelin for fertility preservation during TRT, to [PT-141](/treatments/pt-141) for sexual health, to Semax and Selank for neuroprotection and focus — peptides are expanding into areas that used to have very few options.
+- **Hormonal, cognitive, and sexual health.** From Gonadorelin for fertility preservation during TRT, to [PT-141](/treatments/pt-141) for sexual health, to [Semax](/treatments/semax) and [Selank](/treatments/selank) for neuroprotection and focus — peptides are expanding into areas that used to have very few options.
 
 And it is not just biohackers anymore. **Adults in their twenties and thirties** are the fastest-growing demographic exploring peptide therapy. They are not waiting for problems. They are optimizing proactively — driven by social media, longevity culture, and a fundamental generational shift from reactive to preventive healthcare.
 
@@ -102,8 +102,8 @@ Below is every peptide that matters in the current longevity and wellness landsc
 
 | Peptide | Category | What It Does | Delivery |
 |---------|----------|-------------|----------|
-| **Semax** | Neuropeptide | Synthetic analogue of ACTH (4–10). Developed in Russia and extensively studied for cognitive enhancement, neuroprotection, focus, and recovery from brain injury. One of the most established nootropic peptides. | Nasal Spray |
-| **Selank** | Anxiolytic Peptide | Based on the immunomodulatory peptide tuftsin. Studied for anti-anxiety effects, cognitive improvement, and immune modulation without sedation. Often stacked with Semax for a combined cognitive and anxiolytic protocol. | Nasal Spray |
+| **[Semax](/treatments/semax)** | Neuropeptide | Synthetic analogue of ACTH (4–10). Developed in Russia and extensively studied for cognitive enhancement, neuroprotection, focus, and recovery from brain injury. One of the most established nootropic peptides. | Nasal Spray |
+| **[Selank](/treatments/selank)** | Anxiolytic Peptide | Based on the immunomodulatory peptide tuftsin. Studied for anti-anxiety effects, cognitive improvement, and immune modulation without sedation. Often stacked with Semax for a combined cognitive and anxiolytic protocol. | Nasal Spray |
 
 *This directory is for informational purposes. Peptides are medical products requiring clinical assessment, prescription, and supervision. Availability and legal status vary by jurisdiction.*
 
@@ -182,9 +182,9 @@ The biggest regulatory shift in peptide access in years happened in February 202
 
 ### What Happened
 
-In 2023, the FDA placed **19 widely used peptides on its Category 2 restricted list**, effectively banning licensed compounding pharmacies from preparing or dispensing them. The list hit the biggest names in longevity medicine: BPC-157, Thymosin Alpha-1, TB-500, CJC-1295, Ipamorelin, AOD-9604, GHK-Cu, Selank, Semax, MOTS-c, and more. Overnight, the legal pathway for physician-prescribed, pharmacy-compounded peptide therapy was shut down.
+In 2023, the FDA placed **19 widely used peptides on its Category 2 restricted list**, effectively banning licensed compounding pharmacies from preparing or dispensing them. The list hit the biggest names in longevity medicine: [BPC-157](/treatments/bpc-157), [Thymosin Alpha-1](/treatments/thymosin-alpha-1), [TB-500](/treatments/tb-500), [CJC-1295](/treatments/cjc-1295-ipamorelin), Ipamorelin, [AOD-9604](/treatments/aod-9604), [GHK-Cu](/treatments/ghk-cu), [Selank](/treatments/selank), [Semax](/treatments/semax), [MOTS-c](/treatments/mots-c), and more. Overnight, the legal pathway for physician-prescribed, pharmacy-compounded peptide therapy was shut down.
 
-On February 27, 2026, HHS Secretary Robert F. Kennedy Jr. announced that approximately **14 of the 19 restricted peptides would be reclassified back to Category 1** — restoring the legal pathway for licensed compounding pharmacies to prepare them with a valid physician's prescription. The peptides expected to return include BPC-157, Thymosin Alpha-1, TB-500, CJC-1295, Ipamorelin, AOD-9604, GHK-Cu, Selank, Semax, KPV, and MOTS-c.
+On February 27, 2026, HHS Secretary Robert F. Kennedy Jr. announced that approximately **14 of the 19 restricted peptides would be reclassified back to Category 1** — restoring the legal pathway for licensed compounding pharmacies to prepare them with a valid physician's prescription. The peptides expected to return include [BPC-157](/treatments/bpc-157), [Thymosin Alpha-1](/treatments/thymosin-alpha-1), [TB-500](/treatments/tb-500), [CJC-1295](/treatments/cjc-1295-ipamorelin), Ipamorelin, [AOD-9604](/treatments/aod-9604), [GHK-Cu](/treatments/ghk-cu), [Selank](/treatments/selank), [Semax](/treatments/semax), KPV, and [MOTS-c](/treatments/mots-c).
 
 ### What This Actually Means
 
@@ -196,7 +196,7 @@ For the rest of the world — including the GCC — this matters because US regu
 
 Whether you are exploring peptides for the first time or evaluating a new protocol, this is the framework that separates smart use from reckless experimentation:
 
-- **Fix the foundation first.** Sleep, nutrition, exercise, stress, metabolic health. No peptide compensates for a broken baseline. This is not the boring answer — it is the correct one.
+- **Fix the foundation first.** [Sleep](/treatments/magnesium), [nutrition](/treatments/functional-medicine), [exercise](/treatments/hiit-training), [stress](/treatments/breathwork), [metabolic health](/treatments/fasting). No peptide compensates for a broken baseline. This is not the boring answer — it is the correct one.
 
 - **Define the problem before choosing the peptide.** Start with a goal, not a compound. Weight loss, recovery, hormonal balance, longevity — each requires a different pathway and a different peptide.
 
