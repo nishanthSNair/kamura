@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  const tier = getScoreTier(t.kamuraScore);
  return {
  title: `${t.name} — Kamura Score: ${t.kamuraScore} (${tier})`,
- description: `${t.description} Evidence level: ${t.evidenceLevel}. ${t.communityReports}+ community reports. ${t.keyStudies.length} key studies cited.`,
+ description: `${t.description} Evidence level: ${t.evidenceLevel}. ${t.keyStudies.length} key studies cited. Kamura Score: ${t.kamuraScore}.`,
  keywords: [
  t.name.toLowerCase(),
  `${t.name.toLowerCase()} benefits`,
@@ -434,7 +434,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
  <p className="text-xs text-gray-400 font-sans leading-relaxed">
  <strong className="text-gray-500">Medical Disclaimer:</strong> The
  information on this page is for educational purposes only and is not intended as medical advice.
- Kamura Scores reflect a combination of research evidence, community data, and other factors — they
+ Kamura Scores reflect a combination of research evidence, safety, accessibility, and value — they
  are not clinical recommendations. Research citations are provided for reference; always consult
  the original publications for complete study details. Consult a qualified healthcare provider before starting,
  stopping, or modifying any treatment. Individual results may vary.

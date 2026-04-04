@@ -37,6 +37,11 @@ export const metadata: Metadata = {
  },
  ],
  },
+ twitter: {
+ card: "summary_large_image",
+ title: "Wellness Dashboard — Personalized Assessment | KAMURA",
+ description: "Free comprehensive wellness assessment with personalized treatment recommendations and daily protocols.",
+ },
  alternates: {
  canonical: "https://kamuralife.com/wellness-checker",
  },

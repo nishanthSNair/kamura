@@ -29,7 +29,7 @@ export const metadata: Metadata = {
  template: "%s | KAMURA",
  },
  description:
- "The world's first unbiased wellness intelligence platform. 100+ treatments scored on evidence, safety, and community data. 70+ UAE clinics. Peptide therapy, NAD+, GLP-1, red light therapy, and more — transparently ranked.",
+ "The world's first unbiased wellness intelligence platform. 200+ treatments scored on evidence, safety, accessibility, and value. 70+ UAE clinics. Peptide therapy, NAD+, GLP-1, red light therapy, and more — transparently ranked.",
  keywords: [
  "wellness treatments scored",
  "longevity treatments dubai",

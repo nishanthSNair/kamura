@@ -10,7 +10,7 @@ import LiveNewsFeed from "@/components/LiveNewsFeed";
 
 export const metadata: Metadata = {
  title: "KAMURA — The Heart of Longevity | Wellness Intelligence Platform",
- description: `The world's first unbiased wellness intelligence platform. Search ${treatments.length}+ treatments — peptides, NAD+, red light therapy, GLP-1 & more — scored on evidence, safety, and community data. Discover longevity clinics in Dubai.`,
+ description: `The world's first unbiased wellness intelligence platform. Search ${treatments.length}+ treatments — peptides, NAD+, red light therapy, GLP-1 & more — scored on evidence, safety, accessibility, and value. Discover longevity clinics in Dubai.`,
  keywords: [
  "wellness platform",
  "longevity treatments",
@@ -367,7 +367,7 @@ export default function Home() {
  Example: Gold Standard
  </p>
  <p className="text-xs text-gray-400 font-sans">
- Strong evidence + high community validation + good safety
+ Strong evidence + excellent safety + good accessibility
  </p>
  </div>
  </div>
@@ -395,7 +395,7 @@ export default function Home() {
  Highest Rated Treatments
  </h2>
  <p className="text-sm text-gray-500 mt-2 font-sans max-w-md">
- Treatments with the strongest research, safety profiles, and community validation.
+ Treatments with the strongest research, safety profiles, and real-world accessibility.
  </p>
  </div>
  <Link
@@ -485,7 +485,7 @@ export default function Home() {
  Your Wellness, Mapped
  </h2>
  <p className="text-sm text-gray-500 font-sans max-w-lg mx-auto leading-relaxed">
- Get personalized, evidence-based treatment recommendations based on your specific concerns. Our checker analyzes {treatments.length}+ treatments across research, safety, and community data.
+ Get personalized, evidence-based treatment recommendations based on your specific concerns. Our checker analyzes {treatments.length}+ treatments across research, safety, accessibility, and value.
  </p>
  </div>
  </FadeInOnScroll>

@@ -32,7 +32,7 @@ export const WELLNESS_GOALS: WellnessGoal[] = [
  searchTriggers: ["sleep", "insomnia", "rest", "sleep quality"],
  seoTitle: "Best Treatments for Sleep \u2014 Scored & Ranked",
  seoDescription:
- "Discover the highest-scoring treatments for sleep quality. Each treatment scored on research evidence, safety, and community data. Compare side by side.",
+ "Discover the highest-scoring treatments for sleep quality. Each treatment scored on research evidence, safety, accessibility, and value. Compare side by side.",
  imageUrl:
  "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=1920&q=80",
  },
@@ -131,7 +131,7 @@ export const WELLNESS_GOALS: WellnessGoal[] = [
  label: "Pain",
  title: "Best Treatments for Pain",
  description:
- "Evidence-based approaches to chronic pain, inflammation, and recovery. Treatments ranked by effectiveness, safety, and community data.",
+ "Evidence-based approaches to chronic pain, inflammation, and recovery. Treatments ranked by effectiveness, safety, and accessibility.",
  icon: "\u{1FA79}",
  matchTags: ["Pain", "Pain Management", "Inflammation"],
  matchOutcomes: [
@@ -339,7 +339,7 @@ export const WELLNESS_GOALS: WellnessGoal[] = [
  label: "Recovery",
  title: "Best Treatments for Recovery",
  description:
- "Athletic recovery, post-exercise repair, and physical restoration. Therapies scored on recovery evidence and community data.",
+ "Athletic recovery, post-exercise repair, and physical restoration. Therapies scored on recovery evidence, safety, and value.",
  icon: "\u{1F3CB}\uFE0F",
  matchTags: ["Recovery", "Sports Recovery", "Rehabilitation"],
  matchOutcomes: [

@@ -6,7 +6,7 @@ import TreatmentsContent from "./TreatmentsContent";
 export const metadata: Metadata = {
  title: `${treatments.length} Wellness Treatments Scored & Ranked`,
  description:
- `The world's first unbiased wellness treatment index. ${treatments.length} treatments across 12 categories — peptides, NAD+, red light therapy, semaglutide, cryotherapy, HBOT & more — scored on research evidence, safety, and community data.`,
+ `The world's first unbiased wellness treatment index. ${treatments.length} treatments across 12 categories — peptides, NAD+, red light therapy, semaglutide, cryotherapy, HBOT & more — scored on research evidence, safety, accessibility, and value.`,
  keywords: [
  "wellness treatments",
  "treatment rankings",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
  openGraph: {
  title: `Treatment Index — ${treatments.length} Treatments | KAMURA`,
  description:
- `${treatments.length} wellness treatments scored transparently on evidence, community data, safety, and value. The Kamura Score — zero bias, full transparency.`,
+ `${treatments.length} wellness treatments scored transparently on evidence, safety, accessibility, and value. The Kamura Score — zero bias, full transparency.`,
  url: "https://kamuralife.com/treatments",
  images: [
  {
@@ -46,6 +46,11 @@ export const metadata: Metadata = {
  },
  ],
  },
+ twitter: {
+ card: "summary_large_image",
+ title: `Treatment Index — ${treatments.length} Treatments | KAMURA`,
+ description: `${treatments.length} wellness treatments scored on evidence, safety, accessibility, and value.`,
+ },
 };
 
 export default function TreatmentsPage() {
@@ -53,7 +58,7 @@ export default function TreatmentsPage() {
  "@context": "https://schema.org",
  "@type": "ItemList",
  name: "Kamura Treatment Index",
- description: "Wellness treatments scored on evidence, community validation, safety, accessibility, and value.",
+ description: "Wellness treatments scored on research evidence, safety, accessibility, and value.",
  numberOfItems: treatments.length,
  itemListElement: treatments
  .sort((a, b) => b.kamuraScore - a.kamuraScore)

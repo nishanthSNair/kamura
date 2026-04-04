@@ -35,8 +35,42 @@ const difficultyColor: Record<string, string> = {
 };
 
 export default function ProtocolsPage() {
+ const jsonLd = {
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "CollectionPage",
+ name: "Longevity Protocols",
+ url: "https://kamuralife.com/protocols",
+ description:
+ "The world's most popular longevity protocols — every supplement, exercise routine, diet, and practice detailed and compared.",
+ mainEntity: {
+ "@type": "ItemList",
+ numberOfItems: protocols.length,
+ itemListElement: protocols.map((p, i) => ({
+ "@type": "ListItem",
+ position: i + 1,
+ url: `https://kamuralife.com/protocols/${p.slug}`,
+ name: `${p.name} by ${p.creator}`,
+ })),
+ },
+ },
+ {
+ "@type": "BreadcrumbList",
+ itemListElement: [
+ { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+ { "@type": "ListItem", position: 2, name: "Protocols" },
+ ],
+ },
+ ],
+ };
+
  return (
  <>
+ <script
+ type="application/ld+json"
+ dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+ />
  {/* Hero */}
  <section className="relative min-h-[45vh] flex items-center justify-center">
  <div

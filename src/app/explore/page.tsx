@@ -42,6 +42,11 @@ export const metadata: Metadata = {
  alternates: {
  canonical: "https://kamuralife.com/explore",
  },
+ twitter: {
+ card: "summary_large_image",
+ title: "Explore Wellness Centers | KAMURA",
+ description: `${listings.length}+ curated longevity clinics, biohacking studios, gyms, padel courts, boxing gyms, and wellness retreats across the UAE.`,
+ },
  openGraph: {
  title: "Explore Wellness Centers | KAMURA",
  description:
@@ -54,15 +59,6 @@ export const metadata: Metadata = {
  height: 630,
  alt: "Explore Wellness Centers — KAMURA",
  },
- ],
- },
- twitter: {
- card: "summary_large_image",
- title: "Explore Wellness Centers | KAMURA",
- description:
-  "Curated longevity clinics, biohacking studios, gyms, padel courts, and wellness retreats across Dubai and the UAE.",
- images: [
-  "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1200&h=630&fit=crop",
  ],
  },
 };

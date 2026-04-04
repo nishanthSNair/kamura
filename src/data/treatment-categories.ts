@@ -59,7 +59,7 @@ export const CATEGORY_META: CategoryMeta[] = [
  icon: "\u{1F9D8}",
  description: "Practices that integrate mental focus, breathwork, and physical movement for holistic wellness. Includes meditation, yoga, breathwork, sound healing, and fasting.",
  seoTitle: "Mind-Body & Movement Therapies — Scored & Ranked",
- seoDescription: "Explore mind-body wellness practices scored on evidence and community validation. Meditation, yoga, breathwork, sound healing, fasting, and more.",
+ seoDescription: "Explore mind-body wellness practices scored on research evidence, safety, and accessibility. Meditation, yoga, breathwork, sound healing, fasting, and more.",
  imageUrl: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80",
  },
  {

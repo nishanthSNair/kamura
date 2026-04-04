@@ -166,7 +166,7 @@ export default function AboutPage() {
  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
  <div className="text-center p-5 rounded-xl border border-sage-light/60 bg-white">
  <span className="font-serif text-3xl text-moss block mb-2">{treatments.length}+</span>
- <span className="text-sm text-gray-500 font-sans">Treatments scored on evidence, safety &amp; community data</span>
+ <span className="text-sm text-gray-500 font-sans">Treatments scored on evidence, safety &amp; value</span>
  </div>
  <div className="text-center p-5 rounded-xl border border-sage-light/60 bg-white">
  <span className="font-serif text-3xl text-moss block mb-2">{listings.length}+</span>
@@ -191,14 +191,14 @@ export default function AboutPage() {
  <div className="w-1 bg-sage/40 rounded-full shrink-0" />
  <div>
  <p className="font-sans font-medium text-gray-800 mb-1">Transparency over marketing</p>
- <p className="text-sm text-gray-500 font-sans">Every treatment on Kamura is scored with real data — research quality, safety profile, and community experience. No paid placements.</p>
+ <p className="text-sm text-gray-500 font-sans">Every treatment on Kamura is scored with real data — research quality, safety profile, accessibility, and value. No paid placements.</p>
  </div>
  </div>
  <div className="flex gap-4">
  <div className="w-1 bg-sage/40 rounded-full shrink-0" />
  <div>
  <p className="font-sans font-medium text-gray-800 mb-1">Evidence meets experience</p>
- <p className="text-sm text-gray-500 font-sans">We balance clinical research with real community reports. Science matters, but so does what actually works for people.</p>
+ <p className="text-sm text-gray-500 font-sans">We balance clinical research with real-world outcomes. Science matters, but so does what actually works for people.</p>
  </div>
  </div>
  <div className="flex gap-4">

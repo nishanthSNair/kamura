@@ -20,6 +20,11 @@ export const metadata: Metadata = {
  alternates: {
  canonical: "https://kamuralife.com/quiz",
  },
+ twitter: {
+ card: "summary_large_image",
+ title: "Discover Your Wellness Archetype | KAMURA Quiz",
+ description: "10 questions. 2 minutes. Find out your wellness score, archetype, and where to start your longevity journey.",
+ },
  openGraph: {
  title: "Discover Your Wellness Archetype | KAMURA Quiz",
  description:

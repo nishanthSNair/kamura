@@ -26,6 +26,11 @@ export const metadata: Metadata = {
  alternates: {
  canonical: "https://kamuralife.com/treatments/compare",
  },
+ twitter: {
+ card: "summary_large_image",
+ title: "Compare Treatments Side by Side | KAMURA",
+ description: "Compare any two wellness treatments side by side. Scores, evidence, outcomes, safety, and cost compared.",
+ },
 };
 
 export default function ComparePage() {
