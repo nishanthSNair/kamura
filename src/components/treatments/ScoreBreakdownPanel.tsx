@@ -11,16 +11,15 @@ interface ScoreBreakdownPanelProps {
 }
 
 const factors = [
- { key: "research" as const, label: "Research", weight: "35%" },
- { key: "community" as const, label: "Community", weight: "25%" },
- { key: "safety" as const, label: "Safety", weight: "20%" },
- { key: "accessibility" as const, label: "Access", weight: "10%" },
- { key: "value" as const, label: "Value", weight: "10%" },
+ { key: "research" as const, label: "Research", weight: "45%" },
+ { key: "safety" as const, label: "Safety", weight: "25%" },
+ { key: "accessibility" as const, label: "Access", weight: "15%" },
+ { key: "value" as const, label: "Value", weight: "15%" },
 ];
 
 export default function ScoreBreakdownPanel({ scores }: ScoreBreakdownPanelProps) {
  return (
- <div className="grid grid-cols-5 divide-x divide-gray-200 border-y border-gray-200">
+ <div className="grid grid-cols-4 divide-x divide-gray-200 border-y border-gray-200">
  {factors.map((factor) => {
  const score = scores[factor.key];
  const color = getScoreColor(score);

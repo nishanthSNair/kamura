@@ -58,7 +58,7 @@ The GLP-1 drug class is one of the most extensively studied in modern pharmacolo
 
 ## The Complete Comparison: Every GLP-1 Drug Ranked
 
-Here's what Kamura's community of 400+ wellness practitioners and biohackers, combined with clinical trial data, tells us about each drug.
+Here's how each drug stacks up based on clinical trial data, safety profile, UAE accessibility, and value for money.
 
 | | Semaglutide | Tirzepatide | Orforglipron | Retatrutide |
 |---|---|---|---|---|
@@ -68,7 +68,7 @@ Here's what Kamura's community of 400+ wellness practitioners and biohackers, co
 | **Avg Weight Loss** | ~15–17% | ~20–22% | ~12% | ~28.7% |
 | **FDA Approved** | Yes | Yes | Yes (Apr 2026) | Phase 3 trials |
 | **UAE Available** | Yes | Yes | May 2026 | Not yet |
-| **Kamura Score** | 85 | 87 | 78 (est.) | 89 (est.) |
+| **Kamura Score** | 85 | 80 | 74 (est.) | 70 (est.) |
 | **Key Advantage** | Most studied | Strongest approved | No injections | Highest weight loss |
 | **Key Drawback** | Moderate loss | Injection only | Less weight loss | Not approved yet |
 
@@ -76,7 +76,7 @@ Here's what Kamura's community of 400+ wellness practitioners and biohackers, co
 
 *Kamura Score: 85/100 — Tier: Gold Standard — Evidence: Strong*
 
-Semaglutide is the most well-known and most studied GLP-1 drug. Ozempic (for diabetes) and Wegovy (for weight management) are the same molecule at different doses. In the STEP trials, semaglutide 2.4mg delivered an average of 15–17% body weight loss over 68 weeks. The SELECT trial proved cardiovascular benefits — a 20% reduction in major cardiac events — which changed the conversation from "vanity drug" to "life-saving medicine."
+Semaglutide leads our rankings with the highest overall score — driven by unmatched research depth, proven safety, and wide UAE availability. It is the most well-known and most studied GLP-1 drug. Ozempic (for diabetes) and Wegovy (for weight management) are the same molecule at different doses. In the STEP trials, semaglutide 2.4mg delivered an average of 15–17% body weight loss over 68 weeks. The SELECT trial proved cardiovascular benefits — a 20% reduction in major cardiac events — which changed the conversation from "vanity drug" to "life-saving medicine."
 
 In the UAE, Ozempic is widely available at pharmacies and clinics. Wegovy (the higher-dose weight-loss version) is not yet approved for sale in the UAE, though some clinics use Ozempic off-label at weight-management doses. A new oral Wegovy pill was approved by the FDA in early 2026 and showed 16.6% weight loss — nearly matching the injectable. It's not yet available in the UAE.
 
@@ -88,7 +88,7 @@ In the UAE, Ozempic is widely available at pharmacies and clinics. Wegovy (the h
 
 ### Tirzepatide (Mounjaro / Zepbound)
 
-*Kamura Score: 87/100 — Tier: Gold Standard — Evidence: Strong*
+*Kamura Score: 80/100 — Tier: Strong — Evidence: Strong*
 
 Tirzepatide is the dual-action GLP-1/GIP agonist that has taken the weight-loss world by storm. The SURMOUNT trials showed up to 22.5% body weight loss — significantly more than semaglutide. In head-to-head comparisons, tirzepatide outperformed semaglutide by approximately 4.2 percentage points in additional weight loss.
 
@@ -100,7 +100,7 @@ Mounjaro was the most prescribed weight management medication in 2025. It's avai
 
 ### Orforglipron (Foundayo) — The New Oral Pill
 
-*Kamura Score: 78/100 (estimated) — Tier: Strong — Evidence: Moderate*
+*Kamura Score: 74/100 (estimated) — Tier: Strong — Evidence: Moderate*
 
 **Breaking: UAE Approved — Available May 2026**
 
@@ -110,7 +110,7 @@ This is the drug everyone in the Dubai wellness community has been waiting for �
 
 Foundayo is a once-daily oral pill and the first GLP-1 weight-loss medication that can be taken at any time of day, with or without food, with no water restrictions. This is a major practical advantage over oral Wegovy, which requires taking on an empty stomach with minimal water and then waiting 30 minutes before eating.
 
-Clinical trial results showed an average of 12.4% body weight loss at the highest dose (60mg) over 72 weeks. That's less than injectable semaglutide (15–17%) or tirzepatide (20–22%), but the trade-off is obvious: no needles. For the millions of people who refuse injections — and in our community surveys, that's about 35% of interested users — Foundayo removes the biggest barrier to entry.
+Clinical trial results showed an average of 12.4% body weight loss at the highest dose (60mg) over 72 weeks. That's less than injectable semaglutide (15–17%) or tirzepatide (20–22%), but the trade-off is obvious: no needles. For the millions of people who refuse injections — estimated at 30–40% of interested users based on survey data — Foundayo removes the biggest barrier to entry.
 
 Eli Lilly also showed that people who switched from injectable GLP-1s to Foundayo maintained their weight loss, meaning it could serve as a long-term maintenance option after achieving target weight with a more aggressive injectable.
 
@@ -122,7 +122,7 @@ In the US, Foundayo is priced at $149/month for self-pay (lowest dose), making i
 
 ### Retatrutide — The Next Frontier
 
-*Kamura Score: 89/100 (estimated) — Tier: Gold Standard — Evidence: Moderate (Phase 3)*
+*Kamura Score: 70/100 (estimated) — Tier: Strong — Evidence: Moderate (Phase 3)*
 
 Retatrutide is the "triple agonist" that targets GLP-1, GIP, and glucagon receptors simultaneously. Its Phase 3 TRIUMPH-4 results, released in December 2025, were staggering: **28.7% average body weight loss** at 12mg — the highest figure ever recorded in a Phase 3 obesity trial. That's an average of 71.2 lbs (32.3 kg) lost.
 
@@ -233,18 +233,18 @@ Be skeptical of any clinic that prescribes without thorough baseline assessment 
 
 ## Kamura Score Breakdown
 
-The Kamura Score is our transparent, composite rating based on five weighted factors: Research Evidence (35%), Community Validation (25%), Safety Profile (20%), Accessibility (10%), and Value for Money (10%). Every sub-score is visible — no black boxes.
+The Kamura Score is our transparent, composite rating based on four weighted factors: Research Evidence (45%), Safety Profile (25%), Accessibility (15%), and Value for Money (15%). Every sub-score is visible — no black boxes.
 
-| Treatment | Kamura Score | Evidence | Community | Safety |
-|---|---|---|---|---|
-| Retatrutide | 89/100 | 92 | 88 | 82 |
-| Tirzepatide (Mounjaro) | 87/100 | 90 | 90 | 80 |
-| Semaglutide (Ozempic) | 85/100 | 95 | 85 | 82 |
-| Orforglipron (Foundayo) | 78/100 | 72 | 70 | 78 |
-| Oral Wegovy | 76/100 | 80 | 65 | 80 |
-| Cagrilintide | 58/100 | 55 | 45 | 70 |
+| Treatment | Kamura Score | Evidence | Safety | Access | Value |
+|---|---|---|---|---|---|
+| Semaglutide (Ozempic) | 85/100 | 95 | 82 | 80 | 65 |
+| Tirzepatide (Mounjaro) | 80/100 | 90 | 80 | 75 | 55 |
+| Orforglipron (Foundayo) | 74/100 | 72 | 78 | 65 | 80 |
+| Oral Wegovy | 72/100 | 80 | 80 | 35 | 70 |
+| Retatrutide | 70/100 | 92 | 82 | 15 | 40 |
+| Cagrilintide | 48/100 | 55 | 70 | 10 | 25 |
 
-*Note: Retatrutide and Foundayo scores are estimated based on current clinical data and community signals. Scores will be updated as more real-world data becomes available. Semaglutide has the highest Research Evidence sub-score (95) due to having the most extensive clinical trial program of any GLP-1 drug.*
+*Note: Retatrutide scores highest on Research Evidence (92) but drops significantly on Accessibility because it is not yet approved anywhere. Semaglutide leads overall due to the strongest combination of evidence, safety, and UAE availability. Foundayo and Oral Wegovy scores are estimated based on current clinical data and will be updated as UAE pricing and real-world data become available.*
 
 ## Who Should Consider GLP-1 Drugs — And Who Shouldn't
 
@@ -269,7 +269,7 @@ The Kamura Score is our transparent, composite rating based on five weighted fac
 
 *This article is for educational and informational purposes only. It does not constitute medical advice. GLP-1 medications are prescription drugs that should only be taken under the supervision of a licensed healthcare provider. Kamura Life does not sell, prescribe, or distribute any medications. Always consult your doctor before starting, changing, or stopping any medication.*
 
-*The Kamura Score is a transparency tool based on published clinical evidence and anonymized community data. It is not a medical recommendation. Individual results vary significantly based on genetics, adherence, lifestyle factors, and medical history.*
+*The Kamura Score is a transparency tool based on published clinical evidence, safety data, accessibility, and value analysis. It is not a medical recommendation. Individual results vary significantly based on genetics, adherence, lifestyle factors, and medical history.*
 
 ## Sources & Further Reading
 
@@ -288,6 +288,5 @@ The Kamura Score is our transparent, composite rating based on five weighted fac
 - Khaleej Times — "Are Ozempic, Mounjaro covered by insurance in the UAE?"
 - Dubai Population Health Survey — Overweight/Obesity Prevalence Data
 
-**Community Data:**
-- Kamura Life Wellness Community — 400+ members, anonymized outcome reports
-- r/semaglutide, r/Mounjaro, r/Ozempic — Reddit community analysis
+**Additional Sources:**
+- r/semaglutide, r/Mounjaro, r/Ozempic — Reddit community discussion analysis

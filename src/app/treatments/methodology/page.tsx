@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
  title: "Kamura Score Methodology — How We Score Treatments",
  description:
- "How the Kamura Score works — a transparent, 5-factor composite scoring system for wellness treatments. Research evidence (35%), community validation (25%), safety (20%), accessibility (10%), and value (10%). Zero bias.",
+ "How the Kamura Score works — a transparent, 4-factor composite scoring system for wellness treatments. Research evidence (45%), safety (25%), accessibility (15%), and value (15%). Zero bias.",
  keywords: [
  "Kamura Score",
  "treatment scoring methodology",
@@ -30,7 +30,7 @@ const factors = [
  {
  icon: "🔬",
  name: "Research Evidence",
- weight: 35,
+ weight: 45,
  color: "#60A5FA",
  description: "Clinical trial quantity & quality, study design (RCT > observational), meta-analyses, consistency of results, and replication.",
  sources: "PubMed, Cochrane Library, clinical trial registries",
@@ -43,24 +43,9 @@ const factors = [
  ],
  },
  {
- icon: "👥",
- name: "Community Validation",
- weight: 25,
- color: "#A78BFA",
- description: "Real-world outcomes from 400+ community members, sentiment analysis, reported effectiveness rate, and satisfaction scores.",
- sources: "WhatsApp community data, user submissions, practitioner reports",
- rubric: [
- { range: "90-100", criteria: "100+ reports, >90% positive sentiment, consistent outcomes" },
- { range: "70-89", criteria: "50-100 reports, >80% positive" },
- { range: "50-69", criteria: "20-50 reports, >65% positive" },
- { range: "30-49", criteria: "5-20 reports, mixed results" },
- { range: "0-29", criteria: "<5 reports or predominantly negative" },
- ],
- },
- {
  icon: "🛡️",
  name: "Safety Profile",
- weight: 20,
+ weight: 25,
  color: "#4ADE80",
  description: "Side effect frequency & severity, drug interactions, contraindications, long-term safety data, and FDA/regulatory status.",
  sources: "Clinical databases, community adverse event reports, FDA/EMA",
@@ -75,7 +60,7 @@ const factors = [
  {
  icon: "🌐",
  name: "Accessibility",
- weight: 10,
+ weight: 15,
  color: "#FB923C",
  description: "Available in UAE/globally, prescription requirements, ease of administration (oral > injectable), and provider network density.",
  sources: "Clinic directories, pharmacy databases, community reports",
@@ -90,7 +75,7 @@ const factors = [
  {
  icon: "💰",
  name: "Value for Money",
- weight: 10,
+ weight: 15,
  color: "#FACC15",
  description: "Monthly cost relative to effectiveness, cost per meaningful outcome, insurance coverage, and cost trends.",
  sources: "Community price reports, clinic pricing, pharmacy pricing",
@@ -105,8 +90,8 @@ const factors = [
 ];
 
 const tiers = [
- { name: "Gold Standard", range: "85-100", color: "#C4A882", meaning: "Strong evidence + high community validation + good safety" },
- { name: "Strong", range: "70-84", color: "#4ADE80", meaning: "Solid evidence and positive community outcomes" },
+ { name: "Gold Standard", range: "85-100", color: "#C4A882", meaning: "Strong evidence + excellent safety + good accessibility and value" },
+ { name: "Strong", range: "70-84", color: "#4ADE80", meaning: "Solid evidence with good safety profile" },
  { name: "Promising", range: "50-69", color: "#FACC15", meaning: "Emerging evidence or mixed results, worth monitoring" },
  { name: "Limited", range: "30-49", color: "#FB923C", meaning: "Weak evidence or significant concerns" },
  { name: "Insufficient", range: "0-29", color: "#F87171", meaning: "No meaningful evidence or actively harmful" },
@@ -127,7 +112,7 @@ export default function MethodologyPage() {
  {
  "@type": "Article",
  headline: "How the Kamura Score Works",
- description: "A transparent, 5-factor composite scoring system for wellness treatments. Research evidence, community validation, safety, accessibility, and value.",
+ description: "A transparent, 4-factor composite scoring system for wellness treatments. Research evidence, safety, accessibility, and value.",
  url: "https://kamuralife.com/treatments/methodology",
  author: { "@type": "Organization", name: "KAMURA", url: "https://kamuralife.com" },
  publisher: { "@type": "Organization", name: "KAMURA", url: "https://kamuralife.com" },
@@ -171,7 +156,7 @@ export default function MethodologyPage() {
  How the Kamura Score Works
  </h1>
  <p className="text-lg text-gray-500 font-sans leading-relaxed max-w-xl mx-auto">
- A transparent, composite scoring system calculated from 5 weighted factors. No sponsorships. No pay-to-rank. Just data.
+ A transparent, composite scoring system calculated from 4 weighted factors. No sponsorships. No pay-to-rank. Just data.
  </p>
  <div className="w-12 h-px bg-sage/40 mx-auto mt-8" />
  </header>
@@ -183,7 +168,7 @@ export default function MethodologyPage() {
  The Formula
  </p>
  <p className="font-mono text-sm md:text-base text-gray-700">
- Kamura Score = (Research &times; 0.35) + (Community &times; 0.25) + (Safety &times; 0.20) + (Access &times; 0.10) + (Value &times; 0.10)
+ Kamura Score = (Research &times; 0.45) + (Safety &times; 0.25) + (Access &times; 0.15) + (Value &times; 0.15)
  </p>
  </div>
  </section>
@@ -191,7 +176,7 @@ export default function MethodologyPage() {
  {/* Five Factors */}
  <section className="max-w-3xl mx-auto px-6 mb-16">
  <h2 className="font-serif text-2xl text-gray-900 mb-8">
- The Five Factors
+ The Four Factors
  </h2>
 
  <div className="space-y-8">
@@ -340,7 +325,7 @@ export default function MethodologyPage() {
  <strong className="text-gray-700">Full transparency.</strong> Every sub-score is visible. You can see exactly why a treatment scores the way it does. We show what works AND what doesn&apos;t.
  </p>
  <p>
- <strong className="text-gray-700">Community-driven updates.</strong> Scores are updated as new research is published and community data grows. If you&apos;ve used a treatment, your experience contributes to future scores.
+ <strong className="text-gray-700">Regular updates.</strong> Scores are updated as new research is published and real-world data grows. We continuously review new clinical trials, safety reports, and pricing changes.
  </p>
  <p>
  <strong className="text-gray-700">Corrections welcome.</strong> If you believe a score is inaccurate, contact us with evidence and we&apos;ll review. Our methodology is open to scrutiny.

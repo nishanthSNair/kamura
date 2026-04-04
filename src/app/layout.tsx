@@ -91,10 +91,10 @@ export const metadata: Metadata = {
  type: "website",
  images: [
  {
- url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=630&fit=crop",
+ url: "https://kamuralife.com/images/hero-home.png",
  width: 1200,
  height: 630,
- alt: "KAMURA — Heart of Longevity & Wellness",
+ alt: "KAMURA — Rooted in Wellness",
  },
  ],
  },

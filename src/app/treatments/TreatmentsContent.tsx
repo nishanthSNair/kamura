@@ -148,11 +148,10 @@ export default function TreatmentsContent() {
  </div>
  <div className="flex flex-col gap-3">
  {[
- { icon: "🔬", label: "Research Evidence", desc: "Clinical trials, study quality, meta-analyses, consistency", weight: "35%", colorClass: "bg-score-blue/12" },
- { icon: "👥", label: "Community Validation", desc: "Real-world outcomes from 400+ community members", weight: "25%", colorClass: "bg-score-purple/12" },
- { icon: "🛡️", label: "Safety Profile", desc: "Side effects, interactions, long-term safety data", weight: "20%", colorClass: "bg-score-green/12" },
- { icon: "🌐", label: "Accessibility", desc: "UAE availability, prescription requirements, ease of use", weight: "10%", colorClass: "bg-score-orange/12" },
- { icon: "💰", label: "Value for Money", desc: "Cost relative to effectiveness, ongoing expense", weight: "10%", colorClass: "bg-score-yellow/12" },
+ { icon: "🔬", label: "Research Evidence", desc: "Clinical trials, study quality, meta-analyses, consistency", weight: "45%", colorClass: "bg-score-blue/12" },
+ { icon: "🛡️", label: "Safety Profile", desc: "Side effects, interactions, long-term safety data", weight: "25%", colorClass: "bg-score-green/12" },
+ { icon: "🌐", label: "Accessibility", desc: "UAE availability, prescription requirements, ease of use", weight: "15%", colorClass: "bg-score-orange/12" },
+ { icon: "💰", label: "Value for Money", desc: "Cost relative to effectiveness, ongoing expense", weight: "15%", colorClass: "bg-score-yellow/12" },
  ].map((factor) => (
  <div
  key={factor.label}
