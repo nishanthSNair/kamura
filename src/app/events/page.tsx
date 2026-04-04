@@ -3,15 +3,15 @@ import { events } from "@/data/events";
 import EventsContent from "./EventsContent";
 
 export const metadata: Metadata = {
- title: "Wellness & Longevity Events in Dubai 2025–2026 | Calendar & Listings",
+ title: "Wellness & Longevity Events in Dubai 2026 | Calendar & Listings",
  description:
- "Complete calendar of wellness events in Dubai & UAE for 2025–2026. Biohacking summits, longevity festivals, stem cell conferences, wellness retreats, fitness expos, health workshops. Dates, tickets, and details for every event.",
+ "Complete calendar of wellness events in Dubai & UAE for 2026. Biohacking summits, longevity festivals, stem cell conferences, wellness retreats, fitness expos, health workshops. Dates, tickets, and details for every event.",
  keywords: [
  "wellness events dubai",
  "longevity events dubai",
  "biohacking events dubai",
  "health events UAE",
- "wellness conference dubai 2025",
+ "wellness conference dubai 2026",
  "wellness conference dubai 2026",
  "longevity summit dubai",
  "wellness retreat UAE",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
  canonical: "https://kamuralife.com/events",
  },
  openGraph: {
- title: "Wellness & Longevity Events in Dubai 2025–2026",
+ title: "Wellness & Longevity Events in Dubai 2026",
  description:
  `${events.length} upcoming wellness events in Dubai & UAE — biohacking summits, longevity festivals, health conferences, and more. Full calendar with dates, locations, and ticket info.`,
  url: "https://kamuralife.com/events",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
  },
  twitter: {
  card: "summary_large_image",
- title: "Wellness & Longevity Events in Dubai 2025–2026",
+ title: "Wellness & Longevity Events in Dubai 2026",
  description:
  `${events.length} upcoming wellness events — biohacking summits, longevity festivals, and health conferences in Dubai & UAE.`,
  },
@@ -88,7 +88,7 @@ export default function EventsPage() {
  "@context": "https://schema.org",
  "@type": "ItemList",
  name: "Wellness & Longevity Events in Dubai",
- description: `${events.length} upcoming wellness, longevity, and biohacking events in Dubai & UAE for 2025–2026.`,
+ description: `${events.length} upcoming wellness, longevity, and biohacking events in Dubai & UAE for 2026.`,
  numberOfItems: events.length,
  itemListElement: events.map((event, i) => ({
  "@type": "ListItem",
@@ -120,7 +120,7 @@ export default function EventsPage() {
  const webPageJsonLd = {
  "@context": "https://schema.org",
  "@type": "CollectionPage",
- name: "Wellness & Longevity Events in Dubai 2025–2026",
+ name: "Wellness & Longevity Events in Dubai 2026",
  description: `Complete calendar of ${events.length} wellness events in Dubai & UAE — biohacking summits, longevity festivals, health conferences, wellness retreats, and fitness expos.`,
  url: "https://kamuralife.com/events",
  isPartOf: {

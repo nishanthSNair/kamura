@@ -4,7 +4,7 @@ import Image from "next/image";
 import { protocols } from "@/data/protocols";
 
 export const metadata: Metadata = {
- title: "Longevity Protocols — Expert Protocols Reviewed & Compared | KAMURA",
+ title: "Longevity Protocols — Expert Protocols Reviewed & Compared",
  description:
  "Explore the world's most popular longevity protocols from Bryan Johnson, Peter Attia, Andrew Huberman, David Sinclair, and more. Every supplement, exercise, and practice — detailed and compared.",
  keywords: [
