@@ -5,8 +5,10 @@ import type { BodyZone, WellnessConcern, ConcernDuration } from "./wellness-conc
 export type Gender = "male" | "female" | "non-binary" | "prefer-not-to-say";
 export type LocationOption = "dubai" | "abu-dhabi" | "sharjah" | "other-uae" | "outside-uae";
 export type ExerciseFrequency = "never" | "1-2x" | "3-4x" | "5+";
-export type DietType = "balanced" | "keto" | "vegan" | "mediterranean" | "intermittent-fasting" | "other";
+export type DietType = "balanced" | "keto" | "vegan" | "vegetarian" | "carnivore" | "paleo" | "mediterranean" | "intermittent-fasting" | "halal" | "gluten-free" | "other";
 export type Hydration = "<1L" | "1-2L" | "2-3L" | "3L+";
+export type SmokingStatus = "never" | "former" | "occasional" | "regular";
+export type DrinkingStatus = "never" | "social" | "moderate" | "regular";
 export type ScreenTime = "<1hr" | "1-2hr" | "2-3hr" | "3hr+";
 export type BudgetTier = "<500" | "500-1500" | "1500-3000" | "3000+";
 export type TreatmentPreference = "natural" | "clinical" | "biohacking" | "no-preference";
@@ -45,9 +47,28 @@ export const DIET_OPTIONS: { value: DietType; label: string }[] = [
   { value: "balanced", label: "Balanced" },
   { value: "keto", label: "Keto" },
   { value: "vegan", label: "Vegan" },
+  { value: "vegetarian", label: "Vegetarian" },
+  { value: "carnivore", label: "Carnivore" },
+  { value: "paleo", label: "Paleo" },
   { value: "mediterranean", label: "Mediterranean" },
   { value: "intermittent-fasting", label: "Intermittent Fasting" },
+  { value: "halal", label: "Halal" },
+  { value: "gluten-free", label: "Gluten-Free" },
   { value: "other", label: "Other" },
+];
+
+export const SMOKING_OPTIONS: { value: SmokingStatus; label: string }[] = [
+  { value: "never", label: "Never" },
+  { value: "former", label: "Former smoker" },
+  { value: "occasional", label: "Occasional" },
+  { value: "regular", label: "Regular" },
+];
+
+export const DRINKING_OPTIONS: { value: DrinkingStatus; label: string }[] = [
+  { value: "never", label: "Never" },
+  { value: "social", label: "Social only" },
+  { value: "moderate", label: "Moderate" },
+  { value: "regular", label: "Regular" },
 ];
 
 export const HYDRATION_OPTIONS: { value: Hydration; label: string }[] = [
@@ -107,6 +128,10 @@ export interface WellnessProfile {
   age: number | null;
   gender: Gender | "";
   location: LocationOption | "";
+  height: number | null; // cm
+  weight: number | null; // kg
+  smoking: SmokingStatus | "";
+  drinking: DrinkingStatus | "";
   // Lifestyle
   sleepQuality: number; // 1-5
   exerciseFrequency: ExerciseFrequency | "";
@@ -135,6 +160,10 @@ export const EMPTY_PROFILE: WellnessProfile = {
   age: null,
   gender: "",
   location: "",
+  height: null,
+  weight: null,
+  smoking: "",
+  drinking: "",
   sleepQuality: 3,
   exerciseFrequency: "",
   stressLevel: 3,

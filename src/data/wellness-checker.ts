@@ -323,3 +323,76 @@ export function matchBlogPosts(
 
  return scored.slice(0, maxPosts).map((item) => item.post);
 }
+
+// --- Clinic matching: find relevant centers based on recommended treatments ---
+
+import { type Listing, listings } from "./listings";
+
+const TREATMENT_CATEGORY_TO_LISTING: Record<string, string[]> = {
+ "Peptides": ["Longevity Clinics", "Biohacking & Performance"],
+ "Supplements & Nutraceuticals": ["Nutrition & Supplements", "Longevity Clinics"],
+ "Devices & Technology": ["Biohacking & Performance", "Longevity Clinics"],
+ "IV & Infusion Therapies": ["Longevity Clinics", "Biohacking & Performance"],
+ "Mind-Body & Movement": ["Yoga & Movement", "Holistic & Healing"],
+ "Hormones": ["Longevity Clinics"],
+ "Energy Medicine & Frequencies": ["Holistic & Healing", "Biohacking & Performance"],
+ "Diagnostics & Testing": ["Longevity Clinics"],
+ "Stem Cells & Regenerative": ["Longevity Clinics"],
+ "Recovery & Physical": ["Biohacking & Performance", "Wellness Retreats & Spas"],
+ "Nutrition & Diet": ["Nutrition & Supplements"],
+ "Lifestyle & Environment": ["Wellness Retreats & Spas"],
+ "Exercise & Performance": ["Gyms & Fitness Studios", "Biohacking & Performance"],
+ "Gut Health": ["Longevity Clinics", "Holistic & Healing"],
+ "Traditional & Holistic": ["Holistic & Healing"],
+ "Sleep": ["Biohacking & Performance", "Longevity Clinics"],
+};
+
+export function matchListings(
+ matchedTreatments: EnrichedMatchedTreatment[],
+ location: string,
+ maxListings = 6
+): Listing[] {
+ const relevantCategories = new Set<string>();
+ const treatmentNames = new Set<string>();
+
+ for (const r of matchedTreatments.slice(0, 10)) {
+ treatmentNames.add(r.treatment.name.toLowerCase());
+ const cats = TREATMENT_CATEGORY_TO_LISTING[r.treatment.category];
+ if (cats) cats.forEach((c) => relevantCategories.add(c));
+ }
+
+ const scored = listings
+ .map((listing) => {
+  let score = 0;
+
+  // Category match
+  if (relevantCategories.has(listing.category)) score += 5;
+
+  // Service keyword match against treatment names and tags
+  for (const service of listing.services) {
+   const sLower = service.toLowerCase();
+   for (const r of matchedTreatments.slice(0, 10)) {
+    if (r.treatment.name.toLowerCase().includes(sLower) || sLower.includes(r.treatment.name.toLowerCase())) {
+     score += 3;
+    }
+    for (const tag of r.treatment.tags) {
+     if (sLower.includes(tag.toLowerCase())) score += 2;
+    }
+   }
+  }
+
+  // Location preference
+  if (location && listing.city.toLowerCase().includes(location.replace("-", " "))) {
+   score += 2;
+  }
+
+  // Featured boost
+  if (listing.featured) score += 1;
+
+  return { listing, score };
+ })
+ .filter((item) => item.score > 0)
+ .sort((a, b) => b.score - a.score);
+
+ return scored.slice(0, maxListings).map((item) => item.listing);
+}

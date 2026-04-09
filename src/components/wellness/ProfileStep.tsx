@@ -4,6 +4,8 @@ import {
   type WellnessProfile,
   GENDER_OPTIONS,
   LOCATION_OPTIONS,
+  SMOKING_OPTIONS,
+  DRINKING_OPTIONS,
 } from "@/data/wellness-questionnaire";
 
 interface ProfileStepProps {
@@ -86,6 +88,82 @@ export default function ProfileStep({ profile, onChange }: ProfileStepProps) {
                 onClick={() => onChange({ location: opt.value })}
                 className={`px-4 py-3 rounded-xl border text-sm font-sans transition-all ${
                   profile.location === opt.value
+                    ? "border-terracotta bg-terracotta/5 text-terracotta font-medium"
+                    : "border-gray-200 bg-white text-gray-600 hover:border-gray-300"
+                }`}
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Height & Weight */}
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-sans font-medium text-gray-700 mb-1.5">
+              Height (cm)
+            </label>
+            <input
+              type="number"
+              value={profile.height ?? ""}
+              onChange={(e) => onChange({ height: e.target.value ? parseInt(e.target.value, 10) : null })}
+              placeholder="e.g. 175"
+              min={100}
+              max={250}
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 font-sans text-sm focus:outline-none focus:border-terracotta/50 focus:ring-2 focus:ring-terracotta/10 transition-all"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-sans font-medium text-gray-700 mb-1.5">
+              Weight (kg)
+            </label>
+            <input
+              type="number"
+              value={profile.weight ?? ""}
+              onChange={(e) => onChange({ weight: e.target.value ? parseInt(e.target.value, 10) : null })}
+              placeholder="e.g. 70"
+              min={30}
+              max={300}
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 font-sans text-sm focus:outline-none focus:border-terracotta/50 focus:ring-2 focus:ring-terracotta/10 transition-all"
+            />
+          </div>
+        </div>
+
+        {/* Smoking */}
+        <div>
+          <label className="block text-sm font-sans font-medium text-gray-700 mb-1.5">
+            Smoking
+          </label>
+          <div className="grid grid-cols-2 gap-2">
+            {SMOKING_OPTIONS.map((opt) => (
+              <button
+                key={opt.value}
+                onClick={() => onChange({ smoking: opt.value })}
+                className={`px-4 py-3 rounded-xl border text-sm font-sans transition-all ${
+                  profile.smoking === opt.value
+                    ? "border-terracotta bg-terracotta/5 text-terracotta font-medium"
+                    : "border-gray-200 bg-white text-gray-600 hover:border-gray-300"
+                }`}
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Drinking */}
+        <div>
+          <label className="block text-sm font-sans font-medium text-gray-700 mb-1.5">
+            Alcohol
+          </label>
+          <div className="grid grid-cols-2 gap-2">
+            {DRINKING_OPTIONS.map((opt) => (
+              <button
+                key={opt.value}
+                onClick={() => onChange({ drinking: opt.value })}
+                className={`px-4 py-3 rounded-xl border text-sm font-sans transition-all ${
+                  profile.drinking === opt.value
                     ? "border-terracotta bg-terracotta/5 text-terracotta font-medium"
                     : "border-gray-200 bg-white text-gray-600 hover:border-gray-300"
                 }`}

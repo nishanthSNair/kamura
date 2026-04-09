@@ -8,6 +8,7 @@ import {
   enrichResults,
   buildProtocol,
   matchBlogPosts,
+  matchListings,
 } from "@/data/wellness-checker";
 import {
   computeDimensionScores,
@@ -30,6 +31,7 @@ import RelatedContent from "@/components/checker/RelatedContent";
 import ShareCardModal from "@/components/share-cards/ShareCardModal";
 import BodyMapCard from "@/components/share-cards/BodyMapCard";
 import { ZONES } from "@/data/wellness-concerns";
+import Link from "next/link";
 
 interface WellnessDashboardProps {
   profile: WellnessProfile;
@@ -87,6 +89,12 @@ export default function WellnessDashboard({
     [profile.conditions, enrichedResults]
   );
 
+  // Match clinics/centers
+  const matchedListings = useMemo(
+    () => matchListings(enrichedResults, profile.location || ""),
+    [enrichedResults, profile.location]
+  );
+
   // Share card data
   const shareCardZones = profile.selectedZones
     .map((z) => ZONES.find((zc) => zc.zone === z))
@@ -130,6 +138,14 @@ export default function WellnessDashboard({
                 <span className="text-gray-500">Location</span>
                 <span className="text-gray-800 capitalize">{profile.location?.replace("-", " ")}</span>
               </div>
+              {profile.height && profile.weight && (
+                <div className="flex justify-between">
+                  <span className="text-gray-500">BMI</span>
+                  <span className="text-gray-800">
+                    {(profile.weight / ((profile.height / 100) ** 2)).toFixed(1)}
+                  </span>
+                </div>
+              )}
               <div className="flex justify-between">
                 <span className="text-gray-500">Concerns</span>
                 <span className="text-gray-800">{profile.selectedConcerns.length}</span>
@@ -241,7 +257,51 @@ export default function WellnessDashboard({
             </DashboardCard>
           )}
 
-          {/* 10. Share */}
+          {/* 10. Recommended Centers */}
+          {matchedListings.length > 0 && (
+            <DashboardCard title="Recommended Centers" icon={"\uD83C\uDFE5"} span={2}>
+              <div className="space-y-2.5">
+                {matchedListings.map((listing) => (
+                  <Link
+                    key={listing.id}
+                    href={`/explore/${listing.id}`}
+                    className="flex items-center justify-between p-3.5 rounded-xl border border-gray-200 bg-white hover:border-sage/30 hover:shadow-sm transition-all group"
+                  >
+                    <div className="min-w-0">
+                      <p className="text-sm font-sans font-medium text-gray-800 group-hover:text-terracotta transition-colors truncate">
+                        {listing.name}
+                      </p>
+                      <p className="text-xs text-gray-400 font-sans mt-0.5 truncate">
+                        {listing.tagline} &middot; {listing.location}, {listing.city}
+                      </p>
+                      <div className="flex flex-wrap gap-1.5 mt-2">
+                        {listing.services.slice(0, 3).map((service) => (
+                          <span
+                            key={service}
+                            className="text-[10px] px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 font-sans"
+                          >
+                            {service}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5886A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 ml-4">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </Link>
+                ))}
+              </div>
+              <Link
+                href="/explore"
+                className="inline-block text-sm text-terracotta hover:text-terracotta-dark transition-colors font-sans mt-4"
+              >
+                See all in Explore directory &rarr;
+              </Link>
+            </DashboardCard>
+          )}
+
+          {/* 11. Share */}
           {enrichedResults.length > 0 && (
             <DashboardCard title="Share" icon={"\uD83D\uDCE4"}>
               <div className="text-center py-4">
