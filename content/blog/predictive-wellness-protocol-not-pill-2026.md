@@ -10,7 +10,6 @@ lastUpdated: "2026-04-10"
 author:
   name: "Shaivi Naulakha"
   linkedin: "https://www.linkedin.com/in/shaivinaulakha/"
-  bio: "Shaivi Naulakha is the co-founder of Kamura, leading brand, content, and wellness intelligence. She writes about the future of preventive healthcare, longevity medicine, and the protocols reshaping how people approach their health in the UAE and beyond."
 faqItems:
   - question: "What is predictive wellness?"
     answer: "Predictive wellness is a proactive healthcare model that uses advanced diagnostics, wearable technology, AI analysis, and personalised protocols to identify health risks at the cellular and metabolic level before they become clinical problems. Instead of waiting for symptoms, it continuously collects data from biomarkers, genetics, imaging, and daily physiology to intervene early."
