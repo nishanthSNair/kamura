@@ -526,7 +526,7 @@ export default function QuizContent() {
  <button
  onClick={() => {
  const text = `I'm ${primary.name} with a wellness score of ${results.scorePercent}/100! Discover your wellness path at kamuralife.com/quiz`;
- const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+ const url = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}`;
  window.open(url, "_blank");
  }}
  className="px-6 py-3 border border-gray-200 text-sm font-sans text-gray-700 hover:border-gray-400 transition-colors rounded-lg"

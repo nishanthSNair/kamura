@@ -52,7 +52,15 @@ export default function Footer() {
  rel="noopener noreferrer"
  className="hover:text-moss transition-colors"
  >
- @kamuralife
+ Instagram
+ </a>
+ <a
+ href="https://x.com/KamuraLife"
+ target="_blank"
+ rel="noopener noreferrer"
+ className="hover:text-moss transition-colors"
+ >
+ X
  </a>
  </div>
  </div>

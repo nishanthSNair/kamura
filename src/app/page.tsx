@@ -53,7 +53,7 @@ export default function Home() {
  url: "https://kamuralife.com",
  description:
  "The world's first unbiased wellness intelligence platform",
- sameAs: ["https://www.instagram.com/kamuralife/"],
+ sameAs: ["https://www.instagram.com/kamuralife/", "https://x.com/KamuraLife"],
  },
  {
  "@type": "WebSite",

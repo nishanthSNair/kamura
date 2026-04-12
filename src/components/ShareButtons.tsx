@@ -49,7 +49,7 @@ export default function ShareButtons({
 
  const shareText = encodeURIComponent(title + "\n" + url);
  const whatsappUrl = `https://wa.me/?text=${shareText}`;
- const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+ const twitterUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
  const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
  // Instagram doesn't have a direct web share URL — copy link + prompt user
  function handleInstagramShare() {
