@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import SearchModal from "./SearchModal";
 
@@ -18,199 +18,269 @@ function hasLightTop(p: string): boolean {
  return false;
 }
 
+const DISCOVER_ITEMS = [
+ { href: "/treatments", label: "Treatments", desc: "200+ treatments scored" },
+ { href: "/peptides", label: "Peptides", desc: "Intelligence hub" },
+ { href: "/protocols", label: "Protocols", desc: "Expert protocols compared" },
+];
+
 export default function Navigation() {
  const [mobileOpen, setMobileOpen] = useState(false);
  const [searchOpen, setSearchOpen] = useState(false);
  const [scrolled, setScrolled] = useState(false);
+ const [discoverOpen, setDiscoverOpen] = useState(false);
+ const discoverRef = useRef<HTMLDivElement>(null);
  const pathname = usePathname();
  const solid = scrolled || hasLightTop(pathname);
 
- // Track scroll position for transparent nav
  useEffect(() => {
  function handleScroll() {
- setScrolled(window.scrollY > 50);
+  setScrolled(window.scrollY > 50);
  }
  handleScroll();
  window.addEventListener("scroll", handleScroll, { passive: true });
  return () => window.removeEventListener("scroll", handleScroll);
  }, []);
 
- // Cmd+K / Ctrl+K keyboard shortcut
  useEffect(() => {
  function handleKeyDown(e: KeyboardEvent) {
- if ((e.metaKey || e.ctrlKey) && e.key === "k") {
- e.preventDefault();
- setSearchOpen(true);
- }
+  if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+  e.preventDefault();
+  setSearchOpen(true);
+  }
  }
  document.addEventListener("keydown", handleKeyDown);
  return () => document.removeEventListener("keydown", handleKeyDown);
  }, []);
 
- // Lock body scroll when mobile menu is open
  useEffect(() => {
  if (mobileOpen) {
- document.body.style.overflow = "hidden";
+  document.body.style.overflow = "hidden";
  } else {
- document.body.style.overflow = "";
+  document.body.style.overflow = "";
  }
  return () => { document.body.style.overflow = ""; };
  }, [mobileOpen]);
 
+ // Close discover dropdown on outside click
+ useEffect(() => {
+ function handleClick(e: MouseEvent) {
+  if (discoverRef.current && !discoverRef.current.contains(e.target as Node)) {
+  setDiscoverOpen(false);
+  }
+ }
+ document.addEventListener("mousedown", handleClick);
+ return () => document.removeEventListener("mousedown", handleClick);
+ }, []);
+
+ // Close dropdown on route change
+ useEffect(() => {
+ setDiscoverOpen(false);
+ setMobileOpen(false);
+ }, [pathname]);
+
  return (
  <>
- <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
- solid
- ? "bg-cream/90 backdrop-blur-sm border-b border-sage-light/60"
- : "bg-transparent border-b border-transparent"
- }`}>
- <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
- {/* Left nav links - desktop */}
- <div className="hidden md:flex items-center gap-8 text-sm tracking-wide min-w-[200px]">
- {[
- { href: "/blog", label: "Blog" },
- { href: "/treatments", label: "Treatments" },
- { href: "/peptides", label: "Peptides" },
- { href: "/protocols", label: "Protocols" },
- { href: "/explore", label: "Explore" },
- { href: "/events", label: "Events" },
- { href: "/about", label: "About" },
- ].map((item) => (
- <Link
- key={item.href}
- href={item.href}
- className={`transition-colors ${
- solid
- ? "text-gray-800 hover:text-moss"
- : "text-white/90 hover:text-white"
- }`}
- >
- {item.label}
- </Link>
- ))}
- </div>
+  {/* ─── Top Bar (Email + Socials) ─── */}
+  <div className="hidden md:block bg-[#1a1a1a] text-white/70 text-xs font-sans">
+  <div className="max-w-6xl mx-auto px-6 py-1.5 flex items-center justify-between">
+   <a href="mailto:kamuralife@gmail.com" className="hover:text-white transition-colors">
+   kamuralife@gmail.com
+   </a>
+   <div className="flex items-center gap-4">
+   <a href="https://instagram.com/kamuralife" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+    Instagram
+   </a>
+   <a href="https://x.com/KamuraLife" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+    X
+   </a>
+   </div>
+  </div>
+  </div>
 
- {/* Mobile hamburger */}
- <button
- className={`md:hidden transition-colors ${solid ? "text-gray-800" : "text-white"}`}
- onClick={() => setMobileOpen(!mobileOpen)}
- aria-label="Toggle menu"
- >
- {mobileOpen ? (
- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
- <line x1="18" y1="6" x2="6" y2="18" />
- <line x1="6" y1="6" x2="18" y2="18" />
- </svg>
- ) : (
- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
- <line x1="3" y1="6" x2="21" y2="6" />
- <line x1="3" y1="12" x2="21" y2="12" />
- <line x1="3" y1="18" x2="21" y2="18" />
- </svg>
- )}
- </button>
+  {/* ─── Main Nav ─── */}
+  <nav className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
+  solid
+   ? "bg-cream/95 backdrop-blur-sm border-b border-sage-light/60 top-0 md:top-[30px]"
+   : "bg-transparent border-b border-transparent top-0 md:top-[30px]"
+  }`}>
+  <div className="max-w-6xl mx-auto px-6 py-3.5 flex items-center justify-between">
 
- {/* Center brand */}
- <Link href="/" className="flex items-center gap-2.5">
- <Image
- src="/logo-symbol.svg"
- alt=""
- width={44}
- height={44}
- className={`w-11 h-11 transition-all ${solid ? "" : "drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"}`}
- />
- <span className={`font-serif text-3xl tracking-[0.15em] transition-colors ${solid ? "text-gray-900" : "text-white"}`}>
- KAMURA
- </span>
- </Link>
+   {/* Left — Logo */}
+   <Link href="/" className="flex items-center gap-2">
+   <Image
+    src="/logo-symbol.svg"
+    alt=""
+    width={36}
+    height={36}
+    className={`w-9 h-9 transition-all ${solid ? "" : "drop-shadow-[0_0_4px_rgba(255,255,255,0.3)]"}`}
+   />
+   <span className={`font-serif text-2xl tracking-[0.15em] transition-colors ${solid ? "text-gray-900" : "text-white"}`}>
+    KAMURA
+   </span>
+   </Link>
 
- {/* Right - Search + Instagram */}
- <div className="flex items-center justify-end gap-4 min-w-[200px]">
- <button
- onClick={() => setSearchOpen(true)}
- className={`transition-colors ${solid ? "text-gray-800 hover:text-moss" : "text-white/90 hover:text-white"}`}
- aria-label="Search"
- >
- <svg
- xmlns="http://www.w3.org/2000/svg"
- width="20"
- height="20"
- viewBox="0 0 24 24"
- fill="none"
- stroke="currentColor"
- strokeWidth="1.5"
- strokeLinecap="round"
- strokeLinejoin="round"
- >
- <circle cx="11" cy="11" r="8" />
- <line x1="21" y1="21" x2="16.65" y2="16.65" />
- </svg>
- </button>
- <a
- href="https://instagram.com/kamuralife"
- target="_blank"
- rel="noopener noreferrer"
- className={`transition-colors ${solid ? "text-gray-800 hover:text-moss" : "text-white/90 hover:text-white"}`}
- aria-label="Instagram"
- >
- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
- <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
- <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
- <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
- </svg>
- </a>
- </div>
- </div>
+   {/* Center — Action nav (desktop) */}
+   <div className="hidden md:flex items-center gap-7 text-sm font-sans">
+   {/* Discover dropdown */}
+   <div ref={discoverRef} className="relative">
+    <button
+    onClick={() => setDiscoverOpen(!discoverOpen)}
+    className={`flex items-center gap-1 transition-colors font-medium ${
+     solid ? "text-gray-800 hover:text-terracotta" : "text-white/90 hover:text-white"
+    }`}
+    >
+    Discover
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className={`transition-transform ${discoverOpen ? "rotate-180" : ""}`}>
+     <polyline points="6 9 12 15 18 9" />
+    </svg>
+    </button>
+    {discoverOpen && (
+    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-200/80 py-2 z-50">
+     {DISCOVER_ITEMS.map((item) => (
+     <Link
+      key={item.href}
+      href={item.href}
+      className="block px-4 py-2.5 hover:bg-gray-50 transition-colors"
+     >
+      <span className="text-sm font-medium text-gray-900">{item.label}</span>
+      <span className="block text-xs text-gray-400 mt-0.5">{item.desc}</span>
+     </Link>
+     ))}
+    </div>
+    )}
+   </div>
 
- {/* Mobile menu — animated slide + fade */}
- <div
- className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
- mobileOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
- }`}
- >
- <div className="bg-cream/95 backdrop-blur-md border-t border-sage-light/60 px-6 py-5 flex flex-col gap-5 text-sm tracking-wide">
- {[
- { href: "/blog", label: "Blog" },
- { href: "/treatments", label: "Treatments" },
- { href: "/peptides", label: "Peptides" },
- { href: "/protocols", label: "Protocols" },
- { href: "/explore", label: "Explore" },
- { href: "/events", label: "Events" },
- { href: "/about", label: "About" },
- ].map((item, i) => (
- <Link
- key={item.href}
- href={item.href}
- className="text-gray-800 hover:text-moss transition-colors"
- style={{
- opacity: mobileOpen ? 1 : 0,
- transform: mobileOpen ? "translateX(0)" : "translateX(-8px)",
- transition: `opacity 0.3s ease ${i * 50 + 100}ms, transform 0.3s ease ${i * 50 + 100}ms`,
- }}
- onClick={() => setMobileOpen(false)}
- >
- {item.label}
- </Link>
- ))}
- <button
- onClick={() => {
- setMobileOpen(false);
- setSearchOpen(true);
- }}
- className="text-gray-800 hover:text-moss transition-colors text-left"
- style={{
- opacity: mobileOpen ? 1 : 0,
- transform: mobileOpen ? "translateX(0)" : "translateX(-8px)",
- transition: "opacity 0.3s ease 350ms, transform 0.3s ease 350ms",
- }}
- >
- Search
- </button>
- </div>
- </div>
- </nav>
+   <Link
+    href="/explore"
+    className={`transition-colors font-medium ${solid ? "text-gray-800 hover:text-terracotta" : "text-white/90 hover:text-white"}`}
+   >
+    Find Clinics
+   </Link>
 
- <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+   <Link
+    href="/wellness-checker"
+    className={`transition-colors font-medium ${solid ? "text-gray-800 hover:text-terracotta" : "text-white/90 hover:text-white"}`}
+   >
+    Wellness Check
+   </Link>
+
+   <button
+    onClick={() => setSearchOpen(true)}
+    className={`transition-colors ${solid ? "text-gray-800 hover:text-terracotta" : "text-white/90 hover:text-white"}`}
+    aria-label="Search"
+   >
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="11" cy="11" r="8" />
+    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+   </button>
+   </div>
+
+   {/* Right — CTA + Mobile hamburger */}
+   <div className="flex items-center gap-3">
+   <Link
+    href="/list-your-business"
+    className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 bg-terracotta hover:bg-terracotta-dark text-white text-sm font-sans font-semibold rounded-lg transition-colors"
+   >
+    List Your Business
+   </Link>
+
+   {/* Mobile hamburger */}
+   <button
+    className={`md:hidden transition-colors ${solid ? "text-gray-800" : "text-white"}`}
+    onClick={() => setMobileOpen(!mobileOpen)}
+    aria-label="Toggle menu"
+   >
+    {mobileOpen ? (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+     <line x1="18" y1="6" x2="6" y2="18" />
+     <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>
+    ) : (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+     <line x1="3" y1="6" x2="21" y2="6" />
+     <line x1="3" y1="12" x2="21" y2="12" />
+     <line x1="3" y1="18" x2="21" y2="18" />
+    </svg>
+    )}
+   </button>
+   </div>
+  </div>
+
+  {/* Mobile menu */}
+  <div
+   className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+   mobileOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+   }`}
+  >
+   <div className="bg-cream/95 backdrop-blur-md border-t border-sage-light/60 px-6 py-5 flex flex-col gap-4 text-sm">
+   <p className="text-[10px] uppercase tracking-[0.15em] text-gray-400 font-sans">Discover</p>
+   {DISCOVER_ITEMS.map((item, i) => (
+    <Link
+    key={item.href}
+    href={item.href}
+    className="text-gray-800 hover:text-terracotta transition-colors font-sans font-medium pl-3"
+    style={{
+     opacity: mobileOpen ? 1 : 0,
+     transform: mobileOpen ? "translateX(0)" : "translateX(-8px)",
+     transition: `opacity 0.3s ease ${i * 50 + 50}ms, transform 0.3s ease ${i * 50 + 50}ms`,
+    }}
+    onClick={() => setMobileOpen(false)}
+    >
+    {item.label}
+    </Link>
+   ))}
+
+   <div className="w-full h-px bg-gray-200 my-1" />
+
+   {[
+    { href: "/explore", label: "Find Clinics" },
+    { href: "/wellness-checker", label: "Wellness Check" },
+    { href: "/blog", label: "Blog" },
+    { href: "/events", label: "Events" },
+    { href: "/about", label: "About" },
+   ].map((item, i) => (
+    <Link
+    key={item.href}
+    href={item.href}
+    className="text-gray-800 hover:text-terracotta transition-colors font-sans font-medium"
+    style={{
+     opacity: mobileOpen ? 1 : 0,
+     transform: mobileOpen ? "translateX(0)" : "translateX(-8px)",
+     transition: `opacity 0.3s ease ${(i + 3) * 50 + 100}ms, transform 0.3s ease ${(i + 3) * 50 + 100}ms`,
+    }}
+    onClick={() => setMobileOpen(false)}
+    >
+    {item.label}
+    </Link>
+   ))}
+
+   <div className="w-full h-px bg-gray-200 my-1" />
+
+   <Link
+    href="/list-your-business"
+    className="inline-flex items-center justify-center px-4 py-2.5 bg-terracotta text-white text-sm font-sans font-semibold rounded-lg"
+    onClick={() => setMobileOpen(false)}
+   >
+    List Your Business
+   </Link>
+
+   <button
+    onClick={() => { setMobileOpen(false); setSearchOpen(true); }}
+    className="text-gray-500 hover:text-terracotta transition-colors text-left font-sans flex items-center gap-2"
+   >
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+    Search
+   </button>
+   </div>
+  </div>
+  </nav>
+
+  {/* Spacer for fixed nav */}
+  <div className="hidden md:block h-[30px]" />
+
+  <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
  </>
  );
 }
