@@ -6,7 +6,6 @@ import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import SearchModal from "./SearchModal";
 
-/** Pages without a dark hero image — nav must always show solid background */
 function hasLightTop(p: string): boolean {
  if (p.startsWith("/blog/") && p !== "/blog") return true;
  if (p.startsWith("/events/") && p !== "/events") return true;
@@ -62,7 +61,6 @@ export default function Navigation() {
  return () => { document.body.style.overflow = ""; };
  }, [mobileOpen]);
 
- // Close discover dropdown on outside click
  useEffect(() => {
  function handleClick(e: MouseEvent) {
   if (discoverRef.current && !discoverRef.current.contains(e.target as Node)) {
@@ -73,7 +71,6 @@ export default function Navigation() {
  return () => document.removeEventListener("mousedown", handleClick);
  }, []);
 
- // Close dropdown on route change
  useEffect(() => {
  setDiscoverOpen(false);
  setMobileOpen(false);
@@ -81,28 +78,10 @@ export default function Navigation() {
 
  return (
  <>
-  {/* ─── Top Bar (Email + Socials) ─── */}
-  <div className="hidden md:block bg-[#1a1a1a] text-white/70 text-xs font-sans">
-  <div className="max-w-6xl mx-auto px-6 py-1.5 flex items-center justify-between">
-   <a href="mailto:kamuralife@gmail.com" className="hover:text-white transition-colors">
-   kamuralife@gmail.com
-   </a>
-   <div className="flex items-center gap-4">
-   <a href="https://instagram.com/kamuralife" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-    Instagram
-   </a>
-   <a href="https://x.com/KamuraLife" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-    X
-   </a>
-   </div>
-  </div>
-  </div>
-
-  {/* ─── Main Nav ─── */}
-  <nav className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
+  <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
   solid
-   ? "bg-cream/95 backdrop-blur-sm border-b border-sage-light/60 top-0 md:top-[30px]"
-   : "bg-transparent border-b border-transparent top-0 md:top-[30px]"
+   ? "bg-cream/95 backdrop-blur-sm border-b border-sage-light/60"
+   : "bg-transparent border-b border-transparent"
   }`}>
   <div className="max-w-6xl mx-auto px-6 py-3.5 flex items-center justify-between">
 
@@ -122,7 +101,6 @@ export default function Navigation() {
 
    {/* Center — Action nav (desktop) */}
    <div className="hidden md:flex items-center gap-7 text-sm font-sans">
-   {/* Discover dropdown */}
    <div ref={discoverRef} className="relative">
     <button
     onClick={() => setDiscoverOpen(!discoverOpen)}
@@ -181,12 +159,11 @@ export default function Navigation() {
    <div className="flex items-center gap-3">
    <Link
     href="/list-your-business"
-    className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 bg-terracotta hover:bg-terracotta-dark text-white text-sm font-sans font-semibold rounded-lg transition-colors"
+    className="hidden md:inline-flex items-center px-4 py-2 bg-terracotta hover:bg-terracotta-dark text-white text-sm font-sans font-semibold rounded-lg transition-colors"
    >
     List Your Business
    </Link>
 
-   {/* Mobile hamburger */}
    <button
     className={`md:hidden transition-colors ${solid ? "text-gray-800" : "text-white"}`}
     onClick={() => setMobileOpen(!mobileOpen)}
@@ -276,9 +253,6 @@ export default function Navigation() {
    </div>
   </div>
   </nav>
-
-  {/* Spacer for fixed nav */}
-  <div className="hidden md:block h-[30px]" />
 
   <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
  </>
