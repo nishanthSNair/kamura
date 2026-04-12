@@ -133,7 +133,7 @@ export default function Navigation() {
     href="/explore"
     className={`transition-colors font-medium ${solid ? "text-gray-800 hover:text-terracotta" : "text-white/90 hover:text-white"}`}
    >
-    Find Clinics
+    Find Providers
    </Link>
 
    <Link
@@ -212,7 +212,7 @@ export default function Navigation() {
    <div className="w-full h-px bg-gray-200 my-1" />
 
    {[
-    { href: "/explore", label: "Find Clinics" },
+    { href: "/explore", label: "Find Providers" },
     { href: "/wellness-checker", label: "Wellness Check" },
     { href: "/blog", label: "Blog" },
     { href: "/events", label: "Events" },
