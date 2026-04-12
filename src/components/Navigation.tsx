@@ -14,6 +14,7 @@ function hasLightTop(p: string): boolean {
  if (p === "/treatments/methodology") return true;
  if (p.startsWith("/treatments/compare/") && p !== "/treatments/compare") return true;
  if (p === "/wellness-checker") return true;
+ if (p.startsWith("/peptides/") && p !== "/peptides") return true;
  return false;
 }
 
@@ -69,6 +70,7 @@ export default function Navigation() {
  {[
  { href: "/blog", label: "Blog" },
  { href: "/treatments", label: "Treatments" },
+ { href: "/peptides", label: "Peptides" },
  { href: "/protocols", label: "Protocols" },
  { href: "/explore", label: "Explore" },
  { href: "/events", label: "Events" },
@@ -170,6 +172,7 @@ export default function Navigation() {
  {[
  { href: "/blog", label: "Blog" },
  { href: "/treatments", label: "Treatments" },
+ { href: "/peptides", label: "Peptides" },
  { href: "/protocols", label: "Protocols" },
  { href: "/explore", label: "Explore" },
  { href: "/events", label: "Events" },

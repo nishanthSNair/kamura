@@ -131,6 +131,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
  priority: 0.7,
  })),
  {
+ url: `${baseUrl}/peptides`,
+ lastModified: new Date(),
+ changeFrequency: "weekly",
+ priority: 0.9,
+ },
+ ...["directory", "protocol-builder", "compare", "sourcing-guide", "clinic-dashboard", "evidence-feed", "protocol-templates", "advisor"].map((sub) => ({
+ url: `${baseUrl}/peptides/${sub}`,
+ lastModified: new Date(),
+ changeFrequency: "monthly" as const,
+ priority: 0.8,
+ })),
+ {
  url: `${baseUrl}/protocols`,
  lastModified: new Date(),
  changeFrequency: "monthly",
