@@ -108,10 +108,22 @@ const CONSUMER_TOOLS = [
       "Every peptide scored on evidence, safety, and value. Filter by goal, compare, explore.",
   },
   {
+    href: "/peptides/tracker",
+    title: "My Dashboard",
+    description:
+      "Track active cycles, log doses, and get smart reminders. Private — data stays on your device.",
+  },
+  {
     href: "/peptides/protocol-builder",
     title: "Protocol Builder",
     description:
       "Select your goals and receive a recommended stack with dosing, timing, and cycling guidance.",
+  },
+  {
+    href: "/peptides/what-is-a-peptide",
+    title: "What is a Peptide?",
+    description:
+      "Visual, animated introduction to peptides, cellular signaling, and the four jobs they perform.",
   },
   {
     href: "/peptides/compare",
@@ -476,7 +488,7 @@ export default function PeptidesHubPage() {
                 Consumer Tools
               </span>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {CONSUMER_TOOLS.map((tool) => (
                 <Link
                   key={tool.href}
