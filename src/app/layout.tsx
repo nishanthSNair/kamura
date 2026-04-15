@@ -30,45 +30,6 @@ export const metadata: Metadata = {
  },
  description:
  "The world's first unbiased wellness intelligence platform. 200+ treatments scored on evidence, safety, accessibility, and value. 70+ UAE clinics. Peptide therapy, NAD+, GLP-1, red light therapy, and more — transparently ranked.",
- keywords: [
- "wellness treatments scored",
- "longevity treatments dubai",
- "biohacking dubai",
- "peptide therapy dubai",
- "BPC-157",
- "hijama dubai",
- "NAD+ therapy dubai",
- "NAD+ infusion",
- "cryotherapy dubai",
- "rapamycin longevity",
- "PRP therapy UAE",
- "wellness clinics dubai",
- "kamura score",
- "treatment evidence review",
- "holistic healing UAE",
- "red light therapy dubai",
- "IV therapy dubai",
- "semaglutide dubai",
- "GLP-1 weight loss",
- "tirzepatide",
- "stem cell therapy dubai",
- "hyperbaric oxygen therapy",
- "HBOT dubai",
- "wellness checker",
- "longevity clinic",
- "biohacking treatments",
- "wellness events dubai",
- "functional medicine dubai",
- "hormone therapy dubai",
- "testosterone therapy UAE",
- "padel Dubai",
- "best gym Dubai",
- "boxing gym Dubai",
- "CrossFit Dubai",
- "MMA Dubai",
- "kayaking Dubai",
- "outdoor fitness Dubai",
- ],
  icons: {
  icon: [
  { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
@@ -115,9 +76,42 @@ export default function RootLayout({
 }: Readonly<{
  children: React.ReactNode;
 }>) {
+ const siteJsonLd = {
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+ "@type": "Organization",
+ "@id": "https://kamuralife.com/#organization",
+ name: "KAMURA",
+ url: "https://kamuralife.com",
+ logo: {
+ "@type": "ImageObject",
+ url: "https://kamuralife.com/icon-512.png",
+ width: 512,
+ height: 512,
+ },
+ description:
+ "Unbiased wellness intelligence platform scoring 200+ longevity and wellness treatments on evidence, safety, accessibility, and value.",
+ sameAs: ["https://x.com/kamuralife"],
+ },
+ {
+ "@type": "WebSite",
+ "@id": "https://kamuralife.com/#website",
+ url: "https://kamuralife.com",
+ name: "KAMURA",
+ publisher: { "@id": "https://kamuralife.com/#organization" },
+ inLanguage: "en",
+ },
+ ],
+ };
+
  return (
  <html lang="en">
  <head>
+ <script
+ type="application/ld+json"
+ dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+ />
  <link rel="preconnect" href="https://images.unsplash.com" />
  <link rel="dns-prefetch" href="https://images.unsplash.com" />
  <link rel="preconnect" href="https://www.googletagmanager.com" />
