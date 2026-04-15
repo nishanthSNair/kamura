@@ -15,6 +15,7 @@ import EvidenceLevelTag from "@/components/treatments/EvidenceLevelTag";
 import ScoreBreakdownPanel from "@/components/treatments/ScoreBreakdownPanel";
 import OutcomeCard from "@/components/treatments/OutcomeCard";
 import StudyCitation from "@/components/treatments/StudyCitation";
+import GradeBadge from "@/components/treatments/GradeBadge";
 import ShareButtons from "@/components/ShareButtons";
 import SectionNav from "@/components/treatments/SectionNav";
 import AtAGlanceStrip from "@/components/treatments/AtAGlanceStrip";
@@ -203,6 +204,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
 
  {/* Quick Stats */}
  <div className="flex flex-wrap gap-2">
+ <GradeBadge level={t.evidenceLevel} variant="light" />
  <span className="px-3 py-1.5 rounded-full text-xs font-semibold bg-white/10 backdrop-blur-sm border border-white/15 text-white/90 font-sans">
  {t.studyCount}+ Studies
  </span>

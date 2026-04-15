@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Playfair_Display, Inter, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import StackProviderWrapper from "@/components/StackProviderWrapper";
 import StackShell from "@/components/stack/StackShell";
+import { I18nProvider } from "@/lib/i18n";
 import "./globals.css";
 
 const GA_ID = "G-DVKBZLV95P";
@@ -20,6 +21,13 @@ const playfair = Playfair_Display({
 const inter = Inter({
  variable: "--font-inter",
  subsets: ["latin"],
+ display: "swap",
+});
+
+const plexArabic = IBM_Plex_Sans_Arabic({
+ variable: "--font-plex-arabic",
+ subsets: ["arabic"],
+ weight: ["300", "400", "500", "600", "700"],
  display: "swap",
 });
 
@@ -130,13 +138,15 @@ export default function RootLayout({
  `}
  </Script>
  </head>
- <body className={`${playfair.variable} ${inter.variable} antialiased`}>
+ <body className={`${playfair.variable} ${inter.variable} ${plexArabic.variable} antialiased`}>
+ <I18nProvider>
  <StackProviderWrapper>
  <Navigation />
  <main>{children}</main>
  <Footer />
  <StackShell />
  </StackProviderWrapper>
+ </I18nProvider>
  <Analytics />
  <SpeedInsights />
  </body>

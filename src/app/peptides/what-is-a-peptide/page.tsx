@@ -1,6 +1,51 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
+import DecisionTree, { type DecisionNode } from "@/components/DecisionTree";
+
+const PEPTIDE_DECISION: DecisionNode = {
+  id: "root",
+  label: "What's your goal?",
+  sublabel: "Pick one to begin",
+  children: [
+    {
+      id: "fat-loss",
+      label: "Fat Loss",
+      sublabel: "Body composition",
+      children: [
+        { id: "visceral", label: "Visceral Fat", sublabel: "Belly / liver", href: "/treatments/tesamorelin" },
+        { id: "sub-q", label: "Subcutaneous", sublabel: "Stubborn areas", href: "/treatments/aod-9604" },
+      ],
+    },
+    {
+      id: "recovery",
+      label: "Recovery",
+      sublabel: "Tissue repair",
+      children: [
+        { id: "bpc", label: "BPC-157", sublabel: "Localized healing", href: "/treatments/bpc-157" },
+        { id: "tb500", label: "TB-500", sublabel: "Systemic repair", href: "/treatments/tb-500" },
+      ],
+    },
+    {
+      id: "longevity",
+      label: "Longevity",
+      sublabel: "Cellular health",
+      children: [
+        { id: "epitalon", label: "Epitalon", sublabel: "Telomeres", href: "/treatments/epitalon" },
+        { id: "mots", label: "MOTS-C", sublabel: "Mitochondria", href: "/treatments/mots-c" },
+      ],
+    },
+    {
+      id: "cognitive",
+      label: "Cognition",
+      sublabel: "Focus + calm",
+      children: [
+        { id: "semax", label: "Semax", sublabel: "Nootropic", href: "/treatments/semax" },
+        { id: "selank", label: "Selank", sublabel: "Anxiolytic", href: "/treatments/selank" },
+      ],
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "What is a Peptide? — The Science of Cellular Signaling",
@@ -477,6 +522,30 @@ export default function WhatIsAPeptidePage() {
               </FadeInOnScroll>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ───── DECISION TREE ───────────────────────────────── */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <FadeInOnScroll>
+            <div className="text-center mb-14 max-w-2xl mx-auto">
+              <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-sans mb-5">
+                Choose Your Path
+              </p>
+              <h2 className="font-serif text-4xl md:text-5xl text-gray-900 leading-[1.1] mb-5">
+                Which peptide fits?
+              </h2>
+              <p className="text-base text-gray-600 font-sans leading-relaxed">
+                Every therapeutic peptide maps to a specific goal. Follow the
+                tree to the right entry point — then dig into the evidence on
+                each treatment page.
+              </p>
+            </div>
+          </FadeInOnScroll>
+          <FadeInOnScroll>
+            <DecisionTree root={PEPTIDE_DECISION} />
+          </FadeInOnScroll>
         </div>
       </section>
 

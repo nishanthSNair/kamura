@@ -2,6 +2,40 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { protocols } from "@/data/protocols";
+import DecisionTree, { type DecisionNode } from "@/components/DecisionTree";
+
+const PROTOCOL_DECISION: DecisionNode = {
+ id: "root",
+ label: "What's your goal?",
+ sublabel: "Start here",
+ children: [
+ {
+  id: "longevity",
+  label: "Longevity",
+  sublabel: "Healthspan first",
+  children: [
+  { id: "blueprint", label: "Blueprint", sublabel: "Bryan Johnson", href: "/protocols/bryan-johnson-blueprint" },
+  { id: "attia", label: "Outlive", sublabel: "Peter Attia", href: "/protocols/peter-attia-outlive" },
+  ],
+ },
+ {
+  id: "performance",
+  label: "Performance",
+  sublabel: "Daily output",
+  children: [
+  { id: "huberman", label: "Huberman Toolkit", sublabel: "Neuroscience", href: "/protocols/andrew-huberman-toolkit" },
+  ],
+ },
+ {
+  id: "anti-aging",
+  label: "Anti-Aging",
+  sublabel: "Slow biomarkers",
+  children: [
+  { id: "sinclair", label: "Sinclair Stack", sublabel: "NMN + Resveratrol", href: "/protocols/david-sinclair-longevity" },
+  ],
+ },
+ ],
+};
 
 export const metadata: Metadata = {
  title: "Longevity Protocols — Expert Protocols Reviewed & Compared",
@@ -95,6 +129,23 @@ export default function ProtocolsPage() {
  <span>Continuously updated</span>
  </div>
  </div>
+ </section>
+
+ {/* Decision Tree */}
+ <section className="max-w-6xl mx-auto px-6 py-16 md:py-20 border-b border-gray-200/60">
+ <div className="max-w-2xl mx-auto text-center mb-10">
+ <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-sans mb-4">
+  Find Your Protocol
+ </p>
+ <h2 className="font-serif text-3xl md:text-4xl text-gray-900 leading-[1.1] mb-4">
+  Where do you start?
+ </h2>
+ <p className="text-sm text-gray-500 font-sans">
+  Pick the goal that matters most. We&apos;ll route you to the protocol
+  built around it.
+ </p>
+ </div>
+ <DecisionTree root={PROTOCOL_DECISION} />
  </section>
 
  {/* Protocol Cards */}
