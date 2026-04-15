@@ -29,6 +29,39 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      name: "Kamura Peptide Advisor",
+      url: "https://kamuralife.com/peptides/advisor",
+      applicationCategory: "HealthApplication",
+      operatingSystem: "Any",
+      description:
+        "Personalized peptide recommendations based on your health goals, backed by evidence.",
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      publisher: { "@type": "Organization", name: "KAMURA", url: "https://kamuralife.com" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+        { "@type": "ListItem", position: 2, name: "Peptides", item: "https://kamuralife.com/peptides" },
+        { "@type": "ListItem", position: 3, name: "Advisor" },
+      ],
+    },
+  ],
+};
+
 export default function PeptideAdvisorPage() {
-  return <AdvisorContent />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <AdvisorContent />
+    </>
+  );
 }

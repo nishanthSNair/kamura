@@ -23,9 +23,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  return {
  title: area.seoTitle,
  description: area.seoDescription,
+ alternates: { canonical: `https://kamuralife.com/explore/area/${slug}` },
  openGraph: {
  title: area.seoTitle,
  description: area.seoDescription,
+ url: `https://kamuralife.com/explore/area/${slug}`,
+ siteName: "KAMURA",
+ locale: "en_US",
+ type: "website",
  images: [
  {
  url: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1200&h=630&fit=crop",
@@ -34,6 +39,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  alt: `Wellness in ${area.name} — KAMURA`,
  },
  ],
+ },
+ twitter: {
+ card: "summary_large_image",
+ title: area.seoTitle,
+ description: area.seoDescription,
+ creator: "@KamuraLife",
  },
  };
 }

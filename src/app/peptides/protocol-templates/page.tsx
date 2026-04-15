@@ -81,9 +81,36 @@ function goalTag(goalId: string) {
   );
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      name: "Peptide Protocol Templates",
+      url: "https://kamuralife.com/peptides/protocol-templates",
+      description:
+        "Evidence-graded peptide protocol stacks with dosing, timing, cycling, and cost — ready to adopt into clinical practice.",
+      audience: { "@type": "MedicalAudience", audienceType: "Clinician" },
+      publisher: { "@type": "Organization", name: "KAMURA", url: "https://kamuralife.com" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+        { "@type": "ListItem", position: 2, name: "Peptides", item: "https://kamuralife.com/peptides" },
+        { "@type": "ListItem", position: 3, name: "Protocol Templates" },
+      ],
+    },
+  ],
+};
+
 export default function ProtocolTemplatesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <section className="relative min-h-[40vh] flex items-center justify-center">
         <div

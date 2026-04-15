@@ -50,14 +50,125 @@ const PEPTIDE_DECISION: DecisionNode = {
 export const metadata: Metadata = {
   title: "What is a Peptide? — The Science of Cellular Signaling",
   description:
-    "Peptides are the messenger molecules that tell your cells how to heal, build, regulate, and defend. A visual, science-backed introduction from Kamura.",
+    "Peptides are short chains of 2–50 amino acids that signal your cells how to heal, build, regulate, and defend. A visual, evidence-backed introduction from Kamura.",
+  keywords: [
+    "what is a peptide",
+    "peptide therapy explained",
+    "how peptides work",
+    "peptide vs protein",
+    "amino acid chain",
+    "cellular signaling",
+    "therapeutic peptides",
+    "peptide receptor binding",
+  ],
   alternates: { canonical: "https://kamuralife.com/peptides/what-is-a-peptide" },
   openGraph: {
     title: "What is a Peptide? | KAMURA",
     description:
-      "The messenger molecules that tell your cells how to heal, build, regulate, and defend.",
+      "The messenger molecules that tell your cells how to heal, build, regulate, and defend. Visual explainer with animated cellular signaling.",
     url: "https://kamuralife.com/peptides/what-is-a-peptide",
+    siteName: "KAMURA",
+    type: "article",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://kamuralife.com/images/hero-home.png",
+        width: 1200,
+        height: 630,
+        alt: "What is a Peptide — Kamura",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "What is a Peptide? | KAMURA",
+    description:
+      "Visual introduction to peptides, cellular signaling, and the four jobs they perform inside you.",
+    creator: "@KamuraLife",
+    images: ["https://kamuralife.com/images/hero-home.png"],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: "What is a Peptide? The Science of Cellular Signaling",
+      description:
+        "Peptides are short chains of 2–50 amino acids that signal your cells how to heal, build, regulate, and defend. A visual, evidence-backed introduction.",
+      image: "https://kamuralife.com/images/hero-home.png",
+      author: {
+        "@type": "Organization",
+        name: "KAMURA",
+        url: "https://kamuralife.com",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "KAMURA",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://kamuralife.com/icon-512.png",
+        },
+      },
+      datePublished: "2026-04-14",
+      dateModified: "2026-04-15",
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": "https://kamuralife.com/peptides/what-is-a-peptide",
+      },
+      articleSection: "Education",
+      about: {
+        "@type": "Thing",
+        name: "Peptide Therapy",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+        { "@type": "ListItem", position: 2, name: "Peptides", item: "https://kamuralife.com/peptides" },
+        { "@type": "ListItem", position: 3, name: "What is a Peptide?" },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is a peptide?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "A peptide is a chain of 2 to 50 amino acids linked by peptide bonds. Shorter than a protein but larger than a free amino acid, peptides act as signaling molecules that tell cells how to heal, build, regulate, and defend.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do peptides work in the body?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Peptides bind to specific receptors on cell surfaces. When they dock, they trigger a signal cascade inside the cell that changes gene expression, enzyme activity, or hormone release — like a key that fits only one lock.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the difference between a peptide and a protein?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Peptides are short chains of 2–50 amino acids. Proteins are larger — typically 50 or more amino acids folded into complex 3D structures. Peptides are small enough to slip into signaling pathways with high specificity.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Are therapeutic peptides natural?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Therapeutic peptides are synthesized in licensed compounding pharmacies as precise copies or analogues of peptides your body already makes — like insulin, oxytocin, or growth hormone-releasing hormone.",
+          },
+        },
+      ],
+    },
+  ],
 };
 
 const JOBS = [
@@ -94,6 +205,11 @@ const JOBS = [
 export default function WhatIsAPeptidePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* ───── HERO with animated peptide chain ─────────────── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#1a0f0c]">
         {/* Ambient particles */}

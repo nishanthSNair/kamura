@@ -86,8 +86,37 @@ export default function ClinicDashboardPage() {
 
   const maxVolume = goalVolumes[0]?.volume || 1;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        name: "Kamura Clinic Dashboard",
+        url: "https://kamuralife.com/peptides/clinic-dashboard",
+        applicationCategory: "HealthApplication",
+        operatingSystem: "Any",
+        description:
+          "Real-time peptide demand data, search trends, and evidence updates for healthcare providers offering peptide therapy.",
+        audience: { "@type": "MedicalAudience", audienceType: "Clinician" },
+        publisher: { "@type": "Organization", name: "KAMURA", url: "https://kamuralife.com" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+          { "@type": "ListItem", position: 2, name: "Peptides", item: "https://kamuralife.com/peptides" },
+          { "@type": "ListItem", position: 3, name: "Clinic Dashboard" },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <section className="relative min-h-[40vh] flex items-center justify-center">
         <div

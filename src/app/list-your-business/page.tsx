@@ -44,9 +44,34 @@ const BENEFITS = [
  },
 ];
 
+const jsonLd = {
+ "@context": "https://schema.org",
+ "@graph": [
+ {
+  "@type": "WebPage",
+  name: "List Your Business on KAMURA",
+  url: "https://kamuralife.com/list-your-business",
+  description:
+  "List your clinic, studio, or wellness practice on KAMURA. Reach thousands of wellness consumers across the UAE.",
+  isPartOf: { "@type": "WebSite", name: "KAMURA", url: "https://kamuralife.com" },
+ },
+ {
+  "@type": "BreadcrumbList",
+  itemListElement: [
+  { "@type": "ListItem", position: 1, name: "Home", item: "https://kamuralife.com" },
+  { "@type": "ListItem", position: 2, name: "List Your Business" },
+  ],
+ },
+ ],
+};
+
 export default function ListYourBusinessPage() {
  return (
  <>
+  <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+  />
   {/* Hero */}
   <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-[#EDE7DB]">
   <div className="max-w-4xl mx-auto px-6 text-center">
