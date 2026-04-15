@@ -17,11 +17,37 @@ function hasLightTop(p: string): boolean {
  return false;
 }
 
-const DISCOVER_ITEMS = [
- { href: "/treatments", label: "Treatments", desc: "200+ treatments scored" },
- { href: "/peptides", label: "Peptides", desc: "Intelligence hub" },
- { href: "/protocols", label: "Protocols", desc: "Expert protocols compared" },
+type DiscoverLink = { href: string; label: string; desc: string };
+type DiscoverGroup = { label: string; href?: string; items: DiscoverLink[] };
+
+const DISCOVER_GROUPS: DiscoverGroup[] = [
+ {
+ label: "Treatments",
+ href: "/treatments",
+ items: [
+  { href: "/treatments", label: "Directory", desc: "200+ treatments scored" },
+  { href: "/treatments/methodology", label: "Methodology", desc: "How the Kamura Score works" },
+  { href: "/treatments/compare", label: "Compare", desc: "Side-by-side treatment comparison" },
+ ],
+ },
+ {
+ label: "Peptides",
+ href: "/peptides",
+ items: [
+  { href: "/peptides/what-is-a-peptide", label: "What is a Peptide?", desc: "Visual intro to cellular signaling" },
+  { href: "/peptides", label: "Intelligence Hub", desc: "Directory, scores, and tools" },
+  { href: "/peptides/tracker", label: "Dashboard", desc: "Log doses, track cycles" },
+ ],
+ },
+ {
+ label: "Protocols",
+ href: "/protocols",
+ items: [
+  { href: "/protocols", label: "Expert Protocols", desc: "Clinician-reviewed stacks" },
+ ],
+ },
 ];
+
 
 export default function Navigation() {
  const [mobileOpen, setMobileOpen] = useState(false);
@@ -114,16 +140,35 @@ export default function Navigation() {
     </svg>
     </button>
     {discoverOpen && (
-    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-200/80 py-2 z-50">
-     {DISCOVER_ITEMS.map((item) => (
-     <Link
-      key={item.href}
-      href={item.href}
-      className="block px-4 py-2.5 hover:bg-gray-50 transition-colors"
-     >
-      <span className="text-sm font-medium text-gray-900">{item.label}</span>
-      <span className="block text-xs text-gray-400 mt-0.5">{item.desc}</span>
-     </Link>
+    <div className="absolute top-full left-0 mt-2 w-[640px] bg-white rounded-2xl shadow-xl border border-gray-200/80 p-6 z-50 grid grid-cols-3 gap-5">
+     {DISCOVER_GROUPS.map((group) => (
+     <div key={group.label}>
+      {group.href ? (
+      <Link
+       href={group.href}
+       className="block font-serif text-lg text-gray-900 mb-3 pb-2 border-b border-gray-100 hover:text-terracotta transition-colors"
+      >
+       {group.label}
+      </Link>
+      ) : (
+      <h3 className="font-serif text-lg text-gray-900 mb-3 pb-2 border-b border-gray-100">
+       {group.label}
+      </h3>
+      )}
+      <ul className="space-y-1">
+      {group.items.map((item) => (
+       <li key={item.href}>
+       <Link
+        href={item.href}
+        className="block px-3 py-2 rounded-lg hover:bg-[#EDE7DB]/60 transition-colors"
+       >
+        <span className="block text-sm font-medium text-gray-900">{item.label}</span>
+        <span className="block text-xs text-gray-400 mt-0.5 leading-snug">{item.desc}</span>
+       </Link>
+       </li>
+      ))}
+      </ul>
+     </div>
      ))}
     </div>
     )}
@@ -193,20 +238,40 @@ export default function Navigation() {
   >
    <div className="bg-cream/95 backdrop-blur-md border-t border-sage-light/60 px-6 py-5 flex flex-col gap-4 text-sm">
    <p className="text-[10px] uppercase tracking-[0.15em] text-gray-400 font-sans">Discover</p>
-   {DISCOVER_ITEMS.map((item, i) => (
-    <Link
-    key={item.href}
-    href={item.href}
-    className="text-gray-800 hover:text-terracotta transition-colors font-sans font-medium pl-3"
-    style={{
-     opacity: mobileOpen ? 1 : 0,
-     transform: mobileOpen ? "translateX(0)" : "translateX(-8px)",
-     transition: `opacity 0.3s ease ${i * 50 + 50}ms, transform 0.3s ease ${i * 50 + 50}ms`,
-    }}
-    onClick={() => setMobileOpen(false)}
-    >
-    {item.label}
-    </Link>
+   {DISCOVER_GROUPS.map((group, gi) => (
+    <div key={group.label} className="flex flex-col gap-2">
+    {group.href ? (
+     <Link
+     href={group.href}
+     className="font-serif text-base text-gray-900 hover:text-terracotta transition-colors"
+     onClick={() => setMobileOpen(false)}
+     style={{
+      opacity: mobileOpen ? 1 : 0,
+      transform: mobileOpen ? "translateX(0)" : "translateX(-8px)",
+      transition: `opacity 0.3s ease ${gi * 80 + 50}ms, transform 0.3s ease ${gi * 80 + 50}ms`,
+     }}
+     >
+     {group.label}
+     </Link>
+    ) : (
+     <p className="font-serif text-base text-gray-900">{group.label}</p>
+    )}
+    {group.items.map((item, i) => (
+     <Link
+     key={item.href}
+     href={item.href}
+     className="text-gray-600 hover:text-terracotta transition-colors font-sans text-sm pl-3"
+     style={{
+      opacity: mobileOpen ? 1 : 0,
+      transform: mobileOpen ? "translateX(0)" : "translateX(-8px)",
+      transition: `opacity 0.3s ease ${gi * 80 + i * 40 + 100}ms, transform 0.3s ease ${gi * 80 + i * 40 + 100}ms`,
+     }}
+     onClick={() => setMobileOpen(false)}
+     >
+     {item.label}
+     </Link>
+    ))}
+    </div>
    ))}
 
    <div className="w-full h-px bg-gray-200 my-1" />
