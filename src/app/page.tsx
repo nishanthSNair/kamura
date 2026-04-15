@@ -5,6 +5,7 @@ import { treatments } from "@/data/treatments";
 import { getAllPosts } from "@/lib/blog";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 import AnimatedConnecting from "@/components/AnimatedConnecting";
+import InlineSearch from "@/components/InlineSearch";
 
 export const metadata: Metadata = {
  title: "KAMURA — The Wellness Platform for the GCC",
@@ -82,10 +83,18 @@ export default function Home() {
   <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
    <AnimatedConnecting />
 
-   <p className="text-base md:text-lg text-white/80 max-w-[560px] mx-auto leading-relaxed font-sans font-light mb-10">
+   <p className="text-base md:text-lg text-white/80 max-w-[560px] mx-auto leading-relaxed font-sans font-light mb-8">
    The wellness platform for the GCC. Discover treatments, find vetted providers,
    build personalised protocols, and optimise your health journey — all in one place.
    </p>
+
+   <div className="mb-8">
+   <InlineSearch
+    variant="hero"
+    placeholder="Search treatments, peptides, clinics…"
+    popularSearches={["BPC-157", "NAD+ therapy", "GLP-1", "Red light therapy", "Peptide dashboard"]}
+   />
+   </div>
 
    <div className="flex flex-wrap items-center justify-center gap-3">
    <Link
