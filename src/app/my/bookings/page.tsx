@@ -6,6 +6,7 @@ import { createClient } from "@/lib/supabase/client";
 
 interface Booking {
   id: string;
+  provider_id: string;
   booking_date: string;
   start_time: string;
   end_time: string;
@@ -27,6 +28,7 @@ export default function BookingsPage() {
   const supabase = createClient();
   const [tab, setTab] = useState<"upcoming" | "past">("upcoming");
   const [bookings, setBookings] = useState<Booking[]>([]);
+  const [primaryProviderId, setPrimaryProviderId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -36,20 +38,37 @@ export default function BookingsPage() {
       } = await supabase.auth.getUser();
       if (!user) return;
 
-      const { data } = await supabase
-        .from("bookings")
-        .select(
-          "id, booking_date, start_time, end_time, status, price_aed, notes, review_token, review_submitted, service:services(name), provider:providers(business_name, slug, phone)"
-        )
-        .eq("customer_email", user.email || "")
-        .order("booking_date", { ascending: false })
-        .order("start_time", { ascending: false });
+      const [bookingsRes, memberRes] = await Promise.all([
+        supabase
+          .from("bookings")
+          .select(
+            "id, provider_id, booking_date, start_time, end_time, status, price_aed, notes, review_token, review_submitted, service:services(name), provider:providers(business_name, slug, phone)"
+          )
+          .eq("customer_email", user.email || "")
+          .order("booking_date", { ascending: false })
+          .order("start_time", { ascending: false }),
+        supabase.from("members").select("primary_provider_id").eq("id", user.id).single(),
+      ]);
 
-      setBookings((data as Booking[]) || []);
+      setBookings((bookingsRes.data as Booking[]) || []);
+      setPrimaryProviderId((memberRes.data as { primary_provider_id: string | null })?.primary_provider_id || null);
       setLoading(false);
     }
     load();
   }, [supabase]);
+
+  async function setPrimary(providerId: string) {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (!user) return;
+
+    await supabase
+      .from("members")
+      .update({ primary_provider_id: providerId })
+      .eq("id", user.id);
+    setPrimaryProviderId(providerId);
+  }
 
   const today = new Date().toISOString().split("T")[0];
   const upcoming = bookings.filter(
@@ -183,6 +202,20 @@ export default function BookingsPage() {
                     >
                       Leave a review
                     </Link>
+                  )}
+                  {b.provider_id && (
+                    primaryProviderId === b.provider_id ? (
+                      <span className="text-[10px] tracking-[0.15em] uppercase text-emerald-700 font-sans font-semibold">
+                        ★ Your practitioner
+                      </span>
+                    ) : (
+                      <button
+                        onClick={() => setPrimary(b.provider_id)}
+                        className="text-[10px] tracking-[0.15em] uppercase text-gray-500 hover:text-terracotta font-sans font-semibold"
+                      >
+                        Set as my practitioner
+                      </button>
+                    )
                   )}
                 </div>
               </div>

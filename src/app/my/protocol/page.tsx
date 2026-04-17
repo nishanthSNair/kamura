@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import ScoreTierPill from "@/components/member/ScoreTierPill";
+import InventoryManager from "@/components/member/InventoryManager";
+import LocalStorageImport from "@/components/member/LocalStorageImport";
 import { getTreatmentBySlug } from "@/data/treatments";
 
 interface ProtocolItem {
@@ -27,6 +29,17 @@ interface DoseLog {
   protocol_item_id: string;
   logged_at: string;
   skipped: boolean;
+}
+
+interface Vial {
+  id: string;
+  protocol_item_id: string;
+  label: string;
+  total_doses: number;
+  doses_used: number;
+  opened_at: string | null;
+  expires_on: string | null;
+  is_current: boolean;
 }
 
 const CATEGORIES = [
@@ -58,6 +71,7 @@ export default function ProtocolPage() {
   const supabase = createClient();
   const [items, setItems] = useState<ProtocolItem[]>([]);
   const [recentLogs, setRecentLogs] = useState<DoseLog[]>([]);
+  const [vials, setVials] = useState<Vial[]>([]);
   const [loading, setLoading] = useState(true);
   const [showAdd, setShowAdd] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -86,7 +100,7 @@ export default function ProtocolPage() {
 
     const sevenDaysAgo = new Date(Date.now() - 7 * 86400000).toISOString();
 
-    const [itemsRes, logsRes] = await Promise.all([
+    const [itemsRes, logsRes, vialsRes] = await Promise.all([
       supabase
         .from("protocol_items")
         .select("*")
@@ -100,11 +114,30 @@ export default function ProtocolPage() {
         .eq("member_id", user.id)
         .gte("logged_at", sevenDaysAgo)
         .order("logged_at", { ascending: false }),
+      supabase
+        .from("vial_inventory")
+        .select("*")
+        .eq("member_id", user.id)
+        .eq("is_current", true),
     ]);
 
     setItems((itemsRes.data as ProtocolItem[]) || []);
     setRecentLogs((logsRes.data as DoseLog[]) || []);
+    setVials((vialsRes.data as Vial[]) || []);
     setLoading(false);
+  }
+
+  async function reloadVials() {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (!user) return;
+    const { data } = await supabase
+      .from("vial_inventory")
+      .select("*")
+      .eq("member_id", user.id)
+      .eq("is_current", true);
+    setVials((data as Vial[]) || []);
   }
 
   async function addItem() {
@@ -161,6 +194,16 @@ export default function ProtocolPage() {
       .single();
 
     if (data) setRecentLogs((prev) => [data as DoseLog, ...prev]);
+
+    // Auto-decrement current vial if one exists
+    const vial = vials.find((v) => v.protocol_item_id === itemId);
+    if (vial && vial.doses_used < vial.total_doses) {
+      await supabase
+        .from("vial_inventory")
+        .update({ doses_used: vial.doses_used + 1 })
+        .eq("id", vial.id);
+      reloadVials();
+    }
   }
 
   async function removeItem(id: string) {
@@ -199,6 +242,9 @@ export default function ProtocolPage() {
           + Add Item
         </button>
       </div>
+
+      {/* Import from localStorage peptide tracker */}
+      <LocalStorageImport />
 
       {/* Add form */}
       {showAdd && (
@@ -312,8 +358,10 @@ export default function ProtocolPage() {
                     key={item.id}
                     item={item}
                     logs={recentLogs.filter((l) => l.protocol_item_id === item.id)}
+                    vial={vials.find((v) => v.protocol_item_id === item.id) || null}
                     onLog={() => logDose(item.id)}
                     onRemove={() => removeItem(item.id)}
+                    onInventoryChange={reloadVials}
                   />
                 ))}
               </div>
@@ -328,13 +376,17 @@ export default function ProtocolPage() {
 function ProtocolItemCard({
   item,
   logs,
+  vial,
   onLog,
   onRemove,
+  onInventoryChange,
 }: {
   item: ProtocolItem;
   logs: DoseLog[];
+  vial: Vial | null;
   onLog: () => void;
   onRemove: () => void;
+  onInventoryChange: () => void;
 }) {
   const todayStart = new Date();
   todayStart.setHours(0, 0, 0, 0);
@@ -429,6 +481,9 @@ function ProtocolItemCard({
           End
         </button>
       </div>
+      {(item.category === "peptide" || item.category === "pharmaceutical" || item.category === "supplement") && (
+        <InventoryManager itemId={item.id} currentVial={vial} onChange={onInventoryChange} />
+      )}
     </div>
   );
 }
