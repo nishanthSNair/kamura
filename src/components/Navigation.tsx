@@ -208,6 +208,14 @@ export default function Navigation() {
    {/* Right — CTA + Mobile hamburger */}
    <div className="flex items-center gap-3">
    <Link
+    href="/provider/login"
+    className={`hidden md:inline-flex items-center text-sm font-sans font-medium transition-colors ${
+     solid ? "text-gray-600 hover:text-terracotta" : "text-white/70 hover:text-white"
+    }`}
+   >
+    Provider Login
+   </Link>
+   <Link
     href="/list-your-business"
     className="hidden md:inline-flex items-center px-4 py-2 bg-terracotta hover:bg-terracotta-dark text-white text-sm font-sans font-semibold rounded-lg transition-colors"
    >
@@ -304,6 +312,14 @@ export default function Navigation() {
    ))}
 
    <div className="w-full h-px bg-gray-200 my-1" />
+
+   <Link
+    href="/provider/login"
+    className="text-gray-600 hover:text-terracotta transition-colors font-sans font-medium"
+    onClick={() => setMobileOpen(false)}
+   >
+    Provider Login
+   </Link>
 
    <div className="flex items-center justify-between gap-3">
     <Link

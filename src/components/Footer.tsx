@@ -50,6 +50,7 @@ export default function Footer() {
     <Link href="/blog" className="hover:text-terracotta transition-colors">Blog</Link>
     <Link href="/events" className="hover:text-terracotta transition-colors">Events</Link>
     <Link href="/list-your-business" className="hover:text-terracotta transition-colors">List Your Business</Link>
+    <Link href="/provider/login" className="hover:text-terracotta transition-colors">Provider Login</Link>
    </div>
    </div>
 
