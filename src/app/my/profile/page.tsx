@@ -12,7 +12,19 @@ interface Member {
   city: string;
   emirate: string;
   language_pref: string;
+  primary_goal: string;
+  protocol_start_date: string | null;
 }
+
+const GOALS = [
+  "Recovery & Longevity",
+  "Metabolic & Weight",
+  "Sleep & Stress",
+  "Performance & Energy",
+  "Cognition & Focus",
+  "Hormonal Balance",
+  "Skin & Aesthetics",
+];
 
 interface Concern {
   id: string;
@@ -89,6 +101,8 @@ export default function ProfilePage() {
         city: member.city,
         emirate: member.emirate,
         language_pref: member.language_pref,
+        primary_goal: member.primary_goal,
+        protocol_start_date: member.protocol_start_date,
       })
       .eq("id", user.id);
 
@@ -220,6 +234,41 @@ export default function ProfilePage() {
           {saved && (
             <span className="text-xs text-emerald-700 font-sans">Saved</span>
           )}
+        </div>
+      </section>
+
+      {/* Protocol framing */}
+      <section className="p-6 md:p-8 bg-white rounded-2xl border border-gray-200 mb-6">
+        <h2 className="font-serif text-xl text-gray-900 mb-2">
+          Your protocol
+        </h2>
+        <p className="text-sm text-gray-500 font-sans mb-6">
+          Your dashboard frames progress around a primary goal and start date.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <label className="text-[10px] tracking-[0.2em] uppercase text-gray-500 font-sans block mb-2">
+              Primary Goal
+            </label>
+            <select
+              value={member.primary_goal}
+              onChange={(e) => updateField("primary_goal", e.target.value)}
+              className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm font-sans focus:outline-none focus:border-terracotta"
+            >
+              <option value="">Not set</option>
+              {GOALS.map((g) => (
+                <option key={g} value={g}>
+                  {g}
+                </option>
+              ))}
+            </select>
+          </div>
+          <Field
+            label="Protocol Start Date"
+            type="date"
+            value={member.protocol_start_date || ""}
+            onChange={(v) => updateField("protocol_start_date", v)}
+          />
         </div>
       </section>
 

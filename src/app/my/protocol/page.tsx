@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
+import ScoreTierPill from "@/components/member/ScoreTierPill";
+import { getTreatmentBySlug } from "@/data/treatments";
 
 interface ProtocolItem {
   id: string;
@@ -389,14 +391,14 @@ function ProtocolItemCard({
             >
               {item.category}
             </span>
-            {item.treatment_slug && (
-              <Link
-                href={`/treatments/${item.treatment_slug}`}
-                className="text-[9px] tracking-[0.15em] uppercase text-terracotta font-sans font-semibold hover:underline"
-              >
-                Kamura-Scored →
-              </Link>
-            )}
+            {item.treatment_slug && (() => {
+              const t = getTreatmentBySlug(item.treatment_slug);
+              return t ? (
+                <Link href={`/treatments/${item.treatment_slug}`}>
+                  <ScoreTierPill score={t.kamuraScore} size="sm" />
+                </Link>
+              ) : null;
+            })()}
           </div>
           <p className="text-xs text-gray-500 font-sans mb-3">
             {item.dose && `${item.dose} · `}
