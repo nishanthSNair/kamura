@@ -31,19 +31,22 @@ export default function ProviderSignupPage() {
       return;
     }
 
-    // 2. Create provider profile
+    // 2. Create provider profile via SECURITY DEFINER function
     if (authData.user) {
       const slug = businessName
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/^-|-$/g, "");
 
-      const { error: profileErr } = await supabase.from("providers").insert({
-        id: authData.user.id,
-        business_name: businessName,
-        slug,
-        email,
-      });
+      const { error: profileErr } = await supabase.rpc(
+        "create_provider_profile",
+        {
+          user_id: authData.user.id,
+          p_business_name: businessName,
+          p_slug: slug,
+          p_email: email,
+        }
+      );
 
       if (profileErr) {
         setError(profileErr.message);
