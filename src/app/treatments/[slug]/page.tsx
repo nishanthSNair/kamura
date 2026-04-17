@@ -10,6 +10,7 @@ import {
 } from "@/data/treatments";
 import { listings } from "@/data/listings";
 import { categoryNameToSlug } from "@/data/treatment-categories";
+import { createServerSupabaseClient } from "@/lib/supabase/server";
 import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
 import EvidenceLevelTag from "@/components/treatments/EvidenceLevelTag";
 import ScoreBreakdownPanel from "@/components/treatments/ScoreBreakdownPanel";
@@ -75,6 +76,38 @@ export default async function TreatmentDetailPage({ params }: Props) {
  const t = getTreatmentBySlug(slug);
 
  if (!t) notFound();
+
+ // Query Supabase providers who offer this treatment
+ const supabase = await createServerSupabaseClient();
+ const { data: matchingServices } = await supabase
+ .from("services")
+ .select("id, name, price_aed, duration_minutes, provider:providers(id, slug, business_name, city, category, verified)")
+ .eq("treatment_slug", slug)
+ .eq("active", true)
+ .limit(6);
+
+ const providersOfferingTreatment = (matchingServices || [])
+ .map((row) => {
+  const r = row as Record<string, unknown>;
+  const rawProvider = r.provider;
+  const provider = Array.isArray(rawProvider) ? rawProvider[0] : rawProvider;
+  return {
+   service: {
+    id: r.id as string,
+    name: r.name as string,
+    price_aed: r.price_aed as number,
+    duration_minutes: r.duration_minutes as number,
+   },
+   provider: provider as {
+    slug: string;
+    business_name: string;
+    city: string;
+    category: string;
+    verified: boolean;
+   } | null,
+  };
+ })
+ .filter((x) => x.provider);
 
  const tier = getScoreTier(t.kamuraScore);
  const tierColors = getScoreTierColor(tier);
@@ -355,6 +388,59 @@ export default async function TreatmentDetailPage({ params }: Props) {
 
  {/* FAQ */}
  <FAQAccordion faq={t.faq} treatmentName={t.name} />
+
+ {/* Book this treatment — Supabase providers */}
+ {providersOfferingTreatment.length > 0 && (
+ <section id="book" className="scroll-mt-24">
+ <div className="flex items-end justify-between mb-5 flex-wrap gap-3">
+ <div>
+ <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-sans mb-2">
+  Book Directly
+ </p>
+ <h2 className="font-serif text-xl text-gray-900">
+  Providers offering {t.name}
+ </h2>
+ </div>
+ </div>
+ <div className="grid md:grid-cols-2 gap-4">
+ {providersOfferingTreatment.map(({ service: s, provider }) => {
+ if (!provider) return null;
+ const p = provider;
+ return (
+ <Link
+  key={s.id}
+  href={`/provider/${p.slug}`}
+  className="bg-white border border-gray-200 rounded-2xl p-5 hover:border-terracotta/40 hover:shadow-sm transition-all flex items-start justify-between gap-4"
+ >
+  <div className="flex-1 min-w-0">
+  <div className="flex items-center gap-2 mb-1 flex-wrap">
+   <p className="font-serif text-lg text-gray-900">{p.business_name}</p>
+   {p.verified && (
+   <span className="text-[9px] tracking-[0.15em] uppercase text-emerald-700 font-sans font-semibold">
+    ✓ Verified
+   </span>
+   )}
+  </div>
+  <p className="text-[10px] tracking-[0.15em] uppercase text-gray-400 font-sans mb-2">
+   {p.category} &middot; {p.city}
+  </p>
+  <p className="text-sm text-gray-700 font-sans">{s.name}</p>
+  <p className="text-xs text-gray-400 font-sans mt-1">{s.duration_minutes} min</p>
+  </div>
+  <div className="text-right shrink-0">
+  <p className="font-serif text-lg text-gray-900">
+   AED {Number(s.price_aed).toLocaleString()}
+  </p>
+  <span className="inline-block mt-2 text-[10px] tracking-[0.15em] uppercase text-terracotta font-sans font-semibold">
+   Book →
+  </span>
+  </div>
+ </Link>
+ );
+ })}
+ </div>
+ </section>
+ )}
 
  {/* Where to Get It */}
  {relevantListings.length > 0 && (

@@ -145,16 +145,20 @@ export default function ListYourBusinessPage() {
    Get Listed Today
    </h2>
    <p className="text-sm text-gray-500 font-sans mb-8">
-   Send us your details and we&apos;ll get your business listed within 48 hours.
+   Create your free account in 60 seconds. Add your services, set your
+   availability, and start accepting bookings.
    </p>
-   <a
-   href="mailto:kamuralife@gmail.com?subject=List%20My%20Business%20on%20KAMURA&body=Business%20Name%3A%0ACategory%20(e.g.%20Longevity%20Clinic)%3A%0ALocation%3A%0ACity%3A%0AWebsite%3A%0AServices%20Offered%3A%0AContact%20Name%3A%0APhone%2FWhatsApp%3A"
+   <Link
+   href="/provider/signup"
    className="inline-block px-8 py-3.5 bg-terracotta hover:bg-terracotta-dark text-white text-sm font-sans font-semibold rounded-xl transition-colors"
    >
-   Email Us to Get Listed
-   </a>
+   Create Your Free Account
+   </Link>
    <p className="text-xs text-gray-400 font-sans mt-4">
-   Or WhatsApp us directly — we&apos;ll respond within 24 hours.
+   Already registered?{" "}
+   <Link href="/provider/login" className="text-terracotta hover:underline">
+    Sign in to your dashboard
+   </Link>
    </p>
   </div>
   </section>

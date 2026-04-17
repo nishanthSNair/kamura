@@ -29,12 +29,10 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  // Protect /provider routes — redirect to login if not authenticated
+  // Protect only the provider dashboard — public profiles, login, and signup stay open
   if (
     !user &&
-    request.nextUrl.pathname.startsWith("/provider") &&
-    !request.nextUrl.pathname.startsWith("/provider/login") &&
-    !request.nextUrl.pathname.startsWith("/provider/signup")
+    request.nextUrl.pathname.startsWith("/provider/dashboard")
   ) {
     const url = request.nextUrl.clone();
     url.pathname = "/provider/login";

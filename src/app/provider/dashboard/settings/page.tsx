@@ -10,6 +10,7 @@ interface Service {
   duration_minutes: number;
   price_aed: number;
   active: boolean;
+  treatment_slug: string | null;
 }
 
 interface Provider {
@@ -59,6 +60,7 @@ export default function SettingsPage() {
     description: "",
     duration_minutes: 60,
     price_aed: 0,
+    treatment_slug: "",
   });
 
   useEffect(() => {
@@ -123,13 +125,20 @@ export default function SettingsPage() {
       .insert({
         provider_id: user.id,
         ...newService,
+        treatment_slug: newService.treatment_slug || null,
       })
       .select()
       .single();
 
     if (data) {
       setServices((prev) => [...prev, data as Service]);
-      setNewService({ name: "", description: "", duration_minutes: 60, price_aed: 0 });
+      setNewService({
+        name: "",
+        description: "",
+        duration_minutes: 60,
+        price_aed: 0,
+        treatment_slug: "",
+      });
       setShowAddService(false);
     }
   }
@@ -310,6 +319,23 @@ export default function SettingsPage() {
                   />
                 </div>
               </div>
+            </div>
+            <div className="mb-4">
+              <label className="text-[10px] tracking-[0.2em] uppercase text-gray-500 font-sans block mb-2">
+                Kamura Treatment Slug (optional)
+              </label>
+              <input
+                type="text"
+                value={newService.treatment_slug}
+                onChange={(e) =>
+                  setNewService({ ...newService, treatment_slug: e.target.value })
+                }
+                placeholder="e.g. nad-injectable, bpc-157, red-light-therapy"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm font-sans focus:outline-none focus:border-terracotta"
+              />
+              <p className="text-[10px] text-gray-400 font-sans mt-1.5">
+                Link to a Kamura-scored treatment so clients searching for it find you.
+              </p>
             </div>
             <div className="flex gap-2">
               <button
