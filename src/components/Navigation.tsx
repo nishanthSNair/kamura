@@ -208,12 +208,20 @@ export default function Navigation() {
    {/* Right — CTA + Mobile hamburger */}
    <div className="flex items-center gap-3">
    <Link
-    href="/provider/login"
+    href="/my"
     className={`hidden md:inline-flex items-center text-sm font-sans font-medium transition-colors ${
-     solid ? "text-gray-600 hover:text-terracotta" : "text-white/70 hover:text-white"
+     solid ? "text-gray-800 hover:text-terracotta" : "text-white/90 hover:text-white"
     }`}
    >
-    Provider Login
+    Sign In
+   </Link>
+   <Link
+    href="/provider/login"
+    className={`hidden md:inline-flex items-center text-xs font-sans font-medium transition-colors ${
+     solid ? "text-gray-500 hover:text-terracotta" : "text-white/60 hover:text-white"
+    }`}
+   >
+    For Providers
    </Link>
    <Link
     href="/list-your-business"
@@ -314,11 +322,18 @@ export default function Navigation() {
    <div className="w-full h-px bg-gray-200 my-1" />
 
    <Link
-    href="/provider/login"
-    className="text-gray-600 hover:text-terracotta transition-colors font-sans font-medium"
+    href="/my"
+    className="text-gray-800 hover:text-terracotta transition-colors font-sans font-medium"
     onClick={() => setMobileOpen(false)}
    >
-    Provider Login
+    Sign In
+   </Link>
+   <Link
+    href="/provider/login"
+    className="text-gray-500 hover:text-terracotta transition-colors font-sans text-sm"
+    onClick={() => setMobileOpen(false)}
+   >
+    For Providers
    </Link>
 
    <div className="flex items-center justify-between gap-3">
