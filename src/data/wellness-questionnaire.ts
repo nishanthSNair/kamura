@@ -190,7 +190,7 @@ export function isProfileStepValid(p: WellnessProfile): boolean {
 }
 
 export function isLifestyleStepValid(p: WellnessProfile): boolean {
-  return p.exerciseFrequency !== "" && p.dietType !== "" && p.hydration !== "" && p.screenTime !== "";
+  return p.exerciseFrequency !== "" && p.dietType !== "";
 }
 
 export function isHealthStepValid(p: WellnessProfile): boolean {
@@ -198,5 +198,5 @@ export function isHealthStepValid(p: WellnessProfile): boolean {
 }
 
 export function isGoalsStepValid(p: WellnessProfile): boolean {
-  return p.goals.length > 0 && p.goals.length <= 3 && p.budget !== "" && p.treatmentPreference !== "" && p.timeline !== "";
+  return p.goals.length > 0 && p.goals.length <= 3;
 }

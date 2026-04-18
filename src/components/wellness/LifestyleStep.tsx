@@ -4,8 +4,6 @@ import {
   type WellnessProfile,
   EXERCISE_OPTIONS,
   DIET_OPTIONS,
-  HYDRATION_OPTIONS,
-  SCREEN_TIME_OPTIONS,
 } from "@/data/wellness-questionnaire";
 
 interface LifestyleStepProps {
@@ -123,49 +121,6 @@ export default function LifestyleStep({ profile, onChange }: LifestyleStepProps)
           </div>
         </div>
 
-        {/* Hydration */}
-        <div>
-          <label className="block text-sm font-sans font-medium text-gray-700 mb-2">
-            Daily water intake
-          </label>
-          <div className="grid grid-cols-4 gap-2">
-            {HYDRATION_OPTIONS.map((opt) => (
-              <button
-                key={opt.value}
-                onClick={() => onChange({ hydration: opt.value })}
-                className={`px-3 py-3 rounded-xl border text-sm font-sans transition-all ${
-                  profile.hydration === opt.value
-                    ? "border-terracotta bg-terracotta/5 text-terracotta font-medium"
-                    : "border-gray-200 bg-white text-gray-600 hover:border-gray-300"
-                }`}
-              >
-                {opt.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Screen Time */}
-        <div>
-          <label className="block text-sm font-sans font-medium text-gray-700 mb-2">
-            Screen time before bed
-          </label>
-          <div className="grid grid-cols-2 gap-2">
-            {SCREEN_TIME_OPTIONS.map((opt) => (
-              <button
-                key={opt.value}
-                onClick={() => onChange({ screenTime: opt.value })}
-                className={`px-4 py-3 rounded-xl border text-sm font-sans transition-all ${
-                  profile.screenTime === opt.value
-                    ? "border-terracotta bg-terracotta/5 text-terracotta font-medium"
-                    : "border-gray-200 bg-white text-gray-600 hover:border-gray-300"
-                }`}
-              >
-                {opt.label}
-              </button>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );

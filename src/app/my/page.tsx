@@ -10,6 +10,7 @@ import PractitionerCard from "@/components/member/PractitionerCard";
 import InventoryNudge from "@/components/member/InventoryNudge";
 import ScoreTierPill from "@/components/member/ScoreTierPill";
 import HabitStreaksCard from "@/components/member/HabitStreaksCard";
+import InsightCard from "@/components/member/InsightCard";
 import { getTreatmentBySlug } from "@/data/treatments";
 
 interface Member {
@@ -363,6 +364,70 @@ export default function TodayPage() {
     .filter((x) => x.item && x.remaining <= 5 && x.remaining > 0)
     .slice(0, 1);
 
+  // Compute the one "Insight of the day"
+  function buildInsight(): { title: string; body: string } | null {
+    // 1. Wellness score delta vs 7-day avg
+    if (today && sevenDayAvg !== null) {
+      const delta = today.overall_score - sevenDayAvg;
+      if (delta >= 5) {
+        return {
+          title: `Your wellness score is up ${delta} points this week.`,
+          body: "Consistency compounds. Keep logging — the signal sharpens as your dataset grows.",
+        };
+      }
+      if (delta <= -5) {
+        return {
+          title: `Your wellness score dipped ${Math.abs(delta)} points.`,
+          body: "Worth a journal note — what changed? Sleep, stress, travel, new supplement? The pattern usually shows up in the data within a week.",
+        };
+      }
+    }
+
+    // 2. Adherence streak celebration
+    if (adherenceLast7 >= 85 && weekLogs.length >= 7) {
+      return {
+        title: "You're in the top 15% of adherence this week.",
+        body: "Most members show measurable changes between week 8 and 12 of consistent logging. You're building the baseline that makes signal visible.",
+      };
+    }
+
+    // 3. Morning-protocol observation
+    const morningItems = items.filter((i) => i.time_of_day === "morning");
+    if (morningItems.length >= 3) {
+      return {
+        title: "Your mornings do a lot of heavy lifting.",
+        body: `${morningItems.length} of your ${items.length} protocol items fire before midday. That's efficient — morning stacks have the highest adherence across Kamura members.`,
+      };
+    }
+
+    // 4. Pharma safety gentle reminder
+    if (items.some((i) => i.category === "pharmaceutical")) {
+      return {
+        title: "Prescription items in your stack stay physician-led.",
+        body: "Kamura tracks adherence and side-effect patterns, but dose changes, cycling, and discontinuation belong to your prescribing physician. Share your log export with them at the next visit.",
+      };
+    }
+
+    // 5. First-time encouragement
+    if (today && weekLogs.length > 0 && weekLogs.length < 7) {
+      return {
+        title: "You've started. That's the hardest part.",
+        body: "Trends need about two weeks of logs to show real direction. Keep the one-tap check-ins going — the dashboard becomes genuinely yours by day 14.",
+      };
+    }
+
+    // 6. Default encouragement
+    if (items.length === 0 && !today) {
+      return {
+        title: "Kamura gets sharper the more you log.",
+        body: "Start with a daily check-in and one protocol item. The scoring, insights, and cross-provider view all key off your data.",
+      };
+    }
+
+    return null;
+  }
+  const insight = buildInsight();
+
   const showOnboarding =
     concernCount === 0 && !upcoming && items.length === 0 && !today;
 
@@ -540,6 +605,11 @@ export default function TodayPage() {
                 </Link>
               </section>
             ) : null}
+
+            {/* Insight of the day */}
+            {insight && (
+              <InsightCard title={insight.title} body={insight.body} />
+            )}
           </div>
 
           {/* RIGHT — Wellness score + practitioner + journal */}

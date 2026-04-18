@@ -7,7 +7,10 @@ import ScoreTierPill from "@/components/member/ScoreTierPill";
 import InventoryManager from "@/components/member/InventoryManager";
 import LocalStorageImport from "@/components/member/LocalStorageImport";
 import AlternativesStrip from "@/components/member/AlternativesStrip";
+import TitrationStepper from "@/components/member/TitrationStepper";
+import InjectionSiteMap from "@/components/member/InjectionSiteMap";
 import { getTreatmentBySlug } from "@/data/treatments";
+import { getTitrationSchedule } from "@/data/titration-schedules";
 import { useToast } from "@/lib/toast";
 
 interface ProtocolItem {
@@ -23,6 +26,7 @@ interface ProtocolItem {
   active: boolean;
   notes: string;
   source: string;
+  start_date: string | null;
   created_at: string;
 }
 
@@ -31,6 +35,7 @@ interface DoseLog {
   protocol_item_id: string;
   logged_at: string;
   skipped: boolean;
+  injection_site?: string;
 }
 
 interface Vial {
@@ -113,7 +118,7 @@ export default function ProtocolPage() {
         .order("name"),
       supabase
         .from("dose_logs")
-        .select("id, protocol_item_id, logged_at, skipped")
+        .select("id, protocol_item_id, logged_at, skipped, injection_site")
         .eq("member_id", user.id)
         .gte("logged_at", sevenDaysAgo)
         .order("logged_at", { ascending: false }),
@@ -501,6 +506,26 @@ function ProtocolItemCard({
           End
         </button>
       </div>
+      {/* Titration schedule — shown when treatment_slug has a known titration */}
+      {item.treatment_slug && (() => {
+        const schedule = getTitrationSchedule(item.treatment_slug);
+        return schedule ? (
+          <TitrationStepper schedule={schedule} startDate={item.start_date} />
+        ) : null;
+      })()}
+
+      {/* Injection site map — peptides only, once user has logs with sites */}
+      {item.category === "peptide" && logs.some((l) => l.injection_site) && (
+        <InjectionSiteMap
+          recentLogs={logs
+            .filter((l) => l.injection_site)
+            .map((l) => ({
+              injection_site: l.injection_site || "",
+              logged_at: l.logged_at,
+            }))}
+        />
+      )}
+
       {/* Safety banner for prescription-class items */}
       {item.category === "pharmaceutical" && (
         <div className="mt-3 p-3 rounded-xl bg-amber-50/70 border border-amber-200/60 flex items-start gap-2.5">
