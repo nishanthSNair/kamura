@@ -15,7 +15,7 @@ interface Booking {
   notes: string;
   review_token: string | null;
   review_submitted: boolean;
-  service: { name: string } | { name: string }[] | null;
+  service: { name: string; prep_notes: string } | { name: string; prep_notes: string }[] | null;
   provider: { business_name: string; slug: string; phone: string } | { business_name: string; slug: string; phone: string }[] | null;
 }
 
@@ -42,7 +42,7 @@ export default function BookingsPage() {
         supabase
           .from("bookings")
           .select(
-            "id, provider_id, booking_date, start_time, end_time, status, price_aed, notes, review_token, review_submitted, service:services(name), provider:providers(business_name, slug, phone)"
+            "id, provider_id, booking_date, start_time, end_time, status, price_aed, notes, review_token, review_submitted, service:services(name, prep_notes), provider:providers(business_name, slug, phone)"
           )
           .eq("customer_email", user.email || "")
           .order("booking_date", { ascending: false })
@@ -169,6 +169,18 @@ export default function BookingsPage() {
                     <StatusBadge status={b.status} />
                   </div>
                 </div>
+
+                {/* Prep checklist — upcoming only */}
+                {tab === "upcoming" && service?.prep_notes && (
+                  <div className="mt-4 p-3 rounded-xl bg-amber-50/70 border border-amber-200/60">
+                    <p className="text-[10px] tracking-[0.2em] uppercase text-amber-800 font-sans font-semibold mb-1.5">
+                      Before your session
+                    </p>
+                    <p className="text-xs text-amber-900 font-sans leading-relaxed">
+                      {service.prep_notes}
+                    </p>
+                  </div>
+                )}
 
                 {b.notes && (
                   <p className="mt-4 text-sm text-gray-600 font-sans italic border-t border-gray-100 pt-3">

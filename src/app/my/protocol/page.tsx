@@ -6,7 +6,9 @@ import { createClient } from "@/lib/supabase/client";
 import ScoreTierPill from "@/components/member/ScoreTierPill";
 import InventoryManager from "@/components/member/InventoryManager";
 import LocalStorageImport from "@/components/member/LocalStorageImport";
+import AlternativesStrip from "@/components/member/AlternativesStrip";
 import { getTreatmentBySlug } from "@/data/treatments";
+import { useToast } from "@/lib/toast";
 
 interface ProtocolItem {
   id: string;
@@ -69,6 +71,7 @@ const TIMES = [
 
 export default function ProtocolPage() {
   const supabase = createClient();
+  const { showToast } = useToast();
   const [items, setItems] = useState<ProtocolItem[]>([]);
   const [recentLogs, setRecentLogs] = useState<DoseLog[]>([]);
   const [vials, setVials] = useState<Vial[]>([]);
@@ -204,6 +207,23 @@ export default function ProtocolPage() {
         .eq("id", vial.id);
       reloadVials();
     }
+
+    // Toast feedback
+    const item = items.find((i) => i.id === itemId);
+    const todayStart = new Date();
+    todayStart.setHours(0, 0, 0, 0);
+    const loggedTodayCount =
+      recentLogs.filter((l) => new Date(l.logged_at) >= todayStart).length + 1;
+    const dueToday = items.filter(
+      (i) => i.schedule === "daily" || i.schedule === "twice_daily"
+    ).length;
+    const remaining = Math.max(0, dueToday - loggedTodayCount);
+    showToast(
+      `Logged${item ? ` · ${item.name}` : ""}. ${
+        remaining === 0 ? "All done today." : `${remaining} left.`
+      }`,
+      "success"
+    );
   }
 
   async function removeItem(id: string) {
@@ -481,9 +501,27 @@ function ProtocolItemCard({
           End
         </button>
       </div>
+      {/* Safety banner for prescription-class items */}
+      {item.category === "pharmaceutical" && (
+        <div className="mt-3 p-3 rounded-xl bg-amber-50/70 border border-amber-200/60 flex items-start gap-2.5">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B45309" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 shrink-0">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+            <line x1="12" y1="9" x2="12" y2="13" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+          <p className="text-[11px] text-amber-900 font-sans leading-relaxed">
+            Consult your prescribing physician before adjusting dose. Report
+            any persistent side effects.
+          </p>
+        </div>
+      )}
+
       {(item.category === "peptide" || item.category === "pharmaceutical" || item.category === "supplement") && (
         <InventoryManager itemId={item.id} currentVial={vial} onChange={onInventoryChange} />
       )}
+
+      {/* Alternatives strip when linked to a Kamura-scored treatment */}
+      {item.treatment_slug && <AlternativesStrip treatmentSlug={item.treatment_slug} />}
     </div>
   );
 }

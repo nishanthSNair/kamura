@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState, type ReactNode } from "react";
 import { createClient } from "@/lib/supabase/client";
+import { ToastProvider } from "@/lib/toast";
 
 const NAV_ITEMS = [
   {
@@ -112,7 +113,7 @@ export default function MemberDashboardLayout({ children }: { children: ReactNod
     router.push("/my/login");
   }
 
-  if (isAuthPage) return <>{children}</>;
+  if (isAuthPage) return <ToastProvider>{children}</ToastProvider>;
 
   if (loading) {
     return (
@@ -123,6 +124,7 @@ export default function MemberDashboardLayout({ children }: { children: ReactNod
   }
 
   return (
+    <ToastProvider>
     <div className="min-h-screen bg-[#F7F3EB] flex">
       {/* Desktop sidebar */}
       <aside className="hidden lg:flex w-60 bg-white border-r border-gray-200/70 flex-col fixed inset-y-0 left-0 z-40">
@@ -263,5 +265,6 @@ export default function MemberDashboardLayout({ children }: { children: ReactNod
         <div className="max-w-5xl mx-auto px-4 md:px-8 py-8">{children}</div>
       </main>
     </div>
+    </ToastProvider>
   );
 }

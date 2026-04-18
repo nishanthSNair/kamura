@@ -9,6 +9,7 @@ import JournalCard from "@/components/member/JournalCard";
 import PractitionerCard from "@/components/member/PractitionerCard";
 import InventoryNudge from "@/components/member/InventoryNudge";
 import ScoreTierPill from "@/components/member/ScoreTierPill";
+import HabitStreaksCard from "@/components/member/HabitStreaksCard";
 import { getTreatmentBySlug } from "@/data/treatments";
 
 interface Member {
@@ -107,6 +108,7 @@ export default function TodayPage() {
   const [recent, setRecent] = useState<Checkin[]>([]);
   const [items, setItems] = useState<ProtocolItem[]>([]);
   const [weekLogs, setWeekLogs] = useState<DoseLog[]>([]);
+  const [streakLogs, setStreakLogs] = useState<{ protocol_item_id: string; logged_at: string }[]>([]);
   const [inventory, setInventory] = useState<VialInventory[]>([]);
   const [upcoming, setUpcoming] = useState<UpcomingBooking | null>(null);
   const [provider, setProvider] = useState<Provider | null>(null);
@@ -125,6 +127,7 @@ export default function TodayPage() {
     const sevenDaysAgo = new Date(Date.now() - 7 * 86400000);
     const sevenDaysAgoDate = sevenDaysAgo.toISOString().split("T")[0];
     const sevenDaysAgoIso = sevenDaysAgo.toISOString();
+    const thirtyDaysAgoIso = new Date(Date.now() - 30 * 86400000).toISOString();
 
     const [
       memberRes,
@@ -132,6 +135,7 @@ export default function TodayPage() {
       checkinsRes,
       itemsRes,
       logsRes,
+      streakLogsRes,
       inventoryRes,
       bookingRes,
       journalRes,
@@ -160,6 +164,12 @@ export default function TodayPage() {
         .select("id, protocol_item_id, logged_at")
         .eq("member_id", user.id)
         .gte("logged_at", sevenDaysAgoIso)
+        .order("logged_at", { ascending: false }),
+      supabase
+        .from("dose_logs")
+        .select("protocol_item_id, logged_at")
+        .eq("member_id", user.id)
+        .gte("logged_at", thirtyDaysAgoIso)
         .order("logged_at", { ascending: false }),
       supabase
         .from("vial_inventory")
@@ -195,6 +205,7 @@ export default function TodayPage() {
 
     setItems((itemsRes.data as ProtocolItem[]) || []);
     setWeekLogs((logsRes.data as DoseLog[]) || []);
+    setStreakLogs((streakLogsRes.data as { protocol_item_id: string; logged_at: string }[]) || []);
     setInventory((inventoryRes.data as VialInventory[]) || []);
     setJournal((journalRes.data as JournalEntry[]) || []);
 
@@ -275,6 +286,48 @@ export default function TodayPage() {
     ? Math.round((weekLogs.length / (items.length * 7)) * 100)
     : 0;
 
+  const sevenDayAvg = recent.length > 0
+    ? Math.round(recent.reduce((s, c) => s + c.overall_score, 0) / recent.length)
+    : null;
+
+  // Compute the personalized sub-headline from real signals
+  function buildSubHeadline(): string | null {
+    const parts: string[] = [];
+
+    // Today's protocol progress
+    const todayLogsCount = weekLogs.filter((l) => {
+      const d = new Date(l.logged_at);
+      const start = new Date();
+      start.setHours(0, 0, 0, 0);
+      return d >= start;
+    }).length;
+
+    const itemsDueToday = items.filter((i) => i.schedule === "daily" || i.schedule === "twice_daily").length;
+    if (itemsDueToday > 0) {
+      parts.push(
+        `You're ${todayLogsCount} of ${itemsDueToday} through today's protocol.`
+      );
+    }
+
+    // Wellness score delta (today vs 7-day avg)
+    if (today && sevenDayAvg !== null) {
+      const delta = today.overall_score - sevenDayAvg;
+      if (delta >= 3) {
+        parts.push(`Your wellness score is up ${delta} pts this week.`);
+      } else if (delta <= -3) {
+        parts.push(`Your wellness score is down ${Math.abs(delta)} pts — consider logging what changed.`);
+      }
+    }
+
+    // Check-in streak as fallback
+    if (parts.length === 0 && recent.length >= 3) {
+      parts.push(`You've logged ${recent.length} check-ins this week. Keep going.`);
+    }
+
+    return parts.length > 0 ? parts.join(" ") : null;
+  }
+  const subHeadline = buildSubHeadline();
+
   // Items due today only (schedule='daily' or time-of-day applicable)
   const itemsToday = items.filter((i) => {
     if (i.schedule === "daily" || i.schedule === "twice_daily") return true;
@@ -309,10 +362,6 @@ export default function TodayPage() {
     })
     .filter((x) => x.item && x.remaining <= 5 && x.remaining > 0)
     .slice(0, 1);
-
-  const sevenDayAvg = recent.length > 0
-    ? Math.round(recent.reduce((s, c) => s + c.overall_score, 0) / recent.length)
-    : null;
 
   const showOnboarding =
     concernCount === 0 && !upcoming && items.length === 0 && !today;
@@ -360,10 +409,9 @@ export default function TodayPage() {
               <>Today&apos;s plan, at a glance.</>
             )}
           </h1>
-          {weekLabel && adherenceLast7 > 0 && (
-            <p className="text-sm text-gray-500 font-sans leading-relaxed max-w-xl">
-              You&apos;ve logged {weekLogs.length} dose{weekLogs.length === 1 ? "" : "s"} in
-              the last 7 days — {adherenceLast7}% adherence. Consistency is where results show up.
+          {subHeadline && (
+            <p className="text-base text-gray-600 font-sans leading-relaxed max-w-xl">
+              {subHeadline}
             </p>
           )}
         </div>
@@ -528,6 +576,9 @@ export default function TodayPage() {
             <PractitionerCard provider={provider} nextSession={upcoming} />
 
             {/* Journal */}
+            {/* Habit Streaks */}
+            <HabitStreaksCard items={items} logs={streakLogs} />
+
             <JournalCard entries={journal} onAdd={() => setJournalOpen(true)} />
           </aside>
         </div>

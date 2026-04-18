@@ -11,6 +11,7 @@ interface Service {
   price_aed: number;
   active: boolean;
   treatment_slug: string | null;
+  prep_notes: string;
 }
 
 interface Provider {
@@ -61,6 +62,7 @@ export default function SettingsPage() {
     duration_minutes: 60,
     price_aed: 0,
     treatment_slug: "",
+    prep_notes: "",
   });
 
   useEffect(() => {
@@ -138,6 +140,7 @@ export default function SettingsPage() {
         duration_minutes: 60,
         price_aed: 0,
         treatment_slug: "",
+        prep_notes: "",
       });
       setShowAddService(false);
     }
@@ -335,6 +338,23 @@ export default function SettingsPage() {
               />
               <p className="text-[10px] text-gray-400 font-sans mt-1.5">
                 Link to a Kamura-scored treatment so clients searching for it find you.
+              </p>
+            </div>
+            <div className="mb-4">
+              <label className="text-[10px] tracking-[0.2em] uppercase text-gray-500 font-sans block mb-2">
+                Pre-appointment notes (optional)
+              </label>
+              <textarea
+                value={newService.prep_notes}
+                onChange={(e) =>
+                  setNewService({ ...newService, prep_notes: e.target.value })
+                }
+                rows={2}
+                placeholder="e.g. Fasting required 8h prior · Hydrate well · Bring recent bloodwork"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm font-sans focus:outline-none focus:border-terracotta resize-none"
+              />
+              <p className="text-[10px] text-gray-400 font-sans mt-1.5">
+                Shown to clients on their upcoming booking card.
               </p>
             </div>
             <div className="flex gap-2">
