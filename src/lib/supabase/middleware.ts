@@ -39,13 +39,10 @@ export async function updateSession(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  // Protect member dashboard — /my/login, /my/signup, /my/auth/* stay open
+  // Member dashboard is open to guests — only /my/profile requires auth (data edit)
   if (
     !user &&
-    request.nextUrl.pathname.startsWith("/my") &&
-    !request.nextUrl.pathname.startsWith("/my/login") &&
-    !request.nextUrl.pathname.startsWith("/my/signup") &&
-    !request.nextUrl.pathname.startsWith("/my/auth")
+    request.nextUrl.pathname.startsWith("/my/profile")
   ) {
     const url = request.nextUrl.clone();
     url.pathname = "/my/login";

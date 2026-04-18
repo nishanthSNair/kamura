@@ -9,6 +9,7 @@ import LocalStorageImport from "@/components/member/LocalStorageImport";
 import AlternativesStrip from "@/components/member/AlternativesStrip";
 import TitrationStepper from "@/components/member/TitrationStepper";
 import InjectionSiteMap from "@/components/member/InjectionSiteMap";
+import SignupPromptModal from "@/components/member/SignupPromptModal";
 import { getTreatmentBySlug } from "@/data/treatments";
 import { getTitrationSchedule } from "@/data/titration-schedules";
 import { useToast } from "@/lib/toast";
@@ -77,6 +78,8 @@ const TIMES = [
 export default function ProtocolPage() {
   const supabase = createClient();
   const { showToast } = useToast();
+  const [isGuest, setIsGuest] = useState(false);
+  const [signupOpen, setSignupOpen] = useState(false);
   const [items, setItems] = useState<ProtocolItem[]>([]);
   const [recentLogs, setRecentLogs] = useState<DoseLog[]>([]);
   const [vials, setVials] = useState<Vial[]>([]);
@@ -104,7 +107,11 @@ export default function ProtocolPage() {
     const {
       data: { user },
     } = await supabase.auth.getUser();
-    if (!user) return;
+    if (!user) {
+      setIsGuest(true);
+      setLoading(false);
+      return;
+    }
 
     const sevenDaysAgo = new Date(Date.now() - 7 * 86400000).toISOString();
 
@@ -248,6 +255,11 @@ export default function ProtocolPage() {
 
   return (
     <>
+      <SignupPromptModal
+        open={signupOpen}
+        onClose={() => setSignupOpen(false)}
+        reason="Adding items to your protocol requires a free account — so we can save your history, track adherence, and power your progress dashboard."
+      />
       <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
         <div>
           <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-sans mb-2">
@@ -261,7 +273,7 @@ export default function ProtocolPage() {
           </p>
         </div>
         <button
-          onClick={() => setShowAdd(true)}
+          onClick={() => isGuest ? setSignupOpen(true) : setShowAdd(true)}
           className="px-5 py-2.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] transition-colors"
         >
           + Add Item
@@ -364,7 +376,7 @@ export default function ProtocolPage() {
             Add your first peptide, supplement, or daily habit to start tracking.
           </p>
           <button
-            onClick={() => setShowAdd(true)}
+            onClick={() => isGuest ? setSignupOpen(true) : setShowAdd(true)}
             className="px-5 py-2.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans"
           >
             + Add First Item

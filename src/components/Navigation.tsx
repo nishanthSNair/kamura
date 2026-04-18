@@ -193,6 +193,13 @@ export default function Navigation() {
     {t("nav.wellness")}
    </Link>
 
+   <Link
+    href="/my"
+    className={`transition-colors font-medium ${solid ? "text-gray-800 hover:text-terracotta" : "text-white/90 hover:text-white"}`}
+   >
+    Dashboard
+   </Link>
+
    <LanguageToggle solid={solid} />
 
    <button
@@ -286,6 +293,7 @@ export default function Navigation() {
    {[
     { href: "/explore", label: t("nav.providers") },
     { href: "/wellness-checker", label: t("nav.wellness") },
+    { href: "/my", label: "Dashboard" },
     { href: "/blog", label: "Blog" },
     { href: "/events", label: "Events" },
     { href: "/about", label: "About" },

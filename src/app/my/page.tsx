@@ -122,7 +122,21 @@ export default function TodayPage() {
     const {
       data: { user },
     } = await supabase.auth.getUser();
-    if (!user) return;
+
+    // Guest mode — load check-ins from localStorage only
+    if (!user) {
+      try {
+        const raw = localStorage.getItem("kamura.guest.checkins");
+        const guestCheckins = (raw ? JSON.parse(raw) : []) as Checkin[];
+        setRecent(guestCheckins.slice(0, 7));
+        const todayIso = new Date().toISOString().split("T")[0];
+        setToday(guestCheckins.find((c) => c.checkin_date === todayIso) || null);
+      } catch {
+        /* ignore */
+      }
+      setLoading(false);
+      return;
+    }
 
     const todayDate = new Date().toISOString().split("T")[0];
     const sevenDaysAgo = new Date(Date.now() - 7 * 86400000);

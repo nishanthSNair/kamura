@@ -25,9 +25,53 @@ export default function DailyCheckinModal({ onClose, onDone, existing }: Props) 
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
+  function computeScore() {
+    return Math.round(((energy + mood + sleep + (6 - stress)) / 4) * 20);
+  }
+
   async function submit() {
     setSaving(true);
     setError("");
+
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    // Guest mode — save to localStorage only
+    if (!user) {
+      try {
+        const today = new Date().toISOString().split("T")[0];
+        const score = computeScore();
+        const raw = localStorage.getItem("kamura.guest.checkins");
+        const list: Array<{
+          checkin_date: string;
+          overall_score: number;
+          energy: number;
+          mood: number;
+          sleep_quality: number;
+          stress: number;
+          notes: string;
+        }> = raw ? JSON.parse(raw) : [];
+        const filtered = list.filter((c) => c.checkin_date !== today);
+        filtered.unshift({
+          checkin_date: today,
+          overall_score: score,
+          energy,
+          mood,
+          sleep_quality: sleep,
+          stress,
+          notes,
+        });
+        localStorage.setItem("kamura.guest.checkins", JSON.stringify(filtered.slice(0, 60)));
+        onDone(score);
+      } catch {
+        setError("Couldn't save locally. Try signing up to keep your data.");
+        setSaving(false);
+      }
+      return;
+    }
+
+    // Authed — save to Supabase
     const { data, error: err } = await supabase.rpc("upsert_wellness_checkin", {
       p_energy: energy,
       p_mood: mood,
