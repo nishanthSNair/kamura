@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { treatments } from "@/data/treatments";
-import { getAllPosts } from "@/lib/blog";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 import HomeHero from "@/components/HomeHero";
+import { FEATURED_PRACTITIONERS } from "@/data/featured-practitioners";
 
 export const metadata: Metadata = {
  title: "KAMURA — The Wellness Platform for the GCC",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
- const latestPosts = getAllPosts().slice(0, 4);
+ const featuredPractitioners = FEATURED_PRACTITIONERS.slice(0, 6);
  const citationCount = treatments.reduce(
  (sum, t) => sum + (t.keyStudies?.length || 0),
  0
@@ -115,110 +115,194 @@ export default function Home() {
   />
   </section>
 
-  {/* ── Latest from the Journal ── */}
-  {latestPosts.length > 0 && (
-  <section className="py-16 md:py-24 bg-[#EDE7DB]">
-   <div className="max-w-6xl mx-auto px-6">
+  {/* ── Direct Access: Treatments / Clinics / Practitioners ── */}
+  <section className="py-20 md:py-28 bg-[#EDE7DB]">
+  <div className="max-w-6xl mx-auto px-6">
    <FadeInOnScroll>
-    <div className="flex items-end justify-between mb-10">
-    <div>
-     <p className="text-xs uppercase tracking-[0.2em] text-terracotta font-sans mb-3">
-     Wellness Intelligence
-     </p>
-     <h2 className="font-serif text-2xl md:text-3xl text-gray-900">
-     Latest from the Journal
-     </h2>
-    </div>
-    <Link
-     href="/blog"
-     className="hidden sm:inline-flex text-sm font-sans text-moss hover:underline underline-offset-4"
-    >
-     Read all &rarr;
-    </Link>
-    </div>
+   <div className="max-w-2xl mb-14">
+    <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-sans font-semibold mb-4">
+    Start exploring
+    </p>
+    <h2 className="font-serif text-3xl md:text-5xl text-gray-900 leading-[1.1] mb-4">
+    Three doors in.
+    </h2>
+    <p className="text-base text-gray-600 font-sans leading-relaxed">
+    Browse every treatment scored on evidence, every vetted clinic in
+    the GCC, or the practitioners who prescribe and deliver them.
+    </p>
+   </div>
    </FadeInOnScroll>
 
-   {/* Featured post — large */}
-   <FadeInOnScroll delay={100}>
+   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+   <FadeInOnScroll>
     <Link
-    href={`/blog/${latestPosts[0].slug}`}
-    className="block rounded-2xl overflow-hidden bg-white border border-gray-200/40 hover:shadow-xl transition-all duration-500 group mb-5"
+    href="/treatments"
+    className="group relative block overflow-hidden rounded-3xl aspect-[4/5] bg-[#1a0f0c]"
     >
-    <div className="grid grid-cols-1 md:grid-cols-2">
-     {latestPosts[0].coverImage && (
-     <div className="aspect-[16/10] md:aspect-auto overflow-hidden relative">
-      <Image
-      src={latestPosts[0].coverImage}
-      alt=""
-      fill
-      sizes="(max-width: 768px) 100vw, 50vw"
-      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-      />
+    <Image
+     src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=85"
+     alt=""
+     fill
+     className="object-cover opacity-70 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+     sizes="(max-width: 768px) 100vw, 33vw"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0c] via-[#1a0f0c]/40 to-transparent" />
+    <div className="relative p-7 md:p-8 h-full flex flex-col justify-between text-white">
+     <div className="flex items-start justify-between">
+     <span className="text-xs tracking-[0.2em] text-white/60 font-sans">01</span>
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
+      <line x1="7" y1="17" x2="17" y2="7" />
+      <polyline points="7 7 17 7 17 17" />
+     </svg>
      </div>
-     )}
-     <div className="p-6 md:p-10 flex flex-col justify-center">
-     <p className="text-[11px] uppercase tracking-[0.15em] text-terracotta font-sans mb-3">
-      {latestPosts[0].category} &middot; {latestPosts[0].readingTime} min read
-     </p>
-     <h3 className="font-serif text-xl md:text-2xl text-gray-900 group-hover:text-moss transition-colors mb-3 leading-snug">
-      {latestPosts[0].title}
+     <div>
+     <h3 className="font-serif text-3xl md:text-4xl tracking-tight mb-2">
+      Treatments
      </h3>
-     <p className="text-sm text-gray-500 font-sans leading-relaxed line-clamp-3">
-      {latestPosts[0].excerpt}
+     <p className="text-sm text-white/80 font-sans leading-relaxed mb-4 max-w-xs">
+      {treatments.length}+ treatments scored on evidence, safety, and value.
+      Peptides, GLP-1, hormones, IV therapy.
      </p>
-     <span className="inline-flex items-center gap-1.5 mt-5 text-sm text-moss font-sans group-hover:gap-2.5 transition-all">
-      Read article
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <line x1="5" y1="12" x2="19" y2="12" />
-      <polyline points="12 5 19 12 12 19" />
-      </svg>
+     <span className="inline-flex items-center text-[10px] tracking-[0.2em] uppercase text-white font-sans font-semibold">
+      Explore →
      </span>
      </div>
     </div>
     </Link>
    </FadeInOnScroll>
 
-   {/* Secondary posts */}
-   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-    {latestPosts.slice(1, 4).map((post, i) => (
-    <FadeInOnScroll key={post.slug} delay={200 + i * 80}>
-     <Link
-     href={`/blog/${post.slug}`}
-     className="rounded-2xl border border-gray-200/40 bg-white hover:shadow-lg transition-all duration-500 overflow-hidden group"
-     >
-     {post.coverImage && (
-      <div className="aspect-[16/9] overflow-hidden relative">
-      <Image
-       src={post.coverImage}
-       alt=""
-       fill
-       sizes="(max-width: 640px) 100vw, 33vw"
-       className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-      />
-      </div>
-     )}
-     <div className="p-4">
-      <p className="text-[10px] uppercase tracking-[0.15em] text-terracotta font-sans mb-1.5">
-      {post.category}
-      </p>
-      <h3 className="font-sans text-sm font-semibold text-gray-900 group-hover:text-moss transition-colors line-clamp-2">
-      {post.title}
-      </h3>
+   <FadeInOnScroll delay={100}>
+    <Link
+    href="/explore"
+    className="group relative block overflow-hidden rounded-3xl aspect-[4/5] bg-[#1a0f0c]"
+    >
+    <Image
+     src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=85"
+     alt=""
+     fill
+     className="object-cover opacity-70 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+     sizes="(max-width: 768px) 100vw, 33vw"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0c] via-[#1a0f0c]/40 to-transparent" />
+    <div className="relative p-7 md:p-8 h-full flex flex-col justify-between text-white">
+     <div className="flex items-start justify-between">
+     <span className="text-xs tracking-[0.2em] text-white/60 font-sans">02</span>
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
+      <line x1="7" y1="17" x2="17" y2="7" />
+      <polyline points="7 7 17 7 17 17" />
+     </svg>
      </div>
-     </Link>
-    </FadeInOnScroll>
-    ))}
-   </div>
+     <div>
+     <h3 className="font-serif text-3xl md:text-4xl tracking-tight mb-2">
+      Clinics
+     </h3>
+     <p className="text-sm text-white/80 font-sans leading-relaxed mb-4 max-w-xs">
+      Wellness clinics, longevity centers, and biohacking studios across
+      Dubai and the UAE.
+     </p>
+     <span className="inline-flex items-center text-[10px] tracking-[0.2em] uppercase text-white font-sans font-semibold">
+      Browse →
+     </span>
+     </div>
+    </div>
+    </Link>
+   </FadeInOnScroll>
 
-   <Link
-    href="/blog"
-    className="sm:hidden inline-flex text-sm font-sans text-moss hover:underline mt-6"
-   >
-    All articles &rarr;
-   </Link>
+   <FadeInOnScroll delay={200}>
+    <Link
+    href="/explore"
+    className="group relative block overflow-hidden rounded-3xl aspect-[4/5] bg-[#1a0f0c]"
+    >
+    <Image
+     src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=85"
+     alt=""
+     fill
+     className="object-cover opacity-70 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+     sizes="(max-width: 768px) 100vw, 33vw"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0c] via-[#1a0f0c]/40 to-transparent" />
+    <div className="relative p-7 md:p-8 h-full flex flex-col justify-between text-white">
+     <div className="flex items-start justify-between">
+     <span className="text-xs tracking-[0.2em] text-white/60 font-sans">03</span>
+     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="opacity-60 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
+      <line x1="7" y1="17" x2="17" y2="7" />
+      <polyline points="7 7 17 7 17 17" />
+     </svg>
+     </div>
+     <div>
+     <h3 className="font-serif text-3xl md:text-4xl tracking-tight mb-2">
+      Practitioners
+     </h3>
+     <p className="text-sm text-white/80 font-sans leading-relaxed mb-4 max-w-xs">
+      Verified MDs, functional-medicine doctors, and integrative
+      practitioners who prescribe what you actually need.
+     </p>
+     <span className="inline-flex items-center text-[10px] tracking-[0.2em] uppercase text-white font-sans font-semibold">
+      Meet them →
+     </span>
+     </div>
+    </div>
+    </Link>
+   </FadeInOnScroll>
    </div>
+  </div>
   </section>
-  )}
+
+  {/* ── Featured Practitioners strip ── */}
+  <section className="py-16 md:py-20 bg-white">
+  <div className="max-w-6xl mx-auto px-6">
+   <FadeInOnScroll>
+   <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
+    <div>
+    <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-sans font-semibold mb-3">
+     Kamura-Verified
+    </p>
+    <h2 className="font-serif text-2xl md:text-3xl text-gray-900 leading-tight">
+     Meet your practitioners
+    </h2>
+    </div>
+    <Link
+    href="/explore"
+    className="text-xs tracking-[0.15em] uppercase text-terracotta font-sans font-semibold hover:underline"
+    >
+    See all →
+    </Link>
+   </div>
+   </FadeInOnScroll>
+   <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+   {featuredPractitioners.map((p, i) => (
+    <FadeInOnScroll key={p.slug} delay={i * 60}>
+    <div className="group">
+     <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-3 bg-gray-100">
+     <Image
+      src={p.imageUrl}
+      alt={p.name}
+      fill
+      className="object-cover group-hover:scale-105 transition-transform duration-500"
+      sizes="(max-width: 768px) 50vw, 33vw"
+     />
+     {p.verified && (
+      <span className="absolute top-3 left-3 px-2 py-1 rounded-full bg-white/90 backdrop-blur text-[9px] tracking-[0.15em] uppercase text-emerald-700 font-sans font-semibold">
+      ✓ Verified
+      </span>
+     )}
+     </div>
+     <p className="font-serif text-lg text-gray-900 leading-tight">{p.name}</p>
+     <p className="text-xs text-gray-500 font-sans mt-0.5">
+     {p.specialty} · {p.city}
+     </p>
+     <div className="flex items-center gap-1.5 mt-1.5 text-[11px] font-sans">
+     <span className="text-gray-700">★ {p.rating}</span>
+     <span className="text-gray-300">·</span>
+     <span className="text-gray-400">From AED {p.startingPriceAed.toLocaleString()}</span>
+     </div>
+    </div>
+    </FadeInOnScroll>
+   ))}
+   </div>
+  </div>
+  </section>
+
  </>
  );
 }

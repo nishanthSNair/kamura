@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import SearchModal from "./SearchModal";
 import LanguageToggle from "./LanguageToggle";
+import JoinModal from "./JoinModal";
 import { useI18n } from "@/lib/i18n";
 
 function hasLightTop(p: string): boolean {
@@ -53,6 +54,7 @@ const DISCOVER_GROUPS: DiscoverGroup[] = [
 
 export default function Navigation() {
  const [mobileOpen, setMobileOpen] = useState(false);
+ const [joinOpen, setJoinOpen] = useState(false);
  const [searchOpen, setSearchOpen] = useState(false);
  const [scrolled, setScrolled] = useState(false);
  const [discoverOpen, setDiscoverOpen] = useState(false);
@@ -207,28 +209,12 @@ export default function Navigation() {
 
    {/* Right — CTA + Mobile hamburger */}
    <div className="flex items-center gap-3">
-   <Link
-    href="/my"
-    className={`hidden md:inline-flex items-center text-sm font-sans font-medium transition-colors ${
-     solid ? "text-gray-800 hover:text-terracotta" : "text-white/90 hover:text-white"
-    }`}
+   <button
+    onClick={() => setJoinOpen(true)}
+    className="hidden md:inline-flex items-center px-5 py-2 bg-terracotta hover:bg-terracotta-dark text-white text-sm font-sans font-semibold rounded-full transition-colors"
    >
-    Sign In
-   </Link>
-   <Link
-    href="/provider/login"
-    className={`hidden md:inline-flex items-center text-xs font-sans font-medium transition-colors ${
-     solid ? "text-gray-500 hover:text-terracotta" : "text-white/60 hover:text-white"
-    }`}
-   >
-    For Providers
-   </Link>
-   <Link
-    href="/list-your-business"
-    className="hidden md:inline-flex items-center px-4 py-2 bg-terracotta hover:bg-terracotta-dark text-white text-sm font-sans font-semibold rounded-lg transition-colors"
-   >
-    List Your Business
-   </Link>
+    Join Kamura
+   </button>
 
    <button
     className={`md:hidden transition-colors ${solid ? "text-gray-800" : "text-white"}`}
@@ -321,29 +307,13 @@ export default function Navigation() {
 
    <div className="w-full h-px bg-gray-200 my-1" />
 
-   <Link
-    href="/my"
-    className="text-gray-800 hover:text-terracotta transition-colors font-sans font-medium"
-    onClick={() => setMobileOpen(false)}
-   >
-    Sign In
-   </Link>
-   <Link
-    href="/provider/login"
-    className="text-gray-500 hover:text-terracotta transition-colors font-sans text-sm"
-    onClick={() => setMobileOpen(false)}
-   >
-    For Providers
-   </Link>
-
    <div className="flex items-center justify-between gap-3">
-    <Link
-    href="/list-your-business"
-    className="flex-1 inline-flex items-center justify-center px-4 py-2.5 bg-terracotta text-white text-sm font-sans font-semibold rounded-lg"
-    onClick={() => setMobileOpen(false)}
+    <button
+    onClick={() => { setMobileOpen(false); setJoinOpen(true); }}
+    className="flex-1 inline-flex items-center justify-center px-4 py-2.5 bg-terracotta text-white text-sm font-sans font-semibold rounded-full"
     >
-    {t("nav.listBusiness")}
-    </Link>
+    Join Kamura
+    </button>
     <LanguageToggle solid />
    </div>
 
@@ -359,6 +329,7 @@ export default function Navigation() {
   </nav>
 
   <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+  <JoinModal open={joinOpen} onClose={() => setJoinOpen(false)} />
  </>
  );
 }

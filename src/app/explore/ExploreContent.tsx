@@ -1,256 +1,409 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
-import {
- listings,
- listingCategoryColors,
- categoryDescriptions,
- ALL_LISTING_CATEGORIES,
- type ListingCategory,
- type Listing,
-} from "@/data/listings";
-import { areas } from "@/data/areas";
+import Image from "next/image";
+import { listings } from "@/data/listings";
+import { treatments } from "@/data/treatments";
+import { FEATURED_PRACTITIONERS } from "@/data/featured-practitioners";
+import ScoreTierPill from "@/components/member/ScoreTierPill";
+
+const SERVICE_CATEGORIES = [
+  "All",
+  "Recovery",
+  "Longevity",
+  "Metabolic",
+  "Cognitive",
+  "Fitness",
+  "Skin",
+];
+
+const SERVICE_CATEGORY_MAP: Record<string, string[]> = {
+  Recovery: ["Peptides", "Regenerative Medicine"],
+  Longevity: ["Peptides", "Longevity Pharmaceuticals", "Supplements & Nutraceuticals"],
+  Metabolic: ["GLP-1 & Weight Management", "Hormones"],
+  Cognitive: ["Peptides", "Supplements & Nutraceuticals"],
+  Fitness: ["Exercise & Fitness", "Mind-Body & Movement"],
+  Skin: ["Skin & Aesthetic Wellness"],
+};
+
+const CLINIC_CATEGORIES = [
+  "All",
+  "Longevity",
+  "Peptides",
+  "Fitness",
+  "Yoga & Pilates",
+  "Spa & Retreat",
+];
+
+const PRACTITIONER_SPECIALTIES = [
+  "All",
+  "Longevity",
+  "Sports Med",
+  "Metabolic",
+  "Nutrition",
+  "Regenerative",
+  "Integrative",
+];
 
 export default function ExploreContent() {
- const [activeCategory, setActiveCategory] = useState<string>("All");
+  const [serviceCat, setServiceCat] = useState<string>("All");
+  const [clinicCat, setClinicCat] = useState<string>("All");
+  const [specialty, setSpecialty] = useState<string>("All");
+  const [query, setQuery] = useState("");
 
- // Fade-in on scroll
- useEffect(() => {
- const observer = new IntersectionObserver(
- (entries) => {
- entries.forEach((entry) => {
- if (entry.isIntersecting) {
- entry.target.classList.add("opacity-100", "translate-y-0");
- entry.target.classList.remove("opacity-0", "translate-y-4");
- }
- });
- },
- { threshold: 0.1 }
- );
- const elements = document.querySelectorAll(".fade-in-on-scroll");
- elements.forEach((el) => observer.observe(el));
- return () => observer.disconnect();
- }, [activeCategory]);
+  const topServices = useMemo(() => {
+    let pool = treatments;
+    if (serviceCat !== "All") {
+      const allowed = SERVICE_CATEGORY_MAP[serviceCat] || [];
+      pool = treatments.filter((t) => allowed.includes(t.category));
+    }
+    if (query.trim()) {
+      const q = query.toLowerCase();
+      pool = pool.filter(
+        (t) =>
+          t.name.toLowerCase().includes(q) ||
+          t.description.toLowerCase().includes(q) ||
+          t.tags.some((tag) => tag.toLowerCase().includes(q))
+      );
+    }
+    return [...pool].sort((a, b) => b.kamuraScore - a.kamuraScore).slice(0, 12);
+  }, [serviceCat, query]);
 
- const categoriesToShow =
- activeCategory === "All"
- ? ALL_LISTING_CATEGORIES
- : ALL_LISTING_CATEGORIES.filter((c) => c === activeCategory);
+  const featuredClinics = useMemo(() => {
+    let pool = listings;
+    if (clinicCat !== "All") {
+      const q = clinicCat.toLowerCase();
+      pool = listings.filter(
+        (l) =>
+          (l.services || []).some((s) => s.toLowerCase().includes(q)) ||
+          l.category.toLowerCase().includes(q)
+      );
+    }
+    if (query.trim()) {
+      const q = query.toLowerCase();
+      pool = pool.filter(
+        (l) =>
+          l.name.toLowerCase().includes(q) ||
+          l.location.toLowerCase().includes(q) ||
+          l.city.toLowerCase().includes(q)
+      );
+    }
+    return pool.slice(0, 12);
+  }, [clinicCat, query]);
 
- function getListingsForCategory(category: ListingCategory): Listing[] {
- return listings.filter((l) => l.category === category);
- }
+  // Stable placeholder image per listing (no real photos in seed data yet)
+  function clinicImage(id: string, category: string): string {
+    const palette = [
+      "photo-1540555700478-4be289fbecef",
+      "photo-1600334089648-b0d9d3028eb2",
+      "photo-1540206395-68808572332f",
+      "photo-1545205597-3d9d02c29597",
+      "photo-1576091160399-112ba8d25d1d",
+      "photo-1544161515-4ab6ce6db874",
+      "photo-1578496781985-452d4a934d50",
+    ];
+    void category;
+    const hash = id.split("").reduce((a, c) => a + c.charCodeAt(0), 0);
+    return `https://images.unsplash.com/${palette[hash % palette.length]}?w=520&q=80`;
+  }
 
- function scrollToCategory(category: string) {
- setActiveCategory(category);
- if (category !== "All") {
- setTimeout(() => {
- const el = document.getElementById(`category-${category.replace(/\s+/g, "-").toLowerCase()}`);
- if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
- }, 50);
- }
- }
+  const practitioners = useMemo(() => {
+    let pool = FEATURED_PRACTITIONERS;
+    if (specialty !== "All") {
+      const q = specialty.toLowerCase();
+      pool = FEATURED_PRACTITIONERS.filter(
+        (p) =>
+          p.specialty.toLowerCase().includes(q) ||
+          p.tags.some((t) => t.toLowerCase().includes(q))
+      );
+    }
+    if (query.trim()) {
+      const q = query.toLowerCase();
+      pool = pool.filter(
+        (p) =>
+          p.name.toLowerCase().includes(q) ||
+          p.specialty.toLowerCase().includes(q) ||
+          p.city.toLowerCase().includes(q) ||
+          p.tags.some((t) => t.toLowerCase().includes(q))
+      );
+    }
+    return pool;
+  }, [specialty, query]);
 
- return (
- <>
- {/* Hero Section */}
- <section className="relative h-[60vh] flex items-center justify-center">
- <div
- className="absolute inset-0 bg-cover bg-center"
- style={{
- backgroundImage:
- "url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80')",
- }}
- />
- <div className="absolute inset-0 bg-gradient-to-b from-forest/60 via-black/30 to-forest/50" />
- <div className="relative z-10 text-center text-white px-6 max-w-3xl">
- <p className="text-xs tracking-[0.3em] uppercase mb-6 text-white/80">
- KAMURA Explore
- </p>
- <h1 className="text-4xl md:text-6xl font-serif mb-6 leading-tight">
- Explore Wellness in the UAE
- </h1>
- <p className="text-lg md:text-xl text-white/90 leading-relaxed font-sans">
- Curated clinics, gyms, studios, courts &amp; retreats — handpicked
- for your wellness &amp; fitness journey.
- </p>
- </div>
- </section>
+  return (
+    <>
+      {/* Hero */}
+      <section className="pt-28 pb-10 md:pt-32 md:pb-14 bg-[#EDE7DB]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex items-end justify-between gap-8 flex-wrap">
+            <div className="flex-1 min-w-0 max-w-2xl">
+              <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-sans font-semibold mb-4">
+                Discover
+              </p>
+              <h1 className="font-serif text-4xl md:text-5xl text-gray-900 leading-[1.05] mb-4">
+                Find your people.
+              </h1>
+              <p className="text-base text-gray-600 font-sans leading-relaxed">
+                Every service, clinic, and practitioner — curated, verified,
+                and scored. Start with what you want to treat, or jump straight
+                to the people who deliver it.
+              </p>
+            </div>
 
- {/* Browse by Area + Compare */}
- <section className="max-w-6xl mx-auto px-6 pt-10 pb-4">
- <div className="flex flex-wrap items-center gap-3">
- <span className="text-sm text-gray-500 font-sans">Browse by area:</span>
- {areas.map((area) => (
- <Link
- key={area.slug}
- href={`/explore/area/${area.slug}`}
- className="px-3 py-1.5 text-xs font-sans rounded-full border border-gray-200 text-gray-600 hover:border-sage hover:text-moss transition-colors"
- >
- {area.name}
- </Link>
- ))}
- <span className="text-gray-200 mx-1">|</span>
- <Link
- href="/explore/compare"
- className="px-3 py-1.5 text-xs font-sans rounded-full border border-sage/30 text-moss hover:bg-sage/5 transition-colors"
- >
- Compare Centers
- </Link>
- </div>
- </section>
+            <div className="w-full md:w-[360px]">
+              <div className="relative">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <input
+                  type="text"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Search treatments, clinics, experts…"
+                  className="w-full bg-white border border-gray-200 rounded-full pl-11 pr-5 py-3.5 text-sm font-sans focus:outline-none focus:border-terracotta"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
- {/* Category Filter */}
- <section className="sticky top-[65px] z-40 bg-cream/95 backdrop-blur-sm border-b border-sage-light/60">
- <div className="max-w-6xl mx-auto px-6 py-4">
- <div className="flex gap-2 overflow-x-auto no-scrollbar">
- {["All", ...ALL_LISTING_CATEGORIES].map((cat) => (
- <button
- key={cat}
- onClick={() => scrollToCategory(cat)}
- className={`px-4 py-2 text-sm font-sans rounded-full border whitespace-nowrap transition-all duration-200 ${
- activeCategory === cat
- ? "bg-moss text-white border-moss"
- : "bg-white text-gray-600 border-gray-200 hover:border-sage"
- }`}
- >
- {cat}
- </button>
- ))}
- </div>
- </div>
- </section>
+      <HorizontalSection
+        eyebrow="Services"
+        title="By what you want to treat"
+        categories={SERVICE_CATEGORIES}
+        activeCategory={serviceCat}
+        onCategoryChange={setServiceCat}
+      >
+        {topServices.length === 0 ? (
+          <EmptyInline />
+        ) : (
+          topServices.map((t) => (
+            <Link
+              key={t.slug}
+              href={`/treatments/${t.slug}`}
+              className="group shrink-0 w-[220px] snap-start"
+            >
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-3 bg-gray-100">
+                <Image
+                  src={t.imageUrl}
+                  alt={t.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="220px"
+                />
+                <div className="absolute top-3 left-3">
+                  <ScoreTierPill score={t.kamuraScore} size="sm" />
+                </div>
+              </div>
+              <p className="text-[10px] tracking-[0.2em] uppercase text-gray-400 font-sans mb-1">
+                {t.category}
+              </p>
+              <h3 className="font-serif text-base text-gray-900 leading-tight group-hover:text-terracotta transition-colors line-clamp-2">
+                {t.name}
+              </h3>
+            </Link>
+          ))
+        )}
+      </HorizontalSection>
 
- {/* Category Sections */}
- <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
- {categoriesToShow.map((category) => {
- const catListings = getListingsForCategory(category);
- const colors = listingCategoryColors[category];
+      <HorizontalSection
+        eyebrow="Clinics"
+        title="Centers worth visiting"
+        categories={CLINIC_CATEGORIES}
+        activeCategory={clinicCat}
+        onCategoryChange={setClinicCat}
+        alt
+      >
+        {featuredClinics.length === 0 ? (
+          <EmptyInline />
+        ) : (
+          featuredClinics.map((l) => (
+            <Link
+              key={l.id}
+              href={`/explore/${l.id}`}
+              className="group shrink-0 w-[260px] snap-start"
+            >
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-3 bg-gray-100">
+                <Image
+                  src={clinicImage(l.id, l.category)}
+                  alt={l.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="260px"
+                />
+                {l.featured && (
+                  <span className="absolute top-3 left-3 px-2 py-1 rounded-full bg-white/90 backdrop-blur text-[9px] tracking-[0.15em] uppercase text-emerald-700 font-sans font-semibold">
+                    ✓ Featured
+                  </span>
+                )}
+              </div>
+              <p className="text-[10px] tracking-[0.2em] uppercase text-gray-400 font-sans mb-1">
+                {l.category}
+              </p>
+              <h3 className="font-serif text-base text-gray-900 leading-tight group-hover:text-terracotta transition-colors line-clamp-1">
+                {l.name}
+              </h3>
+              <p className="text-xs text-gray-500 font-sans mt-0.5">
+                {l.location || l.city}
+              </p>
+            </Link>
+          ))
+        )}
+      </HorizontalSection>
 
- return (
- <section
- key={category}
- id={`category-${category.replace(/\s+/g, "-").toLowerCase()}`}
- className="mb-16 last:mb-0 scroll-mt-36"
- >
- <div className="mb-8">
- <div className="flex items-center gap-3 mb-3">
- <span
- className={`text-xs px-2.5 py-1 rounded-full font-sans ${colors.bg} ${colors.text}`}
- >
- {catListings.length} {catListings.length === 1 ? "place" : "places"}
- </span>
- </div>
- <h2 className="font-serif text-2xl md:text-3xl text-gray-900 mb-2">
- {category}
- </h2>
- <p className="text-gray-500 font-sans leading-relaxed max-w-2xl">
- {categoryDescriptions[category]}
- </p>
- <div className="w-12 h-px bg-sage/40 mt-4" />
- </div>
+      <HorizontalSection
+        eyebrow="Your Experts"
+        title="Kamura-verified practitioners"
+        categories={PRACTITIONER_SPECIALTIES}
+        activeCategory={specialty}
+        onCategoryChange={setSpecialty}
+      >
+        {practitioners.length === 0 ? (
+          <EmptyInline />
+        ) : (
+          practitioners.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/provider/${p.slug}`}
+              className="group shrink-0 w-[240px] snap-start"
+            >
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-3 bg-gray-100">
+                <Image
+                  src={p.imageUrl}
+                  alt={p.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="240px"
+                />
+                {p.verified && (
+                  <span className="absolute top-3 left-3 px-2 py-1 rounded-full bg-white/90 backdrop-blur text-[9px] tracking-[0.15em] uppercase text-emerald-700 font-sans font-semibold">
+                    ✓ Verified
+                  </span>
+                )}
+              </div>
+              <h3 className="font-serif text-base text-gray-900 leading-tight group-hover:text-terracotta transition-colors">
+                {p.name}
+              </h3>
+              <p className="text-[11px] text-gray-500 font-sans mt-0.5">
+                {p.specialty} · {p.city}
+              </p>
+              <div className="flex items-center gap-1.5 mt-1.5 text-[11px] font-sans">
+                <span className="text-gray-700">★ {p.rating}</span>
+                <span className="text-gray-300">·</span>
+                <span className="text-gray-400">
+                  From AED {p.startingPriceAed.toLocaleString()}
+                </span>
+              </div>
+            </Link>
+          ))
+        )}
+      </HorizontalSection>
 
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
- {catListings.map((listing, i) => (
- <article
- key={listing.id}
- className="fade-in-on-scroll opacity-0 translate-y-4 transition-all duration-500 border border-gray-200 rounded-xl p-6 bg-white hover:shadow-md flex flex-col"
- style={{ transitionDelay: `${i * 80}ms` }}
- >
- <div className="flex items-center gap-2 mb-4">
- <span
- className={`text-xs px-2.5 py-1 rounded-full font-sans ${colors.bg} ${colors.text}`}
- >
- {listing.category}
- </span>
- {listing.featured && (
- <span className="text-xs px-2.5 py-1 rounded-full font-sans bg-terracotta/10 text-terracotta">
- Featured
- </span>
- )}
- </div>
+      {/* Provider CTA */}
+      <section className="py-20 bg-[#1a0f0c]">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="text-[10px] tracking-[0.3em] uppercase text-kamura-gold font-sans font-semibold mb-4">
+            Are you a provider?
+          </p>
+          <h2 className="font-serif text-3xl md:text-4xl text-white leading-tight mb-4">
+            Get listed on Kamura.
+          </h2>
+          <p className="text-base text-white/70 font-sans leading-relaxed mb-8 max-w-xl mx-auto">
+            Join clinicians and practitioners reaching wellness-focused clients
+            across the GCC. Free to list — verified listings get priority.
+          </p>
+          <Link
+            href="/provider/signup"
+            className="inline-block px-7 py-3.5 bg-white text-[#2a1612] text-xs tracking-[0.15em] uppercase font-semibold rounded-full hover:bg-white/90 transition-colors font-sans"
+          >
+            Create your provider profile
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}
 
- <h3 className="font-serif text-xl text-gray-900 leading-snug mb-1">
- <Link
- href={`/explore/${listing.id}`}
- className="hover:text-terracotta transition-colors"
- >
- {listing.name}
- </Link>
- </h3>
- <p className="text-sm text-terracotta font-sans mb-3">
- {listing.tagline}
- </p>
- <p className="text-sm text-gray-500 leading-relaxed font-sans mb-4 flex-1">
- {listing.description}
- </p>
+function HorizontalSection({
+  eyebrow,
+  title,
+  categories,
+  activeCategory,
+  onCategoryChange,
+  children,
+  alt = false,
+}: {
+  eyebrow: string;
+  title: string;
+  categories: string[];
+  activeCategory: string;
+  onCategoryChange: (c: string) => void;
+  children: React.ReactNode;
+  alt?: boolean;
+}) {
+  return (
+    <section className={`py-14 md:py-16 ${alt ? "bg-[#FAF8F5]" : "bg-white"}`}>
+      <div className="max-w-6xl mx-auto">
+        <div className="px-6 mb-5">
+          <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-sans font-semibold mb-2">
+            {eyebrow}
+          </p>
+          <h2 className="font-serif text-2xl md:text-3xl text-gray-900 leading-tight">
+            {title}
+          </h2>
+        </div>
 
- <div className="flex items-center gap-1.5 text-sm text-gray-600 font-sans mb-4">
- <svg
- width="14"
- height="14"
- viewBox="0 0 24 24"
- fill="none"
- stroke="currentColor"
- strokeWidth="1.5"
- strokeLinecap="round"
- strokeLinejoin="round"
- >
- <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
- <circle cx="12" cy="10" r="3" />
- </svg>
- {listing.location}, {listing.city}
- </div>
+        <div className="flex items-center gap-2 mb-6 px-6 overflow-x-auto no-scrollbar">
+          {categories.map((c) => (
+            <button
+              key={c}
+              onClick={() => onCategoryChange(c)}
+              className={`shrink-0 px-4 py-2 rounded-full text-xs font-sans font-semibold border transition-colors ${
+                activeCategory === c
+                  ? "bg-[#2a1612] text-white border-[#2a1612]"
+                  : "bg-white text-gray-600 border-gray-200 hover:border-gray-300"
+              }`}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
 
- <a
- href={listing.website}
- target="_blank"
- rel="noopener noreferrer"
- className="inline-flex items-center gap-1 text-sm text-terracotta hover:text-terracotta-dark transition-colors font-sans"
- >
- Visit Website
- <svg
- width="14"
- height="14"
- viewBox="0 0 24 24"
- fill="none"
- stroke="currentColor"
- strokeWidth="2"
- strokeLinecap="round"
- strokeLinejoin="round"
- >
- <line x1="7" y1="17" x2="17" y2="7" />
- <polyline points="7 7 17 7 17 17" />
- </svg>
- </a>
- </article>
- ))}
- </div>
- </section>
- );
- })}
- </div>
+        <div className="flex gap-4 md:gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar pb-4 px-6">
+          {children}
+        </div>
+      </div>
 
- {/* Bottom CTA */}
- <section className="border-t border-sage-light/60 bg-zen-mist/50">
- <div className="max-w-xl mx-auto px-6 py-20 text-center">
- <h2 className="font-serif text-2xl text-gray-900 mb-4">
- Know a place we should feature?
- </h2>
- <p className="text-sm text-gray-500 mb-8 font-sans leading-relaxed">
- We&apos;re always looking for outstanding wellness spaces across the
- UAE. If you know a clinic, studio, or practitioner we should
- include, let us know.
- </p>
- <a
- href="mailto:hello@kamuralife.com"
- className="inline-block bg-moss text-white px-8 py-3 text-sm tracking-[0.1em] uppercase hover:bg-forest transition-colors font-sans"
- >
- Suggest a Place
- </a>
- </div>
- </section>
- </>
- );
+      <style jsx>{`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
+    </section>
+  );
+}
+
+function EmptyInline() {
+  return (
+    <div className="w-full px-6">
+      <p className="text-sm text-gray-400 font-sans italic">
+        Nothing matches — try another filter.
+      </p>
+    </div>
+  );
 }
