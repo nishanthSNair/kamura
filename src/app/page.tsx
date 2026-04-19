@@ -5,7 +5,6 @@ import { treatments } from "@/data/treatments";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 import { FEATURED_PRACTITIONERS } from "@/data/featured-practitioners";
 import ServiceCarousel from "@/components/home/ServiceCarousel";
-import PeptidePen from "@/components/home/PeptidePen";
 
 export const metadata: Metadata = {
   title: "KAMURA — Wellness, Redefined for Real Life",
@@ -335,15 +334,6 @@ export default function Home() {
           </FadeInOnScroll>
           <FadeInOnScroll delay={120}>
             <ServiceCarousel />
-          </FadeInOnScroll>
-        </div>
-      </section>
-
-      {/* ────────── Interactive peptide pen ────────── */}
-      <section className="py-16 md:py-24 bg-[#FAF7F2]">
-        <div className="max-w-6xl mx-auto px-6">
-          <FadeInOnScroll>
-            <PeptidePen />
           </FadeInOnScroll>
         </div>
       </section>
