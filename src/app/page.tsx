@@ -4,12 +4,11 @@ import Link from "next/link";
 import { treatments } from "@/data/treatments";
 import { FEATURED_PRACTITIONERS } from "@/data/featured-practitioners";
 import ServiceCarousel from "@/components/home/ServiceCarousel";
-import HeroHeadline from "@/components/home/HeroHeadline";
 import ScrollProgress from "@/components/home/ScrollProgress";
-import AmbientOrbs from "@/components/home/AmbientOrbs";
 import Reveal from "@/components/home/Reveal";
 import MagneticButton from "@/components/home/MagneticButton";
 import BentoTile from "@/components/home/BentoTile";
+import BackgroundPathsHero from "@/components/home/BackgroundPathsHero";
 
 export const metadata: Metadata = {
   title: "KAMURA — Wellness, Redefined for Real Life",
@@ -84,47 +83,17 @@ export default function Home() {
 
       <ScrollProgress />
 
-      {/* ────────── HERO ────────── */}
-      <section className="relative overflow-hidden bg-[#2D3E2D] text-white pt-28 md:pt-36 pb-0">
-        <AmbientOrbs />
+      {/* ────────── HERO — flowing paths ────────── */}
+      <BackgroundPathsHero
+        title="Wellness, redefined."
+        subhead="Discover, book, source, and track your wellness journey — all in one connected platform, built for the GCC."
+        primaryCta={{ href: "/treatments", label: "Explore treatments" }}
+        secondaryCta={{ href: "/peptides", label: "Join peptides waitlist" }}
+      />
 
-        {/* Watermark */}
-        <div
-          className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-[0.04] select-none"
-          aria-hidden
-        >
-          <span
-            className="font-serif tracking-[0.2em] text-white whitespace-nowrap"
-            style={{ fontSize: "min(24vw, 340px)" }}
-          >
-            KAMURA
-          </span>
-        </div>
-
-        <div className="relative max-w-6xl mx-auto px-6 text-center">
-          <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#C4A882]/30 bg-white/5 backdrop-blur px-4 py-1.5 text-[11px] tracking-[0.2em] uppercase text-[#E5D3B0] mb-8">
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-[#C4A882] opacity-75 animate-ping" />
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#C4A882]" />
-              </span>
-              Built for the GCC
-            </div>
-          </Reveal>
-
-          <HeroHeadline />
-
-          <Reveal delay={0.8}>
-            <p className="mt-7 text-base md:text-lg text-white/70 max-w-xl mx-auto">
-              Evidence-scored treatments. Vetted practitioners. The tools to track your
-              protocol.
-              <br className="hidden md:block" /> No guesswork. Just care that works.
-            </p>
-          </Reveal>
-        </div>
-
-        {/* 5-tile bento — 3 wide + narrow/wide split */}
-        <div className="relative max-w-6xl mx-auto px-6 mt-14 md:mt-20 pb-16 md:pb-20">
+      {/* ────────── 5-tile bento ────────── */}
+      <section className="bg-[#2D3E2D] pb-16 md:pb-24">
+        <div className="relative max-w-6xl mx-auto px-6">
           <div className="grid gap-4 md:gap-5 md:grid-cols-3">
             <BentoTile
               href="/treatments"
