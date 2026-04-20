@@ -10,7 +10,6 @@ import JoinModal from "./JoinModal";
 import { useI18n } from "@/lib/i18n";
 
 function hasLightTop(p: string): boolean {
- if (p === "/") return true;
  if (p.startsWith("/blog/") && p !== "/blog") return true;
  if (p.startsWith("/events/") && p !== "/events") return true;
  if (p.startsWith("/explore/") && p !== "/explore") return true;
