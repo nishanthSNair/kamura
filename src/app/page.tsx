@@ -185,10 +185,9 @@ export default function Home() {
 
       {/* ────────── Trust strip ────────── */}
       <section className="bg-[#2A2520] text-[#C4A882] border-y border-[#C4A882]/15">
-        <div className="max-w-6xl mx-auto px-6 py-5 grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
+        <div className="max-w-6xl mx-auto px-6 py-5 grid grid-cols-3 gap-6 text-center md:text-left">
           {[
             { icon: "◎", label: "Evidence-scored" },
-            { icon: "✓", label: "DHA / MOHAP compliant" },
             { icon: "⚲", label: "Vetted practitioners" },
             { icon: "◈", label: "Built in the UAE" },
           ].map((item, i) => (
