@@ -16,57 +16,57 @@ const SERVICES: Service[] = [
     slug: "/treatments/sound-healing",
     label: "Sound Healing",
     blurb: "Vagal tone & stress reset",
-    image: "https://images.unsplash.com/photo-1528659882437-b89a74bc157f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1681310375333-73f41177e50f?w=800&q=80&fit=crop",
     accent: "#B5886A",
   },
   {
     slug: "/treatments/red-light-therapy",
     label: "Red Light Therapy",
     blurb: "Mitochondria & skin repair",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1772289935544-e5e6cf99adc9?w=800&q=80&fit=crop",
     accent: "#9A5F57",
   },
   {
     slug: "/treatments/cryotherapy",
     label: "Cryotherapy",
     blurb: "Recovery & inflammation",
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1611876385388-94a5e97a219a?w=800&q=80&fit=crop",
     accent: "#4A5E3E",
   },
   {
     slug: "/treatments/iv-therapy",
     label: "IV Therapy",
     blurb: "Hydration, NAD+, vitamins",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&q=80&fit=crop",
     accent: "#7B8D68",
   },
   {
     slug: "/treatments/hyperbaric-oxygen-therapy",
     label: "Hyperbaric O₂",
     blurb: "Healing & cognition",
-    image: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1765830403209-a5eceac4c198?w=800&q=80&fit=crop",
     accent: "#C4A882",
-  },
-  {
-    slug: "/treatments/breathwork",
-    label: "Breathwork",
-    blurb: "Nervous-system regulation",
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
-    accent: "#96A78B",
-  },
-  {
-    slug: "/treatments/cold-plunge",
-    label: "Cold Plunge",
-    blurb: "Dopamine & resilience",
-    image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80",
-    accent: "#60A5FA",
   },
   {
     slug: "/treatments/infrared-sauna",
     label: "Infrared Sauna",
     blurb: "Detox & cardiovascular",
-    image: "https://images.unsplash.com/photo-1554057009-dc1d97f0663f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1759302354553-cf87ceb9135c?w=800&q=80&fit=crop",
     accent: "#B5886A",
+  },
+  {
+    slug: "/treatments/cold-plunge",
+    label: "Cold Plunge",
+    blurb: "Dopamine & resilience",
+    image: "https://images.unsplash.com/photo-1604480132736-44c188fe4d20?w=800&q=80&fit=crop",
+    accent: "#60A5FA",
+  },
+  {
+    slug: "/treatments/meditation",
+    label: "Meditation",
+    blurb: "Focus, calm, nervous system",
+    image: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=800&q=80&fit=crop",
+    accent: "#96A78B",
   },
 ];
 
@@ -134,7 +134,6 @@ export default function ServiceCarousel() {
         </Link>
       </div>
 
-      {/* Arrow controls */}
       <button
         aria-label="Scroll left"
         onClick={() => scroll("left")}
