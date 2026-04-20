@@ -5,11 +5,11 @@ import { treatments } from "@/data/treatments";
 import { FEATURED_PRACTITIONERS } from "@/data/featured-practitioners";
 import ServiceCarousel from "@/components/home/ServiceCarousel";
 import HeroHeadline from "@/components/home/HeroHeadline";
-import HeroCard from "@/components/home/HeroCard";
 import ScrollProgress from "@/components/home/ScrollProgress";
 import AmbientOrbs from "@/components/home/AmbientOrbs";
 import Reveal from "@/components/home/Reveal";
 import MagneticButton from "@/components/home/MagneticButton";
+import BentoTile from "@/components/home/BentoTile";
 
 export const metadata: Metadata = {
   title: "KAMURA — Wellness, Redefined for Real Life",
@@ -123,44 +123,61 @@ export default function Home() {
           </Reveal>
         </div>
 
-        {/* 3 hero cards with 3D tilt */}
-        <div className="relative max-w-6xl mx-auto px-6 mt-16 md:mt-20">
-          <div className="grid gap-5 md:grid-cols-3 pb-16 md:pb-20">
-            <HeroCard
+        {/* 5-tile bento — 3 wide + narrow/wide split */}
+        <div className="relative max-w-6xl mx-auto px-6 mt-14 md:mt-20 pb-16 md:pb-20">
+          <div className="grid gap-4 md:gap-5 md:grid-cols-3">
+            <BentoTile
               href="/treatments"
-              label="Find"
-              title="Your treatment"
-              subtitle={`${treatments.length}+ services, scored & verified`}
-              image="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=85"
-              imageAlt="Red light therapy"
-              gradient="linear-gradient(135deg, #F5E8DF 0%, #EFDDCE 100%)"
-              accent="#9A5F57"
+              label="Discover"
+              title="Book treatments"
+              subtitle="Find the right wellness services"
+              icon="lotus"
+              cornerIcon="calendar"
+              theme="dark"
               index={0}
-              floatDelay={0}
             />
-            <HeroCard
-              href="/provider/signup"
-              label="Grow"
-              title="List your service"
-              subtitle="Get discovered by patients"
-              image="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=85"
-              imageAlt="Practitioner"
-              gradient="linear-gradient(135deg, #E5ECD9 0%, #D6DDD0 100%)"
-              accent="#4A5E3E"
+            <BentoTile
+              href="/my"
+              label="Track"
+              title="Your journey"
+              subtitle="Manage protocols and appointments"
+              icon="heart-ecg"
+              cornerIcon="chart"
+              theme="dark"
               index={1}
-              floatDelay={1.5}
             />
-            <HeroCard
+            <BentoTile
               href="/peptides"
-              label="Longevity"
+              label="Source"
               title="Peptides & longevity"
-              subtitle="The intelligence hub"
-              image="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=85"
-              imageAlt="Peptide vial"
-              gradient="linear-gradient(135deg, #FDF2E0 0%, #F5E2C0 100%)"
-              accent="#9A7357"
+              subtitle="Pharmaceutical-grade, compliantly sourced"
+              icon="molecule"
+              cornerIcon="flask"
+              theme="dark"
+              badge="Coming soon · Join the waitlist"
               index={2}
-              floatDelay={3}
+            />
+          </div>
+          <div className="grid gap-4 md:gap-5 md:grid-cols-[1fr_2fr] mt-4 md:mt-5">
+            <BentoTile
+              href="/wellness-checker"
+              label="Start here"
+              title="Not sure where to start?"
+              subtitle="Take the wellness check."
+              icon="leaf"
+              cornerIcon="leaf"
+              theme="dark"
+              index={3}
+            />
+            <BentoTile
+              href="/list-your-business"
+              label="For clinics & partners"
+              title="Grow with Kamura"
+              subtitle="See the platform and dashboard"
+              icon="people"
+              cornerIcon="people"
+              theme="light"
+              index={4}
             />
           </div>
         </div>
@@ -187,49 +204,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ────────── Quick-access pills ────────── */}
-      <section className="py-10 md:py-14 bg-[#FAF7F2]">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-3">
-          <Reveal>
-            <Link
-              href="/wellness-checker"
-              className="group bg-white hover:shadow-lg transition-all rounded-2xl px-6 py-5 border border-[#2A2520]/5 flex items-center gap-4"
-            >
-              <span className="w-12 h-12 rounded-xl bg-[#B0BCA4]/30 flex items-center justify-center text-xl text-[#4A5E3E] group-hover:scale-110 transition-transform duration-300">
-                ✓
-              </span>
-              <div className="flex-1">
-                <div className="font-semibold text-[#2A2520]">Not sure what you need?</div>
-                <div className="text-sm text-[#2A2520]/60">
-                  Take the 2-minute wellness checker.
-                </div>
-              </div>
-              <span className="text-[#2A2520]/40 group-hover:text-terracotta group-hover:translate-x-1 transition-all">
-                →
-              </span>
-            </Link>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <Link
-              href="/peptides"
-              className="group bg-white hover:shadow-lg transition-all rounded-2xl px-6 py-5 border border-[#2A2520]/5 flex items-center gap-4"
-            >
-              <span className="w-12 h-12 rounded-xl bg-[#C4A882]/25 flex items-center justify-center text-xl text-[#9A7357] group-hover:scale-110 transition-transform duration-300">
-                ⚗
-              </span>
-              <div className="flex-1">
-                <div className="font-semibold text-[#2A2520]">Peptide tools</div>
-                <div className="text-sm text-[#2A2520]/60">
-                  Directory, protocol builder, dose tracker.
-                </div>
-              </div>
-              <span className="text-[#2A2520]/40 group-hover:text-terracotta group-hover:translate-x-1 transition-all">
-                →
-              </span>
-            </Link>
-          </Reveal>
-        </div>
-      </section>
 
       {/* ────────── Service carousel ────────── */}
       <section className="py-16 md:py-24 bg-white">
