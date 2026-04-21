@@ -130,96 +130,81 @@ export default function Navigation() {
    </span>
    </Link>
 
-   {/* Center — Pill capsule nav (desktop) */}
-   <div
-    className={`hidden md:flex items-center gap-0.5 p-1 rounded-full backdrop-blur-md transition-all border ${
-    solid
-     ? "bg-white/80 border-[#2A2520]/10 shadow-[0_2px_12px_-6px_rgba(42,37,32,0.15)]"
-     : "bg-white/10 border-white/20"
-    }`}
-   >
-    <div ref={discoverRef} className="relative">
+   {/* Center — Action nav (desktop) */}
+   <div className="hidden md:flex items-center gap-7 text-sm font-sans">
+   <div ref={discoverRef} className="relative">
     <button
-     onClick={() => setDiscoverOpen(!discoverOpen)}
-     className={`inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full text-[13px] font-medium transition-all ${
-     solid
-      ? "text-[#2A2520]/85 hover:bg-[#2A2520]/6 hover:text-[#2A2520]"
-      : "text-white/90 hover:bg-white/15 hover:text-white"
-     }`}
+    onClick={() => setDiscoverOpen(!discoverOpen)}
+    className={`flex items-center gap-1 transition-colors font-medium ${
+     solid ? "text-gray-800 hover:text-terracotta" : "text-white/90 hover:text-white"
+    }`}
     >
-     {t("nav.discover")}
-     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className={`transition-transform ${discoverOpen ? "rotate-180" : ""}`}>
+    {t("nav.discover")}
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className={`transition-transform ${discoverOpen ? "rotate-180" : ""}`}>
      <polyline points="6 9 12 15 18 9" />
-     </svg>
+    </svg>
     </button>
     {discoverOpen && (
-     <div className="absolute top-full left-0 mt-3 w-[640px] bg-white rounded-2xl shadow-xl border border-gray-200/80 p-6 z-50 grid grid-cols-3 gap-5">
+    <div className="absolute top-full left-0 mt-2 w-[640px] bg-white rounded-2xl shadow-xl border border-gray-200/80 p-6 z-50 grid grid-cols-3 gap-5">
      {DISCOVER_GROUPS.map((group) => (
-      <div key={group.label}>
+     <div key={group.label}>
       {group.href ? (
-       <Link
+      <Link
        href={group.href}
        className="block font-serif text-lg text-gray-900 mb-3 pb-2 border-b border-gray-100 hover:text-terracotta transition-colors"
-       >
+      >
        {group.label}
-       </Link>
+      </Link>
       ) : (
-       <h3 className="font-serif text-lg text-gray-900 mb-3 pb-2 border-b border-gray-100">
+      <h3 className="font-serif text-lg text-gray-900 mb-3 pb-2 border-b border-gray-100">
        {group.label}
-       </h3>
+      </h3>
       )}
       <ul className="space-y-1">
-       {group.items.map((item) => (
+      {group.items.map((item) => (
        <li key={item.href}>
-        <Link
+       <Link
         href={item.href}
         className="block px-3 py-2 rounded-lg hover:bg-[#EDE7DB]/60 transition-colors"
-        >
+       >
         <span className="block text-sm font-medium text-gray-900">{item.label}</span>
         <span className="block text-xs text-gray-400 mt-0.5 leading-snug">{item.desc}</span>
-        </Link>
+       </Link>
        </li>
-       ))}
+      ))}
       </ul>
-      </div>
-     ))}
      </div>
-    )}
+     ))}
     </div>
-
-    {[
-    { href: "/explore", label: "Providers" },
-    { href: "/wellness-checker", label: "Wellness" },
-    { href: "/my", label: "Dashboard" },
-    { href: "/blog", label: "Blog" },
-    { href: "/about", label: "About" },
-    ].map((item) => {
-    const active = pathname === item.href || pathname.startsWith(item.href + "/");
-    return (
-     <Link
-     key={item.href}
-     href={item.href}
-     className={`px-3.5 py-1.5 rounded-full text-[13px] font-medium transition-all ${
-      solid
-      ? active
-       ? "bg-[#2A2520]/8 text-[#2A2520]"
-       : "text-[#2A2520]/85 hover:bg-[#2A2520]/6 hover:text-[#2A2520]"
-      : active
-       ? "bg-white/25 text-white"
-       : "text-white/90 hover:bg-white/15 hover:text-white"
-     }`}
-     >
-     {item.label}
-     </Link>
-    );
-    })}
+    )}
    </div>
 
-   {/* Right — utilities + CTA + Mobile hamburger */}
-   <div className="flex items-center gap-3">
+   <Link
+    href="/explore"
+    className={`transition-colors font-medium ${solid ? "text-gray-800 hover:text-terracotta" : "text-white/90 hover:text-white"}`}
+   >
+    {t("nav.providers")}
+   </Link>
+
+   <Link
+    href="/wellness-checker"
+    className={`transition-colors font-medium ${solid ? "text-gray-800 hover:text-terracotta" : "text-white/90 hover:text-white"}`}
+   >
+    {t("nav.wellness")}
+   </Link>
+
+   <Link
+    href="/my"
+    className={`transition-colors font-medium ${solid ? "text-gray-800 hover:text-terracotta" : "text-white/90 hover:text-white"}`}
+   >
+    Dashboard
+   </Link>
+
+   <LanguageToggle solid={solid} />
+
    <button
     onClick={() => setSearchOpen(true)}
-    className={`hidden md:inline-flex transition-colors ${solid ? "text-[#2A2520]/75 hover:text-terracotta" : "text-white/90 hover:text-white"}`}
+    className={`transition-colors ${solid ? "text-gray-800 hover:text-terracotta" : "text-white/90 hover:text-white"}`}
     aria-label="Search"
    >
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -227,9 +212,10 @@ export default function Navigation() {
     <line x1="21" y1="21" x2="16.65" y2="16.65" />
     </svg>
    </button>
-   <div className="hidden md:block">
-    <LanguageToggle solid={solid} />
    </div>
+
+   {/* Right — CTA + Mobile hamburger */}
+   <div className="flex items-center gap-3">
    <button
     onClick={() => setJoinOpen(true)}
     className="hidden md:inline-flex items-center px-5 py-2 bg-terracotta hover:bg-terracotta-dark text-white text-sm font-sans font-semibold rounded-full transition-colors"

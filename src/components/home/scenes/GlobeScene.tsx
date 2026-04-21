@@ -31,19 +31,19 @@ export default function GlobeScene({ onHover }: Props) {
     rim.position.set(-4, -2, -2);
     scene.add(rim);
 
-    // Glass gold-tinted sphere — warm accent on dark sage card
+    // Glass forest-tinted sphere (no oxblood)
     const sphere = new THREE.Mesh(
       new THREE.SphereGeometry(2.1, 64, 48),
       new THREE.MeshPhysicalMaterial({
-        color: 0xd4b896,
-        roughness: 0.18,
+        color: 0x1e2a1e,
+        roughness: 0.15,
         metalness: 0.0,
-        transmission: 0.75,
+        transmission: 0.85,
         thickness: 0.6,
         clearcoat: 1,
-        clearcoatRoughness: 0.12,
+        clearcoatRoughness: 0.1,
         transparent: true,
-        opacity: 0.78,
+        opacity: 0.85,
       })
     );
     scene.add(sphere);
