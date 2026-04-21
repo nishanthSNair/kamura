@@ -4,7 +4,6 @@ import ScrollProgress from "@/components/home/ScrollProgress";
 import HeroTiles from "@/components/home/HeroTiles";
 import PrimaryTiles from "@/components/home/PrimaryTiles";
 import SecondaryTiles from "@/components/home/SecondaryTiles";
-import VerbsSection from "@/components/home/VerbsSection";
 import PeptideSection from "@/components/home/PeptideSection";
 import FooterCta from "@/components/home/FooterCta";
 import StickyActions from "@/components/home/StickyActions";
@@ -83,7 +82,6 @@ export default function Home() {
         <PrimaryTiles />
         <PeptideSection />
         <SecondaryTiles />
-        <VerbsSection />
         <FooterCta />
         <StickyActions />
       </div>
