@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function FooterCta() {
   return (
     <section className="px-4 md:px-6 pt-6 md:pt-8 pb-6 md:pb-8">
-     <div className="relative overflow-hidden mx-auto max-w-[1280px] rounded-[40px] bg-[#3F5A3C] py-[120px] md:py-[140px] px-8 md:px-14 shadow-[0_24px_60px_-24px_rgba(42,37,32,0.3)]">
+     <div className="relative overflow-hidden mx-auto max-w-[1280px] rounded-[40px] bg-[#4B6B47] py-[120px] md:py-[140px] px-8 md:px-14 shadow-[0_24px_60px_-24px_rgba(42,37,32,0.3)]">
       <svg
         className="absolute inset-0 w-full h-full opacity-25 pointer-events-none"
         viewBox="0 0 1440 600"

@@ -46,7 +46,7 @@ export default function SecondaryTiles() {
           >
             <Link
               href={tile.href}
-              className="group relative block h-[124px] rounded-[28px] overflow-hidden p-6 bg-[#3F5A3C] hover:bg-[#35502F] text-white shadow-[0_10px_30px_-16px_rgba(42,37,32,0.28)] hover:shadow-[0_20px_40px_-18px_rgba(42,37,32,0.35)] hover:-translate-y-0.5 transition-all duration-500 flex items-center gap-5"
+              className="group relative block h-[124px] rounded-[28px] overflow-hidden p-6 bg-[#4B6B47] hover:bg-[#3E5A3A] text-white shadow-[0_10px_30px_-16px_rgba(42,37,32,0.28)] hover:shadow-[0_20px_40px_-18px_rgba(42,37,32,0.35)] hover:-translate-y-0.5 transition-all duration-500 flex items-center gap-5"
             >
               <div className="w-12 h-12 shrink-0 rounded-xl grid place-items-center bg-white/10 border border-white/20 text-white/85">
                 <div className="w-5 h-5">{ICONS[tile.k]}</div>

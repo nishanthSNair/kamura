@@ -73,7 +73,7 @@ const ICONS: Record<string, React.ReactNode> = {
 
 export default function PrimaryTiles() {
   return (
-    <section className="relative z-10 px-4 md:px-6 -mt-[72px] md:-mt-[100px]">
+    <section className="relative z-10 px-4 md:px-6 -mt-[60px] md:-mt-[80px]">
       <div className="mx-auto max-w-[1280px] grid grid-cols-2 lg:grid-cols-4 gap-4">
         {PRIMARY.map((tile, i) => (
           <motion.div

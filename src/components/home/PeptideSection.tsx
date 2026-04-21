@@ -1,52 +1,58 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import PeptideScene, { type PeptideSceneHandle } from "./scenes/PeptideScene";
+import { useState } from "react";
 
 export default function PeptideSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const sceneRef = useRef<PeptideSceneHandle>(null);
   const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
-    const onScroll = () => {
-      const rect = section.getBoundingClientRect();
-      const top = rect.top + window.scrollY - window.innerHeight * 0.6;
-      const h = section.offsetHeight;
-      const p = Math.max(
-        0,
-        Math.min(1, (window.scrollY - top) / Math.max(1, h * 0.7))
-      );
-      sceneRef.current?.setProgress(p);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <section id="peptides" className="px-4 md:px-6 pt-6 md:pt-8">
-      <div
-        ref={sectionRef}
-        className="relative mx-auto max-w-[1280px] rounded-[40px] overflow-hidden bg-[#3F5A3C] text-white py-[120px] md:py-[140px] px-6 md:px-12 shadow-[0_24px_60px_-24px_rgba(42,37,32,0.3)]"
-      >
+      <div className="relative mx-auto max-w-[1280px] rounded-[40px] overflow-hidden bg-[#4B6B47] text-white py-[80px] md:py-[100px] px-6 md:px-12 shadow-[0_24px_60px_-24px_rgba(42,37,32,0.3)]">
         <div className="relative max-w-[1152px] mx-auto text-center">
           <div className="text-[10px] font-semibold tracking-[0.32em] uppercase text-white/75 mb-6">
             Pharmaceutical-grade · Coming soon
           </div>
           <h2
             className="font-serif font-medium leading-[1.05] tracking-[-0.015em] m-0 mb-6 mx-auto max-w-[16ch]"
-            style={{ fontSize: "clamp(40px, 6vw, 84px)" }}
+            style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
           >
             You are written <i className="italic text-[#D4B896]">in peptides.</i>
           </h2>
-          <p className="text-[17px] leading-[1.65] text-white/75 max-w-[520px] mx-auto mb-14">
+          <p className="text-[16px] leading-[1.6] text-white/75 max-w-[480px] mx-auto mb-10">
             Licensed compounding partners. Compliantly sourced. A pharmacy layer built
             into the wellness platform — not bolted on.
           </p>
-          <div className="relative mx-auto h-[320px] mb-14 max-w-[960px]">
-            <PeptideScene ref={sceneRef} />
+
+          {/* Static SVG molecule — reliable render, no JS/3D dependency */}
+          <div className="relative mx-auto mb-12 w-full max-w-[420px] h-[140px]">
+            <svg viewBox="0 0 420 140" className="w-full h-full" aria-hidden>
+              <defs>
+                <linearGradient id="bond" x1="0" x2="1">
+                  <stop offset="0%" stopColor="#D4B896" stopOpacity="0.85" />
+                  <stop offset="100%" stopColor="#D4B896" stopOpacity="0.25" />
+                </linearGradient>
+              </defs>
+              <g stroke="url(#bond)" strokeWidth="1.4" strokeLinecap="round">
+                <line x1="50" y1="70" x2="115" y2="45" />
+                <line x1="115" y1="45" x2="180" y2="70" />
+                <line x1="180" y1="70" x2="245" y2="45" />
+                <line x1="245" y1="45" x2="310" y2="70" />
+                <line x1="310" y1="70" x2="375" y2="45" />
+                <line x1="115" y1="45" x2="115" y2="20" />
+                <line x1="245" y1="45" x2="245" y2="20" />
+              </g>
+              {[
+                { cx: 50, cy: 70, r: 9, c: "#D4B896" },
+                { cx: 115, cy: 45, r: 11, c: "#C4A882" },
+                { cx: 180, cy: 70, r: 9, c: "#D4B896" },
+                { cx: 245, cy: 45, r: 11, c: "#C4A882" },
+                { cx: 310, cy: 70, r: 9, c: "#D4B896" },
+                { cx: 375, cy: 45, r: 9, c: "#D4B896" },
+                { cx: 115, cy: 20, r: 6, c: "rgba(255,255,255,0.6)" },
+                { cx: 245, cy: 20, r: 6, c: "rgba(255,255,255,0.6)" },
+              ].map((d, i) => (
+                <circle key={i} cx={d.cx} cy={d.cy} r={d.r} fill={d.c} />
+              ))}
+            </svg>
           </div>
 
           {submitted ? (
@@ -57,7 +63,7 @@ export default function PeptideSection() {
             </div>
           ) : (
             <form
-              className="flex gap-2 max-w-[440px] mx-auto bg-white/8 border border-white/20 rounded-full p-1.5 backdrop-blur-md"
+              className="flex gap-2 max-w-[440px] mx-auto bg-white/10 border border-white/20 rounded-full p-1.5 backdrop-blur-md"
               onSubmit={(e) => {
                 e.preventDefault();
                 setSubmitted(true);

@@ -9,7 +9,7 @@ export default function HeroTiles() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.22, 0.65, 0.2, 1] as const }}
-        className="relative mx-auto max-w-[1280px] min-h-[72vh] md:min-h-[78vh] rounded-[40px] overflow-hidden bg-[#3F5A3C] shadow-[0_24px_60px_-24px_rgba(42,37,32,0.3)]"
+        className="relative mx-auto max-w-[1280px] min-h-[72vh] md:min-h-[78vh] rounded-[40px] overflow-hidden bg-[#4B6B47] shadow-[0_24px_60px_-24px_rgba(42,37,32,0.3)]"
       >
         <Image
           src="/images/hero-home.png"
@@ -20,11 +20,11 @@ export default function HeroTiles() {
           sizes="(max-width: 1280px) 100vw, 1280px"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-b from-[#2F4930]/70 via-[#2F4930]/30 to-[#2F4930]/75"
+          className="absolute inset-0 bg-gradient-to-b from-[#2F4930]/45 via-[#2F4930]/15 to-[#2F4930]/60"
           aria-hidden
         />
 
-        <div className="relative h-full min-h-[72vh] md:min-h-[78vh] flex flex-col justify-end px-8 md:px-16 py-12 md:py-16 text-white">
+        <div className="relative h-full min-h-[72vh] md:min-h-[78vh] flex flex-col justify-end px-8 md:px-16 pt-12 md:pt-16 pb-[140px] md:pb-[160px] text-white">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}

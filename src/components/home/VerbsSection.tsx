@@ -60,7 +60,7 @@ export default function VerbsSection() {
      <div
       ref={sectionRef}
       className="relative mx-auto max-w-[1280px] rounded-[40px] overflow-hidden bg-[#FAF7F2] text-[#2A2520] shadow-[0_24px_60px_-24px_rgba(42,37,32,0.15)]"
-      style={{ height: "380vh" }}
+      style={{ height: "200vh" }}
      >
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         <div className="relative max-w-[1152px] mx-auto w-full px-6 md:px-12 grid md:grid-cols-2 gap-8 md:gap-16 items-center">
@@ -84,13 +84,13 @@ export default function VerbsSection() {
                     {v.idx} · of · 04
                   </div>
                   <h2
-                    className={`font-serif font-medium leading-[0.9] tracking-[-0.03em] m-0 mb-4 bg-clip-text ${
+                    className={`font-serif font-medium leading-[0.95] tracking-[-0.02em] m-0 mb-5 bg-clip-text break-words ${
                       isSource
                         ? "bg-gradient-to-b from-[#8DA970] to-[#6B8B4E]"
                         : "bg-gradient-to-b from-[#2A2520] to-[#B5886A]"
                     }`}
                     style={{
-                      fontSize: "clamp(80px, 12vw, 180px)",
+                      fontSize: "clamp(56px, 8vw, 120px)",
                       WebkitTextFillColor: "transparent",
                     }}
                   >
