@@ -31,19 +31,19 @@ export default function GlobeScene({ onHover }: Props) {
     rim.position.set(-4, -2, -2);
     scene.add(rim);
 
-    // Glass forest-tinted sphere (no oxblood)
+    // Glass matcha-tinted sphere — fresh green on cream bg
     const sphere = new THREE.Mesh(
       new THREE.SphereGeometry(2.1, 64, 48),
       new THREE.MeshPhysicalMaterial({
-        color: 0x1e2a1e,
-        roughness: 0.15,
+        color: 0xa8c48a,
+        roughness: 0.18,
         metalness: 0.0,
-        transmission: 0.85,
+        transmission: 0.8,
         thickness: 0.6,
         clearcoat: 1,
-        clearcoatRoughness: 0.1,
+        clearcoatRoughness: 0.12,
         transparent: true,
-        opacity: 0.85,
+        opacity: 0.75,
       })
     );
     scene.add(sphere);
