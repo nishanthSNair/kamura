@@ -60,11 +60,9 @@ const RAIL_ICONS = {
 export default function ServiceRail() {
   const [center, setCenter] = useState(3);
   return (
-    <section
-      id="discover"
-      className="relative overflow-hidden bg-gradient-to-b from-[#FAF7F2] to-[#EDE7DB] py-[120px] md:py-[140px]"
-    >
-      <div className="max-w-[1152px] mx-auto mb-12 md:mb-16 px-6 md:px-12">
+    <section id="discover" className="px-4 md:px-6 pt-6 md:pt-8">
+     <div className="relative mx-auto max-w-[1280px] rounded-[40px] overflow-hidden bg-[#FAF7F2] py-[100px] md:py-[120px] shadow-[0_24px_60px_-24px_rgba(42,37,32,0.15)]">
+      <div className="max-w-[1152px] mx-auto mb-12 md:mb-16 px-8 md:px-14">
         <div className="text-[10px] font-semibold tracking-[0.32em] uppercase text-terracotta mb-4">
           Scored & verified
         </div>
@@ -139,6 +137,7 @@ export default function ServiceRail() {
           </svg>
         </button>
       </div>
+     </div>
     </section>
   );
 }

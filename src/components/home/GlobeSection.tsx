@@ -18,28 +18,26 @@ const PRACTITIONERS = [
 export default function GlobeSection() {
   const [hovered, setHovered] = useState(0);
   return (
-    <section
-      id="providers"
-      className="relative bg-gradient-to-b from-[#EDE7DB] via-[#F5F2ED] to-[#FAF7F2] py-[140px] px-6 md:px-12"
-    >
+    <section id="providers" className="px-4 md:px-6 pt-6 md:pt-8">
+     <div className="relative mx-auto max-w-[1280px] rounded-[40px] overflow-hidden bg-[#3F5A3C] text-white py-[100px] md:py-[120px] px-8 md:px-14 shadow-[0_24px_60px_-24px_rgba(42,37,32,0.3)]">
       <div className="max-w-[1152px] mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div>
-          <div className="text-[10px] font-semibold tracking-[0.32em] uppercase text-terracotta mb-5">
+          <div className="text-[10px] font-semibold tracking-[0.32em] uppercase text-white/75 mb-5">
             Kamura-verified
           </div>
           <h2
-            className="font-serif font-medium leading-[1.05] m-0 mb-6 text-[#2A2520]"
+            className="font-serif font-medium leading-[1.05] m-0 mb-6 text-white"
             style={{ fontSize: "clamp(44px, 5.6vw, 72px)" }}
           >
-            Healers <i className="italic text-[#8DA970]">near you.</i>
+            Healers <i className="italic text-[#D4B896]">near you.</i>
           </h2>
-          <p className="text-base leading-[1.65] text-[#2A2520]/65 max-w-[420px] mb-8">
+          <p className="text-base leading-[1.65] text-white/75 max-w-[420px] mb-8">
             70+ vetted practitioners across the UAE. Real credentials, real reviews,
             scored by Kamura on evidence, access, and outcomes.
           </p>
           <Link
             href="/explore"
-            className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-white border border-[#2A2520]/12 text-[#2A2520] hover:bg-[#B5886A] hover:text-white hover:border-[#B5886A] transition-all font-medium text-[13.5px] shadow-[0_4px_12px_-6px_rgba(42,37,32,0.15)]"
+            className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-white text-[#2A2520] hover:bg-[#B5886A] hover:text-white transition-all font-medium text-[13.5px] shadow-[0_6px_16px_-8px_rgba(0,0,0,0.3)]"
           >
             Browse providers <span>→</span>
           </Link>
@@ -50,10 +48,10 @@ export default function GlobeSection() {
               { num: "24", lab: "Specialties" },
             ].map((s) => (
               <div key={s.lab}>
-                <div className="font-serif font-medium text-[42px] leading-none text-terracotta">
+                <div className="font-serif font-medium text-[42px] leading-none text-[#D4B896]">
                   {s.num}
                 </div>
-                <div className="text-[10px] tracking-[0.22em] uppercase text-[#2A2520]/55 mt-2">
+                <div className="text-[10px] tracking-[0.22em] uppercase text-white/60 mt-2">
                   {s.lab}
                 </div>
               </div>
@@ -66,12 +64,12 @@ export default function GlobeSection() {
           {PRACTITIONERS.map((p, i) => (
             <div
               key={i}
-              className={`absolute top-1/2 left-1/2 w-[260px] backdrop-blur-xl border border-[#C4A882]/35 rounded-2xl p-4 shadow-[0_20px_60px_-10px_rgba(42,37,32,0.2)] pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.22,0.65,0.2,1)] ${
+              className={`absolute top-1/2 left-1/2 w-[260px] backdrop-blur-xl border border-white/25 rounded-2xl p-4 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.4)] pointer-events-none transition-all duration-500 ease-[cubic-bezier(0.22,0.65,0.2,1)] ${
                 i === hovered
                   ? "opacity-100 -translate-x-1/2 -translate-y-1/2 scale-100"
                   : "opacity-0 -translate-x-1/2 -translate-y-1/2 translate-y-[-30px] scale-90"
               }`}
-              style={{ background: "rgba(255,255,255,0.95)" }}
+              style={{ background: "rgba(255,255,255,0.96)" }}
             >
               <div className="font-serif text-[19px] font-medium text-[#2A2520] mb-0.5">
                 {p.name}
@@ -84,6 +82,7 @@ export default function GlobeSection() {
           ))}
         </div>
       </div>
+     </div>
     </section>
   );
 }

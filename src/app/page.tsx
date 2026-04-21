@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { treatments } from "@/data/treatments";
 import ScrollProgress from "@/components/home/ScrollProgress";
 import HeroTiles from "@/components/home/HeroTiles";
+import PrimaryTiles from "@/components/home/PrimaryTiles";
+import SecondaryTiles from "@/components/home/SecondaryTiles";
 import VerbsSection from "@/components/home/VerbsSection";
 import PeptideSection from "@/components/home/PeptideSection";
 import GlobeSection from "@/components/home/GlobeSection";
@@ -77,14 +79,18 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ScrollProgress />
-      <HeroTiles />
-      <VerbsSection />
-      <PeptideSection />
-      <GlobeSection />
-      <ServiceRail />
-      <FooterCta />
-      <StickyActions />
+      <div className="bg-[#F4EDE0] min-h-screen">
+        <ScrollProgress />
+        <HeroTiles />
+        <PrimaryTiles />
+        <SecondaryTiles />
+        <PeptideSection />
+        <VerbsSection />
+        <GlobeSection />
+        <ServiceRail />
+        <FooterCta />
+        <StickyActions />
+      </div>
     </>
   );
 }

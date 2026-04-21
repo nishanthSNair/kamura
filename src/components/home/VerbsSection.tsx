@@ -56,11 +56,12 @@ export default function VerbsSection() {
   }, []);
 
   return (
-    <section
+    <section className="px-4 md:px-6 pt-6 md:pt-8">
+     <div
       ref={sectionRef}
-      className="relative bg-gradient-to-b from-[#EDE7DB] via-[#F5F2ED] to-[#FAF7F2] text-[#2A2520]"
+      className="relative mx-auto max-w-[1280px] rounded-[40px] overflow-hidden bg-[#FAF7F2] text-[#2A2520] shadow-[0_24px_60px_-24px_rgba(42,37,32,0.15)]"
       style={{ height: "380vh" }}
-    >
+     >
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         <div className="relative max-w-[1152px] mx-auto w-full px-6 md:px-12 grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="relative min-h-[260px]">
@@ -118,6 +119,7 @@ export default function VerbsSection() {
           ))}
         </div>
       </div>
+     </div>
     </section>
   );
 }
