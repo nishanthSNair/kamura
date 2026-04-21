@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import PeptideScene, { type PeptideSceneHandle } from "./scenes/PeptideScene";
 
 export default function PeptideSection() {
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<PeptideSceneHandle>(null);
   const [submitted, setSubmitted] = useState(false);
 

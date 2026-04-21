@@ -28,7 +28,7 @@ const VERBS = [
 ];
 
 export default function VerbsSection() {
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<VerbObjectHandle>(null);
   const [active, setActive] = useState(0);
 
