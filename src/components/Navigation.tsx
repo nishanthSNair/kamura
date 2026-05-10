@@ -107,6 +107,12 @@ export default function Navigation() {
  setMobileOpen(false);
  }, [pathname]);
 
+ // The dashboard (/my/*) renders its own header inside src/app/my/layout.tsx
+ // — hide the global nav here so they don't stack and collide.
+ if (pathname.startsWith("/my")) {
+ return null;
+ }
+
  return (
  <>
   <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

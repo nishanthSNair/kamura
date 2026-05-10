@@ -280,8 +280,8 @@ html[dir="rtl"] h6 {
  will-change: transform;
 }
 .btn-hims:hover {
- transform: translateY(-1px);
- box-shadow: 0 12px 28px -10px rgba(42, 37, 32, 0.28);
+ transform: translateY(-2px);
+ box-shadow: 0 14px 30px -12px rgba(42, 37, 32, 0.12);
 }
 .btn-hims:active {
  transform: translateY(0) scale(0.98);
@@ -307,8 +307,8 @@ html[dir="rtl"] h6 {
  will-change: transform;
 }
 .btn-hims-card:hover {
- transform: translateY(-2px);
- box-shadow: 0 16px 32px -12px rgba(42, 37, 32, 0.28);
+ transform: translateY(-3px);
+ box-shadow: 0 20px 40px -14px rgba(42, 37, 32, 0.12);
 }
 .btn-hims-card:active {
  transform: translateY(0) scale(0.985);

@@ -210,7 +210,7 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
-                    href="/peptides"
+                    href="/peptides/coming-soon"
                     className="btn-hims inline-flex items-center justify-center gap-2 h-[52px] px-7 rounded-full bg-[#C4A882] hover:bg-[#B59872] text-[#2A2520] text-[14.5px] font-sans font-semibold"
                   >
                     Join the waitlist

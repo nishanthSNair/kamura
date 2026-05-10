@@ -3,6 +3,7 @@ import { Playfair_Display, Inter, IBM_Plex_Sans_Arabic } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
+import { Toaster } from "sonner";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -150,6 +151,7 @@ export default function RootLayout({
  </StackProviderWrapper>
  </I18nProvider>
  </SmoothScroll>
+ <Toaster position="bottom-center" closeButton richColors theme="light" />
  <Analytics />
  <SpeedInsights />
  </body>

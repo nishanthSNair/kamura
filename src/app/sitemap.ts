@@ -1,8 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { events } from "@/data/events";
-import { listings } from "@/data/listings";
-import { areas } from "@/data/areas";
 import { treatments } from "@/data/treatments";
 import { CATEGORY_META } from "@/data/treatment-categories";
 import { WELLNESS_GOALS } from "@/data/wellness-goals";
@@ -70,12 +68,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
  changeFrequency: "monthly" as const,
  priority: 0.8,
  })),
- ...listings.map((listing) => ({
- url: `${baseUrl}/explore/${listing.id}`,
- lastModified: new Date(),
- changeFrequency: "monthly" as const,
- priority: 0.8,
- })),
+ // Clinic detail URLs (/explore/[id]) and area URLs (/explore/area/*) were
+ // dropped from the sitemap when the listings directory was archived
+ // (2026-05). /explore now renders the wellness-services lead page.
  {
  url: `${baseUrl}/treatments`,
  lastModified: new Date(),
@@ -119,18 +114,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
  priority: 0.9,
  })),
  {
- url: `${baseUrl}/explore/compare`,
- lastModified: new Date(),
- changeFrequency: "monthly",
- priority: 0.6,
- },
- ...areas.map((area) => ({
- url: `${baseUrl}/explore/area/${area.slug}`,
- lastModified: new Date(),
- changeFrequency: "monthly" as const,
- priority: 0.7,
- })),
- {
  url: `${baseUrl}/peptides`,
  lastModified: new Date(),
  changeFrequency: "weekly",
@@ -158,6 +141,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
  lastModified: new Date(),
  changeFrequency: "monthly",
  priority: 0.6,
+ },
+ {
+ url: `${baseUrl}/peptides/coming-soon`,
+ lastModified: new Date(),
+ changeFrequency: "weekly",
+ priority: 0.7,
+ },
+ {
+ url: `${baseUrl}/book/coming-soon`,
+ lastModified: new Date(),
+ changeFrequency: "weekly",
+ priority: 0.7,
+ },
+ {
+ url: `${baseUrl}/privacy`,
+ lastModified: new Date(),
+ changeFrequency: "yearly",
+ priority: 0.3,
+ },
+ {
+ url: `${baseUrl}/terms`,
+ lastModified: new Date(),
+ changeFrequency: "yearly",
+ priority: 0.3,
  },
  {
  url: `${baseUrl}/protocols`,

@@ -20,14 +20,16 @@ type HeroAction = {
   href: string;
   Icon: LucideIcon;
   delay: number;
+  /** Inline tag rendered to the right of the label, e.g. "Soon". */
+  tag?: string;
 };
 
 const HERO_ACTIONS: HeroAction[] = [
-  { label: "Buy Peptides", href: "/peptides", Icon: FlaskConical, delay: 600 },
-  { label: "What is a Peptide?", href: "/peptides/what-is-a-peptide", Icon: BookOpen, delay: 680 },
-  { label: "Book Wellness Services", href: "/explore", Icon: Sparkles, delay: 760 },
-  { label: "Wellness Dashboard", href: "/my", Icon: Activity, delay: 840 },
-  { label: "Become an Affiliate", href: "/list-your-business", Icon: Handshake, delay: 920 },
+  { label: "What is a Peptide?",   href: "/peptides/what-is-a-peptide", Icon: BookOpen,     delay: 600 },
+  { label: "Wellness Services",    href: "/explore",                    Icon: Sparkles,     delay: 680 },
+  { label: "Wellness Dashboard",   href: "/my",                         Icon: Activity,     delay: 760 },
+  { label: "Buy Peptides",         href: "/peptides/coming-soon",       Icon: FlaskConical, delay: 840, tag: "Soon" },
+  { label: "Book Wellness",        href: "/book/coming-soon",           Icon: Handshake,    delay: 920, tag: "Soon" },
 ];
 
 /**
@@ -134,7 +136,7 @@ export default function HeroEditorial() {
                 Where do you want to start?
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2.5">
-                {HERO_ACTIONS.map(({ label, href, Icon, delay }) => (
+                {HERO_ACTIONS.map(({ label, href, Icon, delay, tag }) => (
                   <Link
                     key={label}
                     href={href}
@@ -145,6 +147,11 @@ export default function HeroEditorial() {
                       <Icon size={15} strokeWidth={1.8} />
                     </span>
                     <span className="flex-1 truncate">{label}</span>
+                    {tag && (
+                      <span className="shrink-0 inline-flex items-center h-[18px] px-1.5 rounded-full text-[9px] font-semibold tracking-[0.1em] uppercase bg-[#C4A882]/22 group-hover:bg-[#C4A882]/35 border border-[#C4A882]/45 text-[#9A7357] group-hover:text-[#D4B896]">
+                        {tag}
+                      </span>
+                    )}
                     <svg
                       width="13"
                       height="13"
