@@ -3,46 +3,30 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import {
-  Activity,
-  BookOpen,
-  Dumbbell,
-  FlaskConical,
-  Handshake,
-  Rocket,
-  Sparkles,
-  type LucideIcon,
-} from "lucide-react";
-
-type HeroAction = {
-  label: string;
-  href: string;
-  Icon: LucideIcon;
-  delay: number;
-  /** Inline tag rendered to the right of the label, e.g. "Soon". */
-  tag?: string;
-};
-
-const HERO_ACTIONS: HeroAction[] = [
-  { label: "What is a Peptide?",   href: "/peptides/what-is-a-peptide", Icon: BookOpen,     delay: 600 },
-  { label: "Wellness Services",    href: "/explore",                    Icon: Sparkles,     delay: 680 },
-  { label: "Wellness Dashboard",   href: "/my",                         Icon: Activity,     delay: 760 },
-  { label: "Buy Peptides",         href: "/peptides/coming-soon",       Icon: FlaskConical, delay: 840, tag: "Soon" },
-  { label: "Book Wellness",        href: "/book/coming-soon",           Icon: Handshake,    delay: 920, tag: "Soon" },
-];
+  motion,
+  useScroll,
+  useTransform,
+  type MotionValue,
+} from "framer-motion";
+import { ArrowDown, Rocket } from "lucide-react";
 
 /**
- * Hero — editorial liquid-glass.
+ * Hero — editorial liquid-glass over a single rounded card.
  *
- * Backdrop is rendered through a single `HeroBackdrop` slot so the future
- * 8-layer parallax scene can replace the photo without touching any of the
- * floating UI chrome (text, action pills, info card).
+ * Stripped down to the essentials: photo backdrop, headline, subhead,
+ * one primary CTA, and a soft scroll cue. The five "doors" (action
+ * cards) used to live inside a cramped bottom info card here — they
+ * now have their own prominent section directly below the hero.
  *
- * Light-touch parallax (framer-motion `useScroll`):
- * - Backdrop translates `y` slower than the page → drifts behind copy
- * - Headline + sub translate `y` faster than backdrop → modest depth
- * - Bottom info card stays anchored
+ * The backdrop is a single `HeroBackdrop` slot marked
+ * data-image-slot="hero-backdrop" so the future 8-layer parallax scene
+ * can drop in without touching headline/CTAs.
+ *
+ * Light-touch parallax (framer-motion useScroll):
+ * - Backdrop drifts down + scales 6% as you scroll
+ * - Headline drifts up faster than backdrop (depth)
+ * - Hero fades softly from 60–85% scroll-through
  */
 export default function HeroEditorial() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -51,139 +35,106 @@ export default function HeroEditorial() {
     offset: ["start start", "end start"],
   });
 
-  // Backdrop drifts down slower than scroll (parallax behind)
   const backdropY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const backdropScale = useTransform(scrollYProgress, [0, 1], [1, 1.06]);
-  // Headline drifts up faster than backdrop (depth)
   const headlineY = useTransform(scrollYProgress, [0, 1], ["0%", "-12%"]);
-  const headlineOpacity = useTransform(scrollYProgress, [0, 0.6, 0.85], [1, 1, 0.6]);
+  const headlineOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.6, 0.9],
+    [1, 1, 0.4]
+  );
 
   return (
     <section ref={sectionRef} className="bg-black p-2 sm:p-3">
-      <div className="relative h-[calc(100vh-1rem)] sm:h-[calc(100vh-1.5rem)] min-h-[760px] rounded-3xl overflow-hidden">
-        {/* HERO BACKDROP — single image today, 8-layer parallax scene later */}
+      <div className="relative h-[calc(100vh-1rem)] sm:h-[calc(100vh-1.5rem)] min-h-[680px] rounded-3xl overflow-hidden">
+        {/* HERO BACKDROP — single image today, 8-layer parallax later */}
         <HeroBackdrop y={backdropY} scale={backdropScale} />
 
-        {/* Headline + sub — top center */}
+        {/* Content — centered, top-third anchor */}
         <motion.div
           style={{ y: headlineY, opacity: headlineOpacity }}
-          className="relative z-20 max-w-4xl mx-auto px-6 sm:px-8 pt-16 sm:pt-20 md:pt-24 text-center"
+          className="relative z-20 h-full flex flex-col items-center justify-center px-6 sm:px-8 text-center"
         >
-          <h1
-            className="text-white font-light leading-[1.05] animate-blur-fade-up"
+          <p
+            className="text-[10px] sm:text-[11px] tracking-[0.34em] uppercase text-white/85 font-semibold mb-7 animate-blur-fade-up"
             style={{
-              fontSize: "clamp(40px, 6vw, 84px)",
+              textShadow: "0 1px 10px rgba(0,0,0,0.25)",
+              animationDelay: "200ms",
+            }}
+          >
+            Be the Tortoise · Kamura
+          </p>
+
+          <h1
+            className="text-white font-light leading-[1.04] max-w-[16ch] mx-auto animate-blur-fade-up"
+            style={{
+              fontSize: "clamp(40px, 6.4vw, 92px)",
               letterSpacing: "-0.03em",
-              textShadow: "0 2px 20px rgba(0,0,0,0.18)",
-              animationDelay: "300ms",
+              textShadow: "0 2px 20px rgba(0,0,0,0.22)",
+              animationDelay: "320ms",
             }}
           >
             Preventive medicine,
             <br />
             redefined for the long game.
           </h1>
+
           <p
-            className="mt-4 text-sm sm:text-base text-white/85 animate-blur-fade-up"
+            className="mt-6 text-[15px] sm:text-[17px] text-white/85 max-w-[58ch] leading-[1.55] font-sans animate-blur-fade-up"
             style={{
-              animationDelay: "450ms",
-              textShadow: "0 1px 10px rgba(0,0,0,0.18)",
+              animationDelay: "480ms",
+              textShadow: "0 1px 10px rgba(0,0,0,0.22)",
             }}
           >
-            Be the tortoise. Compounded peptides, vetted practitioners,
-            your longitudinal health record.
+            Compounded peptides, vetted UAE practitioners, and your
+            longitudinal health record. One trusted home for the long game.
           </p>
-        </motion.div>
 
-        {/* Bottom info card — primary action surface */}
-        <div
-          className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8 z-20 frosted-card-light rounded-2xl p-6 sm:p-8 animate-blur-fade-up"
-          style={{ animationDelay: "1000ms" }}
-        >
-          <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-12">
-            {/* Left — brand + primary CTA */}
-            <div className="lg:w-[260px] xl:w-[280px] shrink-0">
-              <div className="w-10 h-10 rounded-lg bg-slate-900 grid place-items-center">
-                <Dumbbell size={20} strokeWidth={1.8} className="text-white" />
-              </div>
-              <h2
-                className="mt-4 text-xl sm:text-2xl font-medium text-slate-900"
-                style={{ letterSpacing: "-0.02em" }}
-              >
-                Move, Heal, Bloom
-              </h2>
-              <p className="mt-2 text-[13px] text-slate-600 leading-snug">
-                Three layers, one ecosystem.
-              </p>
-              <div className="mt-4">
-                <Link
-                  href="/wellness-checker"
-                  className="btn-hims frosted-pill-dark rounded-full inline-flex items-center gap-2 px-4 py-2 text-[13px] font-medium"
-                >
-                  <Rocket
-                    size={13}
-                    strokeWidth={1.8}
-                    style={{ transform: "rotate(45deg)" }}
-                  />
-                  Wellness Check
-                  <span className="btn-hims-arrow inline-block">→</span>
-                </Link>
-              </div>
-            </div>
-
-            {/* Middle — 5 action buttons (the primary nav surface) */}
-            <div className="flex-1 min-w-0">
-              <p className="text-[10.5px] font-semibold tracking-[0.22em] text-slate-500 uppercase mb-3.5">
-                Where do you want to start?
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-2.5">
-                {HERO_ACTIONS.map(({ label, href, Icon, delay, tag }) => (
-                  <Link
-                    key={label}
-                    href={href}
-                    className="btn-hims-card group flex items-center gap-3 px-4 py-3 rounded-xl bg-white/70 hover:bg-slate-900 border border-slate-900/10 hover:border-slate-900 text-slate-900 hover:text-white text-[13px] font-medium animate-blur-fade-up"
-                    style={{ animationDelay: `${delay}ms` }}
-                  >
-                    <span className="w-8 h-8 rounded-lg bg-slate-900/8 group-hover:bg-white/15 grid place-items-center shrink-0 transition-colors">
-                      <Icon size={15} strokeWidth={1.8} />
-                    </span>
-                    <span className="flex-1 truncate">{label}</span>
-                    {tag && (
-                      <span className="shrink-0 inline-flex items-center h-[18px] px-1.5 rounded-full text-[9px] font-semibold tracking-[0.1em] uppercase bg-[#C4A882]/22 group-hover:bg-[#C4A882]/35 border border-[#C4A882]/45 text-[#9A7357] group-hover:text-[#D4B896]">
-                        {tag}
-                      </span>
-                    )}
-                    <svg
-                      width="13"
-                      height="13"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      className="btn-hims-arrow opacity-50 group-hover:opacity-100 shrink-0"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                      <polyline points="12 5 19 12 12 19" />
-                    </svg>
-                  </Link>
-                ))}
-              </div>
-            </div>
+          {/* Single primary CTA */}
+          <div
+            className="mt-9 sm:mt-10 animate-blur-fade-up"
+            style={{ animationDelay: "640ms" }}
+          >
+            <Link
+              href="/wellness-checker"
+              className="btn-hims inline-flex items-center gap-2 h-[56px] px-8 rounded-full bg-white text-[#2A2520] hover:bg-[#FAF7F2] text-[14.5px] font-sans font-semibold shadow-[0_8px_30px_-8px_rgba(0,0,0,0.4)]"
+            >
+              <Rocket
+                size={15}
+                strokeWidth={1.8}
+                style={{ transform: "rotate(45deg)" }}
+              />
+              Take the wellness check
+            </Link>
           </div>
-        </div>
+
+          {/* Scroll cue */}
+          <div
+            className="absolute left-1/2 -translate-x-1/2 bottom-7 sm:bottom-9 flex flex-col items-center gap-2 text-white/65 animate-blur-fade-up"
+            style={{ animationDelay: "1100ms" }}
+          >
+            <span className="text-[10px] tracking-[0.32em] uppercase">
+              Scroll
+            </span>
+            <ArrowDown
+              size={14}
+              strokeWidth={1.6}
+              className="animate-gentle-bounce"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
 }
 
 /**
- * HeroBackdrop — single image today, future 8-layer parallax scene drops in here
- * without touching any of the surrounding chrome (headline, action pills, info card).
+ * HeroBackdrop — single image today, future 8-layer parallax scene drops in
+ * here without touching surrounding chrome (headline, CTAs, scroll cue).
  *
- * When the designer delivers layers, replace the contents of this component with:
- *   <ParallaxLayer src="/hero/01-sky.webp"     speed={0.1} />
- *   <ParallaxLayer src="/hero/02-mountains.webp" speed={0.3} />
- *   ... etc.
+ * When the designer ships the layered scene, replace this component's body
+ * with multiple <ParallaxLayer> elements at varying speeds. The data-image-
+ * slot attribute is the marker the design team will look for.
  */
 function HeroBackdrop({
   y,
@@ -206,6 +157,15 @@ function HeroBackdrop({
         className="object-cover object-center"
         sizes="100vw"
         quality={90}
+      />
+      {/* Soft top + bottom darken so headline + scroll cue stay readable */}
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.0) 28%, rgba(0,0,0,0.0) 70%, rgba(0,0,0,0.35) 100%)",
+        }}
       />
     </motion.div>
   );
