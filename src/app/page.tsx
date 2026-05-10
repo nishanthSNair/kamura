@@ -183,21 +183,6 @@ export default function Home() {
               Be the tortoise. Compounded peptides, vetted practitioners,
               your longitudinal health record.
             </p>
-
-            {/* Action button row */}
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              {HERO_ACTIONS.map(({ label, href, Icon, delay }) => (
-                <Link
-                  key={label}
-                  href={href}
-                  className="frosted-pill-dark rounded-full inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium transition-colors animate-blur-fade-up"
-                  style={{ animationDelay: `${delay}ms` }}
-                >
-                  <Icon size={16} strokeWidth={1.8} />
-                  {label}
-                </Link>
-              ))}
-            </div>
           </div>
 
           {/* Bottom info card */}
@@ -205,9 +190,9 @@ export default function Home() {
             className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8 z-20 frosted-card-light rounded-2xl p-6 sm:p-8 animate-blur-fade-up"
             style={{ animationDelay: "1000ms" }}
           >
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+            <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-10">
               {/* Left — brand + CTAs */}
-              <div className="flex-1">
+              <div className="lg:w-[240px] xl:w-[260px] shrink-0">
                 <div className="w-10 h-10 rounded-lg bg-slate-900 grid place-items-center">
                   <Dumbbell size={20} strokeWidth={1.8} className="text-white" />
                 </div>
@@ -217,31 +202,54 @@ export default function Home() {
                 >
                   Move, Heal, Bloom
                 </h2>
-                <div className="mt-4 flex flex-wrap gap-3">
+                <p className="mt-2 text-[13px] text-slate-600 leading-snug">
+                  Three layers, one ecosystem.
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2.5">
                   <Link
                     href="/wellness-checker"
-                    className="frosted-pill-dark rounded-full inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium transition-colors"
+                    className="frosted-pill-dark rounded-full inline-flex items-center gap-2 px-4 py-2 text-[13px] font-medium transition-colors"
                   >
                     <Rocket
-                      size={14}
+                      size={13}
                       strokeWidth={1.8}
                       style={{ transform: "rotate(45deg)" }}
                     />
-                    Take Wellness Check
-                  </Link>
-                  <Link
-                    href="/explore"
-                    className="frosted-pill-light rounded-full inline-flex items-center px-5 py-2.5 text-sm font-medium transition-colors border border-slate-200/60"
-                  >
-                    Explore Treatments
+                    Wellness Check
                   </Link>
                 </div>
               </div>
 
-              {/* Right — link columns (md+) */}
-              <div className="hidden md:flex gap-12 lg:gap-16">
+              {/* Middle — 5 action buttons (the primary nav surface) */}
+              <div className="flex-1 min-w-0">
+                <p className="text-[10.5px] font-semibold tracking-[0.22em] text-slate-500 uppercase mb-3.5">
+                  Where do you want to start?
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2.5">
+                  {HERO_ACTIONS.map(({ label, href, Icon, delay }) => (
+                    <Link
+                      key={label}
+                      href={href}
+                      className="group flex items-center gap-3 px-4 py-3 rounded-xl bg-white/70 hover:bg-slate-900 border border-slate-900/10 hover:border-slate-900 text-slate-900 hover:text-white text-[13px] font-medium transition-colors animate-blur-fade-up"
+                      style={{ animationDelay: `${delay}ms` }}
+                    >
+                      <span className="w-8 h-8 rounded-lg bg-slate-900/8 group-hover:bg-white/15 grid place-items-center shrink-0 transition-colors">
+                        <Icon size={15} strokeWidth={1.8} />
+                      </span>
+                      <span className="flex-1 truncate">{label}</span>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" className="opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all shrink-0">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                      </svg>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right — link columns (lg+) */}
+              <div className="hidden lg:flex gap-10 xl:gap-14 shrink-0">
                 <div>
-                  <p className="text-xs font-semibold tracking-widest text-slate-500 uppercase mb-3">
+                  <p className="text-[10.5px] font-semibold tracking-[0.22em] text-slate-500 uppercase mb-3">
                     Insights
                   </p>
                   <ul className="space-y-2">
@@ -254,7 +262,7 @@ export default function Home() {
                       <li key={l.label}>
                         <Link
                           href={l.href}
-                          className="text-sm text-slate-700 hover:text-slate-900 transition-colors"
+                          className="text-[13px] text-slate-700 hover:text-slate-900 transition-colors"
                         >
                           {l.label}
                         </Link>
@@ -263,7 +271,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div>
-                  <p className="text-xs font-semibold tracking-widest text-slate-500 uppercase mb-3">
+                  <p className="text-[10.5px] font-semibold tracking-[0.22em] text-slate-500 uppercase mb-3">
                     Connect
                   </p>
                   <ul className="space-y-2">
@@ -271,12 +279,12 @@ export default function Home() {
                       { label: "About", href: "/about" },
                       { label: "Events", href: "/events" },
                       { label: "Practitioners", href: "/explore" },
-                      { label: "Become a Partner", href: "/list-your-business" },
+                      { label: "Partner", href: "/list-your-business" },
                     ].map((l) => (
                       <li key={l.label}>
                         <Link
                           href={l.href}
-                          className="text-sm text-slate-700 hover:text-slate-900 transition-colors"
+                          className="text-[13px] text-slate-700 hover:text-slate-900 transition-colors"
                         >
                           {l.label}
                         </Link>
@@ -288,7 +296,7 @@ export default function Home() {
             </div>
 
             {/* Footer row */}
-            <div className="mt-6 pt-4 border-t border-slate-300/40 flex gap-6 text-[10px] sm:text-xs text-slate-500 tracking-wider">
+            <div className="mt-6 pt-4 border-t border-slate-300/40 flex flex-wrap gap-x-6 gap-y-2 text-[10px] sm:text-xs text-slate-500 tracking-wider">
               <span>© KAMURA 2026</span>
               <span>Heart of longevity · Built in the UAE</span>
             </div>
