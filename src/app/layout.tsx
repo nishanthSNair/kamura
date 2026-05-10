@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 import StackProviderWrapper from "@/components/StackProviderWrapper";
 import StackShell from "@/components/stack/StackShell";
 import { I18nProvider } from "@/lib/i18n";
@@ -139,6 +140,7 @@ export default function RootLayout({
  </Script>
  </head>
  <body className={`${playfair.variable} ${inter.variable} ${plexArabic.variable} antialiased`}>
+ <SmoothScroll>
  <I18nProvider>
  <StackProviderWrapper>
  <Navigation />
@@ -147,6 +149,7 @@ export default function RootLayout({
  <StackShell />
  </StackProviderWrapper>
  </I18nProvider>
+ </SmoothScroll>
  <Analytics />
  <SpeedInsights />
  </body>
