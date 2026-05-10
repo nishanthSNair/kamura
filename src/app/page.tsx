@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Activity,
+  BookOpen,
+  Dumbbell,
+  FlaskConical,
+  Handshake,
+  Heart,
+  Rocket,
+  Sparkles,
+} from "lucide-react";
 import { treatments } from "@/data/treatments";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 
@@ -92,37 +102,12 @@ export default function Home() {
     ],
   };
 
-  const FUNCTIONS = [
-    {
-      n: "01",
-      label: "Buy",
-      title: "Compounded peptides",
-      sub: "Pharmaceutical-grade peptides and Rx formulations, prescribed by UAE-licensed physicians and shipped from our compounding pharmacy partner.",
-      href: "/peptides",
-      tag: "Waitlist · Q3 2026",
-    },
-    {
-      n: "02",
-      label: "Learn",
-      title: "Understand peptides",
-      sub: "Visual primers, the Kamura Score methodology, and a treatment library built on PubMed citations — not influencer testimonials.",
-      href: "/peptides/what-is-a-peptide",
-    },
-    {
-      n: "03",
-      label: "Book",
-      title: "Wellness services",
-      sub: "Curated directory of practitioners, clinics, IV drips, sound healing, breathwork, and recovery — scored and verified.",
-      href: "/explore",
-    },
-    {
-      n: "04",
-      label: "Track",
-      title: "Your health record",
-      sub: "Wearable integrations, blood-panel uploads, and protocol tracking — your longitudinal health record, in one place.",
-      href: "/my",
-      tag: "Beta",
-    },
+  const HERO_ACTIONS = [
+    { label: "Buy Peptides", href: "/peptides", Icon: FlaskConical, delay: 600 },
+    { label: "What is a Peptide?", href: "/peptides/what-is-a-peptide", Icon: BookOpen, delay: 680 },
+    { label: "Book Wellness Services", href: "/explore", Icon: Sparkles, delay: 760 },
+    { label: "Wellness Dashboard", href: "/my", Icon: Activity, delay: 840 },
+    { label: "Become an Affiliate", href: "/list-your-business", Icon: Handshake, delay: 920 },
   ];
 
   const STEPS = [
@@ -150,132 +135,163 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* ════════════ HERO ════════════ */}
-      <section className="relative min-h-[92vh] md:min-h-[88vh] flex items-center overflow-hidden bg-[#FAF7F2]">
-        <div className="absolute inset-0 z-0">
+      {/* ════════════ EDITORIAL HERO — black-framed glass ════════════ */}
+      <section className="bg-black p-2 sm:p-3">
+        <div className="relative h-[calc(100vh-1rem)] sm:h-[calc(100vh-1.5rem)] min-h-[760px] rounded-3xl overflow-hidden">
+          {/* Background image — bright, no overlay */}
           <Image
             src="/images/hero-home.png"
-            alt=""
+            alt="A serene wellness landscape"
             fill
             priority
-            className="object-cover object-center opacity-40"
+            className="object-cover object-center z-0"
             sizes="100vw"
-            quality={85}
+            quality={90}
           />
+
+          {/* Top-right heart counter */}
           <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(250,247,242,0.85) 0%, rgba(250,247,242,0.5) 35%, rgba(250,247,242,0.92) 100%)",
-            }}
-            aria-hidden
-          />
-        </div>
+            className="absolute top-6 right-6 sm:top-8 sm:right-8 z-30 frosted-pill-dark rounded-full inline-flex items-center gap-3 px-5 py-2.5 animate-blur-fade-up"
+            style={{ animationDelay: "200ms" }}
+          >
+            <span className="text-2xl sm:text-3xl font-light leading-none">0</span>
+            <Heart size={24} strokeWidth={1.8} />
+          </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8 py-32 md:py-40 w-full">
-          <div className="max-w-[820px]">
-            <p className="text-[10.5px] md:text-[11px] tracking-[0.32em] uppercase text-terracotta font-semibold font-sans mb-6">
-              Be the Tortoise · Kamura
-            </p>
-            <h1 className="font-serif text-[42px] md:text-[68px] leading-[1.04] tracking-[-0.015em] text-[#2A2520] mb-6 md:mb-8 max-w-[14ch]">
-              Preventive medicine, redefined for the long game.
+          {/* Hero content — top center */}
+          <div className="relative z-20 max-w-4xl mx-auto px-6 sm:px-8 pt-16 sm:pt-20 md:pt-24 text-center">
+            <h1
+              className="text-white font-light leading-[1.05] animate-blur-fade-up"
+              style={{
+                fontSize: "clamp(40px, 6vw, 84px)",
+                letterSpacing: "-0.03em",
+                textShadow: "0 2px 20px rgba(0,0,0,0.18)",
+                animationDelay: "300ms",
+              }}
+            >
+              Preventive medicine,
+              <br />
+              redefined for the long game.
             </h1>
-            <p className="text-[16px] md:text-[19px] leading-[1.55] text-[#2A2520]/75 max-w-[640px] mb-9 md:mb-10 font-sans">
-              Compounded peptides, vetted UAE practitioners, and your personal
-              longitudinal health record — three layers, one trusted ecosystem.
-              Built around evidence, not Instagram trends.
+            <p
+              className="mt-4 text-sm sm:text-base text-white/85 animate-blur-fade-up"
+              style={{
+                animationDelay: "450ms",
+                textShadow: "0 1px 10px rgba(0,0,0,0.18)",
+              }}
+            >
+              Be the tortoise. Compounded peptides, vetted practitioners,
+              your longitudinal health record.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 mb-12 md:mb-16">
-              <Link
-                href="/wellness-checker"
-                className="inline-flex items-center justify-center gap-2 h-[52px] px-7 rounded-full bg-[#2A2520] hover:bg-[#1A1612] text-white text-[14.5px] font-sans font-semibold transition-colors"
-              >
-                Take the wellness check
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </Link>
-              <Link
-                href="#how-it-works"
-                className="inline-flex items-center justify-center gap-2 h-[52px] px-7 rounded-full border border-[#2A2520]/15 hover:border-[#2A2520]/40 text-[#2A2520] text-[14.5px] font-sans font-semibold transition-colors"
-              >
-                How Kamura works
-              </Link>
-            </div>
-
-            {/* Inline trust micro-strip */}
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-[11px] tracking-[0.18em] uppercase text-[#2A2520]/60 font-sans font-medium">
-              <span className="inline-flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-terracotta" />
-                DHA-registered partner
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-terracotta" />
-                UAE-licensed physicians
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <span className="w-1 h-1 rounded-full bg-terracotta" />
-                Pharmacy partnership
-              </span>
+            {/* Action button row */}
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              {HERO_ACTIONS.map(({ label, href, Icon, delay }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  className="frosted-pill-dark rounded-full inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium transition-colors animate-blur-fade-up"
+                  style={{ animationDelay: `${delay}ms` }}
+                >
+                  <Icon size={16} strokeWidth={1.8} />
+                  {label}
+                </Link>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* ════════════ FOUR CORE FUNCTIONS ════════════ */}
-      <section className="bg-[#FAF7F2] border-t border-[#2A2520]/8 py-20 md:py-28">
-        <div className="max-w-6xl mx-auto px-6 md:px-8">
-          <FadeInOnScroll>
-            <div className="max-w-[640px] mb-14 md:mb-16">
-              <p className="text-[10.5px] tracking-[0.32em] uppercase text-terracotta font-semibold font-sans mb-4">
-                Four doors in
-              </p>
-              <h2 className="font-serif text-[34px] md:text-[48px] leading-[1.05] tracking-[-0.01em] text-[#2A2520]">
-                Whether you&rsquo;re here to <span className="italic">buy</span>,{" "}
-                <span className="italic">learn</span>, <span className="italic">book</span>, or{" "}
-                <span className="italic">track</span> — start here.
-              </h2>
-            </div>
-          </FadeInOnScroll>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-            {FUNCTIONS.map((f, i) => (
-              <FadeInOnScroll key={f.n} delay={i * 80}>
-                <Link
-                  href={f.href}
-                  className="group relative block h-full p-7 md:p-9 rounded-2xl bg-white border border-[#2A2520]/8 hover:border-[#2A2520]/25 hover:-translate-y-0.5 shadow-[0_2px_12px_-6px_rgba(42,37,32,0.08)] hover:shadow-[0_18px_40px_-18px_rgba(42,37,32,0.22)] transition-all duration-500"
+          {/* Bottom info card */}
+          <div
+            className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8 z-20 frosted-card-light rounded-2xl p-6 sm:p-8 animate-blur-fade-up"
+            style={{ animationDelay: "1000ms" }}
+          >
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+              {/* Left — brand + CTAs */}
+              <div className="flex-1">
+                <div className="w-10 h-10 rounded-lg bg-slate-900 grid place-items-center">
+                  <Dumbbell size={20} strokeWidth={1.8} className="text-white" />
+                </div>
+                <h2
+                  className="mt-4 text-xl sm:text-2xl font-medium text-slate-900"
+                  style={{ letterSpacing: "-0.02em" }}
                 >
-                  <div className="flex items-start justify-between mb-7">
-                    <div className="flex items-center gap-3">
-                      <span className="font-serif text-[16px] text-[#2A2520]/40">{f.n}</span>
-                      <span className="text-[10.5px] tracking-[0.28em] uppercase text-terracotta font-sans font-semibold">
-                        {f.label}
-                      </span>
-                    </div>
-                    {f.tag && (
-                      <span className="inline-flex items-center h-[22px] px-2.5 rounded-full text-[9.5px] font-semibold tracking-[0.1em] uppercase bg-[#C4A882]/15 border border-[#C4A882]/40 text-[#9A7357]">
-                        {f.tag}
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="font-serif text-[26px] md:text-[30px] leading-[1.15] tracking-[-0.005em] text-[#2A2520] mb-3">
-                    {f.title}
-                  </h3>
-                  <p className="text-[14.5px] leading-[1.6] text-[#2A2520]/65 font-sans mb-7 max-w-[44ch]">
-                    {f.sub}
+                  Move, Heal, Bloom
+                </h2>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <Link
+                    href="/wellness-checker"
+                    className="frosted-pill-dark rounded-full inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium transition-colors"
+                  >
+                    <Rocket
+                      size={14}
+                      strokeWidth={1.8}
+                      style={{ transform: "rotate(45deg)" }}
+                    />
+                    Take Wellness Check
+                  </Link>
+                  <Link
+                    href="/explore"
+                    className="frosted-pill-light rounded-full inline-flex items-center px-5 py-2.5 text-sm font-medium transition-colors border border-slate-200/60"
+                  >
+                    Explore Treatments
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right — link columns (md+) */}
+              <div className="hidden md:flex gap-12 lg:gap-16">
+                <div>
+                  <p className="text-xs font-semibold tracking-widest text-slate-500 uppercase mb-3">
+                    Insights
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[12px] tracking-[0.18em] uppercase text-[#2A2520] font-sans font-semibold group-hover:gap-3 transition-all">
-                    Enter
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                      <polyline points="12 5 19 12 12 19" />
-                    </svg>
-                  </span>
-                </Link>
-              </FadeInOnScroll>
-            ))}
+                  <ul className="space-y-2">
+                    {[
+                      { label: "Treatments", href: "/treatments" },
+                      { label: "Peptides", href: "/peptides" },
+                      { label: "Methodology", href: "/treatments/methodology" },
+                      { label: "Journal", href: "/blog" },
+                    ].map((l) => (
+                      <li key={l.label}>
+                        <Link
+                          href={l.href}
+                          className="text-sm text-slate-700 hover:text-slate-900 transition-colors"
+                        >
+                          {l.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold tracking-widest text-slate-500 uppercase mb-3">
+                    Connect
+                  </p>
+                  <ul className="space-y-2">
+                    {[
+                      { label: "About", href: "/about" },
+                      { label: "Events", href: "/events" },
+                      { label: "Practitioners", href: "/explore" },
+                      { label: "Become a Partner", href: "/list-your-business" },
+                    ].map((l) => (
+                      <li key={l.label}>
+                        <Link
+                          href={l.href}
+                          className="text-sm text-slate-700 hover:text-slate-900 transition-colors"
+                        >
+                          {l.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer row */}
+            <div className="mt-6 pt-4 border-t border-slate-300/40 flex gap-6 text-[10px] sm:text-xs text-slate-500 tracking-wider">
+              <span>© KAMURA 2026</span>
+              <span>Heart of longevity · Built in the UAE</span>
+            </div>
           </div>
         </div>
       </section>
