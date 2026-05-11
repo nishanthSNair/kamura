@@ -1,0 +1,2207 @@
+{
+  "listings": [
+    {
+      "id": "aeon-clinic",
+      "name": "AEON Clinic",
+      "tagline": "Regenerative wellness meets luxury longevity",
+      "description": "Specializing in stem cell therapy, hyperbaric oxygen therapy, NAD+ infusions, and advanced anti-aging treatments inside Atlantis The Royal.",
+      "location": "Atlantis The Royal, Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://theaeonclinic.com/",
+      "featured": true,
+      "services": [
+        "Stem Cell Therapy",
+        "HBOT",
+        "NAD+ Infusions",
+        "Anti-Aging",
+        "Regenerative Medicine"
+      ]
+    },
+    {
+      "id": "clinique-la-prairie",
+      "name": "Clinique La Prairie — Longevity Hub",
+      "tagline": "90+ years of Swiss longevity expertise",
+      "description": "A 3,800 sqm longevity center with 29 treatment rooms, a Longevity Index diagnostic lounge, and programs combining preventive medicine with regenerative care.",
+      "location": "One&Only One Za'abeel",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://longevity-hub.cliniquelaprairie.com/dubai/",
+      "featured": true,
+      "services": [
+        "Longevity Diagnostics",
+        "Preventive Medicine",
+        "Regenerative Care",
+        "Longevity Programs"
+      ]
+    },
+    {
+      "id": "bioscience-institute",
+      "name": "Bioscience Institute",
+      "tagline": "Precision medicine at the molecular level",
+      "description": "Offering stem cell therapy, AGESKILL IV treatments, and molecular-level biological age monitoring with personalized longevity strategies.",
+      "location": "Dubai Healthcare City",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://bioinst.com/",
+      "services": [
+        "Stem Cell Therapy",
+        "IV Treatments",
+        "Biological Age Testing",
+        "Precision Medicine",
+        "Longevity Strategy"
+      ]
+    },
+    {
+      "id": "formation",
+      "name": "Formation",
+      "tagline": "Dubai's first dedicated biohacking studio",
+      "description": "Cryotherapy, PEMF therapy, VO2 testing, infrared sauna, red light therapy, and adaptive AI-driven training — all focused on energy, recovery, and longevity.",
+      "location": "Dubai Marina & DIFC",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://www.byformation.com/",
+      "featured": true,
+      "services": [
+        "Cryotherapy",
+        "PEMF Therapy",
+        "Infrared Sauna",
+        "Red Light Therapy",
+        "VO2 Testing"
+      ]
+    },
+    {
+      "id": "aviv-clinics",
+      "name": "Aviv Clinics",
+      "tagline": "World's largest hyperbaric oxygen therapy center",
+      "description": "A 7,000 sqm facility integrating HBOT with cognitive assessments, physical conditioning, and lifestyle guidance. First UHMS-accredited facility in the Middle East.",
+      "location": "Jumeirah Lake Towers (JLT)",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://aviv-clinics.ae/",
+      "featured": true,
+      "services": [
+        "HBOT",
+        "Cognitive Assessment",
+        "Physical Conditioning",
+        "Lifestyle Guidance"
+      ]
+    },
+    {
+      "id": "ucryo",
+      "name": "UCRYO Wellness Center",
+      "tagline": "Cryotherapy, infrared & IV recovery",
+      "description": "Whole-body cryotherapy, localized cryotherapy, infrared sauna, compression therapy, and IV vitamin drips across multiple Dubai locations.",
+      "location": "Multiple locations",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://ucryowellness.com/",
+      "services": [
+        "Whole-Body Cryo",
+        "Localized Cryo",
+        "Infrared Sauna",
+        "Compression Therapy",
+        "IV Drips"
+      ]
+    },
+    {
+      "id": "illuminations",
+      "name": "Illuminations Well-Being Center",
+      "tagline": "Dubai's largest holistic wellness center",
+      "description": "Reiki, Theta healing, Chakra healing, sound healing, breathwork, guided meditation, life coaching, hypnotherapy, and corporate wellness programs.",
+      "location": "Jumeirah Lake Towers (JLT)",
+      "city": "Dubai",
+      "category": "Holistic & Healing",
+      "website": "https://illuminations.ae/",
+      "featured": true,
+      "services": [
+        "Reiki",
+        "Sound Healing",
+        "Breathwork",
+        "Meditation",
+        "Hypnotherapy",
+        "Life Coaching"
+      ]
+    },
+    {
+      "id": "home-of-wellness",
+      "name": "Home of Wellness",
+      "tagline": "A sanctuary for sound healing & breathwork",
+      "description": "Sound healing, breathwork, reiki, hypnotherapy, guided meditation, and energy healing for individuals, groups, and corporates.",
+      "location": "Al Wasl Road, Umm Suqeim 2",
+      "city": "Dubai",
+      "category": "Holistic & Healing",
+      "website": "https://yourhomeofwellness.com/",
+      "services": [
+        "Sound Healing",
+        "Breathwork",
+        "Reiki",
+        "Hypnotherapy",
+        "Meditation",
+        "Energy Healing"
+      ]
+    },
+    {
+      "id": "healers-clinic",
+      "name": "The Healers' Clinic",
+      "tagline": "Integrative Ayurveda & holistic medicine",
+      "description": "Blending Ayurveda, homeopathy, naturopathy, yoga, and modern medicine. Over 15,000 patients served since 2016.",
+      "location": "Al Wasl Road, Jumeirah 2",
+      "city": "Dubai",
+      "category": "Holistic & Healing",
+      "website": "https://www.thehealersclinic.com/",
+      "services": [
+        "Ayurveda",
+        "Homeopathy",
+        "Naturopathy",
+        "Yoga Therapy",
+        "Integrative Medicine"
+      ]
+    },
+    {
+      "id": "house-of-nature",
+      "name": "House of Nature Medical Center",
+      "tagline": "Abu Dhabi's integrative wellness destination",
+      "description": "Ayurveda, yoga, chiropractic care, naturopathy, functional medicine, acupuncture, and traditional healing therapies.",
+      "location": "Musaffah",
+      "city": "Abu Dhabi",
+      "category": "Holistic & Healing",
+      "website": "https://honuae.com/",
+      "services": [
+        "Ayurveda",
+        "Chiropractic Care",
+        "Naturopathy",
+        "Functional Medicine",
+        "Acupuncture"
+      ]
+    },
+    {
+      "id": "karma-yoga",
+      "name": "Karma Yoga Dubai",
+      "tagline": "Bali-inspired yoga on the 33rd floor",
+      "description": "Hatha, Vinyasa, Ashtanga, Kundalini, and Yin yoga with meditation workshops and energy healing — offering stunning marina views and a vibrant community.",
+      "location": "Marina Plaza, Dubai Marina",
+      "city": "Dubai",
+      "category": "Yoga & Movement",
+      "website": "https://www.karmayogadubai.com/",
+      "featured": true,
+      "services": [
+        "Hatha Yoga",
+        "Vinyasa",
+        "Ashtanga",
+        "Kundalini",
+        "Yin Yoga",
+        "Meditation"
+      ]
+    },
+    {
+      "id": "chi-room",
+      "name": "The Chi Room",
+      "tagline": "Boutique studio in Dubai's creative arts district",
+      "description": "Yoga, breathwork, sound healing, and meditation in an intimate, community-driven setting that bridges movement with mindfulness.",
+      "location": "Alserkal Avenue, Al Quoz",
+      "city": "Dubai",
+      "category": "Yoga & Movement",
+      "website": "https://thechiroom.ae/",
+      "services": [
+        "Yoga",
+        "Breathwork",
+        "Sound Healing",
+        "Meditation",
+        "Mindfulness"
+      ]
+    },
+    {
+      "id": "retreat-palm",
+      "name": "The Retreat Palm Dubai",
+      "tagline": "UAE's first five-star wellness resort",
+      "description": "Home to the world's first Rayya Wellness Centre offering 360-degree holistic wellness. Alcohol-free with clean-food dining built on Feng Shui principles.",
+      "location": "East Crescent, Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Wellness Retreats & Spas",
+      "website": "https://theretreatpalmdubai.com/",
+      "featured": true,
+      "services": [
+        "Holistic Wellness",
+        "Clean-Food Dining",
+        "Feng Shui",
+        "Wellness Retreats",
+        "Rejuvenation"
+      ]
+    },
+    {
+      "id": "zoya",
+      "name": "ZOYA Health & Wellbeing Resort",
+      "tagline": "Adults-only luxury wellness retreat",
+      "description": "A 1,500 sqm holistic spa with nine structured retreat programs — detox, rejuvenation, anti-aging, immune support — plus hydrotherapy, infrared sauna, and therapeutic fasting.",
+      "location": "Al Zorah",
+      "city": "Ajman",
+      "category": "Wellness Retreats & Spas",
+      "website": "https://zoyawellbeing.com/",
+      "featured": true,
+      "services": [
+        "Detox Programs",
+        "Hydrotherapy",
+        "Infrared Sauna",
+        "Therapeutic Fasting",
+        "Anti-Aging"
+      ]
+    },
+    {
+      "id": "dna-health",
+      "name": "DNA Health & Wellness",
+      "tagline": "Genetics-driven longevity programs",
+      "description": "Personalized health programs based on genetic testing, epigenetic analysis, and biomarker optimization. Offers IV therapy, hormone balancing, and anti-aging protocols.",
+      "location": "DIFC Gate Village",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://dnahealthcorp.com/",
+      "services": [
+        "Genetic Testing",
+        "Epigenetic Analysis",
+        "IV Therapy",
+        "Hormone Balancing",
+        "Anti-Aging"
+      ]
+    },
+    {
+      "id": "skin111",
+      "name": "Skin111 Clinic",
+      "tagline": "Award-winning regenerative aesthetics",
+      "description": "Regenerative medicine, PRP therapy, exosome treatments, and advanced anti-aging protocols. Winner of multiple Middle East beauty and wellness awards.",
+      "location": "Jumeirah Beach Road",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://skin111.com/",
+      "services": [
+        "Regenerative Medicine",
+        "PRP Therapy",
+        "Exosome Treatments",
+        "Anti-Aging"
+      ]
+    },
+    {
+      "id": "advanced-health-dubai",
+      "name": "Advanced Health Dubai",
+      "tagline": "Functional medicine meets longevity science",
+      "description": "Comprehensive functional medicine assessments, gut health diagnostics, heavy metal detox, telomere testing, and personalized longevity roadmaps.",
+      "location": "City Walk",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://advancedhealth.ae/",
+      "services": [
+        "Functional Medicine",
+        "Gut Health",
+        "Heavy Metal Detox",
+        "Telomere Testing",
+        "Longevity Planning"
+      ]
+    },
+    {
+      "id": "eden-aesthetics",
+      "name": "EDEN AESTHETICS Clinic",
+      "tagline": "German-standard regenerative wellness",
+      "description": "German-certified medical team offering stem cell therapy, exosome treatments, NAD+ infusions, and bio-identical hormone optimization.",
+      "location": "Business Bay",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://edenaesthetics.ae/",
+      "services": [
+        "Stem Cell Therapy",
+        "Exosome Treatments",
+        "NAD+ Infusions",
+        "Hormone Optimization"
+      ]
+    },
+    {
+      "id": "wellth-medcare",
+      "name": "Wellth by Medcare",
+      "tagline": "Medical-grade biohacking & recovery",
+      "description": "IV therapy, cryotherapy, hyperbaric oxygen, compression therapy, and infrared sauna — all under medical supervision at a premium healthcare facility.",
+      "location": "Al Safa",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://www.medcare.ae/en/wellth",
+      "services": [
+        "IV Therapy",
+        "Cryotherapy",
+        "Hyperbaric Oxygen",
+        "Compression Therapy",
+        "Infrared Sauna"
+      ]
+    },
+    {
+      "id": "resync",
+      "name": "RESYNC",
+      "tagline": "Performance recovery & optimization studio",
+      "description": "Combining sports science with recovery tech — NormaTec compression, Game Ready cold therapy, EMS training, and metabolic testing for peak performance.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://resync.ae/",
+      "services": [
+        "NormaTec Compression",
+        "Cold Therapy",
+        "EMS Training",
+        "Metabolic Testing"
+      ]
+    },
+    {
+      "id": "brain-performance-centre",
+      "name": "The Brain & Performance Centre",
+      "tagline": "Neurofeedback & cognitive optimization",
+      "description": "Neurofeedback, brain mapping (qEEG), transcranial stimulation, and cognitive performance programs for focus, stress, sleep, and mental clarity.",
+      "location": "Dubai Healthcare City",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://thebrainandperformancecentre.com/",
+      "services": [
+        "Neurofeedback",
+        "Brain Mapping",
+        "Transcranial Stimulation",
+        "Cognitive Training",
+        "Sleep Optimization"
+      ]
+    },
+    {
+      "id": "cryo-dubai",
+      "name": "CRYO",
+      "tagline": "The original whole-body cryotherapy brand",
+      "description": "Full-body and localized cryotherapy, CryoFacials, infrared sauna, and compression therapy. One of the first dedicated cryo studios in the UAE.",
+      "location": "Jumeirah 1",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://cryo.ae/",
+      "services": [
+        "Full-Body Cryo",
+        "Localized Cryo",
+        "CryoFacials",
+        "Infrared Sauna",
+        "Compression Therapy"
+      ]
+    },
+    {
+      "id": "santhigiri",
+      "name": "Santhigiri Holistic Health Center",
+      "tagline": "Traditional Ayurveda & Siddha medicine",
+      "description": "Authentic Panchakarma, Siddha treatments, yoga therapy, and Ayurvedic consultations led by practitioners from the renowned Santhigiri Ashram in Kerala.",
+      "location": "Al Karama",
+      "city": "Dubai",
+      "category": "Holistic & Healing",
+      "website": "https://santhigiriholistic.com/",
+      "services": [
+        "Panchakarma",
+        "Siddha Medicine",
+        "Yoga Therapy",
+        "Ayurvedic Consults"
+      ]
+    },
+    {
+      "id": "dubai-herbal-treatment",
+      "name": "Dubai Herbal & Treatment Centre",
+      "tagline": "Government-licensed alternative medicine since 2002",
+      "description": "One of Dubai's first licensed herbal medicine centers. Offering naturopathy, homeopathy, herbal medicine, hijama (cupping), and acupuncture.",
+      "location": "Jumeirah, Beach Road",
+      "city": "Dubai",
+      "category": "Holistic & Healing",
+      "website": "https://dubaihtc.com/",
+      "featured": true,
+      "services": [
+        "Naturopathy",
+        "Homeopathy",
+        "Herbal Medicine",
+        "Hijama (Cupping)",
+        "Acupuncture"
+      ]
+    },
+    {
+      "id": "keyani-wellness",
+      "name": "Keyani Wellness",
+      "tagline": "Energy healing & holistic coaching",
+      "description": "Reiki master sessions, crystal healing, chakra balancing, emotional freedom technique (EFT), and one-on-one holistic life coaching.",
+      "location": "Jumeirah Lake Towers (JLT)",
+      "city": "Dubai",
+      "category": "Holistic & Healing",
+      "website": "https://keyaniwellness.com/",
+      "services": [
+        "Reiki",
+        "Crystal Healing",
+        "Chakra Balancing",
+        "EFT",
+        "Life Coaching"
+      ]
+    },
+    {
+      "id": "sohum-wellness",
+      "name": "Sohum Wellness Sanctuary",
+      "tagline": "Mind-body healing in a serene sanctuary",
+      "description": "Sound baths, guided meditation, breathwork circles, Reiki, and therapeutic yoga in a purpose-built healing space designed for deep restoration.",
+      "location": "Al Wasl Road",
+      "city": "Dubai",
+      "category": "Holistic & Healing",
+      "website": "https://sohumwellness.com/",
+      "services": [
+        "Sound Baths",
+        "Meditation",
+        "Breathwork",
+        "Reiki",
+        "Therapeutic Yoga"
+      ]
+    },
+    {
+      "id": "bodytree-studio",
+      "name": "Bodytree Studio",
+      "tagline": "Abu Dhabi's premier yoga & Pilates studio",
+      "description": "Yoga, Pilates, barre, and movement classes in a beautiful, community-focused studio. Also offers teacher training, workshops, and wellness events.",
+      "location": "Al Manhal",
+      "city": "Abu Dhabi",
+      "category": "Yoga & Movement",
+      "website": "https://bodytreestudio.com/",
+      "featured": true,
+      "services": [
+        "Yoga",
+        "Pilates",
+        "Barre",
+        "Teacher Training",
+        "Wellness Workshops"
+      ]
+    },
+    {
+      "id": "aura-wellness",
+      "name": "Aura Wellness",
+      "tagline": "Yoga, meditation & holistic movement",
+      "description": "Vinyasa, Hatha, Yin yoga, and meditation with a focus on mindfulness and self-care. Offers private sessions, corporate programs, and outdoor events.",
+      "location": "Business Bay",
+      "city": "Dubai",
+      "category": "Yoga & Movement",
+      "website": "https://aurawellness.ae/",
+      "services": [
+        "Vinyasa",
+        "Hatha Yoga",
+        "Yin Yoga",
+        "Meditation",
+        "Private Sessions"
+      ]
+    },
+    {
+      "id": "dhyana-dubai",
+      "name": "Dhyana Dubai",
+      "tagline": "Premium hot yoga & infrared studio",
+      "description": "Hot yoga, infrared-heated classes, cold plunge recovery, and sound healing in a state-of-the-art studio with heated and non-heated rooms.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Yoga & Movement",
+      "website": "https://dhyanadubai.com/",
+      "services": [
+        "Hot Yoga",
+        "Infrared Classes",
+        "Cold Plunge",
+        "Sound Healing"
+      ]
+    },
+    {
+      "id": "seven-wellness",
+      "name": "Seven Wellness",
+      "tagline": "Yoga, fitness & mindful movement hub",
+      "description": "A multi-discipline studio offering yoga, functional fitness, Pilates, and breathwork in an intimate, community-driven setting.",
+      "location": "Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Yoga & Movement",
+      "website": "https://sevenwellness.ae/",
+      "services": [
+        "Yoga",
+        "Functional Fitness",
+        "Pilates",
+        "Breathwork"
+      ]
+    },
+    {
+      "id": "talise-ottoman-spa",
+      "name": "Talise Ottoman Spa",
+      "tagline": "World-class spa inside Jumeirah Zabeel Saray",
+      "description": "One of the largest spas in the Middle East with Turkish hammam, snow room, salt room, thalassotherapy pool, and over 40 signature treatments.",
+      "location": "West Crescent, Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Wellness Retreats & Spas",
+      "website": "https://www.jumeirah.com/en/stay/dubai/jumeirah-zabeel-saray",
+      "featured": true,
+      "services": [
+        "Turkish Hammam",
+        "Snow Room",
+        "Salt Room",
+        "Thalassotherapy",
+        "Signature Treatments"
+      ]
+    },
+    {
+      "id": "anantara-qasr-al-sarab",
+      "name": "Anantara Spa at Qasr Al Sarab",
+      "tagline": "Desert wellness in the Empty Quarter",
+      "description": "A luxury desert resort spa offering Arabian-inspired treatments, desert meditation, sunrise yoga, and wellness retreats surrounded by the dunes of Liwa.",
+      "location": "Liwa Desert, Empty Quarter",
+      "city": "Abu Dhabi",
+      "category": "Wellness Retreats & Spas",
+      "website": "https://www.anantara.com/en/qasr-al-sarab-abu-dhabi",
+      "services": [
+        "Arabian Treatments",
+        "Desert Meditation",
+        "Sunrise Yoga",
+        "Wellness Retreats"
+      ]
+    },
+    {
+      "id": "heart-soul-spa",
+      "name": "Heart & Soul Spa",
+      "tagline": "Boutique wellness spa with healing focus",
+      "description": "A boutique spa combining massage therapy, aromatherapy, reflexology, and energy healing with personalized wellness consultations.",
+      "location": "Dubai Marina",
+      "city": "Dubai",
+      "category": "Wellness Retreats & Spas",
+      "website": "https://heartandsoul.ae/",
+      "services": [
+        "Massage Therapy",
+        "Aromatherapy",
+        "Reflexology",
+        "Energy Healing",
+        "Wellness Consults"
+      ]
+    },
+    {
+      "id": "plume-studio",
+      "name": "Plume Studio",
+      "tagline": "Wellness lounge for mind-body restoration",
+      "description": "Float therapy, infrared sauna, cold plunge, compression therapy, and guided relaxation in a modern wellness lounge designed for urban recovery.",
+      "location": "City Walk",
+      "city": "Dubai",
+      "category": "Wellness Retreats & Spas",
+      "website": "https://plumestudio.ae/",
+      "services": [
+        "Float Therapy",
+        "Infrared Sauna",
+        "Cold Plunge",
+        "Compression Therapy",
+        "Guided Relaxation"
+      ]
+    },
+    {
+      "id": "kintsugi-space",
+      "name": "Kintsugi Space",
+      "tagline": "Women-only holistic wellness members' club",
+      "description": "Abu Dhabi's first women-only holistic wellness members' club offering infrared saunas, obsidian crystal sauna, hammam, onsen bath, sound healing, meditation, and biohacking therapies in a luxurious private setting.",
+      "location": "Al Reem Island",
+      "city": "Abu Dhabi",
+      "category": "Holistic & Healing",
+      "website": "https://kintsugispace.com/",
+      "featured": true,
+      "services": [
+        "Sound Healing",
+        "Infrared Sauna",
+        "Hammam Rituals",
+        "Meditation",
+        "Energy Work",
+        "Breathwork"
+      ]
+    },
+    {
+      "id": "ayura-ayurveda",
+      "name": "Ayura Ayurveda",
+      "tagline": "Authentic Ayurvedic healing since 2011",
+      "description": "One of Abu Dhabi's leading Ayurvedic healthcare centers with 13+ years of experience, offering 100% natural Ayurvedic treatments, rejuvenation programs, herbal medicines, and ancient wellness therapies guided by experienced Ayurvedic doctors.",
+      "location": "Hamdan Street, Dhabi Tower",
+      "city": "Abu Dhabi",
+      "category": "Holistic & Healing",
+      "website": "https://ayuraayurveda.com/",
+      "services": [
+        "Ayurvedic Consultation",
+        "Panchakarma Detox",
+        "Therapeutic Massage",
+        "Herbal Medicine",
+        "Rejuvenation Therapy",
+        "Stress Management"
+      ]
+    },
+    {
+      "id": "antara-yoga-pilates",
+      "name": "Antara Yoga & Pilates",
+      "tagline": "Abu Dhabi's home for heated yoga",
+      "description": "A dedicated heated and non-heated yoga and Pilates studio specializing in hot vinyasa, Bikram-style hot yoga, hot Pilates, and sculpt classes taught by certified instructors in a studio heated to 40 degrees Celsius.",
+      "location": "Al Muneera, Al Raha Beach",
+      "city": "Abu Dhabi",
+      "category": "Yoga & Movement",
+      "website": "https://antarayogapilates.com/",
+      "services": [
+        "Hot Vinyasa Yoga",
+        "Bikram Yoga",
+        "Hot Pilates",
+        "Yin Yoga",
+        "Mat Pilates",
+        "Yoga Sculpt"
+      ]
+    },
+    {
+      "id": "yogaone-abu-dhabi",
+      "name": "YogaOne",
+      "tagline": "Two studios, one mindful community",
+      "description": "A yoga and wellness studio with two locations in Abu Dhabi offering an extensive class schedule including aerial yoga, swing yoga, sound healing, reformer Pilates, and corporate wellness programs.",
+      "location": "Mangrove One & Masdar City",
+      "city": "Abu Dhabi",
+      "category": "Yoga & Movement",
+      "website": "https://yogaone.ae/",
+      "services": [
+        "Vinyasa Yoga",
+        "Aerial Yoga",
+        "Sound Healing",
+        "Reformer Pilates",
+        "Meditation",
+        "Corporate Wellness"
+      ]
+    },
+    {
+      "id": "soul-skin-wellness",
+      "name": "Soul & Skin Wellness",
+      "tagline": "Beachside wellness on Saadiyat Island",
+      "description": "A collective wellness hub at the Park Hyatt Hotel on Saadiyat Beach offering yoga, Pilates, reformer Pilates, group fitness, personal training, sound healing, and meditation in a stunning beachside setting.",
+      "location": "Park Hyatt, Saadiyat Island",
+      "city": "Abu Dhabi",
+      "category": "Yoga & Movement",
+      "website": "https://soulandskinwellness.com/",
+      "services": [
+        "Yoga",
+        "Reformer Pilates",
+        "Sound Healing",
+        "Personal Training",
+        "Meditation",
+        "Wellness Retreats"
+      ]
+    },
+    {
+      "id": "mandarin-oriental-spa-emirates-palace",
+      "name": "The Spa at Mandarin Oriental, Emirates Palace",
+      "tagline": "Regal wellness at Emirates Palace",
+      "description": "An award-winning luxury spa within Emirates Palace featuring nine private treatment suites, a Royal Hammam, Moroccan-inspired rituals, contrast therapy, breathwork, and treatments using premium brands like OTO CBD and Tata Harper.",
+      "location": "Corniche Road West, Emirates Palace",
+      "city": "Abu Dhabi",
+      "category": "Wellness Retreats & Spas",
+      "featured": true,
+      "website": "https://www.mandarinoriental.com/en/abu-dhabi/emirates-palace/wellness",
+      "services": [
+        "Royal Hammam",
+        "Signature Massages",
+        "Luxury Facials",
+        "Contrast Therapy",
+        "Breathwork",
+        "Couples Treatments"
+      ]
+    },
+    {
+      "id": "anantara-spa-eastern-mangroves",
+      "name": "Anantara Spa at Eastern Mangroves",
+      "tagline": "Urban retreat among the mangroves",
+      "description": "An award-winning urban waterfront spa featuring 15 treatment suites, a traditional Turkish hammam, VIP hammam scrub rooms with Vichy showers, couples suites, and signature eastern healing treatments with Arabic influences.",
+      "location": "Eastern Mangroves, Sheikh Zayed Street",
+      "city": "Abu Dhabi",
+      "category": "Wellness Retreats & Spas",
+      "website": "https://www.anantara.com/en/eastern-mangroves-abu-dhabi/spa",
+      "services": [
+        "Turkish Hammam",
+        "Couples Treatments",
+        "Vichy Shower Rituals",
+        "Therapeutic Massage",
+        "Body Scrubs",
+        "Yoga & Pilates"
+      ]
+    },
+    {
+      "id": "revive-abu-dhabi",
+      "name": "REVIVE Abu Dhabi",
+      "tagline": "Recovery and performance therapy hub",
+      "description": "A wellness and recovery center combining professional body massage, cryotherapy, ice baths, infrared sauna, cupping therapy, and sports recovery in one facility focused on pain relief, athletic recovery, and long-lasting wellness.",
+      "location": "Central Abu Dhabi",
+      "city": "Abu Dhabi",
+      "category": "Biohacking & Performance",
+      "website": "https://www.reviveabudhabi.com/",
+      "services": [
+        "Cryotherapy",
+        "Ice Baths",
+        "Infrared Sauna",
+        "Cupping Therapy",
+        "Sports Recovery Massage",
+        "Deep Tissue Massage"
+      ]
+    },
+    {
+      "id": "barakah-studio",
+      "name": "Barakah Studio",
+      "tagline": "Sharjah's women-only yoga & Pilates studio",
+      "description": "Sharjah's leading ladies-only yoga and Pilates studio founded by two local sisters, offering reformer Pilates, multiple yoga styles, sound healing, and meditation in a safe, supportive space designed for women's wellbeing.",
+      "location": "Muwailih Commercial, Al Arish Building",
+      "city": "Sharjah",
+      "category": "Yoga & Movement",
+      "website": "https://barakahstudio.com/",
+      "services": [
+        "Reformer Pilates",
+        "Vinyasa Yoga",
+        "Yin Yoga",
+        "Sound Healing",
+        "Meditation",
+        "Hatha Yoga"
+      ]
+    },
+    {
+      "id": "sujana-power-yoga",
+      "name": "Sujana Power Yoga",
+      "tagline": "Therapeutic yoga with nine years of practice",
+      "description": "A yoga center in Sharjah with 9+ years of experience offering therapeutic yoga classes, pranayama, meditation, and specialized programs for health conditions like back pain, blood pressure, and stress management.",
+      "location": "Lily Tower, Al Nahda",
+      "city": "Sharjah",
+      "category": "Yoga & Movement",
+      "website": "https://sujanapoweryoga.org/",
+      "services": [
+        "Power Yoga",
+        "Pranayama",
+        "Meditation",
+        "Therapeutic Yoga",
+        "Kids Yoga",
+        "Corporate Yoga"
+      ]
+    },
+    {
+      "id": "dar-pilates",
+      "name": "Dar Pilates",
+      "tagline": "Women's Pilates & yoga born in Sharjah",
+      "description": "A women-only reformer Pilates and yoga studio in Sharjah, founded by local sisters, offering small-group classes with certified instructors, private sessions, and cycle-based yoga designed to help women move, breathe, and glow.",
+      "location": "Muwailih, Sharjah",
+      "city": "Sharjah",
+      "category": "Yoga & Movement",
+      "website": "https://darpilates.com/",
+      "services": [
+        "Reformer Pilates",
+        "Yoga Classes",
+        "Private Sessions",
+        "Small Group Training",
+        "Cycle-Based Yoga",
+        "Beginner Programs"
+      ]
+    },
+    {
+      "id": "chedi-al-bait-spa",
+      "name": "The Chedi Al Bait Spa",
+      "tagline": "Luxury heritage spa in Sharjah's heart",
+      "description": "A luxury 500 sqm spa within the five-star Chedi Al Bait hotel in Sharjah's Heart of Sharjah heritage district, offering signature massages, Turkish-style foot reflexology, prickly pear oil facials, rose body envelopments, and therapeutic whirl baths.",
+      "location": "Heart of Sharjah, Al Mareija",
+      "city": "Sharjah",
+      "category": "Wellness Retreats & Spas",
+      "website": "https://www.ghmhotels.com/en/the-chedi-al-bait-sharjah/spa-wellness/",
+      "services": [
+        "Signature Massage",
+        "Foot Reflexology",
+        "Prickly Pear Facials",
+        "Body Envelopments",
+        "Whirl Baths",
+        "Couples Treatments"
+      ]
+    },
+    {
+      "id": "awaken-wellness-atlantis",
+      "name": "AWAKEN Wellness at Atlantis The Royal",
+      "tagline": "Holistic luxury wellness at Atlantis The Royal",
+      "description": "An all-suites luxury spa and wellness destination within Atlantis The Royal featuring 15 therapy suites, a hammam sensorium, outdoor meditation pavilion, aesthetic wellness clinic, and treatments using clean, vegan, locally-sourced ingredients.",
+      "location": "Atlantis The Royal, Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Wellness Retreats & Spas",
+      "featured": true,
+      "website": "https://www.atlantis.com/atlantis-the-royal/awaken-wellness",
+      "services": [
+        "Signature Massages",
+        "Hammam Sensorium",
+        "Energy Therapies",
+        "Hypnotherapy",
+        "Luxury Facials",
+        "Fitness Recovery"
+      ]
+    },
+    {
+      "id": "guerlain-spa-one-and-only",
+      "name": "Guerlain Spa at One&Only The Palm",
+      "tagline": "The Middle East's only Guerlain Spa",
+      "description": "The only Guerlain Spa in the Middle East, spanning 2,400 sqm within a Moorish palace-inspired setting at One&Only The Palm, featuring 9 treatment suites, an adults-only pool, hammam, and premium Guerlain skincare treatments.",
+      "location": "One&Only The Palm, West Crescent, Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Wellness Retreats & Spas",
+      "featured": true,
+      "website": "https://www.oneandonlyresorts.com/the-palm/experiences/guerlain-spa",
+      "services": [
+        "Guerlain Facials",
+        "Signature Body Rituals",
+        "Hammam",
+        "Couples Treatments",
+        "Nail & Hair Salon",
+        "Meditation Pool"
+      ]
+    },
+    {
+      "id": "mouv-pilates-studio",
+      "name": "MOUV Pilates Studio",
+      "tagline": "UAE's first hybrid reformer Pilates studio",
+      "description": "The UAE's first hybrid reformer Pilates studio offering both instructor-led and on-demand reformer classes, giving clients the flexibility of self-paced workouts alongside expert-guided sessions in a modern studio.",
+      "location": "Al Zeina, Al Raha Beach",
+      "city": "Abu Dhabi",
+      "category": "Yoga & Movement",
+      "website": "https://www.mouvpilatestudio.com/",
+      "services": [
+        "Instructor-Led Reformer Pilates",
+        "On-Demand Reformer Classes",
+        "Private Sessions",
+        "Small Group Classes",
+        "Beginner Reformer",
+        "Core Sculpt"
+      ]
+    },
+    {
+      "id": "kora-longevity-center",
+      "name": "Kora Longevity Center",
+      "tagline": "Bespoke longevity protocols in DIFC",
+      "description": "A boutique longevity clinic offering personalized protocols including NAD+ IV therapy, peptide therapy, ozone therapy, advanced blood panels, and epigenetic age testing — popular with the Dubai biohacking community.",
+      "location": "DIFC",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://koralongevity.com/",
+      "services": [
+        "NAD+ IV Therapy",
+        "Peptide Therapy",
+        "Ozone Therapy",
+        "Epigenetic Age Testing",
+        "Blood Panels"
+      ]
+    },
+    {
+      "id": "dr-ozone-clinic",
+      "name": "Dr Ozone Clinic",
+      "tagline": "Dubai's dedicated ozone therapy specialists",
+      "description": "A specialist clinic focused on medical ozone therapy, offering 10-pass ozone, rectal insufflation, ozone sauna, and IV ozone protocols for detox, immune support, and chronic health conditions.",
+      "location": "Jumeirah",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://drozoneclinic.com/",
+      "services": [
+        "10-Pass Ozone Therapy",
+        "Ozone Sauna",
+        "IV Ozone",
+        "Rectal Insufflation",
+        "Detox Protocols"
+      ]
+    },
+    {
+      "id": "zoime-longevity-centre",
+      "name": "ZOIME Longevity Centre",
+      "tagline": "Data-driven longevity and performance optimization",
+      "description": "A comprehensive longevity center offering full-body MRI screening, biological age testing, VO2 max testing, DEXA scans, CGM monitoring, and personalized longevity protocols backed by advanced diagnostics.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://zoime.com/",
+      "services": [
+        "Full-Body MRI",
+        "Biological Age Testing",
+        "VO2 Max Testing",
+        "DEXA Scan",
+        "CGM Monitoring",
+        "Longevity Protocols"
+      ]
+    },
+    {
+      "id": "pura-longevity-clinic",
+      "name": "Pura Longevity Clinic",
+      "tagline": "Precision medicine for optimal healthspan",
+      "description": "A longevity-focused clinic offering hormone optimization, advanced blood biomarker panels, peptide protocols, IV nutrient therapy, and personalized anti-aging programs designed for peak health and performance.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://puralongevity.com/",
+      "services": [
+        "Hormone Optimization",
+        "Blood Biomarker Panels",
+        "Peptide Protocols",
+        "IV Nutrient Therapy",
+        "Anti-Aging Programs"
+      ]
+    },
+    {
+      "id": "biohackn",
+      "name": "Biohackn",
+      "tagline": "Community-driven biohacking hub",
+      "description": "A biohacking and wellness center offering red light therapy, PEMF, cold plunge, infrared sauna, IV drips, and group biohacking sessions — a hub for Dubai's growing biohacking community.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://biohackn.com/",
+      "services": [
+        "Red Light Therapy",
+        "PEMF Therapy",
+        "Cold Plunge",
+        "Infrared Sauna",
+        "IV Drips",
+        "Group Sessions"
+      ]
+    },
+    {
+      "id": "recovery-on-demand",
+      "name": "Recovery On Demand",
+      "tagline": "Mobile recovery & wellness to your door",
+      "description": "A mobile recovery service bringing cryotherapy, compression therapy, IV drips, and sports recovery treatments directly to homes, offices, and events across Dubai.",
+      "location": "Mobile — citywide",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://recoveryondemand.ae/",
+      "services": [
+        "Mobile Cryotherapy",
+        "Compression Therapy",
+        "IV Drips",
+        "Sports Recovery",
+        "Corporate Wellness"
+      ]
+    },
+    {
+      "id": "bliss-now-recovery",
+      "name": "Bliss Now Recovery",
+      "tagline": "Urban recovery lounge for mind & body",
+      "description": "A recovery-focused wellness lounge offering float tanks, cold plunge, infrared sauna, compression therapy, and guided breathwork — designed for post-workout recovery and stress relief.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://blissnowrecovery.com/",
+      "services": [
+        "Float Tanks",
+        "Cold Plunge",
+        "Infrared Sauna",
+        "Compression Therapy",
+        "Breathwork"
+      ]
+    },
+    {
+      "id": "os1-fitness",
+      "name": "OS-1 Fitness",
+      "tagline": "Functional fitness meets longevity science",
+      "description": "A functional fitness studio integrating strength training with longevity-focused protocols including zone 2 cardio, VO2 max training, mobility work, and metabolic conditioning — popular with Dubai's biohacking community.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Yoga & Movement",
+      "website": "https://os1fitness.com/",
+      "services": [
+        "Functional Fitness",
+        "Zone 2 Cardio",
+        "VO2 Max Training",
+        "Strength Training",
+        "Mobility Work"
+      ]
+    },
+    {
+      "id": "yofit-hot-studios",
+      "name": "YOFIT Hot Studios",
+      "tagline": "Infrared-heated fitness & yoga studio",
+      "description": "A hot yoga and fitness studio using infrared heating technology for hot yoga, hot Pilates, hot HIIT, and recovery sessions — designed to enhance detoxification, flexibility, and calorie burn.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Yoga & Movement",
+      "website": "https://yofitstudios.com/",
+      "services": [
+        "Hot Yoga",
+        "Hot Pilates",
+        "Hot HIIT",
+        "Infrared Recovery",
+        "Breathwork"
+      ]
+    },
+    {
+      "id": "forus-life",
+      "name": "Forus Life",
+      "tagline": "At-home health testing & functional medicine",
+      "description": "A health-tech platform offering at-home blood testing, hormone panels, gut health tests, food sensitivity testing, and functional medicine consultations — making advanced diagnostics accessible from home.",
+      "location": "Online + mobile service",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://foruslife.com/",
+      "services": [
+        "At-Home Blood Testing",
+        "Hormone Panels",
+        "Gut Health Tests",
+        "Food Sensitivity Testing",
+        "Functional Medicine Consults"
+      ]
+    },
+    {
+      "id": "valeo-health",
+      "name": "Valeo",
+      "tagline": "At-home blood work & health analytics",
+      "description": "A health-tech service providing at-home blood draws, comprehensive biomarker panels, and AI-powered health analytics — delivering lab-quality results with personalized health insights directly to your phone.",
+      "location": "Online + mobile service",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://valeo.co/",
+      "services": [
+        "At-Home Blood Draws",
+        "Biomarker Panels",
+        "Health Analytics",
+        "Personalized Insights",
+        "Wellness Tracking"
+      ]
+    },
+    {
+      "id": "rejuv-wellness",
+      "name": "Rejuv",
+      "tagline": "IV therapy & wellness on demand",
+      "description": "An IV therapy and wellness clinic offering NAD+ drips, vitamin infusions, glutathione, hydration therapy, and custom wellness protocols — with in-clinic and at-home service options.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://rejuv.ae/",
+      "services": [
+        "NAD+ Drips",
+        "Vitamin Infusions",
+        "Glutathione IV",
+        "Hydration Therapy",
+        "At-Home IV Service"
+      ]
+    },
+    {
+      "id": "she-is-liberty",
+      "name": "She Is Liberty",
+      "tagline": "Women's wellness & hormone health specialists",
+      "description": "A women-focused wellness platform offering hormone health coaching, menopause support, cycle syncing guidance, functional nutrition, and community workshops — empowering women to optimize their health at every life stage.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Holistic & Healing",
+      "website": "https://sheisliberty.com/",
+      "services": [
+        "Hormone Health Coaching",
+        "Menopause Support",
+        "Cycle Syncing",
+        "Functional Nutrition",
+        "Women's Workshops"
+      ]
+    },
+    {
+      "id": "everwell-clinic",
+      "name": "Everwell",
+      "tagline": "Preventive health & personalized wellness",
+      "description": "A preventive health clinic offering comprehensive health screenings, genetic testing, personalized supplement protocols, functional medicine consultations, and corporate wellness programs.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://everwell.ae/",
+      "services": [
+        "Health Screenings",
+        "Genetic Testing",
+        "Supplement Protocols",
+        "Functional Medicine",
+        "Corporate Wellness"
+      ]
+    },
+    {
+      "id": "broth-lab",
+      "name": "Broth Lab",
+      "tagline": "Dubai's artisanal bone broth kitchen",
+      "description": "A specialty kitchen producing slow-simmered bone broths from grass-fed, organic sources — available in classic beef, chicken, and turmeric varieties. Popular for gut health, fasting protocols, and post-workout recovery.",
+      "location": "Dubai (delivery citywide)",
+      "city": "Dubai",
+      "category": "Nutrition & Supplements",
+      "website": "https://brothlab.ae/",
+      "services": [
+        "Bone Broth Delivery",
+        "Gut Health Protocols",
+        "Fasting Support",
+        "Organic Sourcing",
+        "Subscription Plans"
+      ]
+    },
+    {
+      "id": "hola-zero-sugar",
+      "name": "Hola Zero Sugar Cafe",
+      "tagline": "Zero-sugar, health-first cafe concept",
+      "description": "A health-conscious cafe serving entirely sugar-free meals, snacks, and beverages — popular with keto, diabetic-friendly, and longevity-minded communities. Offerings include keto desserts, protein bowls, and adaptogenic drinks.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Nutrition & Supplements",
+      "website": "https://holazerosugar.com/",
+      "services": [
+        "Sugar-Free Meals",
+        "Keto Desserts",
+        "Protein Bowls",
+        "Adaptogenic Drinks",
+        "Healthy Catering"
+      ]
+    },
+    {
+      "id": "me-kombucha",
+      "name": "ME Kombucha",
+      "tagline": "UAE's homegrown artisan kombucha",
+      "description": "A local artisan kombucha brand brewing small-batch, raw, probiotic-rich kombucha in unique flavors. Available at health food stores, farmers markets, and via home delivery across the UAE.",
+      "location": "Dubai (delivery UAE-wide)",
+      "city": "Dubai",
+      "category": "Nutrition & Supplements",
+      "website": "https://mekombucha.com/",
+      "services": [
+        "Raw Kombucha",
+        "Probiotic Drinks",
+        "Home Delivery",
+        "Wholesale Supply",
+        "Custom Flavors"
+      ]
+    },
+    {
+      "id": "generation-h",
+      "name": "Generation H",
+      "tagline": "Health food market & community kitchen",
+      "description": "A health food concept store and community kitchen offering organic produce, functional foods, wellness supplements, fresh cold-pressed juices, and educational wellness workshops.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Nutrition & Supplements",
+      "website": "https://generationh.ae/",
+      "services": [
+        "Organic Produce",
+        "Functional Foods",
+        "Cold-Pressed Juices",
+        "Wellness Supplements",
+        "Workshops"
+      ]
+    },
+    {
+      "id": "scoop-wholefoods",
+      "name": "Scoop Wholefoods",
+      "tagline": "Zero-waste health food store",
+      "description": "A zero-waste, bulk health food store offering organic superfoods, nuts, seeds, adaptogens, protein powders, and eco-friendly household products — a go-to for the health-conscious community in Dubai.",
+      "location": "Multiple locations",
+      "city": "Dubai",
+      "category": "Nutrition & Supplements",
+      "website": "https://scoopwholefoods.com/",
+      "services": [
+        "Bulk Superfoods",
+        "Organic Nuts & Seeds",
+        "Adaptogens",
+        "Protein Powders",
+        "Eco Products"
+      ]
+    },
+    {
+      "id": "reset-villa",
+      "name": "Reset Villa",
+      "tagline": "Private wellness retreat villa",
+      "description": "A private villa-style wellness retreat offering cold plunge, infrared sauna, IV therapy, breathwork sessions, and guided detox programs in an intimate, residential setting away from the clinical environment.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Wellness Retreats & Spas",
+      "website": "https://resetvilla.ae/",
+      "services": [
+        "Cold Plunge",
+        "Infrared Sauna",
+        "IV Therapy",
+        "Breathwork Sessions",
+        "Detox Programs"
+      ]
+    },
+    {
+      "id": "contrast-wellness",
+      "name": "Contrast Wellness",
+      "tagline": "Dubai's leading contrast therapy studios",
+      "description": "Private Finnish sauna suites paired with glacier-cold ice bath plunges, enhanced with red light therapy and NormaTec compression. Four locations across Dubai.",
+      "location": "Dubai Creek Harbour, City Walk, JVC, Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://www.contrast-wellness.com/",
+      "services": [
+        "Contrast Therapy",
+        "Finnish Sauna",
+        "Ice Baths",
+        "Red Light Therapy",
+        "Compression Therapy"
+      ]
+    },
+    {
+      "id": "novomed-functional-medicine",
+      "name": "Novomed Centers",
+      "tagline": "Multi-specialty healthcare with functional medicine",
+      "description": "Leading healthcare group offering functional medicine, biohacking protocols, healthy aging programs, and integrative health across multiple UAE locations.",
+      "location": "Multiple locations",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://www.novomed.com/",
+      "services": [
+        "Functional Medicine",
+        "Biohacking",
+        "Healthy Aging",
+        "Regenerative Medicine",
+        "Integrative Health"
+      ]
+    },
+    {
+      "id": "wellth-integrative",
+      "name": "Wellth Clinic",
+      "tagline": "Dubai's first integrative medicine hub",
+      "description": "A holistic medical centre combining Ayurveda, Chinese medicine, chiropractic, functional medicine, physiotherapy, yoga, and Pilates under one roof.",
+      "location": "Jumeirah 2, Al Wasl Road",
+      "city": "Dubai",
+      "category": "Holistic & Healing",
+      "website": "https://wellth.ae/",
+      "services": [
+        "Ayurveda",
+        "Chinese Medicine",
+        "Chiropractic",
+        "Functional Medicine",
+        "Yoga & Pilates"
+      ]
+    },
+    {
+      "id": "biolite-healthness",
+      "name": "Biolite Healthness",
+      "tagline": "Dubai's first day retreat",
+      "description": "A regenerative medicine and holistic healthcare center combining advanced diagnostics, anti-aging treatments, and restorative wellness in a resort-like day retreat setting.",
+      "location": "Jumeirah",
+      "city": "Dubai",
+      "category": "Longevity Clinics",
+      "website": "https://www.biolitedubai.com/",
+      "services": [
+        "Regenerative Medicine",
+        "Anti-Aging",
+        "IV Therapy",
+        "Diagnostics",
+        "Holistic Wellness"
+      ]
+    },
+    {
+      "id": "limitless-human",
+      "name": "Limitless Human",
+      "tagline": "Human optimization center",
+      "description": "Advanced diagnostics, biohacking protocols, and longevity science for peak human performance. Personalized optimization plans based on cutting-edge biomarker testing.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Biohacking & Performance",
+      "website": "https://limitlesshuman.ae/",
+      "services": [
+        "Advanced Diagnostics",
+        "Biohacking",
+        "Longevity Protocols",
+        "Biomarker Testing",
+        "Performance Optimization"
+      ]
+    },
+    {
+      "id": "hundred-wellness",
+      "name": "The Hundred Wellness Centre",
+      "tagline": "Pioneering wellness since 2008",
+      "description": "Founded by Emirati Asma Hilal Lootah, one of Dubai's original wellness destinations offering Pilates, yoga, physiotherapy, nutrition, and holistic health under one roof.",
+      "location": "Jumeirah",
+      "city": "Dubai",
+      "category": "Yoga & Movement",
+      "website": "https://www.thehundred.ae/",
+      "services": [
+        "Pilates",
+        "Yoga",
+        "Physiotherapy",
+        "Nutrition",
+        "Holistic Health"
+      ]
+    },
+    {
+      "id": "just-padel",
+      "name": "Just Padel",
+      "tagline": "Dubai's largest padel court network",
+      "description": "Just Padel operates multiple padel courts across Dubai at Kite Beach, Mina Rashid, and Dubai South. Ideal for beginners and seasoned players with flexible booking, coaching programs, and social leagues.",
+      "location": "Kite Beach, Mina Rashid & Dubai South",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://justpadel.ae/",
+      "featured": true,
+      "services": [
+        "Padel Courts",
+        "Coaching",
+        "Leagues & Tournaments",
+        "Equipment Rental",
+        "Social Play"
+      ]
+    },
+    {
+      "id": "central-padel",
+      "name": "Central Padel",
+      "tagline": "Professional-grade padel with international standards",
+      "description": "Central Padel is internationally recognised for its professional coaching and competitive play. Indoor and outdoor courts, regular tournaments, and structured training programs for all levels.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://centralpadel.com/",
+      "services": [
+        "Indoor Courts",
+        "Outdoor Courts",
+        "Professional Coaching",
+        "Tournaments",
+        "Academy Programs"
+      ]
+    },
+    {
+      "id": "redline-padel-club",
+      "name": "Redline Padel Club",
+      "tagline": "Lifestyle-driven padel destination in Dubai",
+      "description": "Redline Padel Club stands out as one of Dubai's most lifestyle-driven padel destinations with consistent court conditions, professional coaching staff, an active tournament calendar, and vibrant social atmosphere.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://www.redlinesportsclub.com/",
+      "services": [
+        "Padel Courts",
+        "Coaching",
+        "Tournaments",
+        "Social Events",
+        "Pro Shop"
+      ]
+    },
+    {
+      "id": "matcha-club",
+      "name": "Matcha Club",
+      "tagline": "Padel, yoga, and café culture in Al Quoz",
+      "description": "Matcha Club in Al Quoz features six outdoor padel courts alongside yoga studios for post-game stretching and a Nette café serving Japanese-European breakfast. A unique wellness-meets-sport experience.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://matchaclub.ae/",
+      "services": [
+        "Padel Courts",
+        "Yoga Studio",
+        "Café",
+        "Social Play",
+        "Coaching"
+      ]
+    },
+    {
+      "id": "club-padel",
+      "name": "Club Padel",
+      "tagline": "Indoor and outdoor padel courts across Dubai",
+      "description": "Club Padel offers premium indoor and outdoor padel courts with flexible booking, group sessions, and competitive leagues. A go-to venue for the growing Dubai padel community.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://www.clubpadel.ae/",
+      "services": [
+        "Indoor Courts",
+        "Outdoor Courts",
+        "Leagues",
+        "Coaching",
+        "Court Rental"
+      ]
+    },
+    {
+      "id": "padel-edition",
+      "name": "Padel Edition",
+      "tagline": "Premium indoor padel experience",
+      "description": "Padel Edition is a dedicated indoor padel facility in Dubai offering climate-controlled courts year-round, perfect for summer play. Professional coaching and league play available.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://padeledition.ae/",
+      "services": [
+        "Indoor Padel Courts",
+        "Coaching",
+        "League Play",
+        "Private Bookings"
+      ]
+    },
+    {
+      "id": "rra-padel-academy",
+      "name": "RRA Padel Academy",
+      "tagline": "Padel with Burj Khalifa views at Dusit Thani",
+      "description": "RRA Padel Academy at Dusit Thani Dubai provides padel with a view — courts boasting Instagram-worthy backdrops of the Burj Khalifa in DIFC. Professional coaching and social play.",
+      "location": "DIFC, Dusit Thani Dubai",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://rrapadel.com/",
+      "services": [
+        "Padel Courts",
+        "Academy Coaching",
+        "Social Play",
+        "Corporate Events"
+      ]
+    },
+    {
+      "id": "nas-sports-complex",
+      "name": "NAS Sports Complex",
+      "tagline": "Multi-sport complex with padel and more",
+      "description": "NAS Sports Complex in Al Quoz is a multi-sport venue featuring padel courts alongside football pitches, swimming pools, and fitness facilities. One of Dubai's most established sports destinations.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://nassportscomplex.ae/",
+      "featured": true,
+      "services": [
+        "Padel Courts",
+        "Football Pitches",
+        "Swimming Pool",
+        "Fitness Centre",
+        "Multi-Sport Venue"
+      ]
+    },
+    {
+      "id": "dutch-padel-club",
+      "name": "Dutch Padel Club",
+      "tagline": "Coaching-focused padel in Sports City",
+      "description": "Dutch Padel Club in Dubai Sports City is known for its coaching programs and social padel community. Group lessons, private coaching, and regular social play sessions.",
+      "location": "Dubai Sports City",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://dutchpadelclub.com/",
+      "services": [
+        "Padel Courts",
+        "Group Coaching",
+        "Private Lessons",
+        "Social Play"
+      ]
+    },
+    {
+      "id": "just-pickle",
+      "name": "Just Pickle",
+      "tagline": "Dubai's dedicated pickleball venue",
+      "description": "Just Pickle by the Just Padel team brings dedicated pickleball courts to Dubai — the fastest-growing sport in the world. Beginner-friendly with coaching, open play, and competitive leagues.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Padel & Racquet Sports",
+      "website": "https://justpadel.ae/",
+      "services": [
+        "Pickleball Courts",
+        "Coaching",
+        "Open Play",
+        "Leagues",
+        "Equipment Rental"
+      ]
+    },
+    {
+      "id": "embody-fitness",
+      "name": "Embody Fitness",
+      "tagline": "Dubai's most exclusive personal training studio",
+      "description": "Embody Fitness in DIFC caps membership at 250 for an ultra-private experience. Bespoke 8-12 week transformation programs, recovery suites with ice baths, saunas, and sports massage. Five-star spa aesthetics.",
+      "location": "DIFC",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.embodyfitness.com/",
+      "featured": true,
+      "services": [
+        "Personal Training",
+        "Body Transformation",
+        "DEXA Scans",
+        "Recovery Suite",
+        "Nutrition Coaching"
+      ]
+    },
+    {
+      "id": "warehouse-gym",
+      "name": "The Warehouse Gym",
+      "tagline": "Dubai's iconic industrial-style fitness hub",
+      "description": "The Warehouse Gym's flagship Al Quoz location is a Dubai fitness institution. Raw industrial aesthetic, serious lifting equipment, CrossFit, boxing ring, spin studio, juice bar, and ladies-only spaces across multiple locations.",
+      "location": "Al Quoz (flagship) + 5 locations",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.thewarehousegym.com/",
+      "featured": true,
+      "services": [
+        "Strength Training",
+        "CrossFit",
+        "Boxing",
+        "Spin",
+        "Group Classes",
+        "Ladies Section"
+      ]
+    },
+    {
+      "id": "viya-fit",
+      "name": "Viya Fit",
+      "tagline": "Luxury gym with rooftop padel in Dubai Marina",
+      "description": "Viya Fit in Dubai Marina delivers a luxury gym experience with reformer Pilates studios, rooftop padel courts, outdoor running tracks, and state-of-the-art changing rooms catering to both performance and comfort.",
+      "location": "Dubai Marina",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://viyafit.com/",
+      "services": [
+        "Gym Floor",
+        "Reformer Pilates",
+        "Rooftop Padel",
+        "Running Track",
+        "Recovery Amenities"
+      ]
+    },
+    {
+      "id": "wellfit",
+      "name": "Wellfit",
+      "tagline": "Multi-functional lifestyle gym with climbing wall",
+      "description": "Wellfit in Al Quoz is a multi-functional lifestyle gym featuring strength zones, CrossFit-style training, recovery suites, indoor cycling, and even climbing walls. Family-friendly with diverse programming.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://wellfit.ae/",
+      "services": [
+        "Gym Floor",
+        "CrossFit",
+        "Climbing Wall",
+        "Indoor Cycling",
+        "Recovery Suite",
+        "Group Classes"
+      ]
+    },
+    {
+      "id": "gymnation",
+      "name": "GymNation",
+      "tagline": "Affordable mega gyms with 24/7 access across Dubai",
+      "description": "GymNation is the UAE's largest gym chain with 10+ locations offering massive floor space, functional fitness zones, Hyrox training areas, group classes, and 24/7 access at affordable prices.",
+      "location": "10+ locations across Dubai & UAE",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://gymnation.com/",
+      "services": [
+        "24/7 Gym Access",
+        "Functional Fitness",
+        "Hyrox Training",
+        "Group Classes",
+        "Affordable Memberships"
+      ]
+    },
+    {
+      "id": "barrys",
+      "name": "Barry's",
+      "tagline": "The best workout in the world — HIIT in the Red Room",
+      "description": "Barry's brings its globally iconic Red Room to Dubai with locations in DIFC and Dubai Marina. High-intensity interval training combining treadmill cardio and floor strength work in an electrifying atmosphere.",
+      "location": "DIFC & Dubai Marina",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.barrys.com/",
+      "featured": true,
+      "services": [
+        "HIIT Classes",
+        "Treadmill Intervals",
+        "Strength Training",
+        "Fuel Bar",
+        "Boutique Fitness"
+      ]
+    },
+    {
+      "id": "f45-training",
+      "name": "F45 Training",
+      "tagline": "45-minute team training that changes lives",
+      "description": "F45 Training brings functional 45-minute team workouts to multiple Dubai locations. Circuit-based HIIT with a different workout every day, technology-driven screens, and a strong global community.",
+      "location": "Marina, JLT, Downtown & more",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://f45training.ae/",
+      "services": [
+        "HIIT Classes",
+        "Functional Training",
+        "Team Workouts",
+        "45-Minute Sessions"
+      ]
+    },
+    {
+      "id": "crank",
+      "name": "Crank",
+      "tagline": "Homegrown Dubai HIIT and cycling studio",
+      "description": "Crank is a homegrown Dubai brand offering high-intensity group classes across multiple locations. TRX, battle ropes, sleds, and functional movements. Known for tough workouts and a strong community.",
+      "location": "Business Bay, JLT, Dubai Hills & more",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.crankfit.com/",
+      "services": [
+        "HIIT Classes",
+        "Indoor Cycling",
+        "Functional Training",
+        "Group Classes"
+      ]
+    },
+    {
+      "id": "core-direction",
+      "name": "Core Direction",
+      "tagline": "Premium reformer Pilates studio",
+      "description": "Core Direction is a premium reformer Pilates studio in Dubai offering small-group classes focusing on core strength, flexibility, and posture. Expert instructors and a boutique atmosphere.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://coredirection.com/",
+      "services": [
+        "Reformer Pilates",
+        "Mat Pilates",
+        "Small Group Classes",
+        "Private Sessions"
+      ]
+    },
+    {
+      "id": "club-pilates",
+      "name": "Club Pilates",
+      "tagline": "Global reformer Pilates franchise in Dubai",
+      "description": "Club Pilates brings its world-renowned reformer-based classes to Dubai at City Walk and Dubai Hills. Four levels from intro to advanced, TRX integration, and experienced instructors.",
+      "location": "City Walk & Dubai Hills",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.clubpilates.ae/",
+      "services": [
+        "Reformer Pilates",
+        "TRX Integration",
+        "4 Class Levels",
+        "Small Group Format"
+      ]
+    },
+    {
+      "id": "bare-fitness",
+      "name": "BARE",
+      "tagline": "Outdoor beach fitness and calisthenics at Kite Beach",
+      "description": "BARE runs outdoor bootcamps and calisthenics sessions on Kite Beach at sunrise. Bodyweight training, functional fitness, and community-driven beach workouts under the Dubai sky.",
+      "location": "Kite Beach",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://bare.fitness/",
+      "services": [
+        "Beach Bootcamps",
+        "Calisthenics",
+        "Outdoor Training",
+        "Sunrise Sessions"
+      ]
+    },
+    {
+      "id": "vogue-fitness",
+      "name": "Vogue Fitness",
+      "tagline": "Premier CrossFit and functional fitness facility",
+      "description": "Vogue Fitness is a premium CrossFit and functional fitness facility hosting regional competitions. Huge space, top-tier coaching, Olympic lifting platforms, and dedicated Hyrox training areas.",
+      "location": "Al Quoz (Dubai) & Abu Dhabi",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.voguefitness.com/",
+      "services": [
+        "CrossFit",
+        "Functional Fitness",
+        "Hyrox Prep",
+        "Olympic Lifting",
+        "Competitions"
+      ]
+    },
+    {
+      "id": "crossfit-gold-box",
+      "name": "CrossFit Gold Box",
+      "tagline": "One of Dubai's original and most popular CrossFit boxes",
+      "description": "CrossFit Gold Box in Al Quoz is one of the original and most popular CrossFit boxes in Dubai. Strong community, experienced coaches, competition team, and specialty programs in Olympic lifting and gymnastics.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.crossfitgoldbox.com/",
+      "services": [
+        "CrossFit",
+        "Olympic Lifting",
+        "Gymnastics",
+        "Competition Team",
+        "Open Gym"
+      ]
+    },
+    {
+      "id": "tribefit",
+      "name": "TribeFit",
+      "tagline": "CrossFit gym meets social hub in JLT",
+      "description": "TribeFit in JLT combines CrossFit and functional fitness with a social hub featuring a rooftop pool. A community-driven gym where fitness meets Dubai lifestyle.",
+      "location": "JLT",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://tribefit.co/",
+      "services": [
+        "CrossFit",
+        "Group Classes",
+        "Rooftop Pool",
+        "Social Hub",
+        "Personal Training"
+      ]
+    },
+    {
+      "id": "fitrepublik",
+      "name": "FitRepublik",
+      "tagline": "100,000 sq ft mega fitness campus",
+      "description": "FitRepublik in Dubai Sports City is one of the largest fitness facilities in the region at over 100,000 sq ft. Olympic pool, climbing wall, indoor track, CrossFit area, spin studio, and padel court.",
+      "location": "Dubai Sports City",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.fitrepublik.com/",
+      "services": [
+        "Olympic Pool",
+        "Climbing Wall",
+        "CrossFit",
+        "Indoor Track",
+        "Spin Studio",
+        "Padel"
+      ]
+    },
+    {
+      "id": "flywheel-sports",
+      "name": "Flywheel Sports",
+      "tagline": "Performance-tracked indoor cycling in DIFC",
+      "description": "Flywheel Sports in DIFC offers performance-based indoor cycling with real-time metrics and a Torqboard leaderboard for competitive riders. Premium boutique cycling experience.",
+      "location": "DIFC",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.flywheelsports.ae/",
+      "services": [
+        "Indoor Cycling",
+        "Performance Tracking",
+        "Leaderboard",
+        "Premium Amenities"
+      ]
+    },
+    {
+      "id": "fortius-dubai",
+      "name": "Fortius",
+      "tagline": "Performance-focused CrossFit and strength training",
+      "description": "Fortius is a performance-focused CrossFit and strength training gym in Dubai. Competitive programming, experienced coaching, and a community of serious athletes.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Gyms & Fitness Studios",
+      "website": "https://www.fortiusdubai.com/",
+      "services": [
+        "CrossFit",
+        "Strength Training",
+        "Competition Prep",
+        "Personal Training"
+      ]
+    },
+    {
+      "id": "ufc-gym",
+      "name": "UFC Gym",
+      "tagline": "Official UFC-branded MMA and fitness across Dubai",
+      "description": "UFC Gym operates 5+ branches across Dubai including One Central, JBR, and Mirdif. Full MMA offering with boxing, kickboxing, BJJ, and HIIT classes alongside premium gym facilities.",
+      "location": "One Central, JBR, Mirdif & more",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://www.ufcgym.ae/",
+      "featured": true,
+      "services": [
+        "MMA",
+        "Boxing",
+        "Kickboxing",
+        "BJJ",
+        "HIIT",
+        "Gym Floor"
+      ]
+    },
+    {
+      "id": "round-10",
+      "name": "Round 10 Boxing Club",
+      "tagline": "Authentic boxing gym with competition focus",
+      "description": "Round 10 Boxing Club in Dubai's D3 Design District is a dedicated boxing gym with a strong community following. Technical boxing training for all levels with a gritty, authentic atmosphere.",
+      "location": "D3 Design District",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://round10bc.com/",
+      "featured": true,
+      "services": [
+        "Technical Boxing",
+        "Sparring",
+        "Competition Training",
+        "Fitness Boxing",
+        "Personal Training"
+      ]
+    },
+    {
+      "id": "team-nogueira",
+      "name": "Team Nogueira Dubai",
+      "tagline": "World-class BJJ and MMA by UFC legend",
+      "description": "Founded by UFC legend Rodrigo 'Minotauro' Nogueira, Team Nogueira Dubai offers world-class MMA and Brazilian Jiu-Jitsu training at JLT and Al Quoz. Gi and no-gi BJJ, MMA, and striking classes.",
+      "location": "JLT & Al Quoz",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://teamnogueiradubai.com/",
+      "featured": true,
+      "services": [
+        "Brazilian Jiu-Jitsu",
+        "MMA",
+        "Striking",
+        "Kids Programs",
+        "Competition Team"
+      ]
+    },
+    {
+      "id": "tk-mma",
+      "name": "TK MMA & Fitness",
+      "tagline": "Pioneer of MMA in the UAE",
+      "description": "TK MMA & Fitness, owned by Tam Khan — the pioneer of MMA in the UAE — offers comprehensive combat training including boxing, Muay Thai, BJJ, and MMA in a purpose-built facility.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://tkmmafit.com/",
+      "services": [
+        "MMA",
+        "Boxing",
+        "Muay Thai",
+        "BJJ",
+        "Fitness Classes"
+      ]
+    },
+    {
+      "id": "champions-club",
+      "name": "Champions Club",
+      "tagline": "Train with a 3x world champion",
+      "description": "Champions Club is headed by three-time world champion Prince Amir. Learn MMA fundamentals including cardio fitness, self-defence, Jiu-Jitsu, boxing, and Muay Thai kickboxing.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://championsclubdubai.com/",
+      "services": [
+        "MMA",
+        "Boxing",
+        "Jiu-Jitsu",
+        "Muay Thai",
+        "Self-Defence"
+      ]
+    },
+    {
+      "id": "cobra-fitness",
+      "name": "Cobra Fitness",
+      "tagline": "Muay Thai and combat sports with Thai trainers",
+      "description": "Cobra Fitness is a well-established combat sports gym with a strong Muay Thai program led by authentic Thai trainers. Also offering boxing, BJJ, spin, and kids programs. Known for producing competitive fighters.",
+      "location": "JLT (Dubai) & Abu Dhabi",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://cobrafitness.com/",
+      "services": [
+        "Muay Thai",
+        "Boxing",
+        "BJJ",
+        "MMA",
+        "Kids Programs",
+        "Spin"
+      ]
+    },
+    {
+      "id": "971-mma",
+      "name": "971 MMA",
+      "tagline": "Professional MMA training in Dubai",
+      "description": "971 MMA is a professional MMA training facility in Dubai catering to both aspiring fighters and fitness enthusiasts. Expert coaching in mixed martial arts, striking, and grappling.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://971mma.com/",
+      "services": [
+        "MMA",
+        "Striking",
+        "Grappling",
+        "Fighter Development",
+        "Fitness MMA"
+      ]
+    },
+    {
+      "id": "real-boxing-only",
+      "name": "Real Boxing Only (RBO)",
+      "tagline": "Pure boxing, no frills — Al Quoz",
+      "description": "Real Boxing Only is a pure boxing gym in Al Quoz used by amateur and professional boxers. An authentic, no-frills training environment focused on technical development and conditioning.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://realboxingonly.com/",
+      "services": [
+        "Technical Boxing",
+        "Sparring",
+        "Conditioning",
+        "Amateur Boxing",
+        "Pro Training"
+      ]
+    },
+    {
+      "id": "golden-gloves",
+      "name": "Golden Gloves Boxing",
+      "tagline": "Boxing and kickboxing for all levels",
+      "description": "Golden Gloves offers boxing and kickboxing training across multiple Dubai locations. Both competitive and fitness-oriented programs with experienced trainers.",
+      "location": "Al Quoz & more",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://goldenglovesfitness.com/",
+      "services": [
+        "Boxing",
+        "Kickboxing",
+        "Fitness Boxing",
+        "Competition Training",
+        "Personal Training"
+      ]
+    },
+    {
+      "id": "palms-sports",
+      "name": "Palms Sports",
+      "tagline": "Large fitness chain with dedicated combat zones",
+      "description": "Palms Sports is a large fitness club chain across Dubai with dedicated combat sports areas including boxing rings and MMA cages. Accessible to beginners with structured group classes.",
+      "location": "Multiple locations",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://palmssports.com/",
+      "services": [
+        "Boxing",
+        "MMA",
+        "Muay Thai",
+        "Gym Floor",
+        "Group Classes"
+      ]
+    },
+    {
+      "id": "gracie-jiu-jitsu-dubai",
+      "name": "Gracie Jiu-Jitsu Dubai",
+      "tagline": "Gracie lineage BJJ with structured curriculum",
+      "description": "Gracie Jiu-Jitsu Dubai brings the legendary Gracie family's structured BJJ curriculum to the UAE. White belt to black belt progression with emphasis on self-defence and sport Jiu-Jitsu.",
+      "location": "Dubai",
+      "city": "Dubai",
+      "category": "Combat & Martial Arts",
+      "website": "https://www.graciebarradubai.com/",
+      "services": [
+        "Brazilian Jiu-Jitsu",
+        "Self-Defence",
+        "Kids BJJ",
+        "Competition Team",
+        "Structured Curriculum"
+      ]
+    },
+    {
+      "id": "seayou-watersports",
+      "name": "SeaYou Watersports",
+      "tagline": "Dubai's top operator for kayaking, SUP, and open water swimming",
+      "description": "SeaYou Watersports offers SUP tours around Palm Jumeirah, kayaking, and open water swim sessions. The most popular operator for non-motorized water sports in Dubai.",
+      "location": "Palm Jumeirah & JBR",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://seayou.ae/",
+      "featured": true,
+      "services": [
+        "SUP Tours",
+        "Kayaking",
+        "Open Water Swimming",
+        "Group Sessions",
+        "Equipment Rental"
+      ]
+    },
+    {
+      "id": "nalu-watersports",
+      "name": "Nalu Watersports",
+      "tagline": "SUP, kayaking, and surf lessons at multiple beaches",
+      "description": "Nalu Watersports offers SUP lessons and rentals, kayak tours, and surf lessons across La Mer, JBR, and Palm Jumeirah. A well-established operator with multiple beach locations.",
+      "location": "La Mer, JBR & Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://naluwatersports.com/",
+      "services": [
+        "SUP Lessons",
+        "Kayak Tours",
+        "Surf Lessons",
+        "Equipment Rental"
+      ]
+    },
+    {
+      "id": "kite-n-surf",
+      "name": "Kite N Surf",
+      "tagline": "IKO-certified kitesurfing at Kite Beach",
+      "description": "Kite N Surf at Kite Beach offers IKO-certified kitesurfing lessons, surfing, and SUP. Located at Dubai's dedicated kitesurfing zone with ideal wind conditions.",
+      "location": "Kite Beach, Umm Suqeim",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://kitensurf.ae/",
+      "services": [
+        "Kitesurfing Lessons",
+        "Surfing",
+        "SUP",
+        "Equipment Rental"
+      ]
+    },
+    {
+      "id": "surf-house-dubai",
+      "name": "Surf House Dubai",
+      "tagline": "Dubai's surfing community hub near Burj Al Arab",
+      "description": "Surf House Dubai at Sunset Beach is a community hub for the Dubai surfing scene. Surf lessons, SUP sessions, and a laid-back beach culture near the Burj Al Arab.",
+      "location": "Sunset Beach, Umm Suqeim",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://surfhousedubai.com/",
+      "services": [
+        "Surf Lessons",
+        "SUP",
+        "Beach Community",
+        "Equipment Rental"
+      ]
+    },
+    {
+      "id": "wesup",
+      "name": "WeSUP",
+      "tagline": "Wellness-focused paddleboarding and SUP yoga",
+      "description": "WeSUP offers wellness-oriented paddleboarding at Palm Jumeirah — SUP yoga sessions, sunrise and sunset paddle tours, and SUP fitness classes combining wellness with water sports.",
+      "location": "Palm Jumeirah",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://wesup.ae/",
+      "services": [
+        "SUP Yoga",
+        "Sunrise Paddles",
+        "Sunset Tours",
+        "SUP Fitness"
+      ]
+    },
+    {
+      "id": "al-boom-diving",
+      "name": "Al Boom Diving",
+      "tagline": "UAE's longest-running dive operator",
+      "description": "Al Boom Diving is one of the longest-running dive operators in the UAE offering PADI courses, dive trips to Fujairah and Musandam, and snorkeling excursions. Full gear rental and certification programs.",
+      "location": "Al Wasl Road & Fujairah trips",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://alboomdiving.com/",
+      "featured": true,
+      "services": [
+        "PADI Courses",
+        "Dive Trips",
+        "Snorkeling",
+        "Gear Rental",
+        "Certification"
+      ]
+    },
+    {
+      "id": "hatta-kayak",
+      "name": "Hatta Kayak",
+      "tagline": "Kayaking at Hatta Dam with mountain views",
+      "description": "Hatta Kayak offers kayaking and pedal boating on the stunning Hatta Dam. Part of the Hatta adventure hub which includes mountain biking trails, hiking, and a zipline.",
+      "location": "Hatta Dam",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://visithatta.com/",
+      "services": [
+        "Kayaking",
+        "Pedal Boating",
+        "Mountain Biking",
+        "Hiking Trails",
+        "Zipline"
+      ]
+    },
+    {
+      "id": "dubai-creek-striders",
+      "name": "Dubai Creek Striders",
+      "tagline": "Dubai's oldest and largest running club",
+      "description": "Dubai Creek Striders is one of the oldest and largest running clubs in Dubai. Weekly runs, race training programs, social events, and all levels welcome. Part of the UAE athletics community.",
+      "location": "Creek Park & citywide",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://dubaicreekstriders.com/",
+      "services": [
+        "Group Runs",
+        "Race Training",
+        "Social Events",
+        "All Levels",
+        "Weekly Sessions"
+      ]
+    },
+    {
+      "id": "midnight-runners-dubai",
+      "name": "Midnight Runners Dubai",
+      "tagline": "Free social running crew — music, community, nightlife",
+      "description": "Midnight Runners Dubai is a free social running crew meeting across Downtown, DIFC, and JLT. Evening runs followed by socializing — music-driven, themed events, and a global brand with a strong Dubai chapter.",
+      "location": "Downtown, DIFC & JLT",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://midnightrunners.com/",
+      "services": [
+        "Free Group Runs",
+        "Social Events",
+        "Evening Runs",
+        "Themed Sessions",
+        "Community"
+      ]
+    },
+    {
+      "id": "cycle-hub-dubai",
+      "name": "Cycle Hub Dubai",
+      "tagline": "Base camp for the 86km Al Qudra cycle track",
+      "description": "Cycle Hub Dubai is the base for rides on the Al Qudra cycle track — an 86km dedicated cycling track in the desert. Bike rentals, servicing, and regular group rides for all levels.",
+      "location": "Al Qudra Cycle Track",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://cyclehubdubai.com/",
+      "services": [
+        "Bike Rental",
+        "Group Rides",
+        "Bike Servicing",
+        "86km Desert Track"
+      ]
+    },
+    {
+      "id": "wolfis-bike-shop",
+      "name": "Wolfi's Bike Shop",
+      "tagline": "Dubai's cycling community hub in Al Quoz",
+      "description": "Wolfi's Bike Shop in Al Quoz is one of Dubai's most well-known cycling shops with an attached riding community. Group rides, bike fitting, servicing, and the heart of the Dubai cycling scene.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://wolfisbikeshop.com/",
+      "services": [
+        "Bike Shop",
+        "Group Rides",
+        "Bike Fitting",
+        "Servicing",
+        "Community Rides"
+      ]
+    },
+    {
+      "id": "clymb-abu-dhabi",
+      "name": "CLYMB Abu Dhabi",
+      "tagline": "World's tallest indoor climbing wall at 43 metres",
+      "description": "CLYMB Abu Dhabi on Yas Island features the world's tallest indoor climbing wall at 43 metres and the world's widest indoor skydiving chamber. Climbing routes for all skill levels.",
+      "location": "Yas Island",
+      "city": "Abu Dhabi",
+      "category": "Outdoor & Adventure",
+      "website": "https://clymbabudhabi.com/",
+      "featured": true,
+      "services": [
+        "Indoor Climbing",
+        "Indoor Skydiving",
+        "All Skill Levels",
+        "43m Wall",
+        "Adventure"
+      ]
+    },
+    {
+      "id": "el-camaleon-climbing",
+      "name": "El Camaleon Climbing",
+      "tagline": "Dubai's first dedicated bouldering gym",
+      "description": "El Camaleon Climbing in Al Quoz is one of the first dedicated bouldering and climbing gyms in Dubai. Multiple walls with different grades, regular competitions, and a passionate community.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://elcamaleonclimbing.com/",
+      "services": [
+        "Bouldering",
+        "Lead Climbing",
+        "Youth Programs",
+        "Competitions",
+        "Coaching"
+      ]
+    },
+    {
+      "id": "rock-republic",
+      "name": "Rock Republic",
+      "tagline": "Modern bouldering gym with regularly reset routes",
+      "description": "Rock Republic in Al Quoz is a modern bouldering gym with regularly reset routes, youth programs, coaching, and community events. Popular with both beginners and experienced climbers.",
+      "location": "Al Quoz",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://rockrepublic.ae/",
+      "services": [
+        "Bouldering",
+        "Route Setting",
+        "Youth Programs",
+        "Coaching",
+        "Community Events"
+      ]
+    },
+    {
+      "id": "uae-trekkers",
+      "name": "UAE Trekkers",
+      "tagline": "Largest hiking community in the UAE",
+      "description": "UAE Trekkers is one of the largest hiking communities in the UAE. Regular weekend hikes from easy to advanced across Hatta, Ras Al Khaimah, Fujairah, and Musandam. Hundreds of active members.",
+      "location": "Hatta, RAK, Fujairah & Musandam",
+      "city": "Dubai",
+      "category": "Outdoor & Adventure",
+      "website": "https://uaetrekkers.com/",
+      "services": [
+        "Group Hikes",
+        "Weekend Adventures",
+        "All Difficulty Levels",
+        "Mountain Trails",
+        "Social Community"
+      ]
+    }
+  ]
+}

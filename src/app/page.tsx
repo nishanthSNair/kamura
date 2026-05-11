@@ -3,7 +3,6 @@ import Link from "next/link";
 import { treatments } from "@/data/treatments";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 import HeroEditorial from "@/components/home/HeroEditorial";
-import HomeActions from "@/components/home/HomeActions";
 
 export const metadata: Metadata = {
   title: "KAMURA — Preventive Medicine, Redefined for the Long Game",
@@ -118,13 +117,10 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* ════════════ ACT 1 — EDITORIAL HERO ════════════ */}
+      {/* ════════════ ACT 1 — EDITORIAL HERO + 5-DOOR FLOATING DOCK ════════════ */}
       <HeroEditorial />
 
-      {/* ════════════ ACT 2 — FIVE DOORS (action grid) ════════════ */}
-      <HomeActions />
-
-      {/* ════════════ ACT 3 — TRUST + STATS BAND ════════════ */}
+      {/* ════════════ ACT 2 — TRUST + STATS BAND ════════════ */}
       <section className="bg-[#EDE7DB] py-12 md:py-16 border-y border-[#2A2520]/8">
         <div className="max-w-6xl mx-auto px-6 md:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
           {[
@@ -147,7 +143,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ════════════ ACT 4 — HOW IT WORKS ════════════ */}
+      {/* ════════════ ACT 3 — HOW IT WORKS ════════════ */}
       <section
         id="how-it-works"
         className="bg-[#F5F2ED] py-20 md:py-24 border-y border-[#2A2520]/8"
@@ -184,7 +180,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ════════════ ACT 5 — PEPTIDE HORIZON (commerce, coming soon) ════════════ */}
+      {/* ════════════ ACT 4 — PEPTIDE HORIZON (commerce, coming soon) ════════════ */}
       <section className="bg-[#FAF7F2] py-20 md:py-24">
         <div className="max-w-6xl mx-auto px-6 md:px-8">
           <FadeInOnScroll>
@@ -241,7 +237,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ════════════ ACT 6 — WHY KAMURA (brand close) ════════════ */}
+      {/* ════════════ ACT 5 — WHY KAMURA (brand close) ════════════ */}
       <section
         className="bg-[#EDE7DB] py-20 md:py-24 border-y border-[#2A2520]/8"
         data-image-slot="why-kamura-bg"
@@ -266,7 +262,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ════════════ ACT 7 — PARTNER STRIP (B2B, soft footer) ════════════ */}
+      {/* ════════════ ACT 6 — PARTNER STRIP (B2B, soft footer) ════════════ */}
       <section className="bg-[#FAF7F2] py-16 md:py-20" data-image-slot="partner-bg">
         <div className="max-w-6xl mx-auto px-6 md:px-8">
           <FadeInOnScroll>
