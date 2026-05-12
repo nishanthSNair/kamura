@@ -5,6 +5,7 @@ import { peptides, PEPTIDE_STACKS, PEPTIDE_TRENDS } from "@/data/peptides";
 import { getAllPosts } from "@/lib/blog";
 import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
+import CompoundedSection from "@/components/peptides/CompoundedSection";
 
 export const metadata: Metadata = {
   title: "Peptide Intelligence Hub — Every Peptide Scored, Stacked & Explained",
@@ -266,6 +267,9 @@ export default function PeptidesHubPage() {
           </div>
         </div>
       </section>
+
+      {/* ───── KAMURA COMPOUNDED (flagship product section) ─────── */}
+      <CompoundedSection />
 
       {/* ───── WHY WE'RE DIFFERENT (editorial two-column) ───────── */}
       <section className="py-24 md:py-32 bg-[#EDE7DB]">
