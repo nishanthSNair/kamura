@@ -89,7 +89,7 @@ const DOORS: Door[] = [
     label: "Buy",
     title: "Compounded peptides",
     sub: "Pharmaceutical-grade, UAE.",
-    href: "/peptides/coming-soon",
+    href: "/peptides#compounded",
     Icon: FlaskConical,
     tag: "Soon",
     bg: "bg-[#D4B896]/24",
