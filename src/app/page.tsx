@@ -3,27 +3,28 @@ import Link from "next/link";
 import { treatments } from "@/data/treatments";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 import HeroEditorial from "@/components/home/HeroEditorial";
+import Manifesto from "@/components/home/Manifesto";
 
 export const metadata: Metadata = {
-  title: "KAMURA — Preventive Medicine, Redefined for the Long Game",
-  description: `Compounded peptides, vetted UAE practitioners, and a personal health dashboard — built around evidence, not Instagram trends. ${treatments.length}+ treatments scored.`,
+  title: "KAMURA — Only the Best, Made Personal",
+  description: `Compounded peptides. Vetted UAE practitioners. Your health record. One curated home for the long game — by invitation. ${treatments.length}+ wellness treatments scored.`,
   keywords: [
     "preventive medicine UAE",
     "compounded peptides Dubai",
     "longevity platform GCC",
-    "DHA-registered telehealth",
     "peptide therapy UAE",
     "wellness platform Dubai",
     "Kamura Score",
     "evidence-based wellness",
     "find wellness clinic UAE",
-    "longitudinal health dashboard",
+    "longitudinal health record",
+    "luxury wellness UAE",
   ],
   alternates: { canonical: "https://kamuralife.com" },
   openGraph: {
-    title: "KAMURA — Preventive Medicine, Redefined",
+    title: "KAMURA — Only the Best, Made Personal",
     description:
-      "Compounded peptides + DHA-registered physician care + your longitudinal health dashboard. Built for adults serious about the long game.",
+      "Compounded peptides. Vetted UAE practitioners. Your health record. One curated home for the long game — by invitation.",
     url: "https://kamuralife.com",
     siteName: "KAMURA",
     locale: "en_US",
@@ -33,15 +34,15 @@ export const metadata: Metadata = {
         url: "https://kamuralife.com/images/hero-home.png",
         width: 1200,
         height: 630,
-        alt: "KAMURA — Heart of Longevity",
+        alt: "KAMURA — Only the Best, Made Personal",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "KAMURA — Preventive Medicine, Redefined",
+    title: "KAMURA — Only the Best, Made Personal",
     description:
-      "Compounded peptides. Vetted practitioners. Your longitudinal health dashboard. Be the tortoise.",
+      "Compounded peptides. Vetted practitioners. Your health record. One curated home for the long game.",
     creator: "@KamuraLife",
     images: ["https://kamuralife.com/images/hero-home.png"],
   },
@@ -119,6 +120,9 @@ export default function Home() {
 
       {/* ════════════ ACT 1 — EDITORIAL HERO + 5-DOOR FLOATING DOCK ════════════ */}
       <HeroEditorial />
+
+      {/* ════════════ ACT 1.5 — MANIFESTO ════════════ */}
+      <Manifesto />
 
       {/* ════════════ ACT 2 — TRUST + STATS BAND ════════════ */}
       <section className="bg-[#EDE7DB] py-12 md:py-16 border-y border-[#2A2520]/8">
