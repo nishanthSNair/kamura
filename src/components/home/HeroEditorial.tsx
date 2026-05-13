@@ -117,66 +117,89 @@ export default function HeroEditorial() {
     offset: ["start start", "end start"],
   });
 
-  const backdropY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
-  const backdropScale = useTransform(scrollYProgress, [0, 1], [1, 1.06]);
-  const headlineY = useTransform(scrollYProgress, [0, 1], ["0%", "-12%"]);
+  const backdropY = useTransform(scrollYProgress, [0, 1], ["0%", "32%"]);
+  const backdropScale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  const backdropBlur = useTransform(
+    scrollYProgress,
+    [0, 0.6, 1],
+    ["0px", "0px", "6px"]
+  );
+  const eyebrowY = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]);
+  const headlineY = useTransform(scrollYProgress, [0, 1], ["0%", "-26%"]);
+  const subheadY = useTransform(scrollYProgress, [0, 1], ["0%", "-14%"]);
   const headlineOpacity = useTransform(
     scrollYProgress,
-    [0, 0.6, 0.9],
-    [1, 1, 0.4]
+    [0, 0.55, 0.92],
+    [1, 1, 0.15]
   );
+  const dockY = useTransform(scrollYProgress, [0, 1], ["0%", "-6%"]);
 
   return (
     <section ref={sectionRef} className="bg-black p-2 sm:p-3">
       <div className="relative h-[calc(100vh-1rem)] sm:h-[calc(100vh-1.5rem)] min-h-[820px] rounded-3xl overflow-hidden">
         {/* HERO BACKDROP — single image today, 8-layer parallax later */}
-        <HeroBackdrop y={backdropY} scale={backdropScale} />
+        <HeroBackdrop y={backdropY} scale={backdropScale} blur={backdropBlur} />
 
-        {/* Headline + sub — anchored upper-middle, fades on scroll */}
+        {/* Headline + sub — multi-layer parallax, each element drifts at a
+            different rate so the type lifts away from the backdrop on scroll */}
         <motion.div
-          style={{ y: headlineY, opacity: headlineOpacity }}
+          style={{ opacity: headlineOpacity }}
           className="relative z-20 pt-24 sm:pt-28 md:pt-32 px-6 sm:px-8 text-center"
         >
-          <p
+          <motion.p
+            style={{ y: eyebrowY }}
             className="text-[10px] sm:text-[11px] tracking-[0.34em] uppercase text-white/85 font-semibold mb-6 animate-blur-fade-up"
-            style={{
-              textShadow: "0 1px 10px rgba(0,0,0,0.25)",
-              animationDelay: "200ms",
-            }}
+            // eyebrow drifts up the fastest — sets the depth illusion
           >
-            Kamura · By Invitation
-          </p>
+            <span
+              style={{
+                textShadow: "0 1px 10px rgba(0,0,0,0.25)",
+                animationDelay: "200ms",
+              }}
+            >
+              Kamura · By Invitation
+            </span>
+          </motion.p>
 
-          <h1
+          <motion.h1
+            style={{ y: headlineY }}
             className="text-white font-light leading-[1.04] max-w-[14ch] mx-auto animate-blur-fade-up"
-            style={{
-              fontSize: "clamp(44px, 7vw, 96px)",
-              letterSpacing: "-0.03em",
-              textShadow: "0 2px 20px rgba(0,0,0,0.22)",
-              animationDelay: "320ms",
-            }}
           >
-            Only the best.
-            <br />
-            Made personal.
-          </h1>
+            <span
+              style={{
+                fontSize: "clamp(44px, 7vw, 96px)",
+                letterSpacing: "-0.03em",
+                textShadow: "0 2px 20px rgba(0,0,0,0.22)",
+                animationDelay: "320ms",
+                display: "inline-block",
+              }}
+            >
+              Only the best.
+              <br />
+              Made personal.
+            </span>
+          </motion.h1>
 
-          <p
+          <motion.p
+            style={{ y: subheadY }}
             className="mt-6 text-[15px] sm:text-[17px] text-white/85 max-w-[58ch] mx-auto leading-[1.55] font-sans animate-blur-fade-up"
-            style={{
-              animationDelay: "480ms",
-              textShadow: "0 1px 10px rgba(0,0,0,0.22)",
-            }}
           >
-            Compounded peptides. Vetted practitioners. Your health record.
-            One home for the long game.
-          </p>
+            <span
+              style={{
+                animationDelay: "480ms",
+                textShadow: "0 1px 10px rgba(0,0,0,0.22)",
+              }}
+            >
+              Compounded peptides. Vetted practitioners. Your health record.
+              One home for the long game.
+            </span>
+          </motion.p>
         </motion.div>
 
-        {/* FLOATING DOCK — the 5 doors into the platform */}
-        <div
+        {/* FLOATING DOCK — drifts up slightly slower than the headline for depth */}
+        <motion.div
+          style={{ y: dockY }}
           className="absolute bottom-5 left-5 right-5 sm:bottom-7 sm:left-7 sm:right-7 z-20 frosted-card-light rounded-[28px] p-6 sm:p-7 md:p-8 animate-blur-fade-up shadow-[0_24px_60px_-20px_rgba(0,0,0,0.35)]"
-          style={{ animationDelay: "920ms" }}
         >
           <div className="mx-auto max-w-[1280px]">
             <div className="flex items-baseline justify-between mb-5 md:mb-6">
@@ -241,7 +264,7 @@ export default function HeroEditorial() {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
@@ -256,14 +279,17 @@ export default function HeroEditorial() {
 function HeroBackdrop({
   y,
   scale,
+  blur,
 }: {
   y: MotionValue<string>;
   scale: MotionValue<number>;
+  blur: MotionValue<string>;
 }) {
+  const filter = useTransform(blur, (b) => `blur(${b})`);
   return (
     <motion.div
       className="absolute inset-0 z-0"
-      style={{ y, scale }}
+      style={{ y, scale, filter }}
       data-image-slot="hero-backdrop"
     >
       <Image
@@ -275,14 +301,22 @@ function HeroBackdrop({
         sizes="100vw"
         quality={90}
       />
-      {/* Soft top + bottom darken so headline stays readable + the
-          floating dock has a soft anchor behind it. */}
+      {/* Layered darken — top vignette anchors headline, side falloff adds
+          cinematic depth, bottom anchor supports the floating dock */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.0) 26%, rgba(0,0,0,0.0) 62%, rgba(0,0,0,0.25) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.0) 28%, rgba(0,0,0,0.0) 60%, rgba(0,0,0,0.32) 100%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.18) 100%)",
         }}
       />
     </motion.div>

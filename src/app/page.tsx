@@ -5,6 +5,7 @@ import FadeInOnScroll from "@/components/FadeInOnScroll";
 import HeroEditorial from "@/components/home/HeroEditorial";
 import Manifesto from "@/components/home/Manifesto";
 import PillarsSection from "@/components/home/PillarsSection";
+import SectionDivider from "@/components/home/SectionDivider";
 
 export const metadata: Metadata = {
   title: "KAMURA — Only the Best, Made Personal",
@@ -125,8 +126,14 @@ export default function Home() {
       {/* ════════════ ACT 1.5 — MANIFESTO ════════════ */}
       <Manifesto />
 
+      {/* ──── chapter divider ──── */}
+      <SectionDivider bg="#FAF7F2" />
+
       {/* ════════════ ACT 1.75 — FOUR PILLARS ════════════ */}
       <PillarsSection />
+
+      {/* ──── chapter divider ──── */}
+      <SectionDivider bg="#EDE7DB" />
 
       {/* ════════════ ACT 2 — TRUST + STATS BAND ════════════ */}
       <section className="bg-[#EDE7DB] py-12 md:py-16 border-y border-[#2A2520]/8">

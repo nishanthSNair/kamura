@@ -1,6 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
+import { useRef } from "react";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
+import HeadlineReveal from "@/components/home/HeadlineReveal";
+import PaperGrain from "@/components/home/PaperGrain";
 
 type Pillar = {
   number: string;
@@ -59,103 +71,185 @@ const PILLARS: Pillar[] = [
   },
 ];
 
+function PillarCard({ pillar, index }: { pillar: Pillar; index: number }) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  // Scroll-linked image drift + scale — Ken Burns inside the card
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start end", "end start"],
+  });
+  const imageY = useTransform(scrollYProgress, [0, 1], ["-7%", "7%"]);
+  const imageScale = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    [1.12, 1.02, 1.12]
+  );
+
+  // Magnetic 3D tilt on cursor — subtle, max 4°
+  const rotX = useMotionValue(0);
+  const rotY = useMotionValue(0);
+  const springConfig = { stiffness: 180, damping: 22, mass: 0.6 };
+  const springRotX = useSpring(rotX, springConfig);
+  const springRotY = useSpring(rotY, springConfig);
+
+  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const px = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+    const py = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+    rotY.set(px * 4);
+    rotX.set(-py * 4);
+  }
+  function handleMouseLeave() {
+    rotX.set(0);
+    rotY.set(0);
+  }
+
+  return (
+    <FadeInOnScroll delay={index * 90}>
+      <Link href={pillar.href} className="block group">
+        <motion.div
+          ref={cardRef}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          style={{
+            rotateX: springRotX,
+            rotateY: springRotY,
+            transformPerspective: 1200,
+            transformStyle: "preserve-3d",
+          }}
+          className="relative overflow-hidden rounded-3xl bg-[#1a0f0c] aspect-[4/4.5] md:aspect-[4/4.2] will-change-transform shadow-[0_20px_50px_-30px_rgba(26,15,12,0.6)] hover:shadow-[0_32px_80px_-28px_rgba(26,15,12,0.85)] transition-shadow duration-700"
+        >
+          <motion.div
+            className="absolute inset-0"
+            style={{ y: imageY }}
+          >
+            <motion.div
+              className="relative w-full h-full"
+              style={{ scale: imageScale }}
+            >
+              <Image
+                src={pillar.image}
+                alt={pillar.name}
+                fill
+                className="object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </motion.div>
+          </motion.div>
+
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0c] via-[#1a0f0c]/45 to-[#1a0f0c]/8" />
+          <div
+            aria-hidden
+            className="absolute inset-0 mix-blend-overlay opacity-40"
+            style={{
+              background:
+                "radial-gradient(ellipse at 30% 100%, rgba(181,115,106,0.5) 0%, transparent 55%)",
+            }}
+          />
+
+          <div className="relative h-full p-7 md:p-10 flex flex-col justify-between text-white">
+            <div className="flex items-start justify-between">
+              <span className="text-[11px] tracking-[0.24em] font-sans text-white/55">
+                {pillar.number}
+              </span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                className="opacity-55 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500"
+              >
+                <line x1="7" y1="17" x2="17" y2="7" />
+                <polyline points="7 7 17 7 17 17" />
+              </svg>
+            </div>
+
+            <div>
+              <h3
+                className="font-serif tracking-tight leading-[1.0] mb-2.5"
+                style={{ fontSize: "clamp(40px, 4.8vw, 62px)" }}
+              >
+                {pillar.name}
+              </h3>
+              <p className="text-[11px] md:text-[11.5px] tracking-[0.24em] uppercase text-white/65 font-sans font-semibold mb-5">
+                {pillar.subtitle}
+              </p>
+              <p className="text-[14px] md:text-[15px] text-white/82 font-sans leading-[1.6] mb-6 max-w-md">
+                {pillar.description}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {pillar.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[10px] tracking-[0.12em] uppercase px-3 py-1.5 rounded-full border border-white/25 text-white/85 font-sans backdrop-blur-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </Link>
+    </FadeInOnScroll>
+  );
+}
+
 export default function PillarsSection() {
   return (
     <section
       id="pillars"
-      className="bg-[#FAF7F2] py-24 md:py-32 border-y border-[#2A2520]/6"
+      className="relative bg-[#FAF7F2] py-28 md:py-36 border-y border-[#2A2520]/6 overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-8">
-        <FadeInOnScroll>
-          <div className="max-w-2xl mb-14 md:mb-18">
-            <p className="text-[10.5px] tracking-[0.32em] uppercase text-terracotta font-semibold font-sans mb-5">
-              Four Pillars
+      <PaperGrain opacity={0.05} />
+
+      <div className="relative max-w-6xl mx-auto px-6 md:px-8">
+        <div className="max-w-2xl mb-16 md:mb-20">
+          <FadeInOnScroll>
+            <p className="text-[10.5px] tracking-[0.34em] uppercase text-terracotta font-semibold font-sans mb-6">
+              II · Four Pillars
             </p>
-            <h2
-              className="font-serif text-[#2A2520] leading-[1.06] tracking-[-0.015em] mb-6"
-              style={{ fontSize: "clamp(36px, 4.8vw, 60px)" }}
-            >
-              Every goal. Curated to the molecule.
-            </h2>
-            <p className="text-[16px] md:text-[17px] text-[#2A2520]/65 font-sans leading-[1.65] max-w-[560px]">
+          </FadeInOnScroll>
+
+          <h2
+            className="font-serif text-[#2A2520] leading-[1.04] tracking-[-0.015em] mb-7"
+            style={{ fontSize: "clamp(38px, 5.2vw, 68px)" }}
+          >
+            <HeadlineReveal
+              lines={[
+                "Every goal.",
+                <>
+                  Curated{" "}
+                  <i className="italic text-terracotta">to the molecule.</i>
+                </>,
+              ]}
+            />
+          </h2>
+
+          <FadeInOnScroll delay={200}>
+            <p className="text-[16px] md:text-[17.5px] text-[#2A2520]/65 font-sans leading-[1.7] max-w-[560px]">
               Kamura organises preventive health around four outcomes that
               matter. Within each pillar, only the best — peptide protocols,
               practitioners, and practices — scored, ranked, and matched to
               who you actually are.
             </p>
-          </div>
-        </FadeInOnScroll>
+          </FadeInOnScroll>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 lg:gap-7">
           {PILLARS.map((pillar, i) => (
-            <FadeInOnScroll key={pillar.name} delay={i * 90}>
-              <Link
-                href={pillar.href}
-                className="group block relative overflow-hidden rounded-3xl bg-[#1a0f0c] aspect-[4/4.5] md:aspect-[4/4.2]"
-              >
-                <Image
-                  src={pillar.image}
-                  alt={pillar.name}
-                  fill
-                  className="object-cover opacity-70 group-hover:opacity-85 group-hover:scale-[1.04] transition-all duration-[900ms] ease-out"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0c] via-[#1a0f0c]/45 to-[#1a0f0c]/10" />
-
-                <div className="absolute inset-0 p-7 md:p-10 flex flex-col justify-between text-white">
-                  <div className="flex items-start justify-between">
-                    <span className="text-[11px] tracking-[0.22em] font-sans text-white/55">
-                      {pillar.number}
-                    </span>
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.4"
-                      className="opacity-55 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500"
-                    >
-                      <line x1="7" y1="17" x2="17" y2="7" />
-                      <polyline points="7 7 17 7 17 17" />
-                    </svg>
-                  </div>
-
-                  <div>
-                    <h3
-                      className="font-serif tracking-tight leading-[1.0] mb-2.5"
-                      style={{ fontSize: "clamp(40px, 4.6vw, 60px)" }}
-                    >
-                      {pillar.name}
-                    </h3>
-                    <p className="text-[11px] md:text-[11.5px] tracking-[0.22em] uppercase text-white/60 font-sans font-semibold mb-5">
-                      {pillar.subtitle}
-                    </p>
-                    <p className="text-[14px] md:text-[15px] text-white/82 font-sans leading-[1.6] mb-6 max-w-md">
-                      {pillar.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {pillar.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-[10px] tracking-[0.12em] uppercase px-3 py-1.5 rounded-full border border-white/22 text-white/85 font-sans"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            </FadeInOnScroll>
+            <PillarCard key={pillar.name} pillar={pillar} index={i} />
           ))}
         </div>
 
         <FadeInOnScroll delay={420}>
-          <div className="mt-12 md:mt-14 text-center">
+          <div className="mt-14 md:mt-16 text-center">
             <Link
               href="/treatments"
-              className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase text-[#2A2520] hover:text-terracotta font-sans font-semibold border-b border-[#2A2520]/30 hover:border-terracotta pb-1 transition-colors"
+              className="inline-flex items-center gap-2 text-[11px] tracking-[0.22em] uppercase text-[#2A2520] hover:text-terracotta font-sans font-semibold border-b border-[#2A2520]/30 hover:border-terracotta pb-1 transition-colors"
             >
               See all 200+ treatments scored
               <svg
