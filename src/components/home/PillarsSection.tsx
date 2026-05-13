@@ -33,8 +33,7 @@ const PILLARS: Pillar[] = [
       "Peptide protocols and curated practitioners for tissue repair, gut healing, and post-training recovery.",
     tags: ["Heal", "Rebuild", "Soothe"],
     href: "/treatments/best-for/recovery",
-    image:
-      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1600&q=85",
+    image: "/images/pillars/restore.png",
   },
   {
     number: "02",
@@ -44,8 +43,7 @@ const PILLARS: Pillar[] = [
       "Telomere, mitochondrial, and longevity protocols. The molecules and the medicine, evidence-scored.",
     tags: ["Telomeres", "Mitochondria", "Healthspan"],
     href: "/treatments/best-for/longevity",
-    image:
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&q=85",
+    image: "/images/pillars/extend.png",
   },
   {
     number: "03",
@@ -55,8 +53,7 @@ const PILLARS: Pillar[] = [
       "GLP-1, visceral fat, and body recomposition protocols — peptides and the clinicians behind them.",
     tags: ["Burn", "Define", "Rebalance"],
     href: "/treatments/best-for/weight-loss",
-    image:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&q=85",
+    image: "/images/pillars/sculpt.png",
   },
   {
     number: "04",
@@ -66,27 +63,24 @@ const PILLARS: Pillar[] = [
       "Focus, neuroprotection, and calm. Peptides and practitioners curated across the breadth of mind science.",
     tags: ["Clarity", "Calm", "Sharpen"],
     href: "/treatments/best-for/brain",
-    image:
-      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1600&q=85",
+    image: "/images/pillars/focus.png",
   },
 ];
 
 function PillarCard({ pillar, index }: { pillar: Pillar; index: number }) {
   const cardRef = useRef<HTMLDivElement>(null);
 
-  // Scroll-linked image drift + scale — Ken Burns inside the card
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ["start end", "end start"],
   });
-  const imageY = useTransform(scrollYProgress, [0, 1], ["-7%", "7%"]);
+  const imageY = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
   const imageScale = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    [1.12, 1.02, 1.12]
+    [1.1, 1.02, 1.1]
   );
 
-  // Magnetic 3D tilt on cursor — subtle, max 4°
   const rotX = useMotionValue(0);
   const rotY = useMotionValue(0);
   const springConfig = { stiffness: 180, damping: 22, mass: 0.6 };
@@ -97,8 +91,8 @@ function PillarCard({ pillar, index }: { pillar: Pillar; index: number }) {
     const rect = e.currentTarget.getBoundingClientRect();
     const px = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
     const py = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-    rotY.set(px * 4);
-    rotX.set(-py * 4);
+    rotY.set(px * 3.5);
+    rotX.set(-py * 3.5);
   }
   function handleMouseLeave() {
     rotX.set(0);
@@ -118,39 +112,31 @@ function PillarCard({ pillar, index }: { pillar: Pillar; index: number }) {
             transformPerspective: 1200,
             transformStyle: "preserve-3d",
           }}
-          className="relative overflow-hidden rounded-3xl bg-[#1a0f0c] aspect-[4/4.5] md:aspect-[4/4.2] will-change-transform shadow-[0_20px_50px_-30px_rgba(26,15,12,0.6)] hover:shadow-[0_32px_80px_-28px_rgba(26,15,12,0.85)] transition-shadow duration-700"
+          className="relative overflow-hidden rounded-3xl bg-[#F5EFE6] will-change-transform shadow-[0_18px_50px_-28px_rgba(42,37,32,0.32)] hover:shadow-[0_36px_90px_-30px_rgba(42,37,32,0.55)] transition-shadow duration-700 border border-[#2A2520]/8"
         >
-          <motion.div
-            className="absolute inset-0"
-            style={{ y: imageY }}
-          >
+          {/* Image area — square, lets the bespoke still-life breathe */}
+          <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-[#F5EFE6] to-[#E8DCC8]">
             <motion.div
-              className="relative w-full h-full"
-              style={{ scale: imageScale }}
+              className="absolute inset-0"
+              style={{ y: imageY }}
             >
-              <Image
-                src={pillar.image}
-                alt={pillar.name}
-                fill
-                className="object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+              <motion.div
+                className="relative w-full h-full"
+                style={{ scale: imageScale }}
+              >
+                <Image
+                  src={pillar.image}
+                  alt={pillar.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </motion.div>
             </motion.div>
-          </motion.div>
 
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0c] via-[#1a0f0c]/45 to-[#1a0f0c]/8" />
-          <div
-            aria-hidden
-            className="absolute inset-0 mix-blend-overlay opacity-40"
-            style={{
-              background:
-                "radial-gradient(ellipse at 30% 100%, rgba(181,115,106,0.5) 0%, transparent 55%)",
-            }}
-          />
-
-          <div className="relative h-full p-7 md:p-10 flex flex-col justify-between text-white">
-            <div className="flex items-start justify-between">
-              <span className="text-[11px] tracking-[0.24em] font-sans text-white/55">
+            {/* Number + arrow overlay */}
+            <div className="absolute top-6 left-7 right-7 z-10 flex items-start justify-between">
+              <span className="text-[11px] tracking-[0.28em] font-sans text-[#2A2520]/55 font-semibold">
                 {pillar.number}
               </span>
               <svg
@@ -160,36 +146,37 @@ function PillarCard({ pillar, index }: { pillar: Pillar; index: number }) {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.4"
-                className="opacity-55 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500"
+                className="text-[#2A2520]/50 group-hover:text-terracotta opacity-70 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500"
               >
                 <line x1="7" y1="17" x2="17" y2="7" />
                 <polyline points="7 7 17 7 17 17" />
               </svg>
             </div>
+          </div>
 
-            <div>
-              <h3
-                className="font-serif tracking-tight leading-[1.0] mb-2.5"
-                style={{ fontSize: "clamp(40px, 4.8vw, 62px)" }}
-              >
-                {pillar.name}
-              </h3>
-              <p className="text-[11px] md:text-[11.5px] tracking-[0.24em] uppercase text-white/65 font-sans font-semibold mb-5">
-                {pillar.subtitle}
-              </p>
-              <p className="text-[14px] md:text-[15px] text-white/82 font-sans leading-[1.6] mb-6 max-w-md">
-                {pillar.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {pillar.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-[10px] tracking-[0.12em] uppercase px-3 py-1.5 rounded-full border border-white/25 text-white/85 font-sans backdrop-blur-sm"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+          {/* Text panel — light, dark text */}
+          <div className="relative px-7 md:px-10 py-8 md:py-10 bg-gradient-to-b from-[#F5EFE6] to-[#EDE2CF] border-t border-[#2A2520]/8">
+            <h3
+              className="font-serif tracking-tight leading-[1.0] text-[#2A2520] mb-3"
+              style={{ fontSize: "clamp(38px, 4.4vw, 56px)" }}
+            >
+              {pillar.name}
+            </h3>
+            <p className="text-[10.5px] tracking-[0.28em] uppercase text-terracotta font-sans font-semibold mb-5">
+              {pillar.subtitle}
+            </p>
+            <p className="text-[14px] md:text-[15px] text-[#2A2520]/68 font-sans leading-[1.65] mb-6 max-w-md">
+              {pillar.description}
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {pillar.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-full border border-[#2A2520]/18 text-[#2A2520]/70 font-sans"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </motion.div>

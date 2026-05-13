@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
@@ -27,9 +28,32 @@ export default function Manifesto() {
     <section
       ref={sectionRef}
       id="manifesto"
-      className="relative bg-[#F5EFE6] py-28 md:py-40 border-y border-[#2A2520]/8 overflow-hidden"
+      className="relative bg-[#F5EFE6] py-32 md:py-44 border-y border-[#2A2520]/8 overflow-hidden"
     >
-      <PaperGrain opacity={0.06} />
+      {/* Hourglass watermark — visible on the left edge of the section,
+          fades into cream toward the centre where the text reads */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden>
+        <div className="relative w-full h-full opacity-55">
+          <Image
+            src="/images/manifesto/hourglass.png"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+            style={{ objectPosition: "8% center" }}
+          />
+        </div>
+        {/* Radial cream wash so text reads cleanly over the watermark */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 70% 80% at 62% 50%, rgba(245,239,230,0.92) 0%, rgba(245,239,230,0.7) 38%, rgba(245,239,230,0.45) 65%, rgba(245,239,230,0.2) 100%)",
+          }}
+        />
+      </div>
+
+      <PaperGrain opacity={0.05} />
 
       {/* Decorative left rail — draws in as section enters */}
       <motion.div
