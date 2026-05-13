@@ -144,21 +144,21 @@ export default function HeroEditorial() {
               animationDelay: "200ms",
             }}
           >
-            Be the Tortoise · Kamura
+            Kamura · By Invitation
           </p>
 
           <h1
-            className="text-white font-light leading-[1.04] max-w-[16ch] mx-auto animate-blur-fade-up"
+            className="text-white font-light leading-[1.04] max-w-[14ch] mx-auto animate-blur-fade-up"
             style={{
-              fontSize: "clamp(40px, 6.2vw, 88px)",
+              fontSize: "clamp(44px, 7vw, 96px)",
               letterSpacing: "-0.03em",
               textShadow: "0 2px 20px rgba(0,0,0,0.22)",
               animationDelay: "320ms",
             }}
           >
-            Preventive medicine,
+            Only the best.
             <br />
-            redefined for the long game.
+            Made personal.
           </h1>
 
           <p
@@ -168,8 +168,8 @@ export default function HeroEditorial() {
               textShadow: "0 1px 10px rgba(0,0,0,0.22)",
             }}
           >
-            Compounded peptides, vetted UAE practitioners, and your
-            longitudinal health record. One trusted home for the long game.
+            Compounded peptides. Vetted practitioners. Your health record.
+            One home for the long game.
           </p>
         </motion.div>
 
