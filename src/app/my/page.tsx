@@ -556,7 +556,10 @@ export default function TodayPage() {
       )}
 
       {showOnboarding ? (
-        <OnboardingView />
+        <OnboardingView
+          onStartCheckin={() => setCheckinOpen(true)}
+          onLogSession={() => setSessionOpen(true)}
+        />
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6">
           {/* LEFT — Active stack + Today's doses */}
@@ -806,7 +809,13 @@ function DoseRow({
   );
 }
 
-function OnboardingView() {
+function OnboardingView({
+  onStartCheckin,
+  onLogSession,
+}: {
+  onStartCheckin: () => void;
+  onLogSession: () => void;
+}) {
   return (
     <div>
       <div className="mb-8 p-7 md:p-9 rounded-3xl bg-gradient-to-br from-[#EDE7DB] via-[#F7F3EB] to-[#FAF8F5] border border-gray-200/60">
@@ -817,7 +826,7 @@ function OnboardingView() {
           Let&apos;s build your plan
         </h2>
         <p className="text-base text-gray-600 font-sans leading-relaxed max-w-xl">
-          Three small steps to unlock your personalized dashboard. Takes 5 minutes.
+          Four small steps to unlock your personalized dashboard. Takes 5 minutes.
         </p>
       </div>
 
@@ -834,7 +843,7 @@ function OnboardingView() {
           title="Log your first check-in"
           description="Rate your energy, mood, sleep, stress. 30 seconds — generates your first wellness score."
           cta="Start check-in"
-          href="/my"
+          onClick={onStartCheckin}
         />
         <StepCard
           number="03"
@@ -842,6 +851,13 @@ function OnboardingView() {
           description="A peptide, supplement, or daily habit. We track adherence and surface patterns over time."
           cta="Open protocol"
           href="/my/protocol"
+        />
+        <StepCard
+          number="04"
+          title="Log a session"
+          description="HBOT, IV, yoga, sauna, breathwork — anything you do. The more you log, the sharper the dashboard gets."
+          cta="Log session"
+          onClick={onLogSession}
         />
       </div>
     </div>
@@ -854,28 +870,42 @@ function StepCard({
   description,
   cta,
   href,
+  onClick,
 }: {
   number: string;
   title: string;
   description: string;
   cta: string;
-  href: string;
+  href?: string;
+  onClick?: () => void;
 }) {
-  return (
-    <Link
-      href={href}
-      className="block p-5 md:p-6 rounded-2xl bg-white border border-gray-200/70 hover:border-terracotta/40 hover:shadow-sm transition-all"
-    >
-      <div className="flex items-start gap-5">
-        <span className="font-serif text-lg text-terracotta shrink-0 mt-0.5">{number}</span>
-        <div className="flex-1 min-w-0">
-          <h3 className="font-serif text-xl text-gray-900 mb-1.5">{title}</h3>
-          <p className="text-sm text-gray-500 font-sans leading-relaxed mb-3">{description}</p>
-          <span className="inline-block text-[10px] tracking-[0.15em] uppercase text-terracotta font-sans font-semibold">
-            {cta} →
-          </span>
-        </div>
+  const inner = (
+    <div className="flex items-start gap-5">
+      <span className="font-serif text-lg text-terracotta shrink-0 mt-0.5">{number}</span>
+      <div className="flex-1 min-w-0">
+        <h3 className="font-serif text-xl text-gray-900 mb-1.5">{title}</h3>
+        <p className="text-sm text-gray-500 font-sans leading-relaxed mb-3">{description}</p>
+        <span className="inline-block text-[10px] tracking-[0.15em] uppercase text-terracotta font-sans font-semibold">
+          {cta} →
+        </span>
       </div>
+    </div>
+  );
+
+  const className =
+    "block w-full text-left p-5 md:p-6 rounded-2xl bg-white border border-gray-200/70 hover:border-terracotta/40 hover:shadow-sm transition-all";
+
+  if (onClick) {
+    return (
+      <button type="button" onClick={onClick} className={className}>
+        {inner}
+      </button>
+    );
+  }
+
+  return (
+    <Link href={href ?? "#"} className={className}>
+      {inner}
     </Link>
   );
 }
