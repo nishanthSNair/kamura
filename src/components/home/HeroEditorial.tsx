@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import {
@@ -124,10 +123,8 @@ export default function HeroEditorial() {
     [0, 0.6, 1],
     ["0px", "0px", "6px"]
   );
-  const eyebrowY = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]);
-  const headlineY = useTransform(scrollYProgress, [0, 1], ["0%", "-26%"]);
-  const subheadY = useTransform(scrollYProgress, [0, 1], ["0%", "-14%"]);
-  const headlineOpacity = useTransform(
+  const cardY = useTransform(scrollYProgress, [0, 1], ["0%", "-22%"]);
+  const cardOpacity = useTransform(
     scrollYProgress,
     [0, 0.55, 0.92],
     [1, 1, 0.15]
@@ -140,60 +137,74 @@ export default function HeroEditorial() {
         {/* HERO BACKDROP — single image today, 8-layer parallax later */}
         <HeroBackdrop y={backdropY} scale={backdropScale} blur={backdropBlur} />
 
-        {/* Headline + sub — multi-layer parallax, each element drifts at a
-            different rate so the type lifts away from the backdrop on scroll */}
+        {/* Premium headline card — pinned left on desktop, centered on mobile.
+            Frosted glass + hairline gold border. Lets the oasis video breathe
+            on the right side while the type sits on a clear, premium surface. */}
         <motion.div
-          style={{ opacity: headlineOpacity }}
-          className="relative z-20 pt-24 sm:pt-28 md:pt-32 px-6 sm:px-8 text-center"
+          style={{ y: cardY, opacity: cardOpacity }}
+          className="absolute z-20 left-1/2 -translate-x-1/2 top-[18%] sm:top-[16%] md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:left-10 lg:left-16 xl:left-24 w-[calc(100%-48px)] sm:w-[calc(100%-64px)] md:w-auto md:max-w-[520px]"
         >
-          <motion.p
-            style={{ y: eyebrowY }}
-            className="text-[10px] sm:text-[11px] tracking-[0.34em] uppercase text-white/85 font-semibold mb-6 animate-blur-fade-up"
-            // eyebrow drifts up the fastest — sets the depth illusion
-          >
-            <span
+          <div className="relative rounded-[22px] overflow-hidden border border-white/15 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.65)] animate-blur-fade-up">
+            {/* glass fill */}
+            <div
+              aria-hidden
+              className="absolute inset-0"
               style={{
-                textShadow: "0 1px 10px rgba(0,0,0,0.25)",
-                animationDelay: "200ms",
+                background:
+                  "linear-gradient(140deg, rgba(20,14,10,0.62) 0%, rgba(20,14,10,0.48) 55%, rgba(20,14,10,0.42) 100%)",
+                backdropFilter: "blur(14px) saturate(115%)",
+                WebkitBackdropFilter: "blur(14px) saturate(115%)",
               }}
-            >
-              Kamura · By Invitation
-            </span>
-          </motion.p>
+            />
+            {/* inner hairline highlight */}
+            <div
+              aria-hidden
+              className="absolute inset-px rounded-[21px] pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0) 35%)",
+              }}
+            />
 
-          <motion.h1
-            style={{ y: headlineY }}
-            className="text-white font-light leading-[1.04] max-w-[14ch] mx-auto animate-blur-fade-up"
-          >
-            <span
-              style={{
-                fontSize: "clamp(44px, 7vw, 96px)",
-                letterSpacing: "-0.03em",
-                textShadow: "0 2px 20px rgba(0,0,0,0.22)",
-                animationDelay: "320ms",
-                display: "inline-block",
-              }}
-            >
-              Only the best.
-              <br />
-              Made personal.
-            </span>
-          </motion.h1>
+            <div className="relative p-7 sm:p-9 md:p-10 lg:p-12">
+              {/* eyebrow with gold rule */}
+              <div className="flex items-center gap-3 mb-6 md:mb-7">
+                <span className="block w-7 h-px bg-[#C4A882]" />
+                <p
+                  className="text-[10px] tracking-[0.34em] uppercase text-[#C4A882] font-semibold font-sans"
+                  style={{ animationDelay: "200ms" }}
+                >
+                  Kamura · Heart of the Tortoise
+                </p>
+              </div>
 
-          <motion.p
-            style={{ y: subheadY }}
-            className="mt-6 text-[15px] sm:text-[17px] text-white/85 max-w-[58ch] mx-auto leading-[1.55] font-sans animate-blur-fade-up"
-          >
-            <span
-              style={{
-                animationDelay: "480ms",
-                textShadow: "0 1px 10px rgba(0,0,0,0.22)",
-              }}
-            >
-              Compounded peptides. Vetted practitioners. Your health record.
-              One home for the long game.
-            </span>
-          </motion.p>
+              <h1
+                className="font-serif text-white font-light leading-[1.02] tracking-[-0.025em]"
+                style={{
+                  fontSize: "clamp(38px, 4.8vw, 64px)",
+                  animationDelay: "320ms",
+                }}
+              >
+                Only the best.
+                <br />
+                <span className="italic text-[#E8D5BF]">Made personal.</span>
+              </h1>
+
+              <p
+                className="mt-6 md:mt-7 text-[14.5px] md:text-[15.5px] text-white/78 leading-[1.6] font-sans max-w-[42ch]"
+                style={{ animationDelay: "480ms" }}
+              >
+                Compounded peptides. Vetted practitioners. Your health record.
+                One home for the long game.
+              </p>
+
+              <div className="mt-7 md:mt-8 pt-5 md:pt-6 border-t border-white/12">
+                <p className="text-[10px] tracking-[0.28em] uppercase text-white/55 font-sans">
+                  Longevity, by design.
+                </p>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         {/* FLOATING DOCK — drifts up slightly slower than the headline for depth */}
@@ -292,31 +303,45 @@ function HeroBackdrop({
       style={{ y, scale, filter }}
       data-image-slot="hero-backdrop"
     >
-      <Image
-        src="/images/hero-home.png"
-        alt="A serene wellness landscape"
-        fill
-        priority
-        className="object-cover object-center"
-        sizes="100vw"
-        quality={90}
-      />
-      {/* Layered darken — top vignette anchors headline, side falloff adds
-          cinematic depth, bottom anchor supports the floating dock */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        poster="/images/hero-home.png"
+        aria-label="An oasis at golden hour"
+      >
+        <source src="/Video/Oasis.mp4" type="video/mp4" />
+      </video>
+
+      {/* Left-loaded darken — supports the headline card sitting on the left
+          while keeping the right side of the oasis cinematic and visible. */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.0) 28%, rgba(0,0,0,0.0) 60%, rgba(0,0,0,0.32) 100%)",
+            "linear-gradient(90deg, rgba(10,7,5,0.55) 0%, rgba(10,7,5,0.32) 38%, rgba(10,7,5,0.08) 62%, rgba(10,7,5,0.0) 88%)",
         }}
       />
+      {/* Top + bottom anchors — top for the brand mark, bottom for the dock */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.18) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.0) 22%, rgba(0,0,0,0.0) 62%, rgba(0,0,0,0.38) 100%)",
+        }}
+      />
+      {/* Subtle warm vignette to push the centre into the gold/terracotta family */}
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none mix-blend-soft-light"
+        style={{
+          background:
+            "radial-gradient(ellipse at 70% 50%, rgba(196,168,130,0.18) 0%, transparent 55%)",
         }}
       />
     </motion.div>
