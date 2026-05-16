@@ -11,6 +11,8 @@ import InventoryNudge from "@/components/member/InventoryNudge";
 import ScoreTierPill from "@/components/member/ScoreTierPill";
 import HabitStreaksCard from "@/components/member/HabitStreaksCard";
 import InsightCard from "@/components/member/InsightCard";
+import LogSessionModal from "@/components/member/LogSessionModal";
+import SessionLogCard, { type SessionLog } from "@/components/member/SessionLogCard";
 import { getTreatmentBySlug } from "@/data/treatments";
 
 interface Member {
@@ -114,16 +116,18 @@ export default function TodayPage() {
   const [upcoming, setUpcoming] = useState<UpcomingBooking | null>(null);
   const [provider, setProvider] = useState<Provider | null>(null);
   const [journal, setJournal] = useState<JournalEntry[]>([]);
+  const [sessions, setSessions] = useState<SessionLog[]>([]);
   const [loading, setLoading] = useState(true);
   const [checkinOpen, setCheckinOpen] = useState(false);
   const [journalOpen, setJournalOpen] = useState(false);
+  const [sessionOpen, setSessionOpen] = useState(false);
 
   async function loadAll() {
     const {
       data: { user },
     } = await supabase.auth.getUser();
 
-    // Guest mode — load check-ins from localStorage only
+    // Guest mode — load check-ins and sessions from localStorage only
     if (!user) {
       try {
         const raw = localStorage.getItem("kamura.guest.checkins");
@@ -131,6 +135,10 @@ export default function TodayPage() {
         setRecent(guestCheckins.slice(0, 7));
         const todayIso = new Date().toISOString().split("T")[0];
         setToday(guestCheckins.find((c) => c.checkin_date === todayIso) || null);
+
+        const rawSessions = localStorage.getItem("kamura.guest.sessions");
+        const guestSessions = (rawSessions ? JSON.parse(rawSessions) : []) as SessionLog[];
+        setSessions(guestSessions.slice(0, 6));
       } catch {
         /* ignore */
       }
@@ -154,6 +162,7 @@ export default function TodayPage() {
       inventoryRes,
       bookingRes,
       journalRes,
+      sessionsRes,
     ] = await Promise.all([
       supabase.from("members").select("*").eq("id", user.id).single(),
       supabase
@@ -208,6 +217,14 @@ export default function TodayPage() {
         .eq("member_id", user.id)
         .order("entry_date", { ascending: false })
         .limit(2),
+      supabase
+        .from("session_logs")
+        .select(
+          "id, session_type, performed_at, duration_minutes, energy_after, clarity_after, calm_after, details, notes"
+        )
+        .eq("member_id", user.id)
+        .order("performed_at", { ascending: false })
+        .limit(6),
     ]);
 
     const mem = memberRes.data as Member;
@@ -223,6 +240,7 @@ export default function TodayPage() {
     setStreakLogs((streakLogsRes.data as { protocol_item_id: string; logged_at: string }[]) || []);
     setInventory((inventoryRes.data as VialInventory[]) || []);
     setJournal((journalRes.data as JournalEntry[]) || []);
+    setSessions((sessionsRes.data as SessionLog[]) || []);
 
     if (bookingRes.data) {
       const raw = bookingRes.data as Record<string, unknown>;
@@ -466,6 +484,15 @@ export default function TodayPage() {
           }}
         />
       )}
+      {sessionOpen && (
+        <LogSessionModal
+          onClose={() => setSessionOpen(false)}
+          onDone={() => {
+            setSessionOpen(false);
+            loadAll();
+          }}
+        />
+      )}
 
       {/* Hero strip */}
       <div className="flex items-end justify-between gap-4 mb-10 flex-wrap pb-8 border-b border-gray-200">
@@ -495,6 +522,12 @@ export default function TodayPage() {
           )}
         </div>
         <div className="flex flex-wrap gap-2">
+          <button
+            onClick={() => setSessionOpen(true)}
+            className="px-4 py-2.5 rounded-full border border-gray-300 text-gray-700 text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:border-terracotta hover:text-terracotta transition-colors"
+          >
+            + Log session
+          </button>
           <button
             onClick={() => setJournalOpen(true)}
             className="px-4 py-2.5 rounded-full border border-gray-300 text-gray-700 text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:border-terracotta hover:text-terracotta transition-colors"
@@ -659,7 +692,12 @@ export default function TodayPage() {
             {/* Practitioner */}
             <PractitionerCard provider={provider} nextSession={upcoming} />
 
-            {/* Journal */}
+            {/* Sessions */}
+            <SessionLogCard
+              sessions={sessions}
+              onLogNew={() => setSessionOpen(true)}
+            />
+
             {/* Habit Streaks */}
             <HabitStreaksCard items={items} logs={streakLogs} />
 
