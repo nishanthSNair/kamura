@@ -27,6 +27,11 @@ const nextConfig: NextConfig = {
         destination: "/blog/peptides-101-beginners-guide-dubai",
         permanent: true,
       },
+      {
+        source: "/blog/peptides-beginners-guide-dubai",
+        destination: "/blog/peptides-101-beginners-guide-dubai",
+        permanent: true,
+      },
     ];
   },
 };
