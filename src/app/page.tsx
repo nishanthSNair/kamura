@@ -8,7 +8,7 @@ import PillarsSection from "@/components/home/PillarsSection";
 import SectionDivider from "@/components/home/SectionDivider";
 
 export const metadata: Metadata = {
-  title: "KAMURA — Only the Best, Made Personal",
+  title: "KAMURA — Heart of Longevity",
   description: `Compounded peptides. Vetted UAE practitioners. Your health record. One curated home for the long game — by invitation. ${treatments.length}+ wellness treatments scored.`,
   keywords: [
     "preventive medicine UAE",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://kamuralife.com" },
   openGraph: {
-    title: "KAMURA — Only the Best, Made Personal",
+    title: "KAMURA — Heart of Longevity",
     description:
       "Compounded peptides. Vetted UAE practitioners. Your health record. One curated home for the long game — by invitation.",
     url: "https://kamuralife.com",
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
         url: "https://kamuralife.com/images/hero-home.png",
         width: 1200,
         height: 630,
-        alt: "KAMURA — Only the Best, Made Personal",
+        alt: "KAMURA — Heart of Longevity",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "KAMURA — Only the Best, Made Personal",
+    title: "KAMURA — Heart of Longevity",
     description:
       "Compounded peptides. Vetted practitioners. Your health record. One curated home for the long game.",
     creator: "@KamuraLife",

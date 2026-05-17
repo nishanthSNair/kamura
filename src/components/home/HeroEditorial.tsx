@@ -174,7 +174,7 @@ export default function HeroEditorial() {
                   className="text-[10px] tracking-[0.34em] uppercase text-[#C4A882] font-semibold font-sans"
                   style={{ animationDelay: "200ms" }}
                 >
-                  Kamura · Heart of the Tortoise
+                  Kamura · Heart of Longevity
                 </p>
               </div>
 
