@@ -5,7 +5,13 @@ export default function robots(): MetadataRoute.Robots {
  rules: {
  userAgent: "*",
  allow: "/",
- disallow: ["/admin/", "/api/"],
+ disallow: [
+ "/admin/",
+ "/api/",
+ "/my/",
+ "/provider/dashboard/",
+ "/review/",
+ ],
  },
  sitemap: "https://kamuralife.com/sitemap.xml",
  };

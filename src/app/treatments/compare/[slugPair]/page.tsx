@@ -43,6 +43,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  popular?.seoDescription ||
  `Compare ${t1.name} and ${t2.name} side by side. Kamura Scores, evidence levels, outcomes, safety profiles, and cost compared.`;
 
+ const ogImage = t1.imageUrl.replace("w=800&h=500", "w=1200&h=630");
+
  return {
  title,
  description,
@@ -57,6 +59,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  title: `${title} | KAMURA`,
  description,
  url: `https://kamuralife.com/treatments/compare/${slugPair}`,
+ images: [
+ {
+ url: ogImage,
+ width: 1200,
+ height: 630,
+ alt: `${t1.name} vs ${t2.name} — KAMURA comparison`,
+ },
+ ],
+ },
+ twitter: {
+ card: "summary_large_image",
+ title: `${t1.name} vs ${t2.name}`,
+ description,
+ images: [ogImage],
+ creator: "@KamuraLife",
  },
  alternates: {
  canonical: `https://kamuralife.com/treatments/compare/${slugPair}`,

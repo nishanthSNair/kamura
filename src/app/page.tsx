@@ -6,6 +6,7 @@ import HeroEditorial from "@/components/home/HeroEditorial";
 import Manifesto from "@/components/home/Manifesto";
 import PillarsSection from "@/components/home/PillarsSection";
 import SectionDivider from "@/components/home/SectionDivider";
+import EmailWaitlist from "@/components/EmailWaitlist";
 
 export const metadata: Metadata = {
   title: "KAMURA — Heart of Longevity",
@@ -220,30 +221,39 @@ export default function Home() {
                   <span className="italic text-[#D4B896]">prescribed by physicians</span>{" "}
                   in the UAE.
                 </h2>
-                <p className="text-[15.5px] md:text-[17px] leading-[1.6] text-white/70 mb-10 max-w-[58ch] font-sans">
+                <p className="text-[15.5px] md:text-[17px] leading-[1.6] text-white/70 mb-8 max-w-[58ch] font-sans">
                   BPC-157, GLP-1, NAD+, and more — sourced through our
                   equity-partnered IV compounding pharmacy, prescribed via our
                   DHA-registered homecare partner. Async consultation, 48-hour
                   delivery.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/peptides/coming-soon"
-                    className="btn-hims inline-flex items-center justify-center gap-2 h-[52px] px-7 rounded-full bg-[#C4A882] hover:bg-[#B59872] text-[#2A2520] text-[14.5px] font-sans font-semibold"
-                  >
-                    Join the waitlist
-                    <span className="btn-hims-arrow">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <polyline points="12 5 19 12 12 19" />
-                      </svg>
-                    </span>
-                  </Link>
+
+                <p className="text-[11px] tracking-[0.22em] uppercase text-[#C4A882] font-semibold font-sans mb-4">
+                  Be the first to get notified
+                </p>
+                <div className="max-w-[480px]">
+                  <EmailWaitlist
+                    source="peptide_waitlist"
+                    theme="dark"
+                    placeholder="you@example.com"
+                    cta="Join waitlist"
+                    successMessage="You're on the peptide waitlist. We'll be in touch before launch."
+                    className="!mx-0"
+                  />
+                </div>
+
+                <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12.5px] text-white/55 font-sans">
                   <Link
                     href="/peptides/what-is-a-peptide"
-                    className="btn-hims inline-flex items-center justify-center gap-2 h-[52px] px-7 rounded-full border border-white/30 hover:border-white/60 text-white text-[14.5px] font-sans font-semibold"
+                    className="underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white/60 transition-colors"
                   >
                     What is a peptide?
+                  </Link>
+                  <Link
+                    href="/peptides/coming-soon"
+                    className="underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white/60 transition-colors"
+                  >
+                    Read the full launch plan →
                   </Link>
                 </div>
               </div>

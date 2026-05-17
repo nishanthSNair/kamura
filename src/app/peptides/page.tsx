@@ -17,11 +17,23 @@ export const metadata: Metadata = {
     description:
       "13 peptides scored, stacked, and explained. Protocol builder, sourcing guide, and clinic tools.",
     url: "https://kamuralife.com/peptides",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1632571401005-458e9d244591?w=1200&h=630&q=80",
+        width: 1200,
+        height: 630,
+        alt: "Peptide Intelligence Hub — every peptide scored, stacked, and explained | KAMURA",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Peptide Intelligence Hub | KAMURA",
     description: "The most comprehensive peptide resource in the GCC.",
+    images: [
+      "https://images.unsplash.com/photo-1632571401005-458e9d244591?w=1200&h=630&q=80",
+    ],
+    creator: "@KamuraLife",
   },
 };
 

@@ -68,6 +68,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  },
  ],
  },
+ twitter: {
+ card: "summary_large_image",
+ title: `${t.name} — Kamura Score: ${t.kamuraScore}`,
+ description: t.description,
+ images: [t.imageUrl.replace("w=800&h=500", "w=1200&h=630")],
+ creator: "@KamuraLife",
+ },
  };
 }
 
