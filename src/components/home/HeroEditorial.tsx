@@ -133,7 +133,7 @@ export default function HeroEditorial() {
 
   return (
     <section ref={sectionRef} className="bg-black p-2 sm:p-3">
-      <div className="relative h-[calc(100vh-1rem)] sm:h-[calc(100vh-1.5rem)] min-h-[820px] rounded-3xl overflow-hidden">
+      <div className="relative h-[calc(100svh-1rem)] sm:h-[calc(100vh-1.5rem)] min-h-[680px] sm:min-h-[820px] rounded-3xl overflow-hidden">
         {/* HERO BACKDROP — single image today, 8-layer parallax later */}
         <HeroBackdrop y={backdropY} scale={backdropScale} blur={backdropBlur} />
 
@@ -142,9 +142,9 @@ export default function HeroEditorial() {
             on the right side while the type sits on a clear, premium surface. */}
         <motion.div
           style={{ y: cardY, opacity: cardOpacity }}
-          className="absolute z-20 left-1/2 -translate-x-1/2 top-[18%] sm:top-[16%] md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:left-10 lg:left-16 xl:left-24 w-[calc(100%-48px)] sm:w-[calc(100%-64px)] md:w-auto md:max-w-[520px]"
+          className="absolute z-20 left-1/2 -translate-x-1/2 top-[9%] sm:top-[12%] md:top-1/2 md:-translate-y-1/2 md:translate-x-0 md:left-10 lg:left-16 xl:left-24 w-[calc(100%-32px)] sm:w-[calc(100%-64px)] md:w-auto md:max-w-[520px]"
         >
-          <div className="relative rounded-[22px] overflow-hidden border border-white/15 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.65)] animate-blur-fade-up">
+          <div className="relative rounded-[20px] sm:rounded-[22px] overflow-hidden border border-white/15 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.65)] animate-blur-fade-up">
             {/* glass fill */}
             <div
               aria-hidden
@@ -159,19 +159,19 @@ export default function HeroEditorial() {
             {/* inner hairline highlight */}
             <div
               aria-hidden
-              className="absolute inset-px rounded-[21px] pointer-events-none"
+              className="absolute inset-px rounded-[19px] sm:rounded-[21px] pointer-events-none"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0) 35%)",
               }}
             />
 
-            <div className="relative p-7 sm:p-9 md:p-10 lg:p-12">
+            <div className="relative p-5 sm:p-9 md:p-10 lg:p-12">
               {/* eyebrow with gold rule */}
-              <div className="flex items-center gap-3 mb-6 md:mb-7">
+              <div className="flex items-center gap-3 mb-4 sm:mb-6 md:mb-7">
                 <span className="block w-7 h-px bg-[#C4A882]" />
                 <p
-                  className="text-[10px] tracking-[0.34em] uppercase text-[#C4A882] font-semibold font-sans"
+                  className="text-[9.5px] sm:text-[10px] tracking-[0.32em] sm:tracking-[0.34em] uppercase text-[#C4A882] font-semibold font-sans"
                   style={{ animationDelay: "200ms" }}
                 >
                   Kamura · Heart of Longevity
@@ -181,7 +181,7 @@ export default function HeroEditorial() {
               <h1
                 className="font-serif text-white font-light leading-[1.02] tracking-[-0.025em]"
                 style={{
-                  fontSize: "clamp(38px, 4.8vw, 64px)",
+                  fontSize: "clamp(34px, 4.8vw, 64px)",
                   animationDelay: "320ms",
                 }}
               >
@@ -191,14 +191,16 @@ export default function HeroEditorial() {
               </h1>
 
               <p
-                className="mt-6 md:mt-7 text-[14.5px] md:text-[15.5px] text-white/78 leading-[1.6] font-sans max-w-[42ch]"
+                className="mt-4 sm:mt-6 md:mt-7 text-[13.5px] sm:text-[14.5px] md:text-[15.5px] text-white/78 leading-[1.55] font-sans max-w-[42ch]"
                 style={{ animationDelay: "480ms" }}
               >
                 Compounded peptides. Vetted practitioners. Your health record.
                 One home for the long game.
               </p>
 
-              <div className="mt-7 md:mt-8 pt-5 md:pt-6 border-t border-white/12">
+              {/* Footer line — hidden on mobile to save vertical room
+                  where the dock dominates the lower half of the viewport */}
+              <div className="hidden sm:block mt-7 md:mt-8 pt-5 md:pt-6 border-t border-white/12">
                 <p className="text-[10px] tracking-[0.28em] uppercase text-white/55 font-sans">
                   Longevity, by design.
                 </p>
@@ -210,11 +212,11 @@ export default function HeroEditorial() {
         {/* FLOATING DOCK — drifts up slightly slower than the headline for depth */}
         <motion.div
           style={{ y: dockY }}
-          className="absolute bottom-5 left-5 right-5 sm:bottom-7 sm:left-7 sm:right-7 z-20 frosted-card-light rounded-[28px] p-6 sm:p-7 md:p-8 animate-blur-fade-up shadow-[0_24px_60px_-20px_rgba(0,0,0,0.35)]"
+          className="absolute bottom-3 left-3 right-3 sm:bottom-7 sm:left-7 sm:right-7 z-20 frosted-card-light rounded-[22px] sm:rounded-[28px] p-4 sm:p-7 md:p-8 animate-blur-fade-up shadow-[0_24px_60px_-20px_rgba(0,0,0,0.35)]"
         >
           <div className="mx-auto max-w-[1280px]">
-            <div className="flex items-baseline justify-between mb-5 md:mb-6">
-              <p className="text-[10.5px] tracking-[0.3em] uppercase text-terracotta font-semibold font-sans">
+            <div className="flex items-baseline justify-between mb-3 sm:mb-5 md:mb-6">
+              <p className="text-[10px] sm:text-[10.5px] tracking-[0.28em] sm:tracking-[0.3em] uppercase text-terracotta font-semibold font-sans">
                 Where do you want to start?
               </p>
               <Link
@@ -226,35 +228,41 @@ export default function HeroEditorial() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-3.5">
-              {DOORS.map(({ slug, label, title, sub, href, Icon, tag, bg, fg, delay }) => (
+            {/* 2-col on mobile so all 5 fit in the viewport without scrolling
+                past the hero. The last card spans both columns to balance
+                the 2+2+1 row layout. */}
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 sm:gap-3 md:gap-3.5">
+              {DOORS.map(({ slug, label, title, sub, href, Icon, tag, bg, fg, delay }, i) => (
                 <Link
                   key={slug}
                   href={href}
                   data-image-slot={`door-${slug}`}
-                  className="btn-hims-card group relative flex items-start gap-3.5 p-4 md:p-[18px] rounded-2xl bg-white border border-[#2A2520]/8 animate-blur-fade-up overflow-hidden"
+                  className={`btn-hims-card group relative flex items-start gap-2.5 sm:gap-3.5 p-3 sm:p-4 md:p-[18px] rounded-2xl bg-white border border-[#2A2520]/8 animate-blur-fade-up overflow-hidden ${
+                    i === DOORS.length - 1 ? "col-span-2 lg:col-span-1" : ""
+                  }`}
                   style={{ animationDelay: `${delay}ms` }}
                 >
                   <div
-                    className={`w-11 h-11 md:w-12 md:h-12 rounded-xl ${bg} ${fg} grid place-items-center shrink-0`}
+                    className={`w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-lg sm:rounded-xl ${bg} ${fg} grid place-items-center shrink-0`}
                   >
-                    <Icon size={18} strokeWidth={1.8} />
+                    <Icon size={16} strokeWidth={1.8} className="sm:hidden" />
+                    <Icon size={18} strokeWidth={1.8} className="hidden sm:block" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-1.5 mb-0.5">
-                      <p className="text-[9.5px] tracking-[0.24em] uppercase text-terracotta font-semibold font-sans">
+                      <p className="text-[9px] sm:text-[9.5px] tracking-[0.22em] sm:tracking-[0.24em] uppercase text-terracotta font-semibold font-sans">
                         {label}
                       </p>
                       {tag && (
-                        <span className="inline-flex items-center h-[16px] px-1.5 rounded-full text-[8.5px] font-semibold tracking-[0.1em] uppercase bg-[#C4A882]/18 border border-[#C4A882]/45 text-[#9A7357]">
+                        <span className="inline-flex items-center h-[14px] sm:h-[16px] px-1 sm:px-1.5 rounded-full text-[8px] sm:text-[8.5px] font-semibold tracking-[0.08em] sm:tracking-[0.1em] uppercase bg-[#C4A882]/18 border border-[#C4A882]/45 text-[#9A7357]">
                           {tag}
                         </span>
                       )}
                     </div>
-                    <h3 className="font-serif text-[15px] md:text-[16px] leading-[1.2] text-[#2A2520] m-0 truncate">
+                    <h3 className="font-serif text-[13.5px] sm:text-[15px] md:text-[16px] leading-[1.2] text-[#2A2520] m-0 truncate">
                       {title}
                     </h3>
-                    <p className="text-[11.5px] text-[#2A2520]/55 font-sans truncate">
+                    <p className="hidden sm:block text-[11.5px] text-[#2A2520]/55 font-sans truncate">
                       {sub}
                     </p>
                   </div>
@@ -266,7 +274,7 @@ export default function HeroEditorial() {
                     stroke="currentColor"
                     strokeWidth="1.8"
                     strokeLinecap="round"
-                    className="btn-hims-arrow absolute top-3.5 right-3.5 text-[#2A2520]/35 group-hover:text-[#2A2520]"
+                    className="btn-hims-arrow hidden sm:block absolute top-3.5 right-3.5 text-[#2A2520]/35 group-hover:text-[#2A2520]"
                   >
                     <line x1="5" y1="12" x2="19" y2="12" />
                     <polyline points="12 5 19 12 12 19" />
