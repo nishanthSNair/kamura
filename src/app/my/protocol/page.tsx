@@ -368,7 +368,18 @@ export default function ProtocolPage() {
       )}
 
       {loading ? (
-        <p className="text-sm text-gray-400 font-sans">Loading...</p>
+        <div className="space-y-4">
+          <div className="h-10 bg-[#EDE7DB] rounded-xl animate-pulse w-1/2" />
+          <div className="space-y-3">
+            {[0, 1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="h-24 bg-[#EDE7DB] rounded-2xl animate-pulse"
+                style={{ animationDelay: `${i * 60}ms` }}
+              />
+            ))}
+          </div>
+        </div>
       ) : items.length === 0 ? (
         <div className="p-12 rounded-2xl bg-white border border-dashed border-gray-300 text-center">
           <p className="font-serif text-xl text-gray-900 mb-2">No items yet</p>

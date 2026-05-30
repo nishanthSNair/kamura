@@ -2,6 +2,7 @@
 title: "Hyperbaric Oxygen Therapy in Dubai: A Complete Guide"
 date: "2026-03-01"
 category: "Longevity & Science"
+cta: booking_waitlist
 coverImage: "https://images.unsplash.com/photo-1765830403209-a5eceac4c198?w=1200&q=80&fit=crop"
 excerpt: "HBOT is one of the most clinically validated longevity treatments available — and Dubai is home to the world's largest hyperbaric center. Here's the science, what a session involves, and what it costs."
 depthIndicator: "Deep Dive"

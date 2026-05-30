@@ -2,6 +2,7 @@
 title: "Are Peptides Legal Again? The FDA Just Removed 12 from the Restricted List"
 date: "2026-04-19"
 category: "Longevity & Science"
+cta: peptide_waitlist
 coverImage: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1200&h=630&fit=crop"
 excerpt: "On April 15, 2026, the FDA removed 12 peptides from its Category 2 restricted list, including BPC-157, TB-500, GHK-Cu, and Epitalon. What actually changed, what didn't, and why July 2026 is the month that matters."
 depthIndicator: "News & Analysis"

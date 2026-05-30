@@ -2,6 +2,7 @@
 title: "Peptides 101: A Beginner's Guide to Peptide Therapy for Dubai Residents"
 date: "2026-03-14"
 category: "Guides & Reviews"
+cta: peptide_waitlist
 coverImage: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200&q=80&fit=crop"
 excerpt: "Peptide therapy is one of the fastest-growing areas of longevity medicine — and one of the most confusing. This guide breaks down what peptides are, which ones have real evidence behind them, and how to access them safely in Dubai."
 depthIndicator: "Deep Dive"

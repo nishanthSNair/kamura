@@ -2,6 +2,7 @@
 title: "IV Drip Therapy in Dubai: Formulas, Clinics & What to Expect"
 date: "2026-02-21"
 category: "Guides & Reviews"
+cta: booking_waitlist
 coverImage: "https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=1200&q=80&fit=crop"
 excerpt: "IV drip therapy has become one of Dubai's most popular wellness treatments. We break down the most common formulas, where to get them, what they cost, and whether they're worth it."
 depthIndicator: "Deep Dive"

@@ -39,6 +39,12 @@ interface Props {
    * "dark" inverts colors for the homepage Act 4 dark section, etc.
    */
   theme?: "light" | "dark";
+  /**
+   * Optional hook fired after a successful submit. Used by the wellness
+   * checker gate to flip its unlock state when an email lands. Pure
+   * side-effect — fires once.
+   */
+  onSubmittedExtra?: () => void;
 }
 
 export default function EmailWaitlist({
@@ -48,6 +54,7 @@ export default function EmailWaitlist({
   successMessage = "You're on the list. We'll be in touch.",
   className = "",
   theme = "light",
+  onSubmittedExtra,
 }: Props) {
   const [submitted, setSubmitted] = useState(false);
 
@@ -70,6 +77,7 @@ export default function EmailWaitlist({
       if (!res.ok) throw new Error("submit_failed");
       toast.success(successMessage);
       setSubmitted(true);
+      onSubmittedExtra?.();
     } catch {
       toast.error("Something went wrong. Try again in a moment.");
     }

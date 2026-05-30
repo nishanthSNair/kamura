@@ -2,6 +2,7 @@
 title: "NAD+ Therapy in Dubai: What It Costs and Where to Go"
 date: "2026-03-04"
 category: "Longevity & Science"
+cta: booking_waitlist
 coverImage: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&q=80&fit=crop"
 excerpt: "NAD+ therapy is one of the most talked-about longevity treatments in Dubai. We explain the science, break down the costs, and review the best clinics offering it."
 depthIndicator: "Deep Dive"

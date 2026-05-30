@@ -26,6 +26,7 @@ import InteractionsPanel from "@/components/treatments/InteractionsPanel";
 import CostGuide from "@/components/treatments/CostGuide";
 import FAQAccordion from "@/components/treatments/FAQAccordion";
 import AddToStackButton from "@/components/stack/AddToStackButton";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 
 interface Props {
  params: Promise<{ slug: string }>;
@@ -215,16 +216,24 @@ export default async function TreatmentDetailPage({ params }: Props) {
  <div className="absolute inset-0 bg-gradient-to-t from-[#14110E]/90 via-[#14110E]/40 to-forest/30" />
 
  <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 pb-10 pt-32">
- {/* Breadcrumb */}
- <nav className="mb-6">
- <div className="flex items-center gap-2 text-sm text-white/60 font-sans">
- <Link href="/" className="hover:text-white transition-colors">Home</Link>
- <span>/</span>
- <Link href="/treatments" className="hover:text-white transition-colors">Treatments</Link>
- <span>/</span>
- <span className="text-white/90">{t.name}</span>
+ {/* Breadcrumb — includes category so SEO traffic landing here can
+   orient up the hierarchy. JSON-LD already emitted earlier so we
+   suppress duplicate structured data on this visual instance. */}
+ <div className="mb-6">
+ <Breadcrumb
+  tone="dark"
+  emitJsonLd={false}
+  items={[
+   { label: "Home", href: "/" },
+   { label: "Treatments", href: "/treatments" },
+   {
+    label: t.category,
+    href: `/treatments/category/${categoryNameToSlug(t.category)}`,
+   },
+   { label: t.name },
+  ]}
+ />
  </div>
- </nav>
 
  <div className="flex flex-col md:flex-row md:items-end gap-6 md:gap-8">
  {/* Treatment Info */}

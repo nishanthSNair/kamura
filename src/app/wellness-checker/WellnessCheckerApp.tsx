@@ -5,6 +5,7 @@ import type { WellnessProfile } from "@/data/wellness-questionnaire";
 import type { BlogPostSummary } from "@/data/wellness-checker";
 import QuestionnaireShell from "@/components/wellness/QuestionnaireShell";
 import WellnessDashboard from "@/components/wellness/WellnessDashboard";
+import WellnessResultGate from "@/components/wellness/WellnessResultGate";
 
 interface WellnessCheckerAppProps {
   blogPosts: BlogPostSummary[];
@@ -32,13 +33,15 @@ export default function WellnessCheckerApp({ blogPosts }: WellnessCheckerAppProp
     );
   }
 
-  // Show dashboard
+  // Result gate — show teaser + email capture, then full dashboard.
   return (
-    <WellnessDashboard
-      profile={profile}
-      blogPosts={blogPosts}
-      onRetake={reset}
-      onGoalToggle={updateGoalCheck}
-    />
+    <WellnessResultGate profile={profile}>
+      <WellnessDashboard
+        profile={profile}
+        blogPosts={blogPosts}
+        onRetake={reset}
+        onGoalToggle={updateGoalCheck}
+      />
+    </WellnessResultGate>
   );
 }

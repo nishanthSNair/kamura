@@ -12,6 +12,8 @@ import ShareButtons from "@/components/ShareButtons";
 import FaqAccordion from "@/components/blog/FaqAccordion";
 import MobileShareBar from "@/components/blog/MobileShareBar";
 import HelpfulFeedback from "@/components/blog/HelpfulFeedback";
+import BlogPostCTA from "@/components/blog/BlogPostCTA";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 
 interface Props {
  params: Promise<{ slug: string }>;
@@ -176,19 +178,15 @@ export default async function BlogPostPage({ params }: Props) {
 
    <article className="pt-24 pb-8 lg:pb-0">
     {/* Breadcrumbs */}
-    <nav className="max-w-3xl mx-auto px-6 pt-4 pb-6" aria-label="Breadcrumb">
-     <ol className="flex items-center gap-1.5 text-xs font-sans text-gray-400">
-      <li>
-       <Link href="/" className="hover:text-gray-600 transition-colors">Home</Link>
-      </li>
-      <li><span className="mx-1">/</span></li>
-      <li>
-       <Link href="/blog" className="hover:text-gray-600 transition-colors">Blog</Link>
-      </li>
-      <li><span className="mx-1">/</span></li>
-      <li className="text-gray-600 truncate max-w-[200px] sm:max-w-none">{post.title}</li>
-     </ol>
-    </nav>
+    <div className="max-w-3xl mx-auto px-6 pt-4 pb-6">
+     <Breadcrumb
+      items={[
+       { label: "Home", href: "/" },
+       { label: "Blog", href: "/blog" },
+       { label: post.title },
+      ]}
+     />
+    </div>
 
     {/* Header — Title dominant */}
     <header className="max-w-3xl mx-auto px-6 pb-8">
@@ -290,15 +288,21 @@ export default async function BlogPostPage({ params }: Props) {
 
     {/* Main Content — 2-column layout with sticky TOC sidebar */}
     <div className="max-w-5xl mx-auto px-6 pb-12 grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-12">
-     {/* Left: Article Content */}
-     <div
-      className="prose prose-lg prose-headings:font-serif prose-headings:text-gray-900 prose-p:leading-[1.85] prose-p:mb-6 prose-headings:mt-10 prose-headings:mb-4 prose-li:leading-[1.8] prose-a:text-terracotta prose-a:no-underline hover:prose-a:underline font-sans max-w-none"
-      dangerouslySetInnerHTML={{ __html: post.content }}
-     />
+     {/* Left: Article Content (mobile TOC accordion above prose so SEO
+       mobile traffic can navigate without scrolling the whole post) */}
+     <div>
+      {post.headings.length > 2 && (
+       <TableOfContents headings={post.headings} variant="mobile" />
+      )}
+      <div
+       className="prose prose-lg prose-headings:font-serif prose-headings:text-gray-900 prose-p:leading-[1.85] prose-p:mb-6 prose-headings:mt-10 prose-headings:mb-4 prose-li:leading-[1.8] prose-a:text-terracotta prose-a:no-underline hover:prose-a:underline font-sans max-w-none"
+       dangerouslySetInnerHTML={{ __html: post.content }}
+      />
+     </div>
 
-     {/* Right: Sticky TOC Sidebar */}
+     {/* Right: Sticky TOC Sidebar (desktop only) */}
      {post.headings.length > 2 && (
-      <TableOfContents headings={post.headings} />
+      <TableOfContents headings={post.headings} variant="desktop" />
      )}
     </div>
 
@@ -369,30 +373,11 @@ export default async function BlogPostPage({ params }: Props) {
      </section>
     )}
 
-    {/* Contextual CTA */}
-    <section className="max-w-3xl mx-auto px-6 pb-12">
-     <div className="border border-sage/20 rounded-xl p-8 bg-sage/5">
-      <h3 className="font-serif text-xl text-gray-900 mb-3">
-       Explore Related Treatments
-      </h3>
-      <p className="text-sm text-gray-600 font-sans leading-relaxed mb-5">
-       Discover evidence-based treatments, clinics, and protocols curated for the UAE wellness community.
-      </p>
-      <div className="flex flex-wrap gap-3">
-       <Link
-        href="/explore"
-        className="inline-block bg-moss text-white px-6 py-2.5 text-sm tracking-[0.1em] uppercase hover:bg-forest transition-colors font-sans"
-       >
-        Browse Treatments
-       </Link>
-       <Link
-        href="/blog"
-        className="inline-block border border-gray-300 text-gray-700 px-6 py-2.5 text-sm tracking-[0.1em] uppercase hover:border-sage hover:text-moss transition-colors font-sans"
-       >
-        More Articles
-       </Link>
-      </div>
-     </div>
+    {/* Lead-capture CTA — replaces the older "browse more" block.
+        Frontmatter `cta` field on each post drives which waitlist a
+        reader joins (peptide_waitlist / booking_waitlist / newsletter). */}
+    <section className="max-w-3xl mx-auto px-6">
+     <BlogPostCTA source={post.cta ?? "newsletter"} />
     </section>
 
     {/* Was this helpful? */}

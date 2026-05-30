@@ -2,6 +2,7 @@
 title: "Every Peptide You Need to Know in 2026: The Complete Guide to What They Do, Where to Get Them & What the Regulations Say"
 date: "2026-04-04"
 category: "Longevity & Science"
+cta: peptide_waitlist
 coverImage: "https://images.unsplash.com/photo-1578496779937-3815e442abed?w=1200&h=630&fit=crop"
 excerpt: "Tirzepatide, BPC-157, GHK-Cu, NAD+, Semax and 15 more decoded. The real story on UAE compounding pharmacies, the FDA's 2026 reclassification, pharmaceutical vs research grade, and why your supply chain matters more than your stack."
 depthIndicator: "Deep Dive"

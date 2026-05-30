@@ -12,6 +12,8 @@ import type { EvidenceLevel } from "@/data/treatments";
 
 const blogDirectory = path.join(process.cwd(), "content/blog");
 
+export type BlogCtaSource = "peptide_waitlist" | "booking_waitlist" | "newsletter";
+
 export interface BlogPost {
  slug: string;
  title: string;
@@ -38,6 +40,12 @@ export interface BlogPost {
   bio?: string;
   linkedin?: string;
  };
+ /**
+  * End-of-article CTA. Set in frontmatter as `cta: peptide_waitlist`.
+  * Defaults to "newsletter" if not specified. Drives which waitlist the
+  * reader joins from the BlogPostCTA component.
+  */
+ cta?: BlogCtaSource;
 }
 
 export function getAllPosts(): Omit<BlogPost, "content" | "headings">[] {
@@ -70,6 +78,7 @@ export function getAllPosts(): Omit<BlogPost, "content" | "headings">[] {
  ...(data.medicallyReviewed && { medicallyReviewed: data.medicallyReviewed }),
  ...(data.lastUpdated && { lastUpdated: data.lastUpdated }),
  ...(data.author && { author: data.author }),
+ ...(data.cta && { cta: data.cta as BlogCtaSource }),
  };
  })
  .sort((a, b) => (a.date > b.date ? -1 : 1));
@@ -137,6 +146,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
  ...(data.lastUpdated && { lastUpdated: data.lastUpdated }),
  ...(data.faqItems && { faqItems: data.faqItems }),
  ...(data.author && { author: data.author }),
+ ...(data.cta && { cta: data.cta as BlogCtaSource }),
  };
 }
 

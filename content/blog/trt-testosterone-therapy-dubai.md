@@ -2,6 +2,7 @@
 title: "TRT in Dubai: Testosterone Replacement Therapy Costs, Clinics & What to Know"
 date: "2026-03-28"
 category: "Longevity & Science"
+cta: peptide_waitlist
 coverImage: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80&fit=crop"
 excerpt: "Testosterone replacement therapy is one of the most requested treatments at Dubai's longevity clinics. Here's what the evidence says, what it costs, who should consider it, and where to get it safely."
 depthIndicator: "Deep Dive"

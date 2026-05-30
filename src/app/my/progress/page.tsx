@@ -102,7 +102,19 @@ export default function ProgressPage() {
       </div>
 
       {loading ? (
-        <p className="text-sm text-gray-400 font-sans">Loading...</p>
+        <div className="space-y-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[0, 1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="h-28 bg-[#EDE7DB] rounded-2xl animate-pulse"
+                style={{ animationDelay: `${i * 60}ms` }}
+              />
+            ))}
+          </div>
+          <div className="h-80 bg-[#EDE7DB] rounded-3xl animate-pulse" />
+          <div className="h-64 bg-[#EDE7DB] rounded-3xl animate-pulse" />
+        </div>
       ) : !hasData ? (
         <div className="p-12 rounded-2xl bg-white border border-dashed border-gray-300 text-center">
           <p className="font-serif text-xl text-gray-900 mb-2">No data yet</p>
