@@ -6,6 +6,7 @@ import { getAllPosts } from "@/lib/blog";
 import KamuraScoreBadge from "@/components/treatments/KamuraScoreBadge";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 import CompoundedSection from "@/components/peptides/CompoundedSection";
+import WaitlistPopup from "@/components/WaitlistPopup";
 
 export const metadata: Metadata = {
   title: "Peptide Intelligence Hub — Every Peptide Scored, Stacked & Explained",
@@ -230,6 +231,14 @@ export default function PeptidesHubPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* Waitlist capture popup — separate storageKey from homepage so a
+          visitor who dismissed on / can still see it on /peptides if they
+          land here from search, and vice versa. */}
+      <WaitlistPopup
+        storageKey="kamura.popup.peptides"
+        source="peptide_waitlist"
       />
 
       {/* ───── HERO ─────────────────────────────────────────────── */}

@@ -7,6 +7,7 @@ import Manifesto from "@/components/home/Manifesto";
 import PillarsSection from "@/components/home/PillarsSection";
 import SectionDivider from "@/components/home/SectionDivider";
 import EmailWaitlist from "@/components/EmailWaitlist";
+import WaitlistPopup from "@/components/WaitlistPopup";
 
 export const metadata: Metadata = {
   title: "KAMURA — Heart of Longevity",
@@ -120,6 +121,10 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      {/* Waitlist capture popup — fires 8s after landing, once/session,
+          30-day dismissal memory, vanishes forever once submitted. */}
+      <WaitlistPopup storageKey="kamura.popup.home" source="peptide_waitlist" />
 
       {/* ════════════ ACT 1 — EDITORIAL HERO + 5-DOOR FLOATING DOCK ════════════ */}
       <HeroEditorial />
