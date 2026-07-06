@@ -1,168 +1,253 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
-
-interface Checkin {
-  checkin_date: string;
-  overall_score: number;
-  energy: number;
-  mood: number;
-  sleep_quality: number;
-  stress: number;
-}
-
-interface DoseLogRow {
-  logged_at: string;
-  protocol_item_id: string;
-}
+import ImpactBody from "@/components/member/ImpactBody";
+import ImpactDrilldown from "@/components/member/ImpactDrilldown";
+import ImpactPanels from "@/components/member/ImpactPanels";
+import {
+  computeComparison,
+  filterRange,
+  IMPACT_REGIONS,
+  MIN_SPAN_DAYS,
+  RANGE_OPTIONS,
+  type CheckinRow,
+  type DoseRow,
+  type RangeKey,
+  type SessionRow,
+} from "@/lib/impact";
 
 export default function ProgressPage() {
   const supabase = createClient();
-  const [checkins, setCheckins] = useState<Checkin[]>([]);
-  const [doseCount, setDoseCount] = useState(0);
-  const [itemCount, setItemCount] = useState(0);
+  const [allCheckins, setAllCheckins] = useState<CheckinRow[]>([]);
+  const [allSessions, setAllSessions] = useState<SessionRow[]>([]);
+  const [allDoses, setAllDoses] = useState<DoseRow[]>([]);
   const [loading, setLoading] = useState(true);
+  const [range, setRange] = useState<RangeKey>("30");
+  const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
 
   useEffect(() => {
     async function load() {
       const {
         data: { user },
       } = await supabase.auth.getUser();
-      if (!user) return;
 
-      const thirtyDaysAgo = new Date(Date.now() - 30 * 86400000).toISOString().split("T")[0];
-      const thirtyDaysAgoIso = new Date(Date.now() - 30 * 86400000).toISOString();
+      // Guest mode — everything the member tried before signing up, honestly
+      if (!user) {
+        try {
+          const rawCheckins = localStorage.getItem("kamura.guest.checkins");
+          setAllCheckins((rawCheckins ? JSON.parse(rawCheckins) : []) as CheckinRow[]);
+          const rawSessions = localStorage.getItem("kamura.guest.sessions");
+          setAllSessions((rawSessions ? JSON.parse(rawSessions) : []) as SessionRow[]);
+        } catch {
+          /* ignore */
+        }
+        setLoading(false);
+        return;
+      }
 
-      const [checkinsRes, logsRes, itemsRes] = await Promise.all([
+      const [checkinsRes, sessionsRes, dosesRes] = await Promise.all([
         supabase
           .from("wellness_checkins")
-          .select("*")
+          .select("checkin_date, overall_score, energy, mood, sleep_quality, stress")
           .eq("member_id", user.id)
-          .gte("checkin_date", thirtyDaysAgo)
-          .order("checkin_date", { ascending: true }),
+          .order("checkin_date", { ascending: true })
+          .limit(365),
+        supabase
+          .from("session_logs")
+          .select(
+            "id, session_type, performed_at, duration_minutes, energy_after, clarity_after, calm_after"
+          )
+          .eq("member_id", user.id)
+          .order("performed_at", { ascending: false })
+          .limit(500),
         supabase
           .from("dose_logs")
-          .select("logged_at, protocol_item_id")
+          .select("logged_at")
           .eq("member_id", user.id)
-          .gte("logged_at", thirtyDaysAgoIso),
-        supabase
-          .from("protocol_items")
-          .select("id", { count: "exact", head: true })
-          .eq("member_id", user.id)
-          .eq("active", true),
+          .eq("skipped", false)
+          .order("logged_at", { ascending: false })
+          .limit(1000),
       ]);
 
-      setCheckins((checkinsRes.data as Checkin[]) || []);
-      setDoseCount(((logsRes.data as DoseLogRow[]) || []).length);
-      setItemCount(itemsRes.count || 0);
+      setAllCheckins((checkinsRes.data as CheckinRow[]) || []);
+      setAllSessions((sessionsRes.data as SessionRow[]) || []);
+      setAllDoses((dosesRes.data as DoseRow[]) || []);
       setLoading(false);
     }
     load();
   }, [supabase]);
 
-  const hasData = checkins.length > 0;
+  const checkins = useMemo(
+    () => filterRange(allCheckins, range, (c) => c.checkin_date),
+    [allCheckins, range]
+  );
+  const sessions = useMemo(
+    () => filterRange(allSessions, range, (s) => s.performed_at),
+    [allSessions, range]
+  );
+  const doses = useMemo(
+    () => filterRange(allDoses, range, (d) => d.logged_at),
+    [allDoses, range]
+  );
 
-  const avg =
-    hasData
-      ? Math.round(checkins.reduce((s, c) => s + c.overall_score, 0) / checkins.length)
-      : null;
-  const latest = hasData ? checkins[checkins.length - 1].overall_score : null;
-  const first = hasData ? checkins[0].overall_score : null;
-  const delta = latest !== null && first !== null ? latest - first : null;
+  const comparison = useMemo(() => computeComparison(checkins), [checkins]);
 
-  // Simple streak — count consecutive days ending yesterday/today
-  const today = new Date().toISOString().split("T")[0];
-  let streak = 0;
-  const dates = new Set(checkins.map((c) => c.checkin_date));
-  const check = new Date();
-  if (dates.has(today)) {
-    streak = 1;
-    for (let i = 1; i < 365; i++) {
-      const d = new Date(check);
-      d.setDate(d.getDate() - i);
-      const iso = d.toISOString().split("T")[0];
-      if (dates.has(iso)) streak++;
-      else break;
+  const regionSessionCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const region of IMPACT_REGIONS) {
+      counts[region.key] = sessions.filter((s) =>
+        (region.sessionTypes as string[]).includes(s.session_type)
+      ).length;
     }
-  }
+    return counts;
+  }, [sessions]);
+
+  const region = IMPACT_REGIONS.find((r) => r.key === selectedRegion) ?? null;
+  const rangeLabel = RANGE_OPTIONS.find((r) => r.key === range)?.label ?? "";
+  const hasAnyData = allCheckins.length > 0 || allSessions.length > 0;
 
   return (
     <>
-      <div className="mb-8">
-        <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-sans mb-2">
-          Progress
-        </p>
-        <h1 className="font-serif text-3xl md:text-4xl text-gray-900 leading-tight mb-3">
-          Are you getting better?
-        </h1>
-        <p className="text-sm text-gray-500 font-sans max-w-xl">
-          Last 30 days of check-ins, adherence, and trend lines.
-        </p>
+      {/* Header */}
+      <div className="flex flex-wrap items-end justify-between gap-4 mb-8">
+        <div>
+          <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-sans mb-2">
+            Your impact
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl text-gray-900 leading-tight mb-2">
+            You · Now vs. Baseline
+          </h1>
+          <p className="text-sm text-gray-500 font-sans max-w-xl">
+            Your logged check-ins and sessions, compared against your first week. Real numbers
+            only — nothing here is projected.
+          </p>
+        </div>
+
+        {/* Time range toggle */}
+        <div className="flex items-center gap-1 p-1 rounded-full bg-white border border-gray-200">
+          {RANGE_OPTIONS.map((opt) => (
+            <button
+              key={opt.key}
+              onClick={() => setRange(opt.key)}
+              className={`px-3.5 py-1.5 rounded-full text-xs font-sans font-semibold transition-colors ${
+                range === opt.key
+                  ? "bg-terracotta text-white"
+                  : "text-gray-500 hover:text-gray-900"
+              }`}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       {loading ? (
-        <div className="space-y-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[0, 1, 2, 3].map((i) => (
+        <div className="grid lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2 h-[480px] bg-[#EDE7DB] rounded-3xl animate-pulse" />
+          <div className="space-y-4">
+            {[0, 1, 2].map((i) => (
               <div
                 key={i}
-                className="h-28 bg-[#EDE7DB] rounded-2xl animate-pulse"
+                className="h-36 bg-[#EDE7DB] rounded-3xl animate-pulse"
                 style={{ animationDelay: `${i * 60}ms` }}
               />
             ))}
           </div>
-          <div className="h-80 bg-[#EDE7DB] rounded-3xl animate-pulse" />
-          <div className="h-64 bg-[#EDE7DB] rounded-3xl animate-pulse" />
         </div>
-      ) : !hasData ? (
-        <div className="p-12 rounded-2xl bg-white border border-dashed border-gray-300 text-center">
-          <p className="font-serif text-xl text-gray-900 mb-2">No data yet</p>
-          <p className="text-sm text-gray-500 font-sans max-w-md mx-auto">
-            Log your first daily check-in from the Today screen. Trends appear
-            after a few days.
+      ) : !hasAnyData ? (
+        <div className="p-12 rounded-3xl bg-white border border-dashed border-gray-300 text-center">
+          <p className="font-serif text-xl text-gray-900 mb-2">Your impact starts with day one</p>
+          <p className="text-sm text-gray-500 font-sans max-w-md mx-auto mb-6">
+            Log your first daily check-in and your sessions from the Today screen. After two
+            weeks, this page shows how your body is actually responding.
           </p>
+          <Link
+            href="/my"
+            className="inline-flex px-6 py-3 bg-terracotta hover:bg-terracotta-dark text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans rounded-full transition-colors"
+          >
+            Go to Today
+          </Link>
         </div>
       ) : (
         <>
-          {/* Summary stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-            <StatTile label="Latest Score" value={latest ?? "—"} />
-            <StatTile label="30-day Avg" value={avg ?? "—"} />
-            <StatTile
-              label="Trend"
-              value={delta !== null ? (delta >= 0 ? `+${delta}` : `${delta}`) : "—"}
-              color={delta !== null ? (delta > 0 ? "text-emerald-700" : delta < 0 ? "text-red-600" : "") : ""}
+          {/* Building-baseline notice — shown until the comparison is honest */}
+          {!comparison.ready && (
+            <div className="mb-6 p-5 rounded-3xl bg-white border border-gray-200 flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <p className="font-serif text-lg text-gray-900 mb-1">
+                  Building your baseline
+                </p>
+                <p className="text-xs text-gray-500 font-sans max-w-md">
+                  {comparison.daysLogged} day{comparison.daysLogged !== 1 ? "s" : ""} logged
+                  {rangeLabel !== "All time" ? ` in the last ${rangeLabel.toLowerCase()}` : ""}.
+                  Comparisons unlock once your check-ins span {MIN_SPAN_DAYS} days — we won&apos;t
+                  show you numbers we can&apos;t stand behind.
+                </p>
+              </div>
+              <div className="w-full sm:w-56">
+                <div className="flex justify-between text-[10px] text-gray-400 font-sans mb-1">
+                  <span>Day {Math.min(comparison.spanDays, MIN_SPAN_DAYS)}</span>
+                  <span>{MIN_SPAN_DAYS} days</span>
+                </div>
+                <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-terracotta rounded-full transition-all"
+                    style={{
+                      width: `${Math.min(100, (comparison.spanDays / MIN_SPAN_DAYS) * 100)}%`,
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div className="grid lg:grid-cols-3 gap-6 items-start">
+            {/* Body canvas */}
+            <section className="lg:col-span-2 p-6 md:p-10 bg-white rounded-3xl border border-gray-200 overflow-hidden">
+              <ImpactBody
+                comparison={comparison}
+                regionSessionCounts={regionSessionCounts}
+                selectedRegion={selectedRegion}
+                onSelectRegion={(key) =>
+                  setSelectedRegion((cur) => (cur === key ? null : key))
+                }
+              />
+            </section>
+
+            {/* Comparison panels */}
+            <ImpactPanels
+              comparison={comparison}
+              rangeLabel={rangeLabel}
+              checkinCount={checkins.length}
+              sessionCount={sessions.length}
+              doseCount={doses.length}
             />
-            <StatTile label="Streak" value={streak > 0 ? `${streak}d` : "—"} />
           </div>
 
-          {/* Wellness Score line chart */}
-          <section className="p-5 md:p-6 bg-white rounded-2xl border border-gray-200 mb-6">
-            <h2 className="font-serif text-xl text-gray-900 mb-1">Wellness Score</h2>
-            <p className="text-xs text-gray-500 font-sans mb-6">Last 30 days</p>
-            <LineChart checkins={checkins} />
-          </section>
+          {/* Drill-down */}
+          {region && (
+            <div className="mt-6">
+              <ImpactDrilldown
+                region={region}
+                comparison={comparison}
+                checkins={checkins}
+                sessions={sessions}
+                doseCount={doses.length}
+                onClose={() => setSelectedRegion(null)}
+              />
+            </div>
+          )}
 
-          {/* Dimensions breakdown */}
-          <section className="p-5 md:p-6 bg-white rounded-2xl border border-gray-200 mb-6">
-            <h2 className="font-serif text-xl text-gray-900 mb-5">Dimensions</h2>
-            <DimensionsBars checkins={checkins} />
-          </section>
-
-          {/* Protocol adherence */}
-          {itemCount > 0 && (
-            <section className="p-5 md:p-6 bg-white rounded-2xl border border-gray-200">
-              <h2 className="font-serif text-xl text-gray-900 mb-1">
-                Protocol adherence
-              </h2>
-              <p className="text-xs text-gray-500 font-sans mb-4">
-                Last 30 days, across {itemCount} active item{itemCount !== 1 ? "s" : ""}
+          {/* Trend */}
+          {checkins.length > 1 && (
+            <section className="mt-6 p-5 md:p-6 bg-white rounded-3xl border border-gray-200">
+              <h2 className="font-serif text-xl text-gray-900 mb-1">Wellness score trend</h2>
+              <p className="text-xs text-gray-500 font-sans mb-6">
+                Every check-in, {rangeLabel.toLowerCase()}
               </p>
-              <div className="flex items-baseline gap-3">
-                <p className="font-serif text-5xl text-gray-900">{doseCount}</p>
-                <p className="text-sm text-gray-500 font-sans">doses logged</p>
-              </div>
+              <TrendChart checkins={checkins} />
             </section>
           )}
         </>
@@ -171,27 +256,9 @@ export default function ProgressPage() {
   );
 }
 
-function StatTile({
-  label,
-  value,
-  color = "",
-}: {
-  label: string;
-  value: string | number;
-  color?: string;
-}) {
-  return (
-    <div className="p-4 rounded-2xl bg-white border border-gray-200">
-      <p className="text-[10px] tracking-[0.2em] uppercase text-gray-400 font-sans mb-1">
-        {label}
-      </p>
-      <p className={`font-serif text-2xl text-gray-900 ${color}`}>{value}</p>
-    </div>
-  );
-}
-
-function LineChart({ checkins }: { checkins: Checkin[] }) {
-  if (checkins.length === 0) return null;
+function TrendChart({ checkins }: { checkins: CheckinRow[] }) {
+  const sorted = [...checkins].sort((a, b) => a.checkin_date.localeCompare(b.checkin_date));
+  if (sorted.length < 2) return null;
 
   const width = 800;
   const height = 220;
@@ -199,31 +266,32 @@ function LineChart({ checkins }: { checkins: Checkin[] }) {
   const chartW = width - padding.left - padding.right;
   const chartH = height - padding.top - padding.bottom;
 
-  // Build a date range covering last 30 days
-  const endDate = new Date();
-  const startDate = new Date();
-  startDate.setDate(startDate.getDate() - 29);
+  const start = new Date(sorted[0].checkin_date + "T00:00:00").getTime();
+  const end = new Date(sorted[sorted.length - 1].checkin_date + "T00:00:00").getTime();
+  const span = Math.max(end - start, 86400000);
 
-  const totalDays = 30;
-  const points = checkins.map((c) => {
-    const d = new Date(c.checkin_date);
-    const daysFromStart = (d.getTime() - startDate.getTime()) / 86400000;
-    const x = padding.left + (daysFromStart / (totalDays - 1)) * chartW;
-    const y = padding.top + (1 - c.overall_score / 100) * chartH;
-    return { x, y, score: c.overall_score, date: c.checkin_date };
+  const points = sorted.map((c) => {
+    const t = new Date(c.checkin_date + "T00:00:00").getTime();
+    return {
+      x: padding.left + ((t - start) / span) * chartW,
+      y: padding.top + (1 - c.overall_score / 100) * chartH,
+    };
   });
 
   const path = points
     .map((p, i) => `${i === 0 ? "M" : "L"} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`)
     .join(" ");
 
-  const yTicks = [0, 25, 50, 75, 100];
+  const fmt = (iso: string) =>
+    new Date(iso + "T00:00:00").toLocaleDateString(undefined, {
+      month: "short",
+      day: "numeric",
+    });
 
   return (
     <div className="overflow-x-auto">
       <svg viewBox={`0 0 ${width} ${height}`} className="w-full min-w-[500px]">
-        {/* Y grid lines */}
-        {yTicks.map((y) => {
+        {[0, 25, 50, 75, 100].map((y) => {
           const yPos = padding.top + (1 - y / 100) * chartH;
           return (
             <g key={y}>
@@ -250,32 +318,20 @@ function LineChart({ checkins }: { checkins: Checkin[] }) {
           );
         })}
 
-        {/* Line */}
-        {points.length > 1 && (
-          <path
-            d={path}
-            fill="none"
-            stroke="#B5736A"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        )}
-
-        {/* Points */}
+        <path
+          d={path}
+          fill="none"
+          stroke="#B5736A"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
         {points.map((p, i) => (
-          <circle
-            key={i}
-            cx={p.x}
-            cy={p.y}
-            r="3.5"
-            fill="#B5736A"
-          />
+          <circle key={i} cx={p.x} cy={p.y} r="3.5" fill="#B5736A" />
         ))}
 
-        {/* X axis labels */}
         <text x={padding.left} y={height - 8} fill="#9CA3AF" fontSize="10" fontFamily="sans-serif">
-          {startDate.toLocaleDateString(undefined, { month: "short", day: "numeric" })}
+          {fmt(sorted[0].checkin_date)}
         </text>
         <text
           x={width - padding.right}
@@ -285,49 +341,9 @@ function LineChart({ checkins }: { checkins: Checkin[] }) {
           textAnchor="end"
           fontFamily="sans-serif"
         >
-          {endDate.toLocaleDateString(undefined, { month: "short", day: "numeric" })}
+          {fmt(sorted[sorted.length - 1].checkin_date)}
         </text>
       </svg>
-    </div>
-  );
-}
-
-function DimensionsBars({ checkins }: { checkins: Checkin[] }) {
-  if (checkins.length === 0) return null;
-
-  const avgEnergy = checkins.reduce((s, c) => s + c.energy, 0) / checkins.length;
-  const avgMood = checkins.reduce((s, c) => s + c.mood, 0) / checkins.length;
-  const avgSleep = checkins.reduce((s, c) => s + c.sleep_quality, 0) / checkins.length;
-  const avgStress = checkins.reduce((s, c) => s + c.stress, 0) / checkins.length;
-
-  const dims = [
-    { label: "Energy", value: avgEnergy, inverted: false },
-    { label: "Mood", value: avgMood, inverted: false },
-    { label: "Sleep", value: avgSleep, inverted: false },
-    { label: "Stress", value: avgStress, inverted: true },
-  ];
-
-  return (
-    <div className="space-y-4">
-      {dims.map((d) => {
-        const displayPct = d.inverted ? ((6 - d.value) / 5) * 100 : (d.value / 5) * 100;
-        return (
-          <div key={d.label}>
-            <div className="flex justify-between items-baseline mb-1.5">
-              <p className="text-sm font-sans text-gray-700">{d.label}</p>
-              <p className="text-xs font-sans text-gray-400">
-                {d.value.toFixed(1)} / 5 {d.inverted && "(lower is better)"}
-              </p>
-            </div>
-            <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-terracotta rounded-full transition-all"
-                style={{ width: `${displayPct}%` }}
-              />
-            </div>
-          </div>
-        );
-      })}
     </div>
   );
 }

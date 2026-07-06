@@ -7,7 +7,8 @@ import { createClient } from "@/lib/supabase/client";
 import { ToastProvider } from "@/lib/toast";
 
 const NAV_TABS = [
-  { href: "/my", label: "My Protocol", exact: true },
+  { href: "/my", label: "Today", exact: true },
+  { href: "/my/protocol", label: "Protocol" },
   { href: "/my/library", label: "Library" },
   { href: "/my/practitioners", label: "Practitioners" },
   { href: "/my/progress", label: "Progress" },

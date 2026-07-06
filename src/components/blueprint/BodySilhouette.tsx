@@ -9,6 +9,7 @@ import {
  INDICATOR_META,
  getIndicatorColor,
 } from "@/data/blueprint";
+import BodyOutline from "@/components/body/BodyModel";
 
 interface BodySilhouetteProps {
  baselines: Record<WellnessIndicator, number>;
@@ -97,29 +98,7 @@ export default function BodySilhouette({
  })()}
 
  {/* Body outline */}
- <g
- fill="none"
- className="stroke-gray-400"
- strokeWidth="1.5"
- strokeLinecap="round"
- strokeLinejoin="round"
- >
- {/* Head */}
- <ellipse cx="100" cy="45" rx="25" ry="30" />
- {/* Neck */}
- <line x1="92" y1="74" x2="92" y2="90" />
- <line x1="108" y1="74" x2="108" y2="90" />
- {/* Torso */}
- <path d="M70 90 Q65 130 65 170 Q65 210 75 240 L75 250 L125 250 L125 240 Q135 210 135 170 Q135 130 130 90 Z" />
- {/* Left arm */}
- <path d="M70 95 Q45 110 35 145 Q30 160 28 180" />
- {/* Right arm */}
- <path d="M130 95 Q155 110 165 145 Q170 160 172 180" />
- {/* Left leg */}
- <path d="M80 250 Q78 300 75 340 Q74 360 70 380" />
- {/* Right leg */}
- <path d="M120 250 Q122 300 125 340 Q126 360 130 380" />
- </g>
+ <BodyOutline />
 
  {/* Brain zone (head) */}
  {(() => {

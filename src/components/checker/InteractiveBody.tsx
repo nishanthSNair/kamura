@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { type BodyZone, ZONES } from "@/data/wellness-concerns";
+import BodyOutline from "@/components/body/BodyModel";
 
 interface InteractiveBodyProps {
  completedZones: BodyZone[];
@@ -32,7 +33,7 @@ export default function InteractiveBody({
  const isCompleted = (zone: BodyZone) => completedZones.includes(zone);
  const zoneColor = (zone: BodyZone) => {
  if (isCompleted(zone)) return "#B0BCA4"; // sage
- if (hoveredZone === zone) return "#B5886A"; // terracotta
+ if (hoveredZone === zone) return "#B5736A"; // terracotta
  return "#B0BCA4"; // sage default
  };
  const zoneOpacity = (zone: BodyZone) => {
@@ -174,22 +175,7 @@ export default function InteractiveBody({
  />
 
  {/* Body outline */}
- <g
- fill="none"
- className="stroke-gray-400"
- strokeWidth="1.5"
- strokeLinecap="round"
- strokeLinejoin="round"
- >
- <ellipse cx="100" cy="45" rx="25" ry="30" />
- <line x1="92" y1="74" x2="92" y2="90" />
- <line x1="108" y1="74" x2="108" y2="90" />
- <path d="M70 90 Q65 130 65 170 Q65 210 75 240 L75 250 L125 250 L125 240 Q135 210 135 170 Q135 130 130 90 Z" />
- <path d="M70 95 Q45 110 35 145 Q30 160 28 180" />
- <path d="M130 95 Q155 110 165 145 Q170 160 172 180" />
- <path d="M80 250 Q78 300 75 340 Q74 360 70 380" />
- <path d="M120 250 Q122 300 125 340 Q126 360 130 380" />
- </g>
+ <BodyOutline />
 
  {/* Brain zone */}
  <ellipse cx="100" cy="45" rx="22" ry="27" {...zoneProps("brain")} />
