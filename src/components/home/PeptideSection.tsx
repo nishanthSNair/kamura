@@ -79,7 +79,7 @@ export default function PeptideSection() {
             />
             <button
               type="submit"
-              className="bg-[#B5886A] hover:bg-[#9A7357] text-white border-0 rounded-full px-5 h-11 cursor-pointer text-[13px] font-medium transition-colors"
+              className="bg-[#B5736A] hover:bg-[#9A5F57] text-white border-0 rounded-full px-5 h-11 cursor-pointer text-[13px] font-medium transition-colors"
             >
               Join waitlist
             </button>

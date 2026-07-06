@@ -93,14 +93,14 @@ export default function Explore() {
                 className="btn-hims-card group relative block p-7 md:p-8 rounded-2xl bg-white border border-[#2A2520]/8 hover:border-[#2A2520]/25"
                 data-image-slot={`service-${s.slug}`}
               >
-                <div className="w-10 h-10 rounded-xl bg-[#B5886A]/14 text-[#B5886A] grid place-items-center mb-5">
+                <div className="w-10 h-10 rounded-xl bg-[#B5736A]/14 text-[#B5736A] grid place-items-center mb-5">
                   <Sparkles size={18} strokeWidth={1.8} />
                 </div>
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <h2 className="font-serif text-[22px] md:text-[24px] leading-[1.2] tracking-[-0.005em] text-[#2A2520] m-0">
                     {s.name}
                   </h2>
-                  <span className="shrink-0 inline-flex items-center h-[20px] px-2 rounded-full text-[9px] font-semibold tracking-[0.1em] uppercase bg-[#C4A882]/15 border border-[#C4A882]/40 text-[#9A7357]">
+                  <span className="shrink-0 inline-flex items-center h-[20px] px-2 rounded-full text-[9px] font-semibold tracking-[0.1em] uppercase bg-[#C4A882]/15 border border-[#C4A882]/40 text-[#9A5F57]">
                     Soon
                   </span>
                 </div>

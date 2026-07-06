@@ -144,7 +144,7 @@ export function getScoreTierColor(tier: ScoreTier): { text: string; bg: string; 
 }
 
 export function getScoreColor(score: number): { text: string; bg: string; border: string } {
- if (score >= 85) return { text: "text-[#B5886A]", bg: "bg-[#B5886A]/15", border: "border-[#B5886A]" };
+ if (score >= 85) return { text: "text-[#B5736A]", bg: "bg-[#B5736A]/15", border: "border-[#B5736A]" };
  if (score >= 70) return { text: "text-[#16A34A]", bg: "bg-[#16A34A]/15", border: "border-[#16A34A]" };
  if (score >= 50) return { text: "text-[#CA8A04]", bg: "bg-[#CA8A04]/15", border: "border-[#CA8A04]" };
  if (score >= 30) return { text: "text-[#EA580C]", bg: "bg-[#EA580C]/15", border: "border-[#EA580C]" };

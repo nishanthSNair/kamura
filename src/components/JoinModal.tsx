@@ -64,7 +64,7 @@ export default function JoinModal({ open, onClose }: Props) {
             className="group relative overflow-hidden rounded-2xl bg-white border border-gray-200 p-7 hover:border-terracotta/40 hover:shadow-lg transition-all"
           >
             <div className="w-12 h-12 rounded-xl bg-terracotta/10 flex items-center justify-center mb-5 group-hover:bg-terracotta/15 transition-colors">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B5886A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                 <circle cx="12" cy="7" r="4" />
               </svg>

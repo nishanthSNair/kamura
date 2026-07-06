@@ -65,7 +65,7 @@ export const SESSION_TYPES: SessionTypeMeta[] = [
     icon: "Droplet",
     defaultDuration: 45,
     bg: "bg-[#C4A882]/22",
-    fg: "text-[#9A7357]",
+    fg: "text-[#9A5F57]",
     details: [
       { key: "blend_name", label: "Blend", type: "text", placeholder: "Myers, NAD+, glutathione…" },
     ],
@@ -149,7 +149,7 @@ export const SESSION_TYPES: SessionTypeMeta[] = [
     icon: "Hand",
     defaultDuration: 60,
     bg: "bg-[#C4A882]/18",
-    fg: "text-[#9A7357]",
+    fg: "text-[#9A5F57]",
     details: [
       {
         key: "style",

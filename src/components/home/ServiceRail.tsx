@@ -105,7 +105,7 @@ export default function ServiceRail() {
                   </svg>
                 </div>
                 <div className="p-5">
-                  <div className="text-[9.5px] font-semibold tracking-[0.24em] uppercase text-[#B5886A] mb-2">
+                  <div className="text-[9.5px] font-semibold tracking-[0.24em] uppercase text-[#B5736A] mb-2">
                     {s.eyebrow}
                   </div>
                   <h3 className="font-serif font-medium text-[22px] leading-[1.15] text-[#2A2520] m-0 mb-1.5">

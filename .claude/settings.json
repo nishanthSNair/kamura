@@ -1,7 +1,19 @@
 {
   "permissions": {
     "allow": [
-      "Bash(qlmanage:*)"
+      "Bash(qlmanage:*)",
+      "WebSearch",
+      "Bash(sed -n '/CREATE TABLE IF NOT EXISTS wellness_checkins/,/;/p' /Users/nishanth/Documents/Kamura/supabase/migrations/*.sql)",
+      "Bash(sed -n '/CREATE TABLE IF NOT EXISTS dose_logs/,/;/p' /Users/nishanth/Documents/Kamura/supabase/migrations/005_protocols_and_logs.sql)",
+      "Bash(sed -n '/CREATE TABLE IF NOT EXISTS protocol_items/,/;/p' /Users/nishanth/Documents/Kamura/supabase/migrations/005_protocols_and_logs.sql)",
+      "Read(//Applications/Google Chrome.app/**)",
+      "Read(//Applications/**)",
+      "Bash(PORT=4123 npm start)",
+      "Bash(npm init *)",
+      "Bash(npm i *)",
+      "WebFetch(domain:immortals.com)",
+      "WebFetch(domain:home.medvi.org)",
+      "WebFetch(domain:www.hims.com)"
     ]
   }
 }

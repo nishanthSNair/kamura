@@ -57,8 +57,8 @@ const DOORS: Door[] = [
     sub: "The science, visualised.",
     href: "/peptides/what-is-a-peptide",
     Icon: BookOpen,
-    bg: "bg-[#B5886A]/14",
-    fg: "text-[#B5886A]",
+    bg: "bg-[#B5736A]/14",
+    fg: "text-[#B5736A]",
     delay: 1100,
   },
   {
@@ -80,7 +80,7 @@ const DOORS: Door[] = [
     href: "/my",
     Icon: Activity,
     bg: "bg-[#C4A882]/24",
-    fg: "text-[#9A7357]",
+    fg: "text-[#9A5F57]",
     delay: 1260,
   },
   {
@@ -92,7 +92,7 @@ const DOORS: Door[] = [
     Icon: FlaskConical,
     tag: "Soon",
     bg: "bg-[#D4B896]/24",
-    fg: "text-[#9A7357]",
+    fg: "text-[#9A5F57]",
     delay: 1340,
   },
   {
@@ -254,7 +254,7 @@ export default function HeroEditorial() {
                         {label}
                       </p>
                       {tag && (
-                        <span className="inline-flex items-center h-[14px] sm:h-[16px] px-1 sm:px-1.5 rounded-full text-[8px] sm:text-[8.5px] font-semibold tracking-[0.08em] sm:tracking-[0.1em] uppercase bg-[#C4A882]/18 border border-[#C4A882]/45 text-[#9A7357]">
+                        <span className="inline-flex items-center h-[14px] sm:h-[16px] px-1 sm:px-1.5 rounded-full text-[8px] sm:text-[8.5px] font-semibold tracking-[0.08em] sm:tracking-[0.1em] uppercase bg-[#C4A882]/18 border border-[#C4A882]/45 text-[#9A5F57]">
                           {tag}
                         </span>
                       )}

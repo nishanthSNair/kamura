@@ -57,7 +57,7 @@ export default function StackCard({ treatments, averageScore }: StackCardProps) 
         fontSize: 18,
         letterSpacing: "0.35em",
         textTransform: "uppercase" as const,
-        color: "#B5886A",
+        color: "#B5736A",
         fontWeight: 600,
         marginBottom: 12,
       }}>

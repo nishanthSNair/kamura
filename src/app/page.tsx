@@ -255,7 +255,7 @@ export default function Home() {
                     What is a peptide?
                   </Link>
                   <Link
-                    href="/peptides/coming-soon"
+                    href="/peptides"
                     className="underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white/60 transition-colors"
                   >
                     Read the full launch plan →

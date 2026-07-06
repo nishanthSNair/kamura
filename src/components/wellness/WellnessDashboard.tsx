@@ -170,7 +170,7 @@ export default function WellnessDashboard({
               <div className="bg-gray-800 rounded-xl p-3">
                 <RadarChart
                   dimensions={dimensionScores}
-                  color="#B5886A"
+                  color="#B5736A"
                   size={240}
                 />
               </div>
@@ -285,7 +285,7 @@ export default function WellnessDashboard({
                         ))}
                       </div>
                     </div>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5886A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 ml-4">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 ml-4">
                       <line x1="5" y1="12" x2="19" y2="12" />
                       <polyline points="12 5 19 12 12 19" />
                     </svg>

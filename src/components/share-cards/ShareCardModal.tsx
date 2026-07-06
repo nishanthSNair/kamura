@@ -122,7 +122,7 @@ export default function ShareCardModal({
             <button
               onClick={handleShare}
               disabled={isCapturing}
-              className="flex-1 max-w-[180px] px-5 py-3 bg-[#B5886A] text-white text-sm font-sans font-semibold rounded-xl hover:bg-[#9A7357] transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+              className="flex-1 max-w-[180px] px-5 py-3 bg-[#B5736A] text-white text-sm font-sans font-semibold rounded-xl hover:bg-[#9A5F57] transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" />

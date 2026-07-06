@@ -70,15 +70,15 @@ const TILE_STYLES: Record<string, string> = {
   book:
     "bg-gradient-to-br from-[#B0BCA4]/22 to-[#7B8D68]/18 border border-[#B0BCA4]/35 text-white hover:border-[#B0BCA4]/60",
   peptides:
-    "bg-gradient-to-br from-[#C4A882]/22 to-[#B5886A]/18 border border-[#C4A882]/50 text-white shadow-[0_0_0_1px_rgba(196,168,130,0.1)_inset,0_20px_40px_-24px_rgba(196,168,130,0.3)] hover:border-[#C4A882]/70",
+    "bg-gradient-to-br from-[#C4A882]/22 to-[#B5736A]/18 border border-[#C4A882]/50 text-white shadow-[0_0_0_1px_rgba(196,168,130,0.1)_inset,0_20px_40px_-24px_rgba(196,168,130,0.3)] hover:border-[#C4A882]/70",
   track:
     "bg-gradient-to-br from-[#2A2520]/60 to-[#1a241a]/55 border border-white/18 text-white hover:border-white/35",
 };
 
 const TILE_ARTS: Record<string, string> = {
-  practitioners: "bg-[#B5886A]/14 text-[#B5886A]",
+  practitioners: "bg-[#B5736A]/14 text-[#B5736A]",
   book: "bg-[#D6DDD0]/22 text-[#D6DDD0] border border-[#D6DDD0]/28",
-  peptides: "bg-[#FAF7F2]/95 text-[#B5886A] border border-[#C4A882]/40",
+  peptides: "bg-[#FAF7F2]/95 text-[#B5736A] border border-[#C4A882]/40",
   track: "bg-white/8 text-white border border-white/15",
 };
 
@@ -109,7 +109,7 @@ function PTTile({ tile, idx }: { tile: Tile; idx: number }) {
               <span
                 className={`inline-flex items-center h-[18px] px-1.5 rounded-full text-[9.5px] font-semibold tracking-[0.08em] uppercase ${
                   tile.k === "practitioners"
-                    ? "bg-[#B5886A]/15 border border-[#B5886A]/40 text-[#9A7357]"
+                    ? "bg-[#B5736A]/15 border border-[#B5736A]/40 text-[#9A5F57]"
                     : "bg-[#C4A882]/25 border border-[#C4A882]/55 text-[#FAF7F2]"
                 }`}
               >
@@ -127,7 +127,7 @@ function PTTile({ tile, idx }: { tile: Tile; idx: number }) {
         </div>
         <span
           className={`text-base transition-all duration-500 ${
-            tile.k === "practitioners" ? "text-[#B5886A] opacity-80" : "opacity-50"
+            tile.k === "practitioners" ? "text-[#B5736A] opacity-80" : "opacity-50"
           } group-hover:opacity-100 group-hover:translate-x-1`}
         >
           →
@@ -189,7 +189,7 @@ export default function HeroTiles() {
             A{" "}
           </span>
           <span
-            className="italic bg-gradient-to-b from-[#D4B896] to-[#B5886A] bg-clip-text"
+            className="italic bg-gradient-to-b from-[#D4B896] to-[#B5736A] bg-clip-text"
             style={{ WebkitTextFillColor: "transparent" }}
           >
             longevity

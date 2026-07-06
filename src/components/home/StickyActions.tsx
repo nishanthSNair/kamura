@@ -31,7 +31,7 @@ export default function StickyActions() {
       </Link>
       <Link
         href="#peptides"
-        className="inline-flex items-center h-[38px] px-[18px] rounded-full text-[12.5px] font-medium bg-[#B5886A] hover:bg-[#9A7357] text-white transition-colors"
+        className="inline-flex items-center h-[38px] px-[18px] rounded-full text-[12.5px] font-medium bg-[#B5736A] hover:bg-[#9A5F57] text-white transition-colors"
       >
         Join peptides waitlist →
       </Link>

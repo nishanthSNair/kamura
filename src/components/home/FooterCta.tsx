@@ -47,7 +47,7 @@ export default function FooterCta() {
           <span>List your practice — it&rsquo;s free to join</span>
           <Link
             href="/list-your-business"
-            className="inline-flex items-center gap-2 h-11 px-6 rounded-full bg-[#B5886A] hover:bg-[#9A7357] text-white font-medium transition-colors"
+            className="inline-flex items-center gap-2 h-11 px-6 rounded-full bg-[#B5736A] hover:bg-[#9A5F57] text-white font-medium transition-colors"
           >
             List your business <span>→</span>
           </Link>
