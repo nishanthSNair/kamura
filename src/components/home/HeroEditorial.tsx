@@ -62,11 +62,11 @@ const DOORS: Door[] = [
     delay: 1100,
   },
   {
-    slug: "explore",
-    label: "Discover",
-    title: "Wellness services",
-    sub: "Sound, IV, breath, recovery.",
-    href: "/explore",
+    slug: "classes",
+    label: "Practice",
+    title: "UAE classes",
+    sub: "Yoga, pilates, breath, ice.",
+    href: "/classes",
     Icon: Sparkles,
     bg: "bg-[#A8C48A]/22",
     fg: "text-[#6B8B4E]",
@@ -198,12 +198,23 @@ export default function HeroEditorial() {
                 One home for the long game.
               </p>
 
-              {/* Footer line — hidden on mobile to save vertical room
-                  where the dock dominates the lower half of the viewport */}
-              <div className="hidden sm:block mt-7 md:mt-8 pt-5 md:pt-6 border-t border-white/12">
-                <p className="text-[10px] tracking-[0.28em] uppercase text-white/55 font-sans">
-                  Longevity, by design.
-                </p>
+              {/* Primary actions — clear, brand-style buttons in the hero */}
+              <div
+                className="mt-5 sm:mt-7 flex flex-wrap items-center gap-2.5 sm:gap-3 animate-blur-fade-up"
+                style={{ animationDelay: "560ms" }}
+              >
+                <Link
+                  href="/peptides/advisor"
+                  className="inline-flex items-center justify-center px-5 sm:px-7 py-3 sm:py-3.5 rounded-full bg-terracotta hover:bg-terracotta-dark text-white text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold font-sans transition-colors shadow-[0_8px_24px_-8px_rgba(181,115,106,0.7)]"
+                >
+                  Get my protocol match
+                </Link>
+                <Link
+                  href="/wellness-checker"
+                  className="inline-flex items-center justify-center px-5 sm:px-7 py-3 sm:py-3.5 rounded-full border border-white/35 text-white text-[11px] sm:text-xs tracking-[0.14em] uppercase font-semibold font-sans hover:bg-white/10 hover:border-white/60 transition-colors"
+                >
+                  Free wellness check
+                </Link>
               </div>
             </div>
           </div>
@@ -220,10 +231,10 @@ export default function HeroEditorial() {
                 Where do you want to start?
               </p>
               <Link
-                href="/wellness-checker"
+                href="/peptides/calculator"
                 className="hidden sm:inline-flex items-center gap-1.5 text-[11px] tracking-[0.2em] uppercase text-slate-700 hover:text-slate-900 font-semibold font-sans border-b border-slate-400/40 hover:border-slate-900 pb-0.5 transition-colors"
               >
-                Take the wellness check
+                Free dose calculator
                 <span className="btn-hims-arrow">→</span>
               </Link>
             </div>
