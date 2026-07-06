@@ -61,6 +61,7 @@ export default function Footer() {
     <Link href="/peptides" className="hover:text-terracotta transition-colors">Peptides</Link>
     <Link href="/peptides/calculator" className="hover:text-terracotta transition-colors">Dose Calculator</Link>
     <Link href="/protocols" className="hover:text-terracotta transition-colors">Protocols</Link>
+    <Link href="/classes" className="hover:text-terracotta transition-colors">UAE Classes</Link>
     <Link href="/explore" className="hover:text-terracotta transition-colors">Find Clinics</Link>
     <Link href="/wellness-checker" className="hover:text-terracotta transition-colors">Wellness Check</Link>
     <Link href="/quiz" className="hover:text-terracotta transition-colors">Wellness Quiz</Link>

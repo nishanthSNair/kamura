@@ -51,6 +51,14 @@ const DISCOVER_GROUPS: DiscoverGroup[] = [
   { href: "/protocols", label: "Expert Protocols", desc: "Clinician-reviewed stacks" },
  ],
  },
+ {
+ label: "Classes",
+ href: "/classes",
+ items: [
+  { href: "/classes", label: "UAE Class Directory", desc: "Yoga, pilates, breathwork & more" },
+  { href: "/my/classes", label: "My Practice", desc: "Weekly rhythm, class log, streaks" },
+ ],
+ },
 ];
 
 

@@ -43,16 +43,21 @@ const ICONS: Record<SessionTypeMeta["icon"], LucideIcon> = {
 interface Props {
   onClose: () => void;
   onDone: () => void;
+  /** Skip the type picker and open the form on this session type. */
+  initialType?: SessionTypeMeta["key"];
 }
 
 type DetailValue = string | number;
 
-export default function LogSessionModal({ onClose, onDone }: Props) {
+export default function LogSessionModal({ onClose, onDone, initialType }: Props) {
   const supabase = createClient();
-  const [step, setStep] = useState<"pick" | "form">("pick");
-  const [selected, setSelected] = useState<SessionTypeMeta | null>(null);
+  const preselected = initialType
+    ? SESSION_TYPES.find((t) => t.key === initialType) ?? null
+    : null;
+  const [step, setStep] = useState<"pick" | "form">(preselected ? "form" : "pick");
+  const [selected, setSelected] = useState<SessionTypeMeta | null>(preselected);
   const [performedAt, setPerformedAt] = useState(() => localIsoNow());
-  const [duration, setDuration] = useState<number>(30);
+  const [duration, setDuration] = useState<number>(preselected?.defaultDuration ?? 30);
   const [energy, setEnergy] = useState<number>(7);
   const [clarity, setClarity] = useState<number>(7);
   const [calm, setCalm] = useState<number>(7);

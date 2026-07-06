@@ -9,6 +9,7 @@ import { ToastProvider } from "@/lib/toast";
 const NAV_TABS = [
   { href: "/my", label: "Today", exact: true },
   { href: "/my/protocol", label: "Protocol" },
+  { href: "/my/classes", label: "Classes" },
   { href: "/my/library", label: "Library" },
   { href: "/my/practitioners", label: "Practitioners" },
   { href: "/my/progress", label: "Progress" },

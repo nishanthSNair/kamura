@@ -138,6 +138,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
  priority: sub === "what-is-a-peptide" || sub === "calculator" ? 0.9 : 0.8,
  })),
  {
+ url: `${baseUrl}/classes`,
+ lastModified: new Date(),
+ changeFrequency: "weekly",
+ priority: 0.9,
+ },
+ {
  url: `${baseUrl}/list-your-business`,
  lastModified: new Date(),
  changeFrequency: "monthly",
