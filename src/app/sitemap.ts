@@ -120,6 +120,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  priority: 0.9,
  },
  ...[
+ "calculator",
  "directory",
  "what-is-a-peptide",
  "tracker",
@@ -134,25 +135,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
  url: `${baseUrl}/peptides/${sub}`,
  lastModified: new Date(),
  changeFrequency: "monthly" as const,
- priority: sub === "what-is-a-peptide" ? 0.9 : 0.8,
+ priority: sub === "what-is-a-peptide" || sub === "calculator" ? 0.9 : 0.8,
  })),
  {
  url: `${baseUrl}/list-your-business`,
  lastModified: new Date(),
  changeFrequency: "monthly",
  priority: 0.6,
- },
- {
- url: `${baseUrl}/peptides/coming-soon`,
- lastModified: new Date(),
- changeFrequency: "weekly",
- priority: 0.7,
- },
- {
- url: `${baseUrl}/book/coming-soon`,
- lastModified: new Date(),
- changeFrequency: "weekly",
- priority: 0.7,
  },
  {
  url: `${baseUrl}/privacy`,

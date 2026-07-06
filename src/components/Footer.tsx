@@ -59,9 +59,11 @@ export default function Footer() {
    <div className="flex flex-col gap-2.5 text-sm text-gray-600 font-sans">
     <Link href="/treatments" className="hover:text-terracotta transition-colors">Treatments</Link>
     <Link href="/peptides" className="hover:text-terracotta transition-colors">Peptides</Link>
+    <Link href="/peptides/calculator" className="hover:text-terracotta transition-colors">Dose Calculator</Link>
     <Link href="/protocols" className="hover:text-terracotta transition-colors">Protocols</Link>
     <Link href="/explore" className="hover:text-terracotta transition-colors">Find Clinics</Link>
     <Link href="/wellness-checker" className="hover:text-terracotta transition-colors">Wellness Check</Link>
+    <Link href="/quiz" className="hover:text-terracotta transition-colors">Wellness Quiz</Link>
    </div>
    </div>
 

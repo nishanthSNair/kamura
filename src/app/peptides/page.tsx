@@ -116,6 +116,12 @@ const DIFFERENTIATORS = [
 // Tools grouped into consumer vs clinician
 const CONSUMER_TOOLS = [
   {
+    href: "/peptides/calculator",
+    title: "Reconstitution Calculator",
+    description:
+      "Vial size, water, dose in — exact syringe units out. Doses per vial, how long it lasts.",
+  },
+  {
     href: "/peptides/directory",
     title: "Peptide Directory",
     description:
@@ -267,16 +273,22 @@ export default function PeptidesHubPage() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
             <Link
+              href="/peptides/advisor"
+              className="px-7 py-3.5 bg-terracotta text-white text-xs tracking-[0.15em] uppercase font-semibold rounded-full hover:bg-terracotta-dark transition-colors font-sans"
+            >
+              Get My Protocol Match
+            </Link>
+            <Link
               href="/peptides/directory"
               className="px-7 py-3.5 bg-white text-[#2a1612] text-xs tracking-[0.15em] uppercase font-semibold rounded-full hover:bg-white/90 transition-colors font-sans"
             >
               Browse Directory
             </Link>
             <Link
-              href="/peptides/protocol-builder"
+              href="/peptides/calculator"
               className="px-7 py-3.5 border border-white/30 text-white text-xs tracking-[0.15em] uppercase font-semibold rounded-full hover:bg-white/10 transition-colors font-sans"
             >
-              Build a Protocol
+              Dose Calculator
             </Link>
           </div>
           <div className="flex items-center justify-center gap-8 text-[11px] tracking-[0.15em] uppercase text-white/50 font-sans">

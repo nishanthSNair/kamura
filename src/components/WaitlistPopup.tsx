@@ -167,27 +167,27 @@ export default function WaitlistPopup({
             id="waitlist-popup-headline"
             className="font-serif text-[28px] sm:text-[34px] leading-[1.05] tracking-[-0.015em] mb-4"
           >
-            Preventive medicine is changing fast.
+            Founding member access, by application.
           </h2>
 
           {/* Subhead */}
           <p className="text-[14px] sm:text-[15px] leading-[1.6] text-white/72 font-sans mb-7 max-w-[46ch]">
-            The FDA just reclassified 12 peptides. UAE compounding access is
-            opening up. We&rsquo;re building the platform that gets you ahead
-            of it — physician-prescribed compounded peptides, vetted UAE
-            practitioners, and your own protocol.
+            When physician-prescribed compounded peptides open in the UAE,
+            founding members go first — priority protocol review, member
+            pricing, and a vetted practitioner network. A limited number of
+            places opens each month.
           </p>
 
           {/* Form */}
           <p className="text-[10.5px] tracking-[0.28em] uppercase text-[#C4A882] font-semibold font-sans mb-3">
-            Be first when we launch
+            Apply for a founding place
           </p>
           <EmailWaitlist
             source={source}
             theme="dark"
             placeholder="you@example.com"
-            cta="Notify me"
-            successMessage="You're on the list. We'll be in touch before launch."
+            cta="Request access"
+            successMessage="Application received. We'll be in touch when a place opens."
             className="!mx-0"
             onSubmittedExtra={handleSubmitted}
           />

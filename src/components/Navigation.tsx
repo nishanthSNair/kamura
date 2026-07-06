@@ -37,8 +37,10 @@ const DISCOVER_GROUPS: DiscoverGroup[] = [
  label: "Peptides",
  href: "/peptides",
  items: [
+  { href: "/peptides/calculator", label: "Dose Calculator", desc: "Reconstitution math, free" },
   { href: "/peptides/what-is-a-peptide", label: "What is a Peptide?", desc: "Visual intro to cellular signaling" },
   { href: "/peptides", label: "Intelligence Hub", desc: "Directory, scores, and tools" },
+  { href: "/peptides/advisor", label: "Protocol Match", desc: "Your goal → recommended peptides" },
   { href: "/peptides/tracker", label: "Dashboard", desc: "Log doses, track cycles" },
  ],
  },
