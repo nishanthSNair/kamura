@@ -24,7 +24,7 @@ type DiscoverLink = { href: string; label: string; desc: string };
 type DiscoverGroup = { label: string; href?: string; items: DiscoverLink[] };
 
 const DISCOVER_GROUPS: DiscoverGroup[] = [
- { label: "The Body", href: "/body", items: [{ href: "/body", label: "Interactive Explorer", desc: "Peptides, hormones, anatomy & research" }] },
+ { label: "The Body", href: "/", items: [{ href: "/", label: "Interactive Explorer", desc: "Peptides, hormones, anatomy & research" }] },
  {
  label: "Treatments",
  href: "/treatments",
