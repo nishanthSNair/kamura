@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { treatments } from "@/data/treatments";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
@@ -128,6 +129,89 @@ export default function Home() {
 
       {/* ════════════ ACT 1 — EDITORIAL HERO + 5-DOOR FLOATING DOCK ════════════ */}
       <HeroEditorial />
+
+      {/* ════════════ ACT 1.25 — THE BODY ATLAS (flagship feature) ════════════ */}
+      <section id="body-atlas" className="bg-[#FAF7F2] py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6 md:px-8">
+          <FadeInOnScroll>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 md:gap-12 mb-10 md:mb-12">
+              <div className="max-w-[620px]">
+                <p className="text-[10.5px] tracking-[0.32em] uppercase text-terracotta font-semibold font-sans mb-4">
+                  New · The Body Atlas
+                </p>
+                <h2 className="font-serif text-[34px] md:text-[52px] leading-[1.05] tracking-[-0.012em] text-[#2A2520] mb-5">
+                  Explore the body,{" "}
+                  <span className="italic text-terracotta">connected</span>.
+                </h2>
+                <p className="text-[15.5px] md:text-[17px] leading-[1.65] text-[#2A2520]/70 font-sans">
+                  Real 3D anatomy — 2,234 individual structures from open
+                  science. Select a peptide or hormone therapy, see exactly
+                  where it acts in the body, walk its mechanism, and read the
+                  linked research behind it.
+                </p>
+              </div>
+              <div className="flex flex-col items-start gap-4 shrink-0">
+                <Link
+                  href="/body"
+                  className="btn-hims inline-flex items-center justify-center gap-2 h-[52px] px-7 rounded-full bg-[#2A2520] hover:bg-[#1A1612] text-white text-[14px] font-sans font-semibold"
+                >
+                  Explore the body
+                  <span className="btn-hims-arrow">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                      <line x1="5" y1="12" x2="19" y2="12" />
+                      <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                  </span>
+                </Link>
+                <Link
+                  href="/supplements"
+                  className="text-[13.5px] font-sans font-semibold text-terracotta underline underline-offset-4 decoration-terracotta/30 hover:decoration-terracotta transition-colors"
+                >
+                  Also new: the Supplement Report Card →
+                </Link>
+              </div>
+            </div>
+          </FadeInOnScroll>
+
+          <FadeInOnScroll delay={100}>
+            <Link
+              href="/body"
+              aria-label="Open the interactive body explorer"
+              className="group block overflow-hidden rounded-3xl border border-[#2A2520]/10 shadow-[0_2px_10px_rgba(42,37,32,0.05),0_24px_60px_rgba(42,37,32,0.10)] transition-shadow hover:shadow-[0_2px_10px_rgba(42,37,32,0.07),0_28px_70px_rgba(42,37,32,0.16)]"
+            >
+              <Image
+                src="/images/body-atlas-preview.jpg"
+                alt="The Kamura body explorer — interactive 3D anatomy with therapy mechanisms and linked research"
+                width={1600}
+                height={1000}
+                priority={false}
+                className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.01]"
+              />
+            </Link>
+          </FadeInOnScroll>
+
+          <FadeInOnScroll delay={150}>
+            <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
+              {[
+                "2,234 anatomical structures",
+                "28 therapies mapped",
+                "Research linked to every therapy",
+                "Built on open science",
+              ].map((s) => (
+                <span
+                  key={s}
+                  className="text-[10.5px] tracking-[0.25em] uppercase text-[#2A2520]/55 font-sans font-medium"
+                >
+                  {s}
+                </span>
+              ))}
+            </div>
+          </FadeInOnScroll>
+        </div>
+      </section>
+
+      {/* ──── chapter divider ──── */}
+      <SectionDivider bg="#FAF7F2" />
 
       {/* ════════════ ACT 1.5 — MANIFESTO ════════════ */}
       <Manifesto />
