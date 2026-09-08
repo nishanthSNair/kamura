@@ -15,6 +15,31 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        // Anatomy model chunks are content-stable; cache them hard so repeat
+        // visits skip the ~33MB download. (Rename chunks if geometry changes.)
+        source: "/body-models/:path*.bin",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
+        source: "/body-models/:path*.gz",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+      {
+        // The manifest may change when models are updated; revalidate daily.
+        source: "/body-models/atlas.json",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       {

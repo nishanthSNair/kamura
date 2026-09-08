@@ -1,0 +1,3445 @@
+[
+ {
+  "id": "bpc-157",
+  "name": "BPC-157",
+  "category": "Repair & inflammation",
+  "kind": "Peptide",
+  "researchContext": "Preclinical tissue research",
+  "formulations": "Pen · oral capsules",
+  "regions": [
+   {
+    "id": "FMA32544",
+    "name": "right supraspinatus",
+    "elements": [
+     "FJ1506"
+    ]
+   },
+   {
+    "id": "FMA23130",
+    "name": "right humerus",
+    "elements": [
+     "FJ3368"
+    ]
+   },
+   {
+    "id": "FMA7148",
+    "name": "stomach",
+    "elements": [
+     "FJ2564"
+    ]
+   }
+  ],
+  "title": "Tissue repair pathways",
+  "mechanism": "Research examines vascular signaling, fibroblast behavior, and tissue repair in experimental models.",
+  "pathway": [
+   "BPC-157",
+   "Experimental repair signaling",
+   "Tendon & muscle models"
+  ],
+  "scope": "A shoulder is shown as anatomical context; published tendon models are identified in the article titles.",
+  "references": [
+   {
+    "pmid": "42542926",
+    "title": "Effects of BPC-157 and TB-500 on Achilles tendon healing in rats: A histopathological and biomechanical study.",
+    "authors": "Biçer O, Adanir O, Güleryüz Y, Balci EC, Dinçel YM, Yenigün MY, Aydin C, Bayrak BY.",
+    "journal": "Joint diseases and related surgery",
+    "year": "2026",
+    "doi": "10.52312/jdrs.2026.2951",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42542926/"
+   },
+   {
+    "pmid": "40789979",
+    "title": "Regeneration or Risk? A Narrative Review of BPC-157 for Musculoskeletal Healing.",
+    "authors": "McGuire FP, Martinez R, Lenz A, Skinner L, Cushman DM.",
+    "journal": "Current reviews in musculoskeletal medicine",
+    "year": "2025",
+    "doi": "10.1007/s12178-025-09990-7",
+    "types": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40789979/"
+   },
+   {
+    "pmid": "40756949",
+    "title": "Emerging Use of BPC-157 in Orthopaedic Sports Medicine: A Systematic Review.",
+    "authors": "Vasireddi N, Hahamyan H, Salata MJ, Karns M, Calcei JG, Voos JE, Apostolakos JM.",
+    "journal": "HSS journal : the musculoskeletal journal of Hospital for Special Surgery",
+    "year": "2025",
+    "doi": "10.1177/15563316251355551",
+    "types": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40756949/"
+   }
+  ],
+  "searchQuery": "EXT_ID:40756949 OR EXT_ID:40789979 OR EXT_ID:42542926",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "bpc-157"
+ },
+ {
+  "id": "tb-500",
+  "name": "TB-500",
+  "category": "Repair & inflammation",
+  "kind": "Peptide fragment",
+  "researchContext": "Preclinical tissue research",
+  "formulations": "Formulation not specified",
+  "regions": [
+   {
+    "id": "FMA32544",
+    "name": "right supraspinatus",
+    "elements": [
+     "FJ1506"
+    ]
+   },
+   {
+    "id": "FMA23130",
+    "name": "right humerus",
+    "elements": [
+     "FJ3368"
+    ]
+   }
+  ],
+  "title": "Cell migration & repair",
+  "mechanism": "Explore research on thymosin beta-4, its fragments, and cellular migration in repair models.",
+  "pathway": [
+   "Thymosin beta-4 / fragments",
+   "Actin-associated processes",
+   "Tissue repair research"
+  ],
+  "scope": "Full-length thymosin beta-4 and products called TB-500 are distinct; check the compound used in each paper.",
+  "references": [
+   {
+    "pmid": "42542926",
+    "title": "Effects of BPC-157 and TB-500 on Achilles tendon healing in rats: A histopathological and biomechanical study.",
+    "authors": "Biçer O, Adanir O, Güleryüz Y, Balci EC, Dinçel YM, Yenigün MY, Aydin C, Bayrak BY.",
+    "journal": "Joint diseases and related surgery",
+    "year": "2026",
+    "doi": "10.52312/jdrs.2026.2951",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42542926/"
+   },
+   {
+    "pmid": "41966639",
+    "title": "Safety and Efficacy of Approved and Unapproved Peptide Therapies for Musculoskeletal Injuries and Athletic Performance.",
+    "authors": "Mendias CL, Awan TM.",
+    "journal": "Sports medicine (Auckland, N.Z.)",
+    "year": "2026",
+    "doi": "10.1007/s40279-026-02437-0",
+    "types": [
+     "Review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41966639/"
+   },
+   {
+    "pmid": "42635865",
+    "title": "Peptides in Regenerative Medicine: A Comprehensive Review of Clinical Applications in Tissue Repair and Chronic Pain Management.",
+    "authors": "Luansritisakul C, Chiang MC, Burns SL, Fonseca ACG.",
+    "journal": "Current pain and headache reports",
+    "year": "2026",
+    "doi": "10.1007/s11916-026-01542-z",
+    "types": [
+     "Review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42635865/"
+   }
+  ],
+  "searchQuery": "TITLE_ABS:\"TB-500\" OR TITLE_ABS:\"thymosin beta 4\"",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "tb-500"
+ },
+ {
+  "id": "ghk-cu",
+  "name": "GHK-Cu",
+  "category": "Repair & inflammation",
+  "kind": "Copper peptide",
+  "researchContext": "Skin & tissue research",
+  "formulations": "Pen · topical serum",
+  "regions": [
+   {
+    "id": "FMA7163",
+    "name": "skin",
+    "elements": [
+     "FJ2810"
+    ]
+   },
+   {
+    "id": "FMA54241",
+    "name": "hair of head",
+    "elements": [
+     "FJ2813"
+    ]
+   }
+  ],
+  "title": "Extracellular matrix research",
+  "mechanism": "GHK-Cu is studied in skin biology, extracellular matrix remodeling, and wound-repair models.",
+  "pathway": [
+   "GHK-Cu",
+   "Cellular responses",
+   "Skin & matrix research"
+  ],
+  "scope": "The surface is anatomical context. Follicles and collagen fibers are not individually modeled here.",
+  "references": [
+   {
+    "pmid": "42619529",
+    "title": "The Regenerative Potential of GHK-Cu in Aesthetic Medicine.",
+    "authors": "Mokhtar J, Mohamad B, Haddad J, Said A, Menon A, Kreutz-Rodrigues L, Vyas KS, Cetrulo CL, Lellouch AG.",
+    "journal": "Aesthetic surgery journal",
+    "year": "2026",
+    "doi": "10.1093/asj/sjag169",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42619529/"
+   },
+   {
+    "pmid": "42573538",
+    "title": "Augmented Skin Beneficial Effects of Thermus Thermophilus and Bacillus Subtilis Mixed-Culture Ferment Extract by Tripeptide GHK-Cu.",
+    "authors": "Wang J, Tao K, Huang H, Chang H.",
+    "journal": "Skin research and technology : official journal of International Society for Bioengineering and the Skin (ISBS) [and] International Society for Digital Imaging of Skin (ISDIS) [and] International Society for Skin Imaging (ISSI)",
+    "year": "2026",
+    "doi": "10.1111/srt.70360",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42573538/"
+   },
+   {
+    "pmid": "41997403",
+    "title": "Glycyl-L-histidyl-L-lysine-Cu2+ (GHK-Cu) Attenuates CuSO4 or LPS induced-inflammation in Zebrafish larvae model.",
+    "authors": "Hu J, Zhang C, Wang F.",
+    "journal": "European journal of pharmacology",
+    "year": "2026",
+    "doi": "10.1016/j.ejphar.2026.178880",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41997403/"
+   }
+  ],
+  "searchQuery": "TITLE_ABS:\"GHK-Cu\"",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "ghk-cu"
+ },
+ {
+  "id": "kpv",
+  "name": "KPV",
+  "category": "Repair & inflammation",
+  "kind": "Peptide",
+  "researchContext": "Preclinical inflammation research",
+  "formulations": "Pen · oral capsules",
+  "regions": [
+   {
+    "id": "FMA7208",
+    "name": "ileum",
+    "elements": [
+     "FJ2574",
+     "FJ2575",
+     "FJ2576",
+     "FJ2577",
+     "FJ2578",
+     "FJ2579",
+     "FJ2580",
+     "FJ2581",
+     "FJ2582",
+     "FJ2583",
+     "FJ2584",
+     "FJ2585",
+     "FJ2586",
+     "FJ2587",
+     "FJ2588",
+     "FJ2589",
+     "FJ2590",
+     "FJ2591",
+     "FJ2592",
+     "FJ2593",
+     "FJ2594",
+     "FJ2595",
+     "FJ2596",
+     "FJ2597",
+     "FJ2598",
+     "FJ2599",
+     "FJ2600",
+     "FJ2601",
+     "FJ2602",
+     "FJ2603",
+     "FJ2604",
+     "FJ2605"
+    ]
+   },
+   {
+    "id": "FMA14545",
+    "name": "ascending colon",
+    "elements": [
+     "FJ2566"
+    ]
+   },
+   {
+    "id": "FMA7163",
+    "name": "skin",
+    "elements": [
+     "FJ2810"
+    ]
+   }
+  ],
+  "title": "Inflammatory signaling",
+  "mechanism": "This alpha-MSH-derived tripeptide is investigated for effects on inflammatory pathways, including experimental intestinal inflammation.",
+  "pathway": [
+   "KPV",
+   "Inflammatory pathways",
+   "Intestinal & skin models"
+  ],
+  "scope": "Intestinal anatomy locates the research topic; epithelial cells require a separate microscopic view.",
+  "references": [
+   {
+    "pmid": "34547895",
+    "title": "Self-Cross-Linked Hydrogel of Cysteamine-Grafted γ-Polyglutamic Acid Stabilized Tripeptide KPV for Alleviating TNBS-Induced Ulcerative Colitis in Rats.",
+    "authors": "Sun J, Xue P, Liu J, Huang L, Lin G, Ran K, Yang J, Lu C, Zhao YZ, Xu HL.",
+    "journal": "ACS biomaterials science & engineering",
+    "year": "2021",
+    "doi": "10.1021/acsbiomaterials.1c00792",
+    "types": [
+     "Research Support, Non-U.S. Gov't",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34547895/"
+   },
+   {
+    "pmid": "28143741",
+    "title": "Orally Targeted Delivery of Tripeptide KPV via Hyaluronic Acid-Functionalized Nanoparticles Efficiently Alleviates Ulcerative Colitis.",
+    "authors": "Xiao B, Xu Z, Viennois E, Zhang Y, Zhang Z, Zhang M, Han MK, Kang Y, Merlin D.",
+    "journal": "Molecular therapy : the journal of the American Society of Gene Therapy",
+    "year": "2017",
+    "doi": "10.1016/j.ymthe.2016.11.020",
+    "types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28143741/"
+   },
+   {
+    "pmid": "27458604",
+    "title": "Critical role of PepT1 in promoting colitis-associated cancer and therapeutic benefits of the anti-inflammatory PepT1-mediated tripeptide KPV in a murine model.",
+    "authors": "Viennois E, Ingersoll SA, Ayyadurai S, Zhao Y, Wang L, Zhang M, Han MK, Garg P, Xiao B, Merlin D.",
+    "journal": "Cellular and molecular gastroenterology and hepatology",
+    "year": "2016",
+    "doi": "10.1016/j.jcmgh.2016.01.006",
+    "types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27458604/"
+   },
+   {
+    "pmid": "18061177",
+    "title": "PepT1-mediated tripeptide KPV uptake reduces intestinal inflammation.",
+    "authors": "Dalmasso G, Charrier-Hisamuddin L, Nguyen HT, Yan Y, Sitaraman S, Merlin D.",
+    "journal": "Gastroenterology",
+    "year": "2008",
+    "doi": "10.1053/j.gastro.2007.10.026",
+    "types": [
+     "research-article",
+     "Journal Article",
+     "Research Support, N.I.H., Extramural"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18061177/"
+   }
+  ],
+  "searchQuery": "TITLE:KPV AND (TITLE:colitis OR TITLE:inflammation)",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "kpv"
+ },
+ {
+  "id": "ll-37",
+  "name": "LL-37",
+  "category": "Repair & inflammation",
+  "kind": "Peptide",
+  "researchContext": "Antimicrobial & wound research",
+  "formulations": "Pen",
+  "regions": [
+   {
+    "id": "FMA7163",
+    "name": "skin",
+    "elements": [
+     "FJ2810"
+    ]
+   },
+   {
+    "id": "FMA7208",
+    "name": "ileum",
+    "elements": [
+     "FJ2574",
+     "FJ2575",
+     "FJ2576",
+     "FJ2577",
+     "FJ2578",
+     "FJ2579",
+     "FJ2580",
+     "FJ2581",
+     "FJ2582",
+     "FJ2583",
+     "FJ2584",
+     "FJ2585",
+     "FJ2586",
+     "FJ2587",
+     "FJ2588",
+     "FJ2589",
+     "FJ2590",
+     "FJ2591",
+     "FJ2592",
+     "FJ2593",
+     "FJ2594",
+     "FJ2595",
+     "FJ2596",
+     "FJ2597",
+     "FJ2598",
+     "FJ2599",
+     "FJ2600",
+     "FJ2601",
+     "FJ2602",
+     "FJ2603",
+     "FJ2604",
+     "FJ2605"
+    ]
+   }
+  ],
+  "title": "Host-defense peptide biology",
+  "mechanism": "LL-37 is a human cathelicidin peptide studied in antimicrobial defense, immune signaling, and wound biology.",
+  "pathway": [
+   "LL-37",
+   "Microbial membranes & host signaling",
+   "Barrier-tissue research"
+  ],
+  "scope": "Host-defense biology and therapeutic administration are different research questions.",
+  "references": [
+   {
+    "pmid": "42641316",
+    "title": "Combinatorial therapy of LL-37 and ADSCs accelerates diabetic wound repair by orchestrating NRROS-mediated crosstalk between TGF-β/SMAD and hippo/TEAD1 axes.",
+    "authors": "Wei L, Wang L, Zhong F, Wang F, Lu X, Zheng J, Chen L.",
+    "journal": "Cytokine",
+    "year": "2026",
+    "doi": "10.1016/j.cyto.2026.157203",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42641316/"
+   },
+   {
+    "pmid": "41544412",
+    "title": "LL-37 antimicrobial peptide: Molecular characterisation and its role in oral health and disease-A narrative review.",
+    "authors": "Soman D, P J, Cm M, Radhakrishnan R.",
+    "journal": "Archives of oral biology",
+    "year": "2026",
+    "doi": "10.1016/j.archoralbio.2026.106516",
+    "types": [
+     "Review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41544412/"
+   }
+  ],
+  "searchQuery": "TITLE_ABS:\"LL-37\" AND (review OR wound)",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": null
+ },
+ {
+  "id": "cjc-ipamorelin",
+  "name": "CJC-1295 + Ipamorelin",
+  "category": "Growth hormone axis",
+  "kind": "Peptide combination",
+  "researchContext": "Component-level research",
+  "formulations": "Combination formulation",
+  "regions": [
+   {
+    "id": "FMA13889",
+    "name": "pituitary gland",
+    "elements": [
+     "FJ1796"
+    ]
+   },
+   {
+    "id": "FMA7197",
+    "name": "liver",
+    "elements": [
+     "FJ1883",
+     "FJ1893",
+     "FJ1913",
+     "FJ1914",
+     "FJ1916",
+     "FJ2386",
+     "FJ2404",
+     "FJ2405",
+     "FJ2409",
+     "FJ2415",
+     "FJ2416",
+     "FJ2816",
+     "FJ2818",
+     "FJ2819",
+     "FJ2820",
+     "FJ2821",
+     "FJ2822",
+     "FJ2823",
+     "FJ2824",
+     "FJ3071",
+     "FJ3072",
+     "FJ3073",
+     "FJ3074",
+     "FJ3075",
+     "FJ3076",
+     "FJ3077",
+     "FJ3081",
+     "FJ3083",
+     "FJ3086",
+     "FJ3088",
+     "FJ3089",
+     "FJ3090",
+     "FJ3091",
+     "FJ3092",
+     "FJ3093",
+     "FJ3095",
+     "FJ3096",
+     "FJ3102",
+     "FJ3103",
+     "FJ3104",
+     "FJ3105",
+     "FJ3106",
+     "FJ3107",
+     "FJ3108",
+     "FJ3109",
+     "FJ3110",
+     "FJ3111",
+     "FJ3112",
+     "FJ3113",
+     "FJ3114",
+     "FJ3115",
+     "FJ3116",
+     "FJ3117",
+     "FJ3122",
+     "FJ3123",
+     "FJ3124",
+     "FJ3125",
+     "FJ3126",
+     "FJ3127",
+     "FJ3128"
+    ]
+   }
+  ],
+  "title": "Two signaling routes",
+  "mechanism": "CJC-1295 and ipamorelin engage different receptor pathways associated with growth hormone release.",
+  "pathway": [
+   "GHRH / ghrelin receptor pathways",
+   "Pituitary GH release",
+   "GH–IGF-1 axis"
+  ],
+  "scope": "Linked papers cover individual components; they do not automatically establish benefits of the combination.",
+  "references": [
+   {
+    "pmid": "19386527",
+    "title": "Activation of the GH/IGF-1 axis by CJC-1295, a long-acting GHRH analog, results in serum protein profile changes in normal adult subjects.",
+    "authors": "Sackmann-Sala L, Ding J, Frohman LA, Kopchick JJ.",
+    "journal": "Growth hormone & IGF research : official journal of the Growth Hormone Research Society and the International IGF Research Society",
+    "year": "2009",
+    "doi": "10.1016/j.ghir.2009.03.001",
+    "types": [
+     "Research Support, Non-U.S. Gov't",
+     "research-article",
+     "Journal Article",
+     "Research Support, N.I.H., Extramural"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19386527/"
+   },
+   {
+    "pmid": "17018654",
+    "title": "Pulsatile secretion of growth hormone (GH) persists during continuous stimulation by CJC-1295, a long-acting GH-releasing hormone analog.",
+    "authors": "Ionescu M, Frohman LA.",
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "year": "2006",
+    "doi": "10.1210/jc.2006-1702",
+    "types": [
+     "Clinical Trial",
+     "Research Support, Non-U.S. Gov't",
+     "Journal Article",
+     "Research Support, N.I.H., Extramural"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17018654/"
+   },
+   {
+    "pmid": "16822960",
+    "title": "Once-daily administration of CJC-1295, a long-acting growth hormone-releasing hormone (GHRH) analog, normalizes growth in the GHRH knockout mouse.",
+    "authors": "Alba M, Fintini D, Sagazio A, Lawrence B, Castaigne JP, Frohman LA, Salvatori R.",
+    "journal": "American journal of physiology. Endocrinology and metabolism",
+    "year": "2006",
+    "doi": "10.1152/ajpendo.00201.2006",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16822960/"
+   },
+   {
+    "pmid": "9849822",
+    "title": "Ipamorelin, the first selective growth hormone secretagogue.",
+    "authors": "Raun K, Hansen BS, Johansen NL, Thøgersen H, Madsen K, Ankersen M, Andersen PH.",
+    "journal": "European journal of endocrinology",
+    "year": "1998",
+    "doi": "10.1530/eje.0.1390552",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/9849822/"
+   }
+  ],
+  "searchQuery": "TITLE:\"CJC-1295\" AND FIRST_PDATE:[2000-01-01 TO 2010-12-31]",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "cjc-1295-ipamorelin"
+ },
+ {
+  "id": "ipamorelin",
+  "name": "Ipamorelin",
+  "category": "Growth hormone axis",
+  "kind": "Peptide",
+  "researchContext": "GH secretagogue research",
+  "formulations": "Pen",
+  "regions": [
+   {
+    "id": "FMA13889",
+    "name": "pituitary gland",
+    "elements": [
+     "FJ1796"
+    ]
+   },
+   {
+    "id": "FMA7197",
+    "name": "liver",
+    "elements": [
+     "FJ1883",
+     "FJ1893",
+     "FJ1913",
+     "FJ1914",
+     "FJ1916",
+     "FJ2386",
+     "FJ2404",
+     "FJ2405",
+     "FJ2409",
+     "FJ2415",
+     "FJ2416",
+     "FJ2816",
+     "FJ2818",
+     "FJ2819",
+     "FJ2820",
+     "FJ2821",
+     "FJ2822",
+     "FJ2823",
+     "FJ2824",
+     "FJ3071",
+     "FJ3072",
+     "FJ3073",
+     "FJ3074",
+     "FJ3075",
+     "FJ3076",
+     "FJ3077",
+     "FJ3081",
+     "FJ3083",
+     "FJ3086",
+     "FJ3088",
+     "FJ3089",
+     "FJ3090",
+     "FJ3091",
+     "FJ3092",
+     "FJ3093",
+     "FJ3095",
+     "FJ3096",
+     "FJ3102",
+     "FJ3103",
+     "FJ3104",
+     "FJ3105",
+     "FJ3106",
+     "FJ3107",
+     "FJ3108",
+     "FJ3109",
+     "FJ3110",
+     "FJ3111",
+     "FJ3112",
+     "FJ3113",
+     "FJ3114",
+     "FJ3115",
+     "FJ3116",
+     "FJ3117",
+     "FJ3122",
+     "FJ3123",
+     "FJ3124",
+     "FJ3125",
+     "FJ3126",
+     "FJ3127",
+     "FJ3128"
+    ]
+   }
+  ],
+  "title": "Growth hormone secretagogue",
+  "mechanism": "Ipamorelin is studied as a growth hormone secretagogue acting through the ghrelin receptor pathway.",
+  "pathway": [
+   "Ipamorelin",
+   "Ghrelin receptor pathway",
+   "Pituitary GH release"
+  ],
+  "scope": "Mechanism and pharmacodynamic research are shown separately from long-term clinical outcomes.",
+  "references": [
+   {
+    "pmid": "9849822",
+    "title": "Ipamorelin, the first selective growth hormone secretagogue.",
+    "authors": "Raun K, Hansen BS, Johansen NL, Thøgersen H, Madsen K, Ankersen M, Andersen PH.",
+    "journal": "European journal of endocrinology",
+    "year": "1998",
+    "doi": "10.1530/eje.0.1390552",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/9849822/"
+   }
+  ],
+  "searchQuery": "TITLE:ipamorelin AND (TITLE:selective OR TITLE:humans)",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": null
+ },
+ {
+  "id": "sermorelin",
+  "name": "Sermorelin",
+  "category": "Growth hormone axis",
+  "kind": "Peptide",
+  "researchContext": "GHRH analogue research",
+  "formulations": "Pen · sublingual formulation",
+  "regions": [
+   {
+    "id": "FMA13889",
+    "name": "pituitary gland",
+    "elements": [
+     "FJ1796"
+    ]
+   },
+   {
+    "id": "FMA7197",
+    "name": "liver",
+    "elements": [
+     "FJ1883",
+     "FJ1893",
+     "FJ1913",
+     "FJ1914",
+     "FJ1916",
+     "FJ2386",
+     "FJ2404",
+     "FJ2405",
+     "FJ2409",
+     "FJ2415",
+     "FJ2416",
+     "FJ2816",
+     "FJ2818",
+     "FJ2819",
+     "FJ2820",
+     "FJ2821",
+     "FJ2822",
+     "FJ2823",
+     "FJ2824",
+     "FJ3071",
+     "FJ3072",
+     "FJ3073",
+     "FJ3074",
+     "FJ3075",
+     "FJ3076",
+     "FJ3077",
+     "FJ3081",
+     "FJ3083",
+     "FJ3086",
+     "FJ3088",
+     "FJ3089",
+     "FJ3090",
+     "FJ3091",
+     "FJ3092",
+     "FJ3093",
+     "FJ3095",
+     "FJ3096",
+     "FJ3102",
+     "FJ3103",
+     "FJ3104",
+     "FJ3105",
+     "FJ3106",
+     "FJ3107",
+     "FJ3108",
+     "FJ3109",
+     "FJ3110",
+     "FJ3111",
+     "FJ3112",
+     "FJ3113",
+     "FJ3114",
+     "FJ3115",
+     "FJ3116",
+     "FJ3117",
+     "FJ3122",
+     "FJ3123",
+     "FJ3124",
+     "FJ3125",
+     "FJ3126",
+     "FJ3127",
+     "FJ3128"
+    ]
+   }
+  ],
+  "title": "GHRH signaling",
+  "mechanism": "Sermorelin is a GHRH analogue used to study and stimulate pituitary growth hormone secretion.",
+  "pathway": [
+   "Sermorelin",
+   "Pituitary GHRH receptor",
+   "GH release"
+  ],
+  "scope": "Study route and formulation matter; research on one formulation does not establish another.",
+  "references": [
+   {
+    "pmid": "18031173",
+    "title": "Sermorelin: a review of its use in the diagnosis and treatment of children with idiopathic growth hormone deficiency.",
+    "authors": "Prakash A, Goa KL.",
+    "journal": "BioDrugs : clinical immunotherapeutics, biopharmaceuticals and gene therapy",
+    "year": "1999",
+    "doi": "10.2165/00063030-199912020-00007",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18031173/"
+   }
+  ],
+  "searchQuery": "TITLE:sermorelin AND (TITLE:review OR TITLE:children OR TITLE:adults)",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": null
+ },
+ {
+  "id": "tesamorelin",
+  "name": "Tesamorelin",
+  "category": "Growth hormone axis",
+  "kind": "Peptide",
+  "researchContext": "Human trials · HIV lipodystrophy",
+  "formulations": "Injectable",
+  "regions": [
+   {
+    "id": "FMA13889",
+    "name": "pituitary gland",
+    "elements": [
+     "FJ1796"
+    ]
+   },
+   {
+    "id": "FMA7197",
+    "name": "liver",
+    "elements": [
+     "FJ1883",
+     "FJ1893",
+     "FJ1913",
+     "FJ1914",
+     "FJ1916",
+     "FJ2386",
+     "FJ2404",
+     "FJ2405",
+     "FJ2409",
+     "FJ2415",
+     "FJ2416",
+     "FJ2816",
+     "FJ2818",
+     "FJ2819",
+     "FJ2820",
+     "FJ2821",
+     "FJ2822",
+     "FJ2823",
+     "FJ2824",
+     "FJ3071",
+     "FJ3072",
+     "FJ3073",
+     "FJ3074",
+     "FJ3075",
+     "FJ3076",
+     "FJ3077",
+     "FJ3081",
+     "FJ3083",
+     "FJ3086",
+     "FJ3088",
+     "FJ3089",
+     "FJ3090",
+     "FJ3091",
+     "FJ3092",
+     "FJ3093",
+     "FJ3095",
+     "FJ3096",
+     "FJ3102",
+     "FJ3103",
+     "FJ3104",
+     "FJ3105",
+     "FJ3106",
+     "FJ3107",
+     "FJ3108",
+     "FJ3109",
+     "FJ3110",
+     "FJ3111",
+     "FJ3112",
+     "FJ3113",
+     "FJ3114",
+     "FJ3115",
+     "FJ3116",
+     "FJ3117",
+     "FJ3122",
+     "FJ3123",
+     "FJ3124",
+     "FJ3125",
+     "FJ3126",
+     "FJ3127",
+     "FJ3128"
+    ]
+   },
+   {
+    "id": "FMA7148",
+    "name": "stomach",
+    "elements": [
+     "FJ2564"
+    ]
+   },
+   {
+    "id": "FMA7208",
+    "name": "ileum",
+    "elements": [
+     "FJ2574",
+     "FJ2575",
+     "FJ2576",
+     "FJ2577",
+     "FJ2578",
+     "FJ2579",
+     "FJ2580",
+     "FJ2581",
+     "FJ2582",
+     "FJ2583",
+     "FJ2584",
+     "FJ2585",
+     "FJ2586",
+     "FJ2587",
+     "FJ2588",
+     "FJ2589",
+     "FJ2590",
+     "FJ2591",
+     "FJ2592",
+     "FJ2593",
+     "FJ2594",
+     "FJ2595",
+     "FJ2596",
+     "FJ2597",
+     "FJ2598",
+     "FJ2599",
+     "FJ2600",
+     "FJ2601",
+     "FJ2602",
+     "FJ2603",
+     "FJ2604",
+     "FJ2605"
+    ]
+   }
+  ],
+  "title": "The GH axis & visceral adiposity",
+  "mechanism": "A GHRH analogue studied for reductions in visceral adipose tissue in adults with HIV-associated lipodystrophy.",
+  "pathway": [
+   "Tesamorelin",
+   "Pituitary GH / IGF-1 axis",
+   "Visceral adiposity outcomes"
+  ],
+  "scope": "Abdominal organs provide location context. Visceral fat is not segmented in this geometry.",
+  "references": [
+   {
+    "pmid": "41545261",
+    "title": "Body composition, hepatic fat, metabolic, and safety outcomes of Tesamorelin, a GHRH analogue, in HIV-associated lipodystrophy: A meta-analysis of randomized controlled trials.",
+    "authors": "Badran AS, Helal A, Shata KS, Ayesh H.",
+    "journal": "Obesity research & clinical practice",
+    "year": "2026",
+    "doi": "10.1016/j.orcp.2026.01.002",
+    "types": [
+     "Meta-Analysis",
+     "Systematic Review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41545261/"
+   },
+   {
+    "pmid": "42419889",
+    "title": "Tesamorelin as an Adjunct to Exercise for Improving Physical Function in HIV (TRIUMPH): a clinical trial protocol.",
+    "authors": "Erlandson KM, Gustafson L, Johnson JE, Kulik GL, Khuu V, Chahal N, Walpert AR, Galdamez ME, Zorgno I, Foldyna B, Jarraya M, Reusch JE, Lee H, Grinspoon SK, Jankowski CM, Fourman LT.",
+    "journal": "BMJ open",
+    "year": "2026",
+    "doi": "10.1136/bmjopen-2026-120740",
+    "types": [
+     "Clinical Trial Protocol",
+     "research-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42419889/"
+   },
+   {
+    "pmid": "42538058",
+    "title": "Efficacy and Safety of Tesamorelin in People Living With HIV (PLWH) With Lipodystrophy: A Systematic Review and Meta-Analysis.",
+    "authors": "Ditta AM, Naeem RM, Sami MM, Abdul Rafey M, Ali H, Amjad MW, Jahangir F, Rizvi KA, Mohammad F, Abu Dawood H, Suleman M, Saddique MN.",
+    "journal": "Journal of the International Association of Providers of AIDS Care",
+    "year": "2026",
+    "doi": "10.1177/23259582261475549",
+    "types": [
+     "Meta-Analysis",
+     "Systematic Review",
+     "review-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42538058/"
+   }
+  ],
+  "searchQuery": "TITLE_ABS:tesamorelin AND (visceral OR randomized)",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "tesamorelin"
+ },
+ {
+  "id": "aod-9604",
+  "name": "AOD-9604",
+  "category": "Growth hormone axis",
+  "kind": "Peptide fragment",
+  "researchContext": "Metabolic research",
+  "formulations": "Formulation not specified",
+  "regions": [
+   {
+    "id": "FMA7148",
+    "name": "stomach",
+    "elements": [
+     "FJ2564"
+    ]
+   },
+   {
+    "id": "FMA7208",
+    "name": "ileum",
+    "elements": [
+     "FJ2574",
+     "FJ2575",
+     "FJ2576",
+     "FJ2577",
+     "FJ2578",
+     "FJ2579",
+     "FJ2580",
+     "FJ2581",
+     "FJ2582",
+     "FJ2583",
+     "FJ2584",
+     "FJ2585",
+     "FJ2586",
+     "FJ2587",
+     "FJ2588",
+     "FJ2589",
+     "FJ2590",
+     "FJ2591",
+     "FJ2592",
+     "FJ2593",
+     "FJ2594",
+     "FJ2595",
+     "FJ2596",
+     "FJ2597",
+     "FJ2598",
+     "FJ2599",
+     "FJ2600",
+     "FJ2601",
+     "FJ2602",
+     "FJ2603",
+     "FJ2604",
+     "FJ2605"
+    ]
+   },
+   {
+    "id": "FMA7197",
+    "name": "liver",
+    "elements": [
+     "FJ1883",
+     "FJ1893",
+     "FJ1913",
+     "FJ1914",
+     "FJ1916",
+     "FJ2386",
+     "FJ2404",
+     "FJ2405",
+     "FJ2409",
+     "FJ2415",
+     "FJ2416",
+     "FJ2816",
+     "FJ2818",
+     "FJ2819",
+     "FJ2820",
+     "FJ2821",
+     "FJ2822",
+     "FJ2823",
+     "FJ2824",
+     "FJ3071",
+     "FJ3072",
+     "FJ3073",
+     "FJ3074",
+     "FJ3075",
+     "FJ3076",
+     "FJ3077",
+     "FJ3081",
+     "FJ3083",
+     "FJ3086",
+     "FJ3088",
+     "FJ3089",
+     "FJ3090",
+     "FJ3091",
+     "FJ3092",
+     "FJ3093",
+     "FJ3095",
+     "FJ3096",
+     "FJ3102",
+     "FJ3103",
+     "FJ3104",
+     "FJ3105",
+     "FJ3106",
+     "FJ3107",
+     "FJ3108",
+     "FJ3109",
+     "FJ3110",
+     "FJ3111",
+     "FJ3112",
+     "FJ3113",
+     "FJ3114",
+     "FJ3115",
+     "FJ3116",
+     "FJ3117",
+     "FJ3122",
+     "FJ3123",
+     "FJ3124",
+     "FJ3125",
+     "FJ3126",
+     "FJ3127",
+     "FJ3128"
+    ]
+   }
+  ],
+  "title": "Growth hormone fragment research",
+  "mechanism": "A modified growth hormone fragment investigated in metabolic and fat-related research.",
+  "pathway": [
+   "AOD-9604",
+   "Experimental metabolic effects",
+   "Adipose-tissue research"
+  ],
+  "scope": "Abdominal anatomy is a location reference; no fat-loss prediction is displayed.",
+  "references": [
+   {
+    "pmid": "15134286",
+    "title": "AOD-9604 Metabolic.",
+    "authors": "Wilding J.",
+    "journal": "Current opinion in investigational drugs (London, England : 2000)",
+    "year": "2004",
+    "doi": "",
+    "types": [
+     "Review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/15134286/"
+   },
+   {
+    "pmid": "26275694",
+    "title": "Effect of Intra-articular Injection of AOD9604 with or without Hyaluronic Acid in Rabbit Osteoarthritis Model.",
+    "authors": "Kwon DR, Park GY.",
+    "journal": "Annals of clinical and laboratory science",
+    "year": "2015",
+    "doi": "",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26275694/"
+   }
+  ],
+  "searchQuery": "TITLE:AOD9604 OR TITLE:\"AOD-9604\"",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "aod-9604"
+ },
+ {
+  "id": "igf-lr3",
+  "name": "IGF-LR3",
+  "category": "Growth hormone axis",
+  "kind": "IGF analogue",
+  "researchContext": "Preclinical research",
+  "formulations": "Formulation not specified",
+  "regions": [
+   {
+    "id": "FMA32544",
+    "name": "right supraspinatus",
+    "elements": [
+     "FJ1506"
+    ]
+   },
+   {
+    "id": "FMA7197",
+    "name": "liver",
+    "elements": [
+     "FJ1883",
+     "FJ1893",
+     "FJ1913",
+     "FJ1914",
+     "FJ1916",
+     "FJ2386",
+     "FJ2404",
+     "FJ2405",
+     "FJ2409",
+     "FJ2415",
+     "FJ2416",
+     "FJ2816",
+     "FJ2818",
+     "FJ2819",
+     "FJ2820",
+     "FJ2821",
+     "FJ2822",
+     "FJ2823",
+     "FJ2824",
+     "FJ3071",
+     "FJ3072",
+     "FJ3073",
+     "FJ3074",
+     "FJ3075",
+     "FJ3076",
+     "FJ3077",
+     "FJ3081",
+     "FJ3083",
+     "FJ3086",
+     "FJ3088",
+     "FJ3089",
+     "FJ3090",
+     "FJ3091",
+     "FJ3092",
+     "FJ3093",
+     "FJ3095",
+     "FJ3096",
+     "FJ3102",
+     "FJ3103",
+     "FJ3104",
+     "FJ3105",
+     "FJ3106",
+     "FJ3107",
+     "FJ3108",
+     "FJ3109",
+     "FJ3110",
+     "FJ3111",
+     "FJ3112",
+     "FJ3113",
+     "FJ3114",
+     "FJ3115",
+     "FJ3116",
+     "FJ3117",
+     "FJ3122",
+     "FJ3123",
+     "FJ3124",
+     "FJ3125",
+     "FJ3126",
+     "FJ3127",
+     "FJ3128"
+    ]
+   }
+  ],
+  "title": "IGF signaling research",
+  "mechanism": "Long R3 IGF-1 is a modified IGF-1 analogue studied in cell and animal models of growth-factor signaling.",
+  "pathway": [
+   "Long R3 IGF-1",
+   "IGF receptor signaling",
+   "Cell growth & survival research"
+  ],
+  "scope": "The selected muscle is tissue context, not a predicted hypertrophy outcome.",
+  "references": [
+   {
+    "pmid": "42395176",
+    "title": "The emerging landscape of performance-enhancing peptides modulating GH-IGF1 axis: bridging the gap between clinical evidence and patient self-administration.",
+    "authors": "Dominikowski A, Rękoś Z, Olejarz M, Szczepanek-Parulska E, Domin R, RuchaŁa M.",
+    "journal": "Frontiers in endocrinology",
+    "year": "2026",
+    "doi": "10.3389/fendo.2026.1822475",
+    "types": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42395176/"
+   },
+   {
+    "pmid": "39610283",
+    "title": "Intranasal long R3 insulin-like growth factor-1 treatment promotes amyloid plaque remodeling in cerebral cortex but fails to preserve cognitive function in male 5XFAD mice.",
+    "authors": "Engel MG, Narayan S, Cui MH, Branch CA, Zhang X, Gandy SE, Ehrlich M, Huffman DM.",
+    "journal": "Journal of Alzheimer's disease : JAD",
+    "year": "2025",
+    "doi": "10.1177/13872877241299056",
+    "types": [
+     "Research Support, Non-U.S. Gov't",
+     "research-article",
+     "Journal Article",
+     "Research Support, N.I.H., Extramural"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39610283/"
+   }
+  ],
+  "searchQuery": "TITLE_ABS:\"Long R3\" AND TITLE_ABS:IGF",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": null
+ },
+ {
+  "id": "pt-141",
+  "name": "PT-141 / Bremelanotide",
+  "category": "Hormonal & reproductive",
+  "kind": "Peptide",
+  "researchContext": "Human trials · specific populations",
+  "formulations": "Pen · nasal formulation",
+  "regions": [
+   {
+    "id": "FMA62008",
+    "name": "hypothalamus",
+    "elements": [
+     "FJ1760",
+     "FJ1780",
+     "FJ1808",
+     "FJ1828"
+    ]
+   },
+   {
+    "id": "FMA50801",
+    "name": "brain",
+    "elements": [
+     "FJ1730",
+     "FJ1731",
+     "FJ1732",
+     "FJ1733",
+     "FJ1738",
+     "FJ1739",
+     "FJ1740",
+     "FJ1743",
+     "FJ1744",
+     "FJ1745",
+     "FJ1746",
+     "FJ1747",
+     "FJ1748",
+     "FJ1749",
+     "FJ1750",
+     "FJ1751",
+     "FJ1758",
+     "FJ1759",
+     "FJ1760",
+     "FJ1762",
+     "FJ1767",
+     "FJ1769",
+     "FJ1770",
+     "FJ1775",
+     "FJ1779",
+     "FJ1780",
+     "FJ1781",
+     "FJ1783",
+     "FJ1784",
+     "FJ1785",
+     "FJ1786",
+     "FJ1787",
+     "FJ1788",
+     "FJ1789",
+     "FJ1790",
+     "FJ1791",
+     "FJ1792",
+     "FJ1795",
+     "FJ1797",
+     "FJ1798",
+     "FJ1800",
+     "FJ1801",
+     "FJ1806",
+     "FJ1807",
+     "FJ1808",
+     "FJ1810",
+     "FJ1814",
+     "FJ1817",
+     "FJ1822",
+     "FJ1826",
+     "FJ1828",
+     "FJ1830",
+     "FJ1831",
+     "FJ1833",
+     "FJ1834",
+     "FJ1835",
+     "FJ1836",
+     "FJ1841",
+     "FJ1842"
+    ]
+   }
+  ],
+  "title": "Central melanocortin signaling",
+  "mechanism": "Bremelanotide acts through melanocortin signaling and has been studied in sexual-desire disorders.",
+  "pathway": [
+   "Bremelanotide",
+   "Melanocortin signaling",
+   "Central sexual-response pathways"
+  ],
+  "scope": "The hypothalamus provides central context. Study populations and administration routes are article-specific.",
+  "references": [
+   {
+    "pmid": "35170192",
+    "title": "Effect of bremelanotide on body weight of obese women: Data from two phase 1 randomized controlled trials.",
+    "authors": "Spana C, Jordan R, Fischkoff S.",
+    "journal": "Diabetes, obesity & metabolism",
+    "year": "2022",
+    "doi": "10.1111/dom.14672",
+    "types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35170192/"
+   },
+   {
+    "pmid": "31599840",
+    "title": "Bremelanotide for the Treatment of Hypoactive Sexual Desire Disorder: Two Randomized Phase 3 Trials.",
+    "authors": "Kingsberg SA, Clayton AH, Portman D, Williams LA, Krop J, Jordan R, Lucas J, Simon JA.",
+    "journal": "Obstetrics and gynecology",
+    "year": "2019",
+    "doi": "10.1097/aog.0000000000003500",
+    "types": [
+     "Clinical Trial, Phase III",
+     "Research Support, Non-U.S. Gov't",
+     "research-article",
+     "Multicenter Study",
+     "Randomized Controlled Trial",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31599840/"
+   },
+   {
+    "pmid": "27181790",
+    "title": "Bremelanotide for female sexual dysfunctions in premenopausal women: a randomized, placebo-controlled dose-finding trial.",
+    "authors": "Clayton AH, Althof SE, Kingsberg S, DeRogatis LR, Kroll R, Goldstein I, Kaminetsky J, Spana C, Lucas J, Jordan R, Portman DJ.",
+    "journal": "Women's health (London, England)",
+    "year": "2016",
+    "doi": "10.2217/whe-2016-0018",
+    "types": [
+     "Research Support, Non-U.S. Gov't",
+     "research-article",
+     "Randomized Controlled Trial",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27181790/"
+   }
+  ],
+  "searchQuery": "TITLE:bremelanotide AND TITLE:randomized",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": null
+ },
+ {
+  "id": "kisspeptin-10",
+  "name": "Kisspeptin-10",
+  "category": "Hormonal & reproductive",
+  "kind": "Peptide",
+  "researchContext": "Human endocrine research",
+  "formulations": "Formulation not specified",
+  "regions": [
+   {
+    "id": "FMA62008",
+    "name": "hypothalamus",
+    "elements": [
+     "FJ1760",
+     "FJ1780",
+     "FJ1808",
+     "FJ1828"
+    ]
+   },
+   {
+    "id": "FMA13889",
+    "name": "pituitary gland",
+    "elements": [
+     "FJ1796"
+    ]
+   },
+   {
+    "id": "FMA7210",
+    "name": "testis",
+    "elements": [
+     "FJ3138",
+     "FJ3142"
+    ]
+   }
+  ],
+  "title": "Upstream reproductive signaling",
+  "mechanism": "Kisspeptin signaling is involved in the regulation of GnRH and downstream gonadotropin release.",
+  "pathway": [
+   "Kisspeptin / KISS1R",
+   "GnRH → LH / FSH",
+   "Gonadal signaling"
+  ],
+  "scope": "This sequence describes endocrine signaling, rather than a guaranteed hormone-restoration response.",
+  "references": [
+   {
+    "pmid": "42549827",
+    "title": "Chronic subcutaneous kisspeptin-10 stimulates gonadotropin secretion for 12 days in healthy men.",
+    "authors": "Yeung AC, Phylactou M, Koysombat K, Tsoutsouki J, Nyunt SW, Young M, Patel AH, Daniels E, Pierret ACS, Mills EG, Comninos AN, Abbara A, Dhillo WS.",
+    "journal": "European journal of endocrinology",
+    "year": "2026",
+    "doi": "10.1093/ejendo/lvag134",
+    "types": [
+     "Randomized Controlled Trial",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42549827/"
+   }
+  ],
+  "searchQuery": "TITLE_ABS:\"kisspeptin-10\" AND human",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": null
+ },
+ {
+  "id": "gonadorelin",
+  "name": "Gonadorelin",
+  "category": "Hormonal & reproductive",
+  "kind": "Peptide hormone",
+  "researchContext": "Human endocrine research",
+  "formulations": "Formulation not specified",
+  "regions": [
+   {
+    "id": "FMA13889",
+    "name": "pituitary gland",
+    "elements": [
+     "FJ1796"
+    ]
+   },
+   {
+    "id": "FMA7210",
+    "name": "testis",
+    "elements": [
+     "FJ3138",
+     "FJ3142"
+    ]
+   }
+  ],
+  "title": "GnRH & gonadotropins",
+  "mechanism": "Gonadorelin is a GnRH preparation. Pulsatile and sustained exposure can produce different endocrine responses.",
+  "pathway": [
+   "GnRH receptor",
+   "Pituitary LH / FSH",
+   "Gonadal response"
+  ],
+  "scope": "The temporal pattern of exposure matters; a pathway diagram does not specify a treatment schedule.",
+  "references": [
+   {
+    "pmid": "30569789",
+    "title": "The Pulsatile Gonadorelin Pump Induces Earlier Spermatogenesis Than Cyclical Gonadotropin Therapy in Congenital Hypogonadotropic Hypogonadism Men.",
+    "authors": "Zhang L, Cai K, Wang Y, Ji W, Cheng Z, Chen G, Liao Z.",
+    "journal": "American journal of men's health",
+    "year": "2019",
+    "doi": "10.1177/1557988318818280",
+    "types": [
+     "Research Support, Non-U.S. Gov't",
+     "research-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30569789/"
+   },
+   {
+    "pmid": "26417369",
+    "title": "Changes in Bone Mineral Density and Metabolic Parameters after Pulsatile Gonadorelin Treatment in Young Men with Hypogonadotropic Hypogonadism.",
+    "authors": "Li CX, Tang ST, Zhang Q.",
+    "journal": "International journal of endocrinology",
+    "year": "2015",
+    "doi": "10.1155/2015/324524",
+    "types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26417369/"
+   },
+   {
+    "pmid": "25131486",
+    "title": "[Micropump infusion of gonadorelin in the treatment of hypogonadotropic hypogonadism in patients with pituitary stalk interruption syndrome: cases analysis and literature review].",
+    "authors": "Shao WM, Bai WJ, Chen YM, Liu L, Wang YJ.",
+    "journal": "Beijing da xue xue bao. Yi xue ban = Journal of Peking University. Health sciences",
+    "year": "2014",
+    "doi": "",
+    "types": [
+     "Review",
+     "Journal Article",
+     "Case Reports"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25131486/"
+   },
+   {
+    "pmid": "2142288",
+    "title": "[Occurrence of gynecomastia during prolonged pulsatile administration of gonadorelin].",
+    "authors": "Lefebvre H, Kuhn JM, Wolf LM.",
+    "journal": "Presse medicale (Paris, France : 1983)",
+    "year": "1990",
+    "doi": "",
+    "types": [
+     "Letter",
+     "Case Reports"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/2142288/"
+   }
+  ],
+  "searchQuery": "TITLE:gonadorelin AND (TITLE:hypogonadism OR TITLE:pulsatile OR TITLE:men)",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": null
+ },
+ {
+  "id": "thymosin-alpha-1",
+  "name": "Thymosin Alpha-1",
+  "category": "Immune & cellular health",
+  "kind": "Peptide",
+  "researchContext": "Immune research",
+  "formulations": "Formulation not specified",
+  "regions": [
+   {
+    "id": "FMA9607",
+    "name": "thymus",
+    "elements": [
+     "FJ3150",
+     "FJ3151"
+    ]
+   },
+   {
+    "id": "FMA7196",
+    "name": "spleen",
+    "elements": [
+     "FJ2561"
+    ]
+   }
+  ],
+  "title": "Immune modulation",
+  "mechanism": "Thymosin alpha-1 is investigated for effects on immune-cell function across different clinical and experimental settings.",
+  "pathway": [
+   "Thymosin alpha-1",
+   "Immune-cell signaling",
+   "Immune-response research"
+  ],
+  "scope": "Thymus and spleen are immune-system context; individual immune cells are not resolved in this model.",
+  "references": [
+   {
+    "pmid": "40599771",
+    "title": "Thymosin alpha 1 alleviates inflammation and prevents infection in patients with severe acute pancreatitis through immune regulation: a systematic review and meta-analysis.",
+    "authors": "Tian Y, Yao J, Ma Y, Zhang P, Zhou X, Xie W, Tang W.",
+    "journal": "Frontiers in immunology",
+    "year": "2025",
+    "doi": "10.3389/fimmu.2025.1571456",
+    "types": [
+     "Meta-Analysis",
+     "Systematic Review",
+     "systematic-review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40599771/"
+   },
+   {
+    "pmid": "39648386",
+    "title": "Thymosin Alpha 1 Plus Routine Treatment for the Acute Exacerbation of Chronic Obstructive Pulmonary Disease: A Systematic Review and Meta-Analysis.",
+    "authors": "Cao A, Feng F, Zhou X.",
+    "journal": "Journal of the College of Physicians and Surgeons--Pakistan : JCPSP",
+    "year": "2024",
+    "doi": "10.29271/jcpsp.2024.12.1497",
+    "types": [
+     "Meta-Analysis",
+     "Systematic Review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39648386/"
+   },
+   {
+    "pmid": "38308608",
+    "title": "Comprehensive Review of the Safety and Efficacy of Thymosin Alpha 1 in Human Clinical Trials.",
+    "authors": "Dinetz E, Lee E.",
+    "journal": "Alternative therapies in health and medicine",
+    "year": "2024",
+    "doi": "",
+    "types": [
+     "Systematic Review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38308608/"
+   }
+  ],
+  "searchQuery": "TITLE:\"thymosin alpha\" AND TITLE:review",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "thymosin-alpha-1"
+ },
+ {
+  "id": "mots-c",
+  "name": "MOTS-C",
+  "category": "Immune & cellular health",
+  "kind": "Mitochondrial peptide",
+  "researchContext": "Preclinical metabolic research",
+  "formulations": "Formulation not specified",
+  "regions": [
+   {
+    "id": "FMA7197",
+    "name": "liver",
+    "elements": [
+     "FJ1883",
+     "FJ1893",
+     "FJ1913",
+     "FJ1914",
+     "FJ1916",
+     "FJ2386",
+     "FJ2404",
+     "FJ2405",
+     "FJ2409",
+     "FJ2415",
+     "FJ2416",
+     "FJ2816",
+     "FJ2818",
+     "FJ2819",
+     "FJ2820",
+     "FJ2821",
+     "FJ2822",
+     "FJ2823",
+     "FJ2824",
+     "FJ3071",
+     "FJ3072",
+     "FJ3073",
+     "FJ3074",
+     "FJ3075",
+     "FJ3076",
+     "FJ3077",
+     "FJ3081",
+     "FJ3083",
+     "FJ3086",
+     "FJ3088",
+     "FJ3089",
+     "FJ3090",
+     "FJ3091",
+     "FJ3092",
+     "FJ3093",
+     "FJ3095",
+     "FJ3096",
+     "FJ3102",
+     "FJ3103",
+     "FJ3104",
+     "FJ3105",
+     "FJ3106",
+     "FJ3107",
+     "FJ3108",
+     "FJ3109",
+     "FJ3110",
+     "FJ3111",
+     "FJ3112",
+     "FJ3113",
+     "FJ3114",
+     "FJ3115",
+     "FJ3116",
+     "FJ3117",
+     "FJ3122",
+     "FJ3123",
+     "FJ3124",
+     "FJ3125",
+     "FJ3126",
+     "FJ3127",
+     "FJ3128"
+    ]
+   },
+   {
+    "id": "FMA32544",
+    "name": "right supraspinatus",
+    "elements": [
+     "FJ1506"
+    ]
+   }
+  ],
+  "title": "Cellular metabolic adaptation",
+  "mechanism": "A mitochondrial-encoded peptide investigated in cellular metabolism and insulin-sensitivity research.",
+  "pathway": [
+   "MOTS-c",
+   "Cellular metabolic signaling",
+   "Metabolic-adaptation research"
+  ],
+  "scope": "Organs locate the topic. Mitochondria are a different scale from the body geometry.",
+  "references": [
+   {
+    "pmid": "34798268",
+    "title": "The mitochondrial-derived peptide MOTS-c relieves hyperglycemia and insulin resistance in gestational diabetes mellitus.",
+    "authors": "Yin Y, Pan Y, He J, Zhong H, Wu Y, Ji C, Liu L, Cui X.",
+    "journal": "Pharmacological research",
+    "year": "2022",
+    "doi": "10.1016/j.phrs.2021.105987",
+    "types": [
+     "Research Support, Non-U.S. Gov't",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34798268/"
+   },
+   {
+    "pmid": "33394327",
+    "title": "Relationship between the mitochondria-derived peptide MOTS-c and insulin resistance in obstructive sleep apnea.",
+    "authors": "Baylan FA, Yarar E.",
+    "journal": "Sleep & breathing = Schlaf & Atmung",
+    "year": "2021",
+    "doi": "10.1007/s11325-020-02273-0",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33394327/"
+   },
+   {
+    "pmid": "30788534",
+    "title": "MOTS-c: an equal opportunity insulin sensitizer.",
+    "authors": "Kim SJ, Miller B, Kumagai H, Yen K, Cohen P.",
+    "journal": "Journal of molecular medicine (Berlin, Germany)",
+    "year": "2019",
+    "doi": "10.1007/s00109-019-01758-0",
+    "types": [
+     "Letter",
+     "Research Support, Non-U.S. Gov't",
+     "research-article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30788534/"
+   },
+   {
+    "pmid": "33722744",
+    "title": "MOTS-c interacts synergistically with exercise intervention to regulate PGC-1α expression, attenuate insulin resistance and enhance glucose metabolism in mice via AMPK signaling pathway.",
+    "authors": "Yang B, Yu Q, Chang B, Guo Q, Xu S, Yi X, Cao S.",
+    "journal": "Biochimica et biophysica acta. Molecular basis of disease",
+    "year": "2021",
+    "doi": "10.1016/j.bbadis.2021.166126",
+    "types": [
+     "Research Support, Non-U.S. Gov't",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33722744/"
+   }
+  ],
+  "searchQuery": "TITLE:\"MOTS-c\" AND (TITLE:metabolism OR TITLE:insulin) AND FIRST_PDATE:[2010-01-01 TO 2021-12-31]",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "mots-c"
+ },
+ {
+  "id": "epithalon",
+  "name": "Epithalon",
+  "category": "Immune & cellular health",
+  "kind": "Peptide",
+  "researchContext": "Cellular & preclinical research",
+  "formulations": "Formulation not specified",
+  "regions": [
+   {
+    "id": "FMA62033",
+    "name": "pineal body",
+    "elements": [
+     "FJ1795"
+    ]
+   },
+   {
+    "id": "FMA50801",
+    "name": "brain",
+    "elements": [
+     "FJ1730",
+     "FJ1731",
+     "FJ1732",
+     "FJ1733",
+     "FJ1738",
+     "FJ1739",
+     "FJ1740",
+     "FJ1743",
+     "FJ1744",
+     "FJ1745",
+     "FJ1746",
+     "FJ1747",
+     "FJ1748",
+     "FJ1749",
+     "FJ1750",
+     "FJ1751",
+     "FJ1758",
+     "FJ1759",
+     "FJ1760",
+     "FJ1762",
+     "FJ1767",
+     "FJ1769",
+     "FJ1770",
+     "FJ1775",
+     "FJ1779",
+     "FJ1780",
+     "FJ1781",
+     "FJ1783",
+     "FJ1784",
+     "FJ1785",
+     "FJ1786",
+     "FJ1787",
+     "FJ1788",
+     "FJ1789",
+     "FJ1790",
+     "FJ1791",
+     "FJ1792",
+     "FJ1795",
+     "FJ1797",
+     "FJ1798",
+     "FJ1800",
+     "FJ1801",
+     "FJ1806",
+     "FJ1807",
+     "FJ1808",
+     "FJ1810",
+     "FJ1814",
+     "FJ1817",
+     "FJ1822",
+     "FJ1826",
+     "FJ1828",
+     "FJ1830",
+     "FJ1831",
+     "FJ1833",
+     "FJ1834",
+     "FJ1835",
+     "FJ1836",
+     "FJ1841",
+     "FJ1842"
+    ]
+   }
+  ],
+  "title": "Telomere & neuroendocrine research",
+  "mechanism": "Epitalon, also called Epithalon, is investigated in telomere biology and neuroendocrine models.",
+  "pathway": [
+   "Epitalon",
+   "Cellular & neuroendocrine pathways",
+   "Telomere research"
+  ],
+  "scope": "Cell-line findings do not measure a person’s lifespan or whole-body biological age.",
+  "references": [
+   {
+    "pmid": "40141333",
+    "title": "Overview of Epitalon-Highly Bioactive Pineal Tetrapeptide with Promising Properties.",
+    "authors": "Araj SK, Brzezik J, Mądra-Gackowska K, Szeleszczuk Ł.",
+    "journal": "International journal of molecular sciences",
+    "year": "2025",
+    "doi": "10.3390/ijms26062691",
+    "types": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40141333/"
+   },
+   {
+    "pmid": "40908429",
+    "title": "Epitalon increases telomere length in human cell lines through telomerase upregulation or ALT activity.",
+    "authors": "Al-Dulaimi S, Thomas R, Matta S, Roberts T.",
+    "journal": "Biogerontology",
+    "year": "2025",
+    "doi": "10.1007/s10522-025-10315-x",
+    "types": [
+     "Research Support, Non-U.S. Gov't",
+     "research-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40908429/"
+   }
+  ],
+  "searchQuery": "TITLE_ABS:epitalon OR TITLE_ABS:epithalon",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "epitalon"
+ },
+ {
+  "id": "nad",
+  "name": "NAD+",
+  "category": "Immune & cellular health",
+  "kind": "Coenzyme",
+  "researchContext": "Metabolic & translational research",
+  "formulations": "Formulation not specified",
+  "regions": [
+   {
+    "id": "FMA7197",
+    "name": "liver",
+    "elements": [
+     "FJ1883",
+     "FJ1893",
+     "FJ1913",
+     "FJ1914",
+     "FJ1916",
+     "FJ2386",
+     "FJ2404",
+     "FJ2405",
+     "FJ2409",
+     "FJ2415",
+     "FJ2416",
+     "FJ2816",
+     "FJ2818",
+     "FJ2819",
+     "FJ2820",
+     "FJ2821",
+     "FJ2822",
+     "FJ2823",
+     "FJ2824",
+     "FJ3071",
+     "FJ3072",
+     "FJ3073",
+     "FJ3074",
+     "FJ3075",
+     "FJ3076",
+     "FJ3077",
+     "FJ3081",
+     "FJ3083",
+     "FJ3086",
+     "FJ3088",
+     "FJ3089",
+     "FJ3090",
+     "FJ3091",
+     "FJ3092",
+     "FJ3093",
+     "FJ3095",
+     "FJ3096",
+     "FJ3102",
+     "FJ3103",
+     "FJ3104",
+     "FJ3105",
+     "FJ3106",
+     "FJ3107",
+     "FJ3108",
+     "FJ3109",
+     "FJ3110",
+     "FJ3111",
+     "FJ3112",
+     "FJ3113",
+     "FJ3114",
+     "FJ3115",
+     "FJ3116",
+     "FJ3117",
+     "FJ3122",
+     "FJ3123",
+     "FJ3124",
+     "FJ3125",
+     "FJ3126",
+     "FJ3127",
+     "FJ3128"
+    ]
+   },
+   {
+    "id": "FMA50801",
+    "name": "brain",
+    "elements": [
+     "FJ1730",
+     "FJ1731",
+     "FJ1732",
+     "FJ1733",
+     "FJ1738",
+     "FJ1739",
+     "FJ1740",
+     "FJ1743",
+     "FJ1744",
+     "FJ1745",
+     "FJ1746",
+     "FJ1747",
+     "FJ1748",
+     "FJ1749",
+     "FJ1750",
+     "FJ1751",
+     "FJ1758",
+     "FJ1759",
+     "FJ1760",
+     "FJ1762",
+     "FJ1767",
+     "FJ1769",
+     "FJ1770",
+     "FJ1775",
+     "FJ1779",
+     "FJ1780",
+     "FJ1781",
+     "FJ1783",
+     "FJ1784",
+     "FJ1785",
+     "FJ1786",
+     "FJ1787",
+     "FJ1788",
+     "FJ1789",
+     "FJ1790",
+     "FJ1791",
+     "FJ1792",
+     "FJ1795",
+     "FJ1797",
+     "FJ1798",
+     "FJ1800",
+     "FJ1801",
+     "FJ1806",
+     "FJ1807",
+     "FJ1808",
+     "FJ1810",
+     "FJ1814",
+     "FJ1817",
+     "FJ1822",
+     "FJ1826",
+     "FJ1828",
+     "FJ1830",
+     "FJ1831",
+     "FJ1833",
+     "FJ1834",
+     "FJ1835",
+     "FJ1836",
+     "FJ1841",
+     "FJ1842"
+    ]
+   }
+  ],
+  "title": "Energy metabolism & redox",
+  "mechanism": "NAD+ is a coenzyme involved in redox reactions and enzyme systems associated with cellular maintenance.",
+  "pathway": [
+   "NAD+",
+   "Redox & enzyme reactions",
+   "Cellular energy metabolism"
+  ],
+  "scope": "NAD+, NAD+ precursors, and administration routes are distinct interventions in the research.",
+  "references": [
+   {
+    "pmid": "42489969",
+    "title": "NAD⁺ biology and supplementation: From mechanisms to clinical perspectives.",
+    "authors": "Pandolfi S, Ghezzi C, Björklund G, Metalla M, Paone FM, Chirumbolo S.",
+    "journal": "Molecular biology reports",
+    "year": "2026",
+    "doi": "10.1007/s11033-026-12351-3",
+    "types": [
+     "review-article",
+     "Review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42489969/"
+   },
+   {
+    "pmid": "41704678",
+    "title": "Intravenous infusion of nicotinamide adenine dinucleotide (NAD+) versus nicotinamide riboside (NR): a retrospective tolerability pilot study in a real-world setting.",
+    "authors": "Reyna K, Heinzen G, Patel N, Ritter M, Siojo A, Legere H, Pojednic R.",
+    "journal": "Frontiers in aging",
+    "year": "2026",
+    "doi": "10.3389/fragi.2026.1652582",
+    "types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41704678/"
+   }
+  ],
+  "searchQuery": "TITLE_ABS:\"NAD+\" AND (supplementation OR infusion) AND human",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "nad-injectable"
+ },
+ {
+  "id": "ss-31",
+  "name": "SS-31 / Elamipretide",
+  "category": "Immune & cellular health",
+  "kind": "Mitochondrial peptide",
+  "researchContext": "Human trials · Barth syndrome",
+  "formulations": "Formulation not specified",
+  "regions": [
+   {
+    "id": "FMA7088",
+    "name": "heart",
+    "elements": [
+     "FJ2417",
+     "FJ2418",
+     "FJ2419",
+     "FJ2420",
+     "FJ2421",
+     "FJ2422",
+     "FJ2423",
+     "FJ2424",
+     "FJ2425",
+     "FJ2426",
+     "FJ2427",
+     "FJ2429",
+     "FJ2430",
+     "FJ2431",
+     "FJ2432",
+     "FJ2433",
+     "FJ2434",
+     "FJ2435",
+     "FJ2436",
+     "FJ2437",
+     "FJ2438",
+     "FJ2439",
+     "FJ2631",
+     "FJ2632",
+     "FJ2633",
+     "FJ2634",
+     "FJ2635",
+     "FJ2636",
+     "FJ2637",
+     "FJ2638",
+     "FJ2639",
+     "FJ2640",
+     "FJ2641",
+     "FJ2642",
+     "FJ2643",
+     "FJ2644",
+     "FJ2645",
+     "FJ2646",
+     "FJ2647",
+     "FJ2648",
+     "FJ2649",
+     "FJ2650",
+     "FJ2651",
+     "FJ2652",
+     "FJ2653",
+     "FJ2654",
+     "FJ2655",
+     "FJ2656",
+     "FJ2667",
+     "FJ2668",
+     "FJ2670",
+     "FJ2671",
+     "FJ2672",
+     "FJ2673",
+     "FJ2674",
+     "FJ2675",
+     "FJ2676",
+     "FJ2677",
+     "FJ2692",
+     "FJ2693",
+     "FJ2694",
+     "FJ2695",
+     "FJ2696",
+     "FJ2697",
+     "FJ2698",
+     "FJ2699",
+     "FJ2700",
+     "FJ2714",
+     "FJ2715",
+     "FJ2716",
+     "FJ2717",
+     "FJ2718",
+     "FJ2719",
+     "FJ2720",
+     "FJ2721",
+     "FJ2722",
+     "FJ2723",
+     "FJ2724",
+     "FJ2727",
+     "FJ2728",
+     "FJ2729",
+     "FJ2731",
+     "FJ2737"
+    ]
+   },
+   {
+    "id": "FMA32544",
+    "name": "right supraspinatus",
+    "elements": [
+     "FJ1506"
+    ]
+   }
+  ],
+  "title": "Mitochondrial membrane research",
+  "mechanism": "Elamipretide targets mitochondrial membrane biology and has been studied in Barth syndrome and other specific conditions.",
+  "pathway": [
+   "Elamipretide",
+   "Cardiolipin-associated membrane biology",
+   "Mitochondrial-function research"
+  ],
+  "scope": "Heart and muscle provide tissue context; mitochondrial membranes are not body-scale anatomy.",
+  "references": [
+   {
+    "pmid": "33077895",
+    "title": "A phase 2/3 randomized clinical trial followed by an open-label extension to evaluate the effectiveness of elamipretide in Barth syndrome, a genetic disorder of mitochondrial cardiolipin metabolism.",
+    "authors": "Reid Thompson W, Hornby B, Manuel R, Bradley E, Laux J, Carr J, Vernon HJ.",
+    "journal": "Genetics in medicine : official journal of the American College of Medical Genetics",
+    "year": "2021",
+    "doi": "10.1038/s41436-020-01006-8",
+    "types": [
+     "Clinical Trial, Phase III",
+     "Clinical Trial, Phase II",
+     "Research Support, Non-U.S. Gov't",
+     "research-article",
+     "Randomized Controlled Trial",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33077895/"
+   }
+  ],
+  "searchQuery": "TITLE:elamipretide AND TITLE:Barth AND TITLE:trial",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "ss-31"
+ },
+ {
+  "id": "semax",
+  "name": "Semax",
+  "category": "Brain & sleep",
+  "kind": "Peptide",
+  "researchContext": "Preclinical neurobiology",
+  "formulations": "Nasal",
+  "regions": [
+   {
+    "id": "FMA50801",
+    "name": "brain",
+    "elements": [
+     "FJ1730",
+     "FJ1731",
+     "FJ1732",
+     "FJ1733",
+     "FJ1738",
+     "FJ1739",
+     "FJ1740",
+     "FJ1743",
+     "FJ1744",
+     "FJ1745",
+     "FJ1746",
+     "FJ1747",
+     "FJ1748",
+     "FJ1749",
+     "FJ1750",
+     "FJ1751",
+     "FJ1758",
+     "FJ1759",
+     "FJ1760",
+     "FJ1762",
+     "FJ1767",
+     "FJ1769",
+     "FJ1770",
+     "FJ1775",
+     "FJ1779",
+     "FJ1780",
+     "FJ1781",
+     "FJ1783",
+     "FJ1784",
+     "FJ1785",
+     "FJ1786",
+     "FJ1787",
+     "FJ1788",
+     "FJ1789",
+     "FJ1790",
+     "FJ1791",
+     "FJ1792",
+     "FJ1795",
+     "FJ1797",
+     "FJ1798",
+     "FJ1800",
+     "FJ1801",
+     "FJ1806",
+     "FJ1807",
+     "FJ1808",
+     "FJ1810",
+     "FJ1814",
+     "FJ1817",
+     "FJ1822",
+     "FJ1826",
+     "FJ1828",
+     "FJ1830",
+     "FJ1831",
+     "FJ1833",
+     "FJ1834",
+     "FJ1835",
+     "FJ1836",
+     "FJ1841",
+     "FJ1842"
+    ]
+   },
+   {
+    "id": "FMA62493",
+    "name": "hippocampus",
+    "elements": [
+     "FJ1759",
+     "FJ1807"
+    ]
+   }
+  ],
+  "title": "Neurotrophic signaling research",
+  "mechanism": "Semax is studied in experimental neurobiology, including neurotrophic-factor and brain-injury pathways.",
+  "pathway": [
+   "Semax",
+   "Neurotrophic signaling research",
+   "Neural-function models"
+  ],
+  "scope": "Brain regions provide context; this scene does not predict cognitive performance.",
+  "references": [
+   {
+    "pmid": "19662538",
+    "title": "Comparison of the temporary dynamics of NGF and BDNF gene expression in rat hippocampus, frontal cortex, and retina under Semax action.",
+    "authors": "Shadrina M, Kolomin T, Agapova T, Agniullin Y, Shram S, Slominsky P, Lymborska S, Myasoedov N.",
+    "journal": "Journal of molecular neuroscience : MN",
+    "year": "2010",
+    "doi": "10.1007/s12031-009-9270-z",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/19662538/"
+   },
+   {
+    "pmid": "16996037",
+    "title": "Semax, an analog of ACTH(4-10) with cognitive effects, regulates BDNF and trkB expression in the rat hippocampus.",
+    "authors": "Dolotov OV, Karpenko EA, Inozemtseva LS, Seredenina TS, Levitskaya NG, Rozyczka J, Dubynina EV, Novosadova EV, Andreeva LA, Alfeeva LY, Kamensky AA, Grivennikov IA, Myasoedov NF, Engele J.",
+    "journal": "Brain research",
+    "year": "2006",
+    "doi": "10.1016/j.brainres.2006.07.108",
+    "types": [
+     "Research Support, Non-U.S. Gov't",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16996037/"
+   },
+   {
+    "pmid": "14556513",
+    "title": "The heptapeptide SEMAX stimulates BDNF expression in different areas of the rat brain in vivo.",
+    "authors": "Dolotov OV, Seredenina TS, Levitskaya NG, Kamensky AA, Andreeva LA, Alfeeva LY, Nagaev IY, Zolotarev YA, Grivennikov IA, Engele Y, Myasoedov NF.",
+    "journal": "Doklady biological sciences : proceedings of the Academy of Sciences of the USSR, Biological sciences sections",
+    "year": "2003",
+    "doi": "10.1023/a:1025177812262",
+    "types": [
+     "Research Support, Non-U.S. Gov't",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/14556513/"
+   }
+  ],
+  "searchQuery": "TITLE:Semax AND TITLE:BDNF",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "semax"
+ },
+ {
+  "id": "selank",
+  "name": "Selank",
+  "category": "Brain & sleep",
+  "kind": "Peptide",
+  "researchContext": "Neuropharmacology research",
+  "formulations": "Nasal",
+  "regions": [
+   {
+    "id": "FMA50801",
+    "name": "brain",
+    "elements": [
+     "FJ1730",
+     "FJ1731",
+     "FJ1732",
+     "FJ1733",
+     "FJ1738",
+     "FJ1739",
+     "FJ1740",
+     "FJ1743",
+     "FJ1744",
+     "FJ1745",
+     "FJ1746",
+     "FJ1747",
+     "FJ1748",
+     "FJ1749",
+     "FJ1750",
+     "FJ1751",
+     "FJ1758",
+     "FJ1759",
+     "FJ1760",
+     "FJ1762",
+     "FJ1767",
+     "FJ1769",
+     "FJ1770",
+     "FJ1775",
+     "FJ1779",
+     "FJ1780",
+     "FJ1781",
+     "FJ1783",
+     "FJ1784",
+     "FJ1785",
+     "FJ1786",
+     "FJ1787",
+     "FJ1788",
+     "FJ1789",
+     "FJ1790",
+     "FJ1791",
+     "FJ1792",
+     "FJ1795",
+     "FJ1797",
+     "FJ1798",
+     "FJ1800",
+     "FJ1801",
+     "FJ1806",
+     "FJ1807",
+     "FJ1808",
+     "FJ1810",
+     "FJ1814",
+     "FJ1817",
+     "FJ1822",
+     "FJ1826",
+     "FJ1828",
+     "FJ1830",
+     "FJ1831",
+     "FJ1833",
+     "FJ1834",
+     "FJ1835",
+     "FJ1836",
+     "FJ1841",
+     "FJ1842"
+    ]
+   },
+   {
+    "id": "FMA62493",
+    "name": "hippocampus",
+    "elements": [
+     "FJ1759",
+     "FJ1807"
+    ]
+   }
+  ],
+  "title": "Anxiety-related signaling research",
+  "mechanism": "Selank is studied for effects on neurochemical pathways associated with anxiety-related behavior.",
+  "pathway": [
+   "Selank",
+   "Neurochemical modulation",
+   "Anxiety-related research"
+  ],
+  "scope": "Anatomical highlighting represents the field of study rather than a precise distribution map.",
+  "references": [
+   {
+    "pmid": "34396551",
+    "title": "Sedative-Hypnotic Agents That Impact Gamma-Aminobutyric Acid Receptors: Focus on Flunitrazepam, Gamma-Hydroxybutyric Acid, Phenibut, and Selank.",
+    "authors": "Doyno CR, White CM.",
+    "journal": "Journal of clinical pharmacology",
+    "year": "2021",
+    "doi": "10.1002/jcph.1922",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34396551/"
+   },
+   {
+    "pmid": "30255741",
+    "title": "Peptide-based Anxiolytics: The Molecular Aspects of Heptapeptide Selank Biological Activity.",
+    "authors": "Vyunova TV, Andreeva L, Shevchenko K, Myasoedov N.",
+    "journal": "Protein and peptide letters",
+    "year": "2018",
+    "doi": "10.2174/0929866525666180925144642",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30255741/"
+   }
+  ],
+  "searchQuery": "TITLE_ABS:selank AND (GABA OR anxiety)",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "selank"
+ },
+ {
+  "id": "dsip",
+  "name": "DSIP",
+  "category": "Brain & sleep",
+  "kind": "Peptide",
+  "researchContext": "Sleep research",
+  "formulations": "Formulation not specified",
+  "regions": [
+   {
+    "id": "FMA50801",
+    "name": "brain",
+    "elements": [
+     "FJ1730",
+     "FJ1731",
+     "FJ1732",
+     "FJ1733",
+     "FJ1738",
+     "FJ1739",
+     "FJ1740",
+     "FJ1743",
+     "FJ1744",
+     "FJ1745",
+     "FJ1746",
+     "FJ1747",
+     "FJ1748",
+     "FJ1749",
+     "FJ1750",
+     "FJ1751",
+     "FJ1758",
+     "FJ1759",
+     "FJ1760",
+     "FJ1762",
+     "FJ1767",
+     "FJ1769",
+     "FJ1770",
+     "FJ1775",
+     "FJ1779",
+     "FJ1780",
+     "FJ1781",
+     "FJ1783",
+     "FJ1784",
+     "FJ1785",
+     "FJ1786",
+     "FJ1787",
+     "FJ1788",
+     "FJ1789",
+     "FJ1790",
+     "FJ1791",
+     "FJ1792",
+     "FJ1795",
+     "FJ1797",
+     "FJ1798",
+     "FJ1800",
+     "FJ1801",
+     "FJ1806",
+     "FJ1807",
+     "FJ1808",
+     "FJ1810",
+     "FJ1814",
+     "FJ1817",
+     "FJ1822",
+     "FJ1826",
+     "FJ1828",
+     "FJ1830",
+     "FJ1831",
+     "FJ1833",
+     "FJ1834",
+     "FJ1835",
+     "FJ1836",
+     "FJ1841",
+     "FJ1842"
+    ]
+   },
+   {
+    "id": "FMA62008",
+    "name": "hypothalamus",
+    "elements": [
+     "FJ1760",
+     "FJ1780",
+     "FJ1808",
+     "FJ1828"
+    ]
+   }
+  ],
+  "title": "Sleep physiology research",
+  "mechanism": "Delta sleep-inducing peptide has been investigated in sleep physiology and experimental neural models.",
+  "pathway": [
+   "DSIP",
+   "Sleep-regulation research",
+   "Sleep outcomes"
+  ],
+  "scope": "Sleep stages cannot be inferred from a body model; linked studies report their own measured outcomes.",
+  "references": [
+   {
+    "pmid": "3622582",
+    "title": "Effects of delta-sleep-inducing peptide on 24-hour sleep-wake behaviour in severe chronic insomnia.",
+    "authors": "Schneider-Helmert D.",
+    "journal": "European neurology",
+    "year": "1987",
+    "doi": "10.1159/000116143",
+    "types": [
+     "Controlled Clinical Trial",
+     "Clinical Trial",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/3622582/"
+   },
+   {
+    "pmid": "3582201",
+    "title": "[The use of DSIP (delta sleep-inducing peptide) in the correction of phase-shifted insomnia].",
+    "authors": "Schneider-Helmert D, Hermann E, Schoenenberger GA.",
+    "journal": "Deutsche medizinische Wochenschrift (1946)",
+    "year": "1987",
+    "doi": "10.1055/s-2008-1068167",
+    "types": [
+     "Journal Article",
+     "English Abstract",
+     "Case Reports"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/3582201/"
+   }
+  ],
+  "searchQuery": "TITLE:\"delta sleep-inducing peptide\" AND TITLE:insomnia",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": null
+ },
+ {
+  "id": "foxo4-dri",
+  "name": "FOXO4-DRI",
+  "category": "Immune & cellular health",
+  "kind": "Experimental peptide",
+  "researchContext": "Cellular & animal research",
+  "formulations": "Formulation not specified",
+  "regions": [
+   {
+    "id": "FMA7163",
+    "name": "skin",
+    "elements": [
+     "FJ2810"
+    ]
+   },
+   {
+    "id": "FMA7197",
+    "name": "liver",
+    "elements": [
+     "FJ1883",
+     "FJ1893",
+     "FJ1913",
+     "FJ1914",
+     "FJ1916",
+     "FJ2386",
+     "FJ2404",
+     "FJ2405",
+     "FJ2409",
+     "FJ2415",
+     "FJ2416",
+     "FJ2816",
+     "FJ2818",
+     "FJ2819",
+     "FJ2820",
+     "FJ2821",
+     "FJ2822",
+     "FJ2823",
+     "FJ2824",
+     "FJ3071",
+     "FJ3072",
+     "FJ3073",
+     "FJ3074",
+     "FJ3075",
+     "FJ3076",
+     "FJ3077",
+     "FJ3081",
+     "FJ3083",
+     "FJ3086",
+     "FJ3088",
+     "FJ3089",
+     "FJ3090",
+     "FJ3091",
+     "FJ3092",
+     "FJ3093",
+     "FJ3095",
+     "FJ3096",
+     "FJ3102",
+     "FJ3103",
+     "FJ3104",
+     "FJ3105",
+     "FJ3106",
+     "FJ3107",
+     "FJ3108",
+     "FJ3109",
+     "FJ3110",
+     "FJ3111",
+     "FJ3112",
+     "FJ3113",
+     "FJ3114",
+     "FJ3115",
+     "FJ3116",
+     "FJ3117",
+     "FJ3122",
+     "FJ3123",
+     "FJ3124",
+     "FJ3125",
+     "FJ3126",
+     "FJ3127",
+     "FJ3128"
+    ]
+   }
+  ],
+  "title": "Cellular senescence research",
+  "mechanism": "FOXO4-DRI is investigated for disruption of FOXO4–p53 interactions in senescent-cell models.",
+  "pathway": [
+   "FOXO4–p53 interaction",
+   "Experimental senolytic mechanism",
+   "Senescent-cell research"
+  ],
+  "scope": "Tissues provide context. No senescent-cell count or biological-age change is inferred.",
+  "references": [
+   {
+    "pmid": "41625068",
+    "title": "FOXO4-DRI regulates endothelial cell senescence via the P53 signaling pathway.",
+    "authors": "Hu Z, Li F, Hu C, Shan Q, Tang Z, Jiang M, Yi X, Chen X, Jin L, Wang X, Wang Y.",
+    "journal": "Frontiers in bioengineering and biotechnology",
+    "year": "2025",
+    "doi": "10.3389/fbioe.2025.1729166",
+    "types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41625068/"
+   },
+   {
+    "pmid": "40593617",
+    "title": "The disordered p53 transactivation domain is the target of FOXO4 and the senolytic compound FOXO4-DRI.",
+    "authors": "Bourgeois B, Spreitzer E, Platero-Rochart D, Paar M, Zhou Q, Usluer S, de Keizer PLJ, Burgering BMT, Sánchez-Murcia PA, Madl T.",
+    "journal": "Nature communications",
+    "year": "2025",
+    "doi": "10.1038/s41467-025-60844-9",
+    "types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40593617/"
+   },
+   {
+    "pmid": "42024235",
+    "title": "Targeting the FOXO4-p53 axis by retro-inverso peptide senolytic agents: a pharmacological strategy to mitigate brain aging and cognitive decline.",
+    "authors": "Alameen AAM, Al-Kuraishy HM, Fawzy MN, Batiha GE.",
+    "journal": "Naunyn-Schmiedeberg's archives of pharmacology",
+    "year": "2026",
+    "doi": "10.1007/s00210-026-05309-6",
+    "types": [
+     "Review",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42024235/"
+   }
+  ],
+  "searchQuery": "TITLE_ABS:\"FOXO4-DRI\"",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": null
+ },
+ {
+  "id": "vip",
+  "name": "VIP",
+  "category": "Immune & cellular health",
+  "kind": "Peptide hormone",
+  "researchContext": "Receptor & physiology research",
+  "formulations": "Nasal",
+  "regions": [
+   {
+    "id": "FMA7208",
+    "name": "ileum",
+    "elements": [
+     "FJ2574",
+     "FJ2575",
+     "FJ2576",
+     "FJ2577",
+     "FJ2578",
+     "FJ2579",
+     "FJ2580",
+     "FJ2581",
+     "FJ2582",
+     "FJ2583",
+     "FJ2584",
+     "FJ2585",
+     "FJ2586",
+     "FJ2587",
+     "FJ2588",
+     "FJ2589",
+     "FJ2590",
+     "FJ2591",
+     "FJ2592",
+     "FJ2593",
+     "FJ2594",
+     "FJ2595",
+     "FJ2596",
+     "FJ2597",
+     "FJ2598",
+     "FJ2599",
+     "FJ2600",
+     "FJ2601",
+     "FJ2602",
+     "FJ2603",
+     "FJ2604",
+     "FJ2605"
+    ]
+   },
+   {
+    "id": "FMA7309",
+    "name": "right lung",
+    "elements": [
+     "FJ2041",
+     "FJ2044",
+     "FJ2449",
+     "FJ2451",
+     "FJ2452",
+     "FJ2453",
+     "FJ2454",
+     "FJ2455",
+     "FJ2456",
+     "FJ2457",
+     "FJ2458",
+     "FJ2459",
+     "FJ2470",
+     "FJ2481",
+     "FJ2486",
+     "FJ2487",
+     "FJ2488",
+     "FJ2489",
+     "FJ2490",
+     "FJ2491",
+     "FJ2492",
+     "FJ2493",
+     "FJ2494",
+     "FJ2495",
+     "FJ2496",
+     "FJ2497",
+     "FJ2498",
+     "FJ2499",
+     "FJ2500",
+     "FJ2501",
+     "FJ2502",
+     "FJ2503",
+     "FJ2504",
+     "FJ2505",
+     "FJ2506",
+     "FJ2507",
+     "FJ2508",
+     "FJ2509",
+     "FJ2510",
+     "FJ2511",
+     "FJ2512",
+     "FJ2513",
+     "FJ2514",
+     "FJ2515",
+     "FJ2516",
+     "FJ2517",
+     "FJ2518",
+     "FJ2519",
+     "FJ2520",
+     "FJ2521",
+     "FJ2522",
+     "FJ2523",
+     "FJ2524",
+     "FJ2525",
+     "FJ2526",
+     "FJ2967",
+     "FJ2968",
+     "FJ2969",
+     "FJ2970",
+     "FJ2971",
+     "FJ2972",
+     "FJ2973",
+     "FJ2974",
+     "FJ2975",
+     "FJ2976",
+     "FJ2977",
+     "FJ2978",
+     "FJ2979",
+     "FJ2980",
+     "FJ2981",
+     "FJ2982",
+     "FJ2983",
+     "FJ2984",
+     "FJ2985",
+     "FJ2986",
+     "FJ2987",
+     "FJ2988",
+     "FJ2989",
+     "FJ2990",
+     "FJ2991",
+     "FJ2992",
+     "FJ2993",
+     "FJ2994",
+     "FJ2995",
+     "FJ2996",
+     "FJ2997",
+     "FJ2998",
+     "FJ2999",
+     "FJ3000",
+     "FJ3001",
+     "FJ3002",
+     "FJ3003",
+     "FJ3004",
+     "FJ3005",
+     "FJ3006",
+     "FJ3007",
+     "FJ3008",
+     "FJ3009",
+     "FJ3010",
+     "FJ3011",
+     "FJ3012",
+     "FJ3013",
+     "FJ3014",
+     "FJ3015",
+     "FJ3016",
+     "FJ3017",
+     "FJ3018",
+     "FJ3021",
+     "FJ3022",
+     "FJ3023",
+     "FJ3024",
+     "FJ3025",
+     "FJ3026",
+     "FJ3027",
+     "FJ3028",
+     "FJ3029",
+     "FJ3030",
+     "FJ3031",
+     "FJ3032",
+     "FJ3033",
+     "FJ3034",
+     "FJ3035",
+     "FJ3036",
+     "FJ3037",
+     "FJ3038",
+     "FJ3039",
+     "FJ3041",
+     "FJ3042",
+     "FJ3043",
+     "FJ3044",
+     "FJ3045",
+     "FJ3046",
+     "FJ3047",
+     "FJ3048",
+     "FJ3049",
+     "FJ3050",
+     "FJ3051",
+     "FJ3052",
+     "FJ3053",
+     "FJ3054",
+     "FJ3055",
+     "FJ3056",
+     "FJ3057",
+     "FJ3058",
+     "FJ3059",
+     "FJ3060",
+     "FJ3061",
+     "FJ3062",
+     "FJ3063",
+     "FJ3064",
+     "FJ3065",
+     "FJ3066",
+     "FJ3067",
+     "FJ3068",
+     "FJ3069",
+     "FJ3070"
+    ]
+   },
+   {
+    "id": "FMA50801",
+    "name": "brain",
+    "elements": [
+     "FJ1730",
+     "FJ1731",
+     "FJ1732",
+     "FJ1733",
+     "FJ1738",
+     "FJ1739",
+     "FJ1740",
+     "FJ1743",
+     "FJ1744",
+     "FJ1745",
+     "FJ1746",
+     "FJ1747",
+     "FJ1748",
+     "FJ1749",
+     "FJ1750",
+     "FJ1751",
+     "FJ1758",
+     "FJ1759",
+     "FJ1760",
+     "FJ1762",
+     "FJ1767",
+     "FJ1769",
+     "FJ1770",
+     "FJ1775",
+     "FJ1779",
+     "FJ1780",
+     "FJ1781",
+     "FJ1783",
+     "FJ1784",
+     "FJ1785",
+     "FJ1786",
+     "FJ1787",
+     "FJ1788",
+     "FJ1789",
+     "FJ1790",
+     "FJ1791",
+     "FJ1792",
+     "FJ1795",
+     "FJ1797",
+     "FJ1798",
+     "FJ1800",
+     "FJ1801",
+     "FJ1806",
+     "FJ1807",
+     "FJ1808",
+     "FJ1810",
+     "FJ1814",
+     "FJ1817",
+     "FJ1822",
+     "FJ1826",
+     "FJ1828",
+     "FJ1830",
+     "FJ1831",
+     "FJ1833",
+     "FJ1834",
+     "FJ1835",
+     "FJ1836",
+     "FJ1841",
+     "FJ1842"
+    ]
+   }
+  ],
+  "title": "Vasoactive intestinal peptide",
+  "mechanism": "VIP signaling is studied across nervous, gastrointestinal, vascular, and immune physiology.",
+  "pathway": [
+   "VIP",
+   "VPAC receptor pathways",
+   "Multi-tissue physiology"
+  ],
+  "scope": "The presence of an endogenous pathway does not establish the effects of a nasal preparation.",
+  "references": [
+   {
+    "pmid": "39550744",
+    "title": "Vasoactive Intestinal Peptide (VIP) and its Receptors in Adipose Tissue: Implications for Cold Stress Adaptation.",
+    "authors": "Korkmaz OT, Saydam F, Dalkiran B, Değirmenci İ, Tunçel N.",
+    "journal": "Cell biochemistry and biophysics",
+    "year": "2025",
+    "doi": "10.1007/s12013-024-01606-0",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39550744/"
+   },
+   {
+    "pmid": "33849096",
+    "title": "Expression and function of vasoactive intestinal peptide receptors in human lower esophageal sphincter.",
+    "authors": "Jia T, Zhao N.",
+    "journal": "Annals of palliative medicine",
+    "year": "2021",
+    "doi": "10.21037/apm-21-193",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33849096/"
+   },
+   {
+    "pmid": "36387999",
+    "title": "Localization of the neuropeptides pituitary adenylate cyclase-activating polypeptide, vasoactive intestinal peptide, and their receptors in the basal brain blood vessels and trigeminal ganglion of the mouse CNS; an immunohistochemical study.",
+    "authors": "Lund AM, Hannibal J.",
+    "journal": "Frontiers in neuroanatomy",
+    "year": "2022",
+    "doi": "10.3389/fnana.2022.991403",
+    "types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36387999/"
+   }
+  ],
+  "searchQuery": "TITLE:\"vasoactive intestinal peptide\" AND TITLE:receptors",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": null
+ },
+ {
+  "id": "dihexa",
+  "name": "Dihexa",
+  "category": "Brain & sleep",
+  "kind": "Peptidomimetic",
+  "researchContext": "Preclinical neural research",
+  "formulations": "Capsules",
+  "regions": [
+   {
+    "id": "FMA62493",
+    "name": "hippocampus",
+    "elements": [
+     "FJ1759",
+     "FJ1807"
+    ]
+   },
+   {
+    "id": "FMA50801",
+    "name": "brain",
+    "elements": [
+     "FJ1730",
+     "FJ1731",
+     "FJ1732",
+     "FJ1733",
+     "FJ1738",
+     "FJ1739",
+     "FJ1740",
+     "FJ1743",
+     "FJ1744",
+     "FJ1745",
+     "FJ1746",
+     "FJ1747",
+     "FJ1748",
+     "FJ1749",
+     "FJ1750",
+     "FJ1751",
+     "FJ1758",
+     "FJ1759",
+     "FJ1760",
+     "FJ1762",
+     "FJ1767",
+     "FJ1769",
+     "FJ1770",
+     "FJ1775",
+     "FJ1779",
+     "FJ1780",
+     "FJ1781",
+     "FJ1783",
+     "FJ1784",
+     "FJ1785",
+     "FJ1786",
+     "FJ1787",
+     "FJ1788",
+     "FJ1789",
+     "FJ1790",
+     "FJ1791",
+     "FJ1792",
+     "FJ1795",
+     "FJ1797",
+     "FJ1798",
+     "FJ1800",
+     "FJ1801",
+     "FJ1806",
+     "FJ1807",
+     "FJ1808",
+     "FJ1810",
+     "FJ1814",
+     "FJ1817",
+     "FJ1822",
+     "FJ1826",
+     "FJ1828",
+     "FJ1830",
+     "FJ1831",
+     "FJ1833",
+     "FJ1834",
+     "FJ1835",
+     "FJ1836",
+     "FJ1841",
+     "FJ1842"
+    ]
+   }
+  ],
+  "title": "HGF-related neural research",
+  "mechanism": "Dihexa is investigated in preclinical neural and cognitive models, including growth-factor-associated signaling.",
+  "pathway": [
+   "Dihexa",
+   "Growth-factor-associated signaling",
+   "Neural research"
+  ],
+  "scope": "Highlighted brain anatomy provides context for experimental work.",
+  "references": [
+   {
+    "pmid": "34827486",
+    "title": "AngIV-Analog Dihexa Rescues Cognitive Impairment and Recovers Memory in the APP/PS1 Mouse via the PI3K/AKT Signaling Pathway.",
+    "authors": "Sun X, Deng Y, Fu X, Wang S, Duan R, Zhang Y.",
+    "journal": "Brain sciences",
+    "year": "2021",
+    "doi": "10.3390/brainsci11111487",
+    "types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34827486/"
+   },
+   {
+    "pmid": "34703584",
+    "title": "Stem cell, Granulocyte-Colony Stimulating Factor and/or Dihexa to promote limb function recovery in a rat sciatic nerve damage-repair model: Experimental animal studies.",
+    "authors": "Weiss JB, Phillips CJ, Malin EW, Gorantla VS, Harding JW, Salgar SK.",
+    "journal": "Annals of medicine and surgery (2012)",
+    "year": "2021",
+    "doi": "10.1016/j.amsu.2021.102917",
+    "types": [
+     "research-article",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34703584/"
+   }
+  ],
+  "searchQuery": "TITLE_ABS:dihexa",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": null
+ },
+ {
+  "id": "acetyl-hexapeptide-8",
+  "name": "Acetyl Hexapeptide-8",
+  "category": "Skin & hair",
+  "kind": "Cosmetic peptide",
+  "researchContext": "Topical cosmetic research",
+  "formulations": "Topical serum",
+  "regions": [
+   {
+    "id": "FMA7163",
+    "name": "skin",
+    "elements": [
+     "FJ2810"
+    ]
+   }
+  ],
+  "title": "Expression-line research",
+  "mechanism": "A cosmetic peptide studied in topical formulations for expression-line appearance and skin outcomes.",
+  "pathway": [
+   "Topical peptide",
+   "Formulation & skin delivery",
+   "Cosmetic-outcome research"
+  ],
+  "scope": "Skin is shown as anatomical context. The model does not include facial expression muscles or the SNARE machinery this peptide is studied against; those act at a scale below whole-body anatomy.",
+  "references": [
+   {
+    "pmid": "40673537",
+    "title": "Safety Assessment of Acetyl Hexapeptide-8 Amide as Used in Cosmetics.",
+    "authors": "Johnson W, Bergfeld WF, Belsito DV, Cohen DE, Klaassen CD, Liebler DC, Marks JG, Peterson LA, Shank RC, Slaga TJ, Snyder PW, Fiume M, Heldreth B.",
+    "journal": "International journal of toxicology",
+    "year": "2025",
+    "doi": "10.1177/10915818251340391",
+    "types": [
+     "Research Support, Non-U.S. Gov't",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40673537/"
+   },
+   {
+    "pmid": "42084412",
+    "title": "Ex Vivo Evaluation of Skin Permeability Enhancement Using TargetCool in Human-Derived Skin Tissue Models.",
+    "authors": "Yi KH, Kim JH, Heo CY, Seo SB, Kim GH.",
+    "journal": "The Journal of craniofacial surgery",
+    "year": "2026",
+    "doi": "10.1097/scs.0000000000012829",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42084412/"
+   },
+   {
+    "pmid": "40196949",
+    "title": "Acetyl Hexapeptide-8 as a Topical Alternative to Botulinum Toxin: A Review of the Literature.",
+    "authors": "Lum K, M Hirpara M, Pham C, Nguyen M, Mesinkovska N.",
+    "journal": "Journal of drugs in dermatology : JDD",
+    "year": "2025",
+    "doi": "",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40196949/"
+   }
+  ],
+  "searchQuery": "TITLE_ABS:\"acetyl hexapeptide\"",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": null
+ },
+ {
+  "id": "ru58841",
+  "name": "RU58841",
+  "category": "Skin & hair",
+  "kind": "Nonsteroidal antiandrogen",
+  "researchContext": "Preclinical hair research",
+  "formulations": "Topical formulation",
+  "regions": [
+   {
+    "id": "FMA7163",
+    "name": "skin",
+    "elements": [
+     "FJ2810"
+    ]
+   },
+   {
+    "id": "FMA54241",
+    "name": "hair of head",
+    "elements": [
+     "FJ2813"
+    ]
+   }
+  ],
+  "title": "Androgen-receptor research",
+  "mechanism": "RU58841 is an experimental nonsteroidal antiandrogen studied in hair-growth and androgen-receptor models.",
+  "pathway": [
+   "RU58841",
+   "Androgen receptor antagonism",
+   "Hair-follicle research"
+  ],
+  "scope": "Skin appendages provide anatomical context; individual scalp follicles are not segmented.",
+  "references": [
+   {
+    "pmid": "9798729",
+    "title": "Evaluation of RU58841 as an anti-androgen in prostate PC3 cells and a topical anti-alopecia agent in the bald scalp of stumptailed macaques.",
+    "authors": "Pan HJ, Wilding G, Uno H, Inui S, Goldsmith L, Messing E, Chang C.",
+    "journal": "Endocrine",
+    "year": "1998",
+    "doi": "10.1385/endo:9:1:39",
+    "types": [
+     "Research Support, U.S. Gov't, P.H.S.",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/9798729/"
+   },
+   {
+    "pmid": "9415227",
+    "title": "A controlled study of the effects of RU58841, a non-steroidal antiandrogen, on human hair production by balding scalp grafts maintained on testosterone-conditioned nude mice.",
+    "authors": "De Brouwer B, Tételin C, Leroy T, Bonfils A, Van Neste D.",
+    "journal": "The British journal of dermatology",
+    "year": "1997",
+    "doi": "10.1111/j.1365-2133.1997.tb01104.x",
+    "types": [
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/9415227/"
+   }
+  ],
+  "searchQuery": "TITLE_ABS:RU58841",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": null
+ },
+ {
+  "id": "trt",
+  "name": "Testosterone / TRT",
+  "category": "Hormonal & reproductive",
+  "kind": "Hormone therapy",
+  "researchContext": "Human trials & guidelines",
+  "formulations": "Formulation-specific",
+  "regions": [
+   {
+    "id": "FMA7210",
+    "name": "testis",
+    "elements": [
+     "FJ3138",
+     "FJ3142"
+    ]
+   },
+   {
+    "id": "FMA13889",
+    "name": "pituitary gland",
+    "elements": [
+     "FJ1796"
+    ]
+   },
+   {
+    "id": "FMA32544",
+    "name": "right supraspinatus",
+    "elements": [
+     "FJ1506"
+    ]
+   },
+   {
+    "id": "FMA9611",
+    "name": "femur",
+    "elements": [
+     "FJ3259",
+     "FJ3365"
+    ]
+   }
+  ],
+  "title": "Androgen signaling & feedback",
+  "mechanism": "Testosterone therapy interacts with androgen signaling across tissues and with endocrine feedback.",
+  "pathway": [
+   "Exogenous testosterone",
+   "Androgen signaling & feedback",
+   "Muscle, bone & reproductive context"
+  ],
+  "scope": "Research populations, formulations, clinical outcomes, and monitoring are specified in the sources.",
+  "references": [
+   {
+    "pmid": "37326322",
+    "title": "Cardiovascular Safety of Testosterone-Replacement Therapy.",
+    "authors": "Lincoff AM, Bhasin S, Flevaris P, Mitchell LM, Basaria S, Boden WE, Cunningham GR, Granger CB, Khera M, Thompson IM, Wang Q, Wolski K, Davey D, Kalahasti V, Khan N, Miller MG, Snabes MC, Chan A, Dubcenco E, Li X, Yi T, Huang B, Pencina KM, Travison TG, Nissen SE, TRAVERSE Study Investigators.",
+    "journal": "The New England journal of medicine",
+    "year": "2023",
+    "doi": "10.1056/nejmoa2215025",
+    "types": [
+     "Equivalence Trial",
+     "Research Support, Non-U.S. Gov't",
+     "Multicenter Study",
+     "Randomized Controlled Trial",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37326322/"
+   },
+   {
+    "pmid": "29562364",
+    "title": "Testosterone Therapy in Men With Hypogonadism: An Endocrine Society Clinical Practice Guideline.",
+    "authors": "Bhasin S, Brito JP, Cunningham GR, Hayes FJ, Hodis HN, Matsumoto AM, Snyder PJ, Swerdloff RS, Wu FC, Yialamas MA.",
+    "journal": "The Journal of clinical endocrinology and metabolism",
+    "year": "2018",
+    "doi": "10.1210/jc.2018-00229",
+    "types": [
+     "Research Support, Non-U.S. Gov't",
+     "Practice Guideline",
+     "Journal Article"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29562364/"
+   },
+   {
+    "pmid": "26886521",
+    "title": "Effects of Testosterone Treatment in Older Men.",
+    "authors": "Snyder PJ, Bhasin S, Cunningham GR, Matsumoto AM, Stephens-Shields AJ, Cauley JA, Gill TM, Barrett-Connor E, Swerdloff RS, Wang C, Ensrud KE, Lewis CE, Farrar JT, Cella D, Rosen RC, Pahor M, Crandall JP, Molitch ME, Cifelli D, Dougar D, Fluharty L, Resnick SM, Storer TW, Anton S, Basaria S, Diem SJ, Hou X, Mohler ER, Parsons JK, Wenger NK, Zeldow B, Landis JR, Ellenberg SS, Testosterone Trials Investigators.",
+    "journal": "The New England journal of medicine",
+    "year": "2016",
+    "doi": "10.1056/nejmoa1506119",
+    "types": [
+     "Research Support, N.I.H., Intramural",
+     "Research Support, Non-U.S. Gov't",
+     "research-article",
+     "Multicenter Study",
+     "Randomized Controlled Trial",
+     "Journal Article",
+     "Research Support, N.I.H., Extramural"
+    ],
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26886521/"
+   }
+  ],
+  "searchQuery": "EXT_ID:29562364 OR EXT_ID:26886521 OR EXT_ID:37326322",
+  "retrieved": "2026-09-08",
+  "treatmentSlug": "trt"
+ }
+]

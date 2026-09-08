@@ -15,7 +15,7 @@ function hasLightTop(p: string): boolean {
  if (p.startsWith("/explore/") && p !== "/explore") return true;
  if (p === "/treatments/methodology") return true;
  if (p.startsWith("/treatments/compare/") && p !== "/treatments/compare") return true;
- if (p === "/wellness-checker") return true;
+ if (p === "/wellness-checker" || p === "/body") return true;
  if (p.startsWith("/peptides/") && p !== "/peptides") return true;
  return false;
 }
@@ -24,6 +24,7 @@ type DiscoverLink = { href: string; label: string; desc: string };
 type DiscoverGroup = { label: string; href?: string; items: DiscoverLink[] };
 
 const DISCOVER_GROUPS: DiscoverGroup[] = [
+ { label: "The Body", href: "/body", items: [{ href: "/body", label: "Interactive Explorer", desc: "Peptides, hormones, anatomy & research" }] },
  {
  label: "Treatments",
  href: "/treatments",

@@ -4,11 +4,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import { Toaster } from "sonner";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import SmoothScroll from "@/components/SmoothScroll";
+import SiteFrame from "@/components/SiteFrame";
 import StackProviderWrapper from "@/components/StackProviderWrapper";
-import StackShell from "@/components/stack/StackShell";
 import { I18nProvider } from "@/lib/i18n";
 import "./globals.css";
 
@@ -141,16 +138,11 @@ export default function RootLayout({
  </Script>
  </head>
  <body className={`${playfair.variable} ${inter.variable} ${plexArabic.variable} antialiased`}>
- <SmoothScroll>
  <I18nProvider>
  <StackProviderWrapper>
- <Navigation />
- <main>{children}</main>
- <Footer />
- <StackShell />
+ <SiteFrame>{children}</SiteFrame>
  </StackProviderWrapper>
  </I18nProvider>
- </SmoothScroll>
  <Toaster position="bottom-center" closeButton richColors theme="light" />
  <Analytics />
  <SpeedInsights />
