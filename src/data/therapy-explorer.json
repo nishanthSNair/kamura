@@ -90,7 +90,14 @@
    "image": "/molecules/bpc-157.png"
   },
   "kamuraScore": 85,
-  "evidenceLevel": "Strong"
+  "evidenceLevel": "Strong",
+  "verdict": "Compelling in rodents, beloved by athletes — real human trials are only just starting.",
+  "goals": [
+   "recover",
+   "gut"
+  ],
+  "uaeAvailable": true,
+  "costEstimate": "AED 400-1,200/month"
  },
  {
   "id": "tb-500",
@@ -174,7 +181,13 @@
    "image": "/molecules/tb-500.png"
   },
   "kamuraScore": 71,
-  "evidenceLevel": "Moderate"
+  "evidenceLevel": "Moderate",
+  "verdict": "Animal wound-healing data only; human evidence is essentially absent.",
+  "goals": [
+   "recover"
+  ],
+  "uaeAvailable": true,
+  "costEstimate": "AED 500-1,500/month"
  },
  {
   "id": "ghk-cu",
@@ -256,7 +269,14 @@
    "image": "/molecules/ghk-cu.png"
   },
   "kamuraScore": 76,
-  "evidenceLevel": "Moderate"
+  "evidenceLevel": "Moderate",
+  "verdict": "Legit topically for skin and hair; injected use runs far ahead of the evidence.",
+  "goals": [
+   "skin",
+   "recover"
+  ],
+  "uaeAvailable": true,
+  "costEstimate": "AED 200-900/month"
  },
  {
   "id": "kpv",
@@ -393,7 +413,13 @@
    "image": "/molecules/kpv.png"
   },
   "kamuraScore": 63,
-  "evidenceLevel": "Emerging"
+  "evidenceLevel": "Emerging",
+  "verdict": "Promising gut-inflammation science — entirely preclinical so far.",
+  "goals": [
+   "gut"
+  ],
+  "uaeAvailable": true,
+  "costEstimate": "AED 400-1,000/month"
  },
  {
   "id": "ll-37",
@@ -495,7 +521,14 @@
    "image": "/molecules/ll-37.png"
   },
   "kamuraScore": null,
-  "evidenceLevel": null
+  "evidenceLevel": null,
+  "verdict": "A real piece of your immune system; as an injected therapy it's still experimental.",
+  "goals": [
+   "immunity",
+   "gut"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": null
  },
  {
   "id": "cjc-ipamorelin",
@@ -654,7 +687,14 @@
    "image": "/molecules/cjc-ipamorelin.png"
   },
   "kamuraScore": 74,
-  "evidenceLevel": "Moderate"
+  "evidenceLevel": "Moderate",
+  "verdict": "Each half has human data; the famous stack itself has never been trialed.",
+  "goals": [
+   "recover",
+   "fat"
+  ],
+  "uaeAvailable": true,
+  "costEstimate": "AED 800-2,000/month"
  },
  {
   "id": "ipamorelin",
@@ -771,7 +811,13 @@
    "image": "/molecules/ipamorelin.png"
   },
   "kamuraScore": null,
-  "evidenceLevel": null
+  "evidenceLevel": null,
+  "verdict": "Clean GH pulses in early trials — development stopped before long-term answers.",
+  "goals": [
+   "recover"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": null
  },
  {
   "id": "sermorelin",
@@ -888,7 +934,13 @@
    "image": "/molecules/sermorelin.png"
   },
   "kamuraScore": null,
-  "evidenceLevel": null
+  "evidenceLevel": null,
+  "verdict": "A well-characterized former prescription drug; modest, physiologic effects.",
+  "goals": [
+   "recover"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": null
  },
  {
   "id": "tesamorelin",
@@ -1081,7 +1133,13 @@
    "image": "/molecules/tesamorelin.png"
   },
   "kamuraScore": 73,
-  "evidenceLevel": "Strong"
+  "evidenceLevel": "Strong",
+  "verdict": "FDA-approved for visceral fat in HIV lipodystrophy — unproven in healthy adults.",
+  "goals": [
+   "fat"
+  ],
+  "uaeAvailable": true,
+  "costEstimate": "AED 1,500-3,500/month"
  },
  {
   "id": "aod-9604",
@@ -1249,7 +1307,13 @@
    "image": "/molecules/aod-9604.png"
   },
   "kamuraScore": 40,
-  "evidenceLevel": "Limited"
+  "evidenceLevel": "Limited",
+  "verdict": "Safe in human trials, but it barely moved the scale. Mostly marketing now.",
+  "goals": [
+   "fat"
+  ],
+  "uaeAvailable": true,
+  "costEstimate": "AED 500-1,200/month"
  },
  {
   "id": "igf-lr3",
@@ -1378,7 +1442,13 @@
   "what": "A lab-modified, long-acting version of IGF-1 — the growth factor your liver makes in response to growth hormone.",
   "molecule": null,
   "kamuraScore": null,
-  "evidenceLevel": null
+  "evidenceLevel": null,
+  "verdict": "Potent growth signal, zero human trials, real theoretical cancer concern.",
+  "goals": [
+   "recover"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": null
  },
  {
   "id": "pt-141",
@@ -1530,7 +1600,13 @@
    "image": "/molecules/pt-141.png"
   },
   "kamuraScore": null,
-  "evidenceLevel": null
+  "evidenceLevel": null,
+  "verdict": "FDA-approved for low desire in women; works in the brain, nausea is common.",
+  "goals": [
+   "hormones"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": null
  },
  {
   "id": "kisspeptin-10",
@@ -1600,7 +1676,13 @@
    "image": "/molecules/kisspeptin-10.png"
   },
   "kamuraScore": null,
-  "evidenceLevel": null
+  "evidenceLevel": null,
+  "verdict": "A fascinating human physiology tool; not yet a therapy.",
+  "goals": [
+   "hormones"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": null
  },
  {
   "id": "gonadorelin",
@@ -1701,7 +1783,13 @@
    "image": "/molecules/gonadorelin.png"
   },
   "kamuraScore": null,
-  "evidenceLevel": null
+  "evidenceLevel": null,
+  "verdict": "A decades-old clinical molecule; sensible alongside TRT to protect fertility.",
+  "goals": [
+   "hormones"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": null
  },
  {
   "id": "thymosin-alpha-1",
@@ -1790,7 +1878,14 @@
    "image": "/molecules/thymosin-alpha-1.png"
   },
   "kamuraScore": 77,
-  "evidenceLevel": "Strong"
+  "evidenceLevel": "Strong",
+  "verdict": "Approved in 30+ countries as an immune adjuvant; longevity claims outrun the data.",
+  "goals": [
+   "immunity",
+   "longevity"
+  ],
+  "uaeAvailable": true,
+  "costEstimate": "AED 500-1500/month"
  },
  {
   "id": "mots-c",
@@ -1947,7 +2042,14 @@
    "image": "/molecules/mots-c.png"
   },
   "kamuraScore": 62,
-  "evidenceLevel": "Emerging"
+  "evidenceLevel": "Emerging",
+  "verdict": "Exciting exercise-mimetic biology — one small human trial so far.",
+  "goals": [
+   "longevity",
+   "fat"
+  ],
+  "uaeAvailable": true,
+  "costEstimate": "AED 800-2,500/month"
  },
  {
   "id": "epithalon",
@@ -2079,7 +2181,14 @@
    "image": "/molecules/epithalon.png"
   },
   "kamuraScore": 55,
-  "evidenceLevel": "Emerging"
+  "evidenceLevel": "Emerging",
+  "verdict": "A Soviet-era longevity legend; modern verification never arrived.",
+  "goals": [
+   "longevity",
+   "sleep"
+  ],
+  "uaeAvailable": true,
+  "costEstimate": "AED 1,000-3,000/cycle (10-20 day cycle, 1-2x/year)"
  },
  {
   "id": "nad",
@@ -2269,7 +2378,14 @@
    "image": "/molecules/nad.png"
   },
   "kamuraScore": 62,
-  "evidenceLevel": "Moderate"
+  "evidenceLevel": "Moderate",
+  "verdict": "The biology is real; whether IVs beat cheap oral precursors is unproven.",
+  "goals": [
+   "longevity",
+   "mind"
+  ],
+  "uaeAvailable": true,
+  "costEstimate": "AED 1,500–4,000/infusion (250-1000mg)"
  },
  {
   "id": "ss-31",
@@ -2414,7 +2530,13 @@
    "image": "/molecules/ss-31.png"
   },
   "kamuraScore": 59,
-  "evidenceLevel": "Emerging"
+  "evidenceLevel": "Emerging",
+  "verdict": "A serious clinical-stage mitochondrial drug with mixed but genuine trial results.",
+  "goals": [
+   "longevity"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": "AED 1,500-4,000/month"
  },
  {
   "id": "semax",
@@ -2557,7 +2679,13 @@
    "image": "/molecules/semax.png"
   },
   "kamuraScore": 58,
-  "evidenceLevel": "Emerging"
+  "evidenceLevel": "Emerging",
+  "verdict": "Standard of care in Russia, unproven by Western standards.",
+  "goals": [
+   "mind"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": "AED 300-900/month"
  },
  {
   "id": "selank",
@@ -2686,7 +2814,13 @@
    "image": "/molecules/selank.png"
   },
   "kamuraScore": 61,
-  "evidenceLevel": "Emerging"
+  "evidenceLevel": "Emerging",
+  "verdict": "Calms anxiety in Russian trials; independent replication is missing.",
+  "goals": [
+   "mind"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": "AED 300-800/month"
  },
  {
   "id": "dsip",
@@ -2821,7 +2955,13 @@
    "image": "/molecules/dsip.png"
   },
   "kamuraScore": null,
-  "evidenceLevel": null
+  "evidenceLevel": null,
+  "verdict": "Fifty years old and still mysterious — modest, inconsistent sleep effects.",
+  "goals": [
+   "sleep"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": null
  },
  {
   "id": "foxo4-dri",
@@ -2965,7 +3105,13 @@
    "image": "/molecules/foxo4-dri.png"
   },
   "kamuraScore": null,
-  "evidenceLevel": null
+  "evidenceLevel": null,
+  "verdict": "Spectacular in aged mice. No human has ever safely tested it.",
+  "goals": [
+   "longevity"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": null
  },
  {
   "id": "vip",
@@ -3299,7 +3445,14 @@
    "image": "/molecules/vip.png"
   },
   "kamuraScore": null,
-  "evidenceLevel": null
+  "evidenceLevel": null,
+  "verdict": "Real physiology everywhere in the body — which is exactly why dosing it is tricky.",
+  "goals": [
+   "immunity",
+   "gut"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": null
  },
  {
   "id": "dihexa",
@@ -3430,7 +3583,13 @@
    "image": "/molecules/dihexa.png"
   },
   "kamuraScore": null,
-  "evidenceLevel": null
+  "evidenceLevel": null,
+  "verdict": "Builds synapses in rodents; no human data at all. Handle with respect.",
+  "goals": [
+   "mind"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": null
  },
  {
   "id": "acetyl-hexapeptide-8",
@@ -3506,7 +3665,13 @@
    "image": "/molecules/acetyl-hexapeptide-8.png"
   },
   "kamuraScore": null,
-  "evidenceLevel": null
+  "evidenceLevel": null,
+  "verdict": "Real but modest wrinkle softening — nothing like actual Botox.",
+  "goals": [
+   "skin"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": null
  },
  {
   "id": "ru58841",
@@ -3577,7 +3742,13 @@
    "image": "/molecules/ru58841.png"
   },
   "kamuraScore": null,
-  "evidenceLevel": null
+  "evidenceLevel": null,
+  "verdict": "Abandoned by pharma, adopted by forums; quality-controlled data never came.",
+  "goals": [
+   "skin"
+  ],
+  "uaeAvailable": false,
+  "costEstimate": null
  },
  {
   "id": "trt",
@@ -3687,6 +3858,13 @@
    "image": "/molecules/trt.png"
   },
   "kamuraScore": 79,
-  "evidenceLevel": "Strong"
+  "evidenceLevel": "Strong",
+  "verdict": "The strongest human evidence on this page — for genuinely deficient men, with monitoring.",
+  "goals": [
+   "hormones",
+   "fat"
+  ],
+  "uaeAvailable": true,
+  "costEstimate": "AED 500-2,000/month"
  }
 ]

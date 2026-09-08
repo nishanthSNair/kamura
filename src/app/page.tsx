@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import TherapyExplorer from "@/components/body-explorer/TherapyExplorer";
 
 export const metadata: Metadata = {
-  title: "KAMURA — The Body, Connected",
+  title: "KAMURA — What Actually Works, Mapped to Your Body",
   description:
     "Explore what peptides and hormone therapies actually do inside the body. Real 3D anatomy (2,234 structures), molecular structures, honest mechanisms, and linked research — graded by the Kamura Score.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://kamuralife.com" },
   openGraph: {
-    title: "KAMURA — The Body, Connected",
+    title: "KAMURA — What Actually Works, Mapped to Your Body",
     description:
       "Select a therapy. See where it acts in real 3D anatomy, how it works, and what the research says.",
     url: "https://kamuralife.com",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "KAMURA — The Body, Connected",
+    title: "KAMURA — What Actually Works, Mapped to Your Body",
     description:
       "Explore what peptides and therapies actually do inside the body — real anatomy, real molecules, real research.",
     creator: "@KamuraLife",
