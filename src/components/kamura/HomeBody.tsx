@@ -6,7 +6,7 @@ import Link from 'next/link';
 import {DEFAULT_VISIBLE,type Atlas,type SceneState} from '../body-explorer/anatomy';
 import s from './Kamura.module.css';
 const Scene=dynamic(()=>import('../body-explorer/scene'),{ssr:false});
-const state:SceneState={visible:DEFAULT_VISIBLE,selected:[],isolate:false,explode:0,view:'front',rotate:false,reset:0};
+const state:SceneState={visible:DEFAULT_VISIBLE,selected:[],isolate:false,explode:0,view:'front',rotate:true,reset:0};
 export default function HomeBody(){
  const router=useRouter(),timer=useRef<ReturnType<typeof setTimeout>|null>(null);
  const [atlas,setAtlas]=useState<Atlas|null>(null),[progress,setProgress]=useState(0),[error,setError]=useState(''),[entering,setEntering]=useState(false);
@@ -16,5 +16,5 @@ export default function HomeBody(){
   if(progress<100||error||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   e.preventDefault();if(entering)return;setEntering(true);timer.current=setTimeout(()=>router.push('/body'),1600);
  }
- return <section className={`${s.immersiveHero} ${entering?s.entering:''}`} aria-label="Explore the human body"><Link href="/body" onClick={enter} className={s.bodyEntry} aria-label="Explore the human body — open interactive anatomy"><div className={s.heroCanvas}>{atlas&&<Scene atlas={atlas} state={state} showcase onSelect={()=>{}} onProgress={setProgress} onError={setError}/>}</div><div className={s.heroWhisper}><span>KAMURA · PREVENTION & LONGEVITY</span><h1>A world within.</h1><p>Touch the body to explore.</p></div><span className={s.heroIndex} aria-hidden="true">THE HUMAN BODY<br/>01 / EXPLORE</span></Link>{(progress<100||error)&&<p className={s.heroLoading} role="status">{error||`Preparing your view · ${progress}%`}</p>}{entering&&<span className={s.heroLoading} role="status">Entering the body explorer…</span>}</section>;
+ return <section className={`${s.immersiveHero} ${entering?s.entering:''}`} aria-label="Explore the human body"><Link href="/body" onClick={enter} className={s.bodyEntry} aria-label="Explore the human body — open interactive anatomy"><div className={s.heroCanvas}>{atlas&&<Scene atlas={atlas} state={{...state,rotate:!entering}} showcase onSelect={()=>{}} onProgress={setProgress} onError={setError}/>}</div><div className={s.heroWhisper}><span>KAMURA · PREVENTION & LONGEVITY</span><h1>A world within.</h1><p>Touch the body to explore.</p></div><span className={s.heroIndex} aria-hidden="true">THE HUMAN BODY<br/>01 / EXPLORE</span></Link>{(progress<100||error)&&<p className={s.heroLoading} role="status">{error||`Preparing your view · ${progress}%`}</p>}{entering&&<span className={s.heroLoading} role="status">Entering the body explorer…</span>}</section>;
 }
