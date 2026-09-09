@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import {usePathname} from 'next/navigation';
 import {useEffect,useRef,useState} from 'react';
 import {Menu,Search,X,ArrowUpRight} from 'lucide-react';
@@ -14,7 +15,7 @@ export default function Navigation(){
  useEffect(()=>{const key=(e:KeyboardEvent)=>{if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();setSearch(true);}if(e.key==='Escape'){setOpen(false);toggle.current?.focus();}};document.addEventListener('keydown',key);return()=>document.removeEventListener('keydown',key);},[]);
  const active=(item:typeof links[number])=>pathname===item.href||pathname.startsWith(item.href+'/')||item.paths?.some(p=>pathname.startsWith(p));
  return <><a className={s.skip} href="#main-content">Skip to content</a><header className={s.nav}>
- <Link href="/" className={s.wordmark} onClick={()=>setOpen(false)}><span className={s.symbol} aria-hidden="true">✳</span>KAMURA<span className={s.brandNote}>LIVE WELL. LONGER.</span></Link>
+ <Link href="/" className={s.wordmark} onClick={()=>setOpen(false)}><Image src="/logo-symbol.svg" alt="" width={52} height={44} className={s.realLogo}/>KAMURA<span className={s.brandNote}>ROOTED IN WELLNESS</span></Link>
  <nav className={s.desktopNav} aria-label="Main navigation">{links.map(item=><Link key={item.href} href={item.href} aria-current={active(item)?'page':undefined}>{label(item.label)}</Link>)}</nav>
  <div className={s.navActions}><div className={s.language}><LanguageToggle solid/></div><button aria-label="Search Kamura" onClick={()=>setSearch(true)}><Search size={19}/></button><Link className={s.account} href="/my">{lang==='ar'?'كامورا الخاص بي':'My Kamura'} <ArrowUpRight size={15}/></Link><button ref={toggle} className={s.menuButton} aria-label={open?'Close navigation':'Open navigation'} aria-expanded={open} aria-controls="kamura-mobile-nav" onClick={()=>setOpen(v=>!v)}>{open?<X/>:<Menu/>}</button></div>
  {open&&<nav id="kamura-mobile-nav" className={s.mobileNav} aria-label="Mobile navigation">{links.map(item=><Link key={item.href} href={item.href} aria-current={active(item)?'page':undefined} onClick={()=>setOpen(false)}>{label(item.label)}<ArrowUpRight size={18}/></Link>)}<Link href="/my" onClick={()=>setOpen(false)}>{lang==='ar'?'كامورا الخاص بي':'My Kamura'} <ArrowUpRight size={18}/></Link><LanguageToggle solid/></nav>}

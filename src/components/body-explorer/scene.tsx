@@ -86,7 +86,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,sh
   (async()=>{try{let cursor=0;await Promise.all(Array.from({length:3},async()=>{while(cursor<atlas.chunks.length){const i=cursor++;await loadChunk(i);}}));if(!disposed){ready=true;dirty=true;}}catch(e){if(!disposed)onError(e instanceof Error?e.message:'Could not load the anatomy.');}})();
   const viewingArea=()=>{
    const w=el.clientWidth,h=el.clientHeight,mobile=w<=650;
-   if(showcase)return {left:20,right:w-20,top:45,bottom:h-90};
+   if(showcase)return {left:20,right:w-20,top:25,bottom:h-(w<=650?155:35)};
    const left=w>1100?310:w>950?268:16;
    const right=latest.current.inspectorOpen&&!mobile?w-(w>1100?384:336):w-16;
    const sheet=mobile&&latest.current.inspectorOpen?document.querySelector('.detail-sheet')?.getBoundingClientRect():null;
@@ -151,7 +151,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,sh
     if(camera.position.distanceToSquared(cameraGoal.position)+controls.target.distanceToSquared(cameraGoal.target)<1e-8){camera.position.copy(cameraGoal.position);controls.target.copy(cameraGoal.target);cameraGoal=null;}
     dirty=true;
    }
-   controls.enableRotate=!showcase&&amount<.8;controls.mouseButtons.LEFT=amount<.8?T.MOUSE.ROTATE:T.MOUSE.PAN;controls.touches.ONE=amount<.8?T.TOUCH.ROTATE:T.TOUCH.PAN;ground.visible=platform.visible=ring.visible=innerRing.visible=amount<.5&&!s.isolate;markers.visible=amount>.75;controls.autoRotate=s.rotate&&!reducedMotion.matches&&!cameraGoal&&!s.isolate&&amount<.4;controls.autoRotateSpeed=.65;controls.update();if(controls.autoRotate)dirty=true;
+   controls.enableRotate=!showcase&&amount<.8;controls.mouseButtons.LEFT=amount<.8?T.MOUSE.ROTATE:T.MOUSE.PAN;controls.touches.ONE=amount<.8?T.TOUCH.ROTATE:T.TOUCH.PAN;ground.visible=platform.visible=ring.visible=innerRing.visible=!showcase&&amount<.5&&!s.isolate;markers.visible=amount>.75;controls.autoRotate=s.rotate&&!reducedMotion.matches&&!cameraGoal&&!s.isolate&&amount<.4;controls.autoRotateSpeed=.65;controls.update();if(controls.autoRotate)dirty=true;
    if(dirty){renderer.render(scene,camera);targets=[];if(amount>.45){const hasSolid=atlas.parts.some((p,i)=>p.system!=='integumentary'&&data[i*4+3]>.5);atlas.parts.forEach((p,i)=>{if(data[i*4+3]<.5||(hasSolid&&p.system==='integumentary'))return;let left=Infinity,right=-Infinity,top=Infinity,bottom=-Infinity;for(let corner=0;corner<8;corner++){projected.set(p.bounds[(corner&1)?1:0][0]+data[i*4],p.bounds[(corner&2)?1:0][1]+data[i*4+1],p.bounds[(corner&4)?1:0][2]+data[i*4+2]).project(camera);const x=(projected.x+1)*el.clientWidth/2,y=(1-projected.y)*el.clientHeight/2;left=Math.min(left,x);right=Math.max(right,x);top=Math.min(top,y);bottom=Math.max(bottom,y);}projected.copy(centers[i]).add(new T.Vector3(data[i*4],data[i*4+1],data[i*4+2])).project(camera);if(projected.z< -1||projected.z>1)return;targets.push({index:i,x:(projected.x+1)*el.clientWidth/2,y:(1-projected.y)*el.clientHeight/2,left,right,top,bottom});});}dirty=false;}
 
   };animate();
