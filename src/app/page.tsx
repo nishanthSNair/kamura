@@ -4,7 +4,7 @@ import TherapyExplorer from "@/components/body-explorer/TherapyExplorer";
 export const metadata: Metadata = {
   title: "KAMURA — What Actually Works, Mapped to Your Body",
   description:
-    "Explore what peptides and hormone therapies actually do inside the body. Real 3D anatomy (2,234 structures), molecular structures, honest mechanisms, and linked research — graded by the Kamura Score.",
+    "Explore what peptides and hormone therapies actually do inside the body. Real 3D anatomy (2,234 structures), molecular structures, interactive mechanisms, guided learning and outcome-specific research.",
   keywords: [
     "peptides explained",
     "BPC-157",
