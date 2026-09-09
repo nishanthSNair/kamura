@@ -255,7 +255,7 @@ export default function SettingsPage() {
           <button
             onClick={saveProfile}
             disabled={saving}
-            className="px-6 py-3 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] disabled:opacity-50"
+            className="px-6 py-3 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] disabled:opacity-50"
           >
             {saving ? "Saving..." : "Save Changes"}
           </button>
@@ -273,7 +273,7 @@ export default function SettingsPage() {
           <h2 className="font-serif text-xl text-gray-900">Services</h2>
           <button
             onClick={() => setShowAddService(!showAddService)}
-            className="px-4 py-2 rounded-full bg-[#2a1612] text-white text-[10px] tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c]"
+            className="px-4 py-2 rounded-full bg-[#173C3B] text-white text-[10px] tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B]"
           >
             + Add Service
           </button>
@@ -361,7 +361,7 @@ export default function SettingsPage() {
               <button
                 onClick={addService}
                 disabled={!newService.name}
-                className="px-4 py-2 rounded-full bg-[#2a1612] text-white text-[10px] tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] disabled:opacity-50"
+                className="px-4 py-2 rounded-full bg-[#173C3B] text-white text-[10px] tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] disabled:opacity-50"
               >
                 Add
               </button>

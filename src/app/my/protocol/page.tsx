@@ -274,7 +274,7 @@ export default function ProtocolPage() {
         </div>
         <button
           onClick={() => isGuest ? setSignupOpen(true) : setShowAdd(true)}
-          className="px-5 py-2.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] transition-colors"
+          className="px-5 py-2.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] transition-colors"
         >
           + Add Item
         </button>
@@ -353,7 +353,7 @@ export default function ProtocolPage() {
             <button
               onClick={addItem}
               disabled={saving || !form.name}
-              className="px-5 py-2.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] disabled:opacity-50"
+              className="px-5 py-2.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] disabled:opacity-50"
             >
               {saving ? "Saving..." : "Add to protocol"}
             </button>
@@ -369,12 +369,12 @@ export default function ProtocolPage() {
 
       {loading ? (
         <div className="space-y-4">
-          <div className="h-10 bg-[#EDE7DB] rounded-xl animate-pulse w-1/2" />
+          <div className="h-10 bg-[#E7F3EB] rounded-xl animate-pulse w-1/2" />
           <div className="space-y-3">
             {[0, 1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="h-24 bg-[#EDE7DB] rounded-2xl animate-pulse"
+                className="h-24 bg-[#E7F3EB] rounded-2xl animate-pulse"
                 style={{ animationDelay: `${i * 60}ms` }}
               />
             ))}
@@ -388,7 +388,7 @@ export default function ProtocolPage() {
           </p>
           <button
             onClick={() => isGuest ? setSignupOpen(true) : setShowAdd(true)}
-            className="px-5 py-2.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans"
+            className="px-5 py-2.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans"
           >
             + Add First Item
           </button>

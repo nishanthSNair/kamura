@@ -55,8 +55,8 @@ function TreeNode({ node, depth }: { node: DecisionNode; depth: number }) {
   const accent = node.accent || (depth === 0 ? "root" : hasChildren ? "branch" : "leaf");
 
   const nodeStyles = {
-    root: "bg-[#1a0f0c] text-white border-[#2a1612]",
-    branch: "bg-[#EDE7DB] text-gray-900 border-gray-300/60",
+    root: "bg-[#173C3B] text-white border-[#173C3B]",
+    branch: "bg-[#E7F3EB] text-gray-900 border-gray-300/60",
     leaf: "bg-white text-gray-900 border-terracotta/30 hover:border-terracotta/70 hover:shadow-md",
   }[accent];
 

@@ -107,7 +107,7 @@ export default function ProviderDashboardLayout({
   return (
     <div className="min-h-screen bg-gray-50 flex">
       {/* Sidebar — desktop */}
-      <aside className="hidden lg:flex w-64 bg-[#1a0f0c] text-white flex-col fixed inset-y-0 left-0 z-40">
+      <aside className="hidden lg:flex w-64 bg-[#173C3B] text-white flex-col fixed inset-y-0 left-0 z-40">
         <div className="p-6 border-b border-white/10">
           <Link href="/" className="font-serif text-xl tracking-[0.15em]">
             KAMURA
@@ -154,7 +154,7 @@ export default function ProviderDashboardLayout({
       </aside>
 
       {/* Mobile header */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-[#1a0f0c] text-white px-4 py-3 flex items-center justify-between">
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-[#173C3B] text-white px-4 py-3 flex items-center justify-between">
         <Link href="/" className="font-serif text-lg tracking-[0.15em]">
           KAMURA
         </Link>
@@ -179,7 +179,7 @@ export default function ProviderDashboardLayout({
 
       {/* Mobile nav dropdown */}
       {mobileNavOpen && (
-        <div className="lg:hidden fixed inset-0 z-30 bg-[#1a0f0c]/95 pt-14">
+        <div className="lg:hidden fixed inset-0 z-30 bg-[#173C3B]/95 pt-14">
           <nav className="p-4 space-y-1">
             {NAV_ITEMS.map((item) => {
               const active =

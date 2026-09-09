@@ -1,9 +1,5 @@
-// Clinic listings archived 2026-05-10 — Kamura repositioned as a free utility
-// + media platform until commerce infrastructure is signed. Data preserved at
-// content/data/_archive/listings.json. To restore: move file back and revert
-// this import. Until then, `listings` is intentionally empty so /explore
-// stops surfacing clinics we are not affiliated with.
-const listingsData: { listings: Listing[] } = { listings: [] };
+// Existing public directory records. Listing does not imply affiliation or booking availability.
+import listingsData from '../../content/data/listings.json';
 
 export interface Listing {
  id: string;

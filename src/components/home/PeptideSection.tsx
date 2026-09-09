@@ -40,14 +40,14 @@ export default function PeptideSection() {
         }}
       />
       <div className="relative max-w-[1152px] mx-auto text-center">
-        <div className="text-[10px] font-semibold tracking-[0.32em] uppercase text-[#C4A882] mb-6">
+        <div className="text-[10px] font-semibold tracking-[0.32em] uppercase text-[#DCEC8B] mb-6">
           Pharmaceutical-grade · Coming soon
         </div>
         <h2
           className="font-serif font-medium leading-[1.05] tracking-[-0.015em] m-0 mb-6 mx-auto max-w-[16ch]"
           style={{ fontSize: "clamp(40px, 6vw, 84px)" }}
         >
-          You are written <i className="italic text-[#C4A882]">in peptides.</i>
+          You are written <i className="italic text-[#DCEC8B]">in peptides.</i>
         </h2>
         <p className="text-[17px] leading-[1.65] text-white/65 max-w-[520px] mx-auto mb-14">
           Licensed compounding partners. Compliantly sourced. A pharmacy layer built
@@ -59,7 +59,7 @@ export default function PeptideSection() {
 
         {submitted ? (
           <div className="mx-auto inline-flex gap-2 max-w-[440px] justify-center bg-white/5 border border-white/15 rounded-full px-6 py-3.5 backdrop-blur-md">
-            <span className="text-[#C4A882] text-[13px]">
+            <span className="text-[#DCEC8B] text-[13px]">
               ✓ You&rsquo;re on the waitlist. We&rsquo;ll be in touch before launch.
             </span>
           </div>
@@ -79,7 +79,7 @@ export default function PeptideSection() {
             />
             <button
               type="submit"
-              className="bg-[#B5736A] hover:bg-[#9A5F57] text-white border-0 rounded-full px-5 h-11 cursor-pointer text-[13px] font-medium transition-colors"
+              className="bg-[#00786E] hover:bg-[#005E57] text-white border-0 rounded-full px-5 h-11 cursor-pointer text-[13px] font-medium transition-colors"
             >
               Join waitlist
             </button>

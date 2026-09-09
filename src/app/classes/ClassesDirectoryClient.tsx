@@ -123,7 +123,7 @@ export default function ClassesDirectoryClient() {
       <div className="grid md:grid-cols-2 gap-4 mb-4">
         <Link
           href="/my/classes"
-          className="p-6 bg-[#2A2520] rounded-3xl hover:shadow-lg transition-all"
+          className="p-6 bg-[#173C3B] rounded-3xl hover:shadow-lg transition-all"
         >
           <h3 className="font-serif text-lg text-white mb-1">Track your practice →</h3>
           <p className="text-xs text-white/60 font-sans">
@@ -165,7 +165,7 @@ function FilterChip({
       className={`px-4 py-2 rounded-full text-xs font-sans font-semibold border transition-colors ${
         active
           ? subtle
-            ? "bg-[#2A2520] text-white border-[#2A2520]"
+            ? "bg-[#173C3B] text-white border-[#173C3B]"
             : "bg-terracotta text-white border-terracotta"
           : "bg-white text-gray-600 border-gray-200 hover:border-terracotta/50"
       }`}

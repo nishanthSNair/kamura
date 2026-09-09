@@ -32,9 +32,9 @@ export default function InteractiveBody({
 
  const isCompleted = (zone: BodyZone) => completedZones.includes(zone);
  const zoneColor = (zone: BodyZone) => {
- if (isCompleted(zone)) return "#B0BCA4"; // sage
- if (hoveredZone === zone) return "#B5736A"; // terracotta
- return "#B0BCA4"; // sage default
+ if (isCompleted(zone)) return "#AFD5C0"; // sage
+ if (hoveredZone === zone) return "#00786E"; // terracotta
+ return "#AFD5C0"; // sage default
  };
  const zoneOpacity = (zone: BodyZone) => {
  if (isCompleted(zone)) return 0.35;

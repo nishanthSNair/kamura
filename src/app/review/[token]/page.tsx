@@ -95,7 +95,7 @@ export default function ReviewSubmissionPage() {
           <p className="text-sm text-gray-500 font-sans mb-6">{error}</p>
           <Link
             href="/"
-            className="inline-block px-6 py-3 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans"
+            className="inline-block px-6 py-3 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans"
           >
             Back to Kamura
           </Link>
@@ -116,7 +116,7 @@ export default function ReviewSubmissionPage() {
           </p>
           <Link
             href={`/provider/${provider?.slug}`}
-            className="inline-block px-6 py-3 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans"
+            className="inline-block px-6 py-3 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans"
           >
             View provider
           </Link>
@@ -141,7 +141,7 @@ export default function ReviewSubmissionPage() {
           </p>
           <Link
             href={`/provider/${provider?.slug}`}
-            className="inline-block px-6 py-3 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans"
+            className="inline-block px-6 py-3 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans"
           >
             View provider
           </Link>
@@ -151,7 +151,7 @@ export default function ReviewSubmissionPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#EDE7DB] flex items-center justify-center px-6 py-20">
+    <div className="min-h-screen bg-[#E7F3EB] flex items-center justify-center px-6 py-20">
       <div className="w-full max-w-lg bg-white rounded-3xl p-8 md:p-10 shadow-lg">
         <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-sans mb-3">
           Rate Your Visit
@@ -198,8 +198,8 @@ export default function ReviewSubmissionPage() {
                     width="32"
                     height="32"
                     viewBox="0 0 24 24"
-                    fill={n <= rating ? "#B5736A" : "none"}
-                    stroke="#B5736A"
+                    fill={n <= rating ? "#00786E" : "none"}
+                    stroke="#00786E"
                     strokeWidth="1.5"
                   >
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
@@ -226,7 +226,7 @@ export default function ReviewSubmissionPage() {
         <button
           onClick={submit}
           disabled={!name || submitting}
-          className="w-full mt-8 px-6 py-3.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] disabled:opacity-50"
+          className="w-full mt-8 px-6 py-3.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] disabled:opacity-50"
         >
           {submitting ? "Submitting..." : "Submit Review"}
         </button>

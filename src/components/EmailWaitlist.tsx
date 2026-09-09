@@ -91,7 +91,7 @@ export default function EmailWaitlist({
         className={`mx-auto inline-flex items-center justify-center max-w-[440px] rounded-full px-6 py-3.5 text-[13.5px] ${
           isDark
             ? "bg-white/10 border border-white/25 text-white"
-            : "bg-white border border-[#2A2520]/10 text-[#2A2520]"
+            : "bg-white border border-[#173C3B]/10 text-[#173C3B]"
         } ${className}`}
       >
         <span>✓ {successMessage}</span>
@@ -109,7 +109,7 @@ export default function EmailWaitlist({
         className={`flex-1 flex rounded-full p-1.5 transition-colors ${
           isDark
             ? "bg-white/8 border border-white/20 focus-within:border-white/55"
-            : "bg-white border border-[#2A2520]/12 shadow-[0_2px_12px_-6px_rgba(42,37,32,0.08)] focus-within:border-[#2A2520]/40"
+            : "bg-white border border-[#173C3B]/12 shadow-[0_2px_12px_-6px_rgba(42,37,32,0.08)] focus-within:border-[#173C3B]/40"
         }`}
       >
         <input
@@ -122,7 +122,7 @@ export default function EmailWaitlist({
           className={`flex-1 bg-transparent border-0 outline-none text-[14px] px-4 ${
             isDark
               ? "text-white placeholder:text-white/45"
-              : "text-[#2A2520] placeholder:text-[#2A2520]/40"
+              : "text-[#173C3B] placeholder:text-[#173C3B]/40"
           }`}
         />
         <button
@@ -130,8 +130,8 @@ export default function EmailWaitlist({
           disabled={isSubmitting}
           className={`btn-hims shrink-0 disabled:opacity-60 disabled:cursor-not-allowed border-0 rounded-full px-5 h-10 text-[13px] font-sans font-semibold ${
             isDark
-              ? "bg-[#C4A882] hover:bg-[#B59872] text-[#2A2520]"
-              : "bg-[#2A2520] hover:bg-[#1A1612] text-white"
+              ? "bg-[#DCEC8B] hover:bg-[#B59872] text-[#173C3B]"
+              : "bg-[#173C3B] hover:bg-[#1A1612] text-white"
           }`}
         >
           {isSubmitting ? "…" : cta}

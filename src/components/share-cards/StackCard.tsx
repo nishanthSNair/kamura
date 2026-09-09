@@ -22,7 +22,7 @@ function ScoreDot({ score }: { score: number }) {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
       <div style={{ width: 10, height: 10, borderRadius: "50%", background: color }} />
-      <span style={{ fontSize: 20, fontWeight: 600, color: "#2A2520", fontFamily: "Inter, sans-serif" }}>
+      <span style={{ fontSize: 20, fontWeight: 600, color: "#173C3B", fontFamily: "Inter, sans-serif" }}>
         {score}
       </span>
     </div>
@@ -44,7 +44,7 @@ export default function StackCard({ treatments, averageScore }: StackCardProps) 
       style={{
         width: 1080,
         height: 1350,
-        background: "linear-gradient(180deg, #FAF7F2 0%, #F5F2ED 100%)",
+        background: "linear-gradient(180deg, #FAFCF7 0%, #F0F6EF 100%)",
         display: "flex",
         flexDirection: "column",
         padding: "80px 72px 40px",
@@ -57,7 +57,7 @@ export default function StackCard({ treatments, averageScore }: StackCardProps) 
         fontSize: 18,
         letterSpacing: "0.35em",
         textTransform: "uppercase" as const,
-        color: "#B5736A",
+        color: "#00786E",
         fontWeight: 600,
         marginBottom: 12,
       }}>
@@ -67,7 +67,7 @@ export default function StackCard({ treatments, averageScore }: StackCardProps) 
         fontSize: 48,
         fontFamily: "Playfair Display, serif",
         fontWeight: 700,
-        color: "#2A2520",
+        color: "#173C3B",
         lineHeight: 1.15,
         marginBottom: 48,
       }}>
@@ -110,7 +110,7 @@ export default function StackCard({ treatments, averageScore }: StackCardProps) 
                     borderRadius: 12,
                   }}
                 >
-                  <span style={{ fontSize: 22, fontWeight: 500, color: "#2A2520" }}>
+                  <span style={{ fontSize: 22, fontWeight: 500, color: "#173C3B" }}>
                     {t.name}
                   </span>
                   <ScoreDot score={t.kamuraScore} />
@@ -126,7 +126,7 @@ export default function StackCard({ treatments, averageScore }: StackCardProps) 
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        background: "#2A2520",
+        background: "#173C3B",
         borderRadius: 16,
         padding: "20px 28px",
         marginTop: 32,
@@ -137,7 +137,7 @@ export default function StackCard({ treatments, averageScore }: StackCardProps) 
           </p>
         </div>
         <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-          <span style={{ fontSize: 36, fontWeight: 700, color: "#FAF7F2", fontFamily: "Playfair Display, serif" }}>
+          <span style={{ fontSize: 36, fontWeight: 700, color: "#FAFCF7", fontFamily: "Playfair Display, serif" }}>
             {averageScore.toFixed(1)}
           </span>
           <span style={{ fontSize: 16, color: "rgba(250,247,242,0.5)" }}>/100</span>

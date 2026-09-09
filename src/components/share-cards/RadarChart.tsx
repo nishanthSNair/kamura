@@ -6,7 +6,7 @@ interface RadarChartProps {
 
 export default function RadarChart({
   dimensions,
-  color = "#B5736A",
+  color = "#00786E",
   size = 400,
 }: RadarChartProps) {
   const cx = size / 2;

@@ -94,7 +94,7 @@ export default function PeptideDirectoryContent() {
             onClick={() => setActiveGoal("")}
             className={`px-4 py-2 rounded-full text-sm font-medium font-sans transition-colors ${
               activeGoal === ""
-                ? "bg-[#B5736A] text-white"
+                ? "bg-[#00786E] text-white"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
             }`}
           >
@@ -108,7 +108,7 @@ export default function PeptideDirectoryContent() {
               }
               className={`px-4 py-2 rounded-full text-sm font-medium font-sans transition-colors ${
                 activeGoal === goal.id
-                  ? "bg-[#B5736A] text-white"
+                  ? "bg-[#00786E] text-white"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
@@ -140,13 +140,13 @@ export default function PeptideDirectoryContent() {
             placeholder="Search peptides by name, description, or tag..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 bg-white text-sm font-sans text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#B5736A]/30 focus:border-[#B5736A]"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 bg-white text-sm font-sans text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00786E]/30 focus:border-[#00786E]"
           />
         </div>
         <select
           value={sort}
           onChange={(e) => setSort(e.target.value as SortOption)}
-          className="px-4 py-2.5 rounded-xl border border-gray-200 bg-white text-sm font-sans text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#B5736A]/30 focus:border-[#B5736A]"
+          className="px-4 py-2.5 rounded-xl border border-gray-200 bg-white text-sm font-sans text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#00786E]/30 focus:border-[#00786E]"
         >
           {SORT_OPTIONS.map((opt) => (
             <option key={opt.value} value={opt.value}>
@@ -181,7 +181,7 @@ export default function PeptideDirectoryContent() {
               setActiveGoal("");
               setSearch("");
             }}
-            className="mt-4 text-[#B5736A] hover:text-[#9A5F57] font-medium font-sans text-sm underline underline-offset-2"
+            className="mt-4 text-[#00786E] hover:text-[#005E57] font-medium font-sans text-sm underline underline-offset-2"
           >
             Clear all filters
           </button>
@@ -210,12 +210,12 @@ function PeptideCard({ peptide }: { peptide: Treatment }) {
   return (
     <Link
       href={`/treatments/${peptide.slug}`}
-      className="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg hover:border-[#B5736A]/30 transition-all duration-200"
+      className="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg hover:border-[#00786E]/30 transition-all duration-200"
     >
       {/* Top row: name + score */}
       <div className="flex items-start justify-between gap-3 mb-3">
         <div className="min-w-0 flex-1">
-          <h3 className="font-serif text-lg font-semibold text-gray-900 group-hover:text-[#B5736A] transition-colors truncate">
+          <h3 className="font-serif text-lg font-semibold text-gray-900 group-hover:text-[#00786E] transition-colors truncate">
             {peptide.name}
           </h3>
           <span

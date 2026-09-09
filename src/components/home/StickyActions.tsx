@@ -12,7 +12,7 @@ export default function StickyActions() {
   }, []);
   return (
     <div
-      className={`fixed left-1/2 bottom-[22px] z-[60] -translate-x-1/2 flex gap-1.5 p-1.5 rounded-full border border-[#C4A882]/30 backdrop-blur-xl shadow-[0_20px_50px_-10px_rgba(0,0,0,0.7)] transition-all duration-500 ${
+      className={`fixed left-1/2 bottom-[22px] z-[60] -translate-x-1/2 flex gap-1.5 p-1.5 rounded-full border border-[#DCEC8B]/30 backdrop-blur-xl shadow-[0_20px_50px_-10px_rgba(0,0,0,0.7)] transition-all duration-500 ${
         show ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-5 pointer-events-none"
       }`}
       style={{ background: "rgba(16,25,16,0.78)" }}
@@ -31,7 +31,7 @@ export default function StickyActions() {
       </Link>
       <Link
         href="#peptides"
-        className="inline-flex items-center h-[38px] px-[18px] rounded-full text-[12.5px] font-medium bg-[#B5736A] hover:bg-[#9A5F57] text-white transition-colors"
+        className="inline-flex items-center h-[38px] px-[18px] rounded-full text-[12.5px] font-medium bg-[#00786E] hover:bg-[#005E57] text-white transition-colors"
       >
         Join peptides waitlist →
       </Link>

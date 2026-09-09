@@ -50,7 +50,7 @@ function PeptideCard({ slug, index }: { slug: string; index: number }) {
   return (
     <Link
       href={`/treatments/${peptide.slug}`}
-      className="group block rounded-3xl bg-[#F5EFE6] border border-[#2A2520]/8 overflow-hidden transition-all duration-500 hover:shadow-[0_24px_60px_-30px_rgba(42,37,32,0.25)] hover:-translate-y-1"
+      className="group block rounded-3xl bg-[#F5EFE6] border border-[#173C3B]/8 overflow-hidden transition-all duration-500 hover:shadow-[0_24px_60px_-30px_rgba(42,37,32,0.25)] hover:-translate-y-1"
     >
       <div className="relative aspect-square bg-gradient-to-br from-[#F5EFE6] to-[#E8DCC8]">
         <Image
@@ -65,11 +65,11 @@ function PeptideCard({ slug, index }: { slug: string; index: number }) {
         </div>
       </div>
 
-      <div className="px-6 pt-5 pb-6 border-t border-[#2A2520]/8 bg-white">
-        <h3 className="font-serif text-[22px] text-[#2A2520] leading-[1.15] mb-1.5 group-hover:text-terracotta transition-colors">
+      <div className="px-6 pt-5 pb-6 border-t border-[#173C3B]/8 bg-white">
+        <h3 className="font-serif text-[22px] text-[#173C3B] leading-[1.15] mb-1.5 group-hover:text-terracotta transition-colors">
           {peptide.name}
         </h3>
-        <p className="text-[12.5px] text-[#2A2520]/55 font-sans leading-relaxed line-clamp-2 mb-4">
+        <p className="text-[12.5px] text-[#173C3B]/55 font-sans leading-relaxed line-clamp-2 mb-4">
           {peptide.description}
         </p>
         <span className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.18em] uppercase text-terracotta font-sans font-semibold">
@@ -98,14 +98,14 @@ export default function CompoundedSection() {
               Kamura Compounded · Coming Soon
             </p>
             <h2
-              className="font-serif text-[#2A2520] leading-[1.02] tracking-[-0.015em] mb-7"
+              className="font-serif text-[#173C3B] leading-[1.02] tracking-[-0.015em] mb-7"
               style={{ fontSize: "clamp(40px, 5.4vw, 76px)" }}
             >
               Peptides,
               <br />
               <span className="italic text-terracotta">done right.</span>
             </h2>
-            <p className="text-[16.5px] text-[#2A2520]/70 font-sans leading-[1.65] mb-10 max-w-[480px]">
+            <p className="text-[16.5px] text-[#173C3B]/70 font-sans leading-[1.65] mb-10 max-w-[480px]">
               Pharmaceutical-grade peptides, compounded through licensed UAE
               pharmacy partners. No grey-market sourcing. No marketing claims.
               Just rigorously scored protocols and a pharmacy layer built into
@@ -119,7 +119,7 @@ export default function CompoundedSection() {
                 cta="Join the waitlist"
                 successMessage="You're on the list. We'll reach out before launch."
               />
-              <p className="mt-4 text-[10.5px] tracking-[0.18em] uppercase text-[#2A2520]/45 font-sans">
+              <p className="mt-4 text-[10.5px] tracking-[0.18em] uppercase text-[#173C3B]/45 font-sans">
                 Early access · {peptides.length} peptides · UAE compounding partners
               </p>
             </div>
@@ -137,10 +137,10 @@ export default function CompoundedSection() {
           <p className="text-[10px] tracking-[0.32em] uppercase text-terracotta font-sans font-semibold mb-5">
             The Catalog
           </p>
-          <h3 className="font-serif text-[#2A2520] text-3xl md:text-5xl leading-[1.08] mb-5">
+          <h3 className="font-serif text-[#173C3B] text-3xl md:text-5xl leading-[1.08] mb-5">
             Find your personalized protocol.
           </h3>
-          <p className="text-[15.5px] text-[#2A2520]/65 font-sans leading-relaxed">
+          <p className="text-[15.5px] text-[#173C3B]/65 font-sans leading-relaxed">
             Every peptide we&rsquo;ll offer at launch, organized by outcome.
             Tap any to read the mechanism, evidence, and dosing literature.
           </p>
@@ -148,16 +148,16 @@ export default function CompoundedSection() {
 
         {CATEGORIES.map((cat) => (
           <div key={cat.id}>
-            <div className="flex items-baseline justify-between mb-7 pb-5 border-b border-[#2A2520]/12">
+            <div className="flex items-baseline justify-between mb-7 pb-5 border-b border-[#173C3B]/12">
               <div>
-                <h4 className="font-serif text-2xl md:text-3xl text-[#2A2520] leading-tight">
+                <h4 className="font-serif text-2xl md:text-3xl text-[#173C3B] leading-tight">
                   {cat.title}
                 </h4>
-                <p className="text-[13px] text-[#2A2520]/55 font-sans mt-1.5">
+                <p className="text-[13px] text-[#173C3B]/55 font-sans mt-1.5">
                   {cat.blurb}
                 </p>
               </div>
-              <span className="hidden sm:inline-block text-[10px] tracking-[0.22em] uppercase text-[#2A2520]/40 font-sans font-semibold">
+              <span className="hidden sm:inline-block text-[10px] tracking-[0.22em] uppercase text-[#173C3B]/40 font-sans font-semibold">
                 {cat.slugs.filter((s) => peptides.find((p) => p.slug === s)).length} peptides
               </span>
             </div>
@@ -178,17 +178,17 @@ export default function CompoundedSection() {
         ))}
 
         {/* ── Closing waitlist invite ─────────────────────────────── */}
-        <div className="relative overflow-hidden rounded-[28px] bg-[#2A2520] text-white px-8 md:px-14 py-16 md:py-20">
+        <div className="relative overflow-hidden rounded-[28px] bg-[#173C3B] text-white px-8 md:px-14 py-16 md:py-20">
           <div
             className="absolute inset-0 opacity-[0.18] pointer-events-none"
             aria-hidden
             style={{
               background:
-                "radial-gradient(ellipse at 30% 20%, #B5736A 0%, transparent 55%), radial-gradient(ellipse at 80% 80%, #C4A882 0%, transparent 55%)",
+                "radial-gradient(ellipse at 30% 20%, #00786E 0%, transparent 55%), radial-gradient(ellipse at 80% 80%, #DCEC8B 0%, transparent 55%)",
             }}
           />
           <div className="relative max-w-2xl mx-auto text-center">
-            <p className="text-[10px] tracking-[0.32em] uppercase text-[#C4A882] font-sans font-semibold mb-5">
+            <p className="text-[10px] tracking-[0.32em] uppercase text-[#DCEC8B] font-sans font-semibold mb-5">
               Be First in Line
             </p>
             <h3 className="font-serif text-3xl md:text-5xl leading-[1.08] mb-5">

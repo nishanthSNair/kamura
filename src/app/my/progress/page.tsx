@@ -145,12 +145,12 @@ export default function ProgressPage() {
 
       {loading ? (
         <div className="grid lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2 h-[480px] bg-[#EDE7DB] rounded-3xl animate-pulse" />
+          <div className="lg:col-span-2 h-[480px] bg-[#E7F3EB] rounded-3xl animate-pulse" />
           <div className="space-y-4">
             {[0, 1, 2].map((i) => (
               <div
                 key={i}
-                className="h-36 bg-[#EDE7DB] rounded-3xl animate-pulse"
+                className="h-36 bg-[#E7F3EB] rounded-3xl animate-pulse"
                 style={{ animationDelay: `${i * 60}ms` }}
               />
             ))}
@@ -321,13 +321,13 @@ function TrendChart({ checkins }: { checkins: CheckinRow[] }) {
         <path
           d={path}
           fill="none"
-          stroke="#B5736A"
+          stroke="#00786E"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         {points.map((p, i) => (
-          <circle key={i} cx={p.x} cy={p.y} r="3.5" fill="#B5736A" />
+          <circle key={i} cx={p.x} cy={p.y} r="3.5" fill="#00786E" />
         ))}
 
         <text x={padding.left} y={height - 8} fill="#9CA3AF" fontSize="10" fontFamily="sans-serif">

@@ -1,0 +1,3 @@
+import Link from 'next/link';
+import s from './Kamura.module.css';
+export default function PageIntro({eyebrow,title,description,links=[]}:{eyebrow:string;title:string;description:string;links?:{href:string;label:string;active?:boolean}[]}){return <div className={s.page}><section className={s.pageHero}><div className={s.container}><span className={s.eyebrow}>{eyebrow}</span><h1>{title}</h1><p className={s.lead}>{description}</p>{links.length>0&&<nav className={s.sectionNav} aria-label="Explore this section">{links.map(l=><Link key={l.href} href={l.href} aria-current={l.active?'page':undefined}>{l.label}</Link>)}</nav>}</div></section></div>;}

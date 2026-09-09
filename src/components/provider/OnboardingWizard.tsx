@@ -264,7 +264,7 @@ export default function OnboardingWizard() {
   const back = () => setStep(Math.max(0, step - 1));
 
   return (
-    <div className="min-h-screen bg-[#EDE7DB] pt-16 pb-28 md:pt-24">
+    <div className="min-h-screen bg-[#E7F3EB] pt-16 pb-28 md:pt-24">
       <div className="max-w-2xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-10">
@@ -365,7 +365,7 @@ export default function OnboardingWizard() {
             <button
               onClick={next}
               disabled={!canProceed() || saving}
-              className="px-6 py-3 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] disabled:opacity-50"
+              className="px-6 py-3 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] disabled:opacity-50"
             >
               {saving
                 ? "Creating..."
@@ -456,7 +456,7 @@ function PathCard({
           : "border-gray-200 bg-white hover:border-terracotta/40 hover:shadow-sm"
       }`}
     >
-      <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 ${active ? "bg-terracotta text-white" : "bg-[#EDE7DB] text-gray-700"}`}>
+      <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 ${active ? "bg-terracotta text-white" : "bg-[#E7F3EB] text-gray-700"}`}>
         {icon}
       </div>
       <h3 className="font-serif text-xl text-gray-900 mb-2">{title}</h3>

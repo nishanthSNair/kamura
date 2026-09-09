@@ -44,8 +44,8 @@ function Sparkline({ points }: { points: { date: string; value: number }[] }) {
   return (
     <svg viewBox={`0 0 ${w} ${h}`} className="w-full h-16">
       <line x1={pad} x2={w - pad} y1={ys(50)} y2={ys(50)} stroke="#E5E7EB" strokeDasharray="2 4" />
-      <path d={path} fill="none" stroke="#B5736A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx={xs(points.length - 1)} cy={ys(last.value)} r="3" fill="#B5736A" />
+      <path d={path} fill="none" stroke="#00786E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx={xs(points.length - 1)} cy={ys(last.value)} r="3" fill="#00786E" />
     </svg>
   );
 }
@@ -140,7 +140,7 @@ export default function ImpactDrilldown({
               return (
                 <div
                   key={t.type}
-                  className="flex items-center justify-between px-4 py-3 rounded-2xl bg-[#F7F3EB] border border-gray-200/60"
+                  className="flex items-center justify-between px-4 py-3 rounded-2xl bg-[#FAFCF7] border border-gray-200/60"
                 >
                   <div>
                     <p className="text-sm font-sans font-medium text-gray-800">
@@ -161,7 +161,7 @@ export default function ImpactDrilldown({
               );
             })}
             {doseCount > 0 && (
-              <div className="flex items-center justify-between px-4 py-3 rounded-2xl bg-[#F7F3EB] border border-gray-200/60">
+              <div className="flex items-center justify-between px-4 py-3 rounded-2xl bg-[#FAFCF7] border border-gray-200/60">
                 <div>
                   <p className="text-sm font-sans font-medium text-gray-800">Protocol doses</p>
                   <p className="text-[11px] text-gray-400 font-sans">across your active items</p>

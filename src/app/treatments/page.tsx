@@ -1,3 +1,4 @@
+import PageIntro from '@/components/kamura/PageIntro';
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { treatments } from "@/data/treatments";
@@ -76,6 +77,7 @@ export default function TreatmentsPage() {
  type="application/ld+json"
  dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
  />
+ <PageIntro eyebrow="Learn / Treatment library" title="A closer look at your options." description="Explore treatment profiles, compare the research and understand the questions behind each approach." links={[{href:'/learn',label:'Learning library'},{href:'/body',label:'Explore the body'},{href:'/treatments/compare',label:'Compare treatments'}]}/>
  <Suspense>
  <TreatmentsContent />
  </Suspense>

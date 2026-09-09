@@ -1,3 +1,4 @@
+import PageIntro from '@/components/kamura/PageIntro';
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -248,64 +249,13 @@ export default function PeptidesHubPage() {
       />
 
       {/* ───── HERO ─────────────────────────────────────────────── */}
-      <section className="relative min-h-[72vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center scale-110"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&q=85')",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f0c]/85 via-[#2a1612]/75 to-[#1a0f0c]/90" />
-        <div className="relative z-10 text-center px-6 py-20 md:py-28 max-w-4xl mx-auto">
-          <span className="inline-block px-4 py-1.5 mb-8 rounded-full border border-white/25 text-[10px] tracking-[0.3em] uppercase text-white/80 font-sans">
-            Kamura · Intelligence Hub
-          </span>
-          <h1 className="font-serif text-[42px] md:text-[72px] font-normal leading-[1.05] tracking-tight text-white mb-6">
-            Peptide
-            <br />
-            Intelligence
-          </h1>
-          <p className="text-base md:text-lg text-white/70 max-w-[580px] mx-auto leading-relaxed font-sans mb-10">
-            {peptides.length} peptides scored on evidence, safety, and value.
-            Protocol stacks, sourcing intelligence, and clinician tools — curated
-            for the GCC.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
-            <Link
-              href="/peptides/advisor"
-              className="px-7 py-3.5 bg-terracotta text-white text-xs tracking-[0.15em] uppercase font-semibold rounded-full hover:bg-terracotta-dark transition-colors font-sans"
-            >
-              Get My Protocol Match
-            </Link>
-            <Link
-              href="/peptides/directory"
-              className="px-7 py-3.5 bg-white text-[#2a1612] text-xs tracking-[0.15em] uppercase font-semibold rounded-full hover:bg-white/90 transition-colors font-sans"
-            >
-              Browse Directory
-            </Link>
-            <Link
-              href="/peptides/calculator"
-              className="px-7 py-3.5 border border-white/30 text-white text-xs tracking-[0.15em] uppercase font-semibold rounded-full hover:bg-white/10 transition-colors font-sans"
-            >
-              Dose Calculator
-            </Link>
-          </div>
-          <div className="flex items-center justify-center gap-8 text-[11px] tracking-[0.15em] uppercase text-white/50 font-sans">
-            <span>{peptides.length} Peptides</span>
-            <span className="w-px h-3 bg-white/20" />
-            <span>{PEPTIDE_STACKS.length} Protocol Stacks</span>
-            <span className="w-px h-3 bg-white/20" />
-            <span>Evidence-Scored</span>
-          </div>
-        </div>
-      </section>
+      <PageIntro eyebrow="Learn / Peptides" title="Understand the signal. Explore the science." description="Explore peptide mechanisms, supporting research and the tools to ask better questions." links={[{href:'/body',label:'Explore the body'},{href:'/peptides/directory',label:'Peptide directory'},{href:'/peptides/calculator',label:'Calculator'},{href:'/peptides/advisor',label:'Learning tools'}]}/>
 
       {/* ───── KAMURA COMPOUNDED (flagship product section) ─────── */}
       <CompoundedSection />
 
       {/* ───── WHY WE'RE DIFFERENT (editorial two-column) ───────── */}
-      <section className="py-24 md:py-32 bg-[#EDE7DB]">
+      <section className="py-24 md:py-32 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-16 lg:gap-20 items-start">
             <FadeInOnScroll>
@@ -340,7 +290,7 @@ export default function PeptidesHubPage() {
                 <FadeInOnScroll key={item.title} delay={i * 80}>
                   <div className="flex gap-5 pb-8 border-b border-gray-300/50 last:border-0 last:pb-0">
                     <div className="shrink-0 w-9 h-9 rounded-full border border-terracotta/40 flex items-center justify-center mt-0.5">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00786E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
                     </div>
@@ -384,7 +334,7 @@ export default function PeptidesHubPage() {
               <FadeInOnScroll key={pillar.id} delay={i * 100}>
                 <Link
                   href={`/peptides/directory?goal=${pillar.goalId}`}
-                  className="group block relative overflow-hidden rounded-3xl bg-[#1a0f0c] aspect-[4/5] md:aspect-[4/4.5]"
+                  className="group block relative overflow-hidden rounded-3xl bg-[#173C3B] aspect-[4/5] md:aspect-[4/4.5]"
                 >
                   <Image
                     src={pillar.image}
@@ -393,7 +343,7 @@ export default function PeptidesHubPage() {
                     className="object-cover opacity-70 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0c] via-[#1a0f0c]/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#173C3B] via-[#173C3B]/40 to-transparent" />
                   <div className="absolute inset-0 p-7 md:p-9 flex flex-col justify-between text-white">
                     <div className="flex items-start justify-between">
                       <span className="text-xs tracking-[0.2em] font-sans text-white/60">
@@ -434,7 +384,7 @@ export default function PeptidesHubPage() {
       </section>
 
       {/* ───── TOP PEPTIDES (editorial list) ───────────────────── */}
-      <section className="py-24 md:py-32 bg-[#EDE7DB]">
+      <section className="py-24 md:py-32 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-14 lg:gap-20 items-start">
             <FadeInOnScroll>
@@ -586,7 +536,7 @@ export default function PeptidesHubPage() {
       </section>
 
       {/* ───── TRENDING (minimal strip) ─────────────────────────── */}
-      <section className="py-24 md:py-28 bg-[#EDE7DB]">
+      <section className="py-24 md:py-28 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6">
           <FadeInOnScroll>
             <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
@@ -705,7 +655,7 @@ export default function PeptidesHubPage() {
       )}
 
       {/* ───── CTA FOOTER ──────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#1a0f0c]">
+      <section className="relative overflow-hidden bg-[#173C3B]">
         <div
           className="absolute inset-0 opacity-25 bg-cover bg-center"
           style={{
@@ -713,7 +663,7 @@ export default function PeptidesHubPage() {
               "url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&q=85')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f0c] via-[#2a1612]/90 to-[#1a0f0c]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#173C3B] via-[#173C3B]/90 to-[#173C3B]" />
         <div className="relative max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
           <p className="text-[10px] tracking-[0.3em] uppercase text-white/50 font-sans mb-6">
             Start Here
@@ -727,7 +677,7 @@ export default function PeptidesHubPage() {
           </p>
           <Link
             href="/wellness-checker"
-            className="inline-block px-8 py-4 bg-white text-[#2a1612] text-xs tracking-[0.15em] uppercase font-semibold rounded-full hover:bg-white/90 transition-colors font-sans"
+            className="inline-block px-8 py-4 bg-white text-[#173C3B] text-xs tracking-[0.15em] uppercase font-semibold rounded-full hover:bg-white/90 transition-colors font-sans"
           >
             Start Wellness Check
           </Link>

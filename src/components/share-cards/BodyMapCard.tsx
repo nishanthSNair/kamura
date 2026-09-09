@@ -24,7 +24,7 @@ function ScoreBadge({ score }: { score: number }) {
       padding: "6px 16px",
     }}>
       <div style={{ width: 8, height: 8, borderRadius: "50%", background: color }} />
-      <span style={{ fontSize: 18, fontWeight: 600, color: "#FAF7F2", fontFamily: "Inter, sans-serif" }}>
+      <span style={{ fontSize: 18, fontWeight: 600, color: "#FAFCF7", fontFamily: "Inter, sans-serif" }}>
         {score}
       </span>
     </div>
@@ -70,7 +70,7 @@ export default function BodyMapCard({ zones, concernCount, topTreatments }: Body
           fontSize: 18,
           letterSpacing: "0.35em",
           textTransform: "uppercase" as const,
-          color: "#B0BCA4",
+          color: "#AFD5C0",
           fontWeight: 500,
           marginBottom: 20,
         }}>
@@ -85,7 +85,7 @@ export default function BodyMapCard({ zones, concernCount, topTreatments }: Body
           fontSize: 52,
           fontFamily: "Playfair Display, serif",
           fontWeight: 700,
-          color: "#FAF7F2",
+          color: "#FAFCF7",
           lineHeight: 1.15,
           marginBottom: 12,
         }}>
@@ -118,7 +118,7 @@ export default function BodyMapCard({ zones, concernCount, topTreatments }: Body
             <span style={{
               fontSize: 16,
               fontWeight: 700,
-              color: "#B0BCA4",
+              color: "#AFD5C0",
               width: 32,
               textAlign: "center",
               fontFamily: "Inter, sans-serif",
@@ -129,7 +129,7 @@ export default function BodyMapCard({ zones, concernCount, topTreatments }: Body
               flex: 1,
               fontSize: 22,
               fontWeight: 500,
-              color: "#FAF7F2",
+              color: "#FAFCF7",
             }}>
               {t.name}
             </span>

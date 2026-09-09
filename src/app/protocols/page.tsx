@@ -230,7 +230,7 @@ export default function ProtocolsPage() {
  </p>
  <Link
  href="/treatments"
- className="inline-block px-6 py-3 bg-[#B5736A] hover:bg-[#9A5F57] text-white text-sm font-semibold rounded-xl transition-colors font-sans"
+ className="inline-block px-6 py-3 bg-[#00786E] hover:bg-[#005E57] text-white text-sm font-semibold rounded-xl transition-colors font-sans"
  >
  Browse 200+ Treatments &rarr;
  </Link>

@@ -59,7 +59,7 @@ export default function TableOfContents({ headings, variant = "desktop" }: Props
 
  if (variant === "mobile") {
  return (
- <nav className="lg:hidden mb-8 border border-[#2A2520]/10 rounded-2xl bg-[#FAF7F2] overflow-hidden">
+ <nav className="lg:hidden mb-8 border border-[#173C3B]/10 rounded-2xl bg-[#FAFCF7] overflow-hidden">
  <button
  type="button"
  onClick={() => setMobileOpen((v) => !v)}
@@ -70,20 +70,20 @@ export default function TableOfContents({ headings, variant = "desktop" }: Props
  <span className="block text-[10px] tracking-[0.28em] uppercase text-terracotta font-semibold font-sans">
  On this page
  </span>
- <span className="block text-[14px] text-[#2A2520] font-sans mt-0.5">
+ <span className="block text-[14px] text-[#173C3B] font-sans mt-0.5">
  {headings.length} sections
  </span>
  </span>
  <ChevronDown
  size={18}
  strokeWidth={2}
- className={`text-[#2A2520]/45 transition-transform ${
+ className={`text-[#173C3B]/45 transition-transform ${
  mobileOpen ? "rotate-180" : ""
  }`}
  />
  </button>
  {mobileOpen && (
- <ul className="px-5 pb-4 space-y-1 border-t border-[#2A2520]/8 pt-3">
+ <ul className="px-5 pb-4 space-y-1 border-t border-[#173C3B]/8 pt-3">
  {headings.map((heading) => (
  <li key={`m-${heading.id}`}>
  <a
@@ -93,7 +93,7 @@ export default function TableOfContents({ headings, variant = "desktop" }: Props
  jumpTo(heading.id);
  }}
  className={`block text-[13.5px] font-sans py-1.5 leading-snug ${
- heading.level === 3 ? "pl-4 text-[#2A2520]/65" : "text-[#2A2520]/85"
+ heading.level === 3 ? "pl-4 text-[#173C3B]/65" : "text-[#173C3B]/85"
  }`}
  >
  {heading.text}

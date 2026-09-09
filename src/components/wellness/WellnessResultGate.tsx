@@ -94,29 +94,29 @@ function ResultGateTeaser({
   }
 
   return (
-    <section className="min-h-[80vh] bg-gradient-to-b from-[#FAF7F2] via-[#F3EEE2] to-[#EDE7DB] py-16 md:py-24">
+    <section className="min-h-[80vh] bg-gradient-to-b from-[#FAFCF7] via-[#F3EEE2] to-[#E7F3EB] py-16 md:py-24">
       <div className="max-w-3xl mx-auto px-6 md:px-8 text-center">
         <p className="text-[10.5px] tracking-[0.32em] uppercase text-terracotta font-semibold font-sans mb-5">
           Your Wellness Plan · Ready
         </p>
-        <h1 className="font-serif text-[36px] md:text-[56px] leading-[1.04] tracking-[-0.015em] text-[#2A2520] mb-6 max-w-[20ch] mx-auto">
+        <h1 className="font-serif text-[36px] md:text-[56px] leading-[1.04] tracking-[-0.015em] text-[#173C3B] mb-6 max-w-[20ch] mx-auto">
           Your plan is ready.
         </h1>
-        <p className="text-[16px] md:text-[18px] leading-[1.6] text-[#2A2520]/70 font-sans mb-12 max-w-[58ch] mx-auto">
+        <p className="text-[16px] md:text-[18px] leading-[1.6] text-[#173C3B]/70 font-sans mb-12 max-w-[58ch] mx-auto">
           Based on your answers, we&rsquo;ve built a personalised wellness
           report — your baseline score, ranked treatments, daily protocol,
           budget breakdown, and the risks worth knowing.
         </p>
 
         {/* Teaser tile — score + dimension call-out + concern chips */}
-        <div className="bg-white rounded-3xl border border-[#2A2520]/8 p-7 md:p-10 mb-10 shadow-[0_24px_60px_-30px_rgba(42,37,32,0.25)]">
+        <div className="bg-white rounded-3xl border border-[#173C3B]/8 p-7 md:p-10 mb-10 shadow-[0_24px_60px_-30px_rgba(42,37,32,0.25)]">
           <div className="flex flex-col md:flex-row items-center md:items-start md:text-left gap-8">
             {/* Score */}
             <div className="shrink-0 text-center">
-              <p className="text-[10px] tracking-[0.28em] uppercase text-[#2A2520]/55 font-sans mb-2">
+              <p className="text-[10px] tracking-[0.28em] uppercase text-[#173C3B]/55 font-sans mb-2">
                 Wellness Score
               </p>
-              <p className="font-serif text-[64px] md:text-[80px] leading-none text-[#2A2520]">
+              <p className="font-serif text-[64px] md:text-[80px] leading-none text-[#173C3B]">
                 {overall}
               </p>
               <p className="text-[11.5px] tracking-[0.14em] uppercase text-terracotta font-semibold font-sans mt-1">
@@ -124,15 +124,15 @@ function ResultGateTeaser({
               </p>
             </div>
 
-            <div className="hidden md:block w-px h-32 bg-[#2A2520]/8" />
+            <div className="hidden md:block w-px h-32 bg-[#173C3B]/8" />
 
             <div className="flex-1 min-w-0 text-center md:text-left">
               {gapDim && (
                 <div className="mb-5">
-                  <p className="text-[10px] tracking-[0.28em] uppercase text-[#2A2520]/55 font-sans mb-2">
+                  <p className="text-[10px] tracking-[0.28em] uppercase text-[#173C3B]/55 font-sans mb-2">
                     The dimension that needs the most attention
                   </p>
-                  <p className="font-serif text-[22px] text-[#2A2520] capitalize">
+                  <p className="font-serif text-[22px] text-[#173C3B] capitalize">
                     {gapDim.label.replace(/_/g, " ")}
                   </p>
                 </div>
@@ -140,14 +140,14 @@ function ResultGateTeaser({
 
               {topZoneLabels.length > 0 && (
                 <div>
-                  <p className="text-[10px] tracking-[0.28em] uppercase text-[#2A2520]/55 font-sans mb-3">
+                  <p className="text-[10px] tracking-[0.28em] uppercase text-[#173C3B]/55 font-sans mb-3">
                     Your top concern zones
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                     {topZoneLabels.map((label) => (
                       <span
                         key={label}
-                        className="inline-flex items-center px-3 py-1.5 rounded-full bg-[#FAF7F2] border border-[#2A2520]/10 text-[12.5px] text-[#2A2520] font-sans"
+                        className="inline-flex items-center px-3 py-1.5 rounded-full bg-[#FAFCF7] border border-[#173C3B]/10 text-[12.5px] text-[#173C3B] font-sans"
                       >
                         {label}
                       </span>
@@ -160,8 +160,8 @@ function ResultGateTeaser({
         </div>
 
         {/* Gate */}
-        <div className="bg-[#2A2520] text-white rounded-3xl p-7 md:p-10">
-          <p className="text-[10.5px] tracking-[0.32em] uppercase text-[#C4A882] font-semibold font-sans mb-3">
+        <div className="bg-[#173C3B] text-white rounded-3xl p-7 md:p-10">
+          <p className="text-[10.5px] tracking-[0.32em] uppercase text-[#DCEC8B] font-semibold font-sans mb-3">
             One more step
           </p>
           <h2 className="font-serif text-[24px] md:text-[30px] leading-[1.1] tracking-[-0.005em] mb-4 max-w-[24ch] mx-auto">

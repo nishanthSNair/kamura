@@ -77,11 +77,11 @@ export default function VerbsSection() {
                   filter: i === active ? "blur(0)" : "blur(10px)",
                 }}
               >
-                <div className="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#C4A882] mb-4">
+                <div className="text-[11px] font-semibold tracking-[0.3em] uppercase text-[#DCEC8B] mb-4">
                   {v.idx} · of · 04
                 </div>
                 <h2
-                  className="font-serif font-medium leading-[0.9] tracking-[-0.03em] m-0 mb-4 bg-gradient-to-b from-[#FAF7F2] to-[#D4B896] bg-clip-text"
+                  className="font-serif font-medium leading-[0.9] tracking-[-0.03em] m-0 mb-4 bg-gradient-to-b from-[#FAFCF7] to-[#D4B896] bg-clip-text"
                   style={{
                     fontSize: "clamp(80px, 12vw, 180px)",
                     WebkitTextFillColor: "transparent",
@@ -105,7 +105,7 @@ export default function VerbsSection() {
               key={i}
               className="w-10 h-0.5 rounded-sm transition-colors duration-500"
               style={{
-                background: i <= active ? "#C4A882" : "rgba(255,255,255,0.15)",
+                background: i <= active ? "#DCEC8B" : "rgba(255,255,255,0.15)",
               }}
             />
           ))}

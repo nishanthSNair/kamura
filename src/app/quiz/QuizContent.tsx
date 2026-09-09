@@ -154,7 +154,7 @@ export default function QuizContent() {
  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
  <div>
  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-red-50 flex items-center justify-center">
- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00786E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
  </svg>
  </div>
@@ -165,7 +165,7 @@ export default function QuizContent() {
  </div>
  <div>
  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-amber-50 flex items-center justify-center">
- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00786E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
  <circle cx="12" cy="12" r="10" />
  <path d="M12 16v-4M12 8h.01" />
  </svg>
@@ -177,7 +177,7 @@ export default function QuizContent() {
  </div>
  <div>
  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-emerald-50 flex items-center justify-center">
- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00786E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
  <circle cx="12" cy="10" r="3" />
  </svg>
@@ -472,7 +472,7 @@ export default function QuizContent() {
  {listing!.tagline} &middot; {listing!.location}, {listing!.city}
  </p>
  </div>
- <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 ml-4">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00786E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 ml-4">
  <line x1="7" y1="17" x2="17" y2="7" />
  <polyline points="7 7 17 7 17 17" />
  </svg>

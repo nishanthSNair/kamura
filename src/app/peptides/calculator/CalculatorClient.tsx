@@ -35,7 +35,7 @@ function SyringeVisual({ units, capacity }: { units: number; capacity: SyringeSi
           width={fillW}
           height={barrelH}
           rx="6"
-          fill="#B5736A"
+          fill="#00786E"
           fillOpacity="0.35"
           className="transition-all duration-500"
         />
@@ -47,7 +47,7 @@ function SyringeVisual({ units, capacity }: { units: number; capacity: SyringeSi
           y1={barrelY - 6}
           x2={barrelX + fillW}
           y2={barrelY + barrelH + 6}
-          stroke="#9A5F57"
+          stroke="#005E57"
           strokeWidth="2.5"
           className="transition-all duration-500"
         />
@@ -260,7 +260,7 @@ export default function CalculatorClient() {
       </div>
 
       {/* Result */}
-      <div className="p-6 md:p-8 bg-[#2A2520] rounded-3xl text-white">
+      <div className="p-6 md:p-8 bg-[#173C3B] rounded-3xl text-white">
         <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-sans font-semibold mb-6">
           Draw to
         </p>

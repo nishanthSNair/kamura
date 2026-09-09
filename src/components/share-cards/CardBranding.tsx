@@ -4,7 +4,7 @@ interface CardBrandingProps {
 }
 
 export default function CardBranding({ variant = "dark", url = "kamuralife.com" }: CardBrandingProps) {
-  const textColor = variant === "light" ? "#FAF7F2" : "#2A2520";
+  const textColor = variant === "light" ? "#FAFCF7" : "#173C3B";
   const subtleColor = variant === "light" ? "rgba(250,247,242,0.6)" : "rgba(42,37,32,0.4)";
   const lineColor = variant === "light" ? "rgba(250,247,242,0.15)" : "rgba(42,37,32,0.1)";
 
@@ -31,7 +31,7 @@ export default function CardBranding({ variant = "dark", url = "kamuralife.com" 
               <stop offset="0%" stopColor="#7a9e7e" /><stop offset="100%" stopColor="#5c7c5f" />
             </linearGradient>
             <linearGradient id="cg" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#c4a882" /><stop offset="50%" stopColor="#d4b896" /><stop offset="100%" stopColor="#b89b76" />
+              <stop offset="0%" stopColor="#dcec8b" /><stop offset="50%" stopColor="#d4b896" /><stop offset="100%" stopColor="#b89b76" />
             </linearGradient>
           </defs>
           <path d="M 400 180 A 160 160 0 1 1 295 460" fill="none" stroke="url(#cg)" strokeWidth="8" strokeLinecap="round" opacity="0.85" />

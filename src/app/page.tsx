@@ -1,48 +1,12 @@
 import type { Metadata } from "next";
-import TherapyExplorer from "@/components/body-explorer/TherapyExplorer";
+import HomeExperience from '@/components/kamura/Home';
 
 export const metadata: Metadata = {
-  title: "KAMURA — What Actually Works, Mapped to Your Body",
-  description:
-    "Explore what peptides and hormone therapies actually do inside the body. Real 3D anatomy (2,234 structures), molecular structures, interactive mechanisms, guided learning and outcome-specific research.",
-  keywords: [
-    "peptides explained",
-    "BPC-157",
-    "peptide anatomy",
-    "3D human body explorer",
-    "peptide research",
-    "longevity therapies",
-    "hormone therapy explained",
-    "Kamura Score",
-    "evidence-based wellness",
-    "preventive health UAE",
-  ],
-  alternates: { canonical: "https://kamuralife.com" },
-  openGraph: {
-    title: "KAMURA — What Actually Works, Mapped to Your Body",
-    description:
-      "Select a therapy. See where it acts in real 3D anatomy, how it works, and what the research says.",
-    url: "https://kamuralife.com",
-    siteName: "KAMURA",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "https://kamuralife.com/images/body-atlas-preview.jpg",
-        width: 1600,
-        height: 1000,
-        alt: "The Kamura Body Atlas — interactive 3D anatomy with therapy mechanisms and research",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "KAMURA — What Actually Works, Mapped to Your Body",
-    description:
-      "Explore what peptides and therapies actually do inside the body — real anatomy, real molecules, real research.",
-    creator: "@KamuraLife",
-    images: ["https://kamuralife.com/images/body-atlas-preview.jpg"],
-  },
+ title: "KAMURA — Longevity, Preventive Health & Wellness in the UAE",
+ description: "Understand your body, explore longevity research, discover wellness care and find classes across the UAE. One connected preventive-health experience.",
+ alternates: {canonical: "https://kamuralife.com"},
+ openGraph: {title:"KAMURA — Live well. Longer.", description:"Explore your body, discover care and find your practice.", url:"https://kamuralife.com", type:"website", images:[{url:"https://kamuralife.com/images/body-atlas-preview.jpg",width:1600,height:1000,alt:"Kamura interactive anatomy"}]},
+ twitter: {card:"summary_large_image",title:"KAMURA — Live well. Longer.",description:"Explore your body, discover care and find your practice.",images:["https://kamuralife.com/images/body-atlas-preview.jpg"]},
 };
 
 const jsonLd = {
@@ -79,7 +43,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <TherapyExplorer />
+      <HomeExperience />
     </>
   );
 }

@@ -177,7 +177,7 @@ export default function LogSessionModal({ onClose, onDone, initialType }: Props)
                   <button
                     key={meta.key}
                     onClick={() => choose(meta)}
-                    className="group flex flex-col items-start gap-3 p-4 rounded-2xl border border-gray-200 hover:border-terracotta/40 hover:bg-[#FAF7F2] transition-colors text-left"
+                    className="group flex flex-col items-start gap-3 p-4 rounded-2xl border border-gray-200 hover:border-terracotta/40 hover:bg-[#FAFCF7] transition-colors text-left"
                   >
                     <span
                       className={`w-11 h-11 rounded-xl grid place-items-center ${meta.bg} ${meta.fg}`}
@@ -264,7 +264,7 @@ export default function LogSessionModal({ onClose, onDone, initialType }: Props)
             <button
               onClick={submit}
               disabled={saving}
-              className="w-full px-6 py-3.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] disabled:opacity-50"
+              className="w-full px-6 py-3.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] disabled:opacity-50"
             >
               {saving ? "Saving…" : "Log session"}
             </button>

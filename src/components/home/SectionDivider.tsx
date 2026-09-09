@@ -26,17 +26,17 @@ export default function SectionDivider({
         transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
         className="max-w-6xl mx-auto px-6 flex items-center gap-4 origin-center"
       >
-        <span className="flex-1 h-px bg-[#2A2520]/12" />
+        <span className="flex-1 h-px bg-[#173C3B]/12" />
         <span className="w-1.5 h-1.5 rounded-full bg-terracotta shrink-0" />
         {marker && (
           <>
-            <span className="text-[10px] tracking-[0.34em] uppercase text-[#2A2520]/45 font-sans font-semibold whitespace-nowrap">
+            <span className="text-[10px] tracking-[0.34em] uppercase text-[#173C3B]/45 font-sans font-semibold whitespace-nowrap">
               {marker}
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-terracotta shrink-0" />
           </>
         )}
-        <span className="flex-1 h-px bg-[#2A2520]/12" />
+        <span className="flex-1 h-px bg-[#173C3B]/12" />
       </motion.div>
     </div>
   );

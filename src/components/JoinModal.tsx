@@ -24,11 +24,11 @@ export default function JoinModal({ open, onClose }: Props) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#1a0f0c]/60 backdrop-blur-md"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#173C3B]/60 backdrop-blur-md"
       onClick={onClose}
     >
       <div
-        className="w-full max-w-3xl bg-[#FAF7F2] rounded-3xl overflow-hidden shadow-2xl"
+        className="w-full max-w-3xl bg-[#FAFCF7] rounded-3xl overflow-hidden shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -64,7 +64,7 @@ export default function JoinModal({ open, onClose }: Props) {
             className="group relative overflow-hidden rounded-2xl bg-white border border-gray-200 p-7 hover:border-terracotta/40 hover:shadow-lg transition-all"
           >
             <div className="w-12 h-12 rounded-xl bg-terracotta/10 flex items-center justify-center mb-5 group-hover:bg-terracotta/15 transition-colors">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00786E" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                 <circle cx="12" cy="7" r="4" />
               </svg>
@@ -88,7 +88,7 @@ export default function JoinModal({ open, onClose }: Props) {
           <Link
             href="/provider/signup"
             onClick={onClose}
-            className="group relative overflow-hidden rounded-2xl bg-[#1a0f0c] text-white border border-[#1a0f0c] p-7 hover:bg-[#2a1612] transition-all"
+            className="group relative overflow-hidden rounded-2xl bg-[#173C3B] text-white border border-[#173C3B] p-7 hover:bg-[#173C3B] transition-all"
           >
             <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-5 group-hover:bg-white/15 transition-colors">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">

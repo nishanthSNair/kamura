@@ -131,7 +131,7 @@ export default function WaitlistPopup({
       {/* Card */}
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full sm:max-w-[480px] bg-gradient-to-br from-[#1A1612] via-[#2A2520] to-[#1A1612] text-white rounded-t-3xl sm:rounded-3xl overflow-hidden border border-white/10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.7)]"
+        className="relative w-full sm:max-w-[480px] bg-gradient-to-br from-[#1A1612] via-[#173C3B] to-[#1A1612] text-white rounded-t-3xl sm:rounded-3xl overflow-hidden border border-white/10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.7)]"
       >
         {/* Warm radial accent */}
         <div
@@ -156,8 +156,8 @@ export default function WaitlistPopup({
         <div className="relative p-7 sm:p-9">
           {/* Eyebrow */}
           <div className="flex items-center gap-3 mb-5">
-            <span className="block w-7 h-px bg-[#C4A882]" />
-            <p className="text-[10px] tracking-[0.34em] uppercase text-[#C4A882] font-semibold font-sans">
+            <span className="block w-7 h-px bg-[#DCEC8B]" />
+            <p className="text-[10px] tracking-[0.34em] uppercase text-[#DCEC8B] font-semibold font-sans">
               Kamura · By Invitation
             </p>
           </div>
@@ -179,7 +179,7 @@ export default function WaitlistPopup({
           </p>
 
           {/* Form */}
-          <p className="text-[10.5px] tracking-[0.28em] uppercase text-[#C4A882] font-semibold font-sans mb-3">
+          <p className="text-[10.5px] tracking-[0.28em] uppercase text-[#DCEC8B] font-semibold font-sans mb-3">
             Apply for a founding place
           </p>
           <EmailWaitlist

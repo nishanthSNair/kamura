@@ -73,7 +73,7 @@ export default function ListYourBusinessPage() {
   dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
   />
   {/* Hero */}
-  <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-[#EDE7DB]">
+  <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-[#E7F3EB]">
   <div className="max-w-4xl mx-auto px-6 text-center">
    <p className="text-xs tracking-[0.3em] uppercase mb-4 text-terracotta font-sans">
    For Providers
@@ -107,7 +107,7 @@ export default function ListYourBusinessPage() {
   </section>
 
   {/* Who Can List */}
-  <section className="py-16 md:py-20 bg-[#EDE7DB]">
+  <section className="py-16 md:py-20 bg-[#E7F3EB]">
   <div className="max-w-4xl mx-auto px-6 text-center">
    <h2 className="font-serif text-2xl md:text-3xl text-gray-900 mb-8">
    Who Can List?

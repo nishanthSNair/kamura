@@ -110,22 +110,22 @@ export default function SupplementsReportCard() {
       />
 
       {/* ─────────── HERO ─────────── */}
-      <section className="bg-[#FAF7F2] pt-16 md:pt-24 pb-10 md:pb-14">
+      <section className="bg-[#FAFCF7] pt-16 md:pt-24 pb-10 md:pb-14">
         <div className="max-w-5xl mx-auto px-6 md:px-8">
           <p className="text-[10.5px] tracking-[0.32em] uppercase text-terracotta font-semibold font-sans mb-5">
             The Kamura Report Card · Supplements
           </p>
-          <h1 className="font-serif text-[38px] md:text-[64px] leading-[1.02] tracking-[-0.015em] text-[#2A2520] max-w-[16ch]">
+          <h1 className="font-serif text-[38px] md:text-[64px] leading-[1.02] tracking-[-0.015em] text-[#173C3B] max-w-[16ch]">
             Which supplements are{" "}
             <span className="italic text-terracotta">actually</span> worth it?
           </h1>
-          <p className="text-[16px] md:text-[19px] leading-[1.6] text-[#2A2520]/70 max-w-[62ch] font-sans mt-6">
+          <p className="text-[16px] md:text-[19px] leading-[1.6] text-[#173C3B]/70 max-w-[62ch] font-sans mt-6">
             Every major longevity supplement, graded on real evidence — not
             marketing. Ranked by the Kamura Score and priced for the UAE. No
             sponsors. No affiliate links. No supplements for sale.
           </p>
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-7 text-[13px] font-sans text-[#2A2520]/60">
-            <span className="font-semibold text-[#2A2520]">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-7 text-[13px] font-sans text-[#173C3B]/60">
+            <span className="font-semibold text-[#173C3B]">
               {supplements.length} supplements graded
             </span>
             <span>Updated {updated}</span>
@@ -140,7 +140,7 @@ export default function SupplementsReportCard() {
       </section>
 
       {/* ─────────── TIER LEGEND ─────────── */}
-      <section className="bg-[#EDE7DB] border-y border-[#2A2520]/8 py-6">
+      <section className="bg-[#E7F3EB] border-y border-[#173C3B]/8 py-6">
         <div className="max-w-5xl mx-auto px-6 md:px-8 flex flex-wrap gap-x-8 gap-y-3">
           {groups.map((g) => {
             const tier = getTierForScore(g.items[0].kamuraScore);
@@ -153,10 +153,10 @@ export default function SupplementsReportCard() {
                   {g.letter}
                 </span>
                 <span className="text-[13.5px] font-sans">
-                  <span className="font-semibold text-[#2A2520]">
+                  <span className="font-semibold text-[#173C3B]">
                     {TIER_COPY[g.letter].label}
                   </span>
-                  <span className="text-[#2A2520]/45">
+                  <span className="text-[#173C3B]/45">
                     {"  "}
                     {tier.scoreMin}–{tier.scoreMax}
                   </span>
@@ -168,7 +168,7 @@ export default function SupplementsReportCard() {
       </section>
 
       {/* ─────────── RANKED LIST BY TIER ─────────── */}
-      <section className="bg-[#FAF7F2] py-12 md:py-16">
+      <section className="bg-[#FAFCF7] py-12 md:py-16">
         <div className="max-w-5xl mx-auto px-6 md:px-8">
           {groups.map((g) => {
             const tier = getTierForScore(g.items[0].kamuraScore);
@@ -183,10 +183,10 @@ export default function SupplementsReportCard() {
                     {g.letter}
                   </span>
                   <div>
-                    <h2 className="font-serif text-[26px] md:text-[32px] leading-none text-[#2A2520]">
+                    <h2 className="font-serif text-[26px] md:text-[32px] leading-none text-[#173C3B]">
                       {TIER_COPY[g.letter].label}
                     </h2>
-                    <p className="text-[13.5px] text-[#2A2520]/55 font-sans mt-1.5">
+                    <p className="text-[13.5px] text-[#173C3B]/55 font-sans mt-1.5">
                       {TIER_COPY[g.letter].blurb}
                     </p>
                   </div>
@@ -202,18 +202,18 @@ export default function SupplementsReportCard() {
                       <Link
                         key={t.slug}
                         href={`/treatments/${t.slug}`}
-                        className="group flex items-center gap-4 md:gap-5 bg-white border border-[#2A2520]/8 rounded-xl px-4 md:px-5 py-3.5 hover:border-terracotta/40 hover:shadow-[0_2px_20px_rgba(181,115,106,0.08)] transition-all"
+                        className="group flex items-center gap-4 md:gap-5 bg-white border border-[#173C3B]/8 rounded-xl px-4 md:px-5 py-3.5 hover:border-terracotta/40 hover:shadow-[0_2px_20px_rgba(181,115,106,0.08)] transition-all"
                         style={{ borderLeft: `3px solid ${tier.color}` }}
                       >
                         {/* Rank */}
-                        <span className="font-serif text-[20px] md:text-[24px] text-[#2A2520]/25 w-8 md:w-10 text-center shrink-0 tabular-nums">
+                        <span className="font-serif text-[20px] md:text-[24px] text-[#173C3B]/25 w-8 md:w-10 text-center shrink-0 tabular-nums">
                           {rank}
                         </span>
 
                         {/* Name + best-for */}
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2.5 flex-wrap">
-                            <span className="font-serif text-[17px] md:text-[19px] text-[#2A2520] group-hover:text-terracotta transition-colors">
+                            <span className="font-serif text-[17px] md:text-[19px] text-[#173C3B] group-hover:text-terracotta transition-colors">
                               {t.name}
                             </span>
                             <span
@@ -223,7 +223,7 @@ export default function SupplementsReportCard() {
                             </span>
                           </div>
                           {best && (
-                            <p className="text-[12.5px] md:text-[13px] text-[#2A2520]/55 font-sans mt-0.5 truncate">
+                            <p className="text-[12.5px] md:text-[13px] text-[#173C3B]/55 font-sans mt-0.5 truncate">
                               Best for: {best.name}{" "}
                               <span className="font-semibold">({best.grade})</span>
                             </p>
@@ -232,7 +232,7 @@ export default function SupplementsReportCard() {
 
                         {/* Cost */}
                         {t.costEstimate && (
-                          <span className="hidden sm:block text-[12.5px] text-[#2A2520]/50 font-sans text-right shrink-0 w-[110px] md:w-[130px]">
+                          <span className="hidden sm:block text-[12.5px] text-[#173C3B]/50 font-sans text-right shrink-0 w-[110px] md:w-[130px]">
                             {t.costEstimate}
                           </span>
                         )}
@@ -256,9 +256,9 @@ export default function SupplementsReportCard() {
 
       {/* ─────────── PRICEY FOR THE PROOF ─────────── */}
       {PRICEY.length > 0 && (
-        <section className="bg-[#2A2520] text-white py-16 md:py-20">
+        <section className="bg-[#173C3B] text-white py-16 md:py-20">
           <div className="max-w-5xl mx-auto px-6 md:px-8">
-            <p className="text-[10.5px] tracking-[0.32em] uppercase text-[#C4A882] font-semibold font-sans mb-4">
+            <p className="text-[10.5px] tracking-[0.32em] uppercase text-[#DCEC8B] font-semibold font-sans mb-4">
               Pricey for the proof
             </p>
             <h2 className="font-serif text-[30px] md:text-[44px] leading-[1.06] tracking-[-0.01em] max-w-[20ch] mb-3">
@@ -275,13 +275,13 @@ export default function SupplementsReportCard() {
                 <Link
                   key={t.slug}
                   href={`/treatments/${t.slug}`}
-                  className="group bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:bg-white/[0.07] hover:border-[#C4A882]/40 transition-all"
+                  className="group bg-white/[0.04] border border-white/10 rounded-2xl p-6 hover:bg-white/[0.07] hover:border-[#DCEC8B]/40 transition-all"
                 >
                   <div className="flex items-center justify-between gap-3 mb-2">
                     <span className="font-serif text-[21px] text-white group-hover:text-[#D4B896] transition-colors">
                       {t.name}
                     </span>
-                    <span className="text-[12px] font-sans text-[#C4A882] shrink-0">
+                    <span className="text-[12px] font-sans text-[#DCEC8B] shrink-0">
                       {t.evidenceLevel} · {t.kamuraScore}
                     </span>
                   </div>
@@ -301,12 +301,12 @@ export default function SupplementsReportCard() {
       )}
 
       {/* ─────────── EMAIL CAPTURE ─────────── */}
-      <section className="bg-[#EDE7DB] border-y border-[#2A2520]/8 py-16 md:py-20">
+      <section className="bg-[#E7F3EB] border-y border-[#173C3B]/8 py-16 md:py-20">
         <div className="max-w-2xl mx-auto px-6 md:px-8 text-center">
-          <h2 className="font-serif text-[28px] md:text-[40px] leading-[1.08] tracking-[-0.01em] text-[#2A2520] mb-4">
+          <h2 className="font-serif text-[28px] md:text-[40px] leading-[1.08] tracking-[-0.01em] text-[#173C3B] mb-4">
             We grade new supplements every month.
           </h2>
-          <p className="text-[15.5px] leading-[1.6] text-[#2A2520]/65 font-sans mb-8 max-w-[46ch] mx-auto">
+          <p className="text-[15.5px] leading-[1.6] text-[#173C3B]/65 font-sans mb-8 max-w-[46ch] mx-auto">
             Get the updated report card and the occasional evidence-based note —
             no hype, no selling. Just what the science actually says.
           </p>
@@ -320,7 +320,7 @@ export default function SupplementsReportCard() {
       </section>
 
       {/* ─────────── FOOTER LINKS + DISCLAIMER ─────────── */}
-      <section className="bg-[#FAF7F2] py-12">
+      <section className="bg-[#FAFCF7] py-12">
         <div className="max-w-5xl mx-auto px-6 md:px-8">
           <div className="flex flex-wrap gap-x-6 gap-y-3 mb-8 text-[14px] font-sans">
             <Link
@@ -336,7 +336,7 @@ export default function SupplementsReportCard() {
               Compare two supplements head-to-head →
             </Link>
           </div>
-          <p className="text-[12px] leading-[1.6] text-[#2A2520]/45 font-sans max-w-[70ch]">
+          <p className="text-[12px] leading-[1.6] text-[#173C3B]/45 font-sans max-w-[70ch]">
             The Kamura Score is calculated from publicly verifiable data —
             clinical evidence, safety, accessibility, and value — and is never
             influenced by advertising or sponsorship. This report card is for

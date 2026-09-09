@@ -45,9 +45,9 @@ export default function Breadcrumb({
   const isDark = tone === "dark";
   const linkColor = isDark
     ? "text-white/70 hover:text-white"
-    : "text-[#2A2520]/55 hover:text-[#2A2520]";
-  const currentColor = isDark ? "text-white" : "text-[#2A2520]";
-  const sepColor = isDark ? "text-white/30" : "text-[#2A2520]/25";
+    : "text-[#173C3B]/55 hover:text-[#173C3B]";
+  const currentColor = isDark ? "text-white" : "text-[#173C3B]";
+  const sepColor = isDark ? "text-white/30" : "text-[#173C3B]/25";
 
   const jsonLd = emitJsonLd
     ? {

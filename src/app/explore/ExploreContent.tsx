@@ -134,7 +134,7 @@ export default function ExploreContent() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-28 pb-10 md:pt-32 md:pb-14 bg-[#EDE7DB]">
+      <section className="pt-28 pb-10 md:pt-32 md:pb-14 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-end justify-between gap-8 flex-wrap">
             <div className="flex-1 min-w-0 max-w-2xl">
@@ -311,7 +311,7 @@ export default function ExploreContent() {
       </HorizontalSection>
 
       {/* Provider CTA */}
-      <section className="py-20 bg-[#1a0f0c]">
+      <section className="py-20 bg-[#173C3B]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="text-[10px] tracking-[0.3em] uppercase text-kamura-gold font-sans font-semibold mb-4">
             Are you a provider?
@@ -325,7 +325,7 @@ export default function ExploreContent() {
           </p>
           <Link
             href="/provider/signup"
-            className="inline-block px-7 py-3.5 bg-white text-[#2a1612] text-xs tracking-[0.15em] uppercase font-semibold rounded-full hover:bg-white/90 transition-colors font-sans"
+            className="inline-block px-7 py-3.5 bg-white text-[#173C3B] text-xs tracking-[0.15em] uppercase font-semibold rounded-full hover:bg-white/90 transition-colors font-sans"
           >
             Create your provider profile
           </Link>
@@ -371,7 +371,7 @@ function HorizontalSection({
               onClick={() => onCategoryChange(c)}
               className={`shrink-0 px-4 py-2 rounded-full text-xs font-sans font-semibold border transition-colors ${
                 activeCategory === c
-                  ? "bg-[#2a1612] text-white border-[#2a1612]"
+                  ? "bg-[#173C3B] text-white border-[#173C3B]"
                   : "bg-white text-gray-600 border-gray-200 hover:border-gray-300"
               }`}
             >

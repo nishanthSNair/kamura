@@ -1,3 +1,4 @@
+import PageIntro from '@/components/kamura/PageIntro';
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog";
 import BlogGrid from "../BlogGrid";
@@ -89,18 +90,7 @@ export default function BlogIndexPage() {
   />
 
   {/* Clean Header */}
-  <section className="pt-32 pb-12 md:pt-40 md:pb-16 max-w-6xl mx-auto px-6">
-  <p className="text-xs tracking-[0.3em] uppercase mb-4 text-sage font-sans">
-   KAMURA Blog
-  </p>
-  <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-5 leading-tight max-w-3xl">
-   Wellness Guides & Insights
-  </h1>
-  <p className="text-gray-500 font-sans leading-relaxed max-w-2xl text-lg">
-   Expert guides on longevity clinics, biohacking studios, holistic
-   healing, and wellness trends across Dubai and the UAE.
-  </p>
-  </section>
+  <PageIntro eyebrow="Learn / The journal" title="Ideas for living well, longer." description="Explore preventive health, longevity and wellness through guides, research and practical explanations." links={[{href:'/learn',label:'Learning library'},{href:'/blog',label:'Journal',active:true},{href:'/treatments',label:'Treatments'}]}/>
 
   <BlogGrid posts={posts} />
  </>

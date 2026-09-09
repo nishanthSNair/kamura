@@ -74,7 +74,7 @@ export default function ProtocolCompare({ onClose }: ProtocolCompareProps) {
  {/* Progress bar */}
  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden mb-3">
  <div
- className="h-full bg-[#B5736A] rounded-full transition-all"
+ className="h-full bg-[#00786E] rounded-full transition-all"
  style={{ width: `${overlapPercent}%` }}
  />
  </div>
@@ -90,7 +90,7 @@ export default function ProtocolCompare({ onClose }: ProtocolCompareProps) {
  <button
  key={slug}
  onClick={() => addItem(slug)}
- className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-[10px] font-sans bg-gray-50 border border-gray-200 text-gray-500 hover:border-[#B5736A]/40 hover:text-[#B5736A] transition-colors"
+ className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-[10px] font-sans bg-gray-50 border border-gray-200 text-gray-500 hover:border-[#00786E]/40 hover:text-[#00786E] transition-colors"
  >
  <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />

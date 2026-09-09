@@ -21,8 +21,8 @@ export default function AddToStackButton({ slug, variant = "icon" }: AddToStackB
  }}
  className={`w-8 h-8 rounded-full flex items-center justify-center transition-all shadow-lg ${
  inStack
- ? "bg-[#B5736A] text-white"
- : "bg-white/90 text-gray-600 hover:bg-[#B5736A] hover:text-white backdrop-blur-sm"
+ ? "bg-[#00786E] text-white"
+ : "bg-white/90 text-gray-600 hover:bg-[#00786E] hover:text-white backdrop-blur-sm"
  }`}
  title={inStack ? "Remove from stack" : "Add to stack"}
  >
@@ -48,8 +48,8 @@ export default function AddToStackButton({ slug, variant = "icon" }: AddToStackB
  }}
  className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold font-sans transition-all ${
  inStack
- ? "bg-[#B5736A] text-white"
- : "bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-[#B5736A] hover:border-[#B5736A]"
+ ? "bg-[#00786E] text-white"
+ : "bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-[#00786E] hover:border-[#00786E]"
  }`}
  >
  {inStack ? (

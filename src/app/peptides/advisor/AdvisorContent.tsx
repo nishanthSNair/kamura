@@ -78,7 +78,7 @@ export default function AdvisorContent() {
       </section>
 
       {/* Goal Selection */}
-      <section className="py-16 md:py-20 bg-[#EDE7DB]">
+      <section className="py-16 md:py-20 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-xs uppercase tracking-[0.2em] text-terracotta font-sans mb-3 text-center">
             Step 1
@@ -100,7 +100,7 @@ export default function AdvisorContent() {
                   onClick={() => toggleGoal(goal.id)}
                   className={`group p-4 rounded-2xl border text-left transition-all ${
                     isSelected
-                      ? "border-[#B5736A] bg-[#B5736A]/10 shadow-md"
+                      ? "border-[#00786E] bg-[#00786E]/10 shadow-md"
                       : "border-gray-200/60 bg-white hover:border-terracotta/30 hover:shadow-md"
                   }`}
                 >
@@ -109,7 +109,7 @@ export default function AdvisorContent() {
                     <div
                       className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
                         isSelected
-                          ? "border-[#B5736A] bg-[#B5736A]"
+                          ? "border-[#00786E] bg-[#00786E]"
                           : "border-gray-300"
                       }`}
                     >
@@ -129,7 +129,7 @@ export default function AdvisorContent() {
                   </div>
                   <p
                     className={`font-sans text-sm font-semibold transition-colors ${
-                      isSelected ? "text-[#B5736A]" : "text-gray-900"
+                      isSelected ? "text-[#00786E]" : "text-gray-900"
                     }`}
                   >
                     {goal.label}
@@ -214,7 +214,7 @@ export default function AdvisorContent() {
                           {matchedGoals.map((gId) => (
                             <span
                               key={gId}
-                              className="text-[10px] px-2 py-0.5 rounded-full bg-[#B5736A]/10 text-[#B5736A] font-sans font-medium"
+                              className="text-[10px] px-2 py-0.5 rounded-full bg-[#00786E]/10 text-[#00786E] font-sans font-medium"
                             >
                               {getGoalLabel(gId)}
                             </span>
@@ -288,7 +288,7 @@ export default function AdvisorContent() {
       </section>
 
       {/* Disclaimer */}
-      <section className="border-t border-gray-200 bg-[#EDE7DB]">
+      <section className="border-t border-gray-200 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6 py-12 text-center">
           <p className="text-xs text-gray-500 font-sans leading-relaxed max-w-2xl mx-auto">
             This advisor provides educational information only and is not a

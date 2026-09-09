@@ -65,14 +65,14 @@ export default function ServiceRail() {
       className="relative overflow-hidden bg-gradient-to-b from-[#2D3E2D] to-[#101910] py-[120px] md:py-[140px]"
     >
       <div className="max-w-[1152px] mx-auto mb-12 md:mb-16 px-6 md:px-12">
-        <div className="text-[10px] font-semibold tracking-[0.32em] uppercase text-[#C4A882] mb-4">
+        <div className="text-[10px] font-semibold tracking-[0.32em] uppercase text-[#DCEC8B] mb-4">
           Scored & verified
         </div>
         <h2
           className="font-serif font-medium leading-[1.08] m-0 max-w-[18ch] text-white"
           style={{ fontSize: "clamp(40px, 5.2vw, 68px)" }}
         >
-          Wellness services, <i className="italic text-[#C4A882]">ranked by real evidence.</i>
+          Wellness services, <i className="italic text-[#DCEC8B]">ranked by real evidence.</i>
         </h2>
       </div>
 
@@ -92,26 +92,26 @@ export default function ServiceRail() {
               <button
                 key={s.slug}
                 onClick={() => setCenter(i)}
-                className="absolute top-1/2 left-1/2 w-[260px] h-[360px] -mt-[180px] -ml-[130px] rounded-[24px] overflow-hidden bg-[#FAF7F2] border border-[#C4A882]/18 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)] transition-[transform,opacity] duration-500 ease-[cubic-bezier(0.22,0.65,0.2,1)] will-change-transform cursor-pointer text-left"
+                className="absolute top-1/2 left-1/2 w-[260px] h-[360px] -mt-[180px] -ml-[130px] rounded-[24px] overflow-hidden bg-[#FAFCF7] border border-[#DCEC8B]/18 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)] transition-[transform,opacity] duration-500 ease-[cubic-bezier(0.22,0.65,0.2,1)] will-change-transform cursor-pointer text-left"
                 style={{
                   transform: `translate3d(${offset * 220}px, ${y}px, ${z}px) rotateY(${-angle}deg)`,
                   opacity,
                   zIndex: 10 - abs,
                 }}
               >
-                <div className="h-[58%] grid place-items-center bg-gradient-to-br from-[#EDE7DB] to-[#D6DDD0] text-[#7B8D68]">
+                <div className="h-[58%] grid place-items-center bg-gradient-to-br from-[#E7F3EB] to-[#D5E5D9] text-[#7B8D68]">
                   <svg viewBox="0 0 24 24" className="w-18 h-18 opacity-75" style={{ width: 72, height: 72 }}>
                     {RAIL_ICONS[s.icon]}
                   </svg>
                 </div>
                 <div className="p-5">
-                  <div className="text-[9.5px] font-semibold tracking-[0.24em] uppercase text-[#B5736A] mb-2">
+                  <div className="text-[9.5px] font-semibold tracking-[0.24em] uppercase text-[#00786E] mb-2">
                     {s.eyebrow}
                   </div>
-                  <h3 className="font-serif font-medium text-[22px] leading-[1.15] text-[#2A2520] m-0 mb-1.5">
+                  <h3 className="font-serif font-medium text-[22px] leading-[1.15] text-[#173C3B] m-0 mb-1.5">
                     {s.title}
                   </h3>
-                  <div className="text-[11.5px] text-[#2A2520]/65 font-medium">{s.score}</div>
+                  <div className="text-[11.5px] text-[#173C3B]/65 font-medium">{s.score}</div>
                 </div>
               </button>
             );

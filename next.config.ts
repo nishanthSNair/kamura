@@ -43,12 +43,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        // The atlas moved to the landing page.
-        source: "/body",
-        destination: "/",
-        permanent: true,
-      },
-      {
         source: "/blueprint",
         destination: "/wellness-checker",
         permanent: true,

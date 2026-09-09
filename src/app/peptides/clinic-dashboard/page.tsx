@@ -141,7 +141,7 @@ export default function ClinicDashboardPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="bg-[#EDE7DB] border-b border-gray-200/60">
+      <section className="bg-[#E7F3EB] border-b border-gray-200/60">
         <div className="max-w-6xl mx-auto px-6 py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
@@ -254,7 +254,7 @@ export default function ClinicDashboardPage() {
       </section>
 
       {/* Demand by Goal */}
-      <section className="py-16 md:py-20 bg-[#EDE7DB]">
+      <section className="py-16 md:py-20 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-xs uppercase tracking-[0.2em] text-terracotta font-sans mb-3">
             Demand Breakdown
@@ -288,7 +288,7 @@ export default function ClinicDashboardPage() {
                   </div>
                   <div className="w-full h-3 bg-gray-100 rounded-full overflow-hidden">
                     <div
-                      className="h-full rounded-full bg-[#B5736A] transition-all"
+                      className="h-full rounded-full bg-[#00786E] transition-all"
                       style={{ width: `${pct}%` }}
                     />
                   </div>
@@ -355,7 +355,7 @@ export default function ClinicDashboardPage() {
       </section>
 
       {/* Links */}
-      <section className="border-t border-gray-200 bg-[#EDE7DB]">
+      <section className="border-t border-gray-200 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6 py-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
             <Link

@@ -80,7 +80,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#F7F3EB]">
+      <div className="min-h-screen flex items-center justify-center bg-[#FAFCF7]">
         <p className="text-sm text-gray-400 font-sans">Loading...</p>
       </div>
     );
@@ -91,7 +91,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
 
   return (
     <ToastProvider>
-      <div className="min-h-screen bg-[#F7F3EB]">
+      <div className="min-h-screen bg-[#FAFCF7]">
         {/* Guest banner */}
         {isGuest && !bannerDismissed && (
           <div className="bg-gradient-to-r from-terracotta/10 via-terracotta/5 to-transparent border-b border-terracotta/15 px-4 py-2.5">
@@ -128,19 +128,9 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
         )}
 
         {/* Dashboard-specific nav (Option B) */}
-        <header className="bg-[#F7F3EB]/90 backdrop-blur-sm border-b border-gray-200/60 sticky top-0 z-40">
+        <header className="bg-[#FAFCF7]/90 backdrop-blur-sm border-b border-gray-200/60 sticky top-[76px] z-40">
           <div className="max-w-6xl mx-auto px-4 md:px-6">
             <div className="h-16 flex items-center justify-between gap-4 md:gap-6">
-              {/* Brand */}
-              <Link href="/" className="flex items-center gap-2 shrink-0">
-                <span className="font-serif text-lg md:text-xl tracking-[0.15em] text-gray-900">
-                  KAMURA
-                </span>
-                <span className="hidden sm:inline text-[9px] tracking-[0.3em] uppercase text-gray-400 font-sans">
-                  · Dashboard
-                </span>
-              </Link>
-
               {/* Tabs */}
               <nav className="flex items-center gap-1 overflow-x-auto no-scrollbar">
                 {NAV_TABS.map((tab) => {
@@ -192,19 +182,19 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
                       </div>
                       <Link
                         href="/my/profile"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#EDE7DB]/50 font-sans"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#E7F3EB]/50 font-sans"
                       >
                         Profile & settings
                       </Link>
                       <Link
                         href="/my/bookings"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#EDE7DB]/50 font-sans"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#E7F3EB]/50 font-sans"
                       >
                         Bookings
                       </Link>
                       <button
                         onClick={handleLogout}
-                        className="block w-full text-left px-4 py-2 text-sm text-gray-500 hover:bg-[#EDE7DB]/50 font-sans"
+                        className="block w-full text-left px-4 py-2 text-sm text-gray-500 hover:bg-[#E7F3EB]/50 font-sans"
                       >
                         Sign out
                       </button>

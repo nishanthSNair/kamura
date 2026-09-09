@@ -1,3 +1,4 @@
+import {listings} from "@/data/listings";
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { events } from "@/data/events";
@@ -19,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
  }));
 
  return [
+ {url:`${baseUrl}/body`,changeFrequency:"monthly",priority:0.9},
+ {url:`${baseUrl}/learn`,changeFrequency:"weekly",priority:0.9},
  {
  url: baseUrl,
  lastModified: new Date(),
@@ -74,9 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  changeFrequency: "monthly" as const,
  priority: 0.8,
  })),
- // Clinic detail URLs (/explore/[id]) and area URLs (/explore/area/*) were
- // dropped from the sitemap when the listings directory was archived
- // (2026-05). /explore now renders the wellness-services lead page.
+ ...listings.map(l=>({url:`${baseUrl}/explore/${l.id}`,changeFrequency:'monthly' as const,priority:0.7})),
  {
  url: `${baseUrl}/treatments`,
  lastModified: new Date(),

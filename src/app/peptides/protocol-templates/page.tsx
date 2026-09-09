@@ -75,7 +75,7 @@ function goalTag(goalId: string) {
     "skin-hair": "Skin & Hair",
   };
   return (
-    <span className="text-[10px] px-2 py-0.5 rounded-full font-sans font-medium bg-[#B5736A]/10 text-[#B5736A]">
+    <span className="text-[10px] px-2 py-0.5 rounded-full font-sans font-medium bg-[#00786E]/10 text-[#00786E]">
       {labels[goalId] || goalId}
     </span>
   );
@@ -278,7 +278,7 @@ export default function ProtocolTemplatesPage() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-gray-200 bg-[#EDE7DB]">
+      <section className="border-t border-gray-200 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6 py-16 text-center">
           <h2 className="font-serif text-2xl md:text-3xl text-gray-900 mb-3">
             Need Custom Protocols?
@@ -290,7 +290,7 @@ export default function ProtocolTemplatesPage() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/peptides/protocol-builder"
-              className="px-6 py-3 bg-[#B5736A] hover:bg-[#9A5F57] text-white text-sm font-semibold rounded-xl transition-colors font-sans"
+              className="px-6 py-3 bg-[#00786E] hover:bg-[#005E57] text-white text-sm font-semibold rounded-xl transition-colors font-sans"
             >
               Build Custom Protocol
             </Link>

@@ -66,7 +66,7 @@ export default function SessionLogCard({ sessions, onLogNew }: Props) {
         </div>
         <button
           onClick={onLogNew}
-          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-[#2a1612] text-white text-[10.5px] tracking-[0.18em] uppercase font-semibold font-sans hover:bg-[#1a0f0c]"
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-[#173C3B] text-white text-[10.5px] tracking-[0.18em] uppercase font-semibold font-sans hover:bg-[#173C3B]"
         >
           <Plus size={13} strokeWidth={2.2} />
           Log
@@ -129,7 +129,7 @@ function SessionRow({ session }: { session: SessionLog }) {
 
 function EmptyState({ onLogNew }: { onLogNew: () => void }) {
   return (
-    <div className="text-center py-8 px-4 rounded-2xl border border-dashed border-gray-200 bg-[#FAF7F2]">
+    <div className="text-center py-8 px-4 rounded-2xl border border-dashed border-gray-200 bg-[#FAFCF7]">
       <p className="font-serif text-[15px] text-gray-900 mb-1.5">
         No sessions yet
       </p>
@@ -139,7 +139,7 @@ function EmptyState({ onLogNew }: { onLogNew: () => void }) {
       </p>
       <button
         onClick={onLogNew}
-        className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#2a1612] text-white text-[10.5px] tracking-[0.18em] uppercase font-semibold font-sans hover:bg-[#1a0f0c]"
+        className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#173C3B] text-white text-[10.5px] tracking-[0.18em] uppercase font-semibold font-sans hover:bg-[#173C3B]"
       >
         <Plus size={13} strokeWidth={2.2} />
         Log your first session

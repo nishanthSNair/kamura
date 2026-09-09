@@ -82,36 +82,10 @@ export default function TreatmentsContent() {
  return (
  <div>
  {/* Nature Hero */}
- <section className="relative min-h-[50vh] flex items-center justify-center">
- <div
- className="absolute inset-0 bg-cover bg-center"
- style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80')" }}
- />
- <div className="absolute inset-0 bg-gradient-to-b from-forest/60 via-black/30 to-forest/50" />
 
- <div className="relative z-10 text-center px-6 py-20">
- <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-xs font-semibold text-white/90 uppercase tracking-[1.5px] mb-6 font-sans">
- Evidence-Based Wellness Intelligence
- </span>
- <h1 className="font-serif text-4xl md:text-[52px] font-bold leading-tight mb-5 text-white">
- Every Treatment. Scored. Transparent.
- </h1>
- <p className="text-lg text-white/75 max-w-[700px] mx-auto leading-relaxed font-sans mb-8">
- We index every wellness and longevity treatment, score them on real evidence,
- community experience, safety, and accessibility — so you can make decisions
- based on truth, not marketing.
- </p>
- <Link
- href="/treatments/methodology"
- className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors font-sans font-medium"
- >
- How we calculate the Kamura Score &rarr;
- </Link>
- </div>
- </section>
 
  {/* Kamura Score Explainer */}
- <section className="max-w-[1200px] mx-auto px-6 -mt-12 relative z-10 mb-16">
+ <section className="max-w-[1200px] mx-auto px-6 mt-8 relative z-10 mb-16">
  <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 grid md:grid-cols-2 gap-8 md:gap-10 shadow-lg">
  <div>
  <h2 className="font-serif text-2xl md:text-[28px] text-gray-900 mb-4">

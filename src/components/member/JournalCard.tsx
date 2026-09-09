@@ -81,7 +81,7 @@ export default function JournalCard({ entries, onAdd }: Props) {
 
 function MetricTag({ label, value }: { label: string; value: string }) {
   return (
-    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#EDE7DB] border border-gray-200/60 text-[10px] font-sans text-gray-600">
+    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#E7F3EB] border border-gray-200/60 text-[10px] font-sans text-gray-600">
       <span className="tracking-[0.1em] uppercase text-gray-400">{label}</span>
       <span className="font-semibold text-gray-700">{value}</span>
     </span>

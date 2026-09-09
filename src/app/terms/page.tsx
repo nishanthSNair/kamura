@@ -8,15 +8,15 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <article className="bg-[#FAF7F2] pt-32 pb-24 md:pt-40 md:pb-32">
+    <article className="bg-[#FAFCF7] pt-32 pb-24 md:pt-40 md:pb-32">
       <div className="max-w-2xl mx-auto px-6 md:px-8">
         <p className="text-[10.5px] tracking-[0.32em] uppercase text-terracotta font-semibold font-sans mb-5">
           Legal
         </p>
-        <h1 className="font-serif text-[40px] md:text-[52px] leading-[1.05] tracking-[-0.012em] text-[#2A2520] mb-3">
+        <h1 className="font-serif text-[40px] md:text-[52px] leading-[1.05] tracking-[-0.012em] text-[#173C3B] mb-3">
           Terms of Use
         </h1>
-        <p className="text-[13px] text-[#2A2520]/55 font-sans mb-12">
+        <p className="text-[13px] text-[#173C3B]/55 font-sans mb-12">
           Last updated: 2026-05-10
         </p>
 
@@ -91,7 +91,7 @@ export default function TermsPage() {
             <a href="mailto:hello@kamuralife.com">hello@kamuralife.com</a>
           </p>
 
-          <p className="text-[12px] text-[#2A2520]/55 mt-12">
+          <p className="text-[12px] text-[#173C3B]/55 mt-12">
             <em>
               This is a working draft pending legal review. It does not
               constitute legal advice.

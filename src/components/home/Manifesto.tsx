@@ -28,7 +28,7 @@ export default function Manifesto() {
     <section
       ref={sectionRef}
       id="manifesto"
-      className="relative bg-[#F5EFE6] py-32 md:py-44 border-y border-[#2A2520]/8 overflow-hidden"
+      className="relative bg-[#F5EFE6] py-32 md:py-44 border-y border-[#173C3B]/8 overflow-hidden"
     >
       {/* Hourglass watermark — visible on the left edge of the section,
           fades into cream toward the centre where the text reads */}
@@ -76,7 +76,7 @@ export default function Manifesto() {
         </motion.p>
 
         <h2
-          className="font-serif text-[#2A2520] leading-[1.04] tracking-[-0.02em] mb-12 md:mb-16"
+          className="font-serif text-[#173C3B] leading-[1.04] tracking-[-0.02em] mb-12 md:mb-16"
           style={{ fontSize: "clamp(52px, 7vw, 96px)" }}
         >
           <HeadlineReveal
@@ -91,7 +91,7 @@ export default function Manifesto() {
 
         <motion.div style={{ y: bodyY }}>
           <FadeInOnScroll>
-            <div className="space-y-7 text-[16.5px] md:text-[18.5px] text-[#2A2520]/78 font-sans leading-[1.8]">
+            <div className="space-y-7 text-[16.5px] md:text-[18.5px] text-[#173C3B]/78 font-sans leading-[1.8]">
               <p>
                 The wellness industry runs on urgency. Kamura runs on its
                 opposite.
@@ -109,7 +109,7 @@ export default function Manifesto() {
         <motion.div style={{ y: closerY }}>
           <FadeInOnScroll delay={240}>
             <p
-              className="font-serif italic text-[#2A2520] mt-12 md:mt-16 leading-[1.4]"
+              className="font-serif italic text-[#173C3B] mt-12 md:mt-16 leading-[1.4]"
               style={{ fontSize: "clamp(24px, 2.8vw, 34px)" }}
             >
               The most powerful longevity protocol
@@ -121,12 +121,12 @@ export default function Manifesto() {
 
         <FadeInOnScroll delay={320}>
           <div className="flex items-center justify-center gap-3 mt-16 md:mt-20">
-            <span className="w-12 h-px bg-[#2A2520]/18" />
+            <span className="w-12 h-px bg-[#173C3B]/18" />
             <motion.span
               style={{ scale: dotScale }}
               className="w-2 h-2 rounded-full bg-terracotta block"
             />
-            <span className="w-12 h-px bg-[#2A2520]/18" />
+            <span className="w-12 h-px bg-[#173C3B]/18" />
           </div>
         </FadeInOnScroll>
       </div>

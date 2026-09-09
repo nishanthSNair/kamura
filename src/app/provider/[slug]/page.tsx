@@ -151,7 +151,7 @@ export default async function ProviderPublicProfile({ params }: Props) {
       />
 
       {/* Hero */}
-      <section className="relative pt-24 pb-12 bg-[#EDE7DB]">
+      <section className="relative pt-24 pb-12 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6">
           {provider.cover_image_url && (
             <div className="relative h-[260px] md:h-[360px] rounded-3xl overflow-hidden mb-8">
@@ -306,8 +306,8 @@ export default async function ProviderPublicProfile({ params }: Props) {
                               width="14"
                               height="14"
                               viewBox="0 0 24 24"
-                              fill={star <= r.rating ? "#B5736A" : "none"}
-                              stroke="#B5736A"
+                              fill={star <= r.rating ? "#00786E" : "none"}
+                              stroke="#00786E"
                               strokeWidth="1.5"
                             >
                               <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
@@ -336,7 +336,7 @@ export default async function ProviderPublicProfile({ params }: Props) {
 
             {/* Location */}
             {(provider.address || provider.city) && (
-              <div className="p-6 rounded-2xl bg-[#EDE7DB]/70">
+              <div className="p-6 rounded-2xl bg-[#E7F3EB]/70">
                 <p className="text-[10px] tracking-[0.2em] uppercase text-gray-500 font-sans mb-3">
                   Location
                 </p>
@@ -350,7 +350,7 @@ export default async function ProviderPublicProfile({ params }: Props) {
 
             {/* Hours */}
             {Object.keys(provider.operating_hours || {}).length > 0 && (
-              <div className="p-6 rounded-2xl bg-[#EDE7DB]/70">
+              <div className="p-6 rounded-2xl bg-[#E7F3EB]/70">
                 <p className="text-[10px] tracking-[0.2em] uppercase text-gray-500 font-sans mb-3">
                   Hours
                 </p>

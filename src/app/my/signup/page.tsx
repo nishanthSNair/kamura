@@ -59,7 +59,7 @@ export default function MemberSignupPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#EDE7DB] px-6 py-12">
+    <div className="min-h-screen flex items-center justify-center bg-[#E7F3EB] px-6 py-12">
       <div className="w-full max-w-md">
         <div className="text-center mb-10">
           <Link href="/" className="font-serif text-3xl tracking-[0.15em] text-gray-900">
@@ -149,7 +149,7 @@ export default function MemberSignupPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full px-6 py-3.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] transition-colors disabled:opacity-50"
+              className="w-full px-6 py-3.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] transition-colors disabled:opacity-50"
             >
               {loading ? "Creating account..." : "Create Account"}
             </button>

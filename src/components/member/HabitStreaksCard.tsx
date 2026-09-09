@@ -125,7 +125,7 @@ export default function HabitStreaksCard({ items, logs }: Props) {
         {streaks.map((s) => (
           <div key={s.itemId} className="px-5 py-3.5 flex items-center justify-between gap-4">
             <div className="flex items-center gap-3 min-w-0">
-              <div className="w-8 h-8 rounded-lg bg-[#EDE7DB] flex items-center justify-center font-serif text-[10px] font-semibold text-gray-700 shrink-0">
+              <div className="w-8 h-8 rounded-lg bg-[#E7F3EB] flex items-center justify-center font-serif text-[10px] font-semibold text-gray-700 shrink-0">
                 {s.name.slice(0, 2).toUpperCase()}
               </div>
               <p className="text-sm font-sans text-gray-900 truncate">{s.name}</p>

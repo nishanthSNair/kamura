@@ -166,7 +166,7 @@ export default function BookingWidget({ providerId, services }: Props) {
           />
           <button
             onClick={() => setStep("slot")}
-            className="w-full px-5 py-3 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c]"
+            className="w-full px-5 py-3 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B]"
           >
             See Available Times
           </button>
@@ -259,7 +259,7 @@ export default function BookingWidget({ providerId, services }: Props) {
           <button
             onClick={submit}
             disabled={!name || !phone || submitting}
-            className="w-full px-5 py-3 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] disabled:opacity-50"
+            className="w-full px-5 py-3 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] disabled:opacity-50"
           >
             {submitting ? "Booking..." : `Confirm — AED ${Number(selectedService.price_aed).toLocaleString()}`}
           </button>
@@ -303,7 +303,7 @@ function SelectedHeader({
   onChange: () => void;
 }) {
   return (
-    <div className="flex items-center justify-between mb-4 p-3 rounded-xl bg-[#EDE7DB]/60">
+    <div className="flex items-center justify-between mb-4 p-3 rounded-xl bg-[#E7F3EB]/60">
       <div>
         <p className="text-[10px] tracking-[0.15em] uppercase text-gray-500 font-sans">
           Service

@@ -227,7 +227,7 @@ export default function ProfilePage() {
           <button
             onClick={saveProfile}
             disabled={saving}
-            className="px-5 py-2.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] transition-colors disabled:opacity-50"
+            className="px-5 py-2.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] transition-colors disabled:opacity-50"
           >
             {saving ? "Saving..." : "Save Changes"}
           </button>
@@ -336,7 +336,7 @@ export default function ProfilePage() {
           <button
             onClick={() => addConcern(newConcern)}
             disabled={!newConcern.trim()}
-            className="px-4 py-2.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] disabled:opacity-50"
+            className="px-4 py-2.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] disabled:opacity-50"
           >
             Add
           </button>

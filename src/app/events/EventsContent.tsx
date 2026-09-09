@@ -1,5 +1,6 @@
 "use client";
 
+import PageIntro from '@/components/kamura/PageIntro';
 import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { events, categoryColors, type Event, type EventCategory } from "@/data/events";
@@ -168,27 +169,7 @@ export default function EventsContent() {
  return (
  <>
  {/* Hero Section */}
- <section className="relative h-[60vh] flex items-center justify-center">
- <div
- className="absolute inset-0 bg-cover bg-center"
- style={{
- backgroundImage:
- "url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80')",
- }}
- />
- <div className="absolute inset-0 bg-gradient-to-b from-forest/50 via-black/25 to-forest/40" />
- <div className="relative z-10 text-center text-white px-6 max-w-3xl">
- <p className="text-xs tracking-[0.3em] uppercase mb-6 text-white/80">
- KAMURA Events
- </p>
- <h1 className="text-4xl md:text-6xl font-serif mb-6 leading-tight">
- Wellness &amp; Longevity Events in Dubai
- </h1>
- <p className="text-lg md:text-xl text-white/90 leading-relaxed font-sans">
- Your complete guide to wellness events in the UAE — biohacking summits, longevity festivals, health conferences, and retreats.
- </p>
- </div>
- </section>
+ <PageIntro eyebrow="Classes & events / Connect" title="Make space for new perspectives." description="Explore wellness events, conferences and workshops in the UAE and beyond." links={[{href:'/classes',label:'Classes & studios'},{href:'/events',label:'Events',active:true},{href:'/my',label:'My Kamura'}]}/>
 
  {/* Quick Stats Bar */}
  <section className="border-b border-gray-100">

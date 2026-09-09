@@ -194,7 +194,7 @@ export default function PeptideTrackerClient() {
           <div className="flex items-center gap-3">
             <button
               onClick={() => setShowAdd(true)}
-              className="px-5 py-2.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] transition-colors"
+              className="px-5 py-2.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] transition-colors"
             >
               + Add Peptide
             </button>
@@ -211,7 +211,7 @@ export default function PeptideTrackerClient() {
       </section>
 
       {/* Active Cycles */}
-      <section className="py-14 bg-[#EDE7DB]">
+      <section className="py-14 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-baseline justify-between mb-7 pb-4 border-b border-gray-300/60">
             <h2 className="font-serif text-2xl text-gray-900">Active Cycles</h2>
@@ -251,7 +251,7 @@ export default function PeptideTrackerClient() {
 
       {/* Recent Logs */}
       {state.logs.length > 0 && (
-        <section className="py-14 bg-[#EDE7DB]">
+        <section className="py-14 bg-[#E7F3EB]">
           <div className="max-w-6xl mx-auto px-6">
             <div className="flex items-baseline justify-between mb-7 pb-4 border-b border-gray-300/60">
               <h2 className="font-serif text-2xl text-gray-900">Recent Logs</h2>
@@ -339,7 +339,7 @@ function EmptyCycles({ onAdd }: { onAdd: () => void }) {
       </p>
       <button
         onClick={onAdd}
-        className="px-5 py-2.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] transition-colors"
+        className="px-5 py-2.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] transition-colors"
       >
         + Add Your First Peptide
       </button>
@@ -471,7 +471,7 @@ function CycleCard({
       <div className="flex items-center gap-2">
         <button
           onClick={onQuickLog}
-          className="flex-1 px-4 py-2.5 rounded-full bg-[#2a1612] text-white text-[11px] tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] transition-colors"
+          className="flex-1 px-4 py-2.5 rounded-full bg-[#173C3B] text-white text-[11px] tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] transition-colors"
         >
           Quick Log
         </button>
@@ -678,7 +678,7 @@ function AddPeptideModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-[#1a0f0c]/80 backdrop-blur-sm flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 bg-[#173C3B]/80 backdrop-blur-sm flex items-center justify-center p-4"
       onClick={onClose}
     >
       <div
@@ -716,7 +716,7 @@ function AddPeptideModal({
                 className={`w-full text-left p-5 flex items-start gap-4 transition-colors ${
                   isActive
                     ? "opacity-50 cursor-not-allowed"
-                    : "hover:bg-[#EDE7DB]/50"
+                    : "hover:bg-[#E7F3EB]/50"
                 }`}
               >
                 <div className="flex-1 min-w-0">
@@ -783,7 +783,7 @@ function LogDoseModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-[#1a0f0c]/80 backdrop-blur-sm flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 bg-[#173C3B]/80 backdrop-blur-sm flex items-center justify-center p-4"
       onClick={onClose}
     >
       <div
@@ -882,7 +882,7 @@ function LogDoseModal({
           </button>
           <button
             onClick={submit}
-            className="flex-1 px-4 py-3 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c]"
+            className="flex-1 px-4 py-3 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B]"
           >
             Save Log
           </button>

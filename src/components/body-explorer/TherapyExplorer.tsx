@@ -59,13 +59,7 @@ export default function TherapyExplorer(){
  const reset=()=>{setGoalOverview(false);setPlaying(false);setFocusedRegion(null);setInspected(null);setScene(s=>({...initial,selected:allMappedIds,reset:s.reset+1}));};
  return <div className={styles.explorer} data-lenis-prevent>
   <div className={styles.sceneWrap}>{atlas&&<AnatomyScene atlas={atlas} state={{...scene,inspectorOpen:panelOpen}} onSelect={inspect} onProgress={setProgress} onError={setError}/>}</div>
-  <header className={styles.header}>
-   <Link href="/" className={styles.brand}>KAMURA<span>PREVENTION · LONGEVITY</span></Link>
-   <nav className={styles.siteNav} aria-label="Kamura">
-    <Link href="/treatments">Treatments</Link><Link href="/supplements">Supplements</Link><Link href="/events">Events</Link><Link href="/blog">Blog</Link>
-   </nav>
-   <div className={styles.headerActions}><button onClick={()=>setLearning('guide')}>Guide me</button><button onClick={()=>setMobileLibrary(v=>!v)} className={styles.libraryToggle}><Search size={17}/>Therapies</button><button onClick={()=>setCredits(true)} aria-label="Sources and model information"><CircleHelp size={20}/></button></div>
-  </header>
+  <div className={styles.explorerTools}><button onClick={()=>setMobileLibrary(v=>!v)} aria-expanded={mobileLibrary}><Search size={16}/>Therapies</button><button onClick={()=>setLearning('guide')}>Guide me</button><button onClick={()=>setCredits(true)} aria-label="Sources and model information"><CircleHelp size={19}/></button></div>
   <aside className={`${styles.library} ${mobileLibrary?styles.libraryOpen:''}`} aria-label="Therapy library">
    <div className={styles.libraryHeading}><span>Explore therapies</span><button className={styles.mobileClose} onClick={()=>setMobileLibrary(false)} aria-label="Close therapy library"><X size={20}/></button><span className={styles.count}>{catalogue.length}</span></div>
    <div className={styles.libraryTabs}><button aria-pressed={library==='therapies'} onClick={()=>setLibrary('therapies')}>Therapies</button><button aria-pressed={library==='combinations'} onClick={()=>setLibrary('combinations')}>Combinations</button></div>

@@ -211,7 +211,7 @@ export default function WhatIsAPeptidePage() {
       />
 
       {/* ───── HERO with animated peptide chain ─────────────── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#1a0f0c]">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#173C3B]">
         {/* Ambient particles */}
         <div className="absolute inset-0 pointer-events-none">
           {Array.from({ length: 40 }).map((_, i) => (
@@ -255,7 +255,7 @@ export default function WhatIsAPeptidePage() {
             >
               <defs>
                 <linearGradient id="chainGrad" x1="0%" x2="100%">
-                  <stop offset="0%" stopColor="#B5736A" />
+                  <stop offset="0%" stopColor="#00786E" />
                   <stop offset="100%" stopColor="#E8C4A0" />
                 </linearGradient>
                 <filter id="glow">
@@ -330,7 +330,7 @@ export default function WhatIsAPeptidePage() {
       </section>
 
       {/* ───── WHAT THEY ARE — size comparison ──────────────── */}
-      <section className="py-24 md:py-32 bg-[#EDE7DB]">
+      <section className="py-24 md:py-32 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
             <FadeInOnScroll>
@@ -379,12 +379,12 @@ export default function WhatIsAPeptidePage() {
                       <svg viewBox="0 0 120 60" className="w-full">
                         <path
                           d="M 10 30 Q 30 10, 50 30 T 90 30 T 110 30"
-                          stroke="#B5736A"
+                          stroke="#00786E"
                           strokeWidth="1.5"
                           fill="none"
                         />
                         {[10, 50, 90, 110].map((x) => (
-                          <circle key={x} cx={x} cy={30} r="6" fill="#B5736A" />
+                          <circle key={x} cx={x} cy={30} r="6" fill="#00786E" />
                         ))}
                       </svg>
                     </div>
@@ -400,8 +400,8 @@ export default function WhatIsAPeptidePage() {
                       <svg viewBox="0 0 140 140" className="w-full h-full">
                         <defs>
                           <radialGradient id="proteinG">
-                            <stop offset="0%" stopColor="#9A5F57" />
-                            <stop offset="100%" stopColor="#B5736A" />
+                            <stop offset="0%" stopColor="#005E57" />
+                            <stop offset="100%" stopColor="#00786E" />
                           </radialGradient>
                         </defs>
                         {[
@@ -466,17 +466,17 @@ export default function WhatIsAPeptidePage() {
           </FadeInOnScroll>
 
           <FadeInOnScroll>
-            <div className="relative max-w-3xl mx-auto aspect-[16/9] rounded-3xl bg-gradient-to-br from-[#1a0f0c] to-[#2a1612] overflow-hidden">
+            <div className="relative max-w-3xl mx-auto aspect-[16/9] rounded-3xl bg-gradient-to-br from-[#173C3B] to-[#173C3B] overflow-hidden">
               <svg viewBox="0 0 800 450" className="w-full h-full">
                 <defs>
                   <linearGradient id="membrane" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#B5736A" stopOpacity="0.3" />
-                    <stop offset="50%" stopColor="#B5736A" stopOpacity="0.6" />
-                    <stop offset="100%" stopColor="#B5736A" stopOpacity="0.3" />
+                    <stop offset="0%" stopColor="#00786E" stopOpacity="0.3" />
+                    <stop offset="50%" stopColor="#00786E" stopOpacity="0.6" />
+                    <stop offset="100%" stopColor="#00786E" stopOpacity="0.3" />
                   </linearGradient>
                   <radialGradient id="pepG">
                     <stop offset="0%" stopColor="#E8C4A0" />
-                    <stop offset="100%" stopColor="#B5736A" />
+                    <stop offset="100%" stopColor="#00786E" />
                   </radialGradient>
                   <filter id="glowB">
                     <feGaussianBlur stdDeviation="4" result="b" />
@@ -489,14 +489,14 @@ export default function WhatIsAPeptidePage() {
 
                 {/* Cell membrane */}
                 <rect x="0" y="240" width="800" height="40" fill="url(#membrane)" />
-                <line x1="0" y1="240" x2="800" y2="240" stroke="#B5736A" strokeWidth="1" opacity="0.4" />
-                <line x1="0" y1="280" x2="800" y2="280" stroke="#B5736A" strokeWidth="1" opacity="0.4" />
+                <line x1="0" y1="240" x2="800" y2="240" stroke="#00786E" strokeWidth="1" opacity="0.4" />
+                <line x1="0" y1="280" x2="800" y2="280" stroke="#00786E" strokeWidth="1" opacity="0.4" />
 
                 {/* Phospholipid bilayer dots */}
                 {Array.from({ length: 20 }).map((_, i) => (
                   <g key={i}>
-                    <circle cx={20 + i * 40} cy={248} r="4" fill="#B5736A" opacity="0.5" />
-                    <circle cx={20 + i * 40} cy={272} r="4" fill="#B5736A" opacity="0.5" />
+                    <circle cx={20 + i * 40} cy={248} r="4" fill="#00786E" opacity="0.5" />
+                    <circle cx={20 + i * 40} cy={272} r="4" fill="#00786E" opacity="0.5" />
                   </g>
                 ))}
 
@@ -504,17 +504,17 @@ export default function WhatIsAPeptidePage() {
                 <g>
                   <path
                     d="M 380 220 L 380 250 Q 380 260, 395 260 L 405 260 Q 420 260, 420 250 L 420 220 Q 420 210, 410 210 L 390 210 Q 380 210, 380 220 Z"
-                    fill="#9A5F57"
+                    fill="#005E57"
                     stroke="#E8C4A0"
                     strokeWidth="1"
                   />
                   <path
                     d="M 380 280 L 380 310 Q 380 320, 395 320 L 405 320 Q 420 320, 420 310 L 420 280"
-                    fill="#9A5F57"
+                    fill="#005E57"
                     stroke="#E8C4A0"
                     strokeWidth="1"
                   />
-                  <circle cx="400" cy="235" r="6" fill="#1a0f0c" />
+                  <circle cx="400" cy="235" r="6" fill="#173C3B" />
                 </g>
 
                 {/* Floating peptide (animated) */}
@@ -587,7 +587,7 @@ export default function WhatIsAPeptidePage() {
       </section>
 
       {/* ───── THE FOUR JOBS ───────────────────────────────── */}
-      <section className="py-24 md:py-32 bg-[#EDE7DB]">
+      <section className="py-24 md:py-32 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6">
           <FadeInOnScroll>
             <div className="max-w-2xl mb-16">
@@ -620,9 +620,9 @@ export default function WhatIsAPeptidePage() {
                       viewBox="0 0 40 40"
                       className="opacity-40 group-hover:opacity-70 transition-opacity"
                     >
-                      <circle cx="20" cy="20" r="18" fill="none" stroke="#B5736A" strokeWidth="1" />
-                      <circle cx="20" cy="20" r="12" fill="none" stroke="#B5736A" strokeWidth="1" />
-                      <circle cx="20" cy="20" r="4" fill="#B5736A" />
+                      <circle cx="20" cy="20" r="18" fill="none" stroke="#00786E" strokeWidth="1" />
+                      <circle cx="20" cy="20" r="12" fill="none" stroke="#00786E" strokeWidth="1" />
+                      <circle cx="20" cy="20" r="4" fill="#00786E" />
                     </svg>
                   </div>
                   <h3 className="font-serif text-4xl md:text-5xl tracking-tight text-gray-900 mb-2">
@@ -681,7 +681,7 @@ export default function WhatIsAPeptidePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <FadeInOnScroll>
-              <div className="p-8 rounded-3xl bg-[#EDE7DB] border border-gray-200/60">
+              <div className="p-8 rounded-3xl bg-[#E7F3EB] border border-gray-200/60">
                 <p className="text-[10px] tracking-[0.2em] uppercase text-gray-500 font-sans mb-3">
                   Naturally Made
                 </p>
@@ -698,7 +698,7 @@ export default function WhatIsAPeptidePage() {
             </FadeInOnScroll>
 
             <FadeInOnScroll delay={100}>
-              <div className="p-8 rounded-3xl bg-[#1a0f0c] text-white">
+              <div className="p-8 rounded-3xl bg-[#173C3B] text-white">
                 <p className="text-[10px] tracking-[0.2em] uppercase text-terracotta font-sans mb-3">
                   Compounded
                 </p>
@@ -718,7 +718,7 @@ export default function WhatIsAPeptidePage() {
       </section>
 
       {/* ───── HOW KAMURA SCORES ───────────────────────────── */}
-      <section className="py-24 md:py-32 bg-[#EDE7DB]">
+      <section className="py-24 md:py-32 bg-[#E7F3EB]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-16 items-center">
             <FadeInOnScroll>
@@ -787,7 +787,7 @@ export default function WhatIsAPeptidePage() {
       </section>
 
       {/* ───── CTA ─────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#1a0f0c]">
+      <section className="relative overflow-hidden bg-[#173C3B]">
         <div
           className="absolute inset-0 opacity-20 bg-cover bg-center"
           style={{
@@ -795,7 +795,7 @@ export default function WhatIsAPeptidePage() {
               "url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&q=85')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0f0c] via-[#2a1612]/90 to-[#1a0f0c]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#173C3B] via-[#173C3B]/90 to-[#173C3B]" />
         <div className="relative max-w-3xl mx-auto px-6 py-24 md:py-32 text-center">
           <p className="text-[10px] tracking-[0.3em] uppercase text-white/50 font-sans mb-6">
             Ready to Explore
@@ -808,7 +808,7 @@ export default function WhatIsAPeptidePage() {
           <div className="flex flex-wrap items-center justify-center gap-3 mt-10">
             <Link
               href="/peptides/directory"
-              className="px-7 py-3.5 bg-white text-[#2a1612] text-xs tracking-[0.15em] uppercase font-semibold rounded-full hover:bg-white/90 transition-colors font-sans"
+              className="px-7 py-3.5 bg-white text-[#173C3B] text-xs tracking-[0.15em] uppercase font-semibold rounded-full hover:bg-white/90 transition-colors font-sans"
             >
               Browse Directory
             </Link>

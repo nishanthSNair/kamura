@@ -28,7 +28,7 @@ export default function SignupPromptModal({ open, onClose, reason }: Props) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#1a0f0c]/60 backdrop-blur-md"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#173C3B]/60 backdrop-blur-md"
       onClick={onClose}
     >
       <div
@@ -39,7 +39,7 @@ export default function SignupPromptModal({ open, onClose, reason }: Props) {
           <button
             onClick={onClose}
             aria-label="Close"
-            className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#EDE7DB] flex items-center justify-center text-gray-500 hover:text-terracotta"
+            className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#E7F3EB] flex items-center justify-center text-gray-500 hover:text-terracotta"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
               <line x1="18" y1="6" x2="6" y2="18" />
@@ -48,7 +48,7 @@ export default function SignupPromptModal({ open, onClose, reason }: Props) {
           </button>
 
           <div className="w-14 h-14 rounded-2xl bg-terracotta/10 flex items-center justify-center mx-auto mb-5">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B5736A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00786E" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
               <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
             </svg>
           </div>
@@ -67,7 +67,7 @@ export default function SignupPromptModal({ open, onClose, reason }: Props) {
             <Link
               href="/my/signup"
               onClick={onClose}
-              className="px-6 py-3 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c]"
+              className="px-6 py-3 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B]"
             >
               Create free account
             </Link>

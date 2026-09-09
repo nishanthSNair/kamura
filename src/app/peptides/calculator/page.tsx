@@ -71,7 +71,7 @@ export default function CalculatorPage() {
   };
 
   return (
-    <div className="bg-[#F7F3EB] min-h-screen">
+    <div className="bg-[#FAFCF7] min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -186,7 +186,7 @@ export default function CalculatorPage() {
           </Link>
           <Link
             href="/my"
-            className="p-6 bg-[#2A2520] rounded-3xl hover:shadow-lg transition-all group"
+            className="p-6 bg-[#173C3B] rounded-3xl hover:shadow-lg transition-all group"
           >
             <h3 className="font-serif text-lg text-white mb-1">Track your protocol →</h3>
             <p className="text-xs text-white/60 font-sans">

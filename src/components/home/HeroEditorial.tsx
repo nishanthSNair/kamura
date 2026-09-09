@@ -57,8 +57,8 @@ const DOORS: Door[] = [
     sub: "The science, visualised.",
     href: "/peptides/what-is-a-peptide",
     Icon: BookOpen,
-    bg: "bg-[#B5736A]/14",
-    fg: "text-[#B5736A]",
+    bg: "bg-[#00786E]/14",
+    fg: "text-[#00786E]",
     delay: 1100,
   },
   {
@@ -79,8 +79,8 @@ const DOORS: Door[] = [
     sub: "Goals, favourites, your feed.",
     href: "/my",
     Icon: Activity,
-    bg: "bg-[#C4A882]/24",
-    fg: "text-[#9A5F57]",
+    bg: "bg-[#DCEC8B]/24",
+    fg: "text-[#005E57]",
     delay: 1260,
   },
   {
@@ -92,7 +92,7 @@ const DOORS: Door[] = [
     Icon: FlaskConical,
     tag: "Soon",
     bg: "bg-[#D4B896]/24",
-    fg: "text-[#9A5F57]",
+    fg: "text-[#005E57]",
     delay: 1340,
   },
   {
@@ -103,7 +103,7 @@ const DOORS: Door[] = [
     href: "/book/coming-soon",
     Icon: Handshake,
     tag: "Soon",
-    bg: "bg-[#B0BCA4]/32",
+    bg: "bg-[#AFD5C0]/32",
     fg: "text-[#4A5E3E]",
     delay: 1420,
   },
@@ -169,9 +169,9 @@ export default function HeroEditorial() {
             <div className="relative p-5 sm:p-9 md:p-10 lg:p-12">
               {/* eyebrow with gold rule */}
               <div className="flex items-center gap-3 mb-4 sm:mb-6 md:mb-7">
-                <span className="block w-7 h-px bg-[#C4A882]" />
+                <span className="block w-7 h-px bg-[#DCEC8B]" />
                 <p
-                  className="text-[9.5px] sm:text-[10px] tracking-[0.32em] sm:tracking-[0.34em] uppercase text-[#C4A882] font-semibold font-sans"
+                  className="text-[9.5px] sm:text-[10px] tracking-[0.32em] sm:tracking-[0.34em] uppercase text-[#DCEC8B] font-semibold font-sans"
                   style={{ animationDelay: "200ms" }}
                 >
                   Kamura · Heart of Longevity
@@ -248,7 +248,7 @@ export default function HeroEditorial() {
                   key={slug}
                   href={href}
                   data-image-slot={`door-${slug}`}
-                  className={`btn-hims-card group relative flex items-start gap-2.5 sm:gap-3.5 p-3 sm:p-4 md:p-[18px] rounded-2xl bg-white border border-[#2A2520]/8 animate-blur-fade-up overflow-hidden ${
+                  className={`btn-hims-card group relative flex items-start gap-2.5 sm:gap-3.5 p-3 sm:p-4 md:p-[18px] rounded-2xl bg-white border border-[#173C3B]/8 animate-blur-fade-up overflow-hidden ${
                     i === DOORS.length - 1 ? "col-span-2 lg:col-span-1" : ""
                   }`}
                   style={{ animationDelay: `${delay}ms` }}
@@ -265,15 +265,15 @@ export default function HeroEditorial() {
                         {label}
                       </p>
                       {tag && (
-                        <span className="inline-flex items-center h-[14px] sm:h-[16px] px-1 sm:px-1.5 rounded-full text-[8px] sm:text-[8.5px] font-semibold tracking-[0.08em] sm:tracking-[0.1em] uppercase bg-[#C4A882]/18 border border-[#C4A882]/45 text-[#9A5F57]">
+                        <span className="inline-flex items-center h-[14px] sm:h-[16px] px-1 sm:px-1.5 rounded-full text-[8px] sm:text-[8.5px] font-semibold tracking-[0.08em] sm:tracking-[0.1em] uppercase bg-[#DCEC8B]/18 border border-[#DCEC8B]/45 text-[#005E57]">
                           {tag}
                         </span>
                       )}
                     </div>
-                    <h3 className="font-serif text-[13.5px] sm:text-[15px] md:text-[16px] leading-[1.2] text-[#2A2520] m-0 truncate">
+                    <h3 className="font-serif text-[13.5px] sm:text-[15px] md:text-[16px] leading-[1.2] text-[#173C3B] m-0 truncate">
                       {title}
                     </h3>
-                    <p className="hidden sm:block text-[11.5px] text-[#2A2520]/55 font-sans truncate">
+                    <p className="hidden sm:block text-[11.5px] text-[#173C3B]/55 font-sans truncate">
                       {sub}
                     </p>
                   </div>
@@ -285,7 +285,7 @@ export default function HeroEditorial() {
                     stroke="currentColor"
                     strokeWidth="1.8"
                     strokeLinecap="round"
-                    className="btn-hims-arrow hidden sm:block absolute top-3.5 right-3.5 text-[#2A2520]/35 group-hover:text-[#2A2520]"
+                    className="btn-hims-arrow hidden sm:block absolute top-3.5 right-3.5 text-[#173C3B]/35 group-hover:text-[#173C3B]"
                   >
                     <line x1="5" y1="12" x2="19" y2="12" />
                     <polyline points="12 5 19 12 12 19" />

@@ -162,7 +162,7 @@ export default function LibraryPage() {
                 {p.tags.slice(0, 3).map((tag) => (
                   <span
                     key={tag}
-                    className="text-[10px] px-2 py-0.5 rounded-full bg-[#EDE7DB] text-gray-500 font-sans"
+                    className="text-[10px] px-2 py-0.5 rounded-full bg-[#E7F3EB] text-gray-500 font-sans"
                   >
                     {tag}
                   </span>

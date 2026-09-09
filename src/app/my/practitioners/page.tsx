@@ -66,7 +66,7 @@ export default function PractitionersPage() {
               onClick={() => setFilter(f)}
               className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-sans font-semibold border transition-colors ${
                 filter === f
-                  ? "bg-[#2a1612] text-white border-[#2a1612]"
+                  ? "bg-[#173C3B] text-white border-[#173C3B]"
                   : "bg-white text-gray-600 border-gray-200 hover:border-gray-300"
               }`}
             >
@@ -141,7 +141,7 @@ export default function PractitionersPage() {
                 {p.tags.slice(0, 3).map((t) => (
                   <span
                     key={t}
-                    className="text-[10px] px-2 py-0.5 rounded-full bg-[#EDE7DB] text-gray-500 font-sans"
+                    className="text-[10px] px-2 py-0.5 rounded-full bg-[#E7F3EB] text-gray-500 font-sans"
                   >
                     {t}
                   </span>

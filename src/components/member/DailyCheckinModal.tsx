@@ -142,7 +142,7 @@ export default function DailyCheckinModal({ onClose, onDone, existing }: Props) 
         <button
           onClick={submit}
           disabled={saving}
-          className="w-full mt-8 px-6 py-3.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] disabled:opacity-50"
+          className="w-full mt-8 px-6 py-3.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] disabled:opacity-50"
         >
           {saving ? "Saving..." : existing ? "Update Check-in" : "Log Check-in"}
         </button>

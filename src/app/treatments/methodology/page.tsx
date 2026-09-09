@@ -90,7 +90,7 @@ const factors = [
 ];
 
 const tiers = [
- { name: "Gold Standard", range: "85-100", color: "#C4A882", meaning: "Strong evidence + excellent safety + good accessibility and value" },
+ { name: "Gold Standard", range: "85-100", color: "#DCEC8B", meaning: "Strong evidence + excellent safety + good accessibility and value" },
  { name: "Strong", range: "70-84", color: "#4ADE80", meaning: "Solid evidence with good safety profile" },
  { name: "Promising", range: "50-69", color: "#FACC15", meaning: "Emerging evidence or mixed results, worth monitoring" },
  { name: "Limited", range: "30-49", color: "#FB923C", meaning: "Weak evidence or significant concerns" },

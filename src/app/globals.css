@@ -1,18 +1,18 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @theme inline {
- --color-background: #FAF7F2;
- --color-foreground: #2A2520;
- --color-terracotta: #B5736A;
- --color-terracotta-dark: #9A5F57;
- --color-kamura-gold: #C4A882;
- --color-sage: #B0BCA4;
+ --color-background: #FAFCF7;
+ --color-foreground: #173C3B;
+ --color-terracotta: #00786E;
+ --color-terracotta-dark: #005E57;
+ --color-kamura-gold: #DCEC8B;
+ --color-sage: #AFD5C0;
  --color-sage-dark: #96A78B;
- --color-sage-light: #D6DDD0;
+ --color-sage-light: #D5E5D9;
  --color-moss: #7B8D68;
  --color-forest: #4A5E3E;
- --color-cream: #FAF7F2;
- --color-zen-mist: #F5F2ED;
+ --color-cream: #FAFCF7;
+ --color-zen-mist: #F0F6EF;
  --color-score-green: #4ADE80;
  --color-score-yellow: #FACC15;
  --color-score-orange: #FB923C;
@@ -58,11 +58,11 @@ html[dir="rtl"] h6 {
  text-align: left;
 }
 .prose th {
- background: #F5F2ED;
+ background: #F0F6EF;
  font-weight: 600;
 }
 .prose tbody tr:nth-child(even) {
- background: #FAF7F2;
+ background: #FAFCF7;
 }
 
 /* Blog prose — paragraph spacing (override typography defaults) */
@@ -108,7 +108,7 @@ html[dir="rtl"] h6 {
 
 /* Blog prose — strong/bold in lists for better readability */
 .prose li strong {
- color: #2A2520;
+ color: #173C3B;
 }
 
 /* Blog prose — blockquote styling */
@@ -352,3 +352,10 @@ html[dir="rtl"] h6 {
 .frosted-pill-light:hover {
  background: rgba(255, 255, 255, 0.8);
 }
+
+/* Kamura shared design foundation */
+:root{--k-paper:#FAFCF7;--k-ink:#173C3B;--k-teal:#00786E;--k-mint:#E7F3EB;--k-citron:#DCEC8B;--k-line:#D5E5D9;--k-muted:#50675F}
+html{scroll-padding-top:100px}body{background:var(--k-paper);color:var(--k-ink)}
+:where(button,a,input,select,summary):focus-visible{outline:3px solid #00786E;outline-offset:4px}
+.kamura-member{padding-top:76px;background:var(--k-paper)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important}}

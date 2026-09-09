@@ -129,7 +129,7 @@ export default function BookingsPage() {
           {tab === "upcoming" && (
             <Link
               href="/explore"
-              className="px-5 py-2.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] transition-colors"
+              className="px-5 py-2.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] transition-colors"
             >
               Browse Providers
             </Link>

@@ -8,8 +8,8 @@ import {createExplosionLayout} from './explosion-layout';
 import {decodeModelResponse} from './model-download';
 import {PointerTap} from './pointer-tap';
 import {SYSTEMS,type Atlas,type SceneState} from './anatomy';
-interface Props {atlas:Atlas;state:SceneState;onSelect:(id:string)=>void;onProgress:(n:number)=>void;onError:(s:string)=>void}
-export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:Props){
+interface Props {atlas:Atlas;state:SceneState;onSelect:(id:string)=>void;onProgress:(n:number)=>void;onError:(s:string)=>void;showcase?:boolean}
+export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,showcase=false}:Props){
  const host=useRef<HTMLDivElement>(null),latest=useRef(state),select=useRef(onSelect);
  latest.current=state;select.current=onSelect;
  useEffect(()=>{
@@ -18,10 +18,10 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   const abort=new AbortController();
   let renderer:T.WebGLRenderer;
   try{renderer=new T.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});}catch{onError('This browser could not start the 3D viewer. Please try a browser with WebGL enabled.');return;}
-  renderer.setPixelRatio(Math.min(devicePixelRatio,innerWidth<768?1.5:2));renderer.setClearColor('#FAF6EF');renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.85;el.appendChild(renderer.domElement);
+  renderer.setPixelRatio(Math.min(devicePixelRatio,innerWidth<768?1.5:2));renderer.setClearColor('#E7F3EB');renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.85;el.appendChild(renderer.domElement);
   renderer.domElement.setAttribute('aria-label','Interactive human anatomy. Drag to orbit, pinch or scroll to zoom, and tap a structure to inspect it.');
   const scene=new T.Scene(),camera=new T.PerspectiveCamera(34,1,.005,100),controls=new OrbitControls(camera,renderer.domElement);
-  camera.position.set(1.4,1.05,3.6);controls.target.set(0,.85,0);controls.enableDamping=true;controls.dampingFactor=.085;controls.minDistance=.07;controls.maxDistance=40;controls.maxPolarAngle=Math.PI*.96;controls.addEventListener('change',()=>{dirty=true;});
+  camera.position.set(1.4,1.05,3.6);controls.target.set(0,.85,0);controls.enableDamping=true;if(showcase){controls.enableZoom=false;controls.enablePan=false;controls.enableRotate=false;renderer.domElement.style.touchAction="pan-y";}controls.dampingFactor=.085;controls.minDistance=.07;controls.maxDistance=40;controls.maxPolarAngle=Math.PI*.96;controls.addEventListener('change',()=>{dirty=true;});
   const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
   let cameraGoal:{position:T.Vector3;target:T.Vector3}|null=null;
   const moveCamera=(position:T.Vector3,target:T.Vector3,immediate=false)=>{
@@ -34,10 +34,10 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   scene.add(new T.HemisphereLight(0xffffff,0xa7acb2,.65));
   const key=new T.DirectionalLight(0xfffaf4,1.6);key.position.set(-2,4,3);scene.add(key);
   const rim=new T.DirectionalLight(0xe9f0ff,1.1);rim.position.set(2,2,-3);scene.add(rim);
-  const ground=new T.Mesh(new T.CircleGeometry(30,96),new T.MeshStandardMaterial({color:0xEFE8DB,roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.y=-.019;scene.add(ground);
-  const platform=new T.Mesh(new T.CylinderGeometry(.68,.7,.028,100),new T.MeshStandardMaterial({color:0xF3EDE1,metalness:.12,roughness:.67}));platform.position.y=-.016;scene.add(platform);
-  const ring=new T.Mesh(new T.RingGeometry(.63,.632,128),new T.MeshBasicMaterial({color:0xB5736A,transparent:true,opacity:.35,side:T.DoubleSide}));ring.rotation.x=-Math.PI/2;ring.position.y=.001;scene.add(ring);
-  const innerRing=new T.Mesh(new T.RingGeometry(.55,.551,128),new T.MeshBasicMaterial({color:0xC4A882,transparent:true,opacity:.18,side:T.DoubleSide}));innerRing.rotation.x=-Math.PI/2;innerRing.position.y=.001;scene.add(innerRing);
+  const ground=new T.Mesh(new T.CircleGeometry(30,96),new T.MeshStandardMaterial({color:0xE7F3EB,roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.y=-.019;scene.add(ground);
+  const platform=new T.Mesh(new T.CylinderGeometry(.68,.7,.028,100),new T.MeshStandardMaterial({color:0xD5E8DB,metalness:.12,roughness:.67}));platform.position.y=-.016;scene.add(platform);
+  const ring=new T.Mesh(new T.RingGeometry(.63,.632,128),new T.MeshBasicMaterial({color:0x00786E,transparent:true,opacity:.35,side:T.DoubleSide}));ring.rotation.x=-Math.PI/2;ring.position.y=.001;scene.add(ring);
+  const innerRing=new T.Mesh(new T.RingGeometry(.55,.551,128),new T.MeshBasicMaterial({color:0xDCEC8B,transparent:true,opacity:.18,side:T.DoubleSide}));innerRing.rotation.x=-Math.PI/2;innerRing.position.y=.001;scene.add(innerRing);
   const width=T.MathUtils.ceilPowerOfTwo(atlas.parts.length),data=new Float32Array(width*4),partTexture=new T.DataTexture(data,width,1,T.RGBAFormat,T.FloatType);partTexture.needsUpdate=true;
   const selectedData=new Uint8Array(width*4),selectionTexture=new T.DataTexture(selectedData,width,1);selectionTexture.needsUpdate=true;
   const materials:T.Material[]=[],geometries:T.BufferGeometry[]=[],pickers:(T.Mesh|undefined)[]=[],centers=atlas.parts.map(p=>new T.Vector3().fromArray(p.bounds[0]).add(new T.Vector3().fromArray(p.bounds[1])).multiplyScalar(.5));
@@ -86,6 +86,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   (async()=>{try{let cursor=0;await Promise.all(Array.from({length:3},async()=>{while(cursor<atlas.chunks.length){const i=cursor++;await loadChunk(i);}}));if(!disposed){ready=true;dirty=true;}}catch(e){if(!disposed)onError(e instanceof Error?e.message:'Could not load the anatomy.');}})();
   const viewingArea=()=>{
    const w=el.clientWidth,h=el.clientHeight,mobile=w<=650;
+   if(showcase)return {left:20,right:w-20,top:45,bottom:h-90};
    const left=w>1100?310:w>950?268:16;
    const right=latest.current.inspectorOpen&&!mobile?w-(w>1100?384:336):w-16;
    const sheet=mobile&&latest.current.inspectorOpen?document.querySelector('.detail-sheet')?.getBoundingClientRect():null;
@@ -150,7 +151,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
     if(camera.position.distanceToSquared(cameraGoal.position)+controls.target.distanceToSquared(cameraGoal.target)<1e-8){camera.position.copy(cameraGoal.position);controls.target.copy(cameraGoal.target);cameraGoal=null;}
     dirty=true;
    }
-   controls.enableRotate=amount<.8;controls.mouseButtons.LEFT=amount<.8?T.MOUSE.ROTATE:T.MOUSE.PAN;controls.touches.ONE=amount<.8?T.TOUCH.ROTATE:T.TOUCH.PAN;ground.visible=platform.visible=ring.visible=innerRing.visible=amount<.5&&!s.isolate;markers.visible=amount>.75;controls.autoRotate=s.rotate&&!reducedMotion.matches&&!cameraGoal&&!s.isolate&&amount<.4;controls.autoRotateSpeed=.65;controls.update();if(controls.autoRotate)dirty=true;
+   controls.enableRotate=!showcase&&amount<.8;controls.mouseButtons.LEFT=amount<.8?T.MOUSE.ROTATE:T.MOUSE.PAN;controls.touches.ONE=amount<.8?T.TOUCH.ROTATE:T.TOUCH.PAN;ground.visible=platform.visible=ring.visible=innerRing.visible=amount<.5&&!s.isolate;markers.visible=amount>.75;controls.autoRotate=s.rotate&&!reducedMotion.matches&&!cameraGoal&&!s.isolate&&amount<.4;controls.autoRotateSpeed=.65;controls.update();if(controls.autoRotate)dirty=true;
    if(dirty){renderer.render(scene,camera);targets=[];if(amount>.45){const hasSolid=atlas.parts.some((p,i)=>p.system!=='integumentary'&&data[i*4+3]>.5);atlas.parts.forEach((p,i)=>{if(data[i*4+3]<.5||(hasSolid&&p.system==='integumentary'))return;let left=Infinity,right=-Infinity,top=Infinity,bottom=-Infinity;for(let corner=0;corner<8;corner++){projected.set(p.bounds[(corner&1)?1:0][0]+data[i*4],p.bounds[(corner&2)?1:0][1]+data[i*4+1],p.bounds[(corner&4)?1:0][2]+data[i*4+2]).project(camera);const x=(projected.x+1)*el.clientWidth/2,y=(1-projected.y)*el.clientHeight/2;left=Math.min(left,x);right=Math.max(right,x);top=Math.min(top,y);bottom=Math.max(bottom,y);}projected.copy(centers[i]).add(new T.Vector3(data[i*4],data[i*4+1],data[i*4+2])).project(camera);if(projected.z< -1||projected.z>1)return;targets.push({index:i,x:(projected.x+1)*el.clientWidth/2,y:(1-projected.y)*el.clientHeight/2,left,right,top,bottom});});}dirty=false;}
 
   };animate();

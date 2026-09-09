@@ -104,7 +104,7 @@ export default function LiveNewsFeed({
  if (error) return null;
 
  return (
- <section className="py-20 md:py-28 bg-[#EDE7DB]">
+ <section className="py-20 md:py-28 bg-[#E7F3EB]">
  <div className="max-w-6xl mx-auto px-6">
  <div className="flex items-end justify-between mb-12">
  <div>

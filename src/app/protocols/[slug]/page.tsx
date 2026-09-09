@@ -186,7 +186,7 @@ export default async function ProtocolDetailPage({ params }: Props) {
  key={i}
  className="flex items-start gap-3 text-sm text-gray-600 font-sans"
  >
- <span className="text-[#B5736A] mt-0.5 shrink-0">&#9679;</span>
+ <span className="text-[#00786E] mt-0.5 shrink-0">&#9679;</span>
  {principle}
  </li>
  ))}
@@ -258,7 +258,7 @@ export default async function ProtocolDetailPage({ params }: Props) {
  {e.frequency}
  </span>
  </div>
- <p className="text-[11px] text-[#B5736A] font-semibold font-sans mb-1.5">
+ <p className="text-[11px] text-[#00786E] font-semibold font-sans mb-1.5">
  {e.duration}
  </p>
  <p className="text-xs text-gray-500 font-sans leading-relaxed">
@@ -281,7 +281,7 @@ export default async function ProtocolDetailPage({ params }: Props) {
  key={i}
  className="flex items-start gap-3 text-sm text-gray-600 font-sans"
  >
- <span className="text-[#B5736A] mt-0.5 shrink-0">&#9679;</span>
+ <span className="text-[#00786E] mt-0.5 shrink-0">&#9679;</span>
  {item}
  </li>
  ))}
@@ -296,7 +296,7 @@ export default async function ProtocolDetailPage({ params }: Props) {
  key={i}
  className="flex items-start gap-3 text-sm text-gray-600 font-sans"
  >
- <span className="text-[#B5736A] mt-0.5 shrink-0">&#9679;</span>
+ <span className="text-[#00786E] mt-0.5 shrink-0">&#9679;</span>
  {item}
  </li>
  ))}
@@ -315,7 +315,7 @@ export default async function ProtocolDetailPage({ params }: Props) {
  key={i}
  className="flex items-start gap-3 text-sm text-gray-600 font-sans"
  >
- <span className="text-[#B5736A] mt-0.5 shrink-0">&#9679;</span>
+ <span className="text-[#00786E] mt-0.5 shrink-0">&#9679;</span>
  {item}
  </li>
  ))}
@@ -335,7 +335,7 @@ export default async function ProtocolDetailPage({ params }: Props) {
  key={i}
  className="flex items-start gap-3 text-sm text-gray-600 font-sans"
  >
- <span className="text-[#B5736A] mt-0.5 shrink-0">
+ <span className="text-[#00786E] mt-0.5 shrink-0">
  &#9679;
  </span>
  {item}
@@ -358,7 +358,7 @@ export default async function ProtocolDetailPage({ params }: Props) {
  key={i}
  className="flex items-start gap-3 text-sm text-gray-600 font-sans"
  >
- <span className="text-[#B5736A] mt-0.5 shrink-0">
+ <span className="text-[#00786E] mt-0.5 shrink-0">
  &#9679;
  </span>
  {item}
@@ -436,7 +436,7 @@ export default async function ProtocolDetailPage({ params }: Props) {
  href={p.sourceUrl}
  target="_blank"
  rel="noopener noreferrer"
- className="inline-block text-sm text-[#B5736A] hover:text-[#9A5F57] font-sans transition-colors"
+ className="inline-block text-sm text-[#00786E] hover:text-[#005E57] font-sans transition-colors"
  >
  Source: {p.sourceLabel} &rarr;
  </a>

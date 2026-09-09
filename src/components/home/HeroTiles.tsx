@@ -66,19 +66,19 @@ const ICONS: Record<string, React.ReactNode> = {
 // Kamura palette surface treatments — NO oxblood. Forest/terracotta/gold/cream.
 const TILE_STYLES: Record<string, string> = {
   practitioners:
-    "bg-gradient-to-br from-[#FAF7F2]/95 to-[#F0E9DA]/90 text-[#2A2520] border border-[#2A2520]/8 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.4)] hover:shadow-[0_28px_50px_-18px_rgba(0,0,0,0.55)]",
+    "bg-gradient-to-br from-[#FAFCF7]/95 to-[#F0E9DA]/90 text-[#173C3B] border border-[#173C3B]/8 shadow-[0_20px_40px_-20px_rgba(0,0,0,0.4)] hover:shadow-[0_28px_50px_-18px_rgba(0,0,0,0.55)]",
   book:
-    "bg-gradient-to-br from-[#B0BCA4]/22 to-[#7B8D68]/18 border border-[#B0BCA4]/35 text-white hover:border-[#B0BCA4]/60",
+    "bg-gradient-to-br from-[#AFD5C0]/22 to-[#7B8D68]/18 border border-[#AFD5C0]/35 text-white hover:border-[#AFD5C0]/60",
   peptides:
-    "bg-gradient-to-br from-[#C4A882]/22 to-[#B5736A]/18 border border-[#C4A882]/50 text-white shadow-[0_0_0_1px_rgba(196,168,130,0.1)_inset,0_20px_40px_-24px_rgba(196,168,130,0.3)] hover:border-[#C4A882]/70",
+    "bg-gradient-to-br from-[#DCEC8B]/22 to-[#00786E]/18 border border-[#DCEC8B]/50 text-white shadow-[0_0_0_1px_rgba(196,168,130,0.1)_inset,0_20px_40px_-24px_rgba(196,168,130,0.3)] hover:border-[#DCEC8B]/70",
   track:
-    "bg-gradient-to-br from-[#2A2520]/60 to-[#1a241a]/55 border border-white/18 text-white hover:border-white/35",
+    "bg-gradient-to-br from-[#173C3B]/60 to-[#1a241a]/55 border border-white/18 text-white hover:border-white/35",
 };
 
 const TILE_ARTS: Record<string, string> = {
-  practitioners: "bg-[#B5736A]/14 text-[#B5736A]",
-  book: "bg-[#D6DDD0]/22 text-[#D6DDD0] border border-[#D6DDD0]/28",
-  peptides: "bg-[#FAF7F2]/95 text-[#B5736A] border border-[#C4A882]/40",
+  practitioners: "bg-[#00786E]/14 text-[#00786E]",
+  book: "bg-[#D5E5D9]/22 text-[#D5E5D9] border border-[#D5E5D9]/28",
+  peptides: "bg-[#FAFCF7]/95 text-[#00786E] border border-[#DCEC8B]/40",
   track: "bg-white/8 text-white border border-white/15",
 };
 
@@ -109,8 +109,8 @@ function PTTile({ tile, idx }: { tile: Tile; idx: number }) {
               <span
                 className={`inline-flex items-center h-[18px] px-1.5 rounded-full text-[9.5px] font-semibold tracking-[0.08em] uppercase ${
                   tile.k === "practitioners"
-                    ? "bg-[#B5736A]/15 border border-[#B5736A]/40 text-[#9A5F57]"
-                    : "bg-[#C4A882]/25 border border-[#C4A882]/55 text-[#FAF7F2]"
+                    ? "bg-[#00786E]/15 border border-[#00786E]/40 text-[#005E57]"
+                    : "bg-[#DCEC8B]/25 border border-[#DCEC8B]/55 text-[#FAFCF7]"
                 }`}
               >
                 {tile.badge}
@@ -119,7 +119,7 @@ function PTTile({ tile, idx }: { tile: Tile; idx: number }) {
           </div>
           <div
             className={`text-[12.5px] leading-tight ${
-              tile.k === "practitioners" ? "text-[#2A2520]/65" : "opacity-82"
+              tile.k === "practitioners" ? "text-[#173C3B]/65" : "opacity-82"
             }`}
           >
             {tile.sub}
@@ -127,7 +127,7 @@ function PTTile({ tile, idx }: { tile: Tile; idx: number }) {
         </div>
         <span
           className={`text-base transition-all duration-500 ${
-            tile.k === "practitioners" ? "text-[#B5736A] opacity-80" : "opacity-50"
+            tile.k === "practitioners" ? "text-[#00786E] opacity-80" : "opacity-50"
           } group-hover:opacity-100 group-hover:translate-x-1`}
         >
           →
@@ -169,7 +169,7 @@ export default function HeroTiles() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="text-[10px] font-semibold tracking-[0.32em] uppercase text-[#C4A882] mb-7"
+          className="text-[10px] font-semibold tracking-[0.32em] uppercase text-[#DCEC8B] mb-7"
         >
           Kamura · Rooted in wellness
         </motion.div>
@@ -183,19 +183,19 @@ export default function HeroTiles() {
           style={{ fontSize: "clamp(44px, 6vw, 84px)" }}
         >
           <span
-            className="bg-gradient-to-b from-white via-[#FAF7F2] to-[#C4A882] bg-clip-text"
+            className="bg-gradient-to-b from-white via-[#FAFCF7] to-[#DCEC8B] bg-clip-text"
             style={{ WebkitTextFillColor: "transparent" }}
           >
             A{" "}
           </span>
           <span
-            className="italic bg-gradient-to-b from-[#D4B896] to-[#B5736A] bg-clip-text"
+            className="italic bg-gradient-to-b from-[#D4B896] to-[#00786E] bg-clip-text"
             style={{ WebkitTextFillColor: "transparent" }}
           >
             longevity
           </span>
           <span
-            className="bg-gradient-to-b from-white via-[#FAF7F2] to-[#C4A882] bg-clip-text"
+            className="bg-gradient-to-b from-white via-[#FAFCF7] to-[#DCEC8B] bg-clip-text"
             style={{ WebkitTextFillColor: "transparent" }}
           >
             {" "}platform.
@@ -230,9 +230,9 @@ export default function HeroTiles() {
         >
           <Link
             href="/wellness-checker"
-            className="group relative block rounded-[18px] overflow-hidden p-5 min-h-[96px] flex items-center gap-3.5 bg-white/4 border border-dashed border-[#C4A882]/30 text-white hover:bg-white/8 hover:border-[#C4A882]/55 hover:border-solid transition-all duration-500"
+            className="group relative block rounded-[18px] overflow-hidden p-5 min-h-[96px] flex items-center gap-3.5 bg-white/4 border border-dashed border-[#DCEC8B]/30 text-white hover:bg-white/8 hover:border-[#DCEC8B]/55 hover:border-solid transition-all duration-500"
           >
-            <div className="w-12 h-12 shrink-0 rounded-xl grid place-items-center bg-white/6 text-[#C4A882] border border-[#C4A882]/30">
+            <div className="w-12 h-12 shrink-0 rounded-xl grid place-items-center bg-white/6 text-[#DCEC8B] border border-[#DCEC8B]/30">
               <div className="w-5.5 h-5.5">{ICONS.lost}</div>
             </div>
             <div className="flex-1 min-w-0">
@@ -246,9 +246,9 @@ export default function HeroTiles() {
 
           <Link
             href="/list-your-business"
-            className="group relative block rounded-[18px] overflow-hidden p-5 min-h-[96px] flex items-center gap-3.5 bg-white/4 border border-dashed border-[#C4A882]/30 text-white hover:bg-white/8 hover:border-[#C4A882]/55 hover:border-solid transition-all duration-500"
+            className="group relative block rounded-[18px] overflow-hidden p-5 min-h-[96px] flex items-center gap-3.5 bg-white/4 border border-dashed border-[#DCEC8B]/30 text-white hover:bg-white/8 hover:border-[#DCEC8B]/55 hover:border-solid transition-all duration-500"
           >
-            <div className="w-12 h-12 shrink-0 rounded-xl grid place-items-center bg-white/6 text-[#C4A882] border border-[#C4A882]/30">
+            <div className="w-12 h-12 shrink-0 rounded-xl grid place-items-center bg-white/6 text-[#DCEC8B] border border-[#DCEC8B]/30">
               <div className="w-5.5 h-5.5">{ICONS.partners}</div>
             </div>
             <div className="flex-1 min-w-0">

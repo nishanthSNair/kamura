@@ -818,7 +818,7 @@ function OnboardingView({
 }) {
   return (
     <div>
-      <div className="mb-8 p-7 md:p-9 rounded-3xl bg-gradient-to-br from-[#EDE7DB] via-[#F7F3EB] to-[#FAF8F5] border border-gray-200/60">
+      <div className="mb-8 p-7 md:p-9 rounded-3xl bg-gradient-to-br from-[#E7F3EB] via-[#FAFCF7] to-[#FAF8F5] border border-gray-200/60">
         <p className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-sans font-semibold mb-3">
           Welcome to Kamura
         </p>

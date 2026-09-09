@@ -128,7 +128,7 @@ export default function StackDrawer({ open, onClose }: StackDrawerProps) {
  <Link
  href={`/treatments/${t.slug}`}
  onClick={onClose}
- className="font-semibold text-sm text-gray-900 font-sans hover:text-[#B5736A] transition-colors truncate block"
+ className="font-semibold text-sm text-gray-900 font-sans hover:text-[#00786E] transition-colors truncate block"
  >
  {t.name}
  </Link>
@@ -216,7 +216,7 @@ export default function StackDrawer({ open, onClose }: StackDrawerProps) {
  <div className="flex gap-2.5">
  <button
  onClick={() => setShowShareCard(true)}
- className="flex-1 px-4 py-2.5 bg-[#B5736A] hover:bg-[#9A5F57] text-white text-sm font-semibold rounded-xl transition-colors font-sans"
+ className="flex-1 px-4 py-2.5 bg-[#00786E] hover:bg-[#005E57] text-white text-sm font-semibold rounded-xl transition-colors font-sans"
  >
  Share as Image
  </button>

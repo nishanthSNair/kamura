@@ -149,7 +149,7 @@ export default function MyClassesPage() {
           {[0, 1, 2, 3].map((i) => (
             <div
               key={i}
-              className="h-40 bg-[#EDE7DB] rounded-3xl animate-pulse"
+              className="h-40 bg-[#E7F3EB] rounded-3xl animate-pulse"
               style={{ animationDelay: `${i * 60}ms` }}
             />
           ))}
@@ -303,7 +303,7 @@ function PracticeCard({
               onClick={() => onGoal(n)}
               className={`w-6 h-6 rounded-full text-[11px] font-sans font-semibold transition-colors ${
                 goal === n
-                  ? "bg-[#2A2520] text-white"
+                  ? "bg-[#173C3B] text-white"
                   : "bg-gray-100 text-gray-500 hover:bg-gray-200"
               }`}
             >

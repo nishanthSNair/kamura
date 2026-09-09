@@ -58,7 +58,7 @@ export default function InjectionSiteMap({
   const now = new Date();
   const zoneStatus = (zoneId: string): { fill: string; border: string; daysAgo: number | null } => {
     const last = zoneLastUsed[zoneId];
-    if (!last) return { fill: "#D6DDD0", border: "#B0BCA4", daysAgo: null };
+    if (!last) return { fill: "#D5E5D9", border: "#AFD5C0", daysAgo: null };
     const daysAgo = Math.floor((now.getTime() - last.getTime()) / 86400000);
     if (daysAgo < recommendedRestDays) {
       // Too recent — resting
@@ -142,7 +142,7 @@ export default function InjectionSiteMap({
                     cx={z.cx}
                     cy={z.cy}
                     r="3"
-                    fill="#B5736A"
+                    fill="#00786E"
                   />
                 )}
               </g>

@@ -57,15 +57,15 @@ export default function BlogPostCTA({ source = "newsletter" }: Props) {
   return (
     <aside
       aria-label="Newsletter signup"
-      className="my-12 not-prose rounded-3xl border border-[#2A2520]/10 bg-gradient-to-br from-[#FAF7F2] via-[#F3EEE2] to-[#EDE7DB] p-7 md:p-10"
+      className="my-12 not-prose rounded-3xl border border-[#173C3B]/10 bg-gradient-to-br from-[#FAFCF7] via-[#F3EEE2] to-[#E7F3EB] p-7 md:p-10"
     >
       <p className="text-[10px] tracking-[0.32em] uppercase text-terracotta font-semibold font-sans mb-3">
         {copy.eyebrow}
       </p>
-      <h3 className="font-serif text-[24px] md:text-[30px] leading-[1.1] tracking-[-0.005em] text-[#2A2520] mb-3 max-w-[22ch]">
+      <h3 className="font-serif text-[24px] md:text-[30px] leading-[1.1] tracking-[-0.005em] text-[#173C3B] mb-3 max-w-[22ch]">
         {copy.headline}
       </h3>
-      <p className="text-[14.5px] md:text-[15.5px] leading-[1.6] text-[#2A2520]/70 font-sans mb-6 max-w-[58ch]">
+      <p className="text-[14.5px] md:text-[15.5px] leading-[1.6] text-[#173C3B]/70 font-sans mb-6 max-w-[58ch]">
         {copy.body}
       </p>
 
@@ -76,7 +76,7 @@ export default function BlogPostCTA({ source = "newsletter" }: Props) {
         className="!mx-0"
       />
 
-      <p className="mt-4 text-[11px] tracking-[0.04em] text-[#2A2520]/45 font-sans">
+      <p className="mt-4 text-[11px] tracking-[0.04em] text-[#173C3B]/45 font-sans">
         No spam. Unsubscribe anytime. We never sell your data.
       </p>
     </aside>

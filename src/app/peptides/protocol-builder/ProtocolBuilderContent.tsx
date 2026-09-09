@@ -322,7 +322,7 @@ export default function ProtocolBuilderContent() {
                   disabled={selectedGoals.length === 0}
                   className={`px-8 py-3 text-sm font-semibold rounded-xl font-sans transition-colors ${
                     selectedGoals.length > 0
-                      ? "bg-terracotta text-white hover:bg-[#9A5F57]"
+                      ? "bg-terracotta text-white hover:bg-[#005E57]"
                       : "bg-gray-200 text-gray-400 cursor-not-allowed"
                   }`}
                 >
@@ -399,7 +399,7 @@ export default function ProtocolBuilderContent() {
                   disabled={!selectedLevel}
                   className={`px-8 py-3 text-sm font-semibold rounded-xl font-sans transition-colors ${
                     selectedLevel
-                      ? "bg-terracotta text-white hover:bg-[#9A5F57]"
+                      ? "bg-terracotta text-white hover:bg-[#005E57]"
                       : "bg-gray-200 text-gray-400 cursor-not-allowed"
                   }`}
                 >

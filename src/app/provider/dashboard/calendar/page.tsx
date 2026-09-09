@@ -104,7 +104,7 @@ export default function CalendarPage() {
         </div>
         <button
           onClick={() => setShowAddForm(!showAddForm)}
-          className="px-5 py-2.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c]"
+          className="px-5 py-2.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B]"
         >
           + Add Slots
         </button>
@@ -189,7 +189,7 @@ export default function CalendarPage() {
               <button
                 onClick={addSlots}
                 disabled={saving || formDays.length === 0}
-                className="px-5 py-2.5 rounded-full bg-[#2a1612] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#1a0f0c] disabled:opacity-50"
+                className="px-5 py-2.5 rounded-full bg-[#173C3B] text-white text-xs tracking-[0.15em] uppercase font-semibold font-sans hover:bg-[#173C3B] disabled:opacity-50"
               >
                 {saving ? "Saving..." : "Create Slots"}
               </button>

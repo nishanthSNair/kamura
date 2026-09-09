@@ -22,7 +22,7 @@ const CALLOUT_LAYOUT: Record<string, { side: "left" | "right"; top: string }> = 
   recovery: { side: "left", top: "68%" },
 };
 
-const TERRACOTTA = "#B5736A";
+const TERRACOTTA = "#00786E";
 const SAGE = "#96A78B";
 
 function zoneOpacity(now: number | undefined, ready: boolean): number {

@@ -133,7 +133,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
  return (
  <div
- className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm"
+ className="fixed inset-0 z-[200] bg-black/50 backdrop-blur-sm"
  onClick={stableOnClose}
  >
  <div

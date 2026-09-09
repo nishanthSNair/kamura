@@ -93,7 +93,7 @@ function DonutCompare({
             cy={c}
             r={48}
             fill="none"
-            stroke="#B5736A"
+            stroke="#00786E"
             strokeWidth="10"
             strokeLinecap="round"
             style={arc(48, m.now)}
@@ -156,7 +156,7 @@ export default function ImpactPanels({
             { label: "Sessions", value: sessionCount },
             { label: "Doses", value: doseCount },
           ].map((s) => (
-            <div key={s.label} className="py-3 rounded-2xl bg-[#F7F3EB]">
+            <div key={s.label} className="py-3 rounded-2xl bg-[#FAFCF7]">
               <p className="font-serif text-2xl text-gray-900">{s.value}</p>
               <p className="text-[10px] tracking-[0.15em] uppercase text-gray-400 font-sans mt-0.5">
                 {s.label}
