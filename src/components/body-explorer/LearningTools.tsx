@@ -1,28 +1,30 @@
 'use client';
+import Consultation,{PathwayMap} from './Consultation';
 import SaveButton from '@/components/kamura/SaveButton';
 import {useEffect, useRef, useState} from 'react';
 import catalogue from '@/data/therapy-explorer.json';
 import {evidenceFor} from './evidence';
 import s from './LearningTools.module.css';
 type Therapy = typeof catalogue[number];
-type Tab = 'mechanism'|'guide'|'compare';
+type Tab = 'mechanism'|'guide'|'compare'|'present';
 const goals = [{id:'recover',label:'Recovery & tissue'},{id:'fat',label:'Body composition'},{id:'hormones',label:'Hormones & libido'},{id:'sleep',label:'Sleep'},{id:'mind',label:'Brain & cognition'},{id:'skin',label:'Skin & hair'},{id:'gut',label:'Gut health'},{id:'immunity',label:'Immune function'},{id:'longevity',label:'Longevity'}];
 export default function LearningTools({therapy, initialTab, onClose, onChoose}:{therapy:Therapy;initialTab:Tab;onClose:()=>void;onChoose:(id:string)=>void}) {
  const dialog=useRef<HTMLDialogElement>(null);
  const [tab,setTab]=useState<Tab>(initialTab),[other,setOther]=useState(therapy.id==='tesamorelin'?'trt':'tesamorelin');
  useEffect(()=>{const node=dialog.current;node?.showModal();return()=>node?.close();},[]);
- return <dialog ref={dialog} className={s.dialog} onCancel={onClose} aria-labelledby="learning-title">
+ return <dialog ref={dialog} className={`${s.dialog} ${tab==='present'?s.presentation:''}`} onCancel={onClose} aria-labelledby="learning-title">
   <header className={s.header}><div><span>KAMURA / LEARNING STUDIO</span><h2 id="learning-title">Understand the pathway.</h2></div><button onClick={onClose} aria-label="Close learning studio">✕</button></header>
-  <nav className={s.tabs} aria-label="Learning tools">{(['mechanism','guide','compare'] as Tab[]).map(t=><button key={t} aria-pressed={tab===t} onClick={()=>setTab(t)}>{t==='mechanism'?'Explore the mechanism':t==='guide'?'Find my learning path':'Compare therapies'}</button>)}</nav>
+  <nav className={s.tabs} aria-label="Learning tools">{(['mechanism','guide','compare','present'] as Tab[]).map(t=><button key={t} aria-pressed={tab===t} onClick={()=>setTab(t)}>{t==='mechanism'?'Explore the mechanism':t==='guide'?'Find my learning path':t==='present'?'Present to a patient':'Compare therapies'}</button>)}</nav>
   <div className={s.body}>
-   {tab==='mechanism'&&<Mechanism key={therapy.id} therapy={therapy}/>}
+   {tab==='present'&&<Consultation key={therapy.id} therapy={therapy}/>}
+   {tab==='mechanism'&&<><PathwayMap key={therapy.id} therapy={therapy}/><Mechanism key={therapy.id} therapy={therapy}/></>}
    {tab==='guide'&&<Guide onChoose={id=>{onChoose(id);onClose();}}/>}
    {tab==='compare'&&<><p>Compare the question each therapy has been studied for, before comparing the claims.</p><label className={s.select}>Compare {therapy.name} with<select value={other} onChange={e=>setOther(e.target.value)}>{catalogue.filter(t=>t.id!==therapy.id).map(t=><option key={t.id} value={t.id}>{t.name}</option>)}</select></label><div className={s.comparison}>{[therapy,catalogue.find(t=>t.id===other)!].map(t=><article key={t.id}><h3>{t.name}</h3><p>{t.what}</p><Evidence therapy={t}/><h4>Mechanism</h4><p>{t.mechanism}</p><h4>Anatomical context</h4><p>{t.regions.map(r=>r.name).join(' · ')}</p><a href={t.references[0]?.url} target="_blank" rel="noreferrer">Read linked research ↗</a></article>)}</div></>}
   </div>
  </dialog>;
 }
-export function Evidence({therapy}:{therapy:Therapy}){const e=evidenceFor(therapy);return <section className={s.evidence}><span>{e.label}</span><h4>{e.outcome}</h4><p><strong>Who was studied:</strong> {e.population}</p><p>{e.finding}</p><p className={s.boundary}>{e.boundary}</p>{e.source&&<a href={e.source} target="_blank" rel="noreferrer">Read the supporting source ↗</a>}</section>;}
-function Mechanism({therapy}:{therapy:Therapy}) {
+export function Evidence({therapy}:{therapy:Therapy}){const e=evidenceFor(therapy);return <section className={s.evidence}><span>{e.label}</span><h4>{e.outcome}</h4><dl className={s.evidenceGrid}>{[["Studied population",e.population],["Study design",e.design||"Not yet curated"],["Studied formulation",e.formulation||"Not yet verified against the source"],["Follow-up",e.duration||"Not yet curated"],["Measured effect",e.effect||"No curated effect size"]].map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl><p>{e.finding}</p><p className={s.boundary}>{e.boundary}</p>{e.source&&<a href={e.source} target="_blank" rel="noreferrer">Read the supporting source ↗</a>}</section>;}
+export function Mechanism({therapy}:{therapy:Therapy}) {
  const [stage,setStage]=useState(0),[playing,setPlaying]=useState(false),[endpoint,setEndpoint]=useState(false);
  const repair=therapy.id==='bpc-157',fat=therapy.id==='tesamorelin',trt=therapy.id==='trt';
  const steps=repair?['Injured tissue','Repair signalling','Matrix remodelling']:trt?['Hormone signal','Cell response','Feedback loop']:therapy.pathway;
