@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import {SavedSummary} from "@/components/kamura/SavedCollection";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import DailyCheckinModal from "@/components/member/DailyCheckinModal";
@@ -465,6 +466,7 @@ export default function TodayPage() {
 
   return (
     <>
+      <SavedSummary/>
       {checkinOpen && (
         <DailyCheckinModal
           existing={today}

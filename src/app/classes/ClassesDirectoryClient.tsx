@@ -1,4 +1,5 @@
 "use client";
+import SaveButton from '@/components/kamura/SaveButton';
 
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -98,6 +99,7 @@ export default function ClassesDirectoryClient() {
               <p className="text-sm text-gray-500 font-sans leading-relaxed mb-4 flex-1">
                 {s.description}
               </p>
+              <SaveButton item={{id:`studio:${s.slug}`,kind:"Studio",title:s.name,href:s.url}}/>
               {s.tags.length > 0 && (
                 <p className="text-[11px] text-gray-400 font-sans mb-4">
                   {s.tags.join(" · ")}

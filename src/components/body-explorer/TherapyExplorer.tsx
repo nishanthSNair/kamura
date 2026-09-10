@@ -1,4 +1,5 @@
 'use client';
+import SaveButton from '@/components/kamura/SaveButton';
 import { useEffect, useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
@@ -77,6 +78,7 @@ export default function TherapyExplorer(){
     </section>
     <p className={styles.retrieved}>A shared body region does not imply equal benefits or a proven combination effect.</p>
     </>:inspected?<><p className={styles.lead}>Selected structure</p><p className={styles.text}>{inspected.id}</p><button className={styles.primary} onClick={()=>setScene(s=>({...s,isolate:!s.isolate,reset:s.reset+1}))}><Focus size={16}/>{scene.isolate?'Show body context':'Focus on structure'}</button><button className={styles.outline} onClick={reset}>Return to {therapy.name}</button></>:<>
+<SaveButton item={{id:`therapy:${therapy.id}`,kind:"Therapy",title:therapy.name,href:`/body?t=${therapy.id}`}}/>
     {goal&&<div className={styles.goalHead}><strong>{GOALS.find(g=>g.id===goal)?.label}</strong><button onClick={()=>selectGoal(goal)}>&larr; All for this topic</button></div>}
     <div className={styles.badgeRow}>
      <span className={styles.researchBadge}>{therapy.researchContext}</span>
