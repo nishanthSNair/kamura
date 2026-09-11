@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import PeptideDirectoryContent from "./PeptideDirectoryContent";
-import { peptides } from "@/data/peptides";
+import peptides from "@/data/therapy-explorer.json";
 
 export const metadata: Metadata = {
-  title: "Peptide Directory — Every Peptide Scored | KAMURA",
+  title: "Peptide Directory — Visual Pathways & Studied Uses | KAMURA",
   description:
-    "Evidence-graded directory of therapeutic peptides with Kamura Scores, research citations, safety profiles, and UAE availability. Filter by goal: recovery, fat loss, longevity, cognitive, immune.",
+    "Explore 28 peptide and related therapy guides: visual mechanisms, symptoms and studied uses, formulation context and original research.",
   keywords: [
     "peptide therapy",
     "peptide directory",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://kamuralife.com/peptides/directory" },
   openGraph: {
-    title: "Peptide Directory — Every Peptide Scored | KAMURA",
+    title: "Peptide Directory — Visual Pathways & Studied Uses | KAMURA",
     description:
-      "Evidence-graded peptide directory with Kamura Scores, citations, and UAE availability.",
+      "Visual peptide pathways, studied uses and source-linked explanations.",
     type: "website",
     url: "https://kamuralife.com/peptides/directory",
     siteName: "KAMURA",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Peptide Directory | KAMURA",
     description:
-      "Every therapeutic peptide scored on evidence, safety, and UAE availability.",
+      "Explore peptide mechanisms and outcome-specific research.",
     creator: "@KamuraLife",
   },
 };
@@ -54,17 +54,17 @@ const jsonLd = {
       name: "Peptide Directory",
       url: "https://kamuralife.com/peptides/directory",
       description:
-        "Evidence-graded directory of therapeutic peptides with Kamura Scores, research citations, and UAE availability.",
+        "Visual guides to peptide mechanisms, studied uses and original research.",
       mainEntity: {
         "@type": "ItemList",
         numberOfItems: peptides.length,
         itemListElement: [...peptides]
-          .sort((a, b) => b.kamuraScore - a.kamuraScore)
+          .sort((a, b) => a.name.localeCompare(b.name))
           .map((p, i) => ({
             "@type": "ListItem",
             position: i + 1,
-            url: `https://kamuralife.com/treatments/${p.slug}`,
-            name: `${p.name} — Kamura Score: ${p.kamuraScore}`,
+            url: `https://kamuralife.com/peptides/${p.id}`,
+            name: p.name,
           })),
       },
     },

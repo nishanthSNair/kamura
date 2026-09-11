@@ -1,3 +1,5 @@
+import catalogue from '@/data/therapy-explorer.json';
+import {peptideContexts} from '@/lib/peptide-learning';
 import { NextResponse } from "next/server";
 import { getAllPosts } from "@/lib/blog";
 import { listings } from "@/data/listings";
@@ -58,7 +60,7 @@ export async function GET() {
  category: e.category,
  url: `/events/${e.id}`,
  })),
- treatments: treatments.map((t) => ({
+ treatments: [...catalogue.map(t=>({type:'treatment' as const,title:t.name,excerpt:peptideContexts[t.id].intro,category:t.category,url:`/peptides/${t.id}`,services:[t.id,t.id.replaceAll('-',' '),t.id.replaceAll('-',''),...peptideContexts[t.id].topics.map(x=>x.title)]})),...treatments.filter(t=>!catalogue.some(c=>c.treatmentSlug===t.slug||c.id===t.slug)).map((t) => ({
  type: "treatment" as const,
  title: t.name,
  excerpt: `${t.description.slice(0, 120)}...`,
@@ -66,7 +68,7 @@ export async function GET() {
  url: `/treatments/${t.slug}`,
  kamuraScore: t.kamuraScore,
  evidenceLevel: t.evidenceLevel,
- })),
+ }))],
  };
 
  return NextResponse.json(searchIndex, {

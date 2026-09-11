@@ -4,7 +4,7 @@
   "name": "BPC-157",
   "category": "Repair & inflammation",
   "kind": "Peptide",
-  "researchContext": "Preclinical tissue research",
+  "researchContext": "Predominantly preclinical",
   "formulations": "Pen · oral capsules",
   "regions": [
    {
@@ -30,13 +30,13 @@
    }
   ],
   "title": "Tissue repair pathways",
-  "mechanism": "In animal studies, BPC-157 appears to accelerate healing by promoting new blood-vessel growth (angiogenesis via VEGF and nitric-oxide pathways) and by stimulating fibroblasts — the cells that rebuild tendon, ligament, and gut lining. Nearly all evidence is from rodent models; controlled human trials are only now beginning.",
+  "mechanism": "Experimental findings involve angiogenesis-related signalling and inflammatory pathways. Fibroblast migration and matrix changes are measured mainly in preclinical models. The reviewed human evidence is uncontrolled; structural and functional outcomes need separate assessment.",
   "pathway": [
-   "BPC-157",
-   "VEGF & nitric-oxide signaling",
-   "Blood-vessel growth → tendon & gut repair (animal models)"
+   "Repair signalling",
+   "Tissue remodelling",
+   "Function versus pain"
   ],
-  "scope": "A shoulder is shown as anatomical context; published tendon models are identified in the article titles.",
+  "scope": "Oral, intra-articular and subcutaneous preparations are different exposures. Gut studies do not validate systemic healing from capsules.",
   "references": [
    {
     "pmid": "42542926",
@@ -104,7 +104,7 @@
   "name": "TB-500",
   "category": "Repair & inflammation",
   "kind": "Peptide fragment",
-  "researchContext": "Preclinical tissue research",
+  "researchContext": "Preclinical context",
   "formulations": "Formulation not specified",
   "regions": [
    {
@@ -123,13 +123,13 @@
    }
   ],
   "title": "Cell migration & repair",
-  "mechanism": "TB-500 binds actin — the protein cells use to move — which in lab and animal studies helps repair cells migrate into injured tissue and reduces local inflammation. Human evidence is essentially absent; what exists comes from wound and cardiac models in animals.",
+  "mechanism": "Full-length thymosin beta-4 and marketed fragments require separate evidence. Actin-associated biology provides a rationale for migration and remodelling research. Animal biomechanics and histology cannot supply a human recovery timeline.",
   "pathway": [
-   "TB-500",
-   "Actin binding → cell migration",
-   "Repair-cell recruitment to injured tissue (animal models)"
+   "Peptide identity",
+   "Cell movement",
+   "Injury outcome"
   ],
-  "scope": "Full-length thymosin beta-4 and products called TB-500 are distinct; check the compound used in each paper.",
+  "scope": "Verify the sequence, formulation and route. TB-500 and thymosin beta-4 are not interchangeable labels.",
   "references": [
    {
     "pmid": "42542926",
@@ -194,7 +194,7 @@
   "name": "GHK-Cu",
   "category": "Repair & inflammation",
   "kind": "Copper peptide",
-  "researchContext": "Skin & tissue research",
+  "researchContext": "Topical research",
   "formulations": "Pen · topical serum",
   "regions": [
    {
@@ -213,13 +213,13 @@
    }
   ],
   "title": "Extracellular matrix research",
-  "mechanism": "GHK-Cu carries copper into tissue and switches on genes for collagen, elastin, and wound remodeling. Topically it has decent human data for skin quality and hair; injected use runs well ahead of the evidence.",
+  "mechanism": "The GHK-copper complex is studied in tissue signalling and matrix biology. Cell and skin-model findings explore remodelling and inflammatory responses. Clinical interpretation requires the exact topical preparation and measured endpoint.",
   "pathway": [
-   "GHK-Cu",
-   "Copper delivery → remodeling genes",
-   "Collagen & elastin synthesis in skin"
+   "Copper binding",
+   "Skin matrix",
+   "Visible change"
   ],
-  "scope": "The surface is anatomical context. Follicles and collagen fibers are not individually modeled here.",
+  "scope": "Topical serum evidence does not validate injectable GHK-Cu.",
   "references": [
    {
     "pmid": "42619529",
@@ -283,7 +283,7 @@
   "name": "KPV",
   "category": "Repair & inflammation",
   "kind": "Peptide",
-  "researchContext": "Preclinical inflammation research",
+  "researchContext": "Cell and animal research",
   "formulations": "Pen · oral capsules",
   "regions": [
    {
@@ -340,13 +340,13 @@
    }
   ],
   "title": "Inflammatory signaling",
-  "mechanism": "KPV mimics the anti-inflammatory action of alpha-MSH, damping NF-κB–driven inflammation in gut-lining cells in lab and mouse colitis models. It's being explored for inflammatory bowel conditions; human trials haven't been done.",
+  "mechanism": "PepT1-mediated uptake was studied in epithelial and immune-cell systems. NF-κB and MAP kinase signalling were inhibited in studied models. Histology and inflammatory markers in mice are not human remission endpoints.",
   "pathway": [
-   "KPV",
-   "NF-κB inflammation damping",
-   "Calmer gut lining (mouse colitis models)"
+   "Cell uptake",
+   "Inflammatory signal",
+   "Gut outcome"
   ],
-  "scope": "Intestinal anatomy locates the research topic; epithelial cells require a separate microscopic view.",
+  "scope": "Study delivery systems include experimental oral preparations and nanoparticles; routine capsules or injections need their own evidence.",
   "references": [
    {
     "pmid": "34547895",
@@ -426,7 +426,7 @@
   "name": "LL-37",
   "category": "Repair & inflammation",
   "kind": "Peptide",
-  "researchContext": "Antimicrobial & wound research",
+  "researchContext": "Human topical research",
   "formulations": "Pen",
   "regions": [
    {
@@ -476,13 +476,13 @@
    }
   ],
   "title": "Host-defense peptide biology",
-  "mechanism": "LL-37 punches holes in bacterial membranes directly and recruits immune cells to infection sites. It's a genuine part of human innate immunity; injecting synthetic LL-37 for wound healing is supported mainly by early-stage studies.",
+  "mechanism": "LL-37 is a human cathelicidin-derived peptide. Antimicrobial, inflammatory and repair effects depend on the experimental setting. A topical ulcer trial is a different exposure from a systemic injection.",
   "pathway": [
-   "LL-37",
-   "Microbial membrane disruption",
-   "Direct antimicrobial + immune recruitment"
+   "Innate defence",
+   "Membranes and immune signalling",
+   "Wound measurement"
   ],
-  "scope": "Host-defense biology and therapeutic administration are different research questions.",
+  "scope": "Topical wound formulations and systemic LL-37 are not equivalent.",
   "references": [
    {
     "pmid": "42641316",
@@ -535,7 +535,7 @@
   "name": "CJC-1295 + Ipamorelin",
   "category": "Growth hormone axis",
   "kind": "Peptide combination",
-  "researchContext": "Component-level research",
+  "researchContext": "Component physiology",
   "formulations": "Combination formulation",
   "regions": [
    {
@@ -613,13 +613,13 @@
    }
   ],
   "title": "Two signaling routes",
-  "mechanism": "CJC-1295 mimics GHRH — the hypothalamic 'release GH' signal — while ipamorelin triggers the ghrelin receptor on the same pituitary cells. Together they amplify the body's natural GH pulses, raising IGF-1 from the liver. Human data exists for each alone; the popular combination itself is untrialed.",
+  "mechanism": "CJC-1295 targets GHRH signalling; ipamorelin is a GH secretagogue. The cited CJC study used a long-acting albumin-binding analogue. A rise in IGF-1 measures axis activity, not proof of improved health or recovery.",
   "pathway": [
-   "CJC-1295 + Ipamorelin",
-   "Pituitary GHRH-R + GHS-R activation",
-   "Amplified GH pulses → liver IGF-1"
+   "Two inputs",
+   "GH release",
+   "Downstream IGF-1"
   ],
-  "scope": "Linked papers cover individual components; they do not automatically establish benefits of the combination.",
+  "scope": "CJC with DAC, products called “without DAC”, and compounded combinations require separate matching.",
   "references": [
    {
     "pmid": "19386527",
@@ -701,7 +701,7 @@
   "name": "Ipamorelin",
   "category": "Growth hormone axis",
   "kind": "Peptide",
-  "researchContext": "GH secretagogue research",
+  "researchContext": "Preclinical pharmacology",
   "formulations": "Pen",
   "regions": [
    {
@@ -779,13 +779,13 @@
    }
   ],
   "title": "Growth hormone secretagogue",
-  "mechanism": "Ipamorelin activates the growth-hormone secretagogue receptor (GHS-R1a) on pituitary cells, producing clean GH pulses in early human studies. Its clinical development was discontinued, so long-term human data never materialized.",
+  "mechanism": "Ipamorelin acts through a GHRP/ghrelin-receptor pathway. Selectivity observations depend on species and exposure. Trials must measure the patient outcome rather than GH alone.",
   "pathway": [
-   "Ipamorelin",
-   "GHS-R1a (ghrelin receptor)",
-   "Selective pituitary GH release"
+   "Receptor signal",
+   "Pituitary response",
+   "Clinical question"
   ],
-  "scope": "Mechanism and pharmacodynamic research are shown separately from long-term clinical outcomes.",
+  "scope": "The foundational animal pharmacology does not validate a compounded human regimen.",
   "references": [
    {
     "pmid": "9849822",
@@ -824,7 +824,7 @@
   "name": "Sermorelin",
   "category": "Growth hormone axis",
   "kind": "Peptide",
-  "researchContext": "GHRH analogue research",
+  "researchContext": "Clinical paediatric literature",
   "formulations": "Pen · sublingual formulation",
   "regions": [
    {
@@ -902,13 +902,13 @@
    }
   ],
   "title": "GHRH signaling",
-  "mechanism": "Sermorelin binds the GHRH receptor on the pituitary, restoring more youthful GH pulsing rather than injecting GH itself. It was an approved pediatric drug (later withdrawn commercially), so its human pharmacology is well characterized.",
+  "mechanism": "Sermorelin is the biologically active GHRH 1–29 analogue. Hormone-response testing depends on the diagnostic context. Height velocity is not an adult anti-ageing outcome.",
   "pathway": [
-   "Sermorelin",
-   "Pituitary GHRH receptor",
-   "Restored natural GH pulsing"
+   "GHRH signal",
+   "GH response",
+   "Growth outcome"
   ],
-  "scope": "Study route and formulation matter; research on one formulation does not establish another.",
+  "scope": "Match the preparation and diagnostic or therapeutic context; historical use is not proof of every current claim.",
   "references": [
    {
     "pmid": "18031173",
@@ -947,7 +947,7 @@
   "name": "Tesamorelin",
   "category": "Growth hormone axis",
   "kind": "Peptide",
-  "researchContext": "Human trials · HIV lipodystrophy",
+  "researchContext": "Human randomized evidence",
   "formulations": "Injectable",
   "regions": [
    {
@@ -1070,13 +1070,13 @@
    }
   ],
   "title": "The GH axis & visceral adiposity",
-  "mechanism": "Tesamorelin drives pituitary GH release and downstream IGF-1, which in controlled human trials reduced visceral adipose tissue by roughly 15–18% over 6–12 months in HIV-associated lipodystrophy. Whether that translates to healthy adults is the open question.",
+  "mechanism": "It is a GHRH analogue. IGF-1 is an axis-response marker; it is not a direct measurement of visceral fat. CT-derived visceral adipose tissue was the primary endpoint.",
   "pathway": [
-   "Tesamorelin",
-   "GHRH-R → GH → IGF-1 axis",
-   "Visceral fat reduction (human RCTs)"
+   "Pituitary signal",
+   "Hormone axis",
+   "Visceral fat"
   ],
-  "scope": "Abdominal organs provide location context. Visceral fat is not segmented in this geometry.",
+  "scope": "Use the studied subcutaneous product context, not a general “fat-loss peptide” category.",
   "references": [
    {
     "pmid": "41545261",
@@ -1146,7 +1146,7 @@
   "name": "AOD-9604",
   "category": "Growth hormone axis",
   "kind": "Peptide fragment",
-  "researchContext": "Metabolic research",
+  "researchContext": "Investigational development",
   "formulations": "Formulation not specified",
   "regions": [
    {
@@ -1262,13 +1262,13 @@
    }
   ],
   "title": "Growth hormone fragment research",
-  "mechanism": "AOD-9604 was designed to stimulate lipolysis via GH's fat-metabolism pathway while skipping IGF-1–driven growth signaling. In human obesity trials it was safe but showed little meaningful weight loss — a cautionary tale the marketing rarely mentions.",
+  "mechanism": "A fragment’s properties differ from full-length growth hormone. Mechanistic claims require direct clinical confirmation. An early development report provides no reliable expected weight-loss effect.",
   "pathway": [
-   "AOD-9604",
-   "GH fat-metabolism fragment",
-   "Lipolysis signal — weak effect in human trials"
+   "GH fragment",
+   "Metabolic hypothesis",
+   "Outcome check"
   ],
-  "scope": "Abdominal anatomy is a location reference; no fat-loss prediction is displayed.",
+  "scope": "Oral development work and intra-articular animal experiments cannot be generalized to a subcutaneous pen.",
   "references": [
    {
     "pmid": "15134286",
@@ -1320,7 +1320,7 @@
   "name": "IGF-LR3",
   "category": "Growth hormone axis",
   "kind": "IGF analogue",
-  "researchContext": "Preclinical research",
+  "researchContext": "Clinical evidence gap",
   "formulations": "Formulation not specified",
   "regions": [
    {
@@ -1398,13 +1398,13 @@
    }
   ],
   "title": "IGF signaling research",
-  "mechanism": "The 'LR3' modifications stop IGF-binding proteins from soaking it up, so it activates IGF-1 receptors on muscle and other tissue longer and harder than natural IGF-1. That same unbuffered growth signaling is why its safety profile (including theoretical tumor-growth concern) is unstudied in humans.",
+  "mechanism": "LR3 has altered binding properties compared with native IGF-1. Receptor activity does not identify a beneficial clinical exposure. Human outcome and safety evidence for this analogue must be demonstrated separately.",
   "pathway": [
-   "IGF-1 LR3",
-   "Unbuffered IGF-1 receptor activation",
-   "Prolonged growth signaling (no human trials)"
+   "Modified growth factor",
+   "Growth signalling",
+   "Clinical endpoint"
   ],
-  "scope": "The selected muscle is tissue context, not a predicted hypertrophy outcome.",
+  "scope": "Do not substitute evidence for mecasermin or native IGF-1 for LR3.",
   "references": [
    {
     "pmid": "42395176",
@@ -1455,7 +1455,7 @@
   "name": "PT-141 / Bremelanotide",
   "category": "Hormonal & reproductive",
   "kind": "Peptide",
-  "researchContext": "Human trials · specific populations",
+  "researchContext": "Human randomized trials",
   "formulations": "Pen · nasal formulation",
   "regions": [
    {
@@ -1535,13 +1535,14 @@
    }
   ],
   "title": "Central melanocortin signaling",
-  "mechanism": "Unlike erection drugs that work on blood flow, PT-141 activates melanocortin-4 receptors in the brain's arousal circuits — desire is generated centrally. Approved (Vyleesi) with real trial data; nausea is its signature side effect.",
+  "mechanism": "Bremelanotide is a melanocortin receptor agonist. MC1R and MC4R binding occur at therapeutic exposures; the precise mechanism of benefit in HSDD remains unknown. MC4R-related pathways are a biological rationale, not a complete explanation of an individual response. Avoid presenting a single “libido switch”. RECONNECT used FSFI desire and FSDS-DAO item 13 as coprimary outcomes in premenopausal women with HSDD. Two 24-week randomized trials supported the defined indication. The label reports no significant treatment difference in the number of satisfying sexual events.",
   "pathway": [
-   "PT-141",
-   "Brain MC4 receptors",
-   "Central sexual-arousal signaling (human RCTs)"
+   "Melanocortin signal",
+   "Brain response",
+   "Experience of desire",
+   "Clinical outcome"
   ],
-  "scope": "The hypothalamus provides central context. Study populations and administration routes are article-specific.",
+  "scope": "The pivotal evidence and US label concern a specified subcutaneous bremelanotide product. A compounded pen or nasal spray is not automatically equivalent.",
   "references": [
    {
     "pmid": "35170192",
@@ -1613,7 +1614,7 @@
   "name": "Kisspeptin-10",
   "category": "Hormonal & reproductive",
   "kind": "Peptide",
-  "researchContext": "Human endocrine research",
+  "researchContext": "Small human physiology studies",
   "formulations": "Formulation not specified",
   "regions": [
    {
@@ -1643,13 +1644,13 @@
    }
   ],
   "title": "Upstream reproductive signaling",
-  "mechanism": "Kisspeptin activates KISS1R neurons in the hypothalamus, which triggers GnRH release and downstream LH/FSH — the signals that drive testosterone and ovulation. Human physiology studies are solid; therapeutic use is still experimental.",
+  "mechanism": "KISS1R signalling can promote GnRH release. LH and FSH changes are intermediate endpoints. Responses depend on diagnosis, timing and exposure; clinical outcomes need separate study.",
   "pathway": [
-   "Kisspeptin-10",
-   "Hypothalamic KISS1R → GnRH",
-   "LH/FSH → sex-hormone production"
+   "KISS1R",
+   "Pituitary hormones",
+   "Gonadal response"
   ],
-  "scope": "This sequence describes endocrine signaling, rather than a guaranteed hormone-restoration response.",
+  "scope": "Kisspeptin-10 and kisspeptin-54 are different molecules; infusion findings do not automatically validate intermittent pens.",
   "references": [
    {
     "pmid": "42549827",
@@ -1689,7 +1690,7 @@
   "name": "Gonadorelin",
   "category": "Hormonal & reproductive",
   "kind": "Peptide hormone",
-  "researchContext": "Human endocrine research",
+  "researchContext": "Specific clinical research",
   "formulations": "Formulation not specified",
   "regions": [
    {
@@ -1709,13 +1710,13 @@
    }
   ],
   "title": "GnRH & gonadotropins",
-  "mechanism": "Pulsed gonadorelin stimulates pituitary LH and FSH release, which keeps the testes producing testosterone and sperm — the reason it's used alongside TRT to prevent testicular shutdown. A decades-old, well-characterized clinical molecule.",
+  "mechanism": "Physiological pulse delivery differs from continuous exposure. The response requires suitable pituitary function. Spermatogenesis in a diagnosed population is not a universal fertility effect.",
   "pathway": [
-   "Gonadorelin (GnRH)",
-   "Pituitary LH & FSH release",
-   "Maintained testicular function"
+   "GnRH pulses",
+   "LH and FSH",
+   "Gonadal function"
   ],
-  "scope": "The temporal pattern of exposure matters; a pathway diagram does not specify a treatment schedule.",
+  "scope": "Pulsatile pump delivery is not equivalent to occasional injections.",
   "references": [
    {
     "pmid": "30569789",
@@ -1796,7 +1797,7 @@
   "name": "Thymosin Alpha-1",
   "category": "Immune & cellular health",
   "kind": "Peptide",
-  "researchContext": "Immune research",
+  "researchContext": "Disease-specific clinical literature",
   "formulations": "Formulation not specified",
   "regions": [
    {
@@ -1816,13 +1817,13 @@
    }
   ],
   "title": "Immune modulation",
-  "mechanism": "Thymosin alpha-1 primes dendritic cells through toll-like receptors and promotes T-cell maturation — tuning immune response up against infection and down in overdrive. It has real human trial data in hepatitis and sepsis; 'longevity' use extrapolates well beyond it.",
+  "mechanism": "Thymosin alpha-1 is studied in adaptive and innate immune regulation. Modulating a response is different from increasing every immune measure. Interpret adjunctive effects with the population and background treatment.",
   "pathway": [
-   "Thymosin α1",
-   "TLR/dendritic-cell priming",
-   "T-cell maturation & immune balance"
+   "Immune signalling",
+   "Context matters",
+   "Disease outcome"
   ],
-  "scope": "Thymus and spleen are immune-system context; individual immune cells are not resolved in this model.",
+  "scope": "Indication, concomitant care and study design determine applicability.",
   "references": [
    {
     "pmid": "40599771",
@@ -1892,7 +1893,7 @@
   "name": "MOTS-C",
   "category": "Immune & cellular health",
   "kind": "Mitochondrial peptide",
-  "researchContext": "Preclinical metabolic research",
+  "researchContext": "Animal treatment evidence",
   "formulations": "Formulation not specified",
   "regions": [
    {
@@ -1970,13 +1971,14 @@
    }
   ],
   "title": "Cellular metabolic adaptation",
-  "mechanism": "Exercise raises MOTS-c, which activates AMPK — the cell's low-fuel alarm — improving glucose uptake and metabolic flexibility in mouse studies. One small human trial exists; most claims lean on animal and cell data.",
+  "mechanism": "MOTS-c is a 16-amino-acid peptide encoded within the mitochondrial 12S rRNA region. Experimental work links altered folate/purine metabolism to AICAR accumulation and AMPK activation. This is not a proven surface-receptor-to-treatment pathway. Mouse and cell studies implicate skeletal-muscle metabolism and stress-responsive nuclear gene expression. Separate administered-peptide experiments in mice from endogenous peptide measurements after exercise in people. Neither predicts a client’s change in HbA1c or fatigue.",
   "pathway": [
-   "MOTS-c",
-   "AMPK activation",
-   "Improved glucose handling (mostly animal data)"
+   "Mitochondrial signal",
+   "Energy sensing",
+   "Muscle response",
+   "Measured outcome"
   ],
-  "scope": "Organs locate the topic. Mitochondria are a different scale from the body geometry.",
+  "scope": "The foundational treatment experiments used administered peptide in animals. Human exercise studies measured endogenous MOTS-c. Those are different exposures from a compounded subcutaneous pen.",
   "references": [
    {
     "pmid": "34798268",
@@ -2056,7 +2058,7 @@
   "name": "Epithalon",
   "category": "Immune & cellular health",
   "kind": "Peptide",
-  "researchContext": "Cellular & preclinical research",
+  "researchContext": "Cell research",
   "formulations": "Formulation not specified",
   "regions": [
    {
@@ -2133,13 +2135,13 @@
    }
   ],
   "title": "Telomere & neuroendocrine research",
-  "mechanism": "In cell studies epitalon activates telomerase — the enzyme that rebuilds chromosome ends — and normalized circadian melatonin in small, old Russian trials whose methodology is hard to verify. The longevity claims rest on that thin, aging evidence base.",
+  "mechanism": "Epithalon is distinct from the pineal extract epithalamin. Telomerase and alternative lengthening pathways are laboratory endpoints. Human function, disease and lifespan require direct assessment.",
   "pathway": [
-   "Epitalon",
-   "Telomerase activation (cell studies)",
-   "Telomere maintenance — unverified in modern trials"
+   "Peptide exposure",
+   "Cell maintenance",
+   "Human meaning"
   ],
-  "scope": "Cell-line findings do not measure a person’s lifespan or whole-body biological age.",
+  "scope": "Do not transfer extract findings or cultured-cell exposures to an injectable course.",
   "references": [
    {
     "pmid": "40141333",
@@ -2195,7 +2197,7 @@
   "name": "NAD+",
   "category": "Immune & cellular health",
   "kind": "Coenzyme",
-  "researchContext": "Metabolic & translational research",
+  "researchContext": "Route-specific evidence needed",
   "formulations": "Formulation not specified",
   "regions": [
    {
@@ -2331,13 +2333,13 @@
    }
   ],
   "title": "Energy metabolism & redox",
-  "mechanism": "NAD+ levels fall with age. It powers sirtuins (stress-response and repair regulators) and PARPs (DNA-repair enzymes). Restoring NAD+ clearly works at the biochemical level; whether injections or IVs outperform cheap oral precursors is unproven.",
+  "mechanism": "NAD+/NADH participates in redox reactions. Sirtuins and PARPs consume NAD in cellular processes. Route, metabolism and measured outcomes determine clinical interpretation.",
   "pathway": [
-   "NAD+",
-   "Sirtuin & PARP fueling",
-   "Cellular energy + DNA repair capacity"
+   "Cellular coenzyme",
+   "Enzyme substrate",
+   "Delivery question"
   ],
-  "scope": "NAD+, NAD+ precursors, and administration routes are distinct interventions in the research.",
+  "scope": "Separate NAD+, NR and NMN, and separate oral, intravenous and subcutaneous exposure.",
   "references": [
    {
     "pmid": "42489969",
@@ -2392,7 +2394,7 @@
   "name": "SS-31 / Elamipretide",
   "category": "Immune & cellular health",
   "kind": "Mitochondrial peptide",
-  "researchContext": "Human trials · Barth syndrome",
+  "researchContext": "Specific US accelerated approval",
   "formulations": "Formulation not specified",
   "regions": [
    {
@@ -2493,13 +2495,13 @@
    }
   ],
   "title": "Mitochondrial membrane research",
-  "mechanism": "SS-31 binds cardiolipin, a lipid unique to the inner mitochondrial membrane, stabilizing the electron-transport chain so aged mitochondria waste less energy as damaging leak. Human trials in heart failure and mitochondrial myopathy showed mixed but genuine signals.",
+  "mechanism": "Elamipretide interacts with cardiolipin. Barth syndrome has abnormal cardiolipin biology. The small crossover trial missed its primary endpoints; later evidence supported a specific accelerated approval.",
   "pathway": [
-   "SS-31",
-   "Cardiolipin binding (inner mitochondria)",
-   "More efficient electron transport"
+   "Inner membrane",
+   "Mitochondrial function",
+   "Muscle outcome"
   ],
-  "scope": "Heart and muscle provide tissue context; mitochondrial membranes are not body-scale anatomy.",
+  "scope": "Evidence and approval for Forzinity do not establish equivalence of compounded “SS-31” pens.",
   "references": [
    {
     "pmid": "33077895",
@@ -2543,7 +2545,7 @@
   "name": "Semax",
   "category": "Brain & sleep",
   "kind": "Peptide",
-  "researchContext": "Preclinical neurobiology",
+  "researchContext": "Preclinical mechanism",
   "formulations": "Nasal",
   "regions": [
    {
@@ -2621,13 +2623,13 @@
    }
   ],
   "title": "Neurotrophic signaling research",
-  "mechanism": "Semax raises BDNF — the brain's growth-and-plasticity factor — and modulates dopamine and serotonin systems in animal work. It's clinically used in Russia for stroke and cognition, but its trials rarely meet Western methodological standards.",
+  "mechanism": "Its proposed neurological activity is studied separately from ACTH’s endocrine effects. Rat hippocampal work measured BDNF and TrkB expression. Human cognition and daily functioning need direct study.",
   "pathway": [
-   "Semax",
-   "BDNF upregulation",
-   "Neuroplasticity & attention (Russian clinical use)"
+   "Neuropeptide analogue",
+   "Neurotrophic signalling",
+   "Cognition"
   ],
-  "scope": "Brain regions provide context; this scene does not predict cognitive performance.",
+  "scope": "Intranasal rat experiments do not establish the clinical response to a commercial nasal spray.",
   "references": [
    {
     "pmid": "19662538",
@@ -2692,7 +2694,7 @@
   "name": "Selank",
   "category": "Brain & sleep",
   "kind": "Peptide",
-  "researchContext": "Neuropharmacology research",
+  "researchContext": "Mechanistic and limited clinical context",
   "formulations": "Nasal",
   "regions": [
    {
@@ -2770,13 +2772,13 @@
    }
   ],
   "title": "Anxiety-related signaling research",
-  "mechanism": "Selank appears to modulate GABA signaling and slow the breakdown of enkephalins — the body's own calming opioids — reducing anxiety in Russian trials without sedation or dependence. Independent replication outside Russia is lacking.",
+  "mechanism": "Selank is a synthetic heptapeptide. Receptor-binding work proposes concentration-dependent allosteric modulation. Laboratory receptor effects do not supply a response rate or comparative effectiveness.",
   "pathway": [
-   "Selank",
-   "GABA modulation + enkephalin preservation",
-   "Anxiolysis without sedation (Russian trials)"
+   "Peptide signal",
+   "GABA modulation",
+   "Patient outcome"
   ],
-  "scope": "Anatomical highlighting represents the field of study rather than a precise distribution map.",
+  "scope": "Match the intranasal formulation and actual study population.",
   "references": [
    {
     "pmid": "34396551",
@@ -2827,7 +2829,7 @@
   "name": "DSIP",
   "category": "Brain & sleep",
   "kind": "Peptide",
-  "researchContext": "Sleep research",
+  "researchContext": "Small older human studies",
   "formulations": "Formulation not specified",
   "regions": [
    {
@@ -2907,13 +2909,13 @@
    }
   ],
   "title": "Sleep physiology research",
-  "mechanism": "DSIP was named for promoting delta-wave (deep) sleep in early animal experiments, possibly via hypothalamic sleep-regulation circuits — but 50 years on, its receptor has never been identified. Small old human studies in insomnia showed modest, inconsistent effects.",
+  "mechanism": "A definitive therapeutic receptor pathway is not established. Studies used polysomnography and daytime assessments. Modern replication and formulation-specific data are needed.",
   "pathway": [
-   "DSIP",
-   "Unknown receptor — hypothalamic circuits",
-   "Delta-wave sleep modulation (old, mixed data)"
+   "Experimental peptide",
+   "Sleep recording",
+   "Evidence limits"
   ],
-  "scope": "Sleep stages cannot be inferred from a body model; linked studies report their own measured outcomes.",
+  "scope": "Historical study preparations and routes need to be matched before applying findings to a pen.",
   "references": [
    {
     "pmid": "3622582",
@@ -2968,7 +2970,7 @@
   "name": "FOXO4-DRI",
   "category": "Immune & cellular health",
   "kind": "Experimental peptide",
-  "researchContext": "Cellular & animal research",
+  "researchContext": "Experimental research",
   "formulations": "Formulation not specified",
   "regions": [
    {
@@ -3046,13 +3048,13 @@
    }
   ],
   "title": "Cellular senescence research",
-  "mechanism": "Senescent cells survive by letting FOXO4 pin down p53, the cell's self-destruct trigger. FOXO4-DRI is a mirror-image peptide that breaks that grip, freeing p53 to kill the senescent cell — with striking results in aged mice and zero human safety data.",
+  "mechanism": "FOXO4 and p53 interactions are a research target. The D-retro-inverso design is intended to interfere with the protein complex. Selectivity, systemic safety and clinical benefits require separate evidence.",
   "pathway": [
-   "FOXO4-DRI",
-   "Breaks FOXO4–p53 binding",
-   "Senescent-cell self-destruction (mice only)"
+   "Protein interaction",
+   "Disrupted binding",
+   "Cell fate"
   ],
-  "scope": "Tissues provide context. No senescent-cell count or biological-age change is inferred.",
+  "scope": "Research peptide exposure does not establish a therapeutic human regimen.",
   "references": [
    {
     "pmid": "41625068",
@@ -3118,7 +3120,7 @@
   "name": "VIP",
   "category": "Immune & cellular health",
   "kind": "Peptide hormone",
-  "researchContext": "Receptor & physiology research",
+  "researchContext": "Physiology research",
   "formulations": "Nasal",
   "regions": [
    {
@@ -3388,13 +3390,13 @@
    }
   ],
   "title": "Vasoactive intestinal peptide",
-  "mechanism": "VIP activates VPAC receptors to relax smooth muscle, dilate vessels, and calm inflammatory signaling. Because their receptors are everywhere, systemic effects are broad — which is both the appeal and the problem for therapeutic use.",
+  "mechanism": "VPAC signalling varies across tissues. Smooth-muscle relaxation is one studied effect. Tissue physiology must not be presented as proof of a nasal therapy outcome.",
   "pathway": [
-   "VIP",
-   "VPAC receptor activation",
-   "Smooth-muscle relaxation + immune calming"
+   "VPAC receptors",
+   "Tissue response",
+   "Clinical translation"
   ],
-  "scope": "The presence of an endogenous pathway does not establish the effects of a nasal preparation.",
+  "scope": "Endogenous VIP, tissue experiments and nasal products are different evidence contexts.",
   "references": [
    {
     "pmid": "39550744",
@@ -3459,7 +3461,7 @@
   "name": "Dihexa",
   "category": "Brain & sleep",
   "kind": "Peptidomimetic",
-  "researchContext": "Preclinical neural research",
+  "researchContext": "Animal research",
   "formulations": "Capsules",
   "regions": [
    {
@@ -3537,13 +3539,13 @@
    }
   ],
   "title": "HGF-related neural research",
-  "mechanism": "Dihexa potentiates HGF/MET signaling — a pathway that drives synapse formation — and in rodent models strengthened memory circuits. Its potency in forming synapses is exactly why unsupervised human use is a leap: there are no human trials at all.",
+  "mechanism": "Dihexa has been investigated in growth-factor-related signalling. Mouse studies assessed PI3K/AKT-related signalling and synaptic markers. A maze task is not a human dementia or cognition outcome.",
   "pathway": [
-   "Dihexa",
-   "HGF/MET potentiation",
-   "New synapse formation (rodent models)"
+   "Growth-factor pathways",
+   "Cell and synapse response",
+   "Behavioural endpoint"
   ],
-  "scope": "Highlighted brain anatomy provides context for experimental work.",
+  "scope": "Oral animal experiments cannot define the efficacy of a human capsule.",
   "references": [
    {
     "pmid": "34827486",
@@ -3596,7 +3598,7 @@
   "name": "Acetyl Hexapeptide-8",
   "category": "Skin & hair",
   "kind": "Cosmetic peptide",
-  "researchContext": "Topical cosmetic research",
+  "researchContext": "Topical cosmetic context",
   "formulations": "Topical serum",
   "regions": [
    {
@@ -3608,13 +3610,13 @@
    }
   ],
   "title": "Expression-line research",
-  "mechanism": "Applied to skin, it competes with the SNARE proteins that dock neurotransmitter vesicles, slightly reducing the muscle micro-contractions behind expression lines. Human cosmetic studies show real but modest wrinkle-depth reductions — nothing like injected botulinum.",
+  "mechanism": "Penetration depends on the vehicle and delivery system. SNARE-related interference is a proposed basis for activity. Compare measured cosmetic outcomes rather than mechanism alone.",
   "pathway": [
-   "Acetyl hexapeptide-8",
-   "SNARE-complex interference (topical)",
-   "Softer expression-line contraction"
+   "Topical application",
+   "Proposed signalling effect",
+   "Visible endpoint"
   ],
-  "scope": "Skin is shown as anatomical context. The model does not include facial expression muscles or the SNARE machinery this peptide is studied against; those act at a scale below whole-body anatomy.",
+  "scope": "Assess the exact topical product; do not equate it to an injectable neuromodulator.",
   "references": [
    {
     "pmid": "40673537",
@@ -3678,7 +3680,7 @@
   "name": "RU58841",
   "category": "Skin & hair",
   "kind": "Nonsteroidal antiandrogen",
-  "researchContext": "Preclinical hair research",
+  "researchContext": "Preclinical studies",
   "formulations": "Topical formulation",
   "regions": [
    {
@@ -3697,13 +3699,13 @@
    }
   ],
   "title": "Androgen-receptor research",
-  "mechanism": "RU58841 blocks androgen receptors in scalp hair follicles, shielding them from DHT — the hormone that miniaturizes follicles in pattern loss — with the goal of acting locally without systemic hormone effects. Its clinical development stopped, so quality-controlled human data never arrived.",
+  "mechanism": "RU58841 antagonizes androgen-receptor activation in experimental systems. The response depends on tissue and hormone context. Preclinical growth does not establish long-term human benefit or safety.",
   "pathway": [
-   "RU58841",
-   "Follicular androgen-receptor blockade",
-   "Local DHT shielding (development abandoned)"
+   "Androgen receptor",
+   "Follicle biology",
+   "Hair endpoint"
   ],
-  "scope": "Skin appendages provide anatomical context; individual scalp follicles are not segmented.",
+  "scope": "A topical experimental solution is not a validated commercial treatment.",
   "references": [
    {
     "pmid": "9798729",
@@ -3755,7 +3757,7 @@
   "name": "Testosterone / TRT",
   "category": "Hormonal & reproductive",
   "kind": "Hormone therapy",
-  "researchContext": "Human trials & guidelines",
+  "researchContext": "Clinical guideline context",
   "formulations": "Formulation-specific",
   "regions": [
    {
@@ -3790,13 +3792,13 @@
    }
   ],
   "title": "Androgen signaling & feedback",
-  "mechanism": "Testosterone activates androgen receptors in muscle, bone, brain, and marrow, restoring lean mass, bone density, libido, and mood in genuinely deficient men — the strongest human evidence base on this page. The same receptor breadth is why oversight and monitoring matter.",
+  "mechanism": "Formulation influences exposure and monitoring. Receptor-mediated effects depend on baseline state and endpoint. LH/FSH and sperm production can be suppressed; fertility goals matter.",
   "pathway": [
-   "Testosterone",
-   "Androgen-receptor activation (multi-organ)",
-   "Physiologic restoration (strong human RCTs)"
+   "Replacement hormone",
+   "Androgen receptor",
+   "Feedback"
   ],
-  "scope": "Research populations, formulations, clinical outcomes, and monitoring are specified in the sources.",
+  "scope": "Match the licensed formulation and clinical monitoring context.",
   "references": [
    {
     "pmid": "37326322",

@@ -1,3 +1,4 @@
+import catalogue from '@/data/therapy-explorer.json';
 import {listings} from "@/data/listings";
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
@@ -20,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
  }));
 
  return [
+ ...catalogue.map(t=>({url:`${baseUrl}/peptides/${t.id}`,changeFrequency:"monthly" as const,priority:0.9})),
  {url:`${baseUrl}/body`,changeFrequency:"monthly",priority:0.9},
  {url:`${baseUrl}/learn`,changeFrequency:"weekly",priority:0.9},
  {

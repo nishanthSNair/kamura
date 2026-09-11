@@ -1,5 +1,7 @@
 'use client';
 import SaveButton from '@/components/kamura/SaveButton';
+import {PeptideContextPreview} from '@/components/peptides/PeptideLearning';
+import {therapyMatches} from '@/lib/peptide-learning';
 import { useEffect, useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
@@ -38,7 +40,7 @@ export default function TherapyExplorer(){
  const [learning,setLearning]=useState<'mechanism'|'guide'|'compare'|'present'|null>(null);
  const therapy=catalogue.find(t=>t.id===selectedId)!;
  const goalRanked=useMemo(()=>goal?catalogue.filter(t=>t.goals.includes(goal)).sort((a,b)=>a.name.localeCompare(b.name)):[],[goal]);
- const filtered=(goal?goalRanked:catalogue).filter(t=>(category==='All'||t.category===category)&&`${t.name} ${t.title} ${t.category}`.toLowerCase().includes(query.toLowerCase()));
+ const filtered=(goal?goalRanked:catalogue).filter(t=>(category==='All'||t.category===category)&&therapyMatches(t.id,query));
  const activeCombination=combinations.find(c=>c.name===selectedCombination);
  const allMappedIds=useMemo(()=>Array.from(new Set((activeCombination?catalogue.filter(t=>activeCombination.ids.includes(t.id)):[therapy]).flatMap(t=>t.regions.flatMap(r=>r.elements)))),[therapy,activeCombination]);
  const anatomyResults=useMemo(()=>atlas&&anatomyQuery.trim()?atlas.concepts.filter(c=>c.name.toLowerCase().includes(anatomyQuery.toLowerCase())).slice(0,25):[],[atlas,anatomyQuery]);
@@ -85,7 +87,7 @@ export default function TherapyExplorer(){
 
      {therapy.uaeAvailable&&<span className={styles.uaeChip}>UAE · {therapy.costEstimate??'available'}</span>}
     </div>
-    <div className={styles.learningActions}><button onClick={()=>setLearning('mechanism')}><Play size={16}/>Explore the mechanism</button><button onClick={()=>setLearning('present')}>Present to a patient ↗</button><button onClick={()=>setLearning('compare')}>Compare therapies <ArrowRight size={15}/></button></div><Evidence therapy={therapy}/>
+    <div className={styles.learningActions}><button onClick={()=>setLearning('mechanism')}><Play size={16}/>Explore the mechanism</button><button onClick={()=>setLearning('present')}>Present to a patient ↗</button><button onClick={()=>setLearning('compare')}>Compare therapies <ArrowRight size={15}/></button></div><PeptideContextPreview key={therapy.id} id={therapy.id}/><Evidence therapy={therapy}/>
     {activeCombination&&<section className={styles.comboSelection}><span className={styles.eyebrow}>{activeCombination.name}</span><div>{activeCombination.ids.map(id=><button key={id} aria-pressed={selectedId===id} onClick={()=>choose(id,true)}>{catalogue.find(t=>t.id===id)?.name}</button>)}</div><p>Shared anatomical context. Combined efficacy is a separate research question.</p></section>}
 
     {/* 1 · What it is */}

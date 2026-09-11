@@ -1,0 +1,1274 @@
+{
+  "mots-c": {
+    "system": "mitochondria",
+    "intro": "MOTS-c is a small signal encoded by mitochondrial DNA. Researchers are studying how it links cellular energy stress to muscle metabolism. That makes it relevant to questions about insulin resistance and exercise, but it does not yet establish an injectable treatment for fatigue or weight loss.",
+    "topics": [
+      {
+        "title": "Insulin resistance / raised glucose",
+        "status": "Animal treatment evidence",
+        "explanation": "MOTS-c improved glucose handling in mouse experiments. Human studies measuring naturally occurring MOTS-c do not show that administering it treats diabetes."
+      },
+      {
+        "title": "Exercise capacity / recovery",
+        "status": "Animal treatment + human physiology",
+        "explanation": "Treated mice showed improved physical performance. Human exercise increased endogenous MOTS-c; the human participants were not demonstrating the benefit of a MOTS-c injection."
+      },
+      {
+        "title": "Fatigue / healthy ageing",
+        "status": "Clinical benefit unestablished",
+        "explanation": "Low energy is not a diagnosis of mitochondrial dysfunction. The cited research does not establish symptom relief, lifespan extension or an expected response time for clients."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Mitochondrial signal",
+        "plain": "Mitochondria produce more than energy: their DNA also encodes small signalling peptides.",
+        "clinical": "MOTS-c is a 16-amino-acid peptide encoded within the mitochondrial 12S rRNA region."
+      },
+      {
+        "title": "Energy sensing",
+        "plain": "A signal changes how the cell responds to its energy supply.",
+        "clinical": "Experimental work links altered folate/purine metabolism to AICAR accumulation and AMPK activation. This is not a proven surface-receptor-to-treatment pathway."
+      },
+      {
+        "title": "Muscle response",
+        "plain": "Muscle cells adjust fuel use and their response to metabolic stress.",
+        "clinical": "Mouse and cell studies implicate skeletal-muscle metabolism and stress-responsive nuclear gene expression."
+      },
+      {
+        "title": "Measured outcome",
+        "plain": "Researchers measured glucose handling and physical performance.",
+        "clinical": "Separate administered-peptide experiments in mice from endogenous peptide measurements after exercise in people. Neither predicts a client’s change in HbA1c or fatigue."
+      }
+    ],
+    "formulation": "The foundational treatment experiments used administered peptide in animals. Human exercise studies measured endogenous MOTS-c. Those are different exposures from a compounded subcutaneous pen.",
+    "question": "Which evidence involves giving native MOTS-c to people, rather than measuring their own peptide or testing an analogue?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25738459/",
+        "title": "The mitochondrial-derived peptide MOTS-c promotes metabolic homeostasis and reduces obesity and insulin resistance."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33473109/",
+        "title": "MOTS-c is an exercise-induced mitochondrial-encoded regulator of age-dependent physical decline and muscle homeostasis."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33394327/",
+        "title": "Relationship between the mitochondria-derived peptide MOTS-c and insulin resistance in obstructive sleep apnea."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "pt-141": {
+    "system": "brain",
+    "intro": "PT-141, also called bremelanotide, acts on melanocortin signalling involved in sexual response. Its clinical evidence is about low sexual desire with associated distress in a defined population—not all causes of low libido or erectile difficulty.",
+    "topics": [
+      {
+        "title": "Low desire with distress / HSDD",
+        "status": "Human randomized trials",
+        "explanation": "Trials in premenopausal women with acquired, generalized hypoactive sexual desire disorder measured improvements in desire and related distress over 24 weeks."
+      },
+      {
+        "title": "Erectile difficulty / male low libido",
+        "status": "Different clinical question",
+        "explanation": "The pivotal HSDD trials were in women. They do not establish equivalent benefit in men, or prove that a vascular, hormonal or relationship-related cause has been addressed."
+      },
+      {
+        "title": "Sexual performance / hormone replacement",
+        "status": "Not the studied indication",
+        "explanation": "The US product label does not indicate bremelanotide for performance enhancement, men or postmenopausal women. It is not testosterone replacement."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Melanocortin signal",
+        "plain": "The peptide interacts with signalling receptors that influence sexual response.",
+        "clinical": "Bremelanotide is a melanocortin receptor agonist. MC1R and MC4R binding occur at therapeutic exposures; the precise mechanism of benefit in HSDD remains unknown."
+      },
+      {
+        "title": "Brain response",
+        "plain": "Sexual desire involves brain circuits as well as physical and relational factors.",
+        "clinical": "MC4R-related pathways are a biological rationale, not a complete explanation of an individual response. Avoid presenting a single “libido switch”."
+      },
+      {
+        "title": "Experience of desire",
+        "plain": "The clinical question is whether desire and its associated distress change.",
+        "clinical": "RECONNECT used FSFI desire and FSDS-DAO item 13 as coprimary outcomes in premenopausal women with HSDD."
+      },
+      {
+        "title": "Clinical outcome",
+        "plain": "Improved questionnaire scores are different from a guaranteed sexual response.",
+        "clinical": "Two 24-week randomized trials supported the defined indication. The label reports no significant treatment difference in the number of satisfying sexual events."
+      }
+    ],
+    "formulation": "The pivotal evidence and US label concern a specified subcutaneous bremelanotide product. A compounded pen or nasal spray is not automatically equivalent.",
+    "question": "Is the concern desire, arousal, pain, erectile function or distress—and does the studied HSDD population match this person?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31599840/",
+        "title": "Bremelanotide for the Treatment of Hypoactive Sexual Desire Disorder: Two Randomized Phase 3 Trials."
+      },
+      {
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f1d0c1b5-2f39-4bad-a6a4-0066e3ad5dcf",
+        "title": "Official prescribing information"
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "bpc-157": {
+    "system": "repair",
+    "intro": "A research peptide studied in tissue injury and gut models. The useful distinction is between repair biology, pain relief and demonstrated healing in people.",
+    "topics": [
+      {
+        "title": "Tendon / ligament / muscle injury",
+        "status": "Predominantly preclinical",
+        "explanation": "Animal injury models show repair-related changes. The review does not establish faster human shoulder healing."
+      },
+      {
+        "title": "Joint pain / gut complaints",
+        "status": "Limited or indirect evidence",
+        "explanation": "Uncontrolled knee observations and gut models cannot establish treatment of a specific injury, IBD or unexplained abdominal symptoms."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Repair signalling",
+        "plain": "Cells coordinate inflammation and blood supply.",
+        "clinical": "Experimental findings involve angiogenesis-related signalling and inflammatory pathways."
+      },
+      {
+        "title": "Tissue remodelling",
+        "plain": "Repair cells reorganise the tissue matrix.",
+        "clinical": "Fibroblast migration and matrix changes are measured mainly in preclinical models."
+      },
+      {
+        "title": "Function versus pain",
+        "plain": "Less pain is not proof that tissue has healed.",
+        "clinical": "The reviewed human evidence is uncontrolled; structural and functional outcomes need separate assessment."
+      }
+    ],
+    "formulation": "Oral, intra-articular and subcutaneous preparations are different exposures. Gut studies do not validate systemic healing from capsules.",
+    "question": "Was the outcome pain relief, imaging, strength or confirmed tissue repair?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40756949/",
+        "title": "Emerging Use of BPC-157 in Orthopaedic Sports Medicine: A Systematic Review."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "tb-500": {
+    "system": "repair",
+    "intro": "TB-500 is discussed in tissue-repair research, but the name is used inconsistently. The exact peptide sequence matters when matching a product to a study.",
+    "topics": [
+      {
+        "title": "Soft-tissue injury",
+        "status": "Preclinical context",
+        "explanation": "Repair studies examine cell migration and injury outcomes; human injury recovery is not established by the cited animal work."
+      },
+      {
+        "title": "Wound / corneal repair",
+        "status": "Product distinction",
+        "explanation": "Findings for full-length thymosin beta-4 cannot simply be assigned to a product marketed as its TB-500 fragment."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Peptide identity",
+        "plain": "Check which molecule was actually studied.",
+        "clinical": "Full-length thymosin beta-4 and marketed fragments require separate evidence."
+      },
+      {
+        "title": "Cell movement",
+        "plain": "Repair depends on cells reaching the damaged area.",
+        "clinical": "Actin-associated biology provides a rationale for migration and remodelling research."
+      },
+      {
+        "title": "Injury outcome",
+        "plain": "A laboratory effect needs a human outcome study.",
+        "clinical": "Animal biomechanics and histology cannot supply a human recovery timeline."
+      }
+    ],
+    "formulation": "Verify the sequence, formulation and route. TB-500 and thymosin beta-4 are not interchangeable labels.",
+    "question": "Does the cited paper test the same molecule as the proposed product?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42542926/",
+        "title": "Effects of BPC-157 and TB-500 on Achilles tendon healing in rats: A histopathological and biomechanical study."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "ghk-cu": {
+    "system": "skin",
+    "intro": "GHK-Cu is a copper-binding peptide studied in skin remodelling. Topical cosmetic research and systemic injection claims need to be kept separate.",
+    "topics": [
+      {
+        "title": "Skin texture / fine lines",
+        "status": "Topical research",
+        "explanation": "Skin and cosmetic research examines matrix-related effects; outcomes depend on formulation and study quality."
+      },
+      {
+        "title": "Hair growth / systemic recovery",
+        "status": "Evidence gap",
+        "explanation": "Skin findings do not establish injectable whole-body rejuvenation or a predictable hair-growth response."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Copper binding",
+        "plain": "GHK binds a copper ion.",
+        "clinical": "The GHK-copper complex is studied in tissue signalling and matrix biology."
+      },
+      {
+        "title": "Skin matrix",
+        "plain": "Skin structure depends on collagen and other matrix proteins.",
+        "clinical": "Cell and skin-model findings explore remodelling and inflammatory responses."
+      },
+      {
+        "title": "Visible change",
+        "plain": "A skin measurement is not a whole-body ageing outcome.",
+        "clinical": "Clinical interpretation requires the exact topical preparation and measured endpoint."
+      }
+    ],
+    "formulation": "Topical serum evidence does not validate injectable GHK-Cu.",
+    "question": "Was the outcome measured in a person using the same topical formulation?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42619529/",
+        "title": "The Regenerative Potential of GHK-Cu in Aesthetic Medicine."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42573538/",
+        "title": "Augmented Skin Beneficial Effects of Thermus Thermophilus and Bacillus Subtilis Mixed-Culture Ferment Extract by Tripeptide GHK-Cu."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "kpv": {
+    "system": "gut",
+    "intro": "KPV is a three-amino-acid peptide studied for inflammatory signalling in gut cells and animal colitis models.",
+    "topics": [
+      {
+        "title": "Bowel inflammation",
+        "status": "Cell and animal research",
+        "explanation": "KPV reduced inflammatory signalling and colitis measures in experimental models."
+      },
+      {
+        "title": "IBD / abdominal symptoms",
+        "status": "Human benefit unestablished",
+        "explanation": "These findings do not establish symptom control or mucosal healing in people with Crohn’s disease or ulcerative colitis."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Cell uptake",
+        "plain": "A transporter can carry the small peptide into cells.",
+        "clinical": "PepT1-mediated uptake was studied in epithelial and immune-cell systems."
+      },
+      {
+        "title": "Inflammatory signal",
+        "plain": "Cells produce fewer inflammatory signals in the experiment.",
+        "clinical": "NF-κB and MAP kinase signalling were inhibited in studied models."
+      },
+      {
+        "title": "Gut outcome",
+        "plain": "Animal colitis measurements improved.",
+        "clinical": "Histology and inflammatory markers in mice are not human remission endpoints."
+      }
+    ],
+    "formulation": "Study delivery systems include experimental oral preparations and nanoparticles; routine capsules or injections need their own evidence.",
+    "question": "Is there a human trial measuring symptoms and mucosal healing for this exact preparation?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18061177/",
+        "title": "PepT1-mediated tripeptide KPV uptake reduces intestinal inflammation."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28143741/",
+        "title": "Orally Targeted Delivery of Tripeptide KPV via Hyaluronic Acid-Functionalized Nanoparticles Efficiently Alleviates Ulcerative Colitis."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "ll-37": {
+    "system": "repair",
+    "intro": "LL-37 is part of innate immune defence. Its antimicrobial biology and wound studies do not make it a general treatment for recurrent infections.",
+    "topics": [
+      {
+        "title": "Hard-to-heal wounds",
+        "status": "Human topical research",
+        "explanation": "Topical LL-37 has been studied with compression therapy in venous leg ulcers; interpretation must use that setting and trial results."
+      },
+      {
+        "title": "Recurrent infections / biofilms",
+        "status": "Experimental rationale",
+        "explanation": "Laboratory antimicrobial effects do not establish systemic treatment of urinary, respiratory or gut infections."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Innate defence",
+        "plain": "The body uses antimicrobial peptides at barriers.",
+        "clinical": "LL-37 is a human cathelicidin-derived peptide."
+      },
+      {
+        "title": "Membranes and immune signalling",
+        "plain": "It can affect microbes and host-cell responses.",
+        "clinical": "Antimicrobial, inflammatory and repair effects depend on the experimental setting."
+      },
+      {
+        "title": "Wound measurement",
+        "plain": "Wound closure is assessed over time.",
+        "clinical": "A topical ulcer trial is a different exposure from a systemic injection."
+      }
+    ],
+    "formulation": "Topical wound formulations and systemic LL-37 are not equivalent.",
+    "question": "What did the whole trial show, and was the person’s wound type represented?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34687253/",
+        "title": "Original research article"
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "cjc-ipamorelin": {
+    "system": "hormone",
+    "intro": "This combination targets two routes that stimulate growth hormone release. Hormone changes do not by themselves establish better sleep, recovery or fat loss.",
+    "topics": [
+      {
+        "title": "GH / IGF-1 response",
+        "status": "Component physiology",
+        "explanation": "CJC-1295 studies show hormone changes. They do not establish the benefit of every CJC–ipamorelin blend."
+      },
+      {
+        "title": "Sleep / recovery / body composition",
+        "status": "Combination outcomes unestablished",
+        "explanation": "Clinical outcomes require trials of the actual combination, rather than adding together proposed effects."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Two inputs",
+        "plain": "Different signals converge on the pituitary.",
+        "clinical": "CJC-1295 targets GHRH signalling; ipamorelin is a GH secretagogue."
+      },
+      {
+        "title": "GH release",
+        "plain": "The pituitary releases growth hormone.",
+        "clinical": "The cited CJC study used a long-acting albumin-binding analogue."
+      },
+      {
+        "title": "Downstream IGF-1",
+        "plain": "GH influences IGF-1 production.",
+        "clinical": "A rise in IGF-1 measures axis activity, not proof of improved health or recovery."
+      }
+    ],
+    "formulation": "CJC with DAC, products called “without DAC”, and compounded combinations require separate matching.",
+    "question": "Is the evidence for the exact blend or just one component?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17018654/",
+        "title": "Pulsatile secretion of growth hormone (GH) persists during continuous stimulation by CJC-1295, a long-acting GH-releasing hormone analog."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9849822/",
+        "title": "Ipamorelin, the first selective growth hormone secretagogue."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "ipamorelin": {
+    "system": "hormone",
+    "intro": "Ipamorelin stimulates growth-hormone release. Its early pharmacology should not be mistaken for proof of adult longevity benefits.",
+    "topics": [
+      {
+        "title": "Growth-hormone release",
+        "status": "Preclinical pharmacology",
+        "explanation": "The foundational study examined GH secretion in cells, rats and swine."
+      },
+      {
+        "title": "Fatigue / sleep / muscle gain",
+        "status": "Clinical benefit unestablished",
+        "explanation": "Those experiments do not establish symptom relief or body-composition benefit in adults."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Receptor signal",
+        "plain": "A secretagogue prompts hormone release.",
+        "clinical": "Ipamorelin acts through a GHRP/ghrelin-receptor pathway."
+      },
+      {
+        "title": "Pituitary response",
+        "plain": "Growth hormone rises in experimental systems.",
+        "clinical": "Selectivity observations depend on species and exposure."
+      },
+      {
+        "title": "Clinical question",
+        "plain": "A hormone response is an intermediate result.",
+        "clinical": "Trials must measure the patient outcome rather than GH alone."
+      }
+    ],
+    "formulation": "The foundational animal pharmacology does not validate a compounded human regimen.",
+    "question": "What patient outcome has been tested beyond a GH measurement?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9849822/",
+        "title": "Ipamorelin, the first selective growth hormone secretagogue."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "sermorelin": {
+    "system": "hormone",
+    "intro": "Sermorelin is a shortened growth-hormone-releasing hormone analogue. Its historical paediatric evidence is different from adult anti-ageing claims.",
+    "topics": [
+      {
+        "title": "GH deficiency assessment / growth",
+        "status": "Clinical paediatric literature",
+        "explanation": "The cited literature addresses testing and treatment in children with growth disorders."
+      },
+      {
+        "title": "Adult fatigue / sleep / ageing",
+        "status": "Different population",
+        "explanation": "Childhood growth results do not establish adult sleep, fat-loss or longevity benefits."
+      }
+    ],
+    "steps": [
+      {
+        "title": "GHRH signal",
+        "plain": "The molecule signals the pituitary.",
+        "clinical": "Sermorelin is the biologically active GHRH 1–29 analogue."
+      },
+      {
+        "title": "GH response",
+        "plain": "A functioning pituitary can release GH.",
+        "clinical": "Hormone-response testing depends on the diagnostic context."
+      },
+      {
+        "title": "Growth outcome",
+        "plain": "Clinical studies measured childhood growth.",
+        "clinical": "Height velocity is not an adult anti-ageing outcome."
+      }
+    ],
+    "formulation": "Match the preparation and diagnostic or therapeutic context; historical use is not proof of every current claim.",
+    "question": "Is the evidence from children with deficiency or adults with this specific concern?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18031173/",
+        "title": "Sermorelin: a review of its use in the diagnosis and treatment of children with idiopathic growth hormone deficiency."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "tesamorelin": {
+    "system": "hormone",
+    "intro": "Tesamorelin stimulates the GH axis and has human evidence for abdominal visceral fat in adults with HIV-associated fat accumulation.",
+    "topics": [
+      {
+        "title": "Visceral fat in HIV",
+        "status": "Human randomized evidence",
+        "explanation": "A 26-week trial measured visceral fat by CT: −15.2% with tesamorelin versus +5.0% with placebo."
+      },
+      {
+        "title": "General weight loss",
+        "status": "Different outcome and population",
+        "explanation": "Visceral fat area is not total weight loss; the trial does not predict benefit in otherwise healthy adults."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Pituitary signal",
+        "plain": "Tesamorelin mimics a GH-releasing signal.",
+        "clinical": "It is a GHRH analogue."
+      },
+      {
+        "title": "Hormone axis",
+        "plain": "GH activity and IGF-1 can increase.",
+        "clinical": "IGF-1 is an axis-response marker; it is not a direct measurement of visceral fat."
+      },
+      {
+        "title": "Visceral fat",
+        "plain": "The trial measured fat around abdominal organs.",
+        "clinical": "CT-derived visceral adipose tissue was the primary endpoint."
+      }
+    ],
+    "formulation": "Use the studied subcutaneous product context, not a general “fat-loss peptide” category.",
+    "question": "Was the target visceral fat, subcutaneous fat or total body weight?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18057338/",
+        "title": "Metabolic effects of a growth hormone-releasing factor in patients with HIV."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "aod-9604": {
+    "system": "metabolic",
+    "intro": "AOD-9604 is a modified growth-hormone fragment investigated for metabolic effects. Biological rationale is not established weight-loss effectiveness.",
+    "topics": [
+      {
+        "title": "Obesity / fat loss",
+        "status": "Investigational development",
+        "explanation": "The cited development record describes clinical investigation rather than a proven treatment effect."
+      },
+      {
+        "title": "Joint repair",
+        "status": "Animal research",
+        "explanation": "Rabbit osteoarthritis work cannot establish human joint recovery."
+      }
+    ],
+    "steps": [
+      {
+        "title": "GH fragment",
+        "plain": "Only a modified part of the GH sequence is used.",
+        "clinical": "A fragment’s properties differ from full-length growth hormone."
+      },
+      {
+        "title": "Metabolic hypothesis",
+        "plain": "Researchers investigated fat-metabolism effects.",
+        "clinical": "Mechanistic claims require direct clinical confirmation."
+      },
+      {
+        "title": "Outcome check",
+        "plain": "Measure a real change in people.",
+        "clinical": "An early development report provides no reliable expected weight-loss effect."
+      }
+    ],
+    "formulation": "Oral development work and intra-articular animal experiments cannot be generalized to a subcutaneous pen.",
+    "question": "Where is the controlled human outcome for the proposed route?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15134286/",
+        "title": "AOD-9604 Metabolic."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26275694/",
+        "title": "Effect of Intra-articular Injection of AOD9604 with or without Hyaluronic Acid in Rabbit Osteoarthritis Model."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "igf-lr3": {
+    "system": "hormone",
+    "intro": "IGF-LR3 is a modified IGF-1 analogue used in experimental research. It is distinct from licensed IGF-1 medicines.",
+    "topics": [
+      {
+        "title": "Muscle gain / recovery",
+        "status": "Clinical evidence gap",
+        "explanation": "Experimental growth signalling is not evidence of safe or effective physique enhancement."
+      },
+      {
+        "title": "Neurological disease",
+        "status": "Animal research",
+        "explanation": "A mouse study examined brain pathology but did not preserve cognition in that model."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Modified growth factor",
+        "plain": "The analogue changes IGF-1 interactions.",
+        "clinical": "LR3 has altered binding properties compared with native IGF-1."
+      },
+      {
+        "title": "Growth signalling",
+        "plain": "IGF pathways influence cell growth and metabolism.",
+        "clinical": "Receptor activity does not identify a beneficial clinical exposure."
+      },
+      {
+        "title": "Clinical endpoint",
+        "plain": "Growth signals can have many consequences.",
+        "clinical": "Human outcome and safety evidence for this analogue must be demonstrated separately."
+      }
+    ],
+    "formulation": "Do not substitute evidence for mecasermin or native IGF-1 for LR3.",
+    "question": "Does the study concern this exact IGF analogue?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39610283/",
+        "title": "Intranasal long R3 insulin-like growth factor-1 treatment promotes amyloid plaque remodeling in cerebral cortex but fails to preserve cognitive function in male 5XFAD mice."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42395176/",
+        "title": "The emerging landscape of performance-enhancing peptides modulating GH-IGF1 axis: bridging the gap between clinical evidence and patient self-administration."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "kisspeptin-10": {
+    "system": "hormone",
+    "intro": "Kisspeptin-10 is a reproductive signalling peptide. Researchers study how it stimulates the hormone axis, not just a nonspecific “libido boost”.",
+    "topics": [
+      {
+        "title": "Reproductive hormone signalling",
+        "status": "Small human physiology studies",
+        "explanation": "Subcutaneous infusion studies in healthy men measured LH, FSH and testosterone responses."
+      },
+      {
+        "title": "Fertility / low libido",
+        "status": "Outcome-specific evidence needed",
+        "explanation": "A hormone rise does not establish conception, symptom relief or sustained benefit."
+      }
+    ],
+    "steps": [
+      {
+        "title": "KISS1R",
+        "plain": "Kisspeptin activates an upstream reproductive signal.",
+        "clinical": "KISS1R signalling can promote GnRH release."
+      },
+      {
+        "title": "Pituitary hormones",
+        "plain": "The pituitary releases reproductive hormones.",
+        "clinical": "LH and FSH changes are intermediate endpoints."
+      },
+      {
+        "title": "Gonadal response",
+        "plain": "The gonads respond to those signals.",
+        "clinical": "Responses depend on diagnosis, timing and exposure; clinical outcomes need separate study."
+      }
+    ],
+    "formulation": "Kisspeptin-10 and kisspeptin-54 are different molecules; infusion findings do not automatically validate intermittent pens.",
+    "question": "Was a hormone response or an actual fertility or sexual-health outcome measured?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42549827/",
+        "title": "Chronic subcutaneous kisspeptin-10 stimulates gonadotropin secretion for 12 days in healthy men."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "gonadorelin": {
+    "system": "hormone",
+    "intro": "Gonadorelin is GnRH. The timing of its delivery is central to its effect on the reproductive axis.",
+    "topics": [
+      {
+        "title": "Hypogonadotropic hypogonadism",
+        "status": "Specific clinical research",
+        "explanation": "Pulsatile pump studies in affected men examined hormone and sperm-production outcomes."
+      },
+      {
+        "title": "Preserving fertility during TRT",
+        "status": "Not established by those studies",
+        "explanation": "Those results do not establish that intermittent adjunct injections preserve fertility during testosterone therapy."
+      }
+    ],
+    "steps": [
+      {
+        "title": "GnRH pulses",
+        "plain": "The signal arrives in repeated pulses.",
+        "clinical": "Physiological pulse delivery differs from continuous exposure."
+      },
+      {
+        "title": "LH and FSH",
+        "plain": "The pituitary passes the signal onward.",
+        "clinical": "The response requires suitable pituitary function."
+      },
+      {
+        "title": "Gonadal function",
+        "plain": "Studies measure downstream reproductive function.",
+        "clinical": "Spermatogenesis in a diagnosed population is not a universal fertility effect."
+      }
+    ],
+    "formulation": "Pulsatile pump delivery is not equivalent to occasional injections.",
+    "question": "Does the diagnosis and delivery pattern match the clinical study?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30569789/",
+        "title": "The Pulsatile Gonadorelin Pump Induces Earlier Spermatogenesis Than Cyclical Gonadotropin Therapy in Congenital Hypogonadotropic Hypogonadism Men."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26417369/",
+        "title": "Changes in Bone Mineral Density and Metabolic Parameters after Pulsatile Gonadorelin Treatment in Young Men with Hypogonadotropic Hypogonadism."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "thymosin-alpha-1": {
+    "system": "immune",
+    "intro": "Thymosin alpha-1 has been studied as an immune-modulating adjunct in particular illnesses. “Boosting immunity” is too broad to describe an outcome.",
+    "topics": [
+      {
+        "title": "Specific infections / acute illness",
+        "status": "Disease-specific clinical literature",
+        "explanation": "Trials and reviews concern defined patient groups and background treatments."
+      },
+      {
+        "title": "Post-viral fatigue / general immunity",
+        "status": "Different clinical question",
+        "explanation": "Results in a particular illness do not establish routine prevention or improvement in unexplained fatigue."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Immune signalling",
+        "plain": "The peptide influences immune-cell activity.",
+        "clinical": "Thymosin alpha-1 is studied in adaptive and innate immune regulation."
+      },
+      {
+        "title": "Context matters",
+        "plain": "A helpful immune response depends on the illness.",
+        "clinical": "Modulating a response is different from increasing every immune measure."
+      },
+      {
+        "title": "Disease outcome",
+        "plain": "Clinical studies need a defined endpoint.",
+        "clinical": "Interpret adjunctive effects with the population and background treatment."
+      }
+    ],
+    "formulation": "Indication, concomitant care and study design determine applicability.",
+    "question": "Which diagnosed condition and clinical endpoint support its use here?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38308608/",
+        "title": "Comprehensive Review of the Safety and Efficacy of Thymosin Alpha 1 in Human Clinical Trials."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "epithalon": {
+    "system": "cell",
+    "intro": "Epithalon is an experimental tetrapeptide studied in ageing-related cell biology. A telomere change in cells is not evidence of longer human life.",
+    "topics": [
+      {
+        "title": "Telomeres / ageing",
+        "status": "Cell research",
+        "explanation": "Cell-line work examines telomerase and telomere-length changes."
+      },
+      {
+        "title": "Sleep / longevity",
+        "status": "Clinical outcome unestablished",
+        "explanation": "The referenced research does not supply a reliable sleep benefit or lifespan gain for clients."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Peptide exposure",
+        "plain": "Researchers expose cells or model organisms.",
+        "clinical": "Epithalon is distinct from the pineal extract epithalamin."
+      },
+      {
+        "title": "Cell maintenance",
+        "plain": "Studies examine telomere-related biology.",
+        "clinical": "Telomerase and alternative lengthening pathways are laboratory endpoints."
+      },
+      {
+        "title": "Human meaning",
+        "plain": "A cellular marker is not a clinical outcome.",
+        "clinical": "Human function, disease and lifespan require direct assessment."
+      }
+    ],
+    "formulation": "Do not transfer extract findings or cultured-cell exposures to an injectable course.",
+    "question": "Is the result a cell marker or a meaningful human health outcome?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40908429/",
+        "title": "Epitalon increases telomere length in human cell lines through telomerase upregulation or ALT activity."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40141333/",
+        "title": "Overview of Epitalon-Highly Bioactive Pineal Tetrapeptide with Promising Properties."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "nad": {
+    "system": "mitochondria",
+    "intro": "NAD+ is a coenzyme, not a peptide. It participates in energy metabolism and enzyme activity, but that does not establish benefits from an injected product.",
+    "topics": [
+      {
+        "title": "Energy / fatigue",
+        "status": "Route-specific evidence needed",
+        "explanation": "NAD biology does not prove relief of fatigue from a subcutaneous pen or infusion."
+      },
+      {
+        "title": "Healthy ageing",
+        "status": "Clinical benefit uncertain",
+        "explanation": "Studies of precursors such as NR or NMN are not studies of the same NAD+ product."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Cellular coenzyme",
+        "plain": "NAD helps cells transfer electrons.",
+        "clinical": "NAD+/NADH participates in redox reactions."
+      },
+      {
+        "title": "Enzyme substrate",
+        "plain": "Several enzymes use NAD.",
+        "clinical": "Sirtuins and PARPs consume NAD in cellular processes."
+      },
+      {
+        "title": "Delivery question",
+        "plain": "An administered product must reach relevant biology.",
+        "clinical": "Route, metabolism and measured outcomes determine clinical interpretation."
+      }
+    ],
+    "formulation": "Separate NAD+, NR and NMN, and separate oral, intravenous and subcutaneous exposure.",
+    "question": "Was the exact molecule and route tested for this symptom?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/42489969/",
+        "title": "NAD⁺ biology and supplementation: From mechanisms to clinical perspectives."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41704678/",
+        "title": "Intravenous infusion of nicotinamide adenine dinucleotide (NAD&lt;sup&gt;+&lt;/sup&gt;) versus nicotinamide riboside (NR): a retrospective tolerability pilot study in a real-world setting."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "ss-31": {
+    "system": "mitochondria",
+    "intro": "SS-31, or elamipretide, targets mitochondrial membrane biology. It now has a specific US accelerated approval for Barth syndrome, which is separate from general longevity use.",
+    "topics": [
+      {
+        "title": "Barth syndrome / muscle weakness",
+        "status": "Specific US accelerated approval",
+        "explanation": "Forzinity is approved to improve muscle strength in patients with Barth syndrome weighing at least 30 kg; confirmatory evidence remains required."
+      },
+      {
+        "title": "General fatigue / anti-ageing",
+        "status": "Not the approved population",
+        "explanation": "That rare-disease indication does not establish benefit for nonspecific low energy or healthy ageing."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Inner membrane",
+        "plain": "The molecule interacts with a mitochondrial membrane lipid.",
+        "clinical": "Elamipretide interacts with cardiolipin."
+      },
+      {
+        "title": "Mitochondrial function",
+        "plain": "Cardiolipin helps organize energy-producing machinery.",
+        "clinical": "Barth syndrome has abnormal cardiolipin biology."
+      },
+      {
+        "title": "Muscle outcome",
+        "plain": "Clinical interpretation depends on the disease.",
+        "clinical": "The small crossover trial missed its primary endpoints; later evidence supported a specific accelerated approval."
+      }
+    ],
+    "formulation": "Evidence and approval for Forzinity do not establish equivalence of compounded “SS-31” pens.",
+    "question": "Does the person have the studied disease and is this the same product?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33077895/",
+        "title": "A phase 2/3 randomized clinical trial followed by an open-label extension to evaluate the effectiveness of elamipretide in Barth syndrome, a genetic disorder of mitochondrial cardiolipin metabolism."
+      },
+      {
+        "url": "https://www.fda.gov/news-events/press-announcements/fda-grants-accelerated-approval-first-treatment-barth-syndrome",
+        "title": "FDA approval announcement"
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "semax": {
+    "system": "brain",
+    "intro": "Semax is studied in neurotrophic signalling and neurological research. Rat-brain measurements cannot establish a reliable treatment for everyday brain fog.",
+    "topics": [
+      {
+        "title": "Memory / brain fog",
+        "status": "Preclinical mechanism",
+        "explanation": "Rat studies measured BDNF-related changes and experimental behaviour."
+      },
+      {
+        "title": "Neurological recovery",
+        "status": "Context-specific evidence needed",
+        "explanation": "A disease-specific study would need to match diagnosis, formulation and functional endpoint."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Neuropeptide analogue",
+        "plain": "Semax is derived from an ACTH fragment.",
+        "clinical": "Its proposed neurological activity is studied separately from ACTH’s endocrine effects."
+      },
+      {
+        "title": "Neurotrophic signalling",
+        "plain": "Signals influence neuronal adaptation.",
+        "clinical": "Rat hippocampal work measured BDNF and TrkB expression."
+      },
+      {
+        "title": "Cognition",
+        "plain": "A marker is not a memory score in a patient.",
+        "clinical": "Human cognition and daily functioning need direct study."
+      }
+    ],
+    "formulation": "Intranasal rat experiments do not establish the clinical response to a commercial nasal spray.",
+    "question": "Was improved human cognition measured, or only a signalling marker?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16996037/",
+        "title": "Semax, an analog of ACTH(4-10) with cognitive effects, regulates BDNF and trkB expression in the rat hippocampus."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19662538/",
+        "title": "Comparison of the temporary dynamics of NGF and BDNF gene expression in rat hippocampus, frontal cortex, and retina under Semax action."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "selank": {
+    "system": "brain",
+    "intro": "Selank is a synthetic peptide studied in anxiety-related signalling. The mechanistic explanation is more developed than reliable estimates of clinical benefit.",
+    "topics": [
+      {
+        "title": "Anxiety / tension",
+        "status": "Mechanistic and limited clinical context",
+        "explanation": "GABA-related laboratory findings provide a rationale, not a predictable response for an anxiety disorder."
+      },
+      {
+        "title": "Focus / sleep",
+        "status": "Clinical benefit uncertain",
+        "explanation": "A calming mechanism alone does not establish improved focus or sleep without adverse effects."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Peptide signal",
+        "plain": "Researchers examine effects on brain signalling.",
+        "clinical": "Selank is a synthetic heptapeptide."
+      },
+      {
+        "title": "GABA modulation",
+        "plain": "GABA is involved in inhibitory signalling.",
+        "clinical": "Receptor-binding work proposes concentration-dependent allosteric modulation."
+      },
+      {
+        "title": "Patient outcome",
+        "plain": "Anxiety requires a clinical outcome measure.",
+        "clinical": "Laboratory receptor effects do not supply a response rate or comparative effectiveness."
+      }
+    ],
+    "formulation": "Match the intranasal formulation and actual study population.",
+    "question": "What controlled human data support this outcome?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30255741/",
+        "title": "Peptide-based Anxiolytics: The Molecular Aspects of Heptapeptide Selank Biological Activity."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "dsip": {
+    "system": "brain",
+    "intro": "DSIP was investigated for sleep effects in small older studies. Its name does not establish reliable sleep induction.",
+    "topics": [
+      {
+        "title": "Chronic insomnia",
+        "status": "Small older human studies",
+        "explanation": "One placebo-controlled study involved 14 people and short follow-up."
+      },
+      {
+        "title": "Circadian disruption",
+        "status": "Very limited observations",
+        "explanation": "A case report cannot establish treatment effectiveness for shift work or delayed sleep timing."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Experimental peptide",
+        "plain": "DSIP was investigated as a sleep-related signal.",
+        "clinical": "A definitive therapeutic receptor pathway is not established."
+      },
+      {
+        "title": "Sleep recording",
+        "plain": "Researchers monitored sleep and waking behaviour.",
+        "clinical": "Studies used polysomnography and daytime assessments."
+      },
+      {
+        "title": "Evidence limits",
+        "plain": "Study size and follow-up matter.",
+        "clinical": "Modern replication and formulation-specific data are needed."
+      }
+    ],
+    "formulation": "Historical study preparations and routes need to be matched before applying findings to a pen.",
+    "question": "How large, recent and reproducible is the insomnia evidence?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/3622582/",
+        "title": "Effects of delta-sleep-inducing peptide on 24-hour sleep-wake behaviour in severe chronic insomnia."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/3582201/",
+        "title": "[The use of DSIP (delta sleep-inducing peptide) in the correction of phase-shifted insomnia]."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "foxo4-dri": {
+    "system": "cell",
+    "intro": "FOXO4-DRI is a research senolytic peptide. It is intended to alter survival signalling in senescent cells, with no established client anti-ageing outcome.",
+    "topics": [
+      {
+        "title": "Cellular senescence",
+        "status": "Experimental research",
+        "explanation": "Studies investigate FOXO4–p53 interactions and senescent-cell responses."
+      },
+      {
+        "title": "Longevity / rejuvenation",
+        "status": "Human benefit unestablished",
+        "explanation": "A laboratory senolytic effect does not demonstrate safe rejuvenation in people."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Protein interaction",
+        "plain": "Two proteins help regulate cell survival.",
+        "clinical": "FOXO4 and p53 interactions are a research target."
+      },
+      {
+        "title": "Disrupted binding",
+        "plain": "The experimental peptide changes that interaction.",
+        "clinical": "The D-retro-inverso design is intended to interfere with the protein complex."
+      },
+      {
+        "title": "Cell fate",
+        "plain": "Affected cells may undergo cell death.",
+        "clinical": "Selectivity, systemic safety and clinical benefits require separate evidence."
+      }
+    ],
+    "formulation": "Research peptide exposure does not establish a therapeutic human regimen.",
+    "question": "Is there a controlled human outcome study for this agent?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40593617/",
+        "title": "The disordered p53 transactivation domain is the target of FOXO4 and the senolytic compound FOXO4-DRI."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41625068/",
+        "title": "FOXO4-DRI regulates endothelial cell senescence via the P53 signaling pathway."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "vip": {
+    "system": "gut",
+    "intro": "VIP is a natural signalling peptide in the gut, nervous system and blood vessels. Its many physiological roles do not establish nasal treatment for every associated symptom.",
+    "topics": [
+      {
+        "title": "Gut / vascular signalling",
+        "status": "Physiology research",
+        "explanation": "Human tissue and animal work examine receptor activity and smooth-muscle responses."
+      },
+      {
+        "title": "Long COVID / fatigue / CIRS",
+        "status": "Clinical outcome not established here",
+        "explanation": "The cited physiology studies do not establish benefit from a nasal VIP preparation for these conditions."
+      }
+    ],
+    "steps": [
+      {
+        "title": "VPAC receptors",
+        "plain": "VIP binds receptors on responsive cells.",
+        "clinical": "VPAC signalling varies across tissues."
+      },
+      {
+        "title": "Tissue response",
+        "plain": "Blood vessels and gut muscle can respond.",
+        "clinical": "Smooth-muscle relaxation is one studied effect."
+      },
+      {
+        "title": "Clinical translation",
+        "plain": "A symptom can have many causes.",
+        "clinical": "Tissue physiology must not be presented as proof of a nasal therapy outcome."
+      }
+    ],
+    "formulation": "Endogenous VIP, tissue experiments and nasal products are different evidence contexts.",
+    "question": "What controlled trial tests the exact nasal product for this diagnosis?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33849096/",
+        "title": "Expression and function of vasoactive intestinal peptide receptors in human lower esophageal sphincter."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39550744/",
+        "title": "Vasoactive Intestinal Peptide (VIP) and its Receptors in Adipose Tissue: Implications for Cold Stress Adaptation."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "dihexa": {
+    "system": "brain",
+    "intro": "Dihexa is an experimental compound studied in neuronal signalling and animal cognition. It does not have an established human memory benefit.",
+    "topics": [
+      {
+        "title": "Memory impairment",
+        "status": "Animal research",
+        "explanation": "Mouse work examined learning behaviour and inflammatory signalling."
+      },
+      {
+        "title": "Dementia / brain fog",
+        "status": "Human efficacy unestablished",
+        "explanation": "Animal findings do not establish treatment of Alzheimer’s disease or everyday cognitive symptoms."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Growth-factor pathways",
+        "plain": "Researchers study signals affecting neurons.",
+        "clinical": "Dihexa has been investigated in growth-factor-related signalling."
+      },
+      {
+        "title": "Cell and synapse response",
+        "plain": "Experiments examine neuronal adaptation.",
+        "clinical": "Mouse studies assessed PI3K/AKT-related signalling and synaptic markers."
+      },
+      {
+        "title": "Behavioural endpoint",
+        "plain": "Animal tasks test specific behaviours.",
+        "clinical": "A maze task is not a human dementia or cognition outcome."
+      }
+    ],
+    "formulation": "Oral animal experiments cannot define the efficacy of a human capsule.",
+    "question": "Has a controlled human study measured meaningful cognitive function?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34827486/",
+        "title": "AngIV-Analog Dihexa Rescues Cognitive Impairment and Recovers Memory in the APP/PS1 Mouse via the PI3K/AKT Signaling Pathway."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "acetyl-hexapeptide-8": {
+    "system": "skin",
+    "intro": "Acetyl hexapeptide-8 is a cosmetic peptide studied for expression-line appearance. Topical delivery limits what can be inferred from its laboratory mechanism.",
+    "topics": [
+      {
+        "title": "Expression lines",
+        "status": "Topical cosmetic context",
+        "explanation": "Cosmetic studies assess appearance; magnitude and durability depend on formulation."
+      },
+      {
+        "title": "Botulinum toxin replacement",
+        "status": "Not equivalent",
+        "explanation": "A proposed SNARE-related mechanism does not make a topical serum equivalent to injected botulinum toxin."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Topical application",
+        "plain": "The peptide must cross relevant skin barriers.",
+        "clinical": "Penetration depends on the vehicle and delivery system."
+      },
+      {
+        "title": "Proposed signalling effect",
+        "plain": "Laboratory work explores release machinery.",
+        "clinical": "SNARE-related interference is a proposed basis for activity."
+      },
+      {
+        "title": "Visible endpoint",
+        "plain": "The outcome is appearance of lines.",
+        "clinical": "Compare measured cosmetic outcomes rather than mechanism alone."
+      }
+    ],
+    "formulation": "Assess the exact topical product; do not equate it to an injectable neuromodulator.",
+    "question": "How was wrinkle change measured and how long did it last?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40196949/",
+        "title": "Acetyl Hexapeptide-8 as a Topical Alternative to Botulinum Toxin: A Review of the Literature."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40673537/",
+        "title": "Safety Assessment of Acetyl Hexapeptide-8 Amide as Used in Cosmetics."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "ru58841": {
+    "system": "skin",
+    "intro": "RU58841 is an experimental non-steroidal antiandrogen, not a peptide. Its hair-growth evidence includes animal and graft models.",
+    "topics": [
+      {
+        "title": "Androgen-related hair loss",
+        "status": "Preclinical studies",
+        "explanation": "Macaque and human-scalp-graft studies examined hair growth."
+      },
+      {
+        "title": "Human scalp treatment",
+        "status": "Clinical evidence gap",
+        "explanation": "Human tissue maintained on mice is not a clinical trial in people applying a product."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Androgen receptor",
+        "plain": "The compound competes with androgen signalling.",
+        "clinical": "RU58841 antagonizes androgen-receptor activation in experimental systems."
+      },
+      {
+        "title": "Follicle biology",
+        "plain": "Androgens influence susceptible hair follicles.",
+        "clinical": "The response depends on tissue and hormone context."
+      },
+      {
+        "title": "Hair endpoint",
+        "plain": "Researchers count and measure hairs.",
+        "clinical": "Preclinical growth does not establish long-term human benefit or safety."
+      }
+    ],
+    "formulation": "A topical experimental solution is not a validated commercial treatment.",
+    "question": "Was the study in living patients or transplanted scalp tissue?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9798729/",
+        "title": "Evaluation of RU58841 as an anti-androgen in prostate PC3 cells and a topical anti-alopecia agent in the bald scalp of stumptailed macaques."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9415227/",
+        "title": "A controlled study of the effects of RU58841, a non-steroidal antiandrogen, on human hair production by balding scalp grafts maintained on testosterone-conditioned nude mice."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  },
+  "trt": {
+    "system": "hormone",
+    "intro": "Testosterone replacement is a hormone treatment, not a peptide. It is considered in a diagnostic context of symptoms and consistently low testosterone.",
+    "topics": [
+      {
+        "title": "Symptoms with confirmed deficiency",
+        "status": "Clinical guideline context",
+        "explanation": "Interpret sexual symptoms and other concerns together with repeat hormone assessment and diagnosis."
+      },
+      {
+        "title": "Fatigue / general ageing alone",
+        "status": "Insufficient indication by itself",
+        "explanation": "Fatigue alone does not establish testosterone deficiency; general wellness is not the same study population."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Replacement hormone",
+        "plain": "External testosterone enters the hormone system.",
+        "clinical": "Formulation influences exposure and monitoring."
+      },
+      {
+        "title": "Androgen receptor",
+        "plain": "Multiple tissues respond to testosterone.",
+        "clinical": "Receptor-mediated effects depend on baseline state and endpoint."
+      },
+      {
+        "title": "Feedback",
+        "plain": "The brain and pituitary respond to the external signal.",
+        "clinical": "LH/FSH and sperm production can be suppressed; fertility goals matter."
+      }
+    ],
+    "formulation": "Match the licensed formulation and clinical monitoring context.",
+    "question": "Is there confirmed deficiency, and how do fertility goals affect the discussion?",
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29562364/",
+        "title": "Testosterone Therapy in Men With Hypogonadism: An Endocrine Society Clinical Practice Guideline."
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26886521/",
+        "title": "Effects of Testosterone Treatment in Older Men."
+      }
+    ],
+    "reviewed": "2026-09-11"
+  }
+}

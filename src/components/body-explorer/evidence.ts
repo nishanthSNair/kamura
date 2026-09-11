@@ -12,6 +12,18 @@ export interface OutcomeEvidence {
 }
 // Evidence describes a particular outcome and population, never a universal score.
 const reviewed: Record<string, OutcomeEvidence> = {
+  'mots-c': {
+    outcome:'Glucose handling and physical performance',population:'Mice receiving MOTS-c; human exercise cohorts measuring endogenous peptide',
+    finding:'Administered MOTS-c improved metabolic or performance endpoints in mouse studies. The human exercise observations did not test an injectable treatment.',
+    boundary:'No client fatigue, weight-loss or HbA1c response can be predicted from these studies.',label:'Animal intervention · human physiology',source:'https://pubmed.ncbi.nlm.nih.gov/33473109/',
+    formulation:'Experimental animal peptide administration; endogenous human measurements',duration:'Varies by experiment',effect:'No established human treatment effect size',design:'Animal experiments with complementary human physiological observations',
+  },
+  'pt-141': {
+    outcome:'Sexual desire and associated distress in HSDD',population:'Premenopausal women with acquired, generalized HSDD',
+    finding:'Two phase 3 trials found improvements in desire and related distress scores versus placebo. These endpoints are distinct from a guaranteed sexual response.',
+    boundary:'Results do not establish equivalent benefit in men, postmenopausal women or nasal formulations.',label:'Randomized human trials · defined population',source:'https://pubmed.ncbi.nlm.nih.gov/31599840/',
+    formulation:'Subcutaneous bremelanotide in the RECONNECT trials',duration:'24 weeks',effect:'Improved desire and distress scores; no single universal response percentage',design:'Two randomized double-blind placebo-controlled phase 3 trials',
+  },
   'bpc-157': {
     formulation: 'Routes and preparations vary across the reviewed studies; no equivalent pen or capsule effect established', duration: 'Varies across included studies', effect: 'No reliable controlled human healing effect size', design: 'Systematic review of predominantly preclinical research',
     outcome: 'Musculoskeletal healing', population: 'Predominantly animal studies; limited uncontrolled human observations',

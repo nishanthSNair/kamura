@@ -92,7 +92,7 @@ export function filterSearchItems(
  i.title.toLowerCase().includes(compTerms.term2)
  );
  const dynamicComp: SearchItem[] =
- t1Match && t2Match
+ t1Match && t2Match && t1Match.url.startsWith("/treatments/") && t2Match.url.startsWith("/treatments/")
  ? [
  {
  type: "comparison",

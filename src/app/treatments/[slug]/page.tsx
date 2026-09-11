@@ -1,3 +1,5 @@
+import PeptideLearning from '@/components/peptides/PeptideLearning';
+import {findLearningTherapy,peptideContexts} from '@/lib/peptide-learning';
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -41,6 +43,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  const t = getTreatmentBySlug(slug);
  if (!t) return {};
 
+ const learning=findLearningTherapy(slug);
+ if(learning)return {title:`${learning.name}: how it works & studied uses | Kamura`,description:peptideContexts[learning.id].intro,alternates:{canonical:`https://kamuralife.com/peptides/${learning.id}`}};
  const tier = getScoreTier(t.kamuraScore);
  return {
  title: `${t.name} — Kamura Score: ${t.kamuraScore} (${tier})`,
@@ -83,6 +87,8 @@ export default async function TreatmentDetailPage({ params }: Props) {
  const { slug } = await params;
  const t = getTreatmentBySlug(slug);
 
+ const learning=findLearningTherapy(slug);
+ if(learning)return <PeptideLearning key={learning.id} id={learning.id}/>;
  if (!t) notFound();
 
  // Query Supabase providers who offer this treatment
