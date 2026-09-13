@@ -7,6 +7,7 @@ import {peptideContexts} from '@/lib/peptide-learning';
 import {DEFAULT_VISIBLE,type Atlas,type SceneState} from '@/components/body-explorer/anatomy';
 import SaveButton from '@/components/kamura/SaveButton';
 import s from './BodyGuide.module.css';
+import AbdominalLab from './AbdominalLab';
 const Scene=dynamic(()=>import('@/components/body-explorer/scene'),{ssr:false});
 export const BODY_GUIDES=['mots-c','pt-141','ghk-cu','tb-500','bpc-157','cjc-ipamorelin','tesamorelin'];
 const introductions:Record<string,string>={
@@ -17,7 +18,8 @@ const introductions:Record<string,string>={
 'bpc-157':'A research peptide studied in injured tissue and gut models. Human healing benefits remain uncertain.',
 'cjc-ipamorelin':'Two signals aimed at stimulating growth-hormone release. A hormone rise is different from a proven recovery benefit.',
 'tesamorelin':'A growth-hormone-releasing hormone analogue with clinical evidence for visceral fat reduction in adults with HIV-associated fat accumulation.'};
-export default function BodyGuide({id}:{id:string}){const t=catalogue.find(t=>t.id===id)!,c=peptideContexts[id];const [atlas,setAtlas]=useState<Atlas|null>(null),[progress,setProgress]=useState(0),[error,setError]=useState(''),[stage,setStage]=useState(0),[topic,setTopic]=useState(0),[clinical,setClinical]=useState(false),[tab,setTab]=useState('Overview');const [scene,setScene]=useState<SceneState>({visible:DEFAULT_VISIBLE,selected:t.regions[0]?.elements||[],isolate:false,explode:0,rotate:false,view:'front',reset:0});const [region,setRegion]=useState(t.regions[0]?.name||'Anatomical context');
+export default function BodyGuide({id}:{id:string}){return id==='tesamorelin'?<AbdominalLab/>:<StandardBodyGuide id={id}/>;}
+function StandardBodyGuide({id}:{id:string}){const t=catalogue.find(t=>t.id===id)!,c=peptideContexts[id];const [atlas,setAtlas]=useState<Atlas|null>(null),[progress,setProgress]=useState(0),[error,setError]=useState(''),[stage,setStage]=useState(0),[topic,setTopic]=useState(0),[clinical,setClinical]=useState(false),[tab,setTab]=useState('Overview');const [scene,setScene]=useState<SceneState>({visible:DEFAULT_VISIBLE,selected:t.regions[0]?.elements||[],isolate:false,explode:0,rotate:false,view:'front',reset:0});const [region,setRegion]=useState(t.regions[0]?.name||'Anatomical context');
 useEffect(()=>{const abort=new AbortController();fetch('/body-models/atlas.json',{signal:abort.signal}).then(r=>{if(!r.ok)throw Error('Anatomy unavailable');return r.json();}).then(setAtlas).catch(e=>{if(e.name!=='AbortError')setError('The 3D model could not load. The guide and sources remain available.');});return()=>abort.abort();},[]);
 function selectRegion(index:number){const r=t.regions[index];setRegion(r.name);setScene(v=>({...v,selected:r.elements,isolate:false}));}
 function selectStep(index:number){setStage(index);selectRegion(Math.min(index,t.regions.length-1));}
