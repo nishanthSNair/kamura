@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import HomeExperience from '@/components/kamura/Home';
 
 export const metadata: Metadata = {
- title: "KAMURA — Longevity, Preventive Health & Wellness in the UAE",
+ title: {absolute: "Kamura | Understand Your Body, Preventive Health & UAE Wellness"},
  description: "Understand your body, explore longevity research, discover wellness care and find classes across the UAE. One connected preventive-health experience.",
  alternates: {canonical: "https://kamuralife.com"},
- openGraph: {title:"KAMURA — Live well. Longer.", description:"Explore your body, discover care and find your practice.", url:"https://kamuralife.com", type:"website", images:[{url:"https://kamuralife.com/images/body-atlas-preview.jpg",width:1600,height:1000,alt:"Kamura interactive anatomy"}]},
- twitter: {card:"summary_large_image",title:"KAMURA — Live well. Longer.",description:"Explore your body, discover care and find your practice.",images:["https://kamuralife.com/images/body-atlas-preview.jpg"]},
+ openGraph: {title:"Kamura — Understand your body. Take your next step.", description:"Visual health learning, therapy research, care providers and wellness classes across the UAE.", url:"https://kamuralife.com", type:"website", images:[{url:"https://kamuralife.com/images/body-atlas-preview.jpg",width:1600,height:1000,alt:"Kamura interactive anatomy"}]},
+ twitter: {card:"summary_large_image",title:"Kamura — Understand your body. Take your next step.",description:"Visual health learning, therapy research, care providers and wellness classes across the UAE.",images:["https://kamuralife.com/images/body-atlas-preview.jpg"]},
 };
 
 const jsonLd = {
@@ -17,7 +17,7 @@ const jsonLd = {
       name: "KAMURA",
       url: "https://kamuralife.com",
       description:
-        "UAE-based longevity platform — evidence-graded treatments, an interactive body atlas, and preventive-health intelligence.",
+        "Preventive health and longevity learning with interactive anatomy, therapy research, care discovery and wellness classes in the UAE.",
       sameAs: [
         "https://www.instagram.com/kamuralife/",
         "https://x.com/KamuraLife",
