@@ -55,3 +55,6 @@ next-env.d.ts
 
 # Claude Code — personal settings stay local
 .claude/settings.local.json
+
+# Generated document reading engines
+/public/report-tools/

@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {extractResults,repeatedMeasurements,inferKind} from '../src/lib/report-import.ts';
+const make=(text,name='lab')=>({id:name,name,kind:'Blood test',date:'',pages:[{number:1,text,ocr:false}],reviewed:false,findings:'',hash:name});
+test('extracts explicit units and two-sided ranges without clinical thresholds',()=>{const rows=extractResults(make('Glucose 108 mg/dL 70-99\nALT 42 U/L 0–40\nBody fat 29 %'));assert.equal(rows.length,2);assert.equal(rows[0].status,'Above printed range');assert.equal(rows[0].page,1);assert.equal(rows[0].unit,'mg/dL');});
+test('keeps one-sided, ambiguous, comma-decimal and inverted ranges out of auto comparison',()=>{for(const line of ['Glucose 5,5 mmol/L 3,9-5,5','LDL 100 mg/dL <100','Glucose 108 70-99','Glucose 5 mmol/L 10-2','Glucose 108 H mg/dL 70-99'])assert.equal(extractResults(make(line)).length,0,line);});
+test('CSV rows and inclusive interval endpoints',()=>{assert.equal(extractResults(make('Glucose,99,mg/dL,70-99'))[0].status,'Within printed range');});
+test('repeated values require the same label and unit in different sources',()=>{const a=make('Glucose 108 mg/dL 70-99','a'),b=make('Glucose 90 mg/dL 70-99','b'),c=make('Glucose 5 mmol/L 3-6','c');assert.equal(repeatedMeasurements([a,b,c]).length,1);assert.equal(repeatedMeasurements([a,c]).length,0);});
+test('identifies imaging narrative without treating it as image analysis',()=>{assert.equal(inferKind('MRI impression: text report'),'Imaging report');});
