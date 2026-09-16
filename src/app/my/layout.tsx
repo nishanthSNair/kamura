@@ -9,6 +9,7 @@ import { ToastProvider } from "@/lib/toast";
 const NAV_TABS = [
   { href: "/my", label: "Today", exact: true },
   { href: "/my/saved", label: "Saved" },
+  { href: "/my/reports", label: "Reports · Demo" },
   { href: "/my/protocol", label: "Protocol" },
   { href: "/my/classes", label: "Classes" },
   { href: "/my/library", label: "Library" },
@@ -94,7 +95,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
     <ToastProvider>
       <div className="min-h-screen bg-[#FAFCF7]">
         {/* Guest banner */}
-        {isGuest && !bannerDismissed && (
+        {isGuest && !bannerDismissed && pathname !== "/my/reports" && (
           <div className="bg-gradient-to-r from-terracotta/10 via-terracotta/5 to-transparent border-b border-terracotta/15 px-4 py-2.5">
             <div className="max-w-6xl mx-auto flex items-center justify-between gap-3 flex-wrap">
               <p className="text-xs text-gray-700 font-sans">

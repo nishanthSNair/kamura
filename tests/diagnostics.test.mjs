@@ -1,0 +1,9 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {DEMO_DOCUMENTS,ready,resultStatus,connectedFindings,escapeHtml} from '../src/lib/diagnostics.ts';
+const verified=()=>structuredClone(DEMO_DOCUMENTS).map(d=>({...d,verified:true,observations:d.observations.map(o=>({...o,verified:true}))}));
+test('requires sources, matching identity and every observation verified',()=>{assert.equal(ready([]),false);assert.equal(ready(DEMO_DOCUMENTS),false);assert.equal(ready(verified()),true);const mixed=verified();mixed[1].patient='OTHER';assert.equal(ready(mixed),false);const partial=verified();partial[0].observations[0].verified=false;assert.equal(ready(partial),false);});
+test('blank and non-finite values block report readiness',()=>{for(const value of ['', ' ', 'NaN', 'Infinity','not supplied']){const docs=verified();docs[0].observations[0].value=value;assert.equal(ready(docs),false);}});
+test('unknown reference is not reported as normal; interval endpoints are inclusive',()=>{const base=DEMO_DOCUMENTS[0].observations[0];assert.equal(resultStatus({...base,value:'99'}),'Within supplied interval');assert.equal(resultStatus({...base,value:'100'}),'Above supplied interval');assert.equal(resultStatus({...base,value:'69'}),'Below supplied interval');assert.equal(resultStatus({...base,reference:undefined}),'No supplied reference interval');});
+test('connected findings only cite included documents',()=>{for(let mask=0;mask<8;mask++){const docs=DEMO_DOCUMENTS.filter((_,i)=>mask&(1<<i));const ids=new Set(docs.map(d=>d.id));for(const finding of connectedFindings(docs))for(const id of finding.sources)assert.ok(ids.has(id));if(docs.length<2)assert.equal(connectedFindings(docs).length,0);}});
+test('export escapes editable HTML content',()=>{assert.equal(escapeHtml('<script>"x" & \'y\'</script>'),'&lt;script&gt;&quot;x&quot; &amp; &#39;y&#39;&lt;/script&gt;');});
