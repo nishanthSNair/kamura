@@ -5,3 +5,5 @@ test('keeps one-sided, ambiguous, comma-decimal and inverted ranges out of auto 
 test('CSV rows and inclusive interval endpoints',()=>{assert.equal(extractResults(make('Glucose,99,mg/dL,70-99'))[0].status,'Within printed range');});
 test('repeated values require the same label and unit in different sources',()=>{const a=make('Glucose 108 mg/dL 70-99','a'),b=make('Glucose 90 mg/dL 70-99','b'),c=make('Glucose 5 mmol/L 3-6','c');assert.equal(repeatedMeasurements([a,b,c]).length,1);assert.equal(repeatedMeasurements([a,c]).length,0);});
 test('identifies imaging narrative without treating it as image analysis',()=>{assert.equal(inferKind('MRI impression: text report'),'Imaging report');});
+test('a blood panel containing an Impression line is still a blood test',()=>{assert.equal(inferKind('Kamura Lab\nGlucose 112 mg/dL 70-99\nCholesterol 190 mg/dL 125-200\nImpression: follow up fasting glucose.'),'Blood test');});
+test('body composition and unknown text are classified separately',()=>{assert.equal(inferKind('InBody scan skeletal muscle 34 kg body fat 22 %'),'Body composition');assert.equal(inferKind('Appointment letter, no results enclosed.'),'Other');});
