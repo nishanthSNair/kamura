@@ -7,3 +7,9 @@ test('repeated values require the same label and unit in different sources',()=>
 test('identifies imaging narrative without treating it as image analysis',()=>{assert.equal(inferKind('MRI impression: text report'),'Imaging report');});
 test('a blood panel containing an Impression line is still a blood test',()=>{assert.equal(inferKind('Kamura Lab\nGlucose 112 mg/dL 70-99\nCholesterol 190 mg/dL 125-200\nImpression: follow up fasting glucose.'),'Blood test');});
 test('body composition and unknown text are classified separately',()=>{assert.equal(inferKind('InBody scan skeletal muscle 34 kg body fat 22 %'),'Body composition');assert.equal(inferKind('Appointment letter, no results enclosed.'),'Other');});
+test('analyte names containing digits are extracted (HbA1c, B12, T4, 25-OH)',()=>{
+ for(const [line,name] of [['HbA1c 6.1 pct 4.0-5.6','HbA1c'],['Vitamin B12 180 ng/L 200-900','Vitamin B12'],['Free T4 1.1 ng/dL 0.8-1.8','Free T4'],['25-OH Vitamin D 18 ng/mL 30-100','25-OH Vitamin D']]){
+  const r=extractResults(make(line));assert.equal(r.length,1,line);assert.equal(r[0].name,name);}
+ assert.equal(extractResults(make('HbA1c 6.1 pct 4.0-5.6'))[0].status,'Above printed range');
+ assert.equal(extractResults(make('Vitamin B12 180 ng/L 200-900'))[0].status,'Below printed range');});
+test('a purely numeric first column is never treated as an analyte name',()=>{assert.equal(extractResults(make('70 99 mg/dL 10-20')).length,0);assert.equal(extractResults(make('2026 14 g/dL 13-17')).length,0);});
