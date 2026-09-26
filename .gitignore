@@ -58,3 +58,9 @@ next-env.d.ts
 
 # Generated document reading engines
 /public/report-tools/
+
+# Private source material — real WhatsApp conversations (personal health
+# questions, phone numbers, contact cards) and partner product documents.
+# Research input only; never published or committed.
+/compounding products and whatsapp group/
+/Peptide Binder/
