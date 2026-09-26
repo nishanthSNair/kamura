@@ -43,6 +43,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
  priority: 0.9,
  },
  {
+ url: `${baseUrl}/compounded`,
+ lastModified: new Date(),
+ changeFrequency: "monthly",
+ priority: 0.9,
+ },
+ ...["bioidentical-hormone-creams","topical-nad","compounded-peptides","compounded-glp1","compounded-dermatology"].map((slug)=>({
+ url: `${baseUrl}/compounded/${slug}`,
+ lastModified: new Date(),
+ changeFrequency: "monthly" as const,
+ priority: 0.9,
+ })),
+ {
+ url: `${baseUrl}/reports`,
+ lastModified: new Date(),
+ changeFrequency: "monthly",
+ priority: 0.9,
+ },
+ {
  url: `${baseUrl}/supplements`,
  lastModified: new Date(),
  changeFrequency: "weekly",

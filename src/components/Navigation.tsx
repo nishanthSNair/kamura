@@ -8,7 +8,7 @@ import SearchModal from './SearchModal';
 import {useI18n} from '@/lib/i18n';
 import LanguageToggle from './LanguageToggle';
 import s from './kamura/Kamura.module.css';
-const links=[{href:'/body',label:'The body'},{href:'/learn',label:'Learn',paths:['/treatments','/peptides','/supplements','/blog','/protocols','/wellness-checker','/quiz']},{href:'/explore',label:'Find care',paths:['/provider/']},{href:'/classes',label:'Classes & events',paths:['/events']}];
+const links=[{href:'/body',label:'The body'},{href:'/learn',label:'Learn',paths:['/treatments','/peptides','/supplements','/blog','/protocols','/wellness-checker','/quiz','/compounded','/reports']},{href:'/explore',label:'Find care',paths:['/provider/']},{href:'/classes',label:'Classes & events',paths:['/events']}];
 export default function Navigation(){
  const {lang}=useI18n();const label=(text:string)=>lang==='ar'?({'The body':'الجسم','Learn':'تعلّم','Find care':'ابحث عن الرعاية','Classes & events':'الحصص والفعاليات'}[text]??text):text;
  const pathname=usePathname();const [open,setOpen]=useState(false),[search,setSearch]=useState(false);const toggle=useRef<HTMLButtonElement>(null);
