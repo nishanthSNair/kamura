@@ -47,7 +47,7 @@ export const COMPOUNDED_PRODUCTS: CompoundedProduct[] = [
     evidence: {
       strength: 'Mixed',
       summary:
-        'Menopausal hormone therapy has a large, genuine evidence base for hot flushes, night sweats, vaginal symptoms and bone protection. That evidence comes almost entirely from standardised, manufactured products. Compounded versions have been studied far less; major menopause and endocrine societies have repeatedly noted that compounded hormones are not proven superior, are not routinely quality-tested batch to batch, and can vary in the dose actually delivered through skin. The hormone is evidenced; the compounding is not.',
+        'Menopausal hormone therapy has a large, genuine evidence base for hot flushes, night sweats, vaginal symptoms and bone protection. That evidence comes almost entirely from standardised, manufactured products. Compounded versions have been studied far less; major menopause and endocrine societies have repeatedly noted that compounded hormones are not proven superior, have formulation and dose-consistency concerns that require checking with the pharmacy. The hormone is evidenced; the compounding is not.',
     },
     consideredFor: [
       'Menopausal symptoms when a manufactured product is unsuitable — for example an allergy to an ingredient in it',
@@ -97,7 +97,7 @@ export const COMPOUNDED_PRODUCTS: CompoundedProduct[] = [
       'Cosmetic skin use, where expectations are set at skin appearance rather than systemic or anti-ageing effects',
     ],
     doYouNeedIt:
-      'If the goal is skin quality, better-evidenced topicals exist — retinoids and niacinamide among them. If the goal is systemic NAD+, a skin cream is the least supported route available, and usually the most expensive per milligram.',
+      'If the goal is skin quality, better-evidenced topicals exist — retinoids and niacinamide among them. If the goal is systemic NAD+, a skin cream is the least supported route available, and a different formulation needs its own evidence.',
     askYourPrescriber: [
       'What is this expected to do — skin appearance, or something systemic?',
       'Is there evidence that it is absorbed at all through skin?',
@@ -148,9 +148,9 @@ export const COMPOUNDED_PRODUCTS: CompoundedProduct[] = [
     watchFor: [
       'Vials labelled "for research use only" — that label means it was never assessed for use in people',
       'No certificate of analysis, or one produced by the seller rather than an independent lab',
-      'Prices far below the real cost of peptide synthesis',
+      'Unclear ingredient identity, concentration or batch traceability',
       'Evidence from animal studies being described as if it came from people',
-      'Stacks of several peptides at once, which makes it impossible to tell what did what',
+      'Stacks of several peptides at once, which can make individual benefits and adverse effects difficult to attribute',
     ],
     relatedTreatments: [
       { slug: 'bpc-157', label: 'BPC-157 — evidence and score' },
@@ -203,7 +203,7 @@ export const COMPOUNDED_PRODUCTS: CompoundedProduct[] = [
     category: 'Skin',
     alsoCalled: ['derma Rx', 'custom skin cream', 'compounded tretinoin', 'pigmentation blend', 'hair growth solution'],
     verdict:
-      'This is the most reasonable use of compounding on this page. The individual actives are often well evidenced — but a custom blend of five of them has not been tested as a blend, and makes it hard to know what helped or what irritated.',
+      'Compounding can address specific needs in dermatology. The individual actives are often well evidenced — but a custom blend of five of them has not been tested as a blend, and makes it hard to know what helped or what irritated.',
     whatItIs:
       'A pharmacy combines dermatology actives — tretinoin or other retinoids, hydroquinone, azelaic acid, niacinamide, minoxidil, sometimes a corticosteroid or antibiotic — into a single cream, gel or scalp solution at strengths chosen for one person.',
     whyCompounded:
@@ -211,7 +211,7 @@ export const COMPOUNDED_PRODUCTS: CompoundedProduct[] = [
     evidence: {
       strength: 'Reasonable',
       summary:
-        'Individual actives are often strongly evidenced — tretinoin for photoageing and acne, minoxidil for pattern hair loss, azelaic acid for rosacea and pigmentation. The evidence is for those ingredients, generally studied alone at defined strengths. A bespoke combination inherits that plausibility but has not itself been trialled, and the more ingredients it contains, the harder it becomes to attribute either a benefit or a reaction.',
+        'Individual actives are often strongly evidenced — tretinoin for photoageing and acne, minoxidil for pattern hair loss, azelaic acid for rosacea and pigmentation. Evidence supports certain ingredients and defined combinations. A bespoke combination may not have been trialled, and the more ingredients it contains, the harder it becomes to attribute either a benefit or a reaction.',
     },
     consideredFor: [
       'Simplifying a routine a dermatologist has already established for you',
@@ -219,7 +219,7 @@ export const COMPOUNDED_PRODUCTS: CompoundedProduct[] = [
       'Avoiding a specific ingredient you react to',
     ],
     doYouNeedIt:
-      'Often yes, if a dermatologist is directing it. Be more cautious as the ingredient list grows — a blend of many actives is harder to troubleshoot, and some combinations are chemically unstable together.',
+      'The reason should be specific to your skin condition and available alternatives. Be more cautious as the ingredient list grows — a blend of many actives is harder to troubleshoot, and some combinations are chemically unstable together.',
     askYourPrescriber: [
       'What is each ingredient for, and at what strength?',
       'Which single ingredient would we remove first if my skin reacts?',
@@ -228,7 +228,7 @@ export const COMPOUNDED_PRODUCTS: CompoundedProduct[] = [
       'When should we review whether it is still needed?',
     ],
     watchFor: [
-      'Long ingredient lists that make a reaction impossible to trace',
+      'Long ingredient lists that make a reaction harder to trace',
       'Ongoing corticosteroid in a facial cream without a defined stop point',
       'Hydroquinone used continuously long-term without review',
       'Retinoids in pregnancy',

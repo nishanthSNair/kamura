@@ -1,3 +1,4 @@
+import {COMPOUNDED_PRODUCTS} from '@/data/compounded';
 import catalogue from '@/data/therapy-explorer.json';
 import {listings} from "@/data/listings";
 import type { MetadataRoute } from "next";
@@ -26,123 +27,103 @@ export default function sitemap(): MetadataRoute.Sitemap {
  {url:`${baseUrl}/learn`,changeFrequency:"weekly",priority:0.9},
  {
  url: baseUrl,
- lastModified: new Date(),
  changeFrequency: "weekly",
  priority: 1,
  },
  {
  url: `${baseUrl}/explore`,
- lastModified: new Date(),
  changeFrequency: "monthly",
  priority: 0.8,
  },
  {
  url: `${baseUrl}/events`,
- lastModified: new Date(),
  changeFrequency: "weekly",
  priority: 0.9,
  },
  {
  url: `${baseUrl}/compounded`,
- lastModified: new Date(),
  changeFrequency: "monthly",
  priority: 0.9,
  },
- ...["bioidentical-hormone-creams","topical-nad","compounded-peptides","compounded-glp1","compounded-dermatology"].map((slug)=>({
+ ...COMPOUNDED_PRODUCTS.map(({slug})=>({
  url: `${baseUrl}/compounded/${slug}`,
- lastModified: new Date(),
  changeFrequency: "monthly" as const,
  priority: 0.9,
  })),
  {
  url: `${baseUrl}/reports`,
- lastModified: new Date(),
  changeFrequency: "monthly",
  priority: 0.9,
  },
  {
  url: `${baseUrl}/supplements`,
- lastModified: new Date(),
  changeFrequency: "weekly",
  priority: 0.9,
  },
  {
  url: `${baseUrl}/quiz`,
- lastModified: new Date(),
  changeFrequency: "monthly",
  priority: 0.8,
  },
  {
  url: `${baseUrl}/wellness-checker`,
- lastModified: new Date(),
  changeFrequency: "monthly",
  priority: 0.8,
  },
  {
  url: `${baseUrl}/about`,
- lastModified: new Date(),
  changeFrequency: "monthly",
  priority: 0.7,
  },
  {
  url: `${baseUrl}/blog`,
- lastModified: new Date(),
  changeFrequency: "weekly",
  priority: 0.9,
  },
  ...blogUrls,
  ...events.map((event) => ({
  url: `${baseUrl}/events/${event.id}`,
- lastModified: new Date(),
  changeFrequency: "monthly" as const,
  priority: 0.8,
  })),
  ...listings.map(l=>({url:`${baseUrl}/explore/${l.id}`,changeFrequency:'monthly' as const,priority:0.7})),
  {
  url: `${baseUrl}/treatments`,
- lastModified: new Date(),
  changeFrequency: "weekly",
  priority: 1,
  },
  {
  url: `${baseUrl}/treatments/methodology`,
- lastModified: new Date(),
  changeFrequency: "monthly",
  priority: 0.7,
  },
  ...CATEGORY_META.map((cat) => ({
  url: `${baseUrl}/treatments/category/${cat.slug}`,
- lastModified: new Date(),
  changeFrequency: "weekly" as const,
  priority: 0.8,
  })),
  ...treatments.map((t) => ({
  url: `${baseUrl}/treatments/${t.slug}`,
- lastModified: new Date(),
  changeFrequency: "monthly" as const,
  priority: 0.9,
  })),
  {
  url: `${baseUrl}/treatments/compare`,
- lastModified: new Date(),
  changeFrequency: "monthly",
  priority: 0.7,
  },
  ...POPULAR_COMPARISONS.map((c) => ({
  url: `${baseUrl}/treatments/compare/${c.slug1}-vs-${c.slug2}`,
- lastModified: new Date(),
  changeFrequency: "monthly" as const,
  priority: 0.8,
  })),
  ...WELLNESS_GOALS.map((g) => ({
  url: `${baseUrl}/treatments/best-for/${g.slug}`,
- lastModified: new Date(),
  changeFrequency: "weekly" as const,
  priority: 0.9,
  })),
  {
  url: `${baseUrl}/peptides`,
- lastModified: new Date(),
  changeFrequency: "weekly",
  priority: 0.9,
  },
@@ -160,43 +141,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
  "advisor",
  ].map((sub) => ({
  url: `${baseUrl}/peptides/${sub}`,
- lastModified: new Date(),
  changeFrequency: "monthly" as const,
  priority: sub === "what-is-a-peptide" || sub === "calculator" ? 0.9 : 0.8,
  })),
  {
  url: `${baseUrl}/classes`,
- lastModified: new Date(),
  changeFrequency: "weekly",
  priority: 0.9,
  },
  {
  url: `${baseUrl}/list-your-business`,
- lastModified: new Date(),
  changeFrequency: "monthly",
  priority: 0.6,
  },
  {
  url: `${baseUrl}/privacy`,
- lastModified: new Date(),
  changeFrequency: "yearly",
  priority: 0.3,
  },
  {
  url: `${baseUrl}/terms`,
- lastModified: new Date(),
  changeFrequency: "yearly",
  priority: 0.3,
  },
  {
  url: `${baseUrl}/protocols`,
- lastModified: new Date(),
  changeFrequency: "monthly",
  priority: 0.9,
  },
  ...protocols.map((p) => ({
  url: `${baseUrl}/protocols/${p.slug}`,
- lastModified: new Date(),
  changeFrequency: "monthly" as const,
  priority: 0.9,
  })),

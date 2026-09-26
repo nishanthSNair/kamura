@@ -1,12 +1,12 @@
+import CompoundedDirectory from '@/components/kamura/CompoundedDirectory';
 import type {Metadata} from 'next';
 import Link from 'next/link';
 import s from '@/components/kamura/Kamura.module.css';
-import {COMPOUNDED_PRODUCTS} from '@/data/compounded';
 
 export const metadata: Metadata = {
   title: 'Compounded Medicines Explained — What They Are & Whether You Need One',
   description:
-    'Compounded medicines arrive without a patient information leaflet. Plain explanations of bioidentical hormone creams, compounded peptides, GLP-1, topical NAD+ and custom skin preparations — what the evidence shows and what to ask your prescriber.',
+    'Plain explanations of bioidentical hormone creams, compounded peptides, GLP-1, topical NAD+ and custom skin preparations — what the evidence shows and what to ask your prescriber.',
   keywords: [
     'compounded medicine',
     'what is compounding pharmacy',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Compounded Medicines Explained | KAMURA',
     description:
-      'The patient leaflet compounded medicines never came with. What they are, what the evidence shows, and what to ask before you start.',
+      'Understand your compounded prescription. What they are, what the evidence shows, and what to ask before you start.',
     url: 'https://kamuralife.com/compounded',
     type: 'website',
   },
@@ -48,7 +48,7 @@ const QUESTIONS = [
   },
   {
     q: 'How do I know the pharmacy is legitimate?',
-    a: 'It should be licensed to compound by the health authority where it operates — in the UAE, DHA, DoH or MoHAP depending on the emirate. It should be able to tell you what is in your preparation, at what strength, how long it is stable, and provide a certificate of analysis for sterile products such as injectables.',
+    a: 'Ask which authority licenses the pharmacy and verify that directly. Ask for ingredient, concentration, storage, expiry and quality information for your preparation.',
   },
 ];
 
@@ -71,14 +71,10 @@ export default function CompoundedHub() {
         <div className={s.container}>
           <span className={s.eyebrow}>Compounded medicines</span>
           <h1>
-            The leaflet your
-            <br />
-            prescription never came with.
+            Understand what’s<br/>in your prescription.
           </h1>
           <p className={s.lead}>
-            Compounded medicines are mixed by a pharmacy for one person — so they arrive with dosing
-            instructions but no explanation. What is actually in it, what the evidence shows, and whether
-            you needed it at all.
+            Explore the ingredients, understand what the evidence applies to and prepare useful questions for your prescriber.
           </p>
           <nav className={s.sectionNav} aria-label="Related sections">
             <Link href="/treatments">Evidence library</Link>
@@ -94,22 +90,10 @@ export default function CompoundedHub() {
             <span className={s.eyebrow}>Start here</span>
             <h2>Find what you were prescribed.</h2>
             <p>
-              Each page explains one kind of compounded preparation in plain language — including the
-              question a seller will not ask you.
+              Search the name on your prescription or choose a category. Every guide separates ingredient evidence from formulation evidence.
             </p>
           </div>
-          <div className={s.grid}>
-            {COMPOUNDED_PRODUCTS.map((p) => (
-              <Link className={s.card} href={`/compounded/${p.slug}`} key={p.slug}>
-                <div className={s.cardBody}>
-                  <small>{p.category.toUpperCase()}</small>
-                  <h3>{p.name}</h3>
-                  <p>{p.verdict}</p>
-                  <span>Read the leaflet ↗</span>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <CompoundedDirectory/>
         </section>
 
         <section className={s.section}>
@@ -137,16 +121,11 @@ export default function CompoundedHub() {
               <br />
               work for any compounded medicine.
             </h2>
-            <p>
-              1. What exactly is in this, at what strength? 2. Would a regulated, manufactured product do
-              the same job — and if not, why? 3. What evidence supports it for my problem specifically?
-              4. How will we know whether it is working, and when do we stop? 5. Which licensed pharmacy
-              made it, and can I see a certificate of analysis?
-            </p>
+            <ol style={{lineHeight:2,paddingLeft:20}}><li>What is each ingredient intended to do?</li><li>Why this formulation rather than a manufactured option?</li><li>Which research matches my situation?</li><li>How and when will we review the result?</li><li>What quality and storage information should I have?</li></ol>
           </div>
           <div className={s.buttons}>
             <Link href="/treatments" className={s.primary}>
-              Check the evidence score ↗
+              Explore treatment evidence ↗
             </Link>
             <Link href="/reports" className={s.secondary}>
               Bring your results together
@@ -156,10 +135,7 @@ export default function CompoundedHub() {
 
         <section className={s.section}>
           <p className={s.lead} style={{fontSize: '14px', opacity: 0.75}}>
-            Kamura sells no medicines, supplements or treatments, and takes no payment from pharmacies,
-            clinics or brands. These pages are educational and are not medical advice, a diagnosis, or a
-            recommendation to start or stop anything. Decisions about a prescription belong with you and a
-            qualified clinician who knows your history.
+            Use these guides to prepare questions and check the sources. Discuss changes to a prescription with the clinician who knows your history.
           </p>
         </section>
       </div>

@@ -8,9 +8,9 @@ import SearchModal from './SearchModal';
 import {useI18n} from '@/lib/i18n';
 import LanguageToggle from './LanguageToggle';
 import s from './kamura/Kamura.module.css';
-const links=[{href:'/body',label:'The body'},{href:'/learn',label:'Learn',paths:['/treatments','/peptides','/supplements','/blog','/protocols','/wellness-checker','/quiz','/compounded','/reports']},{href:'/explore',label:'Find care',paths:['/provider/']},{href:'/classes',label:'Classes & events',paths:['/events']}];
+const links=[{href:'/body',label:'The body'},{href:'/learn',label:'Learn',paths:['/treatments','/peptides','/supplements','/blog','/protocols','/wellness-checker','/quiz','/compounded']},{href:'/reports',label:'Health reports',paths:['/my/reports']},{href:'/explore',label:'Find care',paths:['/provider/']},{href:'/classes',label:'Classes & events',paths:['/events']}];
 export default function Navigation(){
- const {lang}=useI18n();const label=(text:string)=>lang==='ar'?({'The body':'الجسم','Learn':'تعلّم','Find care':'ابحث عن الرعاية','Classes & events':'الحصص والفعاليات'}[text]??text):text;
+ const {lang}=useI18n();const label=(text:string)=>lang==='ar'?({'The body':'الجسم','Learn':'تعلّم','Health reports':'التقارير الصحية','Find care':'ابحث عن الرعاية','Classes & events':'الحصص والفعاليات'}[text]??text):text;
  const pathname=usePathname();const [open,setOpen]=useState(false),[search,setSearch]=useState(false);const toggle=useRef<HTMLButtonElement>(null);
  useEffect(()=>{const key=(e:KeyboardEvent)=>{if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();setSearch(true);}if(e.key==='Escape'){setOpen(false);toggle.current?.focus();}};document.addEventListener('keydown',key);return()=>document.removeEventListener('keydown',key);},[]);
  const active=(item:typeof links[number])=>pathname===item.href||pathname.startsWith(item.href+'/')||item.paths?.some(p=>pathname.startsWith(p));

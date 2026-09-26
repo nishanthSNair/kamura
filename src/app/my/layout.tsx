@@ -31,7 +31,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
   const isAuthPage = AUTH_PAGES.some((p) => pathname.startsWith(p));
 
   useEffect(() => {
-    if (isAuthPage) {
+    if (isAuthPage || pathname === "/my/reports") {
       setLoading(false);
       return;
     }
@@ -52,7 +52,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
       setLoading(false);
     }
     loadUser();
-  }, [supabase, isAuthPage]);
+  }, [supabase, isAuthPage, pathname]);
 
   useEffect(() => {
     try {
@@ -78,7 +78,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
     router.push("/my/login");
   }
 
-  if (isAuthPage) return <ToastProvider>{children}</ToastProvider>;
+  if (isAuthPage || pathname === "/my/reports") return <ToastProvider><div style={{padding:"100px 20px 50px",maxWidth:1240,margin:"0 auto"}}>{children}</div></ToastProvider>;
 
   if (loading) {
     return (

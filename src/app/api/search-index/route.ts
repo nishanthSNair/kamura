@@ -1,3 +1,4 @@
+import {COMPOUNDED_PRODUCTS} from '@/data/compounded';
 import catalogue from '@/data/therapy-explorer.json';
 import {peptideContexts} from '@/lib/peptide-learning';
 import { NextResponse } from "next/server";
@@ -37,13 +38,13 @@ export async function GET() {
  ].filter(Boolean),
  };
  }),
- posts: posts.map((p) => ({
+ posts: [{type:'blog',title:'Combine your health reports',excerpt:'Blood tests, laboratory results, body composition and imaging reports. Add files and download one document.',category:'Health reports',url:'/reports'},...COMPOUNDED_PRODUCTS.map(p=>({type:'blog',title:p.name,excerpt:p.verdict,category:'Compounded medicines',url:'/compounded/'+p.slug,services:p.alsoCalled})),...posts.map((p) => ({
  type: "blog" as const,
  title: p.title,
  excerpt: p.excerpt,
  category: p.category,
  url: `/blog/${p.slug}`,
- })),
+ }))],
  listings: listings.map((l) => ({
  type: "listing" as const,
  title: l.name,

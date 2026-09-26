@@ -11,7 +11,6 @@ export default function robots(): MetadataRoute.Robots {
  "/my/",
  "/provider/dashboard/",
  "/review/",
- "/_next/static/",
  ],
  },
  sitemap: "https://kamuralife.com/sitemap.xml",

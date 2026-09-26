@@ -1,0 +1,6 @@
+'use client';
+import {useState} from 'react';
+import Link from 'next/link';
+import {COMPOUNDED_PRODUCTS} from '@/data/compounded';
+import s from './Compounded.module.css';
+export default function CompoundedDirectory(){const [query,setQuery]=useState(''),[category,setCategory]=useState('All');const products=COMPOUNDED_PRODUCTS.filter(p=>(category==='All'||p.category===category)&&[p.name,...p.alsoCalled].join(' ').toLowerCase().includes(query.toLowerCase()));return <><div className={s.filters}><label>Find a medicine or prescription name<input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Try Bi-Est, semaglutide or BPC-157"/></label><label>Category<select value={category} onChange={e=>setCategory(e.target.value)}>{['All',...new Set(COMPOUNDED_PRODUCTS.map(p=>p.category))].map(c=><option key={c}>{c}</option>)}</select></label></div><p role="status">{products.length} guides</p><div className={s.cards}>{products.map(p=><Link href={'/compounded/'+p.slug} key={p.slug}><small>{p.category}</small><h3>{p.name}</h3><p>{p.verdict}</p><strong>Understand the formulation ↗</strong></Link>)}</div>{!products.length&&<button onClick={()=>{setQuery('');setCategory('All');}}>Reset search</button>}</>;}

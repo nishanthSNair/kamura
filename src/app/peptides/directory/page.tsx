@@ -1,10 +1,11 @@
+import s from '@/components/peptides/PeptideLearning.module.css';
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import PeptideDirectoryContent from "./PeptideDirectoryContent";
 import peptides from "@/data/therapy-explorer.json";
 
 export const metadata: Metadata = {
-  title: "Peptide Directory — Visual Pathways & Studied Uses | KAMURA",
+  title: "Peptide Directory — Visual Pathways & Studied Uses",
   description:
     "Explore 28 peptide and related therapy guides: visual mechanisms, symptoms and studied uses, formulation context and original research.",
   keywords: [
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://kamuralife.com/peptides/directory" },
   openGraph: {
-    title: "Peptide Directory — Visual Pathways & Studied Uses | KAMURA",
+    title: "Peptide Directory — Visual Pathways & Studied Uses",
     description:
       "Visual peptide pathways, studied uses and source-linked explanations.",
     type: "website",
@@ -86,6 +87,7 @@ export default function PeptideDirectoryPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <div className={s.container} style={{paddingTop:100}}><header className={s.hero}><div><span className={s.eyebrow}>KAMURA / PEPTIDES & RELATED THERAPIES</span><h1>Find the signal.<br/>Understand the evidence.</h1><p>Explore each therapy through a visual pathway, the concerns people ask about and the outcomes researchers studied.</p></div><aside className={s.heroAside}><span>START EXPLORING</span><p>Search MOTS-c, PT-141, a body system or a symptom.</p><small>28 guides · Plain-language and clinician views</small></aside></header></div>
       <Suspense
       fallback={
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">

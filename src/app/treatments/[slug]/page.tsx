@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
  if (!t) return {};
 
  const learning=findLearningTherapy(slug);
- if(learning)return {title:`${learning.name}: how it works & studied uses | Kamura`,description:peptideContexts[learning.id].intro,alternates:{canonical:`https://kamuralife.com/peptides/${learning.id}`}};
+ if(learning)return {title:`${learning.name}: how it works & studied uses`,openGraph:{title:`${learning.name} — mechanisms & evidence | Kamura`,description:peptideContexts[learning.id].intro,url:`https://kamuralife.com/peptides/${learning.id}`},description:peptideContexts[learning.id].intro,alternates:{canonical:`https://kamuralife.com/peptides/${learning.id}`}};
  const tier = getScoreTier(t.kamuraScore);
  return {
  title: `${t.name} — Kamura Score: ${t.kamuraScore} (${tier})`,
