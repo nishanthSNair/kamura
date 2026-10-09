@@ -1,6 +1,7 @@
 import {COMPOUNDED_PRODUCTS} from '@/data/compounded';
 import catalogue from '@/data/therapy-explorer.json';
 import {listings} from "@/data/listings";
+import {INSTRUMENTS} from "@/data/instruments";
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { events } from "@/data/events";
@@ -47,6 +48,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
  },
  ...COMPOUNDED_PRODUCTS.map(({slug})=>({
  url: `${baseUrl}/compounded/${slug}`,
+ changeFrequency: "monthly" as const,
+ priority: 0.9,
+ })),
+ {
+ url: `${baseUrl}/tools`,
+ changeFrequency: "monthly",
+ priority: 0.9,
+ },
+ ...INSTRUMENTS.map((i) => ({
+ url: `${baseUrl}/tools/${i.slug}`,
  changeFrequency: "monthly" as const,
  priority: 0.9,
  })),
