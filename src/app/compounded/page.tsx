@@ -1,6 +1,7 @@
 import CompoundedDirectory from '@/components/kamura/CompoundedDirectory';
 import type {Metadata} from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import s from '@/components/kamura/Kamura.module.css';
 
 export const metadata: Metadata = {
@@ -68,7 +69,7 @@ export default function CompoundedHub() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}} />
 
       <section className={s.pageHero}>
-        <div className={s.container}>
+        <div className={s.container}><div className={s.heroGrid}><div className={s.heroCopy}>
           <span className={s.eyebrow}>Compounded medicines</span>
           <h1>
             Understand what’s<br/>in your prescription.
@@ -81,7 +82,7 @@ export default function CompoundedHub() {
             <Link href="/body">Explore the body</Link>
             <Link href="/reports">Combine your reports</Link>
           </nav>
-        </div>
+        </div><div className={s.heroMedia}><Image src="/images/hero/compounded.jpg" alt="Three unlabelled apothecary vessels in clear glass, frosted glass and matte ceramic" fill sizes="(max-width:860px) 100vw, 45vw" priority/></div></div></div>
       </section>
 
       <div className={s.container}>

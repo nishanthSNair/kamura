@@ -77,7 +77,7 @@ export default function TreatmentsPage() {
  type="application/ld+json"
  dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
  />
- <PageIntro eyebrow="Learn / Treatment library" title="A closer look at your options." description="Explore treatment profiles, compare the research and understand the questions behind each approach." links={[{href:'/learn',label:'Learning library'},{href:'/body',label:'Explore the body'},{href:'/treatments/compare',label:'Compare treatments'}]}/>
+ <PageIntro eyebrow="Learn / Treatment library" title="A closer look at your options." description="Explore treatment profiles, compare the research and understand the questions behind each approach." links={[{href:'/learn',label:'Learning library'},{href:'/body',label:'Explore the body'},{href:'/treatments/compare',label:'Compare treatments'}]} image={{src:'/images/hero/treatments.jpg',alt:'Smooth pale stones arranged in graduated size on a bone-white surface'}}/>
  <Suspense>
  <TreatmentsContent />
  </Suspense>

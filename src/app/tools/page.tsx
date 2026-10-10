@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import k from '@/components/kamura/Kamura.module.css';
 import {INSTRUMENTS, LICENCE_LABEL} from '@/data/instruments';
 
@@ -52,6 +53,8 @@ export default function ToolsHub() {
 
       <section className={k.pageHero}>
         <div className={k.container}>
+          <div className={k.heroGrid}>
+          <div className={k.heroCopy}>
           <span className={k.eyebrow}>Health tools</span>
           <h1>
             Validated screens.
@@ -67,6 +70,11 @@ export default function ToolsHub() {
             <Link href="/treatments">Evidence library</Link>
             <Link href="/compounded">Compounded medicines</Link>
           </nav>
+          </div>
+          <div className={k.heroMedia}>
+            <Image src="/images/hero/tools.jpg" alt="Five ceramic tiles stepping in tone from bone white to deep teal, like a calibration scale" fill sizes="(max-width:860px) 100vw, 45vw" priority />
+          </div>
+          </div>
         </div>
       </section>
 

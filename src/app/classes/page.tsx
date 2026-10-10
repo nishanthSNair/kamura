@@ -49,7 +49,7 @@ export default function ClassesPage() {
       />
 
       {/* Hero */}
-      <PageIntro eyebrow="Classes & events / UAE" title="Find a practice that feels like you." description="Explore yoga, Pilates, breathwork and more across the UAE. Filter studios by discipline and location, then visit a studio to check its schedule." links={[{href:'/classes',label:'Classes & studios',active:true},{href:'/events',label:'Events'},{href:'/my/classes',label:'My practice'}]}/>
+      <PageIntro eyebrow="Classes & events / UAE" title="Find a practice that feels like you." description="Explore yoga, Pilates, breathwork and more across the UAE. Filter studios by discipline and location, then visit a studio to check its schedule." links={[{href:'/classes',label:'Classes & studios',active:true},{href:'/events',label:'Events'},{href:'/my/classes',label:'My practice'}]} image={{src:'/images/hero/classes.jpg',alt:'A rolled linen mat and folded woollen blanket on a pale wooden floor'}}/>
 
       {/* Directory */}
       <section className="max-w-6xl mx-auto px-6 pb-24">
