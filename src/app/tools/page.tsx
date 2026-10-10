@@ -4,6 +4,18 @@ import Image from 'next/image';
 import k from '@/components/kamura/Kamura.module.css';
 import {INSTRUMENTS, LICENCE_LABEL} from '@/data/instruments';
 
+// One image per tool, chosen so no two adjacent cards repeat.
+// See docs/image-standard.md.
+const TOOL_IMAGE: Record<string, string> = {
+  'depression-phq9': '/images/texture/porcelain.jpg',
+  'anxiety-gad7': '/images/texture/crystal.jpg',
+  'fasting-glucose': '/images/hero/compounded.jpg',
+  bmi: '/images/hero/treatments.jpg',
+  'body-fat-navy': '/images/hero/classes.jpg',
+  'pack-years': '/images/hero/explore.jpg',
+  'ideal-body-weight': '/images/hero/learn.jpg',
+};
+
 export const metadata: Metadata = {
   title: 'Free Health Screening Tools — Validated, Cited & Private',
   description:
@@ -88,6 +100,14 @@ export default function ToolsHub() {
             <div className={k.grid}>
               {items.map((i) => (
                 <Link className={k.card} href={`/tools/${i.slug}`} key={i.slug}>
+                  <div className={k.cardArt}>
+                    <Image
+                      src={TOOL_IMAGE[i.slug] ?? '/images/hero/tools.jpg'}
+                      alt=""
+                      fill
+                      sizes="(max-width:860px) 100vw, 33vw"
+                    />
+                  </div>
                   <div className={k.cardBody}>
                     <small>
                       {LICENCE_LABEL[i.licence].toUpperCase()} · ~{i.minutes} MIN

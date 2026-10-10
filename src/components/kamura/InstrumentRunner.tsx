@@ -56,6 +56,20 @@ export default function InstrumentRunner({slug}: {slug: string}) {
       {instrument.body.kind === 'questionnaire' ? (
         <form className={s.form} onSubmit={(e) => {e.preventDefault(); setSubmitted(true);}}>
           <p className={s.stem}>{instrument.body.stem}</p>
+          {(() => {
+            const total = instrument.body.kind === 'questionnaire' ? instrument.body.questions.length : 0;
+            const done = instrument.body.kind === 'questionnaire'
+              ? instrument.body.questions.filter((q) => Number.isFinite(answers[q.id])).length : 0;
+            return (
+              <div className={s.progress}>
+                <div className={s.progressTrack} role="progressbar" aria-valuemin={0} aria-valuemax={total}
+                  aria-valuenow={done} aria-label="Questions answered">
+                  <span style={{width: `${(done / total) * 100}%`}} />
+                </div>
+                <small>{done} of {total} answered</small>
+              </div>
+            );
+          })()}
           <ol className={s.questions}>
             {instrument.body.questions.map((q, i) => (
               <li key={q.id}>

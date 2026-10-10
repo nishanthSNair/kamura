@@ -19,3 +19,15 @@
  .heroGrid{grid-template-columns:1fr;gap:26px}
  .heroMedia{aspect-ratio:3/2;border-radius:16px}
 }
+
+/* ── cardArt carrying a photograph rather than an icon ───────────────────── */
+.cardArt{position:relative;overflow:hidden}
+.cardArt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+ transition:transform .5s cubic-bezier(.2,.6,.2,1)}
+.card:hover .cardArt img{transform:scale(1.035)}
+@media(prefers-reduced-motion:reduce){.cardArt img{transition:none}.card:hover .cardArt img{transform:none}}
+
+/* Keep icon-card art inside the palette — the lime and pale blue read as
+   off-brand next to the photography. */
+.card:nth-child(2) .cardArt{background:#DCE8DE}
+.card:nth-child(3) .cardArt{background:#E4EDE6}
