@@ -332,7 +332,7 @@ function HeroBackdrop({
         poster="/images/hero-home.png"
         aria-label="An oasis at golden hour"
       >
-        <source src="/Video/Oasis.mp4" type="video/mp4" />
+        <source src="/video/Oasis.mp4" type="video/mp4" />
       </video>
 
       {/* Left-loaded darken — supports the headline card sitting on the left
