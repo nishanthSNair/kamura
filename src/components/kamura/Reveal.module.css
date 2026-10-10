@@ -1,0 +1,46 @@
+/* Scroll reveal, CSS-only.
+ *
+ * Uses scroll-driven animations (animation-timeline: view()) rather than an
+ * IntersectionObserver, for three reasons:
+ *   1. It runs on the compositor — no JS on the main thread while scrolling.
+ *   2. Where it is unsupported the element simply renders in its normal,
+ *      visible state. Content is never stranded at opacity:0 waiting on a
+ *      script, which is both a reliability and an SEO problem.
+ *   3. It is reversible and cheap under prefers-reduced-motion.
+ *
+ * Distances are deliberately short (14px). Long slide-ins read as a template.
+ */
+
+@keyframes revealIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: revealIn linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 38%;
+    }
+
+    /* Children of a grid stagger by entering over slightly offset ranges,
+       so a row resolves left-to-right rather than snapping as one block. */
+    .stagger > * {
+      animation: revealIn linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 36%;
+    }
+    .stagger > *:nth-child(2) { animation-range: entry 2% entry 42%; }
+    .stagger > *:nth-child(3) { animation-range: entry 4% entry 48%; }
+    .stagger > *:nth-child(4) { animation-range: entry 6% entry 52%; }
+    .stagger > *:nth-child(5) { animation-range: entry 8% entry 56%; }
+    .stagger > *:nth-child(6) { animation-range: entry 10% entry 60%; }
+  }
+}
