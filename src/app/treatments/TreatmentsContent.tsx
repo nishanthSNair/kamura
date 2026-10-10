@@ -81,76 +81,6 @@ export default function TreatmentsContent() {
 
  return (
  <div>
- {/* Nature Hero */}
-
-
- {/* Kamura Score Explainer */}
- <section className="max-w-[1200px] mx-auto px-6 mt-8 relative z-10 mb-16">
- <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 grid md:grid-cols-2 gap-8 md:gap-10 shadow-lg">
- <div>
- <h2 className="font-serif text-2xl md:text-[28px] text-gray-900 mb-4">
- A score you can trust
- </h2>
- <p className="text-gray-500 text-[15px] leading-relaxed font-sans mb-3">
- Unlike rating sites influenced by advertising, the Kamura Score is calculated
- from publicly verifiable data. Every sub-score is shown transparently — you can
- see exactly why a treatment scores the way it does.
- </p>
- <p className="text-gray-500 text-[15px] leading-relaxed font-sans mb-5">
- Treatments are graded on a 0-100 scale and assigned a tier:
- </p>
- <div className="flex flex-wrap gap-2">
- {(["Gold Standard", "Strong", "Promising", "Limited", "Insufficient"] as const).map((tier) => {
- const colors = getScoreTierColor(tier);
- const ranges: Record<string, string> = {
- "Gold Standard": "85-100",
- Strong: "70-84",
- Promising: "50-69",
- Limited: "30-49",
- Insufficient: "0-29",
- };
- return (
- <span
- key={tier}
- className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[13px] font-semibold border font-sans ${colors.bg} ${colors.text} ${colors.border}`}
- >
- {ranges[tier]} {tier}
- </span>
- );
- })}
- </div>
- </div>
- <div className="flex flex-col gap-3">
- {[
- { icon: "🔬", label: "Research Evidence", desc: "Clinical trials, study quality, meta-analyses, consistency", weight: "45%", colorClass: "bg-score-blue/12" },
- { icon: "🛡️", label: "Safety Profile", desc: "Side effects, interactions, long-term safety data", weight: "25%", colorClass: "bg-score-green/12" },
- { icon: "🌐", label: "Accessibility", desc: "UAE availability, prescription requirements, ease of use", weight: "15%", colorClass: "bg-score-orange/12" },
- { icon: "💰", label: "Value for Money", desc: "Cost relative to effectiveness, ongoing expense", weight: "15%", colorClass: "bg-score-yellow/12" },
- ].map((factor) => (
- <div
- key={factor.label}
- className="bg-zen-mist/50 border border-sage-light/60 rounded-xl px-4 py-3 flex items-start gap-3"
- >
- <span className={`w-10 h-10 rounded-[10px] flex items-center justify-center text-lg shrink-0 ${factor.colorClass}`}>
- {factor.icon}
- </span>
- <div className="flex-1 min-w-0">
- <div className="font-semibold text-sm text-gray-900 font-sans">
- {factor.label}
- </div>
- <div className="text-xs text-gray-500 font-sans mt-0.5">
- {factor.desc}
- </div>
- </div>
- <span className="text-[13px] font-bold text-moss shrink-0 font-sans">
- {factor.weight}
- </span>
- </div>
- ))}
- </div>
- </div>
- </section>
-
  {/* Section Label */}
  <section className="max-w-[1200px] mx-auto px-6 mb-4">
  <p className="text-xs tracking-[0.3em] uppercase mb-2 text-moss font-sans font-semibold">
@@ -240,6 +170,73 @@ export default function TreatmentsContent() {
  )}
  </>
  )}
+ </section>
+
+ {/* Kamura Score Explainer */}
+ <section className="max-w-[1200px] mx-auto px-6 mt-8 relative z-10 mb-16">
+ <div className="bg-white border border-gray-200 rounded-2xl p-8 md:p-10 grid md:grid-cols-2 gap-8 md:gap-10 shadow-lg">
+ <div>
+ <h2 className="font-serif text-2xl md:text-[28px] text-gray-900 mb-4">
+ A score you can trust
+ </h2>
+ <p className="text-gray-500 text-[15px] leading-relaxed font-sans mb-3">
+ Unlike rating sites influenced by advertising, the Kamura Score is calculated
+ from publicly verifiable data. Every sub-score is shown transparently — you can
+ see exactly why a treatment scores the way it does.
+ </p>
+ <p className="text-gray-500 text-[15px] leading-relaxed font-sans mb-5">
+ Treatments are graded on a 0-100 scale and assigned a tier:
+ </p>
+ <div className="flex flex-wrap gap-2">
+ {(["Gold Standard", "Strong", "Promising", "Limited", "Insufficient"] as const).map((tier) => {
+ const colors = getScoreTierColor(tier);
+ const ranges: Record<string, string> = {
+ "Gold Standard": "85-100",
+ Strong: "70-84",
+ Promising: "50-69",
+ Limited: "30-49",
+ Insufficient: "0-29",
+ };
+ return (
+ <span
+ key={tier}
+ className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[13px] font-semibold border font-sans ${colors.bg} ${colors.text} ${colors.border}`}
+ >
+ {ranges[tier]} {tier}
+ </span>
+ );
+ })}
+ </div>
+ </div>
+ <div className="flex flex-col gap-3">
+ {[
+ { icon: "🔬", label: "Research Evidence", desc: "Clinical trials, study quality, meta-analyses, consistency", weight: "45%", colorClass: "bg-score-blue/12" },
+ { icon: "🛡️", label: "Safety Profile", desc: "Side effects, interactions, long-term safety data", weight: "25%", colorClass: "bg-score-green/12" },
+ { icon: "🌐", label: "Accessibility", desc: "UAE availability, prescription requirements, ease of use", weight: "15%", colorClass: "bg-score-orange/12" },
+ { icon: "💰", label: "Value for Money", desc: "Cost relative to effectiveness, ongoing expense", weight: "15%", colorClass: "bg-score-yellow/12" },
+ ].map((factor) => (
+ <div
+ key={factor.label}
+ className="bg-zen-mist/50 border border-sage-light/60 rounded-xl px-4 py-3 flex items-start gap-3"
+ >
+ <span className={`w-10 h-10 rounded-[10px] flex items-center justify-center text-lg shrink-0 ${factor.colorClass}`}>
+ {factor.icon}
+ </span>
+ <div className="flex-1 min-w-0">
+ <div className="font-semibold text-sm text-gray-900 font-sans">
+ {factor.label}
+ </div>
+ <div className="text-xs text-gray-500 font-sans mt-0.5">
+ {factor.desc}
+ </div>
+ </div>
+ <span className="text-[13px] font-bold text-moss shrink-0 font-sans">
+ {factor.weight}
+ </span>
+ </div>
+ ))}
+ </div>
+ </div>
  </section>
  </div>
  );
