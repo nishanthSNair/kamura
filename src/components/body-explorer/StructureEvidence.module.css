@@ -1,59 +1,64 @@
 /* Lives inside the 360px detail panel, so everything is single-column and
-   nothing relies on horizontal room. Inherits the explorer's tokens. */
+   nothing relies on horizontal room.
+
+   Every colour comes from the tokens the explorer sets, never a literal, so
+   this panel follows the body into its dark room instead of punching a white
+   hole in it. Fallbacks are the light values, for any context that renders
+   this outside .explorer. */
 
 .wrap{display:flex;flex-direction:column;gap:4px}
 
-.note,.scope{font-size:13px;line-height:1.7;color:#7a826e;margin:0 0 18px}
-.scope strong{font-weight:500;color:var(--ink)}
+.note,.scope{font-size:13px;line-height:1.7;color:var(--muted,#7a826e);margin:0 0 18px}
+.scope strong{font-weight:500;color:var(--ink,#173C3B)}
 
-.block{padding:18px 0;border-top:1px solid #173C3B14}
+.block{padding:18px 0;border-top:1px solid var(--line-d,#173C3B14)}
 .block:first-of-type{border-top:0;padding-top:0}
 .sub+.sub{margin-top:18px}
 
-.label{display:flex;align-items:center;gap:8px;color:#7f896f;font-size:12px;margin-bottom:12px}
+.label{display:flex;align-items:center;gap:8px;color:var(--faint,#7f896f);font-size:12px;margin-bottom:12px}
 
 /* Lab-value and tool rows both lead with a name and explain themselves
    underneath. The explanation is the point: it says why an organ lit up. */
-.basisRow{padding:9px 0;border-bottom:1px solid #173C3B0f}
+.basisRow{padding:9px 0;border-bottom:1px solid var(--line-d,#173C3B0f)}
 .basisRow:last-of-type{border-bottom:0}
-.basisRow strong{display:block;font-size:13.5px;font-weight:500;color:var(--ink)}
-.basisRow small{display:block;font-size:12px;line-height:1.6;color:#8a917a;margin-top:4px}
+.basisRow strong{display:block;font-size:13.5px;font-weight:500;color:var(--ink,#173C3B)}
+.basisRow small{display:block;font-size:12px;line-height:1.6;color:var(--faint,#8a917a);margin-top:4px}
 
 .toolRow{display:flex;align-items:flex-start;gap:10px;text-decoration:none;padding:11px 0;
- border-bottom:1px solid #173C3B0f}
+ border-bottom:1px solid var(--line-d,#173C3B0f)}
 .toolRow:last-of-type{border-bottom:0}
 .toolRow>span{flex:1;min-width:0}
-.toolRow strong{display:block;font-size:13.5px;font-weight:500;color:var(--ink)}
-.toolRow small{display:block;font-size:12px;line-height:1.6;color:#8a917a;margin-top:4px}
-.toolRow>svg{flex:none;margin-top:3px;color:#a1a78f}
+.toolRow strong{display:block;font-size:13.5px;font-weight:500;color:var(--ink,#173C3B)}
+.toolRow small{display:block;font-size:12px;line-height:1.6;color:var(--faint,#8a917a);margin-top:4px}
+.toolRow>svg{flex:none;margin-top:3px;color:var(--faint,#a1a78f)}
 .toolRow:hover strong{text-decoration:underline}
 
 /* Grades stay per-outcome. A coloured square reads as a label, not a rating
    bar, which is the honest register for "one finding, one grade". */
 .outcomes{list-style:none;margin:0;padding:0}
-.outcomes li{border-bottom:1px solid #173C3B0f}
+.outcomes li{border-bottom:1px solid var(--line-d,#173C3B0f)}
 .outcomes li:last-child{border-bottom:0}
 .outcomes a{display:flex;align-items:flex-start;gap:10px;text-decoration:none;padding:10px 0;min-height:44px}
-.grade{flex:none;width:19px;height:19px;border-radius:5px;color:#fff;font-size:11px;font-weight:700;
+.grade{flex:none;width:19px;height:19px;border-radius:5px;color:#071210;font-size:11px;font-weight:700;
  display:flex;align-items:center;justify-content:center;margin-top:1px}
 .outcomeBody{flex:1;min-width:0}
-.outcomeBody strong{display:block;font-size:13.5px;font-weight:500;line-height:1.45;color:var(--ink)}
-.outcomeBody small{display:block;font-size:12px;color:#8a917a;margin-top:3px}
-.outcomes a>svg{flex:none;margin-top:4px;color:#a1a78f;opacity:0}
+.outcomeBody strong{display:block;font-size:13.5px;font-weight:500;line-height:1.45;color:var(--ink,#173C3B)}
+.outcomeBody small{display:block;font-size:12px;color:var(--faint,#8a917a);margin-top:3px}
+.outcomes a>svg{flex:none;margin-top:4px;color:var(--faint,#a1a78f);opacity:0}
 .outcomes a:hover>svg{opacity:1}
 .outcomes a:hover .outcomeBody strong{text-decoration:underline}
 
-.more{width:100%;margin-top:12px;min-height:44px;border:1px solid #173C3B22!important;
- border-radius:9px;font-size:13px;color:var(--ink)}
-.more:hover{background:#f0eee3}
+.more{width:100%;margin-top:12px;min-height:44px;border:1px solid var(--line-d,#173C3B22)!important;
+ border-radius:9px;font-size:13px;color:var(--ink,#173C3B)}
+.more:hover{background:var(--surface-2,#f0eee3)}
 
-.caveat{font-size:11.5px;line-height:1.65;color:#9da38a;margin:14px 0 0}
+.caveat{font-size:11.5px;line-height:1.65;color:var(--faint,#9da38a);margin:14px 0 0}
 
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chips button{border:1px solid #173C3B20;border-radius:999px;padding:7px 12px;font-size:12px;
- color:var(--ink);min-height:34px}
-.chips button:hover{background:#e8ecdf}
+.chips button{border:1px solid var(--line-d,#173C3B20);border-radius:999px;padding:7px 12px;font-size:12px;
+ color:var(--ink,#173C3B);min-height:34px}
+.chips button:hover{background:var(--surface-2,#e8ecdf)}
 
 .quiet{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:12.5px;
- color:var(--gold);text-decoration:none}
+ color:var(--gold,#0F6B5C);text-decoration:none}
 .quiet:hover{text-decoration:underline}

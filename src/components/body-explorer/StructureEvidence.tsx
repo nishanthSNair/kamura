@@ -26,8 +26,13 @@ import s from './StructureEvidence.module.css';
  * for another are two findings, not a C.
  */
 
+/**
+ * Grade colours lifted for the explorer's dark panel — the treatment pages use
+ * darker versions of the same hues against white. Each carries near-black text,
+ * so these have to be bright enough to read against, not just visible.
+ */
 const GRADE_COLOR: Record<string, string> = {
-  A: '#0F6B5C', B: '#4C8A4A', C: '#A98434', D: '#B5736A', F: '#8C4A42',
+  A: '#4FC9A6', B: '#8CC46E', C: '#DCB45A', D: '#E39C8C', F: '#D4786A',
 };
 
 const TITLE: Record<string, string> = {

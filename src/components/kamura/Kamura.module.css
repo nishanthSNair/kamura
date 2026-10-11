@@ -31,3 +31,23 @@
    off-brand next to the photography. */
 .card:nth-child(2) .cardArt{background:#DCE8DE}
 .card:nth-child(3) .cardArt{background:#E4EDE6}
+
+/* Dark register: the navigation inverts over the body viewer so the page reads
+   as one dark room rather than a dark panel under a light bar. Scoped to the
+   attribute, so every other page keeps the light bar unchanged. */
+.nav[data-dark]{background:#0A1513F2;border-bottom-color:#2A4740;color:#E9F0EA}
+.nav[data-dark] .brandNote{color:#7E978C}
+.nav[data-dark] .desktopNav a{color:#C3D6CD}
+.nav[data-dark] .desktopNav a:hover{color:#E9F0EA}
+.nav[data-dark] .desktopNav a[aria-current]{color:#58C4A5;border-color:#58C4A5}
+.nav[data-dark] .navActions>button{color:#C3D6CD}
+.nav[data-dark] .navActions>button:hover{color:#E9F0EA}
+.nav[data-dark] .account{background:#166B57;color:#F2FBF7}
+.nav[data-dark] .mobileNav{background:#0F1C1A;border-color:#2A4740;color:#E9F0EA}
+.nav[data-dark] .mobileNav a{color:#E9F0EA;border-color:#2A4740}
+/* The language pills are Tailwind-styled for a light bar; on the dark bar the
+   inactive one fell to grey-on-near-black. Targeted through the module-scoped
+   wrapper so only the body page is affected. */
+.nav[data-dark] .language button{border-color:#3A5B52!important;color:#C3D6CD!important;background:transparent!important}
+.nav[data-dark] .language button[aria-current],
+.nav[data-dark] .language button.bg-gray-900{background:#E9F0EA!important;color:#0A1513!important;border-color:#E9F0EA!important}

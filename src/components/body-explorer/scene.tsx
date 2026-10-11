@@ -8,17 +8,31 @@ import {createExplosionLayout} from './explosion-layout';
 import {decodeModelResponse} from './model-download';
 import {PointerTap} from './pointer-tap';
 import {SYSTEMS,type Atlas,type SceneState} from './anatomy';
+/* Two grounds, because the same viewer appears in both registers.
+ *
+ * The full explorer on /body runs dark: the body is the subject there, and
+ * against the old pale ground it competed with its own background. The
+ * homepage showcase and the in-article embeds sit inside light reading pages,
+ * so they keep the pale ground they were designed for — a dark rectangle
+ * dropped into a light article reads as a broken image.
+ *
+ * DARK.ground is kept in step with --k-body-ground in TherapyExplorer.module.css. */
+const DARK={ground:0x0A1513,floor:0x0A1513,platform:0x0E201C,ring:0x4FB79A,ringOpacity:.6,innerRing:0x4FB79A,innerOpacity:.22,
+ hemiSky:0xdfeee8,hemiGround:0x0a1412,hemi:.42,key:0xfff6ec,keyIntensity:2.05,rim:0x8fd8c4,rimIntensity:1.5,fill:.45,exposure:1.08,fog:[7,22] as const};
+const LIGHT={ground:0xE7F3EB,floor:0xE7F3EB,platform:0xD5E8DB,ring:0x00786E,ringOpacity:.35,innerRing:0xDCEC8B,innerOpacity:.18,
+ hemiSky:0xffffff,hemiGround:0xa7acb2,hemi:.65,key:0xfffaf4,keyIntensity:1.6,rim:0xe9f0ff,rimIntensity:1.1,fill:0,exposure:.85,fog:null};
 interface Props {atlas:Atlas;state:SceneState;onSelect:(id:string)=>void;onProgress:(n:number)=>void;onError:(s:string)=>void;showcase?:boolean;embedded?:boolean}
 export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,showcase=false,embedded=false}:Props){
  const host=useRef<HTMLDivElement>(null),latest=useRef(state),select=useRef(onSelect);
  latest.current=state;select.current=onSelect;
  useEffect(()=>{
+  const P=(showcase||embedded)?LIGHT:DARK;
   const el=host.current!;let disposed=false,frame=0,dirty=true,ready=false,lastView='',lastReset=-1,lastIsolate='',layoutKey='',amount=0;
   let lastState:SceneState|null=null;let lastInspector:boolean|undefined;
   const abort=new AbortController();
   let renderer:T.WebGLRenderer;
   try{renderer=new T.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});}catch{onError('This browser could not start the 3D viewer. Please try a browser with WebGL enabled.');return;}
-  renderer.setPixelRatio(Math.min(devicePixelRatio,innerWidth<768?1.5:2));renderer.setClearColor('#E7F3EB');renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.85;el.appendChild(renderer.domElement);
+  renderer.setPixelRatio(Math.min(devicePixelRatio,innerWidth<768?1.5:2));renderer.setClearColor(P.ground);renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=P.exposure;el.appendChild(renderer.domElement);
   renderer.domElement.setAttribute('aria-label','Interactive human anatomy. Drag to orbit, pinch or scroll to zoom, and tap a structure to inspect it.');
   const scene=new T.Scene(),camera=new T.PerspectiveCamera(34,1,.005,100),controls=new OrbitControls(camera,renderer.domElement);
   camera.position.set(1.4,1.05,3.6);controls.target.set(0,.85,0);controls.enableDamping=true;if(showcase){controls.enableZoom=false;controls.enablePan=false;controls.enableRotate=false;renderer.domElement.style.touchAction="pan-y";}controls.dampingFactor=.085;controls.minDistance=.07;controls.maxDistance=40;controls.maxPolarAngle=Math.PI*.96;controls.addEventListener('change',()=>{dirty=true;});
@@ -31,13 +45,21 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,sh
   };
   controls.addEventListener('start',()=>{cameraGoal=null;});
   const pmrem=new T.PMREMGenerator(renderer),room=new RoomEnvironment(),env=pmrem.fromScene(room,.04);scene.environment=env.texture;room.dispose();pmrem.dispose();
-  scene.add(new T.HemisphereLight(0xffffff,0xa7acb2,.65));
-  const key=new T.DirectionalLight(0xfffaf4,1.6);key.position.set(-2,4,3);scene.add(key);
-  const rim=new T.DirectionalLight(0xe9f0ff,1.1);rim.position.set(2,2,-3);scene.add(rim);
-  const ground=new T.Mesh(new T.CircleGeometry(30,96),new T.MeshStandardMaterial({color:0xE7F3EB,roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.y=-.019;scene.add(ground);
-  const platform=new T.Mesh(new T.CylinderGeometry(.68,.7,.028,100),new T.MeshStandardMaterial({color:0xD5E8DB,metalness:.12,roughness:.67}));platform.position.y=-.016;scene.add(platform);
-  const ring=new T.Mesh(new T.RingGeometry(.63,.632,128),new T.MeshBasicMaterial({color:0x00786E,transparent:true,opacity:.35,side:T.DoubleSide}));ring.rotation.x=-Math.PI/2;ring.position.y=.001;scene.add(ring);
-  const innerRing=new T.Mesh(new T.RingGeometry(.55,.551,128),new T.MeshBasicMaterial({color:0xDCEC8B,transparent:true,opacity:.18,side:T.DoubleSide}));innerRing.rotation.x=-Math.PI/2;innerRing.position.y=.001;scene.add(innerRing);
+  /* Lit for a dark room. The model's own palette is bone, clay and muscle red —
+     pale colours that disappeared against the old pale-mint ground and read as
+     lit tissue against this one. Key from the left as before; the rim is
+     stronger because on a dark ground it is the only thing separating a
+     silhouette from the background. */
+  scene.add(new T.HemisphereLight(P.hemiSky,P.hemiGround,P.hemi));
+  const key=new T.DirectionalLight(P.key,P.keyIntensity);key.position.set(-2,4,3);scene.add(key);
+  const rim=new T.DirectionalLight(P.rim,P.rimIntensity);rim.position.set(2,2,-3);scene.add(rim);
+  // Dark only: a cool fill keeps the far side of the body off pure black.
+  if(P.fill){const fill=new T.DirectionalLight(0xbcd8e8,P.fill);fill.position.set(3,-1,2);scene.add(fill);}
+  if(P.fog)scene.fog=new T.Fog(P.ground,P.fog[0],P.fog[1]);
+  const ground=new T.Mesh(new T.CircleGeometry(30,96),new T.MeshStandardMaterial({color:P.floor,roughness:1}));ground.rotation.x=-Math.PI/2;ground.position.y=-.019;scene.add(ground);
+  const platform=new T.Mesh(new T.CylinderGeometry(.68,.7,.028,100),new T.MeshStandardMaterial({color:P.platform,metalness:.18,roughness:.74}));platform.position.y=-.016;scene.add(platform);
+  const ring=new T.Mesh(new T.RingGeometry(.63,.632,128),new T.MeshBasicMaterial({color:P.ring,transparent:true,opacity:P.ringOpacity,side:T.DoubleSide}));ring.rotation.x=-Math.PI/2;ring.position.y=.001;scene.add(ring);
+  const innerRing=new T.Mesh(new T.RingGeometry(.55,.551,128),new T.MeshBasicMaterial({color:P.innerRing,transparent:true,opacity:P.innerOpacity,side:T.DoubleSide}));innerRing.rotation.x=-Math.PI/2;innerRing.position.y=.001;scene.add(innerRing);
   const width=T.MathUtils.ceilPowerOfTwo(atlas.parts.length),data=new Float32Array(width*4),partTexture=new T.DataTexture(data,width,1,T.RGBAFormat,T.FloatType);partTexture.needsUpdate=true;
   const selectedData=new Uint8Array(width*4),selectionTexture=new T.DataTexture(selectedData,width,1);selectionTexture.needsUpdate=true;
   const materials:T.Material[]=[],geometries:T.BufferGeometry[]=[],pickers:(T.Mesh|undefined)[]=[],centers=atlas.parts.map(p=>new T.Vector3().fromArray(p.bounds[0]).add(new T.Vector3().fromArray(p.bounds[1])).multiplyScalar(.5));

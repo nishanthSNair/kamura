@@ -53,3 +53,125 @@
 
 /* The body uses the same shared navigation and light Kamura palette. */
 .explorer{top:76px;height:calc(100dvh - 76px);--ink:var(--k-ink);--gold:var(--k-teal);--muted:var(--k-muted);--paper:var(--k-paper);background:var(--k-mint);z-index:80}.sceneWrap{top:0}.library,.detail{top:70px}.explorerTools{position:absolute;top:14px;left:24px;right:24px;display:flex;justify-content:flex-end;gap:8px;z-index:12}.explorerTools button{display:flex;align-items:center;gap:8px;min-height:40px;padding:8px 14px;border:1px solid var(--k-line);border-radius:24px;background:var(--k-paper);font-size:13px;color:var(--k-ink)}.explorerTools button:first-child{display:none}.library,.detail,.bottomDock,.layersPanel{background:#ffffffed;border-color:var(--k-line)}.goalChip[aria-pressed=true]{background:var(--k-teal);color:white}.learningActions button:first-child{background:var(--k-teal)}@media(max-width:950px){.explorerTools button:first-child{display:flex}.libraryOpen{top:65px}}@media(max-width:650px){.detail{top:auto}.explorerTools{left:12px;right:12px}.sceneWrap{top:0}.libraryOpen{top:65px}.explorerTools button{font-size:12px;padding:8px 12px}}
+
+/* ── The dark register ────────────────────────────────────────────────────
+   The explorer was pale sage panels on a pale mint ground, which left the one
+   arresting thing on the site — a 2,234-mesh human body — competing with its
+   own background instead of glowing against it.
+
+   This is not a new palette. It is the same Kamura teal and bone, inverted:
+   the body gets a dark room, and the reading pages keep the light one. The
+   switch between them is the point, so nothing here leaks outside .explorer.
+
+   Kept in step with GROUND in scene.tsx, which paints the WebGL canvas. */
+.explorer{
+ --k-body-ground:#0A1513;
+ --surface:#13221F;      /* panels */
+ --surface-2:#1B2F2A;    /* raised rows, inputs, chips */
+ --line-d:#2A4740;
+ --ink:#E9F0EA;
+ --muted:#93AAA0;
+ --faint:#6B857C;
+ --gold:#58C4A5;         /* the teal, lifted to hold on dark */
+ --paper:#13221F;
+ background:var(--k-body-ground);
+ color:var(--ink);
+}
+
+.library,.detail,.bottomDock,.layersPanel,.loading,.reopen{
+ background:#13221FF2;border-color:var(--line-d);
+ box-shadow:0 24px 70px rgba(0,0,0,.45)}
+.explorerTools button{background:#13221FE6;border-color:var(--line-d);color:var(--ink)}
+.explorerTools button:hover{background:var(--surface-2)}
+
+/* Library */
+.libraryHeading{color:var(--ink)}
+.count{background:var(--surface-2);color:var(--muted)}
+.libraryTabs{background:#0F1C1A}
+.libraryTabs button{color:var(--faint)}
+.libraryTabs button[aria-pressed=true]{background:var(--surface-2);color:var(--ink);box-shadow:none}
+.search{background:#0F1C1A;border-color:var(--line-d)}
+.search input{color:var(--ink)}
+.search input::placeholder{color:var(--faint)}
+.category select{color:var(--muted)}
+.goalFilter{border-color:var(--line-d)}
+.goalFilter summary{color:var(--ink)}
+.goalChip{border:1px solid var(--line-d);color:var(--muted)}
+.therapyRow{color:var(--ink)}
+.therapyRow small{color:var(--faint)}
+.therapyRow:hover{background:var(--surface-2)}
+.therapyRow[aria-pressed=true]{background:#1F3B33;color:var(--ink)}
+.therapyDot{background:var(--faint)}
+.therapyRow[aria-pressed=true] .therapyDot{background:var(--gold)}
+.libraryFoot{color:var(--faint);border-top-color:var(--line-d)}
+.comboRow:hover,.comboRow[aria-pressed=true]{background:var(--surface-2)}
+.comboRow>span{color:var(--muted)}
+.comboRow small{color:var(--faint)}
+.listIntro,.empty{color:var(--faint)}
+
+/* Detail panel */
+.detailHeading{border-bottom-color:var(--line-d)}
+.detailHeading h1{color:var(--ink)}
+.detailHeading button{color:var(--faint)}
+.eyebrow{color:var(--gold)}
+.lead,.text{color:var(--muted)}
+.editorial{color:var(--ink)}
+.researchBadge{background:var(--surface-2);color:var(--muted)}
+.learningActions button{background:var(--surface-2);border-color:var(--line-d);color:var(--ink)}
+.learningActions button:first-child{background:#166B57;color:#F2FBF7}
+.sectionLabel{color:var(--faint)}
+.regionList h3{color:var(--faint)}
+.regionList button{border-bottom-color:var(--line-d);color:var(--ink)}
+.regionList button>span,.regionList svg{color:var(--faint)}
+.regionList button[aria-pressed=true] strong{color:var(--gold)}
+.regionList small{color:var(--faint)}
+.pathway{background:#0F1C1A}
+.pathNode>span{background:#24433B;color:var(--gold)}
+.pathNode:not(:last-child)::before{background:var(--line-d)}
+.playback{background:var(--surface-2)}
+.scope,.retrieved,.pmid{color:var(--faint)}
+.scope p{color:var(--muted)}
+.researchLink{border-block-color:var(--line-d)!important}
+.researchList article{border-bottom-color:var(--line-d)}
+.researchList h3{color:var(--ink)}
+.researchList article p,.articleMeta{color:var(--faint)}
+.articleMeta span:last-child{border-left-color:var(--line-d)}
+.detailFoot{background:#0F1C1ACC;border-top-color:var(--line-d);color:var(--faint)}
+.moleculeCard{background:var(--surface-2);border-color:var(--line-d)}
+.moleculeCard img{background:#E9F0EA;border-color:var(--line-d)}
+.molFormula{color:var(--ink)}
+.comboSelection{border-color:var(--line-d)}
+.comboSelection button{background:var(--surface-2);color:var(--muted)}
+.comboSelection button[aria-pressed=true]{background:#24433B;color:var(--ink)}
+.comboSelection p{color:var(--faint)}
+.goalHead strong{color:var(--ink)}
+
+/* Controls */
+.primary{background:#166B57!important;color:#F2FBF7!important}
+.outline{border-color:var(--line-d)!important;color:var(--ink)}
+.outline:hover{background:var(--surface-2)}
+.bottomDock>button span,.bottomDock label,.bottomDock output{color:var(--muted)}
+.bottomDock input{accent-color:var(--gold)}
+.system{color:var(--ink)}
+.system input{accent-color:var(--gold)}
+.anatomyMatches button{color:var(--ink)}
+.anatomyMatches button:hover{background:var(--surface-2)}
+.anatomyMatches p{color:var(--faint)}
+.sceneCaption{color:#CFE4DA}
+.sceneCaption span{color:var(--faint)}
+.loading strong{color:var(--ink)}
+.loading span{color:var(--muted)}
+.loading progress{accent-color:var(--gold)}
+.credits{background:#04100EB0}
+.credits>div{background:var(--surface);color:var(--ink)}
+.credits h2{color:var(--ink)}
+.credits p{color:var(--muted)}
+.uaeChip{border-color:var(--line-d);background:var(--surface-2);color:var(--muted)}
+.scoreChip{background:rgba(88,196,165,.1);border-color:rgba(88,196,165,.4);color:var(--gold)}
+.rowScore{color:var(--gold);border-color:rgba(88,196,165,.35)}
+
+/* The hover label follows the body, so it inverts with it. */
+.sceneWrap :global(.part-hover){background:#E9F0EA;color:#0A1513;font-weight:500}
+
+.explorer button:focus-visible,.explorer a:focus-visible,
+.explorer input:focus-visible,.explorer select:focus-visible{outline-color:var(--gold)}
