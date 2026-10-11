@@ -4,6 +4,7 @@ import {notFound} from 'next/navigation';
 import k from '@/components/kamura/Kamura.module.css';
 import InstrumentRunner from '@/components/kamura/InstrumentRunner';
 import {INSTRUMENTS, LICENCE_LABEL, getInstrument} from '@/data/instruments';
+import SeeOnBody from '@/components/kamura/SeeOnBody';
 
 export function generateStaticParams() {
   return INSTRUMENTS.map((i) => ({slug: i.slug}));
@@ -100,6 +101,8 @@ export default async function ToolPage({params}: {params: Promise<{slug: string}
             </article>
           </div>
         </section>
+
+        <SeeOnBody slug={instrument.slug} kind="instrument" />
 
         <section className={k.feature}>
           <div>

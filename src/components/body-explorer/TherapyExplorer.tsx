@@ -7,7 +7,8 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { Search, X, ArrowRight, ArrowLeft, ArrowUpRight, RotateCcw, RotateCw, Pause, Play, Focus, Layers, BookOpen, ChevronDown, Network, CircleHelp, Atom, MapPin, FlaskConical } from 'lucide-react';
 import catalogue from '@/data/therapy-explorer.json';
-import { DEFAULT_VISIBLE, SYSTEMS, type Atlas, type Concept, type SceneState, type SystemId } from './anatomy';
+import { DEFAULT_VISIBLE, SYSTEMS, conceptSystem, explanation, normaliseAtlas, type Atlas, type Concept, type SceneState, type SystemId } from './anatomy';
+import StructureEvidence from './StructureEvidence';
 import styles from './TherapyExplorer.module.css';
 import LearningTools, { Evidence } from './LearningTools';
 const AnatomyScene=dynamic(()=>import('./scene'),{ssr:false});
@@ -35,7 +36,9 @@ export default function TherapyExplorer(){
  const [selectedId,setSelectedId]=useState('bpc-157'),[focusedRegion,setFocusedRegion]=useState<number|null>(null),[playing,setPlaying]=useState(false);
  const [query,setQuery]=useState(''),[category,setCategory]=useState('All'),[library,setLibrary]=useState<'therapies'|'combinations'>('therapies');
  const [mobileLibrary,setMobileLibrary]=useState(false),[panelOpen,setPanelOpen]=useState(true),[layers,setLayers]=useState(false),[credits,setCredits]=useState(false),[anatomyQuery,setAnatomyQuery]=useState('');
- const [inspected,setInspected]=useState<Concept|null>(null),[selectedCombination,setSelectedCombination]=useState<string|null>(null);
+ // Carries the part's system as well as its concept, so a structure with no
+ // evidence of its own can fall back to the system it belongs to.
+ const [inspected,setInspected]=useState<(Concept&{system:SystemId})|null>(null),[selectedCombination,setSelectedCombination]=useState<string|null>(null);
  const [goal,setGoal]=useState<string|null>(null),[goalOverview,setGoalOverview]=useState(false);
  const [learning,setLearning]=useState<'mechanism'|'guide'|'compare'|'present'|null>(null);
  const therapy=catalogue.find(t=>t.id===selectedId)!;
@@ -44,7 +47,7 @@ export default function TherapyExplorer(){
  const activeCombination=combinations.find(c=>c.name===selectedCombination);
  const allMappedIds=useMemo(()=>Array.from(new Set((activeCombination?catalogue.filter(t=>activeCombination.ids.includes(t.id)):[therapy]).flatMap(t=>t.regions.flatMap(r=>r.elements)))),[therapy,activeCombination]);
  const anatomyResults=useMemo(()=>atlas&&anatomyQuery.trim()?atlas.concepts.filter(c=>c.name.toLowerCase().includes(anatomyQuery.toLowerCase())).slice(0,25):[],[atlas,anatomyQuery]);
- useEffect(()=>{const abort=new AbortController();fetch('/body-models/atlas.json',{signal:abort.signal}).then(r=>{if(!r.ok)throw Error('The anatomy library could not be loaded.');return r.json();}).then(setAtlas).catch(e=>{if(e.name!=='AbortError')setError(e.message);});return()=>abort.abort();},[]);
+ useEffect(()=>{const abort=new AbortController();fetch('/body-models/atlas.json',{signal:abort.signal}).then(r=>{if(!r.ok)throw Error('The anatomy library could not be loaded.');return r.json();}).then(a=>setAtlas(normaliseAtlas(a))).catch(e=>{if(e.name!=='AbortError')setError(e.message);});return()=>abort.abort();},[]);
  useEffect(()=>{if(!playing)return;const media=matchMedia('(prefers-reduced-motion: reduce)');if(media.matches){setPlaying(false);return;}const timer=setInterval(()=>setFocusedRegion(i=>((i??-1)+1)%therapy.regions.length),4500);return()=>clearInterval(timer);},[playing,therapy]);
  // Goal overview maps anatomical context without implying evidence strength.
  const goalScene=useMemo(()=>{if(!goalOverview||!goal)return null;const ids:string[]=[],colors:Record<string,[number,number,number]>={};goalRanked.forEach(t=>{const c:[number,number,number]=[24,142,151];t.regions.forEach(r=>r.elements.forEach(el=>{if(!(el in colors)){colors[el]=c;ids.push(el);}}));});return{ids,colors};},[goalOverview,goal,goalRanked]);
@@ -57,8 +60,17 @@ export default function TherapyExplorer(){
  // Shareable deep links: /?t=<therapy-id> opens that therapy directly.
  useEffect(()=>{const id=new URLSearchParams(location.search).get('t');if(id&&id!==selectedId&&catalogue.some(t=>t.id===id))choose(id);// eslint-disable-next-line react-hooks/exhaustive-deps
  },[]);
+ /* /body?part=FMA7197 opens that structure once the atlas is in. This is what
+    makes the link work in both directions: a tool or guide can point at the
+    organ it concerns, not just at the body page. */
+ useEffect(()=>{if(!atlas)return;const fma=new URLSearchParams(location.search).get('part');if(!fma)return;
+  const concept=atlas.concepts.find(c=>c.id===fma);if(!concept)return;
+  setInspected({...concept,system:conceptSystem(atlas,concept)});
+  setScene(s=>({...s,selected:concept.elements,isolate:false,rotate:false,reset:s.reset+1}));
+  setPanelOpen(true);// eslint-disable-next-line react-hooks/exhaustive-deps
+ },[atlas]);
  const focusRegion=(i:number)=>{setFocusedRegion(v=>v===i?null:i);setPanelOpen(true);setInspected(null);};
- const inspect=(id:string)=>{const p=atlas?.parts.find(p=>p.id===id);if(!p)return;setPlaying(false);setInspected({id:p.conceptId,name:p.name,elements:[p.id]});setScene(s=>({...s,selected:[p.id],isolate:false,rotate:false}));setPanelOpen(true);};
+ const inspect=(id:string)=>{const p=atlas?.parts.find(p=>p.id===id);if(!p)return;setPlaying(false);setInspected({id:p.conceptId,name:p.name,elements:[p.id],system:p.system});setScene(s=>({...s,selected:[p.id],isolate:false,rotate:false}));setPanelOpen(true);};
  const reset=()=>{setGoalOverview(false);setPlaying(false);setFocusedRegion(null);setInspected(null);setScene(s=>({...initial,selected:allMappedIds,reset:s.reset+1}));};
  return <div className={styles.explorer} data-lenis-prevent>
   <div className={styles.sceneWrap}>{atlas&&<AnatomyScene atlas={atlas} state={{...scene,inspectorOpen:panelOpen}} onSelect={inspect} onProgress={setProgress} onError={setError}/>}</div>
@@ -79,7 +91,13 @@ export default function TherapyExplorer(){
      {goalRanked.map((t,i)=><button key={t.id} onClick={()=>choose(t.id)}><span>{String(i+1).padStart(2,'0')}</span><strong>{t.name}</strong><small>{t.researchContext}</small><ArrowRight size={14}/></button>)}
     </section>
     <p className={styles.retrieved}>A shared body region does not imply equal benefits or a proven combination effect.</p>
-    </>:inspected?<><p className={styles.lead}>Selected structure</p><p className={styles.text}>{inspected.id}</p><button className={styles.primary} onClick={()=>setScene(s=>({...s,isolate:!s.isolate,reset:s.reset+1}))}><Focus size={16}/>{scene.isolate?'Show body context':'Focus on structure'}</button><button className={styles.outline} onClick={reset}>Return to {therapy.name}</button></>:<>
+    </>:inspected?<>
+    <p className={styles.lead}>{explanation(inspected.name,inspected.system)}</p>
+    <button className={styles.primary} onClick={()=>setScene(s=>({...s,isolate:!s.isolate,reset:s.reset+1}))}><Focus size={16}/>{scene.isolate?'Show body context':'Focus on structure'}</button>
+    <StructureEvidence conceptId={inspected.id} system={inspected.system} onTherapy={choose}/>
+    <button className={styles.outline} onClick={reset}>Return to {therapy.name}</button>
+    <p className={styles.retrieved}>{inspected.id} · BodyParts3D, licensed CC BY 4.0</p>
+    </>:<>
 <SaveButton item={{id:`therapy:${therapy.id}`,kind:"Therapy",title:therapy.name,href:`/body?t=${therapy.id}`}}/>
     {goal&&<div className={styles.goalHead}><strong>{GOALS.find(g=>g.id===goal)?.label}</strong><button onClick={()=>selectGoal(goal)}>&larr; All for this topic</button></div>}
     <div className={styles.badgeRow}>
@@ -134,7 +152,7 @@ export default function TherapyExplorer(){
    {!inspected&&!goalOverview&&<div className={styles.detailFoot}><span>{therapy.kind}</span><span>{therapy.regions.length} mapped regions</span></div>}
   </aside>}
   <div className={styles.bottomDock}><button onClick={()=>setLayers(v=>!v)} aria-expanded={layers}><Layers size={18}/><span>Layers</span></button><div><label htmlFor="body-separate">Separate anatomy <output>{Math.round(scene.explode*100)}%</output></label><input id="body-separate" type="range" min="0" max="100" value={scene.explode*100} onChange={e=>{setPlaying(false);setScene(s=>({...s,isolate:false,explode:Number(e.target.value)/100,rotate:false}));}}/></div><button aria-label={scene.rotate?'Pause body rotation':'Rotate body'} disabled={scene.isolate||scene.explode>=.4} onClick={()=>setScene(s=>({...s,rotate:!s.rotate}))}>{scene.rotate?<Pause size={18}/>:<RotateCw size={18}/>}</button><button onClick={reset} aria-label="Reset body view"><RotateCcw size={18}/></button></div>
-  {layers&&<section className={styles.layersPanel} aria-label="Anatomy controls"><div className={styles.libraryHeading}>Anatomy layers<button onClick={()=>setLayers(false)} aria-label="Close anatomy controls"><X size={18}/></button></div><label className={styles.search}><Search size={15}/><input placeholder="Find any structure…" aria-label="Search anatomy" value={anatomyQuery} onChange={e=>setAnatomyQuery(e.target.value)}/></label>{anatomyQuery?<div className={styles.anatomyMatches}>{anatomyResults.map(c=><button key={c.id} onClick={()=>{setInspected(c);setScene(s=>({...s,selected:c.elements,isolate:true,reset:s.reset+1}));setLayers(false);setPanelOpen(true);setPlaying(false);}}>{c.name}<Focus size={14}/></button>)}{!anatomyResults.length&&<p>No structures found.</p>}</div>:<>{SYSTEMS.map(s=><label className={styles.system} key={s.id}><span style={{background:s.color}}/>{s.name}<input type="checkbox" checked={scene.visible.includes(s.id)} onChange={()=>{setPlaying(false);setScene(v=>({...v,isolate:false,selected:[],visible:v.visible.includes(s.id)?v.visible.filter(id=>id!==s.id):[...v.visible,s.id as SystemId]}));}}/></label>)}<button className={styles.outline} onClick={()=>setScene(s=>({...s,visible:DEFAULT_VISIBLE,isolate:false,selected:[]}))}>Restore all systems</button></>}</section>}
+  {layers&&<section className={styles.layersPanel} aria-label="Anatomy controls"><div className={styles.libraryHeading}>Anatomy layers<button onClick={()=>setLayers(false)} aria-label="Close anatomy controls"><X size={18}/></button></div><label className={styles.search}><Search size={15}/><input placeholder="Find any structure…" aria-label="Search anatomy" value={anatomyQuery} onChange={e=>setAnatomyQuery(e.target.value)}/></label>{anatomyQuery?<div className={styles.anatomyMatches}>{anatomyResults.map(c=><button key={c.id} onClick={()=>{setInspected({...c,system:atlas?conceptSystem(atlas,c):'connective'});setScene(s=>({...s,selected:c.elements,isolate:true,reset:s.reset+1}));setLayers(false);setPanelOpen(true);setPlaying(false);}}>{c.name}<Focus size={14}/></button>)}{!anatomyResults.length&&<p>No structures found.</p>}</div>:<>{SYSTEMS.map(s=><label className={styles.system} key={s.id}><span style={{background:s.color}}/>{s.name}<input type="checkbox" checked={scene.visible.includes(s.id)} onChange={()=>{setPlaying(false);setScene(v=>({...v,isolate:false,selected:[],visible:v.visible.includes(s.id)?v.visible.filter(id=>id!==s.id):[...v.visible,s.id as SystemId]}));}}/></label>)}<button className={styles.outline} onClick={()=>setScene(s=>({...s,visible:DEFAULT_VISIBLE,isolate:false,selected:[]}))}>Restore all systems</button></>}</section>}
   <div className={styles.sceneCaption}>{goalOverview?GOALS.find(g=>g.id===goal)?.label:scene.isolate?(inspected?.name??(focusedRegion!=null?therapy.regions[focusedRegion]?.name:therapy.name)):activeCombination?.name??therapy.name}<span>{goalOverview?'ANATOMICAL CONTEXT · SELECT A THERAPY':scene.isolate?'ANATOMICAL FOCUS':'DRAG TO ROTATE · SCROLL TO ZOOM'}</span></div>
   {learning&&<LearningTools therapy={therapy} initialTab={learning} onClose={()=>setLearning(null)} onChoose={id=>{setGoal(null);setQuery('');setCategory('All');setLibrary('therapies');choose(id);}}/>}
   {progress<100&&!error&&<div className={styles.loading} role="status"><strong>Preparing the body</strong><span>{progress}% · Loading anatomical structures</span><progress max={100} value={progress}/></div>}

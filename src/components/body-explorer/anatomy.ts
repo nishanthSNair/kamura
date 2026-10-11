@@ -19,6 +19,35 @@ export const SYSTEMS: {id:SystemId;name:string;color:string;description:string}[
 export interface Part {id:string;name:string;conceptId:string;system:SystemId;chunk:number;positions:number;normals:number;indices:number;vertexCount:number;indexCount:number;bounds:[number[],number[]]}
 export interface Concept {id:string;name:string;elements:string[]}
 export interface Atlas {version:string;sex?:'male';source?:string;scope?:string;parts:Part[];concepts:Concept[];chunks:{url:string;bytes:number;gzip?:string;gzipBytes?:number}[];triangles:number}
+/**
+ * Corrections applied to atlas.json after it loads.
+ *
+ * Five structures arrived classified as 'cardiac' because their names contain
+ * "ventricle". They are the cerebrospinal fluid spaces of the brain, not
+ * chambers of the heart. The geometry proves it: all five sit at head height in
+ * the model, while every genuine cardiac structure sits in the chest.
+ *
+ * The consequence of leaving it was not cosmetic. Hiding the heart hid part of
+ * the brain, and the brain concept reported itself as partly cardiac — so any
+ * evidence bound to the heart reached into the skull.
+ *
+ * Applied here rather than by editing atlas.json so the generated model file
+ * stays a faithful copy of its BodyParts3D source and the correction stays
+ * visible in review.
+ */
+export const SYSTEM_CORRECTIONS: Record<string, SystemId> = {
+ FMA78454:'nervous', // third ventricle
+ FMA78469:'nervous', // fourth ventricle
+ FMA78450:'nervous', // left lateral ventricle
+ FMA78449:'nervous', // right lateral ventricle
+ FMA75351:'nervous', // interventricular foramen (of Monro)
+};
+export function normaliseAtlas(atlas:Atlas):Atlas{
+ let changed=0;
+ for(const p of atlas.parts){const fix=SYSTEM_CORRECTIONS[p.conceptId];if(fix&&p.system!==fix){p.system=fix;changed++;}}
+ if(changed&&process.env.NODE_ENV==='development')console.info(`[anatomy] reclassified ${changed} parts`);
+ return atlas;
+}
 export type View = 'three-quarter'|'front'|'back'|'side';
 export interface SceneState {inspectorOpen?:boolean;selectionColors?:Record<string,[number,number,number]>;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number}
 export const DEFAULT_VISIBLE:SystemId[] = ['cardiac','sensory','skeletal','muscular','arterial','venous','nervous','respiratory','digestive','urinary','lymphatic','endocrine','reproductive','connective'];
@@ -34,3 +63,23 @@ export const EXPLANATIONS:Record<string,string> = {
  'diaphragm':'A broad muscle separating the chest and abdomen. When it contracts, it increases chest volume and helps draw air into the lungs.',
 };
 export function explanation(name:string,system:SystemId){return EXPLANATIONS[name.toLowerCase()] ?? SYSTEMS.find(s=>s.id===system)?.description ?? '';}
+
+/**
+ * The system a concept most belongs to.
+ *
+ * A concept can span systems — the heart concept carries its own muscle plus
+ * the coronary arteries and veins that run over it — so this takes the system
+ * holding the most of its parts rather than the first one it finds. Falls back
+ * to connective tissue, which is the least misleading answer when a concept
+ * resolves to nothing.
+ */
+export function conceptSystem(atlas:Atlas,concept:Concept):SystemId{
+ const tally=new Map<SystemId,number>();
+ for(const el of concept.elements??[]){
+  const part=atlas.parts.find(p=>p.id===el);
+  if(part)tally.set(part.system,(tally.get(part.system)??0)+1);
+ }
+ let best:SystemId='connective',top=0;
+ for(const [sys,n] of tally)if(n>top){best=sys;top=n;}
+ return best;
+}
