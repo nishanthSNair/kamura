@@ -1,18 +1,18 @@
 /* Sits inside the reading column of a tool or guide page, so it is a quiet
    aside rather than a card competing with the instrument itself. */
 
-.wrap{margin:34px 0;padding:22px 24px;border-left:2px solid var(--k-teal,#0F6B5C);
+.wrap{margin:34px 0;padding:22px 24px;border-left:2px solid var(--k-teal);
  background:rgba(15,107,92,.04);border-radius:0 12px 12px 0}
 
 .eyebrow{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
- color:var(--k-teal,#0F6B5C);font-weight:600;margin-bottom:10px}
+ color:var(--k-teal);font-weight:600;margin-bottom:10px}
 
-.basis{margin:0 0 16px;font-size:14.5px;line-height:1.65;color:var(--k-muted,#5A6E66);max-width:56ch}
+.basis{margin:0 0 16px;font-size:14.5px;line-height:1.65;color:var(--k-muted);max-width:56ch}
 
 .links{display:flex;flex-wrap:wrap;gap:8px}
 
 .chip{display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:9px 15px;
- border:1px solid rgba(15,107,92,.3);border-radius:999px;background:#fff;
- font-size:13.5px;color:var(--k-ink,#173C3B);text-decoration:none;text-transform:capitalize}
-.chip span{color:var(--k-teal,#0F6B5C);font-size:12px}
-.chip:hover{border-color:var(--k-teal,#0F6B5C);background:rgba(15,107,92,.07)}
+ border:1px solid rgba(15,107,92,.3);border-radius:999px;background:var(--k-surface);
+ font-size:13.5px;color:var(--k-ink);text-decoration:none;text-transform:capitalize}
+.chip span{color:var(--k-teal);font-size:12px}
+.chip:hover{border-color:var(--k-teal);background:rgba(15,107,92,.07)}

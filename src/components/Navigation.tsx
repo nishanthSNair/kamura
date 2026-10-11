@@ -24,10 +24,7 @@ export default function Navigation(){
  const pathname=usePathname();const [open,setOpen]=useState(false),[search,setSearch]=useState(false);const toggle=useRef<HTMLButtonElement>(null);
  useEffect(()=>{const key=(e:KeyboardEvent)=>{if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();setSearch(true);}if(e.key==='Escape'){setOpen(false);toggle.current?.focus();}};document.addEventListener('keydown',key);return()=>document.removeEventListener('keydown',key);},[]);
  const active=(item:typeof links[number])=>pathname===item.href||pathname.startsWith(item.href+'/')||item.paths?.some(p=>pathname.startsWith(p));
- // The body page runs in the dark register, so the bar above it has to come
- // with it — a white strip over a dark viewer reads as a rendering fault.
- const dark=pathname==='/body';
- return <><a className={s.skip} href="#main-content">Skip to content</a><header className={s.nav} data-dark={dark||undefined}>
+ return <><a className={s.skip} href="#main-content">Skip to content</a><header className={s.nav}>
  <Link href="/" className={s.wordmark} onClick={()=>setOpen(false)}><Image src="/logo-symbol.svg" alt="" width={52} height={44} className={s.realLogo}/>KAMURA<span className={s.brandNote}>ROOTED IN WELLNESS</span></Link>
  <nav className={s.desktopNav} aria-label="Main navigation">{links.map(item=><Link key={item.href} href={item.href} aria-current={active(item)?'page':undefined}>{label(item.label)}</Link>)}</nav>
  <div className={s.navActions}><div className={s.language}><LanguageToggle solid/></div><button aria-label="Search Kamura" onClick={()=>setSearch(true)}><Search size={19}/></button><Link className={s.account} href="/my">{lang==='ar'?'كامورا الخاص بي':'My Kamura'} <ArrowUpRight size={15}/></Link><button ref={toggle} className={s.menuButton} aria-label={open?'Close navigation':'Open navigation'} aria-expanded={open} aria-controls="kamura-mobile-nav" onClick={()=>setOpen(v=>!v)}>{open?<X/>:<Menu/>}</button></div>

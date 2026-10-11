@@ -1,0 +1,200 @@
+/* Scroll choreography.
+ *
+ * Built on CSS scroll-driven animations (`animation-timeline`) rather than an
+ * IntersectionObserver or a scroll library, for three reasons that matter on
+ * this site specifically:
+ *
+ *   1. They run on the compositor. The homepage already hands the main thread
+ *      a 3D anatomy canvas; adding scroll handlers on top is what makes a page
+ *      feel cheap on a mid-range phone.
+ *   2. Where unsupported, the element renders in its final, visible state.
+ *      Nothing is ever stranded at opacity:0 waiting for a script — which is a
+ *      reliability problem and an SEO problem at the same time.
+ *   3. They cost nothing under prefers-reduced-motion, because the whole block
+ *      is behind that query.
+ *
+ * The restraint that keeps this from reading as a template: movement is short
+ * and slow, nothing slides in from off-screen, and nothing ever takes the
+ * scrollbar away from the reader.
+ */
+
+/* ── reveals ─────────────────────────────────────────────────────────────── */
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* A rule drawn left to right as its section arrives. Used instead of a static
+   border to mark a section opening, so structure appears as you reach it. */
+@keyframes drawLine {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* Slow vertical drift for a background layer, against the page's own scroll.
+   Small on purpose: 7% reads as depth, 30% reads as a parallax demo. */
+@keyframes driftUp {
+  from { transform: translateY(5%); }
+  to   { transform: translateY(-7%); }
+}
+
+/* A number or headline that settles into place rather than appearing. */
+@keyframes settle {
+  from { opacity: 0; transform: translateY(34px) scale(.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .rise      { animation: riseIn linear both;  animation-timeline: view(); animation-range: entry 4% entry 44%; }
+    .fade      { animation: fadeIn linear both;  animation-timeline: view(); animation-range: entry 0% entry 40%; }
+    .settle    { animation: settle linear both;  animation-timeline: view(); animation-range: entry 2% entry 48%; }
+
+    .rule {
+      transform-origin: left center;
+      animation: drawLine linear both;
+      animation-timeline: view();
+      animation-range: entry 10% entry 60%;
+    }
+
+    .drift {
+      animation: driftUp linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
+      will-change: transform;
+    }
+
+    /* Children resolve in sequence rather than snapping as one block. */
+    .stagger > * {
+      animation: riseIn linear both;
+      animation-timeline: view();
+      animation-range: entry 2% entry 42%;
+    }
+    .stagger > *:nth-child(2) { animation-range: entry 7%  entry 50%; }
+    .stagger > *:nth-child(3) { animation-range: entry 12% entry 58%; }
+    .stagger > *:nth-child(4) { animation-range: entry 17% entry 64%; }
+    .stagger > *:nth-child(5) { animation-range: entry 22% entry 70%; }
+    .stagger > *:nth-child(6) { animation-range: entry 27% entry 76%; }
+  }
+}
+
+/* ── pinned sequence ─────────────────────────────────────────────────────
+   One column holds still while the other scrolls past it. This is the device
+   premium product pages use to let an image carry several claims in turn, and
+   it needs no JavaScript: position:sticky does the pinning, and each passing
+   panel fades itself in.
+
+   Deliberately not scroll-jacking. The page scrolls at its normal speed; only
+   the position of one column is affected, so a reader who wants to get past it
+   simply scrolls. */
+
+.pinned {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 6vw, 96px);
+  align-items: start;
+}
+
+.pinnedMedia {
+  position: sticky;
+  top: 108px;
+  height: min(74vh, 660px);
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--k-grade-card);
+  border: 1px solid var(--k-line);
+  display: grid;
+  place-items: center;
+}
+
+.pinnedPanels { display: flex; flex-direction: column; }
+
+.panel {
+  min-height: 62vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0;
+  border-top: 1px solid var(--k-line);
+}
+.panel:first-child { border-top: 0; }
+
+.panelIndex {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: .22em;
+  color: var(--k-teal);
+  margin-bottom: 20px;
+}
+.panel h3 {
+  font: 400 clamp(27px, 3.4vw, 42px)/1.14 var(--font-playfair), Georgia, serif;
+  letter-spacing: -.028em;
+  margin: 0 0 18px;
+  color: var(--k-ink);
+  text-wrap: balance;
+}
+.panel p {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: var(--k-muted);
+  margin: 0 0 22px;
+  max-width: 46ch;
+}
+.panel a {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  color: var(--k-teal);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(53, 214, 164, .3);
+  padding-bottom: 4px;
+  min-height: 34px;
+}
+.panel a:hover { border-bottom-color: var(--k-teal); }
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .panel > * {
+      animation: riseIn linear both;
+      animation-timeline: view();
+      animation-range: entry 14% entry 56%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .pinned { grid-template-columns: 1fr; gap: 28px; }
+  /* Sticky media in a single column would cover the text it illustrates. */
+  .pinnedMedia { position: relative; top: 0; height: 52vh; }
+  .panel { min-height: 0; padding: 28px 0; }
+}
+
+/* ── scroll cue ──────────────────────────────────────────────────────────── */
+
+.cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--k-faint);
+}
+.cue i {
+  display: block;
+  width: 1px;
+  height: 34px;
+  background: linear-gradient(180deg, var(--k-teal), transparent);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .cue i { animation: cueDrop 2.4s cubic-bezier(.4, 0, .2, 1) infinite; transform-origin: top; }
+}
+@keyframes cueDrop {
+  0%        { transform: scaleY(0); opacity: 0; }
+  35%       { transform: scaleY(1); opacity: 1; }
+  70%, 100% { transform: scaleY(1); opacity: 0; }
+}

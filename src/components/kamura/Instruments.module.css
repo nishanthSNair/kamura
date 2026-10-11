@@ -1,63 +1,68 @@
 .runner{display:flex;flex-direction:column;gap:28px;max-width:760px}
 
 /* ── crisis panel — always first, visually distinct from the brand ── */
-.safety{border:2px solid #C4443A;background:#FDF4F3;border-radius:16px;padding:22px 24px}
-.safety strong{display:block;font-size:17px;color:#8C2A22;margin-bottom:8px}
-.safety p{margin:0 0 14px;color:#4A2622;line-height:1.6;font-size:15px}
+/* The crisis panel. It has to read as an alarm against a dark page without
+   becoming the loudest decorative thing on it, so the ground stays dark and
+   the red is carried by the border and the lifted type. Everything here is a
+   literal, deliberately: this panel must never follow a palette change by
+   accident. */
+.safety{border:2px solid #E0564A;background:#2A1512;border-radius:16px;padding:22px 24px}
+.safety strong{display:block;font-size:17px;color:#FFB4A6;margin-bottom:8px}
+.safety p{margin:0 0 14px;color:#F0D8D2;line-height:1.6;font-size:15px}
 .safety ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
 .safety li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px;
- border-top:1px solid rgba(140,42,34,.18);padding-top:9px;font-size:14.5px;color:#4A2622}
+ border-top:1px solid rgba(224,86,74,.3);padding-top:9px;font-size:14.5px;color:#F0D8D2}
 .safety li span{opacity:.85}
-.safety li b,.safety li a{color:#8C2A22;font-weight:700;font-variant-numeric:tabular-nums}
+.safety li b,.safety li a{color:#FFB4A6;font-weight:700;font-variant-numeric:tabular-nums}
 .safety li a{text-decoration:underline;text-underline-offset:3px}
 
 /* ── form ── */
 .form{display:flex;flex-direction:column;gap:22px}
-.stem{font-size:16.5px;line-height:1.55;color:#193f38;background:#EAF2EC;border-radius:12px;padding:14px 18px;margin:0}
+.stem{font-size:16.5px;line-height:1.55;color:var(--k-ink);background:var(--k-mint);border-radius:12px;padding:14px 18px;margin:0}
 .questions{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:q}
-.questions fieldset{border:1px solid rgba(25,63,56,.12);border-radius:14px;padding:16px 18px;margin:0;background:#fff}
-.questions legend{display:block;float:left;width:100%;font-size:15.5px;line-height:1.5;color:#193f38;margin-bottom:12px;padding:0}
-.qnum{display:inline-block;font-size:11px;letter-spacing:.14em;color:#6E8A80;margin-right:10px;vertical-align:1px}
+.questions fieldset{border:1px solid rgba(25,63,56,.12);border-radius:14px;padding:16px 18px;margin:0;background:var(--k-surface)}
+.questions legend{display:block;float:left;width:100%;font-size:15.5px;line-height:1.5;color:var(--k-ink);margin-bottom:12px;padding:0}
+.qnum{display:inline-block;font-size:11px;letter-spacing:.14em;color:var(--k-muted);margin-right:10px;vertical-align:1px}
 
 .options{display:flex;flex-wrap:wrap;gap:8px;clear:both}
 .options label{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(25,63,56,.18);
- border-radius:999px;padding:8px 14px;font-size:13.5px;color:#3B5A52;cursor:pointer;background:#fff;transition:all .14s}
-.options label:hover{border-color:#0F6B5C;color:#193f38}
-.options input{accent-color:#0F6B5C;margin:0}
-.chosen{background:#0F6B5C!important;border-color:#0F6B5C!important;color:#fff!important}
+ border-radius:999px;padding:8px 14px;font-size:13.5px;color:var(--k-ink);cursor:pointer;background:var(--k-surface);transition:all .14s}
+.options label:hover{border-color:var(--k-teal);color:var(--k-ink)}
+.options input{accent-color:var(--k-teal);margin:0}
+.chosen{background:var(--k-teal-deep)!important;border-color:var(--k-teal)!important;color:#fff!important}
 
 .fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
 .field{display:flex;flex-direction:column;gap:7px}
-.field>span{font-size:14px;color:#193f38;font-weight:500}
+.field>span{font-size:14px;color:var(--k-ink);font-weight:500}
 .field input[type=number]{border:1px solid rgba(25,63,56,.2);border-radius:10px;padding:11px 13px;font-size:16px;
- color:#193f38;background:#fff;width:100%}
-.field input[type=number]:focus{outline:2px solid #0F6B5C;outline-offset:1px}
-.field small{font-size:12.5px;color:#6E8A80;line-height:1.45}
+ color:var(--k-ink);background:var(--k-surface);width:100%}
+.field input[type=number]:focus{outline:2px solid var(--k-teal);outline-offset:1px}
+.field small{font-size:12.5px;color:var(--k-muted);line-height:1.45}
 
 .actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.hint{font-size:13px;color:#6E8A80;margin:0}
-.primary{display:inline-flex;align-items:center;gap:8px;background:#0F6B5C;color:#fff;border:0;border-radius:999px;
+.hint{font-size:13px;color:var(--k-muted);margin:0}
+.primary{display:inline-flex;align-items:center;gap:8px;background:var(--k-teal-deep);color:#fff;border:0;border-radius:999px;
  padding:13px 26px;font-size:14.5px;font-weight:600;cursor:pointer;text-decoration:none}
-.primary:hover{background:#0B5547}
+.primary:hover{background:var(--k-teal-deep)}
 .primary:disabled{opacity:.4;cursor:not-allowed}
-.ghost{background:none;border:0;color:#3B5A52;font-size:14px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.ghost{background:none;border:0;color:var(--k-ink);font-size:14px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 
 /* ── result ── */
-.result{border:1px solid rgba(25,63,56,.14);border-radius:18px;padding:26px;background:#fff;display:flex;flex-direction:column;gap:20px}
+.result{border:1px solid rgba(25,63,56,.14);border-radius:18px;padding:26px;background:var(--k-surface);display:flex;flex-direction:column;gap:20px}
 .scoreRow{display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap}
 .score{font-family:var(--font-playfair),Georgia,serif;font-size:60px;line-height:1;font-variant-numeric:tabular-nums}
-.score small{display:block;font-family:var(--font-inter),sans-serif;font-size:12px;color:#6E8A80;margin-top:6px;letter-spacing:.04em}
+.score small{display:block;font-family:var(--font-inter),sans-serif;font-size:12px;color:var(--k-muted);margin-top:6px;letter-spacing:.04em}
 .bandLabel{display:inline-block;color:#fff;border-radius:999px;padding:5px 14px;font-size:12.5px;font-weight:700;letter-spacing:.03em}
-.meaning{margin:12px 0 0;font-size:15.5px;line-height:1.6;color:#193f38;max-width:46ch}
-.next{border-left:3px solid #0F6B5C;padding-left:16px}
-.next small{font-size:10.5px;letter-spacing:.16em;color:#6E8A80;display:block;margin-bottom:6px}
-.next p{margin:0;font-size:15px;line-height:1.6;color:#193f38}
-.notDiagnosis{margin:0;font-size:13px;line-height:1.55;color:#6E8A80;border-top:1px solid rgba(25,63,56,.1);padding-top:16px}
+.meaning{margin:12px 0 0;font-size:15.5px;line-height:1.6;color:var(--k-ink);max-width:46ch}
+.next{border-left:3px solid var(--k-teal);padding-left:16px}
+.next small{font-size:10.5px;letter-spacing:.16em;color:var(--k-muted);display:block;margin-bottom:6px}
+.next p{margin:0;font-size:15px;line-height:1.6;color:var(--k-ink)}
+.notDiagnosis{margin:0;font-size:13px;line-height:1.55;color:var(--k-muted);border-top:1px solid rgba(25,63,56,.1);padding-top:16px}
 .resultActions{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
-.related small{font-size:10.5px;letter-spacing:.16em;color:#6E8A80;display:block;margin-bottom:10px}
+.related small{font-size:10.5px;letter-spacing:.16em;color:var(--k-muted);display:block;margin-bottom:10px}
 .related>div{display:flex;flex-wrap:wrap;gap:8px}
-.related a{border:1px solid rgba(25,63,56,.18);border-radius:999px;padding:7px 14px;font-size:13px;color:#0F6B5C;text-decoration:none}
-.related a:hover{border-color:#0F6B5C;background:#EAF2EC}
+.related a{border:1px solid rgba(25,63,56,.18);border-radius:999px;padding:7px 14px;font-size:13px;color:var(--k-teal);text-decoration:none}
+.related a:hover{border-color:var(--k-teal);background:var(--k-mint)}
 
 @media(max-width:620px){
  .score{font-size:46px}
@@ -67,6 +72,6 @@
 /* ── progress ── */
 .progress{display:flex;align-items:center;gap:14px}
 .progressTrack{flex:1;height:5px;border-radius:999px;background:rgba(25,63,56,.12);overflow:hidden}
-.progressTrack span{display:block;height:100%;background:#0F6B5C;border-radius:999px;transition:width .3s ease}
-.progress small{font-size:12.5px;color:#6E8A80;white-space:nowrap;font-variant-numeric:tabular-nums}
+.progressTrack span{display:block;height:100%;background:var(--k-teal-deep);border-radius:999px;transition:width .3s ease}
+.progress small{font-size:12.5px;color:var(--k-muted);white-space:nowrap;font-variant-numeric:tabular-nums}
 @media(prefers-reduced-motion:reduce){.progressTrack span{transition:none}}

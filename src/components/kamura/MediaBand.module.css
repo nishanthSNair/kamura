@@ -1,12 +1,16 @@
 /* Full-bleed transition band — breaks the rhythm of stacked card grids.
    See docs/image-standard.md. */
 .band{position:relative;width:100vw;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;
- height:clamp(180px,26vw,320px);overflow:hidden;background:#E8F0E9}
+ height:clamp(180px,26vw,320px);overflow:hidden;background:var(--k-paper)}
 .tall{height:clamp(260px,38vw,460px)}
 .poster,.video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .video{opacity:0;animation:fade .9s ease forwards}
 @keyframes fade{to{opacity:1}}
+/* The caption sits over photography whose brightness is unknown, so it carries
+   its own dark plate rather than borrowing the page's. It was a pale pill with
+   pale type and disappeared completely against a light frame. */
 .caption{position:absolute;left:clamp(20px,5vw,56px);bottom:clamp(16px,3vw,28px);margin:0;
- font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#193F38;opacity:.62;
- background:rgba(250,252,247,.72);backdrop-filter:blur(3px);padding:7px 14px;border-radius:999px}
+ font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#F3F7F2;
+ background:rgba(6,13,12,.72);backdrop-filter:blur(6px);padding:8px 15px;border-radius:999px;
+ border:1px solid rgba(243,247,242,.14)}
 @media(prefers-reduced-motion:reduce){.video{display:none}}

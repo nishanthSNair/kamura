@@ -8,25 +8,18 @@ import {createExplosionLayout} from './explosion-layout';
 import {decodeModelResponse} from './model-download';
 import {PointerTap} from './pointer-tap';
 import {SYSTEMS,type Atlas,type SceneState} from './anatomy';
-/* Two grounds, because the same viewer appears in both registers.
+/* The viewer's palette. One register now: the whole site runs dark, so the
+ * homepage showcase and the in-article embeds share the explorer's ground
+ * rather than carrying a pale rectangle into a dark page.
  *
- * The full explorer on /body runs dark: the body is the subject there, and
- * against the old pale ground it competed with its own background. The
- * homepage showcase and the in-article embeds sit inside light reading pages,
- * so they keep the pale ground they were designed for — a dark rectangle
- * dropped into a light article reads as a broken image.
- *
- * DARK.ground is kept in step with --k-body-ground in TherapyExplorer.module.css. */
-const DARK={ground:0x0A1513,floor:0x0A1513,platform:0x0E201C,ring:0x4FB79A,ringOpacity:.6,innerRing:0x4FB79A,innerOpacity:.22,
+ * ground is kept in step with --k-paper in globals.css. */
+const P={ground:0x0A1513,floor:0x0A1513,platform:0x0E201C,ring:0x4FB79A,ringOpacity:.6,innerRing:0x4FB79A,innerOpacity:.22,
  hemiSky:0xdfeee8,hemiGround:0x0a1412,hemi:.42,key:0xfff6ec,keyIntensity:2.05,rim:0x8fd8c4,rimIntensity:1.5,fill:.45,exposure:1.08,fog:[7,22] as const};
-const LIGHT={ground:0xE7F3EB,floor:0xE7F3EB,platform:0xD5E8DB,ring:0x00786E,ringOpacity:.35,innerRing:0xDCEC8B,innerOpacity:.18,
- hemiSky:0xffffff,hemiGround:0xa7acb2,hemi:.65,key:0xfffaf4,keyIntensity:1.6,rim:0xe9f0ff,rimIntensity:1.1,fill:0,exposure:.85,fog:null};
 interface Props {atlas:Atlas;state:SceneState;onSelect:(id:string)=>void;onProgress:(n:number)=>void;onError:(s:string)=>void;showcase?:boolean;embedded?:boolean}
 export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,showcase=false,embedded=false}:Props){
  const host=useRef<HTMLDivElement>(null),latest=useRef(state),select=useRef(onSelect);
  latest.current=state;select.current=onSelect;
  useEffect(()=>{
-  const P=(showcase||embedded)?LIGHT:DARK;
   const el=host.current!;let disposed=false,frame=0,dirty=true,ready=false,lastView='',lastReset=-1,lastIsolate='',layoutKey='',amount=0;
   let lastState:SceneState|null=null;let lastInspector:boolean|undefined;
   const abort=new AbortController();
