@@ -25,13 +25,15 @@ export default function AddToStackButton({ slug, variant = "icon" }: AddToStackB
  : "bg-white/90 text-gray-600 hover:bg-[#00786E] hover:text-white backdrop-blur-sm"
  }`}
  title={inStack ? "Remove from stack" : "Add to stack"}
+ aria-label={inStack ? "Remove from stack" : "Add to stack"}
+ aria-pressed={inStack}
  >
  {inStack ? (
- <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+ <svg aria-hidden="true" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
  </svg>
  ) : (
- <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+ <svg aria-hidden="true" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
  </svg>
  )}
@@ -54,14 +56,14 @@ export default function AddToStackButton({ slug, variant = "icon" }: AddToStackB
  >
  {inStack ? (
  <>
- <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+ <svg aria-hidden="true" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
  </svg>
  In My Stack
  </>
  ) : (
  <>
- <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+ <svg aria-hidden="true" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
  </svg>
  Add to Stack

@@ -17423,7 +17423,7 @@
         "lymphatic-drainage",
         "yoga"
       ],
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1663012948067-0478e4f9d9c6?w=800&h=500&fit=crop",
+      "imageUrl": "/images/category/mind-body-movement.jpg",
       "keyStudies": [
         {
           "title": "Effectiveness of myofascial release: systematic review of randomized controlled trials",
@@ -20467,7 +20467,7 @@
       "category": "Mind-Body & Movement",
       "description": "An ancient Chinese martial art practiced as a slow, flowing form of exercise. Harvard-endorsed as one of the best exercises for healthy aging. Strong evidence for balance, fall prevention, cardiovascular health, cognitive function, and stress reduction.",
       "icon": "🥋",
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1661689934749-ad31b86608d7?w=800&h=500&fit=crop",
+      "imageUrl": "/images/category/mind-body-movement.jpg",
       "kamuraScore": 87,
       "scores": {
         "research": 82,
@@ -21218,7 +21218,7 @@
       "category": "Traditional & Alternative Medicine",
       "description": "Spinal manipulation and musculoskeletal alignment therapy. One of the most widely used complementary therapies globally with strong evidence for low back pain and moderate evidence for neck pain and headaches.",
       "icon": "🦴",
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1663012948067-0478e4f9d9c6?w=800&h=500&fit=crop",
+      "imageUrl": "/images/category/traditional-alternative.jpg",
       "kamuraScore": 72,
       "scores": {
         "research": 72,
@@ -22744,7 +22744,7 @@
       "category": "Mind-Body & Movement",
       "description": "An ancient Chinese practice combining gentle movements, breathing, and meditation to cultivate and balance 'qi' (life energy). Strong evidence for balance, cognitive function, chronic pain, and quality of life in older adults.",
       "icon": "☯️",
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1661689934749-ad31b86608d7?w=800&h=500&fit=crop",
+      "imageUrl": "/images/category/mind-body-movement.jpg",
       "kamuraScore": 80,
       "scores": {
         "research": 68,
@@ -28542,7 +28542,7 @@
       "category": "Mind-Body & Movement",
       "description": "Japanese nature therapy practice of immersive, mindful walking in forested environments. Phytoncides (antimicrobial organic compounds released by trees) combined with sensory engagement lower cortisol, blood pressure, and inflammation while boosting NK cell activity.",
       "icon": "🌲",
-      "imageUrl": "https://plus.unsplash.com/premium_photo-1663091449821-5a13e63d0982?w=800&h=500&fit=crop",
+      "imageUrl": "/images/category/mind-body-movement.jpg",
       "kamuraScore": 78,
       "scores": {
         "research": 70,

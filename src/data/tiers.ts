@@ -26,7 +26,10 @@ export const TIERS: TierConfig[] = [
  textClass: "text-[#C4A882]",
  bgClass: "bg-[#C4A882]/10",
  borderClass: "border-[#C4A882]/30",
- badgeBg: "bg-gradient-to-br from-[#C4A882] to-[#A88B6A]",
+ // White on #C4A882 measured 2.27:1 — the Gold Standard badge, the most
+  // prominent one on the page, was the only tier whose letter failed contrast.
+  // Darkened to the palette's amber so white clears 4.9:1 like the others.
+  badgeBg: "bg-gradient-to-br from-[#8E6A2E] to-[#6F5220]",
  },
  {
  letter: "A",

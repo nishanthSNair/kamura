@@ -65,21 +65,21 @@
 
    Kept in step with GROUND in scene.tsx, which paints the WebGL canvas. */
 .explorer{
- --k-body-ground:#0A1513;
- --surface:#13221F;      /* panels */
- --surface-2:#1B2F2A;    /* raised rows, inputs, chips */
- --line-d:#2A4740;
- --ink:#E9F0EA;
- --muted:#93AAA0;
- --faint:#6B857C;
- --gold:#58C4A5;         /* the teal, lifted to hold on dark */
- --paper:#13221F;
+ --k-body-ground:#0A1020;
+ --surface:#141C33;      /* panels */
+ --surface-2:#1C2440;    /* raised rows, inputs, chips */
+ --line-d:#27304B;
+ --ink:#F1EEE6;
+ --muted:#A8B0C4;
+ --faint:#7B8299;
+ --gold:#F5A524;         /* the teal, lifted to hold on dark */
+ --paper:#141C33;
  background:var(--k-body-ground);
  color:var(--ink);
 }
 
 .library,.detail,.bottomDock,.layersPanel,.loading,.reopen{
- background:#13221FF2;border-color:var(--line-d);
+ background:#141C33F2;border-color:var(--line-d);
  box-shadow:0 24px 70px rgba(0,0,0,.45)}
 .explorerTools button{background:#13221FE6;border-color:var(--line-d);color:var(--ink)}
 .explorerTools button:hover{background:var(--surface-2)}
@@ -87,10 +87,10 @@
 /* Library */
 .libraryHeading{color:var(--ink)}
 .count{background:var(--surface-2);color:var(--muted)}
-.libraryTabs{background:#0F1C1A}
+.libraryTabs{background:#101830}
 .libraryTabs button{color:var(--faint)}
 .libraryTabs button[aria-pressed=true]{background:var(--surface-2);color:var(--ink);box-shadow:none}
-.search{background:#0F1C1A;border-color:var(--line-d)}
+.search{background:#101830;border-color:var(--line-d)}
 .search input{color:var(--ink)}
 .search input::placeholder{color:var(--faint)}
 .category select{color:var(--muted)}
@@ -100,7 +100,7 @@
 .therapyRow{color:var(--ink)}
 .therapyRow small{color:var(--faint)}
 .therapyRow:hover{background:var(--surface-2)}
-.therapyRow[aria-pressed=true]{background:#1F3B33;color:var(--ink)}
+.therapyRow[aria-pressed=true]{background:#223055;color:var(--ink)}
 .therapyDot{background:var(--faint)}
 .therapyRow[aria-pressed=true] .therapyDot{background:var(--gold)}
 .libraryFoot{color:var(--faint);border-top-color:var(--line-d)}
@@ -118,15 +118,15 @@
 .editorial{color:var(--ink)}
 .researchBadge{background:var(--surface-2);color:var(--muted)}
 .learningActions button{background:var(--surface-2);border-color:var(--line-d);color:var(--ink)}
-.learningActions button:first-child{background:#166B57;color:#F2FBF7}
+.learningActions button:first-child{background:#B9790F;color:#F2FBF7}
 .sectionLabel{color:var(--faint)}
 .regionList h3{color:var(--faint)}
 .regionList button{border-bottom-color:var(--line-d);color:var(--ink)}
 .regionList button>span,.regionList svg{color:var(--faint)}
 .regionList button[aria-pressed=true] strong{color:var(--gold)}
 .regionList small{color:var(--faint)}
-.pathway{background:#0F1C1A}
-.pathNode>span{background:#24433B;color:var(--gold)}
+.pathway{background:#101830}
+.pathNode>span{background:#2A3456;color:var(--gold)}
 .pathNode:not(:last-child)::before{background:var(--line-d)}
 .playback{background:var(--surface-2)}
 .scope,.retrieved,.pmid{color:var(--faint)}
@@ -136,18 +136,18 @@
 .researchList h3{color:var(--ink)}
 .researchList article p,.articleMeta{color:var(--faint)}
 .articleMeta span:last-child{border-left-color:var(--line-d)}
-.detailFoot{background:#0F1C1ACC;border-top-color:var(--line-d);color:var(--faint)}
+.detailFoot{background:#101830CC;border-top-color:var(--line-d);color:var(--faint)}
 .moleculeCard{background:var(--surface-2);border-color:var(--line-d)}
-.moleculeCard img{background:#E9F0EA;border-color:var(--line-d)}
+.moleculeCard img{background:#F1EEE6;border-color:var(--line-d)}
 .molFormula{color:var(--ink)}
 .comboSelection{border-color:var(--line-d)}
 .comboSelection button{background:var(--surface-2);color:var(--muted)}
-.comboSelection button[aria-pressed=true]{background:#24433B;color:var(--ink)}
+.comboSelection button[aria-pressed=true]{background:#2A3456;color:var(--ink)}
 .comboSelection p{color:var(--faint)}
 .goalHead strong{color:var(--ink)}
 
 /* Controls */
-.primary{background:#166B57!important;color:#F2FBF7!important}
+.primary{background:#B9790F!important;color:#F2FBF7!important}
 .outline{border-color:var(--line-d)!important;color:var(--ink)}
 .outline:hover{background:var(--surface-2)}
 .bottomDock>button span,.bottomDock label,.bottomDock output{color:var(--muted)}
@@ -157,12 +157,12 @@
 .anatomyMatches button{color:var(--ink)}
 .anatomyMatches button:hover{background:var(--surface-2)}
 .anatomyMatches p{color:var(--faint)}
-.sceneCaption{color:#CFE4DA}
+.sceneCaption{color:#C2C9D8}
 .sceneCaption span{color:var(--faint)}
 .loading strong{color:var(--ink)}
 .loading span{color:var(--muted)}
 .loading progress{accent-color:var(--gold)}
-.credits{background:#04100EB0}
+.credits{background:#060B18B0}
 .credits>div{background:var(--surface);color:var(--ink)}
 .credits h2{color:var(--ink)}
 .credits p{color:var(--muted)}
@@ -171,7 +171,7 @@
 .rowScore{color:var(--gold);border-color:rgba(88,196,165,.35)}
 
 /* The hover label follows the body, so it inverts with it. */
-.sceneWrap :global(.part-hover){background:#E9F0EA;color:#0A1513;font-weight:500}
+.sceneWrap :global(.part-hover){background:#F1EEE6;color:#0A1020;font-weight:500}
 
 .explorer button:focus-visible,.explorer a:focus-visible,
 .explorer input:focus-visible,.explorer select:focus-visible{outline-color:var(--gold)}
