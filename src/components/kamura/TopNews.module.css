@@ -33,6 +33,7 @@
  text-decoration-thickness:1px;text-decoration-color:var(--k-line-strong)}
 .lead p{font-size:16px;line-height:1.72;color:var(--k-muted);margin:0 0 16px;max-width:60ch}
 .byline{font-size:13px;color:var(--k-faint);font-variant-numeric:tabular-nums}
+.byline b{font-weight:600;color:var(--k-muted)}
 
 .secondary{list-style:none;margin:0;padding:0}
 .secondary li{border-bottom:1px solid var(--k-line)}
@@ -47,10 +48,13 @@
 .sMeta{font-size:12.5px;color:var(--k-faint);white-space:nowrap;
  font-variant-numeric:tabular-nums}
 
-/* The outside column sits on its own surface so it is obvious at a glance
-   that Kamura did not write it. */
-.rail{background:var(--k-surface);border:1px solid var(--k-line);border-radius:14px;
- padding:clamp(20px,2.5vw,28px)}
+/* Deliberately NOT a card.
+   NN/g's banner-blindness work found a non-ad internal promotion skipped
+   purely because it had three ad-like traits: a right-rail position, a
+   distinct background fill, and a rounded rectangular shape. This column had
+   all three. It is now a plain column separated by a rule, which is how a
+   newspaper sidebar signals "different source" without signalling "advert". */
+.rail{border-left:1px solid var(--k-line);padding:0 0 0 clamp(20px,2.5vw,32px)}
 .railHead{font-size:11px;letter-spacing:.22em;text-transform:uppercase;
  color:var(--k-faint);font-weight:600;margin:0 0 18px;font-family:var(--font-inter),Arial,sans-serif}
 .railList{list-style:none;margin:0;padding:0}

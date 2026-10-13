@@ -15,6 +15,12 @@ import s from './TopNews.module.css';
  * guidance is often actively wrong, an undated claim is an unverifiable
  * claim — so the thing the category hides is made visible here.
  *
+ * The author's name sits on the card for the same reason. Eysenbach & Köhler
+ * (BMJ 2002) watched people answer real health questions and found that none
+ * of them went looking for who stood behind a site, and that they could name
+ * the source for only 21% of the answers they found. Authority has to be
+ * absorbed beside the claim; an About page does not get read.
+ *
  * The split is deliberate and is the honest version of what a health portal
  * does. Portals mix syndicated wire copy with their own pages under one
  * "news" heading, which leaves a reader unsure who is talking. Here the two
@@ -63,6 +69,7 @@ export default function TopNews() {
             <h3>{lead.title}</h3>
             <p>{lead.excerpt}</p>
             <span className={s.byline}>
+              {lead.author?.name && <><b>{lead.author.name}</b> · </>}
               {fmt(lead.date)} · {lead.readingTime} min read
               {lead.lastUpdated && lead.lastUpdated !== lead.date && (
                 <> · reviewed {fmt(lead.lastUpdated)}</>
