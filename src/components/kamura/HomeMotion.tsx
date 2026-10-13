@@ -94,27 +94,15 @@ export default function HomeMotion() {
         });
       });
 
-      /* ── Hero parallax ─────────────────────────────────────────────────
-         The figure drifts and dims as the page leaves it behind, so the hero
-         hands off to the content instead of simply scrolling away. Scrubbed,
-         so it is tied to scroll position rather than playing on its own. */
-      const heroFigure = document.querySelector<HTMLElement>('[data-fx="hero-figure"]');
-      if (heroFigure) {
-        gsap.to(heroFigure, {
-          yPercent: 12,
-          scale: 1.04,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: heroFigure.closest('section') ?? heroFigure,
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 0.6,
-          },
-        });
-      }
-
-      /* ── Slow drift on the pinned image ────────────────────────────────
-         Small on purpose: 8% reads as depth, 30% reads as a parallax demo. */
+      /* ── One decorative drift ──────────────────────────────────────────
+         The usability evidence on parallax is poor: Frederick et al. (2015)
+         found only "fun" reached significance across five hypothesised
+         benefits, with two of 86 participants reporting motion sickness, and
+         NN/g's scrolljacking work finds disorientation and task agitation.
+         So this is kept to the conditions where it is defensible — a single
+         purely decorative image, an 8% differential, never over text, and
+         not on small screens where the effect is worst. */
+      if (window.matchMedia('(min-width: 900px)').matches)
       gsap.utils.toArray<HTMLElement>('[data-fx="drift"]').forEach((el) => {
         gsap.fromTo(
           el,

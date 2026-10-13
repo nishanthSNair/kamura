@@ -1,0 +1,84 @@
+/* Full-bleed indigo band. The image sits right, the copy left, and a scrim
+   runs between them so the headline never relies on the artwork's own
+   darkness to stay legible — generated images change, contrast requirements
+   do not.
+
+   Sized to its content rather than to 100vh: a viewport-height hero pushes
+   the page's first real content out of the opening frame, and the manifest
+   below the headline is the thing that tells a stranger whether this site
+   has anything for them. */
+
+.hero{
+ position:relative;
+ width:100vw;left:50%;margin-left:-50vw;
+ background:#0A1020;
+ color:#F1EEE6;
+ overflow:hidden;
+ isolation:isolate;
+}
+
+.art{position:absolute;inset:0;z-index:0}
+.img{object-fit:cover;object-position:72% 50%}
+/* Two gradients: one horizontal to protect the copy, one vertical so the
+   manifest row at the bottom sits on a settled ground. */
+.scrim{position:absolute;inset:0;
+ background:
+  linear-gradient(90deg,#0A1020 0%,rgba(10,16,32,.94) 34%,rgba(10,16,32,.55) 58%,rgba(10,16,32,.25) 100%),
+  linear-gradient(0deg,#0A1020 0%,rgba(10,16,32,.5) 22%,transparent 52%)}
+
+.inner{position:relative;z-index:1;max-width:1240px;margin:0 auto;
+ padding:clamp(72px,11vw,150px) clamp(22px,4vw,64px) 0;
+ display:flex;flex-direction:column;gap:clamp(44px,7vw,92px)}
+
+.copy{max-width:min(660px,100%)}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+ color:#F5A524;font-weight:600;margin:0 0 24px}
+
+/* Scoped to .copy: a bare element selector is not a valid CSS Module. */
+/* Width is set in ch of the heading's own size, so the line count holds
+   across breakpoints without hard breaks fighting text-wrap: balance. */
+.copy h1{font:400 clamp(38px,6vw,76px)/1.04 var(--font-playfair),Georgia,serif;
+ letter-spacing:-.04em;margin:0 0 26px;color:#F1EEE6;text-wrap:balance;max-width:13ch}
+.copy h1 em{font-style:italic;color:#F5A524}
+
+.lede{font-size:clamp(16px,1.9vw,19px);line-height:1.7;color:#A8B0C4;
+ max-width:54ch;margin:0 0 32px}
+
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+ min-height:50px;padding:14px 24px;border-radius:30px;font-size:14.5px;font-weight:600;
+ text-decoration:none}
+/* Graphite on amber. Bone on amber is 1.8:1 and must never ship. */
+.primary{background:#F5A524;color:#1A1714}
+.primary:hover{background:#FFBB4D}
+.secondary{border:1px solid #3A4566;color:#F1EEE6}
+.secondary:hover{border-color:#F5A524;color:#F5A524}
+
+/* The manifest. Figures first because a numeral stops the eye where a word
+   does not, and each row is a link so the claim is also the way in. */
+.manifest{list-style:none;margin:0;padding:0 0 clamp(26px,4vw,44px);
+ display:grid;grid-template-columns:repeat(5,1fr);gap:1px;
+ background:rgba(58,69,102,.5);border-top:1px solid rgba(58,69,102,.5);
+ border-bottom:1px solid rgba(58,69,102,.5);padding-top:1px;margin-bottom:clamp(26px,4vw,44px)}
+.manifest li{background:#0A1020}
+.manifest a{display:block;padding:clamp(18px,2.4vw,26px) clamp(12px,1.6vw,20px);
+ text-decoration:none;color:#F1EEE6;height:100%;transition:background .25s ease}
+.manifest a:hover{background:#141C33}
+.manifest strong{display:block;font:400 clamp(28px,3.6vw,44px)/1 var(--font-playfair),Georgia,serif;
+ letter-spacing:-.03em;font-variant-numeric:tabular-nums lining-nums;margin-bottom:9px}
+.manifest a:hover strong{color:#F5A524}
+.manifest span{display:block;font-size:12.5px;line-height:1.5;color:#A8B0C4;max-width:18ch}
+
+@media(max-width:1000px){
+ .manifest{grid-template-columns:repeat(3,1fr)}
+ .manifest li:nth-child(4),.manifest li:nth-child(5){grid-column:span 1}
+}
+@media(max-width:700px){
+ .img{object-position:68% 50%}
+ .scrim{background:
+   linear-gradient(0deg,#0A1020 0%,rgba(10,16,32,.86) 38%,rgba(10,16,32,.52) 70%,rgba(10,16,32,.3) 100%)}
+ .manifest{grid-template-columns:repeat(2,1fr)}
+ .manifest li:last-child{grid-column:1/-1}
+ .inner{padding-top:clamp(56px,14vw,96px)}
+}
+@media(prefers-reduced-motion:reduce){.manifest a{transition:none}}

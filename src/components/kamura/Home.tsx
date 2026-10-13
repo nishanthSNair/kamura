@@ -1,33 +1,46 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import {ArrowUpRight, Activity, Brain, Heart, MoveUpRight} from 'lucide-react';
+import {ArrowUpRight, MoveUpRight} from 'lucide-react';
+import Hero from './Hero';
+import TopNews from './TopNews';
+import TopTools from './TopTools';
 import HomeBody from './HomeBody';
-import MediaBand from './MediaBand';
-import Inventory from './Inventory';
 import HomeMotion from './HomeMotion';
+import MediaBand from './MediaBand';
 import {treatments} from '@/data/treatments';
 import {INSTRUMENTS} from '@/data/instruments';
-import r from './Reveal.module.css';
 import x from './Scroll.module.css';
 import s from './Kamura.module.css';
 
 /**
- * Counts are derived so the page cannot claim a library it no longer has.
- * Graded outcomes are counted here rather than hardcoded for the same reason.
+ * The homepage.
+ *
+ * Seven sections, in a deliberate order. Measuring WebMD, Healthline, Medical
+ * News Today and Harvard Health gave a canonical structure — editorial is the
+ * first content block on all four, and tools follow it — but also a failure
+ * mode worth avoiding: WebMD runs fourteen equally weighted sections and so
+ * answers nobody's question about what matters today. The count here is held
+ * down on purpose.
+ *
+ * Two places this deliberately departs from the category:
+ *
+ *   The hero states what is in the library as figures. None of the four says
+ *   what it holds; a visitor who cannot tell in a few seconds whether a site
+ *   has anything for them leaves.
+ *
+ *   The body gets a band of its own rather than being a link in a nav. Not one
+ *   of the four embeds an interactive tool on its homepage — every calculator
+ *   and symptom checker is a destination. The anatomy is the thing Kamura has
+ *   that they do not, so it is on the page, not behind it.
  */
+
 const OUTCOMES = treatments.reduce((n, t) => n + (t.outcomes?.length ?? 0), 0);
 
-/**
- * The pinned sequence. One visual holds still while three claims pass it —
- * the device a product page uses when a single image has to carry more than
- * one idea. Each panel earns its place by naming something the site actually
- * contains, with the figure derived above.
- */
 const PANELS = [
   {
     index: 'ONE',
     title: 'Start with your own body, not a search box.',
-    text: `Open the anatomy and choose a structure. Kamura answers with the lab values that reflect it, the screening tools that measure it, and the graded research bound to it — ${OUTCOMES} outcomes in all, each tied to one treatment and one finding.`,
+    text: `Choose a structure and Kamura answers with the lab values that reflect it, the tools that measure it, and the graded research bound to it — ${OUTCOMES} outcomes in all, each tied to one treatment and one finding.`,
     href: '/body',
     cta: 'Open the body',
   },
@@ -47,28 +60,50 @@ const PANELS = [
   },
 ];
 
+const DIRECTORY = [
+  {
+    title: 'Classes & studios',
+    text: 'Yoga, Pilates, breathwork and more. Explore studios by discipline and emirate.',
+    href: '/classes',
+    label: 'Move & restore',
+  },
+  {
+    title: 'Care & services',
+    text: 'Explore the kinds of care Kamura is bringing together. Provider booking is in development.',
+    href: '/explore',
+    label: 'Find care',
+  },
+  {
+    title: 'Events & ideas',
+    text: 'Discover wellness events, workshops and conversations around longevity.',
+    href: '/events',
+    label: 'Meet & learn',
+  },
+];
+
 export default function Home() {
   return (
     <div className={s.page}>
       <HomeMotion />
+
+      {/* 1 · The hero states what is here. */}
+      <Hero />
+
+      {/* 2 · Editorial, the first content block — the one thing every health
+             portal agrees on. `lift` overlaps the hero: occlusion is the
+             strongest pictorial depth cue there is, and it costs nothing. */}
+      <div className={`${s.container} ${s.lift}`}>
+        <TopNews />
+
+        {/* 3 · Tools, adjacent to the news rather than buried at block 11. */}
+        <TopTools />
+      </div>
+
+      {/* 4 · The body. The thing none of the portals have. */}
       <HomeBody />
 
       <div className={s.container}>
-        <section className={s.homeIntroduction} data-fx="rise">
-          <span className={s.eyebrow}>What is Kamura?</span>
-          <h2>Your place to understand health and explore what comes next.</h2>
-          <p>
-            Bring your health reports together, explore how treatments work and prepare questions
-            for your next appointment. When you&rsquo;re ready, explore care providers, studios and
-            wellness events.
-          </p>
-          <span className={x.cue} aria-hidden="true">
-            <i />
-            Scroll
-          </span>
-        </section>
-
-        {/* Pinned sequence — the body holds while the three claims pass it. */}
+        {/* 5 · How it works — one visual held while three claims pass it. */}
         <section className={x.pinned} aria-labelledby="how-heading">
           <h2 id="how-heading" className={s.srOnly}>
             How Kamura works
@@ -80,7 +115,8 @@ export default function Home() {
               width={640}
               height={1344}
               sizes="(max-width:900px) 90vw, 44vw"
-              className={x.drift} data-fx="drift"
+              className={x.drift}
+              data-fx="drift"
               style={{width: 'auto', height: '112%', objectFit: 'contain'}}
             />
           </div>
@@ -97,96 +133,6 @@ export default function Home() {
             ))}
           </div>
         </section>
-
-        <nav className={s.strip} data-fx="stagger" aria-label="Discover Kamura">
-          <Link href="/reports">
-            <div>
-              <strong>Bring your reports together</strong>
-              <small>One clear appointment summary</small>
-            </div>
-            <ArrowUpRight />
-          </Link>
-          <Link href="/explore">
-            <div>
-              <strong>Find your care</strong>
-              <small>Explore care &amp; wellness services</small>
-            </div>
-            <ArrowUpRight />
-          </Link>
-          <Link href="/classes">
-            <div>
-              <strong>Make room for movement</strong>
-              <small>Classes &amp; studios across the UAE</small>
-            </div>
-            <ArrowUpRight />
-          </Link>
-        </nav>
-
-        <Inventory />
-      </div>
-
-      <MediaBand
-        video="/video/transition-porcelain.mp4"
-        poster="/images/texture/porcelain-poster.jpg"
-        alt="Sculptural porcelain and clay forms in soft light"
-        caption="Understand the body"
-      />
-
-      <div className={s.container}>
-        <section className={s.section}>
-          <div className={s.sectionHead}>
-            <div>
-              <span className={s.eyebrow}>Start with a question</span>
-              <h2 data-fx="rise">
-                What would you like
-                <br />
-                to understand?
-              </h2>
-            </div>
-            <Link href="/learn">Explore the learning library ↗</Link>
-          </div>
-          <div className={s.grid} data-fx="stagger">
-            {[
-              {
-                title: 'How does tissue repair work?',
-                text: 'Explore muscle and connective tissue, repair pathways and the research behind BPC-157.',
-                href: '/peptides/bpc-157',
-                Icon: Activity,
-                label: 'BODY & RECOVERY',
-              },
-              {
-                title: 'How do hormones send signals?',
-                text: 'Follow testosterone signalling and feedback. Connect the mechanism to the evidence.',
-                href: '/body?t=trt',
-                Icon: Brain,
-                label: 'HORMONES & HEALTH',
-              },
-              {
-                title: 'What is visceral fat?',
-                text: 'Explore visceral fat and see what tesamorelin studies actually measured.',
-                href: '/peptides/tesamorelin',
-                Icon: Heart,
-                label: 'METABOLIC HEALTH',
-              },
-            ].map((c) => (
-              <Link href={c.href} key={c.title} className={s.card}>
-                <div className={s.cardArt}>
-                  <c.Icon />
-                </div>
-                <div className={s.cardBody}>
-                  <small>{c.label}</small>
-                  <h3>{c.title}</h3>
-                  <p>{c.text}</p>
-                  <span>Open the explanation ↗</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <p className={s.sectionFoot} data-fx="rise">
-            Taking a compounded medicine and unsure what it actually is?{' '}
-            <Link href="/compounded">Read the leaflet it never came with ↗</Link>
-          </p>
-        </section>
       </div>
 
       <MediaBand
@@ -197,6 +143,7 @@ export default function Home() {
       />
 
       <div className={s.container}>
+        {/* 6 · The reason to come back. */}
         <section className={s.feature} data-fx="rise">
           <div>
             <span className={s.eyebrow}>My Kamura</span>
@@ -227,6 +174,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* 7 · Where the knowledge meets the city. */}
         <section className={s.section}>
           <div className={s.sectionHead}>
             <div>
@@ -239,26 +187,7 @@ export default function Home() {
             </div>
           </div>
           <div className={s.grid} data-fx="stagger">
-            {[
-              {
-                title: 'Classes & studios',
-                text: 'Yoga, Pilates, breathwork and more. Explore studios by discipline and emirate.',
-                href: '/classes',
-                label: 'MOVE & RESTORE',
-              },
-              {
-                title: 'Care & services',
-                text: 'Explore the kinds of care Kamura is bringing together. Provider booking is in development.',
-                href: '/explore',
-                label: 'FIND CARE',
-              },
-              {
-                title: 'Events & ideas',
-                text: 'Discover wellness events, workshops and conversations around longevity.',
-                href: '/events',
-                label: 'MEET & LEARN',
-              },
-            ].map((c) => (
+            {DIRECTORY.map((c) => (
               <Link href={c.href} key={c.href} className={s.card}>
                 <div className={s.cardBody}>
                   <small>{c.label}</small>

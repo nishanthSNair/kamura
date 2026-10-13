@@ -5,27 +5,33 @@ two images, made months apart, look like they belong to the same publication.
 
 ## Art direction
 
-**Palette — strictly limited.** Sage mint (`#E8F0E9`), bone white (`#FAFCF7`),
-warm cream, deep teal shadow (`#193F38`), and muted clay (`#C9A396`) as the only
-warm accent. Nothing saturated. Nothing blue-tech.
+**Palette — strictly limited.** Deep indigo-black (`#0C1324`) as the ground,
+bone white (`#F1EEE6`) for the subject, and warm amber (`#F5A524`) as the only
+light source and the only accent. Nothing green, nothing blue-tech, nothing
+pastel. The indigo matters: the anatomy renders in warm clay, and indigo sits
+almost opposite it, so tissue reads as lit rather than tinted.
 
-**Light.** Soft diffused north-facing daylight from the left. Long, gentle
-shadows. Never hard flash, never a coloured gel, never a glow effect.
+**Light.** A single warm amber source raking in from the left, catching edges
+and falling away into near-darkness. Long shadows. One light, never two. Never
+hard flash, never a coloured gel, never a glow effect.
 
-**Subject.** Editorial still life or abstract macro. Real materials: ceramic,
-glass, paper, stone, linen, clay. Medium format, fine natural grain, shallow
-depth of field.
+**Subject.** Editorial still life or sculptural object — alabaster, plaster,
+bone, ceramic, glass, stone. Museum-object lighting, medium format, fine
+natural grain, shallow depth of field. The register is a gallery vitrine, not
+a laboratory bench.
 
-**Composition.** Subject off-centre, generous negative space on one side so a
-headline can sit over it without a scrim.
+**Composition.** Subject in the right third. The left two-thirds is empty
+negative space so a headline sits over it without a scrim doing all the work.
 
 ## Never
 
-- People, faces, hands, bodies (the 3D anatomy model is the only human form)
-- Text, labels, numbers, logos, branding of any kind
+- Living people, faces, hands, skin (the 3D anatomy model is the only human form)
+- Text, labels, numbers, logos, branding of any kind — baked-in words cannot be
+  translated, cannot be read aloud, and break at the first breakpoint
 - Medical clichés: stethoscopes, pill piles, lab coats, test tubes in racks
 - Tech clichés: glowing DNA helixes, blue grids, circuit boards, HUD overlays
-- Saturated colour, neon, lens flare, bokeh balls
+- Anything gory, surgical or clinical
+- Neon, lens flare, bokeh balls, more than one light source
 - Anything that reads as stock photography
 
 ## Formats
@@ -51,10 +57,17 @@ public/video/transition-<name>.mp4   motion loops
 Use Higgsfield `gpt_image_2_5`, 16:9, and append this exact block to the subject
 description so the art direction stays constant:
 
-> Editorial still-life photograph in a strictly muted palette of sage green, bone
-> white and warm cream. Soft diffused north-facing daylight from the left, long
-> gentle shadows, shallow depth of field, medium format, fine natural grain.
-> Generous negative space. No text, no people, no hands, no logos, no branding.
+> Editorial still-life photograph, medium format, 16:9. Subject in the RIGHT
+> third of the frame on a dark matte surface, lit by a single warm amber light
+> raking in from the left, catching the edges and falling away into deep
+> indigo-blue shadow. Background is a deep indigo-black void, hex #0C1324, with
+> a faint warm amber glow behind the subject. Bone-white specular highlights,
+> warm amber rim light hex #F5A524, no other colour in the frame. The LEFT
+> two-thirds is empty negative space so a headline can sit over it. Shallow
+> depth of field, fine natural film grain, museum-object lighting, restrained
+> and expensive. Absolutely no text, letters, numbers, labels, logos or
+> watermarks. No living people, no faces, no hands, no skin, not gory, not
+> surgical, not a stock medical photograph.
 
 Then optimise:
 

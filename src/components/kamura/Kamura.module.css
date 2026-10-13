@@ -201,3 +201,25 @@
 /* The section after a dark band needs its own breathing room, since the band
    now runs edge to edge and the container no longer provides the gap. */
 .page>.container:first-of-type{padding-top:clamp(40px,6vw,80px)}
+
+
+/* ── Depth by occlusion ───────────────────────────────────────────────────
+   Cutting & Vishton (1995) rank occlusion first among pictorial depth cues
+   in every condition they test, at a ~0.1% depth threshold — roughly a
+   hundred times more sensitive than relative size. Shadow does not appear in
+   their nine cues at all; they class it as information about object shape,
+   not layout.
+
+   So the page builds depth by having layers genuinely pass in front of one
+   another rather than by stacking boxes with shadows under them. The first
+   bone section lifts over the bottom edge of the dark hero; the dark bands
+   that follow are overlapped in turn. No extra bytes, no JavaScript, and
+   nothing for a reduced-motion user to opt out of. */
+.lift{position:relative;z-index:2;margin-top:clamp(-96px,-7vw,-48px);
+ background:var(--k-paper);border-radius:clamp(18px,2.4vw,28px) clamp(18px,2.4vw,28px) 0 0;
+ padding-top:clamp(18px,3vw,36px)}
+@media(max-width:700px){
+ /* On a narrow screen the overlap eats the hero's bottom line instead of
+    reading as depth, so the layers simply butt together. */
+ .lift{margin-top:0;border-radius:0;padding-top:0}
+}
