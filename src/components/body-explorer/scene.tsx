@@ -8,13 +8,17 @@ import {createExplosionLayout} from './explosion-layout';
 import {decodeModelResponse} from './model-download';
 import {PointerTap} from './pointer-tap';
 import {SYSTEMS,type Atlas,type SceneState} from './anatomy';
-/* The viewer's palette. One register now: the whole site runs dark, so the
- * homepage showcase and the in-article embeds share the explorer's ground
- * rather than carrying a pale rectangle into a dark page.
+/* The viewer's palette.
  *
- * ground is kept in step with --k-paper in globals.css. */
-const P={ground:0x0A1513,floor:0x0A1513,platform:0x0E201C,ring:0x4FB79A,ringOpacity:.6,innerRing:0x4FB79A,innerOpacity:.22,
- hemiSky:0xdfeee8,hemiGround:0x0a1412,hemi:.42,key:0xfff6ec,keyIntensity:2.05,rim:0x8fd8c4,rimIntensity:1.5,fill:.45,exposure:1.08,fog:[7,22] as const};
+ * Indigo-black, matching the dark bands in globals.css. The choice is
+ * functional rather than decorative: the model renders in warm clay and bone,
+ * and indigo sits almost opposite it on the wheel, so tissue reads as lit
+ * rather than tinted. A green ground — which this was — pushed the muscle
+ * toward grey.
+ *
+ * ground is kept in step with .immersiveHero / .darkBand in globals.css. */
+const P={ground:0x0A1020,floor:0x0A1020,platform:0x141C33,ring:0xF5A524,ringOpacity:.42,innerRing:0xF5A524,innerOpacity:.16,
+ hemiSky:0xdde6f2,hemiGround:0x080C18,hemi:.42,key:0xfff4e6,keyIntensity:2.1,rim:0x8FB4E8,rimIntensity:1.45,fill:.42,exposure:1.1,fog:[7,22] as const};
 interface Props {atlas:Atlas;state:SceneState;onSelect:(id:string)=>void;onProgress:(n:number)=>void;onError:(s:string)=>void;showcase?:boolean;embedded?:boolean}
 export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,showcase=false,embedded=false}:Props){
  const host=useRef<HTMLDivElement>(null),latest=useRef(state),select=useRef(onSelect);

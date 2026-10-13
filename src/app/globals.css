@@ -1,90 +1,90 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-/* Most of the site's pages are styled with Tailwind utilities rather than the
-   module stylesheets, so flipping the Kamura tokens alone left 162 files on
-   the old pale scale. Rather than hand-edit every one, the scale itself is
-   inverted here: the neutral ramps run dark-to-light instead of light-to-dark,
-   and every ramp is biased green so a `bg-gray-50` surface lands on Kamura's
-   black rather than a neutral one.
+/* Most of the site is styled with Tailwind utilities rather than the module
+   stylesheets, so the Kamura tokens alone reach only a fraction of it. The
+   neutral ramps are re-pointed here instead of hand-editing 162 files: same
+   light-to-dark direction as stock Tailwind, but every step warmed onto the
+   bone scale so a `bg-gray-50` surface matches the page it sits on rather
+   than introducing a cool grey the palette does not contain.
 
-   `white` and `black` are deliberately NOT remapped — `text-white` on a filled
-   button is still correct, and inverting it would break 334 call sites. The
-   handful of light backgrounds that genuinely need remapping are handled by
-   the explicit utility overrides at the end of this file. */
+   `white` and `black` are deliberately NOT remapped — `text-white` on a
+   filled control is still correct, and changing it would break 334 call
+   sites. The few backgrounds that need redirecting are handled explicitly at
+   the end of this file. */
 @theme inline {
- --color-background: #060D0C;
- --color-foreground: #F3F7F2;
- --color-terracotta: #35D6A4;
- --color-terracotta-dark: #0C6B54;
- --color-kamura-gold: #DCA880;
- --color-sage: #35D6A4;
- --color-sage-dark: #9DB2A8;
- --color-sage-light: #22332D;
- --color-moss: #9DB2A8;
- --color-forest: #35D6A4;
- --color-cream: #060D0C;
- --color-zen-mist: #0D1715;
+ --color-background: #F1EEE6;
+ --color-foreground: #1A1714;
+ --color-terracotta: #82500D;
+ --color-terracotta-dark: #6A4009;
+ --color-kamura-gold: #F5A524;
+ --color-sage: #82500D;
+ --color-sage-dark: #857F74;
+ --color-sage-light: #CFC8B8;
+ --color-moss: #82500D;
+ --color-forest: #6A4009;
+ --color-cream: #F1EEE6;
+ --color-zen-mist: #E9E4D8;
  --color-score-green: #4ADE80;
  --color-score-yellow: #FACC15;
  --color-score-orange: #FB923C;
  --color-score-red: #F87171;
  --color-score-blue: #60A5FA;
  --color-score-purple: #A78BFA;
- --color-gray-50: #0D1715;
- --color-gray-100: #15211D;
- --color-gray-200: #1D2B26;
- --color-gray-300: #22332D;
- --color-gray-400: #4A5C55;
- --color-gray-500: #6B8077;
- --color-gray-600: #879A91;
- --color-gray-700: #9DB2A8;
- --color-gray-800: #C6D4CD;
- --color-gray-900: #F3F7F2;
- --color-gray-950: #FFFFFF;
- --color-slate-50: #0D1715;
- --color-slate-100: #15211D;
- --color-slate-200: #1D2B26;
- --color-slate-300: #22332D;
- --color-slate-400: #4A5C55;
- --color-slate-500: #6B8077;
- --color-slate-600: #879A91;
- --color-slate-700: #9DB2A8;
- --color-slate-800: #C6D4CD;
- --color-slate-900: #F3F7F2;
- --color-slate-950: #FFFFFF;
- --color-stone-50: #0D1715;
- --color-stone-100: #15211D;
- --color-stone-200: #1D2B26;
- --color-stone-300: #22332D;
- --color-stone-400: #4A5C55;
- --color-stone-500: #6B8077;
- --color-stone-600: #879A91;
- --color-stone-700: #9DB2A8;
- --color-stone-800: #C6D4CD;
- --color-stone-900: #F3F7F2;
- --color-stone-950: #FFFFFF;
- --color-neutral-50: #0D1715;
- --color-neutral-100: #15211D;
- --color-neutral-200: #1D2B26;
- --color-neutral-300: #22332D;
- --color-neutral-400: #4A5C55;
- --color-neutral-500: #6B8077;
- --color-neutral-600: #879A91;
- --color-neutral-700: #9DB2A8;
- --color-neutral-800: #C6D4CD;
- --color-neutral-900: #F3F7F2;
- --color-neutral-950: #FFFFFF;
- --color-zinc-50: #0D1715;
- --color-zinc-100: #15211D;
- --color-zinc-200: #1D2B26;
- --color-zinc-300: #22332D;
- --color-zinc-400: #4A5C55;
- --color-zinc-500: #6B8077;
- --color-zinc-600: #879A91;
- --color-zinc-700: #9DB2A8;
- --color-zinc-800: #C6D4CD;
- --color-zinc-900: #F3F7F2;
- --color-zinc-950: #FFFFFF;
+ --color-gray-50: #F8F6F0;
+ --color-gray-100: #F1EEE6;
+ --color-gray-200: #E4DFD3;
+ --color-gray-300: #CFC8B8;
+ --color-gray-400: #A89F8C;
+ --color-gray-500: #857F74;
+ --color-gray-600: #5B5750;
+ --color-gray-700: #423E39;
+ --color-gray-800: #2A2724;
+ --color-gray-900: #1A1714;
+ --color-gray-950: #0E0C0A;
+ --color-slate-50: #F8F6F0;
+ --color-slate-100: #F1EEE6;
+ --color-slate-200: #E4DFD3;
+ --color-slate-300: #CFC8B8;
+ --color-slate-400: #A89F8C;
+ --color-slate-500: #857F74;
+ --color-slate-600: #5B5750;
+ --color-slate-700: #423E39;
+ --color-slate-800: #2A2724;
+ --color-slate-900: #1A1714;
+ --color-slate-950: #0E0C0A;
+ --color-stone-50: #F8F6F0;
+ --color-stone-100: #F1EEE6;
+ --color-stone-200: #E4DFD3;
+ --color-stone-300: #CFC8B8;
+ --color-stone-400: #A89F8C;
+ --color-stone-500: #857F74;
+ --color-stone-600: #5B5750;
+ --color-stone-700: #423E39;
+ --color-stone-800: #2A2724;
+ --color-stone-900: #1A1714;
+ --color-stone-950: #0E0C0A;
+ --color-neutral-50: #F8F6F0;
+ --color-neutral-100: #F1EEE6;
+ --color-neutral-200: #E4DFD3;
+ --color-neutral-300: #CFC8B8;
+ --color-neutral-400: #A89F8C;
+ --color-neutral-500: #857F74;
+ --color-neutral-600: #5B5750;
+ --color-neutral-700: #423E39;
+ --color-neutral-800: #2A2724;
+ --color-neutral-900: #1A1714;
+ --color-neutral-950: #0E0C0A;
+ --color-zinc-50: #F8F6F0;
+ --color-zinc-100: #F1EEE6;
+ --color-zinc-200: #E4DFD3;
+ --color-zinc-300: #CFC8B8;
+ --color-zinc-400: #A89F8C;
+ --color-zinc-500: #857F74;
+ --color-zinc-600: #5B5750;
+ --color-zinc-700: #423E39;
+ --color-zinc-800: #2A2724;
+ --color-zinc-900: #1A1714;
+ --color-zinc-950: #0E0C0A;
  --font-sans: var(--font-inter);
  --font-serif: var(--font-playfair);
 }
@@ -420,95 +420,154 @@ html[dir="rtl"] h6 {
 }
 
 /* Kamura shared design foundation */
-/* Kamura runs dark, and graded rather than flat.
-   A single near-black fill is the cheap version of a dark theme; it reads
-   as an unfinished page. These surfaces step through a narrow range of
-   green-biased blacks, and sections carry gradients and glows on top, so
-   depth comes from light falling across the page rather than from borders.
+/* Kamura's two registers.
+   
+   The site alternates full-bleed bands: deep indigo-black where the body and
+   the technology are the subject, warm bone where there is something to read.
+   The contrast between the two IS the design — there is no third surface and
+   no decorative colour, which is the discipline that makes a reference site
+   feel expensive rather than busy.
 
-   Two accents, both taken from the anatomy render rather than picked from a
-   palette generator: a saturated jade for anything interactive, and a warm
-   brass for emphasis. The lime citron that used to sit on every page is gone;
-   it was the loudest and cheapest colour on the site. */
+   Light is the default because most of Kamura is reading. A band opts into
+   the dark register with .darkBand, which redefines these same tokens rather
+   than introducing a parallel set, so every component works in both without
+   knowing which one it is in.
+
+   Why indigo and not the obvious green: the anatomy renders in warm clay and
+   bone, and indigo sits almost exactly opposite it on the wheel, so tissue
+   reads as lit rather than tinted. Why amber: it is 185 degrees from the
+   ground, which is where saturation actually shows, and it is the colour of
+   the pharmacy glass every compounded medicine on this site arrives in.
+
+   Every pairing below is checked against WCAG AA for body text. The one trap
+   is the amber fill: it carries graphite text at 8.8:1, never bone, which
+   would be 1.8:1. */
 :root{
- /* Surfaces, deepest first */
- --k-paper:#060D0C;
- --k-surface:#0D1715;
- --k-surface-2:#15211D;
- --k-surface-3:#1D2B26;
- --k-mint:#0F1C19;
- --k-line:#22332D;
- --k-line-strong:#2F4840;
- /* Type */
- --k-ink:#F3F7F2;
- --k-muted:#9DB2A8;
- --k-faint:#6B8077;
- /* Accent */
- --k-teal:#35D6A4;
- --k-teal-deep:#0C6B54;
- --k-clay:#DCA880;
- --k-citron:#15211D;
+ /* Surfaces — light register */
+ --k-paper:#F1EEE6;        /* the page */
+ --k-surface:#F8F6F0;      /* cards lifted off it */
+ --k-surface-2:#E4DFD3;    /* alternating band, inputs, chips */
+ --k-surface-3:#D9D3C4;
+ --k-mint:#E9E4D8;         /* legacy name, now a warm tint */
+ --k-line:#CFC8B8;
+ --k-line-strong:#B9B09C;
+ /* Type — light register */
+ --k-ink:#1A1714;
+ --k-muted:#5B5750;
+ --k-faint:#857F74;
+ /* Accent — one, and only one */
+ /* Three jobs, three values, because one amber cannot do all of them.
+    --k-accent is darkened so it passes AA as body-size link text on bone.
+    --k-accent-fill is the real, saturated amber — it only ever appears as a
+    fill, carrying --k-accent-ink on top at 8.8:1. Putting the dark one on a
+    button is what made the first pass read brown instead of vibrant. */
+ --k-accent:#82500D;
+ --k-accent-fill:#F5A524;
+ --k-accent-fill-hover:#E0920F;
+ --k-accent-bright:#F5A524;
+ --k-accent-tint:#F7EBD6;
+ --k-accent-ink:#1A1714;
+ /* Deprecated aliases. Hundreds of call sites still name the old teal; they
+    now resolve to the single accent. Prefer --k-accent in new code. */
+ --k-teal:var(--k-accent);
+ --k-teal-deep:#6A4009;
+ --k-clay:var(--k-accent);
+ --k-citron:var(--k-surface-2);
  /* Graded fills. Depth is light, not outline. */
- --k-glow:radial-gradient(ellipse 80% 55% at 50% 0%,rgba(53,214,164,.13),transparent 70%);
- --k-glow-warm:radial-gradient(ellipse 70% 50% at 70% 10%,rgba(220,168,128,.10),transparent 70%);
- --k-grade:linear-gradient(180deg,#0D1715 0%,#060D0C 100%);
- --k-grade-card:linear-gradient(165deg,#15211D 0%,#0D1715 70%);
+ --k-glow:radial-gradient(ellipse 80% 55% at 50% 0%,rgba(130,80,13,.07),transparent 70%);
+ --k-glow-warm:radial-gradient(ellipse 70% 50% at 70% 10%,rgba(130,80,13,.06),transparent 70%);
+ --k-grade:linear-gradient(180deg,#F8F6F0 0%,#F1EEE6 100%);
+ --k-grade-card:linear-gradient(165deg,#F8F6F0 0%,#EDE9DF 70%);
  --k-hairline:linear-gradient(90deg,transparent,var(--k-line-strong) 18%,var(--k-line-strong) 82%,transparent);
+ /* The data tier. Eight hues held at low saturation, for the 16 treatment
+    categories and the evidence atlas. Deliberately separate from the accent:
+    the accent means "do this", these mean "this is a kind of thing". */
+ --k-cat-1:#7E9AA6; --k-cat-2:#8F9BB4; --k-cat-3:#9AA47E; --k-cat-4:#A98EA0;
+ --k-cat-5:#968FA8; --k-cat-6:#BE9185; --k-cat-7:#8CA68E; --k-cat-8:#B4A281;
 }
-html{scroll-padding-top:100px;color-scheme:dark}body{background:var(--k-paper);color:var(--k-ink)}
+
+/* The dark register. Applied to a band, a page shell, or the body viewer. */
+.darkBand,.k-dark{
+ --k-paper:#0C1324;
+ --k-surface:#141C33;
+ --k-surface-2:#1C2440;
+ --k-surface-3:#26304C;
+ --k-mint:#121A2E;
+ --k-line:#27304B;
+ --k-line-strong:#3A456690;
+ --k-ink:#F1EEE6;
+ --k-muted:#A8B0C4;
+ --k-faint:#7B8299;
+ --k-accent:#F5A524;
+ --k-accent-fill:#F5A524;
+ --k-accent-fill-hover:#FFBB4D;
+ --k-accent-bright:#F5A524;
+ --k-accent-tint:#2A2235;
+ --k-accent-ink:#1A1714;
+ --k-teal:var(--k-accent);
+ --k-teal-deep:#B9790F;
+ --k-clay:var(--k-accent);
+ --k-citron:var(--k-surface-2);
+ --k-glow:radial-gradient(ellipse 80% 55% at 50% 0%,rgba(245,165,36,.10),transparent 70%);
+ --k-glow-warm:radial-gradient(ellipse 70% 50% at 70% 10%,rgba(245,165,36,.08),transparent 70%);
+ --k-grade:linear-gradient(180deg,#141C33 0%,#0C1324 100%);
+ --k-grade-card:linear-gradient(165deg,#1C2440 0%,#141C33 70%);
+ background:var(--k-paper);
+ color:var(--k-ink);
+}
+html{scroll-padding-top:100px;color-scheme:light}body{background:var(--k-paper);color:var(--k-ink)}
 :where(button,a,input,select,summary):focus-visible{outline:3px solid var(--k-teal);outline-offset:4px}
 .kamura-member{padding-top:76px;background:var(--k-paper)}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important}}
 
-/* ── Utility overrides for the dark register ──────────────────────────────
+/* ── Utility overrides ───────────────────────────────────────────────────
    Pages written with Tailwind arbitrary values carry the old palette as
-   literals, which no token change can reach. These re-point the handful that
-   actually appear in the codebase. They are !important because they have to
-   beat the utility they are replacing at equal specificity.
+   literals, which no token change can reach. These re-point the ones that
+   actually appear in the codebase onto the bone scale. !important because
+   they must beat the utility they replace at equal specificity.
 
-   `white` keeps its meaning as type on a filled control, so only bg-white is
-   remapped here, never text-white. */
+   Inside a .darkBand these resolve through the tokens, so the same utility
+   lands correctly in either register. */
 .bg-white{background-color:var(--k-surface)!important}
 .bg-\[\#FAFCF7\],.bg-\[\#FAF8F5\]{background-color:var(--k-paper)!important}
-.bg-\[\#E7F3EB\],.bg-\[\#F5EFE6\],.bg-\[\#F0F6EF\]{background-color:var(--k-mint)!important}
-.bg-\[\#173C3B\],.bg-\[\#DCEC8B\]{background-color:var(--k-surface-2)!important}
-.bg-\[\#00786E\],.bg-\[\#005E57\]{background-color:var(--k-teal-deep)!important}
+.bg-\[\#E7F3EB\],.bg-\[\#F5EFE6\],.bg-\[\#F0F6EF\]{background-color:var(--k-surface-2)!important}
+.bg-\[\#173C3B\]{background-color:var(--k-ink)!important;color:var(--k-paper)}
+.bg-\[\#DCEC8B\]{background-color:var(--k-accent-tint)!important}
+.bg-\[\#00786E\],.bg-\[\#005E57\]{background-color:var(--k-accent-fill)!important;color:var(--k-accent-ink)!important}
 
 .text-\[\#173C3B\]{color:var(--k-ink)!important}
-.text-\[\#DCEC8B\]{color:var(--k-clay)!important}
-.text-\[\#00786E\],.text-\[\#005E57\]{color:var(--k-teal)!important}
+.text-\[\#DCEC8B\],.text-\[\#00786E\],.text-\[\#005E57\]{color:var(--k-accent)!important}
 
 .border-white,.border-\[\#173C3B\],.border-\[\#DCEC8B\],
 .border-\[\#D5E5D9\],.border-\[\#E7F3EB\]{border-color:var(--k-line)!important}
-.border-\[\#00786E\]{border-color:var(--k-teal)!important}
+.border-\[\#00786E\]{border-color:var(--k-accent)!important}
 
-/* Gradient stops used for section washes. */
 .from-\[\#FAFCF7\],.via-\[\#FAFCF7\]{--tw-gradient-from:var(--k-paper)!important;--tw-gradient-via:var(--k-paper)!important}
 .from-\[\#F5EFE6\],.via-\[\#F3EEE2\]{--tw-gradient-from:var(--k-surface)!important;--tw-gradient-via:var(--k-surface)!important}
 .from-\[\#173C3B\],.via-\[\#173C3B\],.to-\[\#173C3B\]{--tw-gradient-from:var(--k-surface-2)!important;--tw-gradient-via:var(--k-surface-2)!important;--tw-gradient-to:var(--k-surface-2)!important}
 
-/* Long-form prose. The typography plugin ships light-mode defaults, and the
-   table and blockquote rules above were written against the old palette. */
+/* `moss` and `sage` are each used as both a fill and a type colour. The named
+   colour serves type; the background utilities get the fill treatment, with
+   dark text because an amber fill cannot carry bone type (1.8:1). */
+.bg-moss,.bg-sage,.bg-forest{background-color:var(--k-accent-fill)!important;color:var(--k-accent-ink)!important}
+.border-moss,.border-sage,.border-forest{border-color:var(--k-accent)!important}
+.bg-sage-light,.bg-sage-dark{background-color:var(--k-surface-2)!important}
+.bg-zen-mist{background-color:var(--k-surface-2)!important}
+.bg-cream{background-color:var(--k-paper)!important}
+
+/* Long-form prose follows whichever register its band is in. */
 .prose{color:var(--k-muted)}
 .prose :where(h1,h2,h3,h4,h5,h6,strong,th){color:var(--k-ink)}
-.prose :where(a){color:var(--k-teal)}
+.prose :where(a){color:var(--k-accent)}
 .prose th,.prose td{border-color:var(--k-line)}
 .prose th{background:var(--k-surface-2)}
 .prose tbody tr:nth-child(even){background:var(--k-surface)}
 .prose li strong{color:var(--k-ink)}
-.prose blockquote{border-left-color:var(--k-teal);background:var(--k-surface);color:var(--k-muted)}
+.prose blockquote{border-left-color:var(--k-accent);background:var(--k-surface);color:var(--k-muted)}
 .prose hr{border-color:var(--k-line)}
-.prose code{color:var(--k-clay)}
+.prose code{color:var(--k-accent)}
 
-/* Form controls default to the browser's light chrome otherwise. */
-input,select,textarea{color-scheme:dark}
-
-/* `moss` and `sage` are each used as both a fill and a type colour, which one
-   value cannot serve on a dark ground: bright enough to read as text is too
-   bright to carry white type. The named colour stays bright for text, and the
-   background utility is pointed at the deep fill. */
-.bg-moss,.bg-sage,.bg-forest{background-color:var(--k-teal-deep)!important}
-.border-moss,.border-sage,.border-forest{border-color:var(--k-teal-deep)!important}
-.bg-sage-light,.bg-sage-dark{background-color:var(--k-surface-2)!important}
-.bg-zen-mist{background-color:var(--k-mint)!important}
-.bg-cream{background-color:var(--k-paper)!important}
+/* A full-bleed band, the structural move the whole layout rests on: the page
+   is a sequence of alternating registers rather than cards on one surface. */
+.darkBand{position:relative;width:100vw;left:50%;margin-left:-50vw}
+.darkBand::selection,.darkBand *::selection{background:var(--k-accent);color:var(--k-accent-ink)}

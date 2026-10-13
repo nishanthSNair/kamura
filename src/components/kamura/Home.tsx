@@ -4,6 +4,7 @@ import {ArrowUpRight, Activity, Brain, Heart, MoveUpRight} from 'lucide-react';
 import HomeBody from './HomeBody';
 import MediaBand from './MediaBand';
 import Inventory from './Inventory';
+import HomeMotion from './HomeMotion';
 import {treatments} from '@/data/treatments';
 import {INSTRUMENTS} from '@/data/instruments';
 import r from './Reveal.module.css';
@@ -49,10 +50,11 @@ const PANELS = [
 export default function Home() {
   return (
     <div className={s.page}>
+      <HomeMotion />
       <HomeBody />
 
       <div className={s.container}>
-        <section className={`${s.homeIntroduction} ${x.rise}`}>
+        <section className={s.homeIntroduction} data-fx="rise">
           <span className={s.eyebrow}>What is Kamura?</span>
           <h2>Your place to understand health and explore what comes next.</h2>
           <p>
@@ -78,7 +80,7 @@ export default function Home() {
               width={640}
               height={1344}
               sizes="(max-width:900px) 90vw, 44vw"
-              className={x.drift}
+              className={x.drift} data-fx="drift"
               style={{width: 'auto', height: '112%', objectFit: 'contain'}}
             />
           </div>
@@ -96,7 +98,7 @@ export default function Home() {
           </div>
         </section>
 
-        <nav className={`${s.strip} ${x.stagger}`} aria-label="Discover Kamura">
+        <nav className={s.strip} data-fx="stagger" aria-label="Discover Kamura">
           <Link href="/reports">
             <div>
               <strong>Bring your reports together</strong>
@@ -135,7 +137,7 @@ export default function Home() {
           <div className={s.sectionHead}>
             <div>
               <span className={s.eyebrow}>Start with a question</span>
-              <h2 className={x.settle}>
+              <h2 data-fx="rise">
                 What would you like
                 <br />
                 to understand?
@@ -143,7 +145,7 @@ export default function Home() {
             </div>
             <Link href="/learn">Explore the learning library ↗</Link>
           </div>
-          <div className={`${s.grid} ${x.stagger}`}>
+          <div className={s.grid} data-fx="stagger">
             {[
               {
                 title: 'How does tissue repair work?',
@@ -180,7 +182,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <p className={`${s.sectionFoot} ${r.reveal}`}>
+          <p className={s.sectionFoot} data-fx="rise">
             Taking a compounded medicine and unsure what it actually is?{' '}
             <Link href="/compounded">Read the leaflet it never came with ↗</Link>
           </p>
@@ -195,7 +197,7 @@ export default function Home() {
       />
 
       <div className={s.container}>
-        <section className={`${s.feature} ${x.rise}`}>
+        <section className={s.feature} data-fx="rise">
           <div>
             <span className={s.eyebrow}>My Kamura</span>
             <h2>
@@ -229,14 +231,14 @@ export default function Home() {
           <div className={s.sectionHead}>
             <div>
               <span className={s.eyebrow}>Connect knowledge to real life</span>
-              <h2 className={x.settle}>
+              <h2 data-fx="rise">
                 Find your people.
                 <br />
                 Find your practice.
               </h2>
             </div>
           </div>
-          <div className={`${s.grid} ${x.stagger}`}>
+          <div className={s.grid} data-fx="stagger">
             {[
               {
                 title: 'Classes & studios',

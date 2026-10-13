@@ -47,7 +47,7 @@ export default function Inventory() {
     <section className={s.wrap} aria-labelledby="inventory-heading">
       <div className={s.head}>
         <span className={s.eyebrow}>What is actually in here</span>
-        <h2 id="inventory-heading" className={r.reveal}>
+        <h2 id="inventory-heading" data-fx="rise">
           Not a blog.
           <br />
           A reference library.
@@ -58,11 +58,11 @@ export default function Inventory() {
         </p>
       </div>
 
-      <ol className={`${s.list} ${r.stagger}`}>
+      <ol className={s.list} data-fx="stagger">
         {items.map((i) => (
           <li key={i.href} className={i.lead ? s.lead : undefined}>
             <Link href={i.href}>
-              <span className={s.figure}>{i.n}</span>
+              <span className={s.figure} data-fx="count">{i.n}</span>
               <span className={s.body}>
                 <strong>{i.label}</strong>
                 <small>{i.note}</small>
