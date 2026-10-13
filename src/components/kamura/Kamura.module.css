@@ -215,9 +215,9 @@
    bone section lifts over the bottom edge of the dark hero; the dark bands
    that follow are overlapped in turn. No extra bytes, no JavaScript, and
    nothing for a reduced-motion user to opt out of. */
-.lift{position:relative;z-index:2;margin-top:clamp(-96px,-7vw,-48px);
+.lift{position:relative;z-index:2;margin-top:clamp(-72px,-5vw,-40px);
  background:var(--k-paper);border-radius:clamp(18px,2.4vw,28px) clamp(18px,2.4vw,28px) 0 0;
- padding-top:clamp(18px,3vw,36px)}
+ padding-top:0}
 @media(max-width:700px){
  /* On a narrow screen the overlap eats the hero's bottom line instead of
     reading as depth, so the layers simply butt together. */

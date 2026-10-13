@@ -4,6 +4,7 @@ import {ArrowUpRight, MoveUpRight} from 'lucide-react';
 import Hero from './Hero';
 import TopNews from './TopNews';
 import TopTools from './TopTools';
+import HealthGuide from './HealthGuide';
 import HomeBody from './HomeBody';
 import HomeMotion from './HomeMotion';
 import MediaBand from './MediaBand';
@@ -15,7 +16,7 @@ import s from './Kamura.module.css';
 /**
  * The homepage.
  *
- * Seven sections, in a deliberate order. Measuring WebMD, Healthline, Medical
+ * Eight sections, in a deliberate order. Measuring WebMD, Healthline, Medical
  * News Today and Harvard Health gave a canonical structure — editorial is the
  * first content block on all four, and tools follow it — but also a failure
  * mode worth avoiding: WebMD runs fourteen equally weighted sections and so
@@ -94,16 +95,22 @@ export default function Home() {
              strongest pictorial depth cue there is, and it costs nothing. */}
       <div className={`${s.container} ${s.lift}`}>
         <TopNews />
+      </div>
 
-        {/* 3 · Tools, adjacent to the news rather than buried at block 11. */}
+      {/* 3 · The guide band — dark, so the page alternates register rather
+             than running three bone sections together. */}
+      <HealthGuide skip={5} count={4} />
+
+      <div className={s.container}>
+        {/* 4 · Tools, adjacent to the editorial rather than buried. */}
         <TopTools />
       </div>
 
-      {/* 4 · The body. The thing none of the portals have. */}
+      {/* 5 · The body. The thing none of the portals have. */}
       <HomeBody />
 
       <div className={s.container}>
-        {/* 5 · How it works — one visual held while three claims pass it. */}
+        {/* 6 · How it works — one visual held while three claims pass it. */}
         <section className={x.pinned} aria-labelledby="how-heading">
           <h2 id="how-heading" className={s.srOnly}>
             How Kamura works
@@ -143,7 +150,7 @@ export default function Home() {
       />
 
       <div className={s.container}>
-        {/* 6 · The reason to come back. */}
+        {/* 7 · The reason to come back. */}
         <section className={s.feature} data-fx="rise">
           <div>
             <span className={s.eyebrow}>My Kamura</span>
@@ -174,7 +181,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 7 · Where the knowledge meets the city. */}
+        {/* 8 · Where the knowledge meets the city. */}
         <section className={s.section}>
           <div className={s.sectionHead}>
             <div>

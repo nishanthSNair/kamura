@@ -1,0 +1,65 @@
+/* Full-bleed dark band. Self-contained tokens rather than .darkBand, because
+   this sits between two bone sections and needs a slightly warmer ground than
+   the hero — the amber glow in the four images reads better against it. */
+
+.band{
+ position:relative;width:100vw;left:50%;margin-left:-50vw;
+ background:#0C1324;
+ background-image:radial-gradient(ellipse 60% 80% at 8% 0%,rgba(245,165,36,.10),transparent 62%);
+ color:#F1EEE6;
+ padding:clamp(56px,8vw,104px) 0;
+}
+.inner{max-width:1240px;margin:0 auto;padding:0 clamp(22px,4vw,64px)}
+
+/* A rule under the heading, not around it — the reference uses a single
+   hairline to open the section and nothing else. */
+.head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;
+ padding-bottom:16px;border-bottom:1px solid #2A3550;margin-bottom:clamp(26px,3.5vw,42px)}
+.head h2{margin:0;font:400 clamp(20px,2.4vw,27px)/1.2 var(--font-inter),Arial,sans-serif;
+ letter-spacing:.14em;text-transform:uppercase;color:#F1EEE6}
+.head a{font-size:13.5px;color:#F5A524;text-decoration:none;white-space:nowrap}
+.head a:hover{text-decoration:underline;text-underline-offset:4px}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.4vw,20px)}
+
+/* Each card is a tall object: image at the top, a deliberate void, then the
+   title anchored to the bottom. The void is what makes the title land. */
+.card{
+ display:flex;flex-direction:column;
+ min-height:clamp(340px,34vw,430px);
+ padding:clamp(16px,1.6vw,22px);
+ border-radius:14px;
+ background:linear-gradient(170deg,#18213A 0%,#111931 55%,#0E1528 100%);
+ border:1px solid #223052;
+ text-decoration:none;color:#F1EEE6;
+ transition:border-color .3s ease,background .3s ease;
+}
+.card:hover{border-color:#3A4870;
+ background:linear-gradient(170deg,#1D2742 0%,#141D37 55%,#10182C 100%)}
+
+.art{display:block;border-radius:8px;overflow:hidden;line-height:0;
+ background:#0A1020;aspect-ratio:16/9}
+.art img{width:100%;height:100%;object-fit:cover;display:block}
+
+.pill{display:inline-block;align-self:flex-start;margin-top:clamp(14px,1.6vw,20px);
+ border:1px solid #3A4870;border-radius:999px;padding:5px 13px;
+ font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#A8B0C4}
+
+/* margin-top:auto is the void — it pushes the title to the card's floor and
+   keeps all four titles on the same baseline regardless of length. */
+.foot{margin-top:auto;padding-top:clamp(28px,4vw,52px)}
+.foot strong{display:block;font:400 clamp(17px,1.65vw,21px)/1.28 var(--font-playfair),Georgia,serif;
+ letter-spacing:-.018em;color:#F1EEE6;margin-bottom:10px}
+.card:hover .foot strong{color:#FFD79A}
+.foot small{display:block;font-size:12.5px;color:#7B8299;font-variant-numeric:tabular-nums}
+
+@media(max-width:1100px){
+ .grid{grid-template-columns:repeat(2,1fr);gap:16px}
+ .card{min-height:320px}
+}
+@media(max-width:620px){
+ .grid{grid-template-columns:1fr}
+ .card{min-height:0}
+ .foot{padding-top:26px}
+}
+@media(prefers-reduced-motion:reduce){.card{transition:none}}

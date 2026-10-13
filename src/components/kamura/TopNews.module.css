@@ -2,7 +2,7 @@
    rail of outside sources. The asymmetry is the point: five equal cards make
    a reader choose, a lead plus a list tells them where to start. */
 
-.wrap{padding:clamp(56px,8vw,104px) 0}
+.wrap{padding:clamp(44px,6vw,76px) 0 clamp(56px,8vw,104px)}
 
 .head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;
  flex-wrap:wrap;margin-bottom:clamp(26px,3.5vw,42px)}
